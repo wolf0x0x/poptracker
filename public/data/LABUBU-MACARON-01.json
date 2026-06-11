@@ -8,11 +8,24 @@
   "rarity_en": "Hot regular",
   "color": "#ff7eb6",
   "image": "",
+  "searchString": "\"Labubu\" AND (\"Macaron\" OR \"Tasty Macarons\") AND (\"vinyl face\" OR \"Pop Mart\") -box -card -preorder -custom -fake -replica",
+  "negativeKeywords": [
+    "box only",
+    "card only",
+    "preorder",
+    "custom",
+    "fake",
+    "replica"
+  ],
+  "refreshTier": "hot",
+  "refreshIntervalHours": 24,
+  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Labubu%22+AND+(%22Macaron%22+OR+%22Tasty+Macarons%22)+AND+(%22vinyl+face%22+OR+%22Pop+Mart%22)+-box+-card+-preorder+-custom+-fake+-replica",
   "retailPrice": 17.0,
   "lastUpdated": "2026-06-11",
   "marketData": {
     "avgSoldPrice": 81.76,
     "medianSoldPrice": 81.48,
+    "fairMarketValue": 81.48,
     "lowSoldPrice": 63.45,
     "highSoldPrice": 114.55,
     "totalSold": 41,
@@ -21,7 +34,8 @@
     "roi": 381.0,
     "riskScore": 65,
     "cleanedSampleSize": 41,
-    "priceChange7d": "-1.0%",
+    "valuationMethod": "IQR + 10% trimmed median",
+    "priceChange7d": "-1.4%",
     "trend": "range",
     "trend_zh": "区间震荡",
     "signal": "hold",
@@ -147,7 +161,7 @@
     },
     {
       "date": "2026-06-11",
-      "avg": 81.76
+      "avg": 81.48
     }
   ],
   "sources": [

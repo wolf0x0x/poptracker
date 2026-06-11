@@ -8,11 +8,24 @@
   "rarity_en": "Art IP",
   "color": "#9f8cff",
   "image": "",
+  "searchString": "\"Skullpanda\" AND (\"Ink Plum\" OR \"Plum Blossom\") AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
+  "negativeKeywords": [
+    "box only",
+    "card only",
+    "preorder",
+    "custom",
+    "fake",
+    "replica"
+  ],
+  "refreshTier": "hot",
+  "refreshIntervalHours": 24,
+  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Skullpanda%22+AND+(%22Ink+Plum%22+OR+%22Plum+Blossom%22)+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
   "retailPrice": 16.0,
   "lastUpdated": "2026-06-11",
   "marketData": {
     "avgSoldPrice": 35.27,
     "medianSoldPrice": 35.48,
+    "fairMarketValue": 35.48,
     "lowSoldPrice": 27.46,
     "highSoldPrice": 44.98,
     "totalSold": 40,
@@ -21,7 +34,8 @@
     "roi": 120.4,
     "riskScore": 49,
     "cleanedSampleSize": 40,
-    "priceChange7d": "+10.8%",
+    "valuationMethod": "IQR + 10% trimmed median",
+    "priceChange7d": "+11.4%",
     "trend": "breakout",
     "trend_zh": "突破上涨",
     "signal": "hold",
@@ -147,7 +161,7 @@
     },
     {
       "date": "2026-06-11",
-      "avg": 35.27
+      "avg": 35.48
     }
   ],
   "sources": [

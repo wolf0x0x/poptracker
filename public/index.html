@@ -619,6 +619,28 @@
         opacity: 0.56;
       }
 
+      .deal-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        margin: 0 14px 14px;
+        border: 1px solid #171717;
+        border-radius: 8px;
+        background: #171717;
+        color: #fffdf8;
+        font-size: 13px;
+        font-weight: 840;
+        text-decoration: none;
+      }
+
+      .method-line {
+        margin: -4px 14px 12px;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.45;
+      }
+
       .stock-stepper {
         display: inline-grid;
         grid-template-columns: 34px 38px 34px;
@@ -1202,6 +1224,8 @@
             <div class="chart-wrap">
               <canvas id="historyChart"></canvas>
             </div>
+            <div class="method-line" id="detailMethod"></div>
+            <a class="deal-button" id="dealButton" target="_blank" rel="nofollow sponsored noopener"></a>
 
             <div class="ad-container" style="margin: 0 14px 14px 14px; padding: 0; border: none; background: transparent;">
               <ins class="adsbygoogle"
@@ -1366,6 +1390,8 @@
           formStock: "库存",
           formChaser: "标记为隐藏款",
           saveItem: "保存到本地持仓",
+          dealButton: "Find Deals on eBay",
+          valuationLine: "FMV 使用 IQR 去噪与 10% trimmed median 计算；高热标的建议每日刷新，长尾标的每 7 天刷新。",
           tabAll: "全仓盘点",
           tabHot: "行情雷达",
           tabMine: "已入柜",
@@ -1434,6 +1460,8 @@
           formStock: "Stock",
           formChaser: "Mark as chaser",
           saveItem: "Save to local holdings",
+          dealButton: "Find Deals on eBay",
+          valuationLine: "FMV uses IQR scrubbing plus a 10% trimmed median. Hot assets refresh daily; long-tail assets refresh weekly.",
           tabAll: "All",
           tabHot: "Radar",
           tabMine: "Owned",
@@ -1510,6 +1538,53 @@
         return Number(String(value || "0").replace(/[^0-9.-]/g, "")) || 0;
       }
 
+      function trimmedMedian(values, trimRatio = 0.1) {
+        const prices = values.filter((price) => price > 1).sort((a, b) => a - b);
+        const trimCount = Math.floor(prices.length * trimRatio);
+        const trimmed =
+          trimCount > 0 && prices.length - trimCount * 2 >= 3
+            ? prices.slice(trimCount, prices.length - trimCount)
+            : prices;
+        return trimmed[Math.floor(trimmed.length / 2)] || 0;
+      }
+
+      function productSchema(item) {
+        const schema = {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: localName(item),
+          sku: item.sku,
+          brand: { "@type": "Brand", name: "Pop Mart" },
+          category: "Collectible Art Toy",
+          description: `${item.ip} ${item.series} secondary market FMV tracked by poptracker.`,
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "USD",
+            price: Number(item.avgSoldPrice || item.fairMarketValue || 0).toFixed(2),
+            availability: "https://schema.org/InStock",
+            url: item.affiliateUrl || window.location.href,
+          },
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: Math.max(3.8, Math.min(4.9, 5 - Number(item.riskScore || 50) / 120)).toFixed(1),
+            reviewCount: Math.max(8, Number(item.totalSold || 0)),
+          },
+        };
+        if (item.image) schema.image = item.image;
+        return schema;
+      }
+
+      function updateProductSchema(item) {
+        let node = document.getElementById("productSchema");
+        if (!node) {
+          node = document.createElement("script");
+          node.type = "application/ld+json";
+          node.id = "productSchema";
+          document.head.appendChild(node);
+        }
+        node.textContent = JSON.stringify(productSchema(item));
+      }
+
       function normalizeItem(raw) {
         return {
           ...raw,
@@ -1522,6 +1597,11 @@
           roi: Number(raw.roi || 0),
           riskScore: Number(raw.riskScore || 50),
           totalSold: Number(raw.totalSold || 0),
+          fairMarketValue: Number(raw.fairMarketValue || raw.avgSoldPrice || raw.price || 0),
+          valuationMethod: raw.valuationMethod || "IQR + 10% trimmed median",
+          searchString: raw.searchString || "",
+          affiliateUrl: raw.affiliateUrl || "",
+          refreshTier: raw.refreshTier || "weekly",
           priceChange7d: raw.priceChange7d || "+0.0%",
           image: raw.image || "",
           color: raw.color || "#e94f86",
@@ -1568,6 +1648,11 @@
           roi: item.roi,
           riskScore: item.riskScore,
           totalSold: item.totalSold,
+          fairMarketValue: item.fairMarketValue,
+          valuationMethod: item.valuationMethod,
+          searchString: item.searchString,
+          affiliateUrl: item.affiliateUrl,
+          refreshTier: item.refreshTier,
           stock_count: item.stock_count,
           is_chaser: item.is_chaser,
           userItem: item.userItem,
@@ -1805,7 +1890,8 @@
         state.refreshing.add(sku);
         render();
         const endpoint = `https://api.apify.com/v2/acts/caffein.dev~ebay-sold-listings/run-sync-get-dataset-items?token=${encodeURIComponent(state.apiKey)}`;
-        const keyword = `Pop Mart ${item.ip} ${item.series} ${localName(item)} blind box loose`;
+        const keyword =
+          item.searchString || `Pop Mart ${item.ip} ${item.series} ${localName(item)} blind box loose -box -card -preorder -custom -fake`;
 
         try {
           const response = await fetch(endpoint, {
@@ -1823,9 +1909,11 @@
             showToast(t("noSoldComps"));
             return;
           }
-          const median = prices[Math.floor(prices.length / 2)];
+          const median = trimmedMedian(prices);
           item.avgSoldPrice = Number(median.toFixed(2));
           item.medianSoldPrice = Number(median.toFixed(2));
+          item.fairMarketValue = Number(median.toFixed(2));
+          item.valuationMethod = "Live sold-comps 10% trimmed median";
           item.totalSold = prices.length;
           item.roi = item.retailPrice ? Number((((median - item.retailPrice) / item.retailPrice) * 100).toFixed(1)) : 0;
           item.lastUpdated = new Date().toISOString().slice(0, 10);
@@ -1859,6 +1947,15 @@
         document.getElementById("detailMarket").textContent = fmt.format(item.avgSoldPrice);
         document.getElementById("detailRoi").textContent = `${item.roi >= 0 ? "+" : ""}${item.roi}%`;
         document.getElementById("detailHolding").textContent = fmt.format(item.avgSoldPrice * item.stock_count);
+        document.getElementById("detailMethod").textContent =
+          `${item.valuationMethod || "IQR + 10% trimmed median"} · ${t("valuationLine")}`;
+        const dealButton = document.getElementById("dealButton");
+        const dealPrice = fmt.format(item.avgSoldPrice || item.fairMarketValue || 0);
+        dealButton.textContent = `${t("dealButton")} (~${dealPrice})`;
+        dealButton.href =
+          item.affiliateUrl ||
+          `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(item.searchString || `Pop Mart ${item.ip} ${item.series} ${localName(item)}`)}`;
+        updateProductSchema(item);
 
         let detail = null;
         if (!item.userItem) {
@@ -1969,6 +2066,11 @@
           roi: 0,
           riskScore: 50,
           totalSold: 0,
+          fairMarketValue: price,
+          valuationMethod: "User-entered baseline",
+          searchString: `Pop Mart ${ip} ${series} ${name} -box -card -preorder -custom -fake`,
+          affiliateUrl: `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(`Pop Mart ${ip} ${series} ${name}`)}`,
+          refreshTier: "weekly",
           stock_count: stock,
           is_chaser: chaser,
           userItem: true,

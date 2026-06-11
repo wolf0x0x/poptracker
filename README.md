@@ -22,6 +22,10 @@ GitHub 仓库地址：<https://github.com/wolf0x0x/poptracker>
 - GitHub Actions 每日自动更新 `public/data/*.json`。
 - TypeScript 业务层：`src/PopmartManager.ts` 提供资产保存、库存调整、API Key 配置和实时估值刷新能力。
 
+## 产品执行步骤
+
+详见 [docs/product_execution_plan.md](docs/product_execution_plan.md)。
+
 ## 本地运行
 
 生成数据：

@@ -39,6 +39,9 @@ TRACKING_ITEMS = [
         "ip": "THE MONSTERS",
         "series": "Tasty Macarons",
         "keywords": "Labubu Macaron Vinyl Face",
+        "search_string": '"Labubu" AND ("Macaron" OR "Tasty Macarons") AND ("vinyl face" OR "Pop Mart") -box -card -preorder -custom -fake -replica',
+        "negative_keywords": ["box only", "card only", "preorder", "custom", "fake", "replica"],
+        "refresh_tier": "hot",
         "retail_price_usd": 17.0,
         "name_zh": "Labubu 马卡龙搪胶脸",
         "name_en": "Labubu The Monsters Tasty Macarons",
@@ -52,6 +55,9 @@ TRACKING_ITEMS = [
         "ip": "THE MONSTERS",
         "series": "Have a Seat",
         "keywords": "Labubu Have a Seat",
+        "search_string": '"Labubu" AND ("Have a Seat" OR "Sitting") AND "Pop Mart" -box -card -preorder -custom -fake -replica',
+        "negative_keywords": ["box only", "card only", "preorder", "custom", "fake", "replica"],
+        "refresh_tier": "hot",
         "retail_price_usd": 21.99,
         "name_zh": "Labubu Have a Seat",
         "name_en": "Labubu Have a Seat",
@@ -65,6 +71,9 @@ TRACKING_ITEMS = [
         "ip": "SKULLPANDA",
         "series": "Ink Plum Blossom",
         "keywords": "Skullpanda Ink Plum Blossom",
+        "search_string": '"Skullpanda" AND ("Ink Plum" OR "Plum Blossom") AND "Pop Mart" -box -card -preorder -custom -fake -replica',
+        "negative_keywords": ["box only", "card only", "preorder", "custom", "fake", "replica"],
+        "refresh_tier": "hot",
         "retail_price_usd": 16.0,
         "name_zh": "Skullpanda 墨梅系列",
         "name_en": "SKULLPANDA Ink Plum Blossom",
@@ -78,6 +87,9 @@ TRACKING_ITEMS = [
         "ip": "MOLLY",
         "series": "MEGA Space Molly 100%",
         "keywords": "MEGA Space Molly 100%",
+        "search_string": '"Molly" AND ("Space Molly" OR "MEGA") AND "100%" -box -card -preorder -custom -fake -replica',
+        "negative_keywords": ["box only", "card only", "preorder", "custom", "fake", "replica"],
+        "refresh_tier": "weekly",
         "retail_price_usd": 19.0,
         "name_zh": "MEGA Space Molly 100%",
         "name_en": "MEGA Space Molly 100%",
@@ -91,6 +103,9 @@ TRACKING_ITEMS = [
         "ip": "DIMOO",
         "series": "World x Animal",
         "keywords": "Dimoo World Animal",
+        "search_string": '"Dimoo" AND ("World" OR "Animal") AND "Pop Mart" -box -card -preorder -custom -fake -replica',
+        "negative_keywords": ["box only", "card only", "preorder", "custom", "fake", "replica"],
+        "refresh_tier": "weekly",
         "retail_price_usd": 15.0,
         "name_zh": "Dimoo World x Animal",
         "name_en": "DIMOO World x Animal",
@@ -104,6 +119,9 @@ TRACKING_ITEMS = [
         "ip": "HIRONO",
         "series": "Little Mischief",
         "keywords": "Hirono Little Mischief",
+        "search_string": '"Hirono" AND "Little Mischief" AND "Pop Mart" -box -card -preorder -custom -fake -replica',
+        "negative_keywords": ["box only", "card only", "preorder", "custom", "fake", "replica"],
+        "refresh_tier": "weekly",
         "retail_price_usd": 15.0,
         "name_zh": "Hirono 小野 Little Mischief",
         "name_en": "HIRONO Little Mischief",
@@ -156,6 +174,7 @@ def normalize_listing(item):
         "currency": currency,
         "soldAt": sold_at,
         "source": item.get("source", "demo"),
+        "title": item.get("title", item.get("name", "")),
     }
 
 
@@ -164,12 +183,22 @@ def usd_price(listing):
     return listing["price"] * rates.get(listing["currency"], 1.0)
 
 
-def clean_prices(raw_listings):
-    prices = sorted(
-        round(usd_price(normalize_listing(listing)), 2)
-        for listing in raw_listings
-        if usd_price(normalize_listing(listing)) > 1
-    )
+def is_noise_listing(listing, negative_keywords):
+    title = str(normalize_listing(listing).get("title", "")).lower()
+    return any(keyword.lower() in title for keyword in negative_keywords)
+
+
+def clean_prices(raw_listings, negative_keywords=None):
+    negative_keywords = negative_keywords or []
+    prices = []
+    for listing in raw_listings:
+        if is_noise_listing(listing, negative_keywords):
+            continue
+        normalized = normalize_listing(listing)
+        price = round(usd_price(normalized), 2)
+        if price > 1:
+            prices.append(price)
+    prices.sort()
     if len(prices) < 4:
         return prices
 
@@ -179,6 +208,16 @@ def clean_prices(raw_listings):
     lower = max(1, q1 - 1.5 * iqr)
     upper = q3 + 1.5 * iqr
     return [price for price in prices if lower <= price <= upper]
+
+
+def trimmed_median(prices, trim_ratio=0.1):
+    if not prices:
+        return 0
+    prices = sorted(prices)
+    trim_count = math.floor(len(prices) * trim_ratio)
+    if trim_count and len(prices) - trim_count * 2 >= 3:
+        prices = prices[trim_count:-trim_count]
+    return statistics.median(prices)
 
 
 def trend_label(change):
@@ -198,13 +237,13 @@ def risk_score(retail_price, avg_price, volatility, total_sold):
     return round(min(99, max(8, score)))
 
 
-def aggregate(raw_listings, retail_price):
-    prices = clean_prices(raw_listings)
+def aggregate(raw_listings, retail_price, negative_keywords=None):
+    prices = clean_prices(raw_listings, negative_keywords)
     if not prices:
         return None
 
     avg_price = statistics.fmean(prices)
-    median_price = statistics.median(prices)
+    median_price = trimmed_median(prices)
     high = max(prices)
     low = min(prices)
     std_dev = statistics.pstdev(prices) if len(prices) > 1 else 0
@@ -215,6 +254,7 @@ def aggregate(raw_listings, retail_price):
     return {
         "avgSoldPrice": round(avg_price, 2),
         "medianSoldPrice": round(median_price, 2),
+        "fairMarketValue": round(median_price, 2),
         "lowSoldPrice": round(low, 2),
         "highSoldPrice": round(high, 2),
         "totalSold": total_sold,
@@ -223,6 +263,7 @@ def aggregate(raw_listings, retail_price):
         "roi": round(roi, 1),
         "riskScore": risk,
         "cleanedSampleSize": len(prices),
+        "valuationMethod": "IQR + 10% trimmed median",
     }
 
 
@@ -235,7 +276,7 @@ def fetch_live_listings(item):
         "SOLDCOMPS_ENDPOINT",
         f"https://api.apify.com/v2/acts/caffein.dev~ebay-sold-listings/run-sync-get-dataset-items?token={api_key}",
     )
-    keyword = f"Pop Mart {item['ip']} {item['series']} {item['keywords']} blind box loose"
+    keyword = item.get("search_string") or f"Pop Mart {item['ip']} {item['series']} {item['keywords']} blind box loose"
     payload = {"keyword": keyword, "count": 20, "daysToScrape": 30}
     try:
         if os.getenv("SOLDCOMPS_ENDPOINT"):
@@ -299,6 +340,22 @@ def build_history(sku, avg_price):
     return points
 
 
+def merge_price_history(file_path, avg_price):
+    today = datetime.now(timezone.utc).date().isoformat()
+    if file_path.exists():
+        try:
+            with file_path.open("r", encoding="utf-8") as handle:
+                old_history = json.load(handle).get("priceHistory", [])
+        except Exception:
+            old_history = []
+    else:
+        old_history = build_history(file_path.stem, avg_price)
+
+    history = [point for point in old_history if point.get("date") != today]
+    history.append({"date": today, "avg": round(avg_price, 2)})
+    return history[-90:]
+
+
 def investment_signal(metrics):
     roi = metrics["roi"]
     risk = metrics["riskScore"]
@@ -319,13 +376,18 @@ def main():
 
     for item in TRACKING_ITEMS:
         raw = fetch_live_listings(item) or demo_listings(item)
-        metrics = aggregate(raw, item["retail_price_usd"])
+        metrics = aggregate(raw, item["retail_price_usd"], item.get("negative_keywords", []))
         if not metrics:
             continue
-        history = build_history(item["sku"], metrics["avgSoldPrice"])
+        file_path = DATA_DIR / f"{item['sku']}.json"
+        history = merge_price_history(file_path, metrics["fairMarketValue"])
         change = ((history[-1]["avg"] - history[-8]["avg"]) / history[-8]["avg"]) * 100
         trend_key, trend_zh = trend_label(change)
         signal_key, signal_zh, signal_en = investment_signal(metrics)
+        affiliate_url = (
+            "https://www.ebay.com/sch/i.html?_nkw="
+            + item.get("search_string", item["keywords"]).replace(" ", "+").replace('"', "%22")
+        )
 
         detail = {
             "sku": item["sku"],
@@ -337,6 +399,11 @@ def main():
             "rarity_en": item["rarity_en"],
             "color": item["color"],
             "image": item.get("image", ""),
+            "searchString": item.get("search_string", item["keywords"]),
+            "negativeKeywords": item.get("negative_keywords", []),
+            "refreshTier": item.get("refresh_tier", "weekly"),
+            "refreshIntervalHours": 24 if item.get("refresh_tier") == "hot" else 168,
+            "affiliateUrl": affiliate_url,
             "retailPrice": item["retail_price_usd"],
             "lastUpdated": today,
             "marketData": {
@@ -354,7 +421,7 @@ def main():
             "notes_en": "Prices are sample or API-aggregated metrics, not financial advice. Validate condition, rarity and fees before trading.",
         }
 
-        with (DATA_DIR / f"{item['sku']}.json").open("w", encoding="utf-8") as handle:
+        with file_path.open("w", encoding="utf-8") as handle:
             json.dump(detail, handle, ensure_ascii=False, indent=2)
 
         index.append(
@@ -368,9 +435,14 @@ def main():
                 "rarity_en": item["rarity_en"],
                 "color": item["color"],
                 "image": item.get("image", ""),
+                "searchString": item.get("search_string", item["keywords"]),
+                "refreshTier": item.get("refresh_tier", "weekly"),
+                "affiliateUrl": affiliate_url,
                 "retailPrice": item["retail_price_usd"],
-                "avgSoldPrice": metrics["avgSoldPrice"],
+                "avgSoldPrice": metrics["fairMarketValue"],
                 "medianSoldPrice": metrics["medianSoldPrice"],
+                "fairMarketValue": metrics["fairMarketValue"],
+                "valuationMethod": metrics["valuationMethod"],
                 "priceChange7d": f"{change:+.1f}%",
                 "roi": metrics["roi"],
                 "riskScore": metrics["riskScore"],

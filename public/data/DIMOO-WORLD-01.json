@@ -8,11 +8,24 @@
   "rarity_en": "Liquid regular",
   "color": "#65d39b",
   "image": "",
+  "searchString": "\"Dimoo\" AND (\"World\" OR \"Animal\") AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
+  "negativeKeywords": [
+    "box only",
+    "card only",
+    "preorder",
+    "custom",
+    "fake",
+    "replica"
+  ],
+  "refreshTier": "weekly",
+  "refreshIntervalHours": 168,
+  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Dimoo%22+AND+(%22World%22+OR+%22Animal%22)+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
   "retailPrice": 15.0,
   "lastUpdated": "2026-06-11",
   "marketData": {
     "avgSoldPrice": 26.14,
     "medianSoldPrice": 26.49,
+    "fairMarketValue": 26.49,
     "lowSoldPrice": 19.23,
     "highSoldPrice": 32.32,
     "totalSold": 39,
@@ -21,7 +34,8 @@
     "roi": 74.3,
     "riskScore": 42,
     "cleanedSampleSize": 39,
-    "priceChange7d": "+3.2%",
+    "valuationMethod": "IQR + 10% trimmed median",
+    "priceChange7d": "+4.6%",
     "trend": "range",
     "trend_zh": "区间震荡",
     "signal": "hold",
@@ -147,7 +161,7 @@
     },
     {
       "date": "2026-06-11",
-      "avg": 26.14
+      "avg": 26.49
     }
   ],
   "sources": [
