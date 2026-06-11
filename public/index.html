@@ -912,6 +912,113 @@
           min-height: 38px;
         }
       }
+
+      /* 优化功能区按钮样式 */
+      .function-actions {
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* 隐藏移动端专属按钮（桌面端） */
+      .mobile-menu-btn, .close-menu-btn {
+        display: none;
+      }
+
+      /* 添加图片样式与占位符无缝切换 */
+      .swatch-img, .detail-art-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 1px solid rgba(23, 23, 23, 0.12);
+        background: #fff6e8;
+      }
+      .swatch {
+        width: 44px; /* 桌面端尺寸 */
+        height: 44px;
+        overflow: hidden;
+      }
+      .detail-art {
+        overflow: hidden;
+      }
+
+      /* mini-toy 图片模式暗色遮罩保护文字 */
+      .mini-toy {
+        background-size: cover;
+        background-position: center;
+      }
+      .mini-toy[style*="background:"] {
+        box-shadow: inset 0 -30px 20px rgba(0,0,0,0.5);
+      }
+
+      @media (max-width: 1120px) {
+        /* 平板及手机端布局：改为 1fr，详情页跟在下方或弹窗 */
+        .layout {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 720px) {
+        /* H5 头部适配 */
+        .topbar-inner {
+          display: flex;
+          justify-content: space-between;
+          padding: 10px 16px;
+        }
+        .mobile-menu-btn {
+          display: flex; /* 移动端显示汉堡菜单 */
+        }
+
+        /* 左侧功能区改造为 H5 侧边抽屉 (Off-canvas Drawer) */
+        .function-area {
+          position: fixed;
+          top: 0;
+          left: -100%;
+          width: 85vw;
+          max-width: 320px;
+          height: 100vh;
+          z-index: 100;
+          background: #fffdf8;
+          border-radius: 0;
+          box-shadow: 20px 0 50px rgba(0,0,0,0.2);
+          transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          overflow-y: auto;
+        }
+        .function-area.open {
+          left: 0;
+        }
+        .close-menu-btn {
+          display: flex;
+        }
+
+        /* 资产矩阵 H5 卡片优化 */
+        .asset-card {
+          padding: 12px;
+          grid-template-columns: 80px 1fr; /* 左图右文布局 */
+          align-items: center;
+          gap: 12px;
+          min-height: auto;
+        }
+        .asset-main {
+          flex-direction: row;
+          align-items: center;
+        }
+        .swatch, .swatch-img {
+          width: 80px;
+          height: 80px;
+          aspect-ratio: 1;
+        }
+        .asset-numbers {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-end;
+        }
+        .stock-stepper {
+          transform: scale(0.9);
+          transform-origin: right;
+        }
+      }
     </style>
   </head>
   <body>
@@ -924,14 +1031,7 @@
             <p class="brand-subtitle" data-i18n="brandSubtitle">泡泡玛特潮玩动态市值雷达</p>
           </div>
         </div>
-        <div class="nav-actions">
-          <button class="icon-button" id="refreshButton" title="Refresh data" aria-label="Refresh data">
-            ↻
-          </button>
-          <button class="text-button api-missing" id="apiButton" data-i18n="apiMissing">缺 API</button>
-          <button class="text-button" id="langButton">English</button>
-          <button class="primary-button" id="addButton" data-i18n="addItem">录入</button>
-        </div>
+        <button class="icon-button mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Menu">☰</button>
       </div>
     </header>
 
@@ -979,11 +1079,23 @@
       <nav class="tabs" id="tabs" aria-label="Asset tabs"></nav>
 
       <section class="layout">
-        <aside class="panel filters" aria-label="Filters">
+        <aside class="panel filters function-area" id="functionArea" aria-label="Functions and Filters">
           <div class="panel-header">
-            <h2 class="panel-title" data-i18n="filters">筛选器</h2>
+            <h2 class="panel-title" data-i18n="functions">控制台与筛选</h2>
+            <button class="icon-button close-menu-btn" id="closeMenuBtn">×</button>
           </div>
           <div class="panel-body">
+            <div class="function-actions field">
+              <button class="primary-button" id="addButton" data-i18n="addItem" style="width: 100%;">录入新资产</button>
+              <div class="segmented" style="margin-top: 8px;">
+                 <button class="segment" id="refreshButton" title="Refresh data">刷新全部</button>
+                 <button class="segment api-missing" id="apiButton" data-i18n="apiMissing">缺 API</button>
+              </div>
+              <button class="text-button" id="langButton" style="width: 100%; margin-top: 8px;">English / 中文</button>
+            </div>
+
+            <hr style="border:0; border-top: 1px solid var(--line); margin: 16px 0;">
+
             <div class="field">
               <label for="searchInput" data-i18n="search">搜索 SKU / IP / 系列</label>
               <input id="searchInput" type="search" autocomplete="off" placeholder="Labubu, Molly..." />
@@ -1123,6 +1235,10 @@
                 <input id="formStock" type="number" min="0" step="1" value="1" />
               </div>
             </div>
+            <div class="field">
+              <label for="formImage">图片链接 (选填)</label>
+              <input id="formImage" type="url" placeholder="https://..." />
+            </div>
             <label class="checkbox-row">
               <input id="formChaser" type="checkbox" />
               <span data-i18n="formChaser">标记为隐藏款</span>
@@ -1166,6 +1282,7 @@
           portfolioValue: "持仓潮玩资产总估值",
           stockCount: "总收纳",
           filters: "筛选器",
+          functions: "控制台与筛选",
           search: "搜索 SKU / IP / 系列",
           sort: "排序",
           sortRoi: "溢价率最高",
@@ -1233,6 +1350,7 @@
           portfolioValue: "Portfolio market value",
           stockCount: "Total stock",
           filters: "Filters",
+          functions: "Console & Filters",
           search: "Search SKU / IP / series",
           sort: "Sort",
           sortRoi: "Highest premium",
@@ -1362,6 +1480,7 @@
           riskScore: Number(raw.riskScore || 50),
           totalSold: Number(raw.totalSold || 0),
           priceChange7d: raw.priceChange7d || "+0.0%",
+          image: raw.image || "",
           color: raw.color || "#e94f86",
           lastUpdated: raw.lastUpdated || raw.updated_at || new Date().toISOString().slice(0, 10),
         };
@@ -1398,6 +1517,7 @@
           rarity_zh: item.rarity_zh,
           rarity_en: item.rarity_en,
           color: item.color,
+          image: item.image || "",
           retailPrice: item.retailPrice,
           avgSoldPrice: item.avgSoldPrice,
           medianSoldPrice: item.medianSoldPrice,
@@ -1478,7 +1598,7 @@
           .slice(0, 6)
           .map(
             (item) => `
-              <div class="mini-toy" style="--toy-color: ${item.color}">
+              <div class="mini-toy" style="--toy-color: ${item.color}; ${item.image ? `background-image: url(${item.image});` : ''}">
                 <div class="mini-label"><span>${item.ip}</span><strong>${item.priceChange7d}</strong></div>
               </div>
             `,
@@ -1548,7 +1668,9 @@
             return `
               <article class="asset-card ${state.selectedSku === item.sku ? "selected" : ""} ${item.is_chaser ? "chaser-card" : ""}" data-card="${item.sku}">
                 <button class="asset-main" data-sku="${item.sku}">
-                  <div class="swatch" style="--asset-color: ${item.color}"></div>
+                  <div class="swatch" style="--asset-color: ${item.color}">
+                    ${item.image ? `<img src="${item.image}" class="swatch-img" alt="${localName(item)}">` : ''}
+                  </div>
                   <div>
                     <h3 class="asset-name">${localName(item)}</h3>
                     <div class="asset-meta">
@@ -1656,7 +1778,9 @@
         render();
         document.getElementById("detailEmpty").classList.add("hidden");
         document.getElementById("detailContent").classList.remove("hidden");
-        document.getElementById("detailArt").style.setProperty("--asset-color", item.color);
+        const artContainer = document.getElementById("detailArt");
+        artContainer.style.setProperty("--asset-color", item.color);
+        artContainer.innerHTML = item.image ? `<img src="${item.image}" class="detail-art-img">` : '';
         document.getElementById("detailName").textContent = localName(item);
         document.getElementById("detailMeta").textContent =
           `${item.ip} · ${item.series} · SKU ${item.sku} · ${t("stock")} ${item.stock_count}`;
@@ -1755,11 +1879,13 @@
         const price = Number(document.getElementById("formPrice").value || 0);
         const stock = Number(document.getElementById("formStock").value || 0);
         const chaser = document.getElementById("formChaser").checked;
+        const image = document.getElementById("formImage").value.trim();
         const sku = `USER-${Date.now()}`;
         const item = normalizeItem({
           sku,
           ip,
           series,
+          image,
           name_zh: name,
           name_en: name,
           rarity_zh: chaser ? "隐藏款" : "本地录入",
@@ -1787,6 +1913,13 @@
         loadDetail(sku);
         showToast(t("itemSaved"));
       }
+
+      document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+        document.getElementById('functionArea').classList.add('open');
+      });
+      document.getElementById('closeMenuBtn').addEventListener('click', () => {
+        document.getElementById('functionArea').classList.remove('open');
+      });
 
       async function init() {
         applyI18n();

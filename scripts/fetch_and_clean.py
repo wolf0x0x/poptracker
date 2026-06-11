@@ -45,6 +45,7 @@ TRACKING_ITEMS = [
         "rarity": "热门常规",
         "rarity_en": "Hot regular",
         "color": "#ff7eb6",
+        "image": "",
     },
     {
         "sku": "LABUBU-HAVEASEAT-01",
@@ -57,6 +58,7 @@ TRACKING_ITEMS = [
         "rarity": "热门常规",
         "rarity_en": "Hot regular",
         "color": "#6bd6ff",
+        "image": "",
     },
     {
         "sku": "SKULLPANDA-INKPLUM-01",
@@ -69,6 +71,7 @@ TRACKING_ITEMS = [
         "rarity": "艺术 IP",
         "rarity_en": "Art IP",
         "color": "#9f8cff",
+        "image": "",
     },
     {
         "sku": "MOLLY-SPACE-100-01",
@@ -81,6 +84,7 @@ TRACKING_ITEMS = [
         "rarity": "MEGA",
         "rarity_en": "MEGA",
         "color": "#ffc857",
+        "image": "",
     },
     {
         "sku": "DIMOO-WORLD-01",
@@ -93,6 +97,7 @@ TRACKING_ITEMS = [
         "rarity": "稳定流通",
         "rarity_en": "Liquid regular",
         "color": "#65d39b",
+        "image": "",
     },
     {
         "sku": "HIRONO-LITTLE-MISCHIEF-01",
@@ -105,6 +110,7 @@ TRACKING_ITEMS = [
         "rarity": "成长 IP",
         "rarity_en": "Emerging IP",
         "color": "#ff8a5b",
+        "image": "",
     },
 ]
 
@@ -330,6 +336,7 @@ def main():
             "rarity_zh": item["rarity"],
             "rarity_en": item["rarity_en"],
             "color": item["color"],
+            "image": item.get("image", ""),
             "retailPrice": item["retail_price_usd"],
             "lastUpdated": today,
             "marketData": {
@@ -360,6 +367,7 @@ def main():
                 "rarity_zh": item["rarity"],
                 "rarity_en": item["rarity_en"],
                 "color": item["color"],
+                "image": item.get("image", ""),
                 "retailPrice": item["retail_price_usd"],
                 "avgSoldPrice": metrics["avgSoldPrice"],
                 "medianSoldPrice": metrics["medianSoldPrice"],
