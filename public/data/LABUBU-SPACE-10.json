@@ -7,7 +7,7 @@
   "rarity_zh": "稳定流通",
   "rarity_en": "Liquid regular",
   "color": "#50e3c2",
-  "image": "https://cdn.popmart.com/sku-images/labubu-space-10.jpg",
+  "image": null,
   "searchString": "\"Labubu\" AND \"Space\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
   "negativeKeywords": [
     "box only",

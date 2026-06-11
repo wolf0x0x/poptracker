@@ -43,6 +43,30 @@ python3 -m http.server 8080 -d public
 http://localhost:8080
 ```
 
+## 官方图片同步
+
+`sku_dictionary.json` 的 `image` 字段是前端图片唯一来源。无图片时保持 `null`，不要写入无法访问的占位 CDN。
+
+尝试从 POP MART 官方搜索接口同步图片：
+
+```bash
+python3 scripts/fetch_popmart_images.py
+python3 scripts/fetch_and_clean.py
+```
+
+脚本会将图片下载到 `public/assets/sku/`，并把字典中的 `image` 回填为 `/assets/sku/<sku>.<ext>`。每次运行都会写入诊断报告：
+
+```text
+work/popmart_image_sync_report.json
+```
+
+POP MART 官方接口当前有 Cloudflare / 风控会话校验；若命令返回 `HTTP 471`，脚本会保留 `image: null` 并在报告中记录失败原因，避免把无效图片再次写回页面数据。若已通过浏览器开发者工具导出官方搜索或详情 JSON，可使用：
+
+```bash
+python3 scripts/fetch_popmart_images.py --manual-json path/to/popmart-response.json
+python3 scripts/fetch_and_clean.py
+```
+
 ## 真实数据接入
 
 生产环境推荐通过环境变量或 GitHub Secret 注入，不要把真实 Token 写入代码仓库。

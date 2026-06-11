@@ -1,0 +1,708 @@
+{
+  "downloaded": [],
+  "skipped": [],
+  "missing": [
+    {
+      "sku": "LABUBU-MACARON-01",
+      "terms": [
+        "Labubu The Monsters Tasty Macarons",
+        "Tasty Macarons",
+        "Labubu",
+        "Labubu Macaron Vinyl Face"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "LABUBU-HAVEASEAT-02",
+      "terms": [
+        "Labubu Have a Seat",
+        "Have a Seat",
+        "Labubu"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "LABUBU-FALLINWILD-03",
+      "terms": [
+        "Labubu Fall in Wild",
+        "Fall in Wild",
+        "Labubu"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "LABUBU-EXCITINGMACARON-04",
+      "terms": [
+        "Labubu Exciting Macarons",
+        "Exciting Macarons",
+        "Labubu"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "LABUBU-CATCHME-05",
+      "terms": [
+        "Labubu Catch Me If You Can",
+        "Catch Me If You Can",
+        "Labubu",
+        "Labubu Catch Me"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "LABUBU-FRUITS-06",
+      "terms": [
+        "Labubu Fruits",
+        "Fruits",
+        "Labubu"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "LABUBU-CAMPING-07",
+      "terms": [
+        "Labubu Camping",
+        "Camping",
+        "Labubu"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "LABUBU-ART-08",
+      "terms": [
+        "Labubu Monsters Art",
+        "Monsters Art",
+        "Labubu"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "LABUBU-ZODIAC-09",
+      "terms": [
+        "Labubu Zodiac",
+        "Zodiac",
+        "Labubu"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "LABUBU-SPACE-10",
+      "terms": [
+        "Labubu Space",
+        "Space",
+        "Labubu"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "SKULLPANDA-INKPLUM-01",
+      "terms": [
+        "SKULLPANDA Ink Plum Blossom",
+        "Ink Plum Blossom",
+        "SKULLPANDA"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "SKULLPANDA-CITYOFNIGHT-02",
+      "terms": [
+        "SKULLPANDA City of Night",
+        "City of Night",
+        "SKULLPANDA"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "SKULLPANDA-EVERYDAYWONDERLAND-03",
+      "terms": [
+        "SKULLPANDA Everyday Wonderland",
+        "Everyday Wonderland",
+        "SKULLPANDA"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "SKULLPANDA-MAREOFANIMALS-04",
+      "terms": [
+        "SKULLPANDA The Mare of Animals",
+        "The Mare of Animals",
+        "SKULLPANDA"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "SKULLPANDA-HYPEPANDA-05",
+      "terms": [
+        "SKULLPANDA Hypepanda",
+        "Hypepanda",
+        "SKULLPANDA"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "SKULLPANDA-ACTIONCUT-06",
+      "terms": [
+        "SKULLPANDA Action Cut",
+        "Action Cut",
+        "SKULLPANDA"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "SKULLPANDA-CANDYMONSTER-07",
+      "terms": [
+        "SKULLPANDA Candy Monster",
+        "Candy Monster",
+        "SKULLPANDA"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "SKULLPANDA-LAIDBACK-08",
+      "terms": [
+        "SKULLPANDA Laid Back Tomorrow",
+        "Laid Back Tomorrow",
+        "SKULLPANDA"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "MOLLY-SPACE-100-S1-01",
+      "terms": [
+        "MEGA Space Molly 100% Series 1",
+        "MOLLY"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "MOLLY-SPACE-100-S2-02",
+      "terms": [
+        "MEGA Space Molly 100% Series 2",
+        "MOLLY"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "MOLLY-SPACE-100-S3-03",
+      "terms": [
+        "MEGA Space Molly 100% Series 3",
+        "MOLLY"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "MOLLY-MYCHILDHOOD-04",
+      "terms": [
+        "MOLLY My Childhood",
+        "My Childhood",
+        "MOLLY"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "MOLLY-IMAGINARY-05",
+      "terms": [
+        "MOLLY Imaginary Wandering",
+        "Imaginary Wandering",
+        "MOLLY"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "MOLLY-DAYDREAM-06",
+      "terms": [
+        "MOLLY Daydream",
+        "Daydream",
+        "MOLLY"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "MOLLY-SCHOOLLIFE-07",
+      "terms": [
+        "MOLLY School Life",
+        "School Life",
+        "MOLLY"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "MOLLY-STEAMPUNK-08",
+      "terms": [
+        "MOLLY Steampunk",
+        "Steampunk",
+        "MOLLY"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "DIMOO-WORLD-01",
+      "terms": [
+        "DIMOO World x Animal",
+        "World x Animal",
+        "DIMOO",
+        "Dimoo World Animal"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "DIMOO-DATING-02",
+      "terms": [
+        "DIMOO Dating",
+        "Dating",
+        "DIMOO"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "DIMOO-JURASSIC-03",
+      "terms": [
+        "DIMOO Jurassic",
+        "Jurassic",
+        "DIMOO"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "DIMOO-SPACETRAVEL-04",
+      "terms": [
+        "DIMOO Space Travel",
+        "Space Travel",
+        "DIMOO"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "DIMOO-AQUARIUM-05",
+      "terms": [
+        "DIMOO Aquarium",
+        "Aquarium",
+        "DIMOO"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "DIMOO-NOSLEEP-06",
+      "terms": [
+        "DIMOO No One's Gonna Sleep",
+        "No One's Gonna Sleep",
+        "DIMOO"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "DIMOO-MIDNIGHT-07",
+      "terms": [
+        "DIMOO Midnight Circus",
+        "Midnight Circus",
+        "DIMOO"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "DIMOO-ZODIAC-08",
+      "terms": [
+        "DIMOO Zodiac",
+        "Zodiac",
+        "DIMOO"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "HIRONO-LITTLE-MISCHIEF-01",
+      "terms": [
+        "HIRONO Little Mischief",
+        "Little Mischief",
+        "HIRONO"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "HIRONO-CITYOFMERCY-02",
+      "terms": [
+        "HIRONO City of Mercy",
+        "City of Mercy",
+        "HIRONO"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "HIRONO-OTHERONE-03",
+      "terms": [
+        "HIRONO Other One",
+        "Other One",
+        "HIRONO"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "HIRONO-RESHAPE-04",
+      "terms": [
+        "HIRONO Reshape",
+        "Reshape",
+        "HIRONO"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "HIRONO-SHELTER-05",
+      "terms": [
+        "HIRONO Shelter",
+        "Shelter",
+        "HIRONO"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "HIRONO-MIME-06",
+      "terms": [
+        "HIRONO Mime",
+        "Mime",
+        "HIRONO"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "CRYBABY-SADCLUB-01",
+      "terms": [
+        "CRYBABY Sad Club Series",
+        "Sad Club",
+        "CRYBABY",
+        "Crybaby Sad Club"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "CRYBABY-LONELYCHRISTMAS-02",
+      "terms": [
+        "CRYBABY Lonely Christmas",
+        "Lonely Christmas",
+        "CRYBABY"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "CRYBABY-MONSTERTEARS-03",
+      "terms": [
+        "CRYBABY Monster Tears",
+        "Monster Tears",
+        "CRYBABY"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "CRYBABY-POWERPUFF-04",
+      "terms": [
+        "CRYBABY Powerpuff Girls",
+        "Powerpuff Girls",
+        "CRYBABY"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "CRYBABY-CHEERUP-05",
+      "terms": [
+        "CRYBABY Cheer Up",
+        "Cheer Up",
+        "CRYBABY"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "SWEETBEAN-SUPERMARKET-01",
+      "terms": [
+        "SWEET BEAN Supermarket",
+        "Supermarket",
+        "SWEET BEAN"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "SWEETBEAN-ANIMALS-02",
+      "terms": [
+        "SWEET BEAN Animals",
+        "Animals",
+        "SWEET BEAN"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "SWEETBEAN-AKIHABARA-03",
+      "terms": [
+        "SWEET BEAN Akihabara",
+        "Akihabara",
+        "SWEET BEAN"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "PUCKY-FOREST-01",
+      "terms": [
+        "PUCKY Forest",
+        "Forest",
+        "PUCKY"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    },
+    {
+      "sku": "PUCKY-SLEEPINGBABIES-02",
+      "terms": [
+        "PUCKY Sleeping Babies",
+        "Sleeping Babies",
+        "PUCKY"
+      ],
+      "reason": "no official image url found",
+      "api_error": {
+        "type": "http_error",
+        "status": 471,
+        "body": "{}"
+      }
+    }
+  ],
+  "errors": []
+}
