@@ -44,6 +44,10 @@ http://localhost:8080
 
 ## 真实数据接入
 
+生产环境推荐通过环境变量或 GitHub Secret 注入，不要把真实 Token 写入代码仓库。
+
+### GitHub Actions / GitHub Pages 数据生成
+
 在 GitHub 仓库中配置：
 
 - `Settings -> Secrets and variables -> Actions -> Secrets`
@@ -53,6 +57,24 @@ http://localhost:8080
 
 - `Settings -> Secrets and variables -> Actions -> Variables`
 - 新建 `SOLDCOMPS_ENDPOINT`
+
+### 本地脚本 `.env`
+
+复制 `.env.example` 为 `.env`，填入真实 Token：
+
+```bash
+cp .env.example .env
+```
+
+```text
+SOLDCOMPS_API_KEY=your_real_token
+```
+
+`.env` 已在 `.gitignore` 中排除，只用于本机运行 `python3 scripts/fetch_and_clean.py`。
+
+### H5 离线 / 演示模式
+
+前端页面右上角点击 `缺 API` / `API ready` 打开设置面板，填入 `SOLD_COMPS_API_KEY`。该值只写入当前浏览器 `localStorage`，用于当前设备上的单款“刷新市值”。
 
 脚本默认调用 Apify 同步接口：
 
@@ -72,7 +94,7 @@ https://api.apify.com/v2/acts/caffein.dev~ebay-sold-listings/run-sync-get-datase
 }
 ```
 
-前端页面也支持在浏览器里直接配置 API Token，然后对单款资产点击“刷新市值”。请求流向为：
+前端单款刷新请求流向为：
 
 ```text
 H5 客户端 -> 本地组装 Pop Mart + IP + 系列 + 款式关键词 -> sold-comps / Apify 网关

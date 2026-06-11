@@ -13,6 +13,25 @@ except ImportError:  # The script still works with bundled demo data.
 
 
 DATA_DIR = Path(__file__).resolve().parents[1] / "public" / "data"
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
+
+def load_dotenv(path=PROJECT_ROOT / ".env"):
+    if not path.exists():
+        return
+    with path.open("r", encoding="utf-8") as handle:
+        for raw_line in handle:
+            line = raw_line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            key = key.strip()
+            value = value.strip().strip('"').strip("'")
+            if key and key not in os.environ:
+                os.environ[key] = value
+
+
+load_dotenv()
 
 TRACKING_ITEMS = [
     {
