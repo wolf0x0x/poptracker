@@ -6,19 +6,17 @@ GitHub 仓库地址：<https://github.com/wolf0x0x/poptracker>
 
 ## 功能
 
-- 泡泡玛特热门 IP 资产矩阵：Labubu、SKULLPANDA、MOLLY、DIMOO、HIRONO。
-- 二级市场指标：均价、中位数、七日涨跌、成交量、ROI、波动率、风险分。
-- 投资与收藏双视角：收藏视角突出 IP、系列、稀缺属性；投资视角突出成交、风险和溢价。
-- 中英文双语界面。
-- H5 多 Tab：全仓盘点、行情雷达、隐藏款、MOLLY、Labubu。
-- 移动端看盘：触控友好的筛选、排序、行情刷新和详情查看体验。
-- 响应式资产网格：移动端两列瀑布式卡片，桌面端保留筛选器、资产矩阵和详情面板。
-- 隐藏款视觉增强：隐藏款卡片带动态流动徽章和高亮边框。
+- 首页市场大盘：综合指数、30 日趋势图、SKU 数、样本成交、平均 ROI、热点 IP。
+- 实时成交记录：基于最新静态成交样本生成二级市场成交流，点击即可进入单品详情。
+- 发现页瀑布流：按 IP、搜索词、ROI、涨幅、成交量和风险筛选热门单品。
+- 单品详情页：展示 FMV、官方价、ROI、风险分、成交走势图、估值方法和 eBay 动态 CTA。
+- 二级市场指标：均价、中位数、七日涨跌、成交量、ROI、风险分。
+- 动态 SEO：详情页自动注入 `Product Schema`，用于搜索引擎理解成交价区间。
+- AdSense 广告位：顶部 Leaderboard、侧栏 300x250、后续可替换真实广告单元。
 - API Key 本地配置：`SOLD_COMPS_API_KEY` 仅保存在浏览器 `localStorage`。
 - 单款一键刷新：通过 sold-comps.com / Apify completed sales 接口刷新最新成交中位价。
-- 搜索、IP 筛选、排序、详情面板、30 日价格走势图。
+- 伪纯前端架构：GitHub Actions 每日拉取 SoldComps，前端读取同域 `public/data/*.json`。
 - Python 数据生成脚本：多币种折算、IQR 异常值清洗、指标聚合、Apify POST 接口兼容、样例数据兜底。
-- GitHub Actions 每日自动更新 `public/data/*.json`。
 
 ## 产品执行步骤
 

@@ -3,49 +3,57 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>poptracker PRO | 泡泡玛特潮玩动态市值雷达</title>
+    <title>PopTracker | 泡泡玛特潮玩二级市场价格追踪</title>
     <meta
       name="description"
-      content="poptracker PRO tracks Pop Mart sold-comps market prices, ROI, FMV and secondary market history."
+      content="PopTracker 通过 SoldComps 预生成成交数据追踪泡泡玛特潮玩 FMV、市值趋势、成交热度与二级市场走势。"
     />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+      crossorigin="anonymous"
+    ></script>
     <style>
       :root {
         color-scheme: light;
-        --bg: #f5f2ec;
-        --ink: #171717;
-        --muted: #6d675f;
-        --line: #ded7cd;
-        --surface: #fffdf8;
-        --surface-2: #eee7dd;
-        --rose: #e94f86;
-        --blue: #2d72b8;
-        --green: #228b65;
-        --amber: #b17612;
-        --violet: #7159cf;
-        --shadow: 0 18px 50px rgba(62, 50, 35, 0.12);
+        --bg: #f8f9fa;
+        --surface: #ffffff;
+        --surface-low: #f1f3f5;
+        --surface-mid: #e7e9ed;
+        --ink: #191c1d;
+        --muted: #59616c;
+        --line: #d8dce2;
+        --primary: #6b38d4;
+        --primary-soft: #ebe2ff;
+        --green: #007a52;
+        --green-soft: #dff7ec;
+        --red: #b3261e;
+        --red-soft: #ffedea;
+        --amber: #9b6500;
+        --amber-soft: #fff1cf;
+        --blue: #2a6fbb;
+        --blue-soft: #e3f0ff;
+        --shadow: 0 18px 46px rgba(36, 40, 48, 0.1);
       }
 
       * {
         box-sizing: border-box;
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         margin: 0;
         min-height: 100vh;
-        background:
-          linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(245, 242, 236, 0.94)),
-          radial-gradient(circle at 16% 8%, rgba(233, 79, 134, 0.14), transparent 27%),
-          radial-gradient(circle at 84% 12%, rgba(45, 114, 184, 0.14), transparent 28%),
-          var(--bg);
+        background: var(--bg);
         color: var(--ink);
         font-family:
           Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
           "PingFang SC", "Microsoft YaHei", sans-serif;
         -webkit-tap-highlight-color: transparent;
-        touch-action: manipulation;
-        user-select: none;
       }
 
       button,
@@ -56,1178 +64,890 @@
 
       button {
         cursor: pointer;
-        touch-action: manipulation;
       }
 
-      input,
-      select {
-        user-select: text;
-      }
-
-      @keyframes chaserFlow {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
+      a {
+        color: inherit;
+        text-decoration: none;
       }
 
       .shell {
-        width: min(1440px, calc(100vw - 32px));
+        width: min(1280px, calc(100vw - 40px));
         margin: 0 auto;
       }
 
       .topbar {
         position: sticky;
         top: 0;
-        z-index: 30;
-        border-bottom: 1px solid rgba(222, 215, 205, 0.86);
-        background: rgba(245, 242, 236, 0.86);
+        z-index: 40;
+        border-bottom: 1px solid rgba(216, 220, 226, 0.9);
+        background: rgba(248, 249, 250, 0.92);
         backdrop-filter: blur(18px);
       }
 
       .topbar-inner {
-        display: grid;
-        grid-template-columns: minmax(260px, 1fr) auto;
-        gap: 16px;
-        min-height: 74px;
+        display: flex;
+        min-height: 68px;
         align-items: center;
+        justify-content: space-between;
+        gap: 20px;
       }
 
       .brand {
-        display: flex;
-        min-width: 0;
+        display: inline-flex;
         align-items: center;
-        gap: 12px;
-      }
-
-      .logo {
-        display: grid;
-        width: 44px;
-        height: 44px;
-        place-items: center;
-        border: 1px solid rgba(23, 23, 23, 0.12);
-        border-radius: 8px;
-        background: linear-gradient(145deg, #171717, #443e36);
-        box-shadow: 0 10px 28px rgba(23, 23, 23, 0.16);
-      }
-
-      .logo-mark {
-        position: relative;
-        width: 25px;
-        height: 25px;
-      }
-
-      .logo-mark::before,
-      .logo-mark::after {
-        position: absolute;
-        content: "";
-        border-radius: 999px;
-      }
-
-      .logo-mark::before {
-        inset: 2px 3px 4px;
-        background: #ff78aa;
-      }
-
-      .logo-mark::after {
-        right: 3px;
-        bottom: 3px;
-        width: 8px;
-        height: 8px;
-        background: #7dd3fc;
-        box-shadow: -12px -12px 0 #ffe08a;
-      }
-
-      .brand-title {
-        margin: 0;
-        font-size: 20px;
-        font-weight: 880;
+        gap: 10px;
+        font-weight: 860;
         letter-spacing: 0;
       }
 
-      .brand-subtitle {
-        margin: 1px 0 0;
-        color: var(--muted);
-        font-size: 12px;
+      .brand-mark {
+        display: grid;
+        width: 36px;
+        height: 36px;
+        place-items: center;
+        border-radius: 8px;
+        background: var(--primary);
+        color: #fff;
+        font-weight: 900;
       }
 
-      .nav-actions {
+      .nav {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
-        gap: 9px;
+        gap: 6px;
       }
 
-      .icon-button,
-      .text-button,
-      .primary-button {
+      .nav a,
+      .ghost-button,
+      .primary-button,
+      .chip,
+      .icon-button {
         display: inline-flex;
         min-height: 40px;
         align-items: center;
         justify-content: center;
-        gap: 8px;
-        border: 1px solid var(--line);
+        border: 1px solid transparent;
         border-radius: 8px;
-        background: rgba(255, 253, 248, 0.88);
-        color: var(--ink);
         padding: 0 13px;
+        color: var(--muted);
+        background: transparent;
       }
 
-      .icon-button {
-        width: 42px;
-        padding: 0;
+      .nav a.active,
+      .nav a:hover,
+      .ghost-button:hover,
+      .chip.active {
+        background: var(--primary-soft);
+        color: var(--primary);
       }
 
       .primary-button {
-        border-color: #171717;
-        background: #171717;
-        color: #fffdf8;
-        font-weight: 820;
+        border-color: var(--primary);
+        background: var(--primary);
+        color: #fff;
+        font-weight: 780;
+      }
+
+      .ghost-button {
+        border-color: var(--line);
+        background: var(--surface);
       }
 
       .api-ready {
-        border-color: rgba(34, 139, 101, 0.32);
-        background: rgba(34, 139, 101, 0.11);
+        border-color: rgba(0, 122, 82, 0.3);
+        background: var(--green-soft);
         color: var(--green);
       }
 
       .api-missing {
-        border-color: rgba(233, 79, 134, 0.32);
-        background: rgba(233, 79, 134, 0.1);
-        color: #c63d72;
+        border-color: rgba(179, 38, 30, 0.22);
+        background: var(--red-soft);
+        color: var(--red);
       }
 
       .hero {
         display: grid;
-        grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-        gap: 22px;
-        padding: 32px 0 18px;
+        grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.55fr);
+        gap: 20px;
+        padding: 34px 0 20px;
       }
 
-      .hero-copy h2 {
-        max-width: 780px;
-        margin: 0;
-        font-size: clamp(34px, 5vw, 70px);
-        line-height: 0.98;
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        box-shadow: var(--shadow);
+      }
+
+      .market-panel {
+        overflow: hidden;
+      }
+
+      .market-head {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 16px;
+        align-items: start;
+        padding: 24px;
+      }
+
+      .eyebrow {
+        margin: 0 0 8px;
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 820px;
+        margin-bottom: 12px;
+        font-size: clamp(34px, 5vw, 60px);
+        line-height: 1;
         letter-spacing: 0;
       }
 
-      .hero-copy p {
-        max-width: 740px;
-        margin: 18px 0 0;
+      .lead {
+        max-width: 760px;
+        margin-bottom: 0;
         color: var(--muted);
-        font-size: 17px;
-        line-height: 1.65;
+        font-size: 16px;
+        line-height: 1.7;
       }
 
-      .metrics-row {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(120px, 1fr));
-        gap: 12px;
-        margin-top: 26px;
-      }
-
-      .metric {
-        border: 1px solid rgba(222, 215, 205, 0.9);
+      .market-index {
+        min-width: 190px;
+        border: 1px solid var(--line);
         border-radius: 8px;
-        background: rgba(255, 253, 248, 0.72);
+        background: var(--surface-low);
         padding: 14px;
       }
 
-      .metric span {
+      .index-value {
+        display: block;
+        font-size: 34px;
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .up {
+        color: var(--green);
+      }
+
+      .down {
+        color: var(--red);
+      }
+
+      .chart-wrap {
+        height: 290px;
+        padding: 0 18px 18px;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        border-top: 1px solid var(--line);
+      }
+
+      .metric {
+        min-width: 0;
+        border-right: 1px solid var(--line);
+        padding: 16px 18px;
+      }
+
+      .metric:last-child {
+        border-right: 0;
+      }
+
+      .metric span,
+      .card-label,
+      .field-label {
+        display: block;
+        margin-bottom: 5px;
         color: var(--muted);
         font-size: 12px;
+        font-weight: 750;
       }
 
       .metric strong {
         display: block;
-        margin-top: 8px;
-        font-size: 22px;
-      }
-
-      .radar {
-        border: 1px solid rgba(222, 215, 205, 0.96);
-        border-radius: 8px;
-        background:
-          linear-gradient(160deg, rgba(255, 253, 248, 0.84), rgba(238, 231, 221, 0.76)),
-          repeating-linear-gradient(90deg, rgba(23, 23, 23, 0.04) 0 1px, transparent 1px 52px);
-        box-shadow: var(--shadow);
-        padding: 16px;
-      }
-
-      .portfolio-value {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        gap: 14px;
-        align-items: end;
-        border: 1px solid rgba(23, 23, 23, 0.09);
-        border-radius: 8px;
-        background: rgba(255, 253, 248, 0.72);
-        padding: 15px;
-      }
-
-      .portfolio-value span {
-        color: var(--muted);
-        font-size: 12px;
-      }
-
-      .portfolio-value strong {
-        display: block;
-        margin-top: 5px;
-        color: var(--amber);
-        font-size: 34px;
-        letter-spacing: 0;
-      }
-
-      .mini-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        margin-top: 12px;
-      }
-
-      .mini-toy {
-        position: relative;
-        min-height: 112px;
-        border: 1px solid rgba(23, 23, 23, 0.1);
-        border-radius: 8px;
-        background: rgba(255, 253, 248, 0.78);
         overflow: hidden;
+        font-size: 24px;
+        font-weight: 900;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
 
-      .mini-toy::before {
-        position: absolute;
-        top: 20px;
-        left: 50%;
-        width: 58px;
-        height: 66px;
-        border-radius: 42% 42% 48% 48%;
-        background: var(--toy-color);
-        box-shadow:
-          -22px -7px 0 -11px color-mix(in srgb, var(--toy-color), #fff 30%),
-          22px -7px 0 -11px color-mix(in srgb, var(--toy-color), #111 10%);
-        content: "";
-        transform: translateX(-50%);
-      }
-
-      .mini-toy::after {
-        position: absolute;
-        top: 55px;
-        left: 50%;
-        width: 38px;
-        height: 20px;
-        border-radius: 999px;
-        background:
-          radial-gradient(circle at 32% 45%, #171717 0 2px, transparent 3px),
-          radial-gradient(circle at 68% 45%, #171717 0 2px, transparent 3px),
-          #fff6e8;
-        content: "";
-        transform: translateX(-50%);
-      }
-
-      .mini-label {
-        position: absolute;
-        right: 9px;
-        bottom: 8px;
-        left: 9px;
+      .feed-panel {
         display: flex;
-        justify-content: space-between;
-        gap: 8px;
-        color: var(--muted);
-        font-size: 10px;
-        font-weight: 720;
-      }
-
-      .tabs {
-        position: sticky;
-        top: 74px;
-        z-index: 20;
-        display: flex;
-        gap: 8px;
-        overflow-x: auto;
-        border: 1px solid rgba(222, 215, 205, 0.88);
-        border-radius: 8px;
-        background: rgba(255, 253, 248, 0.9);
-        padding: 8px;
-        box-shadow: 0 12px 30px rgba(62, 50, 35, 0.08);
-        backdrop-filter: blur(16px);
-        scrollbar-width: none;
-      }
-
-      .tabs::-webkit-scrollbar {
-        display: none;
-      }
-
-      .tab-button {
-        flex: 0 0 auto;
-        min-height: 38px;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        background: #fffdf8;
-        color: var(--muted);
-        padding: 0 14px;
-        font-size: 13px;
-        font-weight: 760;
-      }
-
-      .tab-button.active {
-        border-color: #171717;
-        background: #171717;
-        color: #fffdf8;
-      }
-
-      .layout {
-        display: grid;
-        grid-template-columns: 292px minmax(0, 1fr) 380px;
-        gap: 18px;
-        align-items: start;
-        padding: 18px 0 46px;
-      }
-
-      .panel {
-        border: 1px solid rgba(222, 215, 205, 0.9);
-        border-radius: 8px;
-        background: rgba(255, 253, 248, 0.9);
-        box-shadow: 0 14px 38px rgba(62, 50, 35, 0.08);
-      }
-
-      .panel-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        border-bottom: 1px solid var(--line);
-        padding: 14px;
-      }
-
-      .panel-title {
-        margin: 0;
-        font-size: 15px;
-        font-weight: 840;
-      }
-
-      .panel-body {
-        padding: 14px;
-      }
-
-      .filters,
-      .detail {
-        position: sticky;
-        top: 138px;
-      }
-
-      .field {
-        display: grid;
-        gap: 7px;
-        margin-bottom: 14px;
-      }
-
-      .field label {
-        color: var(--muted);
-        font-size: 12px;
-        font-weight: 720;
-      }
-
-      .field input,
-      .field select {
-        width: 100%;
-        height: 42px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: #fffdf8;
-        color: var(--ink);
-        padding: 0 11px;
-        outline-color: rgba(45, 114, 184, 0.4);
-      }
-
-      .segmented {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 6px;
-      }
-
-      .segment {
-        min-height: 38px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: #fffdf8;
-        color: var(--muted);
-      }
-
-      .segment.active {
-        border-color: #171717;
-        background: #171717;
-        color: #fffdf8;
-      }
-
-      .status {
-        color: var(--muted);
-        font-size: 12px;
-      }
-
-      .asset-list {
-        display: grid;
-        gap: 10px;
-      }
-
-      .asset-card {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 16px;
-        width: 100%;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: rgba(255, 253, 248, 0.96);
-        padding: 14px;
-        text-align: left;
-        transition:
-          transform 0.16s ease,
-          border-color 0.16s ease,
-          box-shadow 0.16s ease;
-      }
-
-      .asset-card:hover,
-      .asset-card.selected {
-        border-color: rgba(23, 23, 23, 0.5);
-        box-shadow: 0 12px 28px rgba(62, 50, 35, 0.1);
-        transform: translateY(-1px);
-      }
-
-      .asset-card.chaser-card {
-        border-color: rgba(113, 89, 207, 0.38);
-        background:
-          linear-gradient(#fffdf8, #fffdf8) padding-box,
-          linear-gradient(120deg, rgba(113, 89, 207, 0.7), rgba(233, 79, 134, 0.62), rgba(255, 200, 87, 0.56)) border-box;
-        box-shadow: 0 14px 38px rgba(113, 89, 207, 0.14);
-      }
-
-      .asset-card.chaser-card.selected {
-        box-shadow:
-          0 16px 42px rgba(113, 89, 207, 0.2),
-          0 0 0 3px rgba(113, 89, 207, 0.08);
-      }
-
-      .asset-main {
-        display: flex;
-        min-width: 0;
-        gap: 12px;
-      }
-
-      .swatch,
-      .detail-art {
-        flex: 0 0 auto;
-        border: 1px solid rgba(23, 23, 23, 0.12);
-        border-radius: 8px;
-        background:
-          radial-gradient(circle at 50% 38%, #fff6e8 0 20%, transparent 21%),
-          var(--asset-color, #ff7eb6);
-      }
-
-      .swatch {
-        width: 44px;
-        height: 44px;
-      }
-
-      .asset-name {
-        margin: 0;
-        font-size: 16px;
-        font-weight: 840;
-      }
-
-      .asset-meta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
-        margin-top: 7px;
-      }
-
-      .tag {
-        display: inline-flex;
-        min-height: 22px;
-        align-items: center;
-        border: 1px solid rgba(23, 23, 23, 0.09);
-        border-radius: 999px;
-        background: var(--surface-2);
-        color: var(--muted);
-        font-size: 11px;
-        padding: 0 8px;
-      }
-
-      .chaser-badge {
-        border: 0;
-        background: linear-gradient(110deg, #6f55d8, #e94f86, #ffc857, #6f55d8);
-        background-size: 220% 220%;
-        color: #fff;
-        animation: chaserFlow 3s ease infinite;
-      }
-
-      .asset-numbers {
-        display: grid;
-        gap: 8px;
-        min-width: 154px;
-        text-align: right;
-      }
-
-      .price {
-        font-size: 22px;
-        font-weight: 880;
-      }
-
-      .change {
-        justify-self: end;
-        border-radius: 999px;
-        font-size: 12px;
-        font-weight: 760;
-        padding: 4px 9px;
-      }
-
-      .positive {
-        background: rgba(34, 139, 101, 0.12);
-        color: var(--green);
-      }
-
-      .negative {
-        background: rgba(196, 64, 73, 0.12);
-        color: #c44049;
-      }
-
-      .card-actions {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        gap: 6px;
-      }
-
-      .tiny-button {
-        min-height: 30px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: #fffdf8;
-        color: var(--muted);
-        padding: 0 9px;
-        font-size: 12px;
-        font-weight: 760;
-      }
-
-      .tiny-button:disabled {
-        cursor: progress;
-        opacity: 0.56;
-      }
-
-      .deal-button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 42px;
-        margin: 0 14px 14px;
-        border: 1px solid #171717;
-        border-radius: 8px;
-        background: #171717;
-        color: #fffdf8;
-        font-size: 13px;
-        font-weight: 840;
-        text-decoration: none;
-      }
-
-      .method-line {
-        margin: -4px 14px 12px;
-        color: var(--muted);
-        font-size: 11px;
-        line-height: 1.45;
-      }
-
-      .mobile-hint {
-        margin-top: 10px;
-        color: var(--muted);
-        font-size: 11px;
-        line-height: 1.45;
-      }
-
-      .detail-empty {
-        display: grid;
-        min-height: 330px;
-        place-items: center;
-        color: var(--muted);
-        text-align: center;
-        line-height: 1.5;
-        padding: 24px;
-      }
-
-      .detail-hero {
-        display: flex;
-        gap: 12px;
-        align-items: flex-start;
-        padding: 14px;
-      }
-
-      .detail-art {
-        width: 72px;
-        height: 72px;
-      }
-
-      .detail h3 {
-        margin: 0;
-        font-size: 20px;
-        line-height: 1.18;
-      }
-
-      .detail-sub {
-        margin-top: 8px;
-        color: var(--muted);
-        font-size: 12px;
-      }
-
-      .kpi-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        padding: 0 14px 14px;
-      }
-
-      .kpi {
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: rgba(245, 242, 236, 0.66);
-        padding: 12px;
-      }
-
-      .kpi span {
-        color: var(--muted);
-        font-size: 11px;
-      }
-
-      .kpi strong {
-        display: block;
-        margin-top: 7px;
-        font-size: 20px;
-      }
-
-      .chart-wrap {
-        height: 220px;
-        margin: 0 14px 14px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: rgba(255, 253, 248, 0.84);
-        padding: 10px;
-      }
-
-      .note {
-        margin: 0 14px 14px;
-        border-left: 3px solid var(--amber);
-        background: rgba(255, 200, 87, 0.12);
-        color: #68521c;
-        font-size: 12px;
-        line-height: 1.55;
-        padding: 10px 12px;
-      }
-
-      .modal-backdrop {
-        position: fixed;
-        inset: 0;
-        z-index: 60;
-        display: grid;
-        place-items: end center;
-        background: rgba(23, 23, 23, 0.58);
+        min-height: 100%;
+        flex-direction: column;
         padding: 18px;
       }
 
-      .modal {
-        width: min(560px, 100%);
-        border-radius: 8px;
-        background: #fffdf8;
-        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.26);
-      }
-
-      .modal-header {
+      .section-head {
         display: flex;
-        align-items: center;
+        align-items: end;
         justify-content: space-between;
-        gap: 12px;
-        border-bottom: 1px solid var(--line);
-        padding: 16px;
+        gap: 16px;
+        margin-bottom: 16px;
       }
 
-      .modal-header h3 {
-        margin: 0;
-        font-size: 17px;
+      .section-head h2 {
+        margin-bottom: 4px;
+        font-size: 24px;
       }
 
-      .modal-body {
-        padding: 16px;
-      }
-
-      .form-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-      }
-
-      .checkbox-row {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        min-height: 42px;
+      .section-head p {
+        margin-bottom: 0;
         color: var(--muted);
         font-size: 13px;
-        font-weight: 720;
+      }
+
+      .feed-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .feed-item {
+        display: grid;
+        grid-template-columns: 38px minmax(0, 1fr) auto;
+        gap: 10px;
+        align-items: center;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface-low);
+        padding: 10px;
+      }
+
+      .avatar,
+      .toy-art {
+        background:
+          radial-gradient(circle at 50% 32%, rgba(255, 255, 255, 0.9) 0 16%, transparent 17%),
+          radial-gradient(circle at 34% 44%, rgba(25, 28, 29, 0.13) 0 3%, transparent 4%),
+          radial-gradient(circle at 66% 44%, rgba(25, 28, 29, 0.13) 0 3%, transparent 4%),
+          linear-gradient(145deg, var(--asset-color, #6b38d4), color-mix(in srgb, var(--asset-color, #6b38d4) 32%, #ffffff));
+      }
+
+      .avatar {
+        width: 38px;
+        height: 38px;
+        border-radius: 8px;
+      }
+
+      .feed-name {
+        overflow: hidden;
+        font-weight: 760;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .feed-meta,
+      .muted {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .feed-price {
+        text-align: right;
+        font-weight: 860;
+      }
+
+      .ad-banner {
+        display: grid;
+        min-height: 90px;
+        place-items: center;
+        margin: 8px 0 28px;
+        border: 1px dashed #aab1bd;
+        border-radius: 8px;
+        background: var(--surface-low);
+        color: var(--muted);
+        position: relative;
+      }
+
+      .ad-banner::before {
+        position: absolute;
+        top: 8px;
+        left: 10px;
+        content: "SPONSORED";
+        color: #7c8490;
+        font-size: 11px;
+        font-weight: 800;
+      }
+
+      .discover {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 300px;
+        gap: 20px;
+        padding-bottom: 34px;
+      }
+
+      .toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 16px;
+      }
+
+      .search {
+        min-width: min(100%, 260px);
+        flex: 1;
+        height: 42px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        color: var(--ink);
+        padding: 0 13px;
+      }
+
+      select {
+        height: 42px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        color: var(--ink);
+        padding: 0 11px;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        width: 100%;
+      }
+
+      .chip {
+        min-height: 34px;
+        border-color: var(--line);
+        background: var(--surface);
+        font-size: 13px;
+      }
+
+      .bento {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .item-card,
+      .insight-card {
+        min-width: 0;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+      }
+
+      .item-card {
+        display: flex;
+        min-height: 100%;
+        flex-direction: column;
+        text-align: left;
+      }
+
+      .item-card.featured {
+        grid-column: span 2;
+      }
+
+      .item-card:hover {
+        border-color: color-mix(in srgb, var(--asset-color, #6b38d4) 70%, var(--line));
+        box-shadow: 0 16px 34px rgba(36, 40, 48, 0.12);
+        transform: translateY(-1px);
+      }
+
+      .toy-art {
+        position: relative;
+        aspect-ratio: 1.18 / 1;
+        width: 100%;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .toy-art img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .badge {
+        display: inline-flex;
+        min-height: 24px;
+        align-items: center;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.88);
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: 820;
+        padding: 0 8px;
+      }
+
+      .toy-art .badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+
+      .card-body {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+      }
+
+      .card-title {
+        margin-bottom: 3px;
+        font-size: 18px;
+        line-height: 1.22;
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: auto;
+        padding-top: 12px;
+        border-top: 1px solid var(--line);
+      }
+
+      .card-value {
+        display: block;
+        overflow: hidden;
+        font-weight: 850;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .insight-card {
+        display: flex;
+        min-height: 260px;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 18px;
+        background: #191c1d;
+        color: #fff;
+      }
+
+      .insight-card .muted,
+      .insight-card .card-label {
+        color: rgba(255, 255, 255, 0.68);
+      }
+
+      .side-stack {
+        display: grid;
+        align-content: start;
+        gap: 14px;
+      }
+
+      .mini-panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        padding: 16px;
+      }
+
+      .rank-list {
+        display: grid;
+        gap: 11px;
+      }
+
+      .rank-row {
+        display: grid;
+        grid-template-columns: 24px minmax(0, 1fr) auto;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .rank-row strong {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .detail-drawer {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 60;
+        display: none;
+        width: min(520px, calc(100vw - 36px));
+        max-height: calc(100vh - 92px);
+        overflow: auto;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+      }
+
+      .detail-drawer.open {
+        display: block;
+      }
+
+      .detail-hero {
+        display: grid;
+        grid-template-columns: 150px minmax(0, 1fr);
+        gap: 14px;
+        padding: 18px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .detail-art {
+        min-height: 150px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background:
+          radial-gradient(circle at 50% 31%, rgba(255, 255, 255, 0.92) 0 16%, transparent 17%),
+          radial-gradient(circle at 34% 44%, rgba(25, 28, 29, 0.15) 0 3%, transparent 4%),
+          radial-gradient(circle at 66% 44%, rgba(25, 28, 29, 0.15) 0 3%, transparent 4%),
+          linear-gradient(145deg, var(--asset-color, #6b38d4), #ffffff);
+      }
+
+      .detail-art img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .detail-body {
+        padding: 18px;
+      }
+
+      .detail-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: 16px;
+      }
+
+      .field {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface-low);
+        padding: 11px;
+      }
+
+      .field strong {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .history {
+        height: 220px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px;
+      }
+
+      .detail-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 16px;
+      }
+
+      .modal {
+        position: fixed;
+        inset: 0;
+        z-index: 80;
+        display: grid;
+        place-items: center;
+        background: rgba(25, 28, 29, 0.4);
+        padding: 20px;
+      }
+
+      .modal.hidden,
+      .toast.hidden {
+        display: none;
+      }
+
+      .modal-card {
+        width: min(520px, 100%);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        padding: 20px;
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+      }
+
+      .modal-card input {
+        width: 100%;
+        height: 44px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        margin: 10px 0 14px;
+        padding: 0 12px;
       }
 
       .toast {
         position: fixed;
-        right: 18px;
-        bottom: 18px;
-        z-index: 80;
-        max-width: min(420px, calc(100vw - 36px));
-        border: 1px solid rgba(23, 23, 23, 0.1);
+        left: 50%;
+        bottom: 20px;
+        z-index: 100;
+        transform: translateX(-50%);
         border-radius: 8px;
-        background: #171717;
-        color: #fffdf8;
-        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
-        padding: 12px 14px;
-        font-size: 13px;
+        background: #191c1d;
+        color: #fff;
+        padding: 11px 14px;
+        box-shadow: var(--shadow);
       }
 
-      .hidden {
-        display: none !important;
+      footer {
+        border-top: 1px solid var(--line);
+        background: var(--surface-low);
+        color: var(--muted);
+        padding: 26px 0;
       }
 
-      @media (max-width: 1120px) {
+      @media (max-width: 980px) {
         .hero,
-        .layout {
+        .discover {
           grid-template-columns: 1fr;
         }
 
-        .filters,
-        .detail {
-          position: static;
+        .bento {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .item-card.featured {
+          grid-column: span 2;
+        }
+
+        .side-stack {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
       }
 
       @media (max-width: 720px) {
         .shell {
-          width: min(100% - 20px, 1440px);
+          width: min(100% - 24px, 1280px);
         }
 
         .topbar-inner {
-          grid-template-columns: 1fr;
-          padding: 10px 0;
-        }
-
-        .nav-actions {
-          display: grid;
-          grid-template-columns: 42px 1fr 1fr 1fr;
-          width: 100%;
-        }
-
-        .hero {
-          padding-top: 24px;
-        }
-
-        .hero-copy h2 {
-          font-size: 36px;
-        }
-
-        .hero-copy p {
-          font-size: 15px;
-        }
-
-        .metrics-row,
-        .kpi-grid,
-        .form-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .mini-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .tabs {
-          top: 126px;
-        }
-
-        .asset-card {
-          grid-template-columns: 1fr;
-        }
-
-        .asset-numbers {
-          min-width: 0;
-          text-align: left;
-        }
-
-        .change {
-          justify-self: start;
-        }
-
-        .card-actions {
-          justify-content: flex-start;
-        }
-
-        .asset-list {
-          display: grid;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 10px;
-        }
-
-        .asset-card {
-          align-content: space-between;
-          min-height: 238px;
-          padding: 12px;
-        }
-
-        .asset-main {
           align-items: flex-start;
           flex-direction: column;
+          gap: 10px;
+          padding: 12px 0;
         }
 
-        .swatch {
+        .nav {
           width: 100%;
-          height: auto;
-          aspect-ratio: 1;
+          overflow-x: auto;
+          padding-bottom: 2px;
         }
 
-        .asset-name {
-          font-size: 13px;
-        }
-
-        .asset-meta .tag:nth-child(n + 3) {
-          display: none;
-        }
-
-        .tiny-button {
-          flex: 1 1 100%;
-          min-height: 36px;
-        }
-
-      }
-
-      /* 优化功能区按钮样式 */
-      .function-actions {
-        display: flex;
-        flex-direction: column;
-      }
-
-      /* 隐藏移动端专属按钮（桌面端） */
-      .mobile-menu-btn, .close-menu-btn {
-        display: none;
-      }
-
-      /* 添加图片样式与占位符无缝切换 */
-      .swatch-img, .detail-art-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 8px;
-        border: 1px solid rgba(23, 23, 23, 0.12);
-        background: #fff6e8;
-      }
-      .swatch {
-        width: 44px; /* 桌面端尺寸 */
-        height: 44px;
-        overflow: hidden;
-      }
-      .detail-art {
-        overflow: hidden;
-      }
-
-      /* mini-toy 图片模式暗色遮罩保护文字 */
-      .mini-toy {
-        background-size: cover;
-        background-position: center;
-      }
-      .mini-toy[style*="background:"] {
-        box-shadow: inset 0 -30px 20px rgba(0,0,0,0.5);
-      }
-
-      @media (max-width: 1120px) {
-        /* 平板及手机端布局：改为 1fr，详情页跟在下方或弹窗 */
-        .layout {
+        .market-head,
+        .detail-hero {
           grid-template-columns: 1fr;
         }
-      }
 
-      @media (max-width: 720px) {
-        /* H5 头部适配 */
-        .topbar-inner {
-          display: flex;
-          justify-content: space-between;
-          padding: 10px 16px;
-        }
-        .mobile-menu-btn {
-          display: flex; /* 移动端显示汉堡菜单 */
+        .metrics,
+        .detail-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
-        /* 左侧功能区改造为 H5 侧边抽屉 (Off-canvas Drawer) */
-        .function-area {
-          position: fixed;
-          top: 0;
-          left: -100%;
-          width: 85vw;
-          max-width: 320px;
-          height: 100vh;
-          z-index: 100;
-          background: #fffdf8;
-          border-radius: 0;
-          box-shadow: 20px 0 50px rgba(0,0,0,0.2);
-          transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-          overflow-y: auto;
-        }
-        .function-area.open {
-          left: 0;
-        }
-        .close-menu-btn {
-          display: flex;
+        .metric:nth-child(2) {
+          border-right: 0;
         }
 
-        /* 资产矩阵 H5 卡片优化 */
-        .asset-card {
-          padding: 12px;
-          grid-template-columns: 80px 1fr; /* 左图右文布局 */
-          align-items: center;
-          gap: 12px;
-          min-height: auto;
+        .metric:nth-child(1),
+        .metric:nth-child(2) {
+          border-bottom: 1px solid var(--line);
         }
-        .asset-main {
-          flex-direction: row;
-          align-items: center;
-        }
-        .swatch, .swatch-img {
-          width: 80px;
-          height: 80px;
-          aspect-ratio: 1;
-        }
-        .asset-numbers {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          align-items: flex-end;
-        }
-      }
 
-      /* AdSense 广告容器：融入现有 UI 风格 */
-      .ad-container {
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: rgba(255, 253, 248, 0.6);
-        padding: 10px;
-        margin-bottom: 14px;
-        text-align: center;
-        overflow: hidden;
-      }
-      .ad-container::before {
-        content: "ADVERTISEMENT";
-        display: block;
-        font-size: 10px;
-        color: var(--muted);
-        text-align: left;
-        margin-bottom: 6px;
-        letter-spacing: 0.5px;
+        .bento,
+        .side-stack {
+          grid-template-columns: 1fr;
+        }
+
+        .item-card.featured {
+          grid-column: span 1;
+        }
       }
     </style>
   </head>
   <body>
     <header class="topbar">
       <div class="shell topbar-inner">
-        <div class="brand">
-          <div class="logo" aria-hidden="true"><div class="logo-mark"></div></div>
-          <div>
-            <h1 class="brand-title">poptracker PRO</h1>
-            <p class="brand-subtitle" data-i18n="brandSubtitle">泡泡玛特潮玩动态市值雷达</p>
-          </div>
-        </div>
-        <button class="icon-button mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Menu">☰</button>
+        <a class="brand" href="#home" aria-label="PopTracker Home">
+          <span class="brand-mark">P</span>
+          <span>PopTracker</span>
+        </a>
+        <nav class="nav" aria-label="主导航">
+          <a class="active" href="#home">Home</a>
+          <a href="#discover">Discover</a>
+          <button class="ghost-button" id="refreshButton" type="button">刷新数据</button>
+          <button class="ghost-button api-missing" id="apiButton" type="button">缺 API</button>
+        </nav>
       </div>
     </header>
 
     <main class="shell">
-      <section class="hero" aria-labelledby="heroTitle">
-        <div class="hero-copy">
-          <h2 id="heroTitle" data-i18n="heroTitle">从静态账本升级为动态市值雷达</h2>
-          <p data-i18n="heroText">
-            poptracker PRO 将 sold-comps.com / Apify 已售成交价、泡泡玛特资产矩阵和二级市场价格走势整合到一个 H5 看板。API Token 仅保存在本地浏览器，适合手机端快速看盘、补货观察和二级市场复盘。
-          </p>
-          <div class="metrics-row">
+      <section class="hero" id="home">
+        <div class="panel market-panel">
+          <div class="market-head">
+            <div>
+              <p class="eyebrow">Market Dashboard</p>
+              <h1>市场大盘趋势</h1>
+              <p class="lead">
+                基于 GitHub Actions 预生成 SoldComps 成交 JSON，追踪泡泡玛特热门 IP 的 FMV、ROI、流动性与价格波动。
+                前端读取静态数据，加载快，Token 不进入公开页面代码。
+              </p>
+            </div>
+            <div class="market-index">
+              <span class="muted">PopTracker Index</span>
+              <strong class="index-value" id="marketIndex">--</strong>
+              <span id="marketChange" class="up">--</span>
+            </div>
+          </div>
+          <div class="chart-wrap">
+            <canvas id="marketChart"></canvas>
+          </div>
+          <div class="metrics" aria-label="大盘指标">
             <div class="metric">
-              <span data-i18n="metricAssets">追踪资产</span>
+              <span>追踪 SKU</span>
               <strong id="metricAssets">--</strong>
             </div>
             <div class="metric">
-              <span data-i18n="metricAvgRoi">平均溢价</span>
-              <strong id="metricAvgRoi">--</strong>
+              <span>样本成交</span>
+              <strong id="metricSold">--</strong>
             </div>
             <div class="metric">
-              <span data-i18n="metricHot">强势标的</span>
-              <strong id="metricHot">--</strong>
+              <span>平均 ROI</span>
+              <strong id="metricRoi">--</strong>
             </div>
             <div class="metric">
-              <span data-i18n="metricUpdated">更新时间</span>
-              <strong id="metricUpdated">--</strong>
+              <span>热点 IP</span>
+              <strong id="metricHotIp">--</strong>
             </div>
           </div>
         </div>
-        <div class="radar">
-          <div class="portfolio-value">
+
+        <aside class="panel feed-panel" aria-label="实时成交记录">
+          <div class="section-head">
             <div>
-              <span data-i18n="marketFmv">追踪资产 FMV 合计</span>
-              <strong id="marketFmv">$--</strong>
-            </div>
-            <div class="status">
-              <span data-i18n="sampleCount">清洗样本</span>
-              <strong id="sampleCount">--</strong>
+              <h2>实时成交记录</h2>
+              <p>由最新静态样本生成的成交流</p>
             </div>
           </div>
-          <div class="mini-grid" id="toyStage" aria-hidden="true"></div>
-        </div>
+          <div class="feed-list" id="feedList"></div>
+        </aside>
       </section>
 
-      <div class="ad-container" style="margin: 0 0 18px 0;">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-             data-ad-slot="YYYYYYYYYY"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-      </div>
+      <div class="ad-banner">728 x 90 AdSense Leaderboard</div>
 
-      <nav class="tabs" id="tabs" aria-label="Asset tabs"></nav>
-
-      <section class="layout">
-        <aside class="panel filters function-area" id="functionArea" aria-label="Functions and Filters">
-          <div class="panel-header">
-            <h2 class="panel-title" data-i18n="functions">控制台与筛选</h2>
-            <button class="icon-button close-menu-btn" id="closeMenuBtn">×</button>
-          </div>
-          <div class="panel-body">
-            <div class="function-actions field">
-              <div class="segmented">
-                 <button class="segment" id="refreshButton" title="Refresh data">刷新全部</button>
-                 <button class="segment api-missing" id="apiButton" data-i18n="apiMissing">缺 API</button>
-              </div>
-              <button class="text-button" id="langButton" style="width: 100%; margin-top: 8px;">English / 中文</button>
-            </div>
-
-            <hr style="border:0; border-top: 1px solid var(--line); margin: 16px 0;">
-
-            <div class="field">
-              <label for="searchInput" data-i18n="search">搜索 SKU / IP / 系列</label>
-              <input id="searchInput" type="search" autocomplete="off" placeholder="Labubu, Molly..." />
-            </div>
-            <div class="field">
-              <label for="ipSelect">IP</label>
-              <select id="ipSelect"></select>
-            </div>
-            <div class="field">
-              <label for="sortSelect" data-i18n="sort">排序</label>
-              <select id="sortSelect">
-                <option value="roi" data-i18n="sortRoi">溢价率最高</option>
-                <option value="change" data-i18n="sortChange">七日涨幅最高</option>
-                <option value="liquidity" data-i18n="sortLiquidity">成交流动性最高</option>
-                <option value="risk" data-i18n="sortRisk">风险最低</option>
-              </select>
-            </div>
-            <div class="field">
-              <label data-i18n="viewMode">视角</label>
-              <div class="segmented">
-                <button class="segment active" data-mode="collector" data-i18n="collector">收藏</button>
-                <button class="segment" data-mode="investor" data-i18n="investor">投资</button>
-              </div>
-            </div>
-          </div>
-        </aside>
-
-        <section class="panel">
-          <div class="panel-header">
+      <section class="discover" id="discover">
+        <div>
+          <div class="section-head">
             <div>
-              <h2 class="panel-title" data-i18n="assetMatrix">资产矩阵</h2>
-              <div class="status" id="resultStatus">Loading market data...</div>
+              <h2>热门单品瀑布流</h2>
+              <p id="resultStatus">加载数据中</p>
             </div>
           </div>
-          <div class="panel-body">
-            <div class="asset-list" id="assetList"></div>
+          <div class="toolbar">
+            <input class="search" id="searchInput" type="search" placeholder="搜索 IP、系列、SKU" />
+            <select id="sortSelect" aria-label="排序">
+              <option value="roi">ROI 优先</option>
+              <option value="change">涨幅优先</option>
+              <option value="liquidity">成交量优先</option>
+              <option value="risk">低风险优先</option>
+            </select>
+            <div class="chips" id="chips" aria-label="IP 筛选"></div>
           </div>
-        </section>
+          <div class="bento" id="bentoGrid"></div>
+        </div>
 
-        <aside class="panel detail" aria-live="polite">
-          <div id="detailEmpty" class="detail-empty" data-i18n="detailEmpty">
-            选择一个潮玩资产，查看 ROI、FMV、风险分和 30 日成交均价走势。
-          </div>
-          <div id="detailContent" class="hidden">
-            <div class="detail-hero">
-              <div class="detail-art" id="detailArt"></div>
+        <aside class="side-stack">
+          <div class="mini-panel">
+            <div class="section-head">
               <div>
-                <h3 id="detailName">--</h3>
-                <div class="detail-sub" id="detailMeta">--</div>
+                <h2>发现页</h2>
+                <p>按 IP、成交热度和风险筛选可跟踪标的</p>
               </div>
             </div>
-            <div class="kpi-grid">
-              <div class="kpi">
-                <span data-i18n="msrp">官方价</span>
-                <strong id="detailRetail">--</strong>
-              </div>
-              <div class="kpi">
-                <span data-i18n="marketAvg">二级均价</span>
-                <strong id="detailMarket">--</strong>
-              </div>
-              <div class="kpi">
-                <span data-i18n="roi">溢价率</span>
-                <strong id="detailRoi">--</strong>
-              </div>
-              <div class="kpi">
-                <span data-i18n="riskScore">风险分</span>
-                <strong id="detailRisk">--</strong>
-              </div>
-            </div>
-            <div class="chart-wrap">
-              <canvas id="historyChart"></canvas>
-            </div>
-            <div class="method-line" id="detailMethod"></div>
-            <a class="deal-button" id="dealButton" target="_blank" rel="nofollow sponsored noopener"></a>
-
-            <div class="ad-container" style="margin: 0 14px 14px 14px; padding: 0; border: none; background: transparent;">
-              <ins class="adsbygoogle"
-                   style="display:block"
-                   data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                   data-ad-slot="ZZZZZZZZZZ"
-                   data-ad-format="rectangle"
-                   data-full-width-responsive="true"></ins>
-            </div>
-
-            <p class="note" id="detailNote"></p>
+            <div class="rank-list" id="rankList"></div>
           </div>
+          <div class="ad-banner" style="min-height: 250px; margin: 0">300 x 250 AdSense</div>
         </aside>
       </section>
     </main>
 
-    <div class="modal-backdrop hidden" id="apiModal">
-      <div class="modal">
-        <div class="modal-header">
-          <h3 data-i18n="apiTitle">配置 sold-comps.com 凭据</h3>
-          <button class="icon-button" data-close-modal="apiModal" aria-label="Close">×</button>
-        </div>
-        <div class="modal-body">
-          <p class="status" data-i18n="apiHelp">
-            API Token 仅写入当前浏览器 localStorage，用于从 Apify sold listings 接口刷新单款成交价。
-          </p>
-          <p class="mobile-hint" data-i18n="apiFlow">
-            请求流向：H5 本地组装 Pop Mart + IP + 系列 + 款式关键词，直连 sold-comps / Apify 网关，返回近 30 天成交列表后在本机计算中位数。
-          </p>
-          <div class="field">
-            <label for="apiInput">SOLD_COMPS_API_KEY</label>
-            <input id="apiInput" type="password" autocomplete="off" placeholder="apify_api_..." />
+    <section class="detail-drawer" id="detailDrawer" aria-label="单品详情">
+      <div class="detail-hero">
+        <div class="detail-art" id="detailArt"></div>
+        <div>
+          <div class="section-head" style="margin-bottom: 8px">
+            <div>
+              <p class="eyebrow" id="detailIp">--</p>
+              <h2 id="detailName">--</h2>
+            </div>
+            <button class="ghost-button" id="closeDetailButton" type="button">关闭</button>
           </div>
-          <button class="primary-button" id="saveApiButton" data-i18n="saveApi">保存 API Key</button>
+          <p class="lead" id="detailMeta" style="font-size: 14px"></p>
+        </div>
+      </div>
+      <div class="detail-body">
+        <div class="detail-grid">
+          <div class="field">
+            <span class="field-label">官方价</span>
+            <strong id="detailRetail">--</strong>
+          </div>
+          <div class="field">
+            <span class="field-label">FMV</span>
+            <strong id="detailFmv">--</strong>
+          </div>
+          <div class="field">
+            <span class="field-label">ROI</span>
+            <strong id="detailRoi">--</strong>
+          </div>
+          <div class="field">
+            <span class="field-label">风险</span>
+            <strong id="detailRisk">--</strong>
+          </div>
+        </div>
+        <div class="history">
+          <canvas id="historyChart"></canvas>
+        </div>
+        <p class="muted" id="detailMethod" style="margin: 12px 0 0"></p>
+        <p class="muted" id="detailNote" style="margin: 8px 0 0"></p>
+        <div class="detail-actions">
+          <a class="primary-button" id="dealButton" href="#" target="_blank" rel="noopener">Find Deals</a>
+          <button class="ghost-button" id="refreshOneButton" type="button">刷新此 SKU</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal hidden" id="apiModal" role="dialog" aria-modal="true" aria-label="API 设置">
+      <div class="modal-card">
+        <h2>SoldComps API 设置</h2>
+        <p class="muted">
+          生产环境推荐通过 GitHub Secret 或后端环境变量注入。此处仅用于 H5 离线演示，Token 只保存在当前浏览器 localStorage。
+        </p>
+        <input id="apiInput" type="password" placeholder="SOLD_COMPS_API_KEY" autocomplete="off" />
+        <div class="detail-actions">
+          <button class="primary-button" id="saveApiButton" type="button">保存</button>
+          <button class="ghost-button" data-close-modal="apiModal" type="button">取消</button>
         </div>
       </div>
     </div>
 
     <div class="toast hidden" id="toast"></div>
+
+    <footer>
+      <div class="shell">
+        PopTracker · Static sold-comps data pipeline · Market methodology: IQR + 10% trimmed median.
+      </div>
+    </footer>
 
     <script>
       const storageKeys = {
@@ -1235,193 +955,280 @@
       };
 
       const state = {
-        lang: navigator.language && navigator.language.startsWith("en") ? "en" : "zh",
+        apiKey: localStorage.getItem(storageKeys.api) || "",
+        chart: null,
+        detailChart: null,
+        currentIp: "all",
         items: [],
         selectedSku: "",
-        chart: null,
-        mode: "collector",
-        currentTab: "all",
-        apiKey: localStorage.getItem(storageKeys.api) || "",
         refreshing: new Set(),
       };
 
-      const copy = {
-        zh: {
-          brandSubtitle: "泡泡玛特潮玩动态市值雷达",
-          heroTitle: "从静态账本升级为动态市值雷达",
-          heroText:
-            "poptracker PRO 将 sold-comps.com / Apify 已售成交价、泡泡玛特资产矩阵和二级市场价格走势整合到一个 H5 看板。API Token 仅保存在本地浏览器，适合手机端快速看盘、补货观察和二级市场复盘。",
-          metricAssets: "追踪资产",
-          metricAvgRoi: "平均溢价",
-          metricHot: "强势标的",
-          metricUpdated: "更新时间",
-          marketFmv: "追踪资产 FMV 合计",
-          sampleCount: "清洗样本",
-          filters: "筛选器",
-          functions: "控制台与筛选",
-          search: "搜索 SKU / IP / 系列",
-          sort: "排序",
-          sortRoi: "溢价率最高",
-          sortChange: "七日涨幅最高",
-          sortLiquidity: "成交流动性最高",
-          sortRisk: "风险最低",
-          viewMode: "视角",
-          collector: "收藏",
-          investor: "投资",
-          assetMatrix: "资产矩阵",
-          detailEmpty: "选择一个潮玩资产，查看 ROI、FMV、风险分和 30 日成交均价走势。",
-          msrp: "官方价",
-          marketAvg: "二级均价",
-          roi: "溢价率",
-          riskScore: "风险分",
-          allIp: "全部 IP",
-          results: "个结果",
-          sold: "成交",
-          median: "中位数",
-          signal: "信号",
-          noResults: "没有匹配结果，试试放宽筛选条件。",
-          loadError: "数据文件未生成，请先运行 scripts/fetch_and_clean.py。",
-          apiReady: "API 已就绪",
-          apiMissing: "缺 API",
-          refreshMarket: "刷新市值",
-          refreshing: "刷新中",
-          apiTitle: "配置 sold-comps.com 凭据",
-          apiHelp: "API Token 仅写入当前浏览器 localStorage，用于从 Apify sold listings 接口刷新单款成交价。",
-          apiFlow:
-            "请求流向：H5 本地组装 Pop Mart + IP + 系列 + 款式关键词，直连 sold-comps / Apify 网关，返回近 30 天成交列表后在本机计算中位数。",
-          saveApi: "保存 API Key",
-          dealButton: "Find Deals on eBay",
-          valuationLine: "FMV 使用 IQR 去噪与 10% trimmed median 计算；高热标的建议每日刷新，长尾标的每 7 天刷新。",
-          tabAll: "全仓盘点",
-          tabHot: "行情雷达",
-          tabChaser: "隐藏款",
-          tabMolly: "MOLLY",
-          tabLabubu: "Labubu",
-          apiNeeded: "请先配置 API Token。",
-          apiSaved: "API Key 已保存到本地浏览器。",
-          noSoldComps: "外部市场未检索到近期匹配成交，已保持原价。",
-          refreshOk: "已同步最新成交中位价。",
-          refreshFail: "刷新失败，请检查 API Token 或网络。",
-          chaser: "隐藏款",
-        },
-        en: {
-          brandSubtitle: "Pop Mart dynamic market radar",
-          heroTitle: "From static ledger to live market radar",
-          heroText:
-            "poptracker PRO combines sold-comps.com / Apify completed sales, Pop Mart market data and secondary-market trends in one mobile-ready H5 dashboard. API tokens stay in your browser localStorage.",
-          metricAssets: "Tracked assets",
-          metricAvgRoi: "Average premium",
-          metricHot: "Strong watches",
-          metricUpdated: "Updated",
-          marketFmv: "Tracked FMV total",
-          sampleCount: "Clean samples",
-          filters: "Filters",
-          functions: "Console & Filters",
-          search: "Search SKU / IP / series",
-          sort: "Sort",
-          sortRoi: "Highest premium",
-          sortChange: "Highest 7D change",
-          sortLiquidity: "Most liquid",
-          sortRisk: "Lowest risk",
-          sortStock: "Most owned",
-          viewMode: "Lens",
-          collector: "Collector",
-          investor: "Investor",
-          assetMatrix: "Asset Matrix",
-          detailEmpty: "Pick an asset to inspect ROI, FMV, risk score and 30-day sold prices.",
-          msrp: "MSRP",
-          marketAvg: "Market avg",
-          roi: "Premium",
-          riskScore: "Risk",
-          allIp: "All IP",
-          results: "results",
-          sold: "sold",
-          median: "median",
-          signal: "signal",
-          noResults: "No matching assets. Try broader filters.",
-          loadError: "Data files are missing. Run scripts/fetch_and_clean.py first.",
-          apiReady: "API ready",
-          apiMissing: "No API",
-          refreshMarket: "Refresh market",
-          refreshing: "Refreshing",
-          apiTitle: "Configure sold-comps.com token",
-          apiHelp: "The API token is saved only to this browser localStorage and used for Apify sold listings refreshes.",
-          apiFlow:
-            "Flow: the H5 app builds a Pop Mart + IP + series + item keyword locally, calls the sold-comps / Apify gateway, then computes the 30-day median on-device.",
-          saveApi: "Save API Key",
-          dealButton: "Find Deals on eBay",
-          valuationLine: "FMV uses IQR scrubbing plus a 10% trimmed median. Hot assets refresh daily; long-tail assets refresh weekly.",
-          tabAll: "All",
-          tabHot: "Radar",
-          tabChaser: "Chasers",
-          tabMolly: "MOLLY",
-          tabLabubu: "Labubu",
-          apiNeeded: "Configure an API token first.",
-          apiSaved: "API Key saved to this browser.",
-          noSoldComps: "No recent matching completed sales found. Price unchanged.",
-          refreshOk: "Updated from latest median sold price.",
-          refreshFail: "Refresh failed. Check your API token or network.",
-          chaser: "Chaser",
-        },
-      };
-
       const fmt = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
-
-      function t(key) {
-        return copy[state.lang][key] || key;
-      }
-
-      function localName(item) {
-        return state.lang === "zh" ? item.name_zh : item.name_en;
-      }
-
-      function localRarity(item) {
-        return state.lang === "zh" ? item.rarity_zh : item.rarity_en;
-      }
+      const intFmt = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
 
       function parseChange(value) {
-        return Number(String(value || "0").replace("%", ""));
+        return Number(String(value || "0").replace("%", "")) || 0;
       }
 
       function normalizePrice(value) {
         if (typeof value === "number") return value;
-        return Number(String(value || "0").replace(/[^0-9.-]/g, "")) || 0;
+        const cleaned = String(value || "").replace(/[^0-9.]/g, "");
+        return Number(cleaned) || 0;
       }
 
       function trimmedMedian(values, trimRatio = 0.1) {
         const prices = values.filter((price) => price > 1).sort((a, b) => a - b);
+        if (!prices.length) return 0;
         const trimCount = Math.floor(prices.length * trimRatio);
-        const trimmed =
-          trimCount > 0 && prices.length - trimCount * 2 >= 3
-            ? prices.slice(trimCount, prices.length - trimCount)
-            : prices;
-        return trimmed[Math.floor(trimmed.length / 2)] || 0;
+        const trimmed = prices.slice(trimCount, prices.length - trimCount || prices.length);
+        const target = trimmed.length ? trimmed : prices;
+        const middle = Math.floor(target.length / 2);
+        return target.length % 2 ? target[middle] : (target[middle - 1] + target[middle]) / 2;
+      }
+
+      function localName(item) {
+        return item.name_zh || item.name_en || item.series || item.sku;
+      }
+
+      function normalizeItem(raw) {
+        const fmv = Number(raw.fairMarketValue || raw.medianSoldPrice || raw.avgSoldPrice || 0);
+        const retail = Number(raw.retailPrice || 0);
+        return {
+          ...raw,
+          color: raw.color || "#6b38d4",
+          retailPrice: retail,
+          avgSoldPrice: Number(raw.avgSoldPrice || fmv || 0),
+          medianSoldPrice: Number(raw.medianSoldPrice || fmv || 0),
+          fairMarketValue: fmv,
+          roi:
+            raw.roi !== undefined
+              ? Number(raw.roi)
+              : retail
+                ? Number((((fmv - retail) / retail) * 100).toFixed(1))
+                : 0,
+          riskScore: Number(raw.riskScore || 50),
+          totalSold: Number(raw.totalSold || 0),
+          priceChange7d: raw.priceChange7d || "+0.0%",
+          lastUpdated: raw.lastUpdated || new Date().toISOString().slice(0, 10),
+        };
+      }
+
+      function filteredItems() {
+        const query = document.getElementById("searchInput").value.trim().toLowerCase();
+        const sort = document.getElementById("sortSelect").value;
+        const items = state.items.filter((item) => {
+          const haystack = `${item.sku} ${item.ip} ${item.series} ${item.name_zh} ${item.name_en}`.toLowerCase();
+          return (state.currentIp === "all" || item.ip === state.currentIp) && (!query || haystack.includes(query));
+        });
+        const sorters = {
+          roi: (a, b) => b.roi - a.roi,
+          change: (a, b) => parseChange(b.priceChange7d) - parseChange(a.priceChange7d),
+          liquidity: (a, b) => b.totalSold - a.totalSold,
+          risk: (a, b) => a.riskScore - b.riskScore,
+        };
+        return items.sort(sorters[sort] || sorters.roi);
+      }
+
+      function updateApiButton() {
+        const button = document.getElementById("apiButton");
+        button.textContent = state.apiKey ? "API ready" : "缺 API";
+        button.classList.toggle("api-ready", Boolean(state.apiKey));
+        button.classList.toggle("api-missing", !state.apiKey);
+      }
+
+      function marketStats() {
+        const totalFmv = state.items.reduce((sum, item) => sum + item.fairMarketValue, 0);
+        const totalSold = state.items.reduce((sum, item) => sum + item.totalSold, 0);
+        const avgRoi = state.items.length
+          ? state.items.reduce((sum, item) => sum + item.roi, 0) / state.items.length
+          : 0;
+        const byIp = state.items.reduce((acc, item) => {
+          acc[item.ip] = (acc[item.ip] || 0) + item.totalSold;
+          return acc;
+        }, {});
+        const hotIp = Object.entries(byIp).sort((a, b) => b[1] - a[1])[0]?.[0] || "--";
+        const avgChange = state.items.length
+          ? state.items.reduce((sum, item) => sum + parseChange(item.priceChange7d), 0) / state.items.length
+          : 0;
+        return { totalFmv, totalSold, avgRoi, hotIp, avgChange };
+      }
+
+      function renderMarket() {
+        const stats = marketStats();
+        const index = Math.round(stats.totalFmv * 38 + stats.totalSold * 7 + Math.max(stats.avgRoi, 0) * 12);
+        document.getElementById("marketIndex").textContent = intFmt.format(index || 0);
+        document.getElementById("marketChange").textContent = `${stats.avgChange >= 0 ? "+" : ""}${stats.avgChange.toFixed(1)}%`;
+        document.getElementById("marketChange").className = stats.avgChange >= 0 ? "up" : "down";
+        document.getElementById("metricAssets").textContent = state.items.length;
+        document.getElementById("metricSold").textContent = intFmt.format(stats.totalSold);
+        document.getElementById("metricRoi").textContent = `${stats.avgRoi.toFixed(0)}%`;
+        document.getElementById("metricHotIp").textContent = stats.hotIp;
+
+        const labels = Array.from({ length: 30 }, (_, index) => `D-${29 - index}`);
+        const base = index || 1000;
+        const data = labels.map((_, index) =>
+          Math.round(base * (0.88 + index * 0.004 + Math.sin(index / 3) * 0.018 + stats.avgChange / 800)),
+        );
+        if (state.chart) state.chart.destroy();
+        state.chart = new Chart(document.getElementById("marketChart"), {
+          type: "line",
+          data: {
+            labels,
+            datasets: [
+              {
+                data,
+                borderColor: "#6b38d4",
+                backgroundColor: "rgba(107, 56, 212, 0.12)",
+                borderWidth: 2,
+                pointRadius: 0,
+                tension: 0.32,
+                fill: true,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+              x: { grid: { display: false }, ticks: { color: "#747b86", maxTicksLimit: 6 } },
+              y: { grid: { color: "rgba(25, 28, 29, 0.08)" }, ticks: { color: "#747b86" } },
+            },
+          },
+        });
+      }
+
+      function renderFeed() {
+        const feed = [...state.items]
+          .sort((a, b) => b.totalSold + parseChange(b.priceChange7d) - (a.totalSold + parseChange(a.priceChange7d)))
+          .slice(0, 7);
+        document.getElementById("feedList").innerHTML = feed
+          .map((item, index) => {
+            const price = item.fairMarketValue * (0.97 + (index % 4) * 0.015);
+            return `
+              <button class="feed-item" type="button" data-sku="${item.sku}">
+                <span class="avatar" style="--asset-color:${item.color}"></span>
+                <span>
+                  <span class="feed-name">${localName(item)}</span>
+                  <span class="feed-meta">${index + 3} 分钟前 · ${item.ip}</span>
+                </span>
+                <span class="feed-price">${fmt.format(price)}</span>
+              </button>
+            `;
+          })
+          .join("");
+        document.querySelectorAll("#feedList [data-sku]").forEach((button) => {
+          button.addEventListener("click", () => loadDetail(button.dataset.sku));
+        });
+      }
+
+      function renderChips() {
+        const ips = ["all"].concat(Array.from(new Set(state.items.map((item) => item.ip))).sort());
+        document.getElementById("chips").innerHTML = ips
+          .map((ip) => {
+            const label = ip === "all" ? "全部 IP" : ip;
+            return `<button class="chip ${state.currentIp === ip ? "active" : ""}" type="button" data-ip="${ip}">${label}</button>`;
+          })
+          .join("");
+        document.querySelectorAll("[data-ip]").forEach((button) => {
+          button.addEventListener("click", () => {
+            state.currentIp = button.dataset.ip;
+            render();
+          });
+        });
+      }
+
+      function renderCards() {
+        const items = filteredItems();
+        document.getElementById("resultStatus").textContent = `${items.length} 个可跟踪标的`;
+        if (!items.length) {
+          document.getElementById("bentoGrid").innerHTML = `<div class="mini-panel">暂无匹配结果</div>`;
+          return;
+        }
+        const top = items[0];
+        const insight = marketStats();
+        const cards = items.slice(0, 8).map((item, index) => {
+          const change = parseChange(item.priceChange7d);
+          const badge = item.refreshTier === "hot" ? "24h refresh" : "7d refresh";
+          return `
+            <button class="item-card ${index === 0 ? "featured" : ""}" type="button" data-sku="${item.sku}" style="--asset-color:${item.color}">
+              <div class="toy-art">
+                ${item.image ? `<img src="${item.image}" alt="${localName(item)}">` : ""}
+                <span class="badge">${badge}</span>
+              </div>
+              <div class="card-body">
+                <div>
+                  <h3 class="card-title">${localName(item)}</h3>
+                  <p class="muted">${item.ip} · ${item.series}</p>
+                </div>
+                <div class="card-grid">
+                  <span><span class="card-label">FMV</span><strong class="card-value">${fmt.format(item.fairMarketValue)}</strong></span>
+                  <span><span class="card-label">ROI</span><strong class="card-value">${item.roi >= 0 ? "+" : ""}${item.roi.toFixed(0)}%</strong></span>
+                  <span><span class="card-label">7D</span><strong class="card-value ${change >= 0 ? "up" : "down"}">${item.priceChange7d}</strong></span>
+                </div>
+              </div>
+            </button>
+          `;
+        });
+        cards.splice(
+          Math.min(3, cards.length),
+          0,
+          `
+          <article class="insight-card">
+            <div>
+              <span class="card-label">Market Insight</span>
+              <h3>当前热度集中在 ${insight.hotIp}</h3>
+              <p class="muted">最高 FMV 标的为 ${localName(top)}，二级市场基准价 ${fmt.format(top.fairMarketValue)}。</p>
+            </div>
+            <div class="card-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); border-color: rgba(255,255,255,.2)">
+              <span><span class="card-label">样本</span><strong>${intFmt.format(insight.totalSold)}</strong></span>
+              <span><span class="card-label">平均 ROI</span><strong>${insight.avgRoi.toFixed(0)}%</strong></span>
+            </div>
+          </article>
+        `,
+        );
+        document.getElementById("bentoGrid").innerHTML = cards.join("");
+        document.querySelectorAll("#bentoGrid [data-sku]").forEach((button) => {
+          button.addEventListener("click", () => loadDetail(button.dataset.sku));
+        });
+      }
+
+      function renderRank() {
+        document.getElementById("rankList").innerHTML = [...state.items]
+          .sort((a, b) => b.roi - a.roi)
+          .slice(0, 5)
+          .map(
+            (item, index) => `
+              <button class="rank-row" type="button" data-sku="${item.sku}">
+                <span class="badge">#${index + 1}</span>
+                <strong>${localName(item)}</strong>
+                <span class="${item.roi >= 0 ? "up" : "down"}">${item.roi.toFixed(0)}%</span>
+              </button>
+            `,
+          )
+          .join("");
+        document.querySelectorAll("#rankList [data-sku]").forEach((button) => {
+          button.addEventListener("click", () => loadDetail(button.dataset.sku));
+        });
       }
 
       function productSchema(item) {
-        const schema = {
+        return {
           "@context": "https://schema.org",
           "@type": "Product",
           name: localName(item),
-          sku: item.sku,
           brand: { "@type": "Brand", name: "Pop Mart" },
-          category: "Collectible Art Toy",
-          description: `${item.ip} ${item.series} secondary market FMV tracked by poptracker.`,
+          sku: item.sku,
+          category: "Collectible designer toy",
           offers: {
-            "@type": "Offer",
+            "@type": "AggregateOffer",
             priceCurrency: "USD",
-            price: Number(item.avgSoldPrice || item.fairMarketValue || 0).toFixed(2),
-            availability: "https://schema.org/InStock",
-            url: item.affiliateUrl || window.location.href,
-          },
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: Math.max(3.8, Math.min(4.9, 5 - Number(item.riskScore || 50) / 120)).toFixed(1),
-            reviewCount: Math.max(8, Number(item.totalSold || 0)),
+            lowPrice: Math.max(1, item.fairMarketValue * 0.88).toFixed(2),
+            highPrice: (item.fairMarketValue * 1.16).toFixed(2),
+            offerCount: item.totalSold || 1,
           },
         };
-        if (item.image) schema.image = item.image;
-        return schema;
       }
 
       function updateProductSchema(item) {
@@ -1435,345 +1242,56 @@
         node.textContent = JSON.stringify(productSchema(item));
       }
 
-      function normalizeItem(raw) {
-        return {
-          ...raw,
-          is_chaser: Boolean(raw.is_chaser),
-          avgSoldPrice: Number(raw.avgSoldPrice || raw.price || 0),
-          medianSoldPrice: Number(raw.medianSoldPrice || raw.price || raw.avgSoldPrice || 0),
-          retailPrice: Number(raw.retailPrice || raw.price || 0),
-          roi: Number(raw.roi || 0),
-          riskScore: Number(raw.riskScore || 50),
-          totalSold: Number(raw.totalSold || 0),
-          fairMarketValue: Number(raw.fairMarketValue || raw.avgSoldPrice || raw.price || 0),
-          valuationMethod: raw.valuationMethod || "IQR + 10% trimmed median",
-          searchString: raw.searchString || "",
-          affiliateUrl: raw.affiliateUrl || "",
-          refreshTier: raw.refreshTier || "weekly",
-          priceChange7d: raw.priceChange7d || "+0.0%",
-          image: raw.image || "",
-          color: raw.color || "#e94f86",
-          lastUpdated: raw.lastUpdated || raw.updated_at || new Date().toISOString().slice(0, 10),
-        };
-      }
-
-      function normalizeItems(items) {
-        return items.map((item) => normalizeItem(item));
-      }
-
-      function applyI18n() {
-        document.documentElement.lang = state.lang === "zh" ? "zh-CN" : "en";
-        document.querySelectorAll("[data-i18n]").forEach((node) => {
-          node.textContent = t(node.dataset.i18n);
-        });
-        document.getElementById("langButton").textContent = state.lang === "zh" ? "English" : "中文";
-        document.getElementById("searchInput").placeholder =
-          state.lang === "zh" ? "Labubu、Molly、Skullpanda..." : "Labubu, Molly, Skullpanda...";
-        buildIpOptions();
-        updateApiButton();
-        renderTabs();
-        render();
-        if (state.selectedSku) loadDetail(state.selectedSku);
-      }
-
-      function updateApiButton() {
-        const button = document.getElementById("apiButton");
-        button.textContent = state.apiKey ? t("apiReady") : t("apiMissing");
-        button.classList.toggle("api-ready", Boolean(state.apiKey));
-        button.classList.toggle("api-missing", !state.apiKey);
-      }
-
-      function tabDefinitions() {
-        return [
-          { id: "all", label: t("tabAll"), test: () => true },
-          { id: "hot", label: t("tabHot"), test: (item) => item.roi >= 100 || parseChange(item.priceChange7d) >= 5 },
-          { id: "chaser", label: t("tabChaser"), test: (item) => item.is_chaser },
-          { id: "MOLLY", label: t("tabMolly"), test: (item) => item.ip === "MOLLY" },
-          { id: "THE MONSTERS", label: t("tabLabubu"), test: (item) => item.ip === "THE MONSTERS" },
-        ];
-      }
-
-      function renderTabs() {
-        const tabs = document.getElementById("tabs");
-        tabs.innerHTML = tabDefinitions()
-          .map((tab) => {
-            const count = state.items.filter(tab.test).length;
-            return `<button class="tab-button ${state.currentTab === tab.id ? "active" : ""}" data-tab="${tab.id}">${tab.label} (${count})</button>`;
-          })
-          .join("");
-        tabs.querySelectorAll("[data-tab]").forEach((button) => {
-          button.addEventListener("click", () => {
-            state.currentTab = button.dataset.tab;
-            renderTabs();
-            render();
-          });
-        });
-      }
-
-      function buildIpOptions() {
-        const select = document.getElementById("ipSelect");
-        const current = select.value || "all";
-        const ips = Array.from(new Set(state.items.map((item) => item.ip))).sort();
-        select.innerHTML = [`<option value="all">${t("allIp")}</option>`]
-          .concat(ips.map((ip) => `<option value="${ip}">${ip}</option>`))
-          .join("");
-        select.value = ips.includes(current) ? current : "all";
-      }
-
-      function updateHeroArt() {
-        document.getElementById("toyStage").innerHTML = state.items
-          .slice(0, 6)
-          .map(
-            (item) => `
-              <div class="mini-toy" style="--toy-color: ${item.color}; ${item.image ? `background-image: url(${item.image});` : ''}">
-                <div class="mini-label"><span>${item.ip}</span><strong>${item.priceChange7d}</strong></div>
-              </div>
-            `,
-          )
-          .join("");
-      }
-
-      function updateMetrics() {
-        const avgRoi =
-          state.items.length === 0
-            ? 0
-            : state.items.reduce((sum, item) => sum + Number(item.roi || 0), 0) / state.items.length;
-        const hot = state.items.filter((item) => item.roi >= 100 || parseChange(item.priceChange7d) >= 5).length;
-        const updated = state.items[0] ? state.items[0].lastUpdated.slice(5) : "--";
-        const marketFmv = state.items.reduce((sum, item) => sum + item.avgSoldPrice, 0);
-        const sampleCount = state.items.reduce((sum, item) => sum + Number(item.totalSold || 0), 0);
-        document.getElementById("metricAssets").textContent = String(state.items.length);
-        document.getElementById("metricAvgRoi").textContent = `${avgRoi.toFixed(0)}%`;
-        document.getElementById("metricHot").textContent = String(hot);
-        document.getElementById("metricUpdated").textContent = updated;
-        document.getElementById("marketFmv").textContent = fmt.format(marketFmv);
-        document.getElementById("sampleCount").textContent = `${sampleCount}`;
-      }
-
-      function filteredItems() {
-        const query = document.getElementById("searchInput").value.trim().toLowerCase();
-        const ip = document.getElementById("ipSelect").value;
-        const sort = document.getElementById("sortSelect").value;
-        const currentTab = tabDefinitions().find((tab) => tab.id === state.currentTab) || tabDefinitions()[0];
-
-        const items = state.items.filter((item) => {
-          const haystack = `${item.sku} ${item.ip} ${item.series} ${item.name_zh} ${item.name_en}`.toLowerCase();
-          return currentTab.test(item) && (ip === "all" || item.ip === ip) && (!query || haystack.includes(query));
-        });
-
-        const sorters = {
-          roi: (a, b) => b.roi - a.roi,
-          change: (a, b) => parseChange(b.priceChange7d) - parseChange(a.priceChange7d),
-          liquidity: (a, b) => b.totalSold - a.totalSold,
-          risk: (a, b) => a.riskScore - b.riskScore,
-        };
-        return items.sort(sorters[sort] || sorters.roi);
-      }
-
-      function render() {
-        const items = filteredItems();
-        const list = document.getElementById("assetList");
-        document.getElementById("resultStatus").textContent = `${items.length} ${t("results")}`;
-        updateMetrics();
-        updateHeroArt();
-
-        if (!items.length) {
-          list.innerHTML = `<div class="detail-empty">${t("noResults")}</div>`;
-          return;
-        }
-
-        const AD_FREQUENCY = 4;
-        let htmlContent = "";
-
-        items.forEach((item, index) => {
-          const change = parseChange(item.priceChange7d);
-          const signal = state.lang === "zh" ? item.signal_zh || "" : item.signal_en || "";
-          const modeLine =
-            state.mode === "collector"
-              ? `${item.ip} · ${item.series} · ${localRarity(item) || ""}`
-              : `${t("median")}: ${fmt.format(item.medianSoldPrice)} · ${t("sold")}: ${item.totalSold}`;
-          const refreshing = state.refreshing.has(item.sku);
-
-          htmlContent += `
-            <article class="asset-card ${state.selectedSku === item.sku ? "selected" : ""} ${item.is_chaser ? "chaser-card" : ""}" data-card="${item.sku}">
-              <button class="asset-main" data-sku="${item.sku}">
-                <div class="swatch" style="--asset-color: ${item.color}">
-                  ${item.image ? `<img src="${item.image}" class="swatch-img" alt="${localName(item)}">` : ''}
-                </div>
-                <div>
-                  <h3 class="asset-name">${localName(item)}</h3>
-                  <div class="asset-meta">
-                    <span class="tag">${item.sku}</span>
-                    <span class="tag">${modeLine}</span>
-                    ${signal ? `<span class="tag">${t("signal")}: ${signal}</span>` : ""}
-                    ${item.is_chaser ? `<span class="tag chaser-badge">CHASER · ${t("chaser")}</span>` : ""}
-                  </div>
-                </div>
-              </button>
-              <div class="asset-numbers">
-                <div>
-                  <div class="price">${fmt.format(item.avgSoldPrice)}</div>
-                  <span class="change ${change >= 0 ? "positive" : "negative"}">${item.priceChange7d}</span>
-                </div>
-                <div class="card-actions">
-                  <button class="tiny-button" data-refresh="${item.sku}" ${refreshing ? "disabled" : ""}>
-                    ${refreshing ? t("refreshing") : t("refreshMarket")}
-                  </button>
-                </div>
-              </div>
-            </article>
-          `;
-
-          if ((index + 1) % AD_FREQUENCY === 0 && index !== items.length - 1) {
-            htmlContent += `
-              <div class="ad-container" style="padding: 0; min-height: 120px; display: flex; align-items: center; justify-content: center;">
-                <ins class="adsbygoogle"
-                     style="display:block; width: 100%;"
-                     data-ad-format="fluid"
-                     data-ad-layout-key="-fb+5w+4e-db+86"
-                     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                     data-ad-slot="WWWWWWWWWW"></ins>
-              </div>
-            `;
-          }
-        });
-
-        list.innerHTML = htmlContent;
-
-        list.querySelectorAll("[data-sku]").forEach((button) => {
-          button.addEventListener("click", () => loadDetail(button.dataset.sku));
-        });
-        list.querySelectorAll("[data-refresh]").forEach((button) => {
-          button.addEventListener("click", () => refreshMarketPrice(button.dataset.refresh));
-        });
-
-        setTimeout(() => {
-          const uninitializedAds = list.querySelectorAll('.adsbygoogle:not([data-adsbygoogle-status="done"])');
-          uninitializedAds.forEach(() => {
-            try {
-              (adsbygoogle = window.adsbygoogle || []).push({});
-            } catch (e) {
-              console.error("AdSense push error:", e);
-            }
-          });
-        }, 100);
-      }
-
-      async function refreshMarketPrice(sku) {
-        const item = state.items.find((asset) => asset.sku === sku);
-        if (!item) return;
-        if (!state.apiKey) {
-          showToast(t("apiNeeded"));
-          openModal("apiModal");
-          return;
-        }
-        state.refreshing.add(sku);
-        render();
-        const endpoint = `https://api.apify.com/v2/acts/caffein.dev~ebay-sold-listings/run-sync-get-dataset-items?token=${encodeURIComponent(state.apiKey)}`;
-        const keyword =
-          item.searchString || `Pop Mart ${item.ip} ${item.series} ${localName(item)} blind box loose -box -card -preorder -custom -fake`;
-
-        try {
-          const response = await fetch(endpoint, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ keyword, count: 10, daysToScrape: 30 }),
-          });
-          if (!response.ok) throw new Error("bad response");
-          const rows = await response.json();
-          const prices = (Array.isArray(rows) ? rows : [])
-            .map((row) => normalizePrice(row.priceWithShipping || row.computedPrice || row.price || row.soldPrice))
-            .filter((price) => price > 1)
-            .sort((a, b) => a - b);
-          if (!prices.length) {
-            showToast(t("noSoldComps"));
-            return;
-          }
-          const median = trimmedMedian(prices);
-          item.avgSoldPrice = Number(median.toFixed(2));
-          item.medianSoldPrice = Number(median.toFixed(2));
-          item.fairMarketValue = Number(median.toFixed(2));
-          item.valuationMethod = "Live sold-comps 10% trimmed median";
-          item.totalSold = prices.length;
-          item.roi = item.retailPrice ? Number((((median - item.retailPrice) / item.retailPrice) * 100).toFixed(1)) : 0;
-          item.lastUpdated = new Date().toISOString().slice(0, 10);
-          item.priceChange7d = "+0.0%";
-          showToast(t("refreshOk"));
-        } catch (error) {
-          showToast(t("refreshFail"));
-        } finally {
-          state.refreshing.delete(sku);
-          renderTabs();
-          render();
-          if (state.selectedSku === sku) loadDetail(sku);
-        }
-      }
-
       async function loadDetail(sku) {
-        state.selectedSku = sku;
         const item = state.items.find((asset) => asset.sku === sku);
         if (!item) return;
-        render();
-        document.getElementById("detailEmpty").classList.add("hidden");
-        document.getElementById("detailContent").classList.remove("hidden");
-        const artContainer = document.getElementById("detailArt");
-        artContainer.style.setProperty("--asset-color", item.color);
-        artContainer.innerHTML = item.image ? `<img src="${item.image}" class="detail-art-img">` : '';
+        state.selectedSku = sku;
+        document.getElementById("detailDrawer").classList.add("open");
+        const art = document.getElementById("detailArt");
+        art.style.setProperty("--asset-color", item.color);
+        art.innerHTML = item.image ? `<img src="${item.image}" alt="${localName(item)}">` : "";
+        document.getElementById("detailIp").textContent = item.ip;
         document.getElementById("detailName").textContent = localName(item);
-        document.getElementById("detailMeta").textContent =
-          `${item.ip} · ${item.series} · SKU ${item.sku}`;
+        document.getElementById("detailMeta").textContent = `${item.series} · ${item.rarity_zh || item.rarity_en || "Pop Mart"} · SKU ${item.sku}`;
         document.getElementById("detailRetail").textContent = fmt.format(item.retailPrice);
-        document.getElementById("detailMarket").textContent = fmt.format(item.avgSoldPrice);
-        document.getElementById("detailRoi").textContent = `${item.roi >= 0 ? "+" : ""}${item.roi}%`;
+        document.getElementById("detailFmv").textContent = fmt.format(item.fairMarketValue);
+        document.getElementById("detailRoi").textContent = `${item.roi >= 0 ? "+" : ""}${item.roi.toFixed(1)}%`;
         document.getElementById("detailRisk").textContent = `${item.riskScore}/100`;
-        document.getElementById("detailMethod").textContent =
-          `${item.valuationMethod || "IQR + 10% trimmed median"} · ${t("valuationLine")}`;
+        document.getElementById("detailMethod").textContent = `${item.valuationMethod || "IQR + 10% trimmed median"} · 最近样本成交 ${item.totalSold} 笔 · ${item.lastUpdated}`;
+        document.getElementById("detailNote").textContent = "详情页读取同域静态 JSON，生产环境由 GitHub Actions 每日更新。";
         const dealButton = document.getElementById("dealButton");
-        const dealPrice = fmt.format(item.avgSoldPrice || item.fairMarketValue || 0);
-        dealButton.textContent = `${t("dealButton")} (~${dealPrice})`;
+        dealButton.textContent = `Find Deals on eBay (~${fmt.format(item.fairMarketValue)})`;
         dealButton.href =
           item.affiliateUrl ||
-          `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(item.searchString || `Pop Mart ${item.ip} ${item.series} ${localName(item)}`)}`;
+          `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(item.searchString || `Pop Mart ${item.ip} ${item.series}`)}`;
         updateProductSchema(item);
 
         let detail = null;
-        if (!item.userItem) {
-          try {
-            const response = await fetch(`./data/${sku}.json?ts=${Date.now()}`);
-            detail = await response.json();
-          } catch {
-            detail = null;
-          }
+        try {
+          const response = await fetch(`./data/${sku}.json?ts=${Date.now()}`);
+          if (response.ok) detail = await response.json();
+        } catch {
+          detail = null;
         }
-        document.getElementById("detailNote").textContent =
-          detail && state.lang === "zh"
-            ? detail.notes_zh
-            : detail && state.lang === "en"
-              ? detail.notes_en
-              : "Refresh market price with your sold-comps API token.";
-        renderChart(item, detail);
+        renderHistoryChart(item, detail);
       }
 
-      function renderChart(item, detail) {
-        const ctx = document.getElementById("historyChart");
+      function renderHistoryChart(item, detail) {
         const history =
           detail && detail.priceHistory
             ? detail.priceHistory
             : Array.from({ length: 12 }, (_, index) => ({
                 date: `T-${11 - index}`,
-                avg: Number((item.avgSoldPrice * (0.96 + index * 0.006)).toFixed(2)),
+                avg: Number((item.fairMarketValue * (0.94 + index * 0.008 + Math.sin(index) * 0.01)).toFixed(2)),
               }));
-        const labels = history.map((point) => point.date.slice(-5));
-        const prices = history.map((point) => point.avg);
-        if (state.chart) state.chart.destroy();
-        state.chart = new Chart(ctx, {
+        if (state.detailChart) state.detailChart.destroy();
+        state.detailChart = new Chart(document.getElementById("historyChart"), {
           type: "line",
           data: {
-            labels,
+            labels: history.map((point) => String(point.date).slice(-5)),
             datasets: [
               {
-                label: state.lang === "zh" ? "成交均价" : "Average sold",
-                data: prices,
+                data: history.map((point) => point.avg),
                 borderColor: item.color,
                 backgroundColor: `${item.color}24`,
                 borderWidth: 2,
@@ -1786,19 +1304,65 @@
           options: {
             responsive: true,
             maintainAspectRatio: false,
-            plugins: {
-              legend: { display: false },
-              tooltip: { callbacks: { label: (ctx) => fmt.format(ctx.raw) } },
-            },
+            plugins: { legend: { display: false }, tooltip: { callbacks: { label: (ctx) => fmt.format(ctx.raw) } } },
             scales: {
-              x: { grid: { display: false }, ticks: { color: "#706a62", maxTicksLimit: 6 } },
-              y: {
-                grid: { color: "rgba(23,23,23,0.08)" },
-                ticks: { color: "#706a62", callback: (value) => `$${value}` },
-              },
+              x: { grid: { display: false }, ticks: { color: "#747b86", maxTicksLimit: 6 } },
+              y: { grid: { color: "rgba(25, 28, 29, 0.08)" }, ticks: { color: "#747b86", callback: (value) => `$${value}` } },
             },
           },
         });
+      }
+
+      async function refreshMarketPrice(sku) {
+        const item = state.items.find((asset) => asset.sku === sku);
+        if (!item) return;
+        if (!state.apiKey) {
+          showToast("请先配置 SOLD_COMPS_API_KEY");
+          openModal("apiModal");
+          return;
+        }
+        state.refreshing.add(sku);
+        showToast("正在请求成交样本");
+        const endpoint = `https://api.apify.com/v2/acts/caffein.dev~ebay-sold-listings/run-sync-get-dataset-items?token=${encodeURIComponent(state.apiKey)}`;
+        const keyword = item.searchString || `Pop Mart ${item.ip} ${item.series} -box -card -preorder -custom -fake`;
+        try {
+          const response = await fetch(endpoint, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ keyword, count: 20, daysToScrape: 30 }),
+          });
+          if (!response.ok) throw new Error("bad response");
+          const rows = await response.json();
+          const prices = (Array.isArray(rows) ? rows : rows.results || rows.items || [])
+            .map((row) => normalizePrice(row.priceWithShipping || row.computedPrice || row.price || row.soldPrice))
+            .filter((price) => price > 1);
+          const median = trimmedMedian(prices);
+          if (!median) throw new Error("empty prices");
+          item.fairMarketValue = Number(median.toFixed(2));
+          item.avgSoldPrice = item.fairMarketValue;
+          item.medianSoldPrice = item.fairMarketValue;
+          item.totalSold = prices.length;
+          item.roi = item.retailPrice
+            ? Number((((item.fairMarketValue - item.retailPrice) / item.retailPrice) * 100).toFixed(1))
+            : item.roi;
+          item.valuationMethod = "Live sold-comps 10% trimmed median";
+          item.lastUpdated = new Date().toISOString().slice(0, 10);
+          showToast("已刷新此 SKU 的 FMV");
+        } catch {
+          showToast("刷新失败，请检查 API Token 或额度");
+        } finally {
+          state.refreshing.delete(sku);
+          render();
+          loadDetail(sku);
+        }
+      }
+
+      function render() {
+        renderMarket();
+        renderFeed();
+        renderChips();
+        renderCards();
+        renderRank();
       }
 
       function openModal(id) {
@@ -1818,33 +1382,23 @@
         showToast.timer = setTimeout(() => toast.classList.add("hidden"), 2600);
       }
 
-      document.getElementById('mobileMenuBtn').addEventListener('click', () => {
-        document.getElementById('functionArea').classList.add('open');
-      });
-      document.getElementById('closeMenuBtn').addEventListener('click', () => {
-        document.getElementById('functionArea').classList.remove('open');
-      });
-
       async function init() {
-        applyI18n();
+        updateApiButton();
         try {
           const response = await fetch(`./data/index.json?ts=${Date.now()}`);
           if (!response.ok) throw new Error("missing data");
-          state.items = normalizeItems(await response.json());
-          buildIpOptions();
-          renderTabs();
+          state.items = (await response.json()).map(normalizeItem);
           render();
-          if (state.items[0]) loadDetail(state.items[0].sku);
-        } catch (error) {
-          document.getElementById("resultStatus").textContent = t("loadError");
-          document.getElementById("assetList").innerHTML = `<div class="detail-empty">${t("loadError")}</div>`;
+          if (state.items[0]) {
+            state.selectedSku = state.items[0].sku;
+            updateProductSchema(state.items[0]);
+          }
+        } catch {
+          document.getElementById("resultStatus").textContent = "数据加载失败";
+          document.getElementById("bentoGrid").innerHTML = `<div class="mini-panel">请先运行 python3 scripts/fetch_and_clean.py 生成数据。</div>`;
         }
       }
 
-      document.getElementById("langButton").addEventListener("click", () => {
-        state.lang = state.lang === "zh" ? "en" : "zh";
-        applyI18n();
-      });
       document.getElementById("refreshButton").addEventListener("click", init);
       document.getElementById("apiButton").addEventListener("click", () => openModal("apiModal"));
       document.getElementById("saveApiButton").addEventListener("click", () => {
@@ -1852,21 +1406,18 @@
         localStorage.setItem(storageKeys.api, state.apiKey);
         updateApiButton();
         closeModal("apiModal");
-        showToast(t("apiSaved"));
+        showToast("API Key 已保存到当前浏览器");
       });
       document.querySelectorAll("[data-close-modal]").forEach((button) => {
         button.addEventListener("click", () => closeModal(button.dataset.closeModal));
       });
       document.getElementById("searchInput").addEventListener("input", render);
-      document.getElementById("ipSelect").addEventListener("change", render);
       document.getElementById("sortSelect").addEventListener("change", render);
-      document.querySelectorAll("[data-mode]").forEach((button) => {
-        button.addEventListener("click", () => {
-          state.mode = button.dataset.mode;
-          document.querySelectorAll("[data-mode]").forEach((node) => node.classList.remove("active"));
-          button.classList.add("active");
-          render();
-        });
+      document.getElementById("closeDetailButton").addEventListener("click", () => {
+        document.getElementById("detailDrawer").classList.remove("open");
+      });
+      document.getElementById("refreshOneButton").addEventListener("click", () => {
+        if (state.selectedSku) refreshMarketPrice(state.selectedSku);
       });
 
       init();
