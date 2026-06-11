@@ -1,0 +1,1079 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>poptracker | 泡泡玛特潮玩收藏投资与二级市场价格追踪</title>
+    <meta
+      name="description"
+      content="poptracker tracks Pop Mart collectible market premiums, ROI, volatility, liquidity and secondary market price history."
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f4ef;
+        --ink: #171717;
+        --muted: #66615b;
+        --line: #ded8cf;
+        --surface: #fffdf8;
+        --surface-2: #efe8df;
+        --rose: #e94f86;
+        --blue: #3076b8;
+        --green: #228b65;
+        --yellow: #b07910;
+        --violet: #6f55d8;
+        --shadow: 0 18px 50px rgba(62, 50, 35, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.84), rgba(247, 244, 239, 0.92)),
+          radial-gradient(circle at 16% 8%, rgba(233, 79, 134, 0.18), transparent 28%),
+          radial-gradient(circle at 83% 14%, rgba(48, 118, 184, 0.15), transparent 28%),
+          var(--bg);
+        color: var(--ink);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      button,
+      input,
+      select {
+        font: inherit;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      .shell {
+        width: min(1440px, calc(100vw - 32px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid rgba(222, 216, 207, 0.82);
+        background: rgba(247, 244, 239, 0.82);
+        backdrop-filter: blur(18px);
+      }
+
+      .topbar-inner {
+        display: flex;
+        min-height: 68px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+      }
+
+      .logo {
+        display: grid;
+        width: 42px;
+        height: 42px;
+        place-items: center;
+        border: 1px solid rgba(23, 23, 23, 0.12);
+        border-radius: 8px;
+        background: linear-gradient(145deg, #171717, #433d36);
+        box-shadow: 0 10px 28px rgba(23, 23, 23, 0.16);
+      }
+
+      .logo-mark {
+        position: relative;
+        width: 24px;
+        height: 24px;
+      }
+
+      .logo-mark::before,
+      .logo-mark::after {
+        position: absolute;
+        content: "";
+        border-radius: 999px;
+      }
+
+      .logo-mark::before {
+        inset: 2px 3px 4px;
+        background: #ff78aa;
+      }
+
+      .logo-mark::after {
+        right: 3px;
+        bottom: 3px;
+        width: 8px;
+        height: 8px;
+        background: #7dd3fc;
+        box-shadow: -12px -12px 0 #ffe08a;
+      }
+
+      .brand-title {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 850;
+        letter-spacing: 0;
+      }
+
+      .brand-subtitle {
+        margin: 0;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .icon-button,
+      .text-button {
+        display: inline-flex;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 253, 248, 0.82);
+        color: var(--ink);
+      }
+
+      .icon-button {
+        width: 42px;
+      }
+
+      .text-button {
+        padding: 0 14px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+        gap: 28px;
+        padding: 34px 0 22px;
+      }
+
+      .hero-copy h2 {
+        max-width: 790px;
+        margin: 0;
+        font-size: clamp(34px, 5vw, 72px);
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      .hero-copy p {
+        max-width: 720px;
+        margin: 18px 0 0;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      .metrics-row {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(120px, 1fr));
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .metric {
+        border: 1px solid rgba(222, 216, 207, 0.86);
+        border-radius: 8px;
+        background: rgba(255, 253, 248, 0.68);
+        padding: 14px;
+      }
+
+      .metric span {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .metric strong {
+        display: block;
+        margin-top: 8px;
+        font-size: 22px;
+      }
+
+      .hero-visual {
+        min-height: 360px;
+        border: 1px solid rgba(222, 216, 207, 0.96);
+        border-radius: 8px;
+        background:
+          linear-gradient(160deg, rgba(255, 253, 248, 0.76), rgba(239, 232, 223, 0.74)),
+          repeating-linear-gradient(90deg, rgba(23, 23, 23, 0.04) 0 1px, transparent 1px 52px);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        position: relative;
+      }
+
+      .toy-stage {
+        position: absolute;
+        inset: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 0.86fr;
+        gap: 12px;
+      }
+
+      .toy {
+        position: relative;
+        min-height: 130px;
+        border: 1px solid rgba(23, 23, 23, 0.11);
+        border-radius: 8px;
+        background: rgba(255, 253, 248, 0.78);
+        overflow: hidden;
+      }
+
+      .toy::before {
+        position: absolute;
+        left: 50%;
+        top: 24px;
+        width: 64px;
+        height: 72px;
+        border-radius: 42% 42% 48% 48%;
+        background: var(--toy-color, #ff7eb6);
+        box-shadow:
+          -24px -8px 0 -12px color-mix(in srgb, var(--toy-color, #ff7eb6), #fff 30%),
+          24px -8px 0 -12px color-mix(in srgb, var(--toy-color, #ff7eb6), #111 10%);
+        content: "";
+        transform: translateX(-50%);
+      }
+
+      .toy::after {
+        position: absolute;
+        left: 50%;
+        top: 62px;
+        width: 42px;
+        height: 22px;
+        border-radius: 999px;
+        background:
+          radial-gradient(circle at 32% 45%, #171717 0 2px, transparent 3px),
+          radial-gradient(circle at 68% 45%, #171717 0 2px, transparent 3px),
+          #fff6e8;
+        content: "";
+        transform: translateX(-50%);
+      }
+
+      .toy-label {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        color: var(--muted);
+        font-size: 11px;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 300px minmax(0, 1fr) 390px;
+        gap: 18px;
+        align-items: start;
+        padding: 14px 0 46px;
+      }
+
+      .panel {
+        border: 1px solid rgba(222, 216, 207, 0.9);
+        border-radius: 8px;
+        background: rgba(255, 253, 248, 0.86);
+        box-shadow: 0 14px 38px rgba(62, 50, 35, 0.08);
+      }
+
+      .panel-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        border-bottom: 1px solid var(--line);
+        padding: 14px;
+      }
+
+      .panel-title {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 820;
+      }
+
+      .panel-body {
+        padding: 14px;
+      }
+
+      .filters {
+        position: sticky;
+        top: 86px;
+      }
+
+      .field {
+        display: grid;
+        gap: 7px;
+        margin-bottom: 14px;
+      }
+
+      .field label {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 720;
+      }
+
+      .field input,
+      .field select {
+        width: 100%;
+        height: 42px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fffdf8;
+        color: var(--ink);
+        padding: 0 11px;
+        outline-color: rgba(48, 118, 184, 0.4);
+      }
+
+      .segmented {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+      }
+
+      .segment {
+        min-height: 38px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fffdf8;
+        color: var(--muted);
+      }
+
+      .segment.active {
+        border-color: #171717;
+        background: #171717;
+        color: #fffdf8;
+      }
+
+      .table-panel {
+        overflow: hidden;
+      }
+
+      .toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .status {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .asset-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .asset-card {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 16px;
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 253, 248, 0.92);
+        padding: 14px;
+        text-align: left;
+        transition:
+          transform 0.16s ease,
+          border-color 0.16s ease,
+          box-shadow 0.16s ease;
+      }
+
+      .asset-card:hover,
+      .asset-card.selected {
+        border-color: rgba(23, 23, 23, 0.5);
+        box-shadow: 0 12px 28px rgba(62, 50, 35, 0.1);
+        transform: translateY(-1px);
+      }
+
+      .asset-main {
+        display: flex;
+        gap: 12px;
+        min-width: 0;
+      }
+
+      .swatch {
+        flex: 0 0 auto;
+        width: 44px;
+        height: 44px;
+        border: 1px solid rgba(23, 23, 23, 0.12);
+        border-radius: 8px;
+        background:
+          radial-gradient(circle at 50% 38%, #fff6e8 0 20%, transparent 21%),
+          var(--asset-color, #ff7eb6);
+      }
+
+      .asset-name {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 820;
+      }
+
+      .asset-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 7px;
+      }
+
+      .tag {
+        display: inline-flex;
+        min-height: 22px;
+        align-items: center;
+        border: 1px solid rgba(23, 23, 23, 0.09);
+        border-radius: 999px;
+        background: var(--surface-2);
+        color: var(--muted);
+        font-size: 11px;
+        padding: 0 8px;
+      }
+
+      .asset-numbers {
+        display: grid;
+        gap: 8px;
+        min-width: 154px;
+        text-align: right;
+      }
+
+      .price {
+        font-size: 22px;
+        font-weight: 880;
+      }
+
+      .change {
+        justify-self: end;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 760;
+        padding: 4px 9px;
+      }
+
+      .positive {
+        background: rgba(34, 139, 101, 0.12);
+        color: var(--green);
+      }
+
+      .negative {
+        background: rgba(196, 64, 73, 0.12);
+        color: #c44049;
+      }
+
+      .detail {
+        position: sticky;
+        top: 86px;
+      }
+
+      .detail-empty {
+        display: grid;
+        min-height: 330px;
+        place-items: center;
+        color: var(--muted);
+        text-align: center;
+        line-height: 1.5;
+        padding: 24px;
+      }
+
+      .detail-hero {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        padding: 14px;
+      }
+
+      .detail-art {
+        flex: 0 0 auto;
+        width: 72px;
+        height: 72px;
+        border: 1px solid rgba(23, 23, 23, 0.12);
+        border-radius: 8px;
+        background:
+          radial-gradient(circle at 50% 38%, #fff6e8 0 20%, transparent 21%),
+          var(--asset-color, #ff7eb6);
+      }
+
+      .detail h3 {
+        margin: 0;
+        font-size: 20px;
+        line-height: 1.18;
+      }
+
+      .detail-sub {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .kpi-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 14px 14px;
+      }
+
+      .kpi {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(247, 244, 239, 0.62);
+        padding: 12px;
+      }
+
+      .kpi span {
+        color: var(--muted);
+        font-size: 11px;
+      }
+
+      .kpi strong {
+        display: block;
+        margin-top: 7px;
+        font-size: 20px;
+      }
+
+      .chart-wrap {
+        height: 220px;
+        margin: 0 14px 14px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 253, 248, 0.8);
+        padding: 10px;
+      }
+
+      .note {
+        margin: 0 14px 14px;
+        border-left: 3px solid var(--yellow);
+        background: rgba(255, 200, 87, 0.12);
+        color: #68521c;
+        font-size: 12px;
+        line-height: 1.55;
+        padding: 10px 12px;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      @media (max-width: 1120px) {
+        .hero,
+        .layout {
+          grid-template-columns: 1fr;
+        }
+
+        .filters,
+        .detail {
+          position: static;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .shell {
+          width: min(100% - 20px, 1440px);
+        }
+
+        .topbar-inner {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 12px 0;
+        }
+
+        .nav-actions {
+          width: 100%;
+        }
+
+        .text-button {
+          flex: 1;
+        }
+
+        .metrics-row,
+        .kpi-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .hero-visual {
+          min-height: 300px;
+        }
+
+        .toy-stage {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .asset-card {
+          grid-template-columns: 1fr;
+        }
+
+        .asset-numbers {
+          min-width: 0;
+          text-align: left;
+        }
+
+        .change {
+          justify-self: start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="shell topbar-inner">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"><div class="logo-mark"></div></div>
+          <div>
+            <h1 class="brand-title">poptracker</h1>
+            <p class="brand-subtitle" data-i18n="brandSubtitle">泡泡玛特潮玩收藏投资与二级市场价格追踪</p>
+          </div>
+        </div>
+        <div class="nav-actions">
+          <button class="icon-button" id="refreshButton" title="Refresh data" aria-label="Refresh data">
+            ↻
+          </button>
+          <button class="text-button" id="langButton">English</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-copy">
+          <h2 id="heroTitle" data-i18n="heroTitle">用真实成交价追踪潮玩资产温度</h2>
+          <p data-i18n="heroText">
+            poptracker 将热门泡泡玛特 IP 的官方价、二级市场均价、七日涨跌、流动性、波动风险和收藏溢价合并到一个看板，适合做持仓记录、补货观察和价格复盘。
+          </p>
+          <div class="metrics-row">
+            <div class="metric">
+              <span data-i18n="metricAssets">追踪资产</span>
+              <strong id="metricAssets">--</strong>
+            </div>
+            <div class="metric">
+              <span data-i18n="metricAvgRoi">平均溢价</span>
+              <strong id="metricAvgRoi">--</strong>
+            </div>
+            <div class="metric">
+              <span data-i18n="metricHot">强势标的</span>
+              <strong id="metricHot">--</strong>
+            </div>
+            <div class="metric">
+              <span data-i18n="metricUpdated">更新时间</span>
+              <strong id="metricUpdated">--</strong>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="toy-stage" id="toyStage"></div>
+        </div>
+      </section>
+
+      <section class="layout">
+        <aside class="panel filters" aria-label="Filters">
+          <div class="panel-header">
+            <h2 class="panel-title" data-i18n="filters">筛选器</h2>
+          </div>
+          <div class="panel-body">
+            <div class="field">
+              <label for="searchInput" data-i18n="search">搜索 SKU / IP / 系列</label>
+              <input id="searchInput" type="search" autocomplete="off" placeholder="Labubu, Molly..." />
+            </div>
+            <div class="field">
+              <label for="ipSelect">IP</label>
+              <select id="ipSelect"></select>
+            </div>
+            <div class="field">
+              <label for="sortSelect" data-i18n="sort">排序</label>
+              <select id="sortSelect">
+                <option value="roi" data-i18n="sortRoi">溢价率最高</option>
+                <option value="change" data-i18n="sortChange">七日涨幅最高</option>
+                <option value="liquidity" data-i18n="sortLiquidity">成交流动性最高</option>
+                <option value="risk" data-i18n="sortRisk">风险最低</option>
+              </select>
+            </div>
+            <div class="field">
+              <label data-i18n="viewMode">视角</label>
+              <div class="segmented">
+                <button class="segment active" data-mode="collector" data-i18n="collector">收藏</button>
+                <button class="segment" data-mode="investor" data-i18n="investor">投资</button>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <section class="panel table-panel">
+          <div class="panel-header toolbar">
+            <div>
+              <h2 class="panel-title" data-i18n="assetMatrix">资产矩阵</h2>
+              <div class="status" id="resultStatus">Loading market data...</div>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="asset-list" id="assetList"></div>
+          </div>
+        </section>
+
+        <aside class="panel detail" aria-live="polite">
+          <div id="detailEmpty" class="detail-empty" data-i18n="detailEmpty">
+            选择一个潮玩资产，查看 ROI、风险分数和 30 日成交均价走势。
+          </div>
+          <div id="detailContent" class="hidden">
+            <div class="detail-hero">
+              <div class="detail-art" id="detailArt"></div>
+              <div>
+                <h3 id="detailName">--</h3>
+                <div class="detail-sub" id="detailMeta">--</div>
+              </div>
+            </div>
+            <div class="kpi-grid">
+              <div class="kpi">
+                <span data-i18n="msrp">官方价</span>
+                <strong id="detailRetail">--</strong>
+              </div>
+              <div class="kpi">
+                <span data-i18n="marketAvg">二级均价</span>
+                <strong id="detailMarket">--</strong>
+              </div>
+              <div class="kpi">
+                <span data-i18n="roi">溢价率</span>
+                <strong id="detailRoi">--</strong>
+              </div>
+              <div class="kpi">
+                <span data-i18n="riskScore">风险分</span>
+                <strong id="detailRisk">--</strong>
+              </div>
+            </div>
+            <div class="chart-wrap">
+              <canvas id="historyChart"></canvas>
+            </div>
+            <p class="note" id="detailNote"></p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script>
+      const state = {
+        lang: navigator.language && navigator.language.startsWith("en") ? "en" : "zh",
+        items: [],
+        selectedSku: "",
+        chart: null,
+        mode: "collector",
+      };
+
+      const copy = {
+        zh: {
+          brandSubtitle: "泡泡玛特潮玩收藏投资与二级市场价格追踪",
+          heroTitle: "用真实成交价追踪潮玩资产温度",
+          heroText:
+            "poptracker 将热门泡泡玛特 IP 的官方价、二级市场均价、七日涨跌、流动性、波动风险和收藏溢价合并到一个看板，适合做持仓记录、补货观察和价格复盘。",
+          metricAssets: "追踪资产",
+          metricAvgRoi: "平均溢价",
+          metricHot: "强势标的",
+          metricUpdated: "更新时间",
+          filters: "筛选器",
+          search: "搜索 SKU / IP / 系列",
+          sort: "排序",
+          sortRoi: "溢价率最高",
+          sortChange: "七日涨幅最高",
+          sortLiquidity: "成交流动性最高",
+          sortRisk: "风险最低",
+          viewMode: "视角",
+          collector: "收藏",
+          investor: "投资",
+          assetMatrix: "资产矩阵",
+          detailEmpty: "选择一个潮玩资产，查看 ROI、风险分数和 30 日成交均价走势。",
+          msrp: "官方价",
+          marketAvg: "二级均价",
+          roi: "溢价率",
+          riskScore: "风险分",
+          allIp: "全部 IP",
+          results: "个结果",
+          sold: "成交",
+          median: "中位数",
+          signal: "信号",
+          updated: "更新",
+          noResults: "没有匹配结果，试试放宽筛选条件。",
+          loadError: "数据文件未生成，请先运行 scripts/fetch_and_clean.py。",
+        },
+        en: {
+          brandSubtitle: "Pop Mart collectible investing and secondary market price tracking",
+          heroTitle: "Track collectible heat through completed sale prices",
+          heroText:
+            "poptracker combines MSRP, secondary-market average, seven-day change, liquidity, volatility, risk score and premium metrics for popular Pop Mart IPs in one practical dashboard.",
+          metricAssets: "Tracked assets",
+          metricAvgRoi: "Average premium",
+          metricHot: "Strong watches",
+          metricUpdated: "Updated",
+          filters: "Filters",
+          search: "Search SKU / IP / series",
+          sort: "Sort",
+          sortRoi: "Highest premium",
+          sortChange: "Highest 7D change",
+          sortLiquidity: "Most liquid",
+          sortRisk: "Lowest risk",
+          viewMode: "Lens",
+          collector: "Collector",
+          investor: "Investor",
+          assetMatrix: "Asset Matrix",
+          detailEmpty: "Pick an asset to inspect ROI, risk score and 30-day average sold prices.",
+          msrp: "MSRP",
+          marketAvg: "Market avg",
+          roi: "Premium",
+          riskScore: "Risk",
+          allIp: "All IP",
+          results: "results",
+          sold: "sold",
+          median: "median",
+          signal: "signal",
+          updated: "updated",
+          noResults: "No matching assets. Try broader filters.",
+          loadError: "Data files are missing. Run scripts/fetch_and_clean.py first.",
+        },
+      };
+
+      const fmt = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
+
+      function t(key) {
+        return copy[state.lang][key] || key;
+      }
+
+      function localName(item) {
+        return state.lang === "zh" ? item.name_zh : item.name_en;
+      }
+
+      function localRarity(item) {
+        return state.lang === "zh" ? item.rarity_zh : item.rarity_en;
+      }
+
+      function parseChange(value) {
+        return Number(String(value).replace("%", ""));
+      }
+
+      function applyI18n() {
+        document.documentElement.lang = state.lang === "zh" ? "zh-CN" : "en";
+        document.querySelectorAll("[data-i18n]").forEach((node) => {
+          node.textContent = t(node.dataset.i18n);
+        });
+        document.getElementById("langButton").textContent = state.lang === "zh" ? "English" : "中文";
+        document.getElementById("searchInput").placeholder =
+          state.lang === "zh" ? "Labubu、Molly、Skullpanda..." : "Labubu, Molly, Skullpanda...";
+        buildIpOptions();
+        render();
+        if (state.selectedSku) {
+          loadDetail(state.selectedSku);
+        }
+      }
+
+      function buildIpOptions() {
+        const select = document.getElementById("ipSelect");
+        const current = select.value || "all";
+        const ips = Array.from(new Set(state.items.map((item) => item.ip))).sort();
+        select.innerHTML = [`<option value="all">${t("allIp")}</option>`]
+          .concat(ips.map((ip) => `<option value="${ip}">${ip}</option>`))
+          .join("");
+        select.value = ips.includes(current) ? current : "all";
+      }
+
+      function updateHeroArt() {
+        const stage = document.getElementById("toyStage");
+        stage.innerHTML = state.items
+          .slice(0, 6)
+          .map(
+            (item) => `
+              <div class="toy" style="--toy-color: ${item.color}">
+                <div class="toy-label"><span>${item.ip}</span><strong>${item.priceChange7d}</strong></div>
+              </div>
+            `,
+          )
+          .join("");
+      }
+
+      function updateMetrics(items) {
+        const avgRoi =
+          items.length === 0 ? 0 : items.reduce((sum, item) => sum + Number(item.roi), 0) / items.length;
+        const hot = items.filter((item) => item.signal_en === "Strong watch" || item.signal_zh === "重点观察").length;
+        const updated = items[0] ? items[0].lastUpdated.slice(5) : "--";
+        document.getElementById("metricAssets").textContent = String(items.length);
+        document.getElementById("metricAvgRoi").textContent = `${avgRoi.toFixed(0)}%`;
+        document.getElementById("metricHot").textContent = String(hot);
+        document.getElementById("metricUpdated").textContent = updated;
+      }
+
+      function filteredItems() {
+        const query = document.getElementById("searchInput").value.trim().toLowerCase();
+        const ip = document.getElementById("ipSelect").value;
+        const sort = document.getElementById("sortSelect").value;
+
+        const items = state.items.filter((item) => {
+          const haystack = `${item.sku} ${item.ip} ${item.series} ${item.name_zh} ${item.name_en}`.toLowerCase();
+          return (ip === "all" || item.ip === ip) && (!query || haystack.includes(query));
+        });
+
+        const sorters = {
+          roi: (a, b) => b.roi - a.roi,
+          change: (a, b) => parseChange(b.priceChange7d) - parseChange(a.priceChange7d),
+          liquidity: (a, b) => b.totalSold - a.totalSold,
+          risk: (a, b) => a.riskScore - b.riskScore,
+        };
+        return items.sort(sorters[sort] || sorters.roi);
+      }
+
+      function render() {
+        const items = filteredItems();
+        const list = document.getElementById("assetList");
+        document.getElementById("resultStatus").textContent = `${items.length} ${t("results")}`;
+        updateMetrics(state.items);
+        updateHeroArt();
+
+        if (!items.length) {
+          list.innerHTML = `<div class="detail-empty">${t("noResults")}</div>`;
+          return;
+        }
+
+        list.innerHTML = items
+          .map((item) => {
+            const change = parseChange(item.priceChange7d);
+            const signal = state.lang === "zh" ? item.signal_zh : item.signal_en;
+            const modeLine =
+              state.mode === "collector"
+                ? `${item.ip} · ${item.series} · ${localRarity(item)}`
+                : `${t("median")}: ${fmt.format(item.medianSoldPrice)} · ${t("sold")}: ${item.totalSold}`;
+            return `
+              <button class="asset-card ${state.selectedSku === item.sku ? "selected" : ""}" data-sku="${item.sku}">
+                <div class="asset-main">
+                  <div class="swatch" style="--asset-color: ${item.color}"></div>
+                  <div>
+                    <h3 class="asset-name">${localName(item)}</h3>
+                    <div class="asset-meta">
+                      <span class="tag">${item.sku}</span>
+                      <span class="tag">${modeLine}</span>
+                      <span class="tag">${t("signal")}: ${signal}</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="asset-numbers">
+                  <div class="price">${fmt.format(item.avgSoldPrice)}</div>
+                  <span class="change ${change >= 0 ? "positive" : "negative"}">${item.priceChange7d}</span>
+                </div>
+              </button>
+            `;
+          })
+          .join("");
+
+        list.querySelectorAll("[data-sku]").forEach((button) => {
+          button.addEventListener("click", () => loadDetail(button.dataset.sku));
+        });
+      }
+
+      async function loadDetail(sku) {
+        state.selectedSku = sku;
+        render();
+        const response = await fetch(`./data/${sku}.json?ts=${Date.now()}`);
+        const detail = await response.json();
+        document.getElementById("detailEmpty").classList.add("hidden");
+        document.getElementById("detailContent").classList.remove("hidden");
+        document.getElementById("detailArt").style.setProperty("--asset-color", detail.color);
+        document.getElementById("detailName").textContent =
+          state.lang === "zh" ? detail.name_zh : detail.name_en;
+        document.getElementById("detailMeta").textContent =
+          `${detail.ip} · ${detail.series} · SKU ${detail.sku}`;
+        document.getElementById("detailRetail").textContent = fmt.format(detail.retailPrice);
+        document.getElementById("detailMarket").textContent = fmt.format(detail.marketData.avgSoldPrice);
+        document.getElementById("detailRoi").textContent = `${detail.marketData.roi >= 0 ? "+" : ""}${detail.marketData.roi}%`;
+        document.getElementById("detailRisk").textContent = `${detail.marketData.riskScore}/100`;
+        document.getElementById("detailNote").textContent =
+          state.lang === "zh" ? detail.notes_zh : detail.notes_en;
+        renderChart(detail);
+      }
+
+      function renderChart(detail) {
+        const ctx = document.getElementById("historyChart");
+        const labels = detail.priceHistory.map((point) => point.date.slice(5));
+        const prices = detail.priceHistory.map((point) => point.avg);
+        if (state.chart) state.chart.destroy();
+        state.chart = new Chart(ctx, {
+          type: "line",
+          data: {
+            labels,
+            datasets: [
+              {
+                label: state.lang === "zh" ? "成交均价" : "Average sold",
+                data: prices,
+                borderColor: detail.color,
+                backgroundColor: `${detail.color}24`,
+                borderWidth: 2,
+                pointRadius: 2,
+                tension: 0.28,
+                fill: true,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: { callbacks: { label: (ctx) => fmt.format(ctx.raw) } },
+            },
+            scales: {
+              x: { grid: { display: false }, ticks: { color: "#706a62", maxTicksLimit: 6 } },
+              y: {
+                grid: { color: "rgba(23,23,23,0.08)" },
+                ticks: { color: "#706a62", callback: (value) => `$${value}` },
+              },
+            },
+          },
+        });
+      }
+
+      async function init() {
+        applyI18n();
+        try {
+          const response = await fetch(`./data/index.json?ts=${Date.now()}`);
+          if (!response.ok) throw new Error("missing data");
+          state.items = await response.json();
+          buildIpOptions();
+          render();
+          if (state.items[0]) loadDetail(state.items[0].sku);
+        } catch (error) {
+          document.getElementById("resultStatus").textContent = t("loadError");
+          document.getElementById("assetList").innerHTML = `<div class="detail-empty">${t("loadError")}</div>`;
+        }
+      }
+
+      document.getElementById("langButton").addEventListener("click", () => {
+        state.lang = state.lang === "zh" ? "en" : "zh";
+        applyI18n();
+      });
+      document.getElementById("refreshButton").addEventListener("click", init);
+      document.getElementById("searchInput").addEventListener("input", render);
+      document.getElementById("ipSelect").addEventListener("change", render);
+      document.getElementById("sortSelect").addEventListener("change", render);
+      document.querySelectorAll("[data-mode]").forEach((button) => {
+        button.addEventListener("click", () => {
+          state.mode = button.dataset.mode;
+          document.querySelectorAll("[data-mode]").forEach((node) => node.classList.remove("active"));
+          button.classList.add("active");
+          render();
+        });
+      });
+
+      init();
+    </script>
+  </body>
+</html>

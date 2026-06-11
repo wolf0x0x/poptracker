@@ -1,0 +1,159 @@
+{
+  "sku": "MOLLY-SPACE-100-01",
+  "ip": "MOLLY",
+  "series": "MEGA Space Molly 100%",
+  "name_zh": "MEGA Space Molly 100%",
+  "name_en": "MEGA Space Molly 100%",
+  "rarity_zh": "MEGA",
+  "rarity_en": "MEGA",
+  "color": "#ffc857",
+  "retailPrice": 19.0,
+  "lastUpdated": "2026-06-11",
+  "marketData": {
+    "avgSoldPrice": 47.16,
+    "medianSoldPrice": 46.34,
+    "lowSoldPrice": 35.98,
+    "highSoldPrice": 60.07,
+    "totalSold": 41,
+    "volatility": "Low",
+    "volatilityValue": 0.133,
+    "roi": 148.2,
+    "riskScore": 54,
+    "cleanedSampleSize": 41,
+    "priceChange7d": "+8.1%",
+    "trend": "breakout",
+    "trend_zh": "突破上涨",
+    "signal": "hold",
+    "signal_zh": "持有跟踪",
+    "signal_en": "Track / hold"
+  },
+  "priceHistory": [
+    {
+      "date": "2026-05-13",
+      "avg": 43.27
+    },
+    {
+      "date": "2026-05-14",
+      "avg": 47.1
+    },
+    {
+      "date": "2026-05-15",
+      "avg": 45.18
+    },
+    {
+      "date": "2026-05-16",
+      "avg": 48.65
+    },
+    {
+      "date": "2026-05-17",
+      "avg": 51.39
+    },
+    {
+      "date": "2026-05-18",
+      "avg": 49.03
+    },
+    {
+      "date": "2026-05-19",
+      "avg": 50.91
+    },
+    {
+      "date": "2026-05-20",
+      "avg": 47.62
+    },
+    {
+      "date": "2026-05-21",
+      "avg": 47.85
+    },
+    {
+      "date": "2026-05-22",
+      "avg": 51.43
+    },
+    {
+      "date": "2026-05-23",
+      "avg": 50.54
+    },
+    {
+      "date": "2026-05-24",
+      "avg": 50.49
+    },
+    {
+      "date": "2026-05-25",
+      "avg": 47.69
+    },
+    {
+      "date": "2026-05-26",
+      "avg": 47.55
+    },
+    {
+      "date": "2026-05-27",
+      "avg": 46.41
+    },
+    {
+      "date": "2026-05-28",
+      "avg": 45.92
+    },
+    {
+      "date": "2026-05-29",
+      "avg": 45.64
+    },
+    {
+      "date": "2026-05-30",
+      "avg": 45.93
+    },
+    {
+      "date": "2026-05-31",
+      "avg": 45.07
+    },
+    {
+      "date": "2026-06-01",
+      "avg": 46.72
+    },
+    {
+      "date": "2026-06-02",
+      "avg": 47.2
+    },
+    {
+      "date": "2026-06-03",
+      "avg": 43.66
+    },
+    {
+      "date": "2026-06-04",
+      "avg": 43.63
+    },
+    {
+      "date": "2026-06-05",
+      "avg": 43.83
+    },
+    {
+      "date": "2026-06-06",
+      "avg": 45.59
+    },
+    {
+      "date": "2026-06-07",
+      "avg": 43.71
+    },
+    {
+      "date": "2026-06-08",
+      "avg": 46.78
+    },
+    {
+      "date": "2026-06-09",
+      "avg": 48.02
+    },
+    {
+      "date": "2026-06-10",
+      "avg": 48.23
+    },
+    {
+      "date": "2026-06-11",
+      "avg": 47.16
+    }
+  ],
+  "sources": [
+    "eBay completed sales",
+    "SoldComps-compatible API",
+    "demo fallback"
+  ],
+  "notes_zh": "价格为样例或 API 聚合结果，不构成投资建议。请以真实成交、品相、隐藏款概率和平台手续费综合判断。",
+  "notes_en": "Prices are sample or API-aggregated metrics, not financial advice. Validate condition, rarity and fees before trading."
+}

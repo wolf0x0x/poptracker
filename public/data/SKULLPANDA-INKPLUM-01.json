@@ -1,0 +1,159 @@
+{
+  "sku": "SKULLPANDA-INKPLUM-01",
+  "ip": "SKULLPANDA",
+  "series": "Ink Plum Blossom",
+  "name_zh": "Skullpanda 墨梅系列",
+  "name_en": "SKULLPANDA Ink Plum Blossom",
+  "rarity_zh": "艺术 IP",
+  "rarity_en": "Art IP",
+  "color": "#9f8cff",
+  "retailPrice": 16.0,
+  "lastUpdated": "2026-06-11",
+  "marketData": {
+    "avgSoldPrice": 35.27,
+    "medianSoldPrice": 35.48,
+    "lowSoldPrice": 27.46,
+    "highSoldPrice": 44.98,
+    "totalSold": 40,
+    "volatility": "Low",
+    "volatilityValue": 0.124,
+    "roi": 120.4,
+    "riskScore": 49,
+    "cleanedSampleSize": 40,
+    "priceChange7d": "+10.8%",
+    "trend": "breakout",
+    "trend_zh": "突破上涨",
+    "signal": "hold",
+    "signal_zh": "持有跟踪",
+    "signal_en": "Track / hold"
+  },
+  "priceHistory": [
+    {
+      "date": "2026-05-13",
+      "avg": 36.9
+    },
+    {
+      "date": "2026-05-14",
+      "avg": 34.13
+    },
+    {
+      "date": "2026-05-15",
+      "avg": 35.29
+    },
+    {
+      "date": "2026-05-16",
+      "avg": 38.34
+    },
+    {
+      "date": "2026-05-17",
+      "avg": 34.53
+    },
+    {
+      "date": "2026-05-18",
+      "avg": 36.33
+    },
+    {
+      "date": "2026-05-19",
+      "avg": 37.35
+    },
+    {
+      "date": "2026-05-20",
+      "avg": 37.13
+    },
+    {
+      "date": "2026-05-21",
+      "avg": 37.34
+    },
+    {
+      "date": "2026-05-22",
+      "avg": 38.95
+    },
+    {
+      "date": "2026-05-23",
+      "avg": 36.98
+    },
+    {
+      "date": "2026-05-24",
+      "avg": 37.87
+    },
+    {
+      "date": "2026-05-25",
+      "avg": 36.21
+    },
+    {
+      "date": "2026-05-26",
+      "avg": 35.28
+    },
+    {
+      "date": "2026-05-27",
+      "avg": 35.35
+    },
+    {
+      "date": "2026-05-28",
+      "avg": 35.84
+    },
+    {
+      "date": "2026-05-29",
+      "avg": 35.13
+    },
+    {
+      "date": "2026-05-30",
+      "avg": 33.81
+    },
+    {
+      "date": "2026-05-31",
+      "avg": 32.92
+    },
+    {
+      "date": "2026-06-01",
+      "avg": 33.82
+    },
+    {
+      "date": "2026-06-02",
+      "avg": 33.06
+    },
+    {
+      "date": "2026-06-03",
+      "avg": 33.25
+    },
+    {
+      "date": "2026-06-04",
+      "avg": 31.84
+    },
+    {
+      "date": "2026-06-05",
+      "avg": 33.36
+    },
+    {
+      "date": "2026-06-06",
+      "avg": 31.32
+    },
+    {
+      "date": "2026-06-07",
+      "avg": 33.83
+    },
+    {
+      "date": "2026-06-08",
+      "avg": 33.85
+    },
+    {
+      "date": "2026-06-09",
+      "avg": 34.71
+    },
+    {
+      "date": "2026-06-10",
+      "avg": 33.6
+    },
+    {
+      "date": "2026-06-11",
+      "avg": 35.27
+    }
+  ],
+  "sources": [
+    "eBay completed sales",
+    "SoldComps-compatible API",
+    "demo fallback"
+  ],
+  "notes_zh": "价格为样例或 API 聚合结果，不构成投资建议。请以真实成交、品相、隐藏款概率和平台手续费综合判断。",
+  "notes_en": "Prices are sample or API-aggregated metrics, not financial advice. Validate condition, rarity and fees before trading."
+}

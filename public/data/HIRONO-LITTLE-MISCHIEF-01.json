@@ -1,0 +1,159 @@
+{
+  "sku": "HIRONO-LITTLE-MISCHIEF-01",
+  "ip": "HIRONO",
+  "series": "Little Mischief",
+  "name_zh": "Hirono 小野 Little Mischief",
+  "name_en": "HIRONO Little Mischief",
+  "rarity_zh": "成长 IP",
+  "rarity_en": "Emerging IP",
+  "color": "#ff8a5b",
+  "retailPrice": 15.0,
+  "lastUpdated": "2026-06-11",
+  "marketData": {
+    "avgSoldPrice": 30.5,
+    "medianSoldPrice": 30.53,
+    "lowSoldPrice": 22.09,
+    "highSoldPrice": 43.29,
+    "totalSold": 42,
+    "volatility": "Medium",
+    "volatilityValue": 0.161,
+    "roi": 103.4,
+    "riskScore": 51,
+    "cleanedSampleSize": 42,
+    "priceChange7d": "+1.7%",
+    "trend": "range",
+    "trend_zh": "区间震荡",
+    "signal": "hold",
+    "signal_zh": "持有跟踪",
+    "signal_en": "Track / hold"
+  },
+  "priceHistory": [
+    {
+      "date": "2026-05-13",
+      "avg": 27.88
+    },
+    {
+      "date": "2026-05-14",
+      "avg": 30.04
+    },
+    {
+      "date": "2026-05-15",
+      "avg": 30.08
+    },
+    {
+      "date": "2026-05-16",
+      "avg": 32.16
+    },
+    {
+      "date": "2026-05-17",
+      "avg": 31.75
+    },
+    {
+      "date": "2026-05-18",
+      "avg": 31.11
+    },
+    {
+      "date": "2026-05-19",
+      "avg": 32.29
+    },
+    {
+      "date": "2026-05-20",
+      "avg": 33.15
+    },
+    {
+      "date": "2026-05-21",
+      "avg": 32.08
+    },
+    {
+      "date": "2026-05-22",
+      "avg": 32.86
+    },
+    {
+      "date": "2026-05-23",
+      "avg": 31.01
+    },
+    {
+      "date": "2026-05-24",
+      "avg": 32.13
+    },
+    {
+      "date": "2026-05-25",
+      "avg": 31.66
+    },
+    {
+      "date": "2026-05-26",
+      "avg": 30.79
+    },
+    {
+      "date": "2026-05-27",
+      "avg": 31.03
+    },
+    {
+      "date": "2026-05-28",
+      "avg": 30.04
+    },
+    {
+      "date": "2026-05-29",
+      "avg": 29.83
+    },
+    {
+      "date": "2026-05-30",
+      "avg": 30.15
+    },
+    {
+      "date": "2026-05-31",
+      "avg": 28.79
+    },
+    {
+      "date": "2026-06-01",
+      "avg": 28.97
+    },
+    {
+      "date": "2026-06-02",
+      "avg": 29.48
+    },
+    {
+      "date": "2026-06-03",
+      "avg": 29.82
+    },
+    {
+      "date": "2026-06-04",
+      "avg": 30.0
+    },
+    {
+      "date": "2026-06-05",
+      "avg": 31.29
+    },
+    {
+      "date": "2026-06-06",
+      "avg": 28.58
+    },
+    {
+      "date": "2026-06-07",
+      "avg": 29.21
+    },
+    {
+      "date": "2026-06-08",
+      "avg": 30.82
+    },
+    {
+      "date": "2026-06-09",
+      "avg": 30.86
+    },
+    {
+      "date": "2026-06-10",
+      "avg": 30.22
+    },
+    {
+      "date": "2026-06-11",
+      "avg": 30.5
+    }
+  ],
+  "sources": [
+    "eBay completed sales",
+    "SoldComps-compatible API",
+    "demo fallback"
+  ],
+  "notes_zh": "价格为样例或 API 聚合结果，不构成投资建议。请以真实成交、品相、隐藏款概率和平台手续费综合判断。",
+  "notes_en": "Prices are sample or API-aggregated metrics, not financial advice. Validate condition, rarity and fees before trading."
+}

@@ -1,0 +1,159 @@
+{
+  "sku": "DIMOO-WORLD-01",
+  "ip": "DIMOO",
+  "series": "World x Animal",
+  "name_zh": "Dimoo World x Animal",
+  "name_en": "DIMOO World x Animal",
+  "rarity_zh": "稳定流通",
+  "rarity_en": "Liquid regular",
+  "color": "#65d39b",
+  "retailPrice": 15.0,
+  "lastUpdated": "2026-06-11",
+  "marketData": {
+    "avgSoldPrice": 26.14,
+    "medianSoldPrice": 26.49,
+    "lowSoldPrice": 19.23,
+    "highSoldPrice": 32.32,
+    "totalSold": 39,
+    "volatility": "Low",
+    "volatilityValue": 0.107,
+    "roi": 74.3,
+    "riskScore": 42,
+    "cleanedSampleSize": 39,
+    "priceChange7d": "+3.2%",
+    "trend": "range",
+    "trend_zh": "区间震荡",
+    "signal": "hold",
+    "signal_zh": "持有跟踪",
+    "signal_en": "Track / hold"
+  },
+  "priceHistory": [
+    {
+      "date": "2026-05-13",
+      "avg": 25.89
+    },
+    {
+      "date": "2026-05-14",
+      "avg": 24.15
+    },
+    {
+      "date": "2026-05-15",
+      "avg": 25.54
+    },
+    {
+      "date": "2026-05-16",
+      "avg": 26.79
+    },
+    {
+      "date": "2026-05-17",
+      "avg": 26.19
+    },
+    {
+      "date": "2026-05-18",
+      "avg": 27.58
+    },
+    {
+      "date": "2026-05-19",
+      "avg": 29.01
+    },
+    {
+      "date": "2026-05-20",
+      "avg": 26.04
+    },
+    {
+      "date": "2026-05-21",
+      "avg": 28.19
+    },
+    {
+      "date": "2026-05-22",
+      "avg": 27.25
+    },
+    {
+      "date": "2026-05-23",
+      "avg": 25.92
+    },
+    {
+      "date": "2026-05-24",
+      "avg": 26.54
+    },
+    {
+      "date": "2026-05-25",
+      "avg": 27.21
+    },
+    {
+      "date": "2026-05-26",
+      "avg": 25.73
+    },
+    {
+      "date": "2026-05-27",
+      "avg": 26.35
+    },
+    {
+      "date": "2026-05-28",
+      "avg": 26.34
+    },
+    {
+      "date": "2026-05-29",
+      "avg": 26.27
+    },
+    {
+      "date": "2026-05-30",
+      "avg": 25.24
+    },
+    {
+      "date": "2026-05-31",
+      "avg": 25.16
+    },
+    {
+      "date": "2026-06-01",
+      "avg": 23.91
+    },
+    {
+      "date": "2026-06-02",
+      "avg": 25.35
+    },
+    {
+      "date": "2026-06-03",
+      "avg": 25.51
+    },
+    {
+      "date": "2026-06-04",
+      "avg": 25.32
+    },
+    {
+      "date": "2026-06-05",
+      "avg": 23.18
+    },
+    {
+      "date": "2026-06-06",
+      "avg": 26.68
+    },
+    {
+      "date": "2026-06-07",
+      "avg": 23.73
+    },
+    {
+      "date": "2026-06-08",
+      "avg": 26.27
+    },
+    {
+      "date": "2026-06-09",
+      "avg": 24.87
+    },
+    {
+      "date": "2026-06-10",
+      "avg": 26.92
+    },
+    {
+      "date": "2026-06-11",
+      "avg": 26.14
+    }
+  ],
+  "sources": [
+    "eBay completed sales",
+    "SoldComps-compatible API",
+    "demo fallback"
+  ],
+  "notes_zh": "价格为样例或 API 聚合结果，不构成投资建议。请以真实成交、品相、隐藏款概率和平台手续费综合判断。",
+  "notes_en": "Prices are sample or API-aggregated metrics, not financial advice. Validate condition, rarity and fees before trading."
+}
