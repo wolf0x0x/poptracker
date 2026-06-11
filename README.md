@@ -10,9 +10,8 @@ GitHub 仓库地址：<https://github.com/wolf0x0x/poptracker>
 - 二级市场指标：均价、中位数、七日涨跌、成交量、ROI、波动率、风险分。
 - 投资与收藏双视角：收藏视角突出 IP、系列、稀缺属性；投资视角突出成交、风险和溢价。
 - 中英文双语界面。
-- H5 多 Tab：全仓盘点、行情雷达、已入柜、隐藏款、MOLLY、Labubu。
-- 本地持仓管理：录入资产、调整库存、估算持仓总市值、隐藏款标记。
-- 移动端 Stepper：用独立 `+` / `-` 大触控区替代桌面右键/左键式交互，适配微信 WebView 和手机浏览器。
+- H5 多 Tab：全仓盘点、行情雷达、隐藏款、MOLLY、Labubu。
+- 移动端看盘：触控友好的筛选、排序、行情刷新和详情查看体验。
 - 响应式资产网格：移动端两列瀑布式卡片，桌面端保留筛选器、资产矩阵和详情面板。
 - 隐藏款视觉增强：隐藏款卡片带动态流动徽章和高亮边框。
 - API Key 本地配置：`SOLD_COMPS_API_KEY` 仅保存在浏览器 `localStorage`。
@@ -20,7 +19,6 @@ GitHub 仓库地址：<https://github.com/wolf0x0x/poptracker>
 - 搜索、IP 筛选、排序、详情面板、30 日价格走势图。
 - Python 数据生成脚本：多币种折算、IQR 异常值清洗、指标聚合、Apify POST 接口兼容、样例数据兜底。
 - GitHub Actions 每日自动更新 `public/data/*.json`。
-- TypeScript 业务层：`src/PopmartManager.ts` 提供资产保存、库存调整、API Key 配置和实时估值刷新能力。
 
 ## 产品执行步骤
 
