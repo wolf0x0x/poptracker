@@ -169,6 +169,8 @@
     "SoldComps-compatible API",
     "demo fallback"
   ],
+  "story": null,
+  "characters": null,
   "notes_zh": "价格为样例或 API 聚合结果，不构成投资建议。请以真实成交、品相、隐藏款概率和平台手续费综合判断。",
   "notes_en": "Prices are sample or API-aggregated metrics, not financial advice. Validate condition, rarity and fees before trading."
 }

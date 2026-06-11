@@ -1433,6 +1433,7 @@
       }
 
       function seriesStory(item) {
+        if (item.story) return item.story;
         const ip = item.ip || "Pop Mart";
         const series = item.series || localName(item);
         const name = localName(item);
@@ -1446,6 +1447,7 @@
       }
 
       function seriesCharacters(item) {
+        if (item.characters) return item.characters;
         const base = [
           ["主角款", "常规款"],
           ["夜色款", "常规款"],

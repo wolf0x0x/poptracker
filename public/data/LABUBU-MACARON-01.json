@@ -169,6 +169,29 @@
     "SoldComps-compatible API",
     "demo fallback"
   ],
+  "story": {
+    "year": "2023",
+    "tagline": "THE MONSTERS 的经典马卡龙配色，引爆搪胶脸热潮。",
+    "intro": "Labubu 马卡龙系列突破了传统盲盒的材质限制，将搪胶工艺与毛绒结合，打造出兼具触感与视觉张力的全新收藏体验。",
+    "philosophy": "色彩选择上采用了高饱和的马卡龙色系，不仅提升了陈列的视觉冲击力，也让其成为时尚穿搭的挂件单品。"
+  },
+  "characters": [
+    {
+      "name": "芝麻豆",
+      "rarity": "常规款",
+      "color": "#8c8c8c"
+    },
+    {
+      "name": "海盐椰",
+      "rarity": "常规款",
+      "color": "#6bd6ff"
+    },
+    {
+      "name": "隐藏款-栗子",
+      "rarity": "概率稀缺",
+      "color": "#191c1d"
+    }
+  ],
   "notes_zh": "价格为样例或 API 聚合结果，不构成投资建议。请以真实成交、品相、隐藏款概率和平台手续费综合判断。",
   "notes_en": "Prices are sample or API-aggregated metrics, not financial advice. Validate condition, rarity and fees before trading."
 }

@@ -23,6 +23,29 @@
     "totalSold": 41,
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
+    "story": {
+      "year": "2023",
+      "tagline": "THE MONSTERS 的经典马卡龙配色，引爆搪胶脸热潮。",
+      "intro": "Labubu 马卡龙系列突破了传统盲盒的材质限制，将搪胶工艺与毛绒结合，打造出兼具触感与视觉张力的全新收藏体验。",
+      "philosophy": "色彩选择上采用了高饱和的马卡龙色系，不仅提升了陈列的视觉冲击力，也让其成为时尚穿搭的挂件单品。"
+    },
+    "characters": [
+      {
+        "name": "芝麻豆",
+        "rarity": "常规款",
+        "color": "#8c8c8c"
+      },
+      {
+        "name": "海盐椰",
+        "rarity": "常规款",
+        "color": "#6bd6ff"
+      },
+      {
+        "name": "隐藏款-栗子",
+        "rarity": "概率稀缺",
+        "color": "#191c1d"
+      }
+    ],
     "lastUpdated": "2026-06-11"
   },
   {
@@ -49,6 +72,8 @@
     "totalSold": 42,
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
+    "story": null,
+    "characters": null,
     "lastUpdated": "2026-06-11"
   },
   {
@@ -75,6 +100,8 @@
     "totalSold": 40,
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
+    "story": null,
+    "characters": null,
     "lastUpdated": "2026-06-11"
   },
   {
@@ -101,6 +128,8 @@
     "totalSold": 41,
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
+    "story": null,
+    "characters": null,
     "lastUpdated": "2026-06-11"
   },
   {
@@ -127,6 +156,8 @@
     "totalSold": 39,
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
+    "story": null,
+    "characters": null,
     "lastUpdated": "2026-06-11"
   },
   {
@@ -153,6 +184,8 @@
     "totalSold": 42,
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
+    "story": null,
+    "characters": null,
     "lastUpdated": "2026-06-11"
   }
 ]

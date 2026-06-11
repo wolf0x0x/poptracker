@@ -33,114 +33,18 @@ def load_dotenv(path=PROJECT_ROOT / ".env"):
 
 load_dotenv()
 
-TRACKING_ITEMS = [
-    {
-        "sku": "LABUBU-MACARON-01",
-        "ip": "THE MONSTERS",
-        "series": "Tasty Macarons",
-        "keywords": "Labubu Macaron Vinyl Face",
-        "search_string": '"Labubu" AND ("Macaron" OR "Tasty Macarons") AND ("vinyl face" OR "Pop Mart") -box -card -preorder -custom -fake -replica',
-        "negative_keywords": ["box only", "card only", "preorder", "custom", "fake", "replica"],
-        "refresh_tier": "hot",
-        "retail_price_usd": 17.0,
-        "name_zh": "Labubu 马卡龙搪胶脸",
-        "name_en": "Labubu The Monsters Tasty Macarons",
-        "rarity": "热门常规",
-        "rarity_en": "Hot regular",
-        "color": "#ff7eb6",
-        "image": "",
-    },
-    {
-        "sku": "LABUBU-HAVEASEAT-01",
-        "ip": "THE MONSTERS",
-        "series": "Have a Seat",
-        "keywords": "Labubu Have a Seat",
-        "search_string": '"Labubu" AND ("Have a Seat" OR "Sitting") AND "Pop Mart" -box -card -preorder -custom -fake -replica',
-        "negative_keywords": ["box only", "card only", "preorder", "custom", "fake", "replica"],
-        "refresh_tier": "hot",
-        "retail_price_usd": 21.99,
-        "name_zh": "Labubu Have a Seat",
-        "name_en": "Labubu Have a Seat",
-        "rarity": "热门常规",
-        "rarity_en": "Hot regular",
-        "color": "#6bd6ff",
-        "image": "",
-    },
-    {
-        "sku": "SKULLPANDA-INKPLUM-01",
-        "ip": "SKULLPANDA",
-        "series": "Ink Plum Blossom",
-        "keywords": "Skullpanda Ink Plum Blossom",
-        "search_string": '"Skullpanda" AND ("Ink Plum" OR "Plum Blossom") AND "Pop Mart" -box -card -preorder -custom -fake -replica',
-        "negative_keywords": ["box only", "card only", "preorder", "custom", "fake", "replica"],
-        "refresh_tier": "hot",
-        "retail_price_usd": 16.0,
-        "name_zh": "Skullpanda 墨梅系列",
-        "name_en": "SKULLPANDA Ink Plum Blossom",
-        "rarity": "艺术 IP",
-        "rarity_en": "Art IP",
-        "color": "#9f8cff",
-        "image": "",
-    },
-    {
-        "sku": "MOLLY-SPACE-100-01",
-        "ip": "MOLLY",
-        "series": "MEGA Space Molly 100%",
-        "keywords": "MEGA Space Molly 100%",
-        "search_string": '"Molly" AND ("Space Molly" OR "MEGA") AND "100%" -box -card -preorder -custom -fake -replica',
-        "negative_keywords": ["box only", "card only", "preorder", "custom", "fake", "replica"],
-        "refresh_tier": "weekly",
-        "retail_price_usd": 19.0,
-        "name_zh": "MEGA Space Molly 100%",
-        "name_en": "MEGA Space Molly 100%",
-        "rarity": "MEGA",
-        "rarity_en": "MEGA",
-        "color": "#ffc857",
-        "image": "",
-    },
-    {
-        "sku": "DIMOO-WORLD-01",
-        "ip": "DIMOO",
-        "series": "World x Animal",
-        "keywords": "Dimoo World Animal",
-        "search_string": '"Dimoo" AND ("World" OR "Animal") AND "Pop Mart" -box -card -preorder -custom -fake -replica',
-        "negative_keywords": ["box only", "card only", "preorder", "custom", "fake", "replica"],
-        "refresh_tier": "weekly",
-        "retail_price_usd": 15.0,
-        "name_zh": "Dimoo World x Animal",
-        "name_en": "DIMOO World x Animal",
-        "rarity": "稳定流通",
-        "rarity_en": "Liquid regular",
-        "color": "#65d39b",
-        "image": "",
-    },
-    {
-        "sku": "HIRONO-LITTLE-MISCHIEF-01",
-        "ip": "HIRONO",
-        "series": "Little Mischief",
-        "keywords": "Hirono Little Mischief",
-        "search_string": '"Hirono" AND "Little Mischief" AND "Pop Mart" -box -card -preorder -custom -fake -replica',
-        "negative_keywords": ["box only", "card only", "preorder", "custom", "fake", "replica"],
-        "refresh_tier": "weekly",
-        "retail_price_usd": 15.0,
-        "name_zh": "Hirono 小野 Little Mischief",
-        "name_en": "HIRONO Little Mischief",
-        "rarity": "成长 IP",
-        "rarity_en": "Emerging IP",
-        "color": "#ff8a5b",
-        "image": "",
-    },
-]
+DICT_PATH = PROJECT_ROOT / "sku_dictionary.json"
 
 
-DEMO_MULTIPLIERS = {
-    "LABUBU-MACARON-01": 4.35,
-    "LABUBU-HAVEASEAT-01": 3.2,
-    "SKULLPANDA-INKPLUM-01": 1.85,
-    "MOLLY-SPACE-100-01": 2.15,
-    "DIMOO-WORLD-01": 1.45,
-    "HIRONO-LITTLE-MISCHIEF-01": 1.72,
-}
+def load_dictionary():
+    if not DICT_PATH.exists():
+        print(f"Warning: Dictionary file not found at {DICT_PATH}")
+        return []
+    with DICT_PATH.open("r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+TRACKING_ITEMS = load_dictionary()
 
 
 def percentile(values, ratio):
@@ -295,7 +199,8 @@ def fetch_live_listings(item):
 
 def demo_listings(item):
     today = datetime.now(timezone.utc).date()
-    base = item["retail_price_usd"] * DEMO_MULTIPLIERS[item["sku"]]
+    multiplier = item.get("demo_multiplier", 2.0)
+    base = item["retail_price_usd"] * multiplier
     random.seed(item["sku"])
     listings = []
     for idx in range(42):
@@ -417,6 +322,8 @@ def main():
             },
             "priceHistory": history,
             "sources": ["eBay completed sales", "SoldComps-compatible API", "demo fallback"],
+            "story": item.get("story"),
+            "characters": item.get("characters"),
             "notes_zh": "价格为样例或 API 聚合结果，不构成投资建议。请以真实成交、品相、隐藏款概率和平台手续费综合判断。",
             "notes_en": "Prices are sample or API-aggregated metrics, not financial advice. Validate condition, rarity and fees before trading.",
         }
@@ -449,6 +356,8 @@ def main():
                 "totalSold": metrics["totalSold"],
                 "signal_zh": signal_zh,
                 "signal_en": signal_en,
+                "story": item.get("story"),
+                "characters": item.get("characters"),
                 "lastUpdated": today,
             }
         )
