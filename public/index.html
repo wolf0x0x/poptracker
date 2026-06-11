@@ -1159,6 +1159,10 @@
     </footer>
 
     <script>
+      const CONFIG = {
+        adsenseId: "ca-pub-XXXXXXXXXXXXXXXX",
+      };
+
       const storageKeys = {
         api: "SOLD_COMPS_API_KEY",
       };
@@ -1433,36 +1437,11 @@
       }
 
       function seriesStory(item) {
-        if (item.story) return item.story;
-        const ip = item.ip || "Pop Mart";
-        const series = item.series || localName(item);
-        const name = localName(item);
-        return {
-          year: item.lastUpdated ? item.lastUpdated.slice(0, 4) : "2026",
-          tagline: `${ip} 的 ${series} 系列在收藏玩家与二级市场之间形成了清晰的价格信号。`,
-          intro: `${name} 以 ${ip} 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。`,
-          philosophy: `这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。对收藏者来说，它是一组可陈列的视觉故事；对价格观察者来说，它是一条可以被持续追踪的成交曲线。`,
-          detail: `当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。`,
-        };
+        return item.story;
       }
 
       function seriesCharacters(item) {
-        if (item.characters) return item.characters;
-        const base = [
-          ["主角款", "常规款"],
-          ["夜色款", "常规款"],
-          ["甜梦款", "常规款"],
-          ["巡游款", "常规款"],
-          ["独白款", "常规款"],
-          ["隐藏款", "概率稀缺"],
-          ["节日款", "主题款"],
-          ["收藏款", "高热度"],
-        ];
-        return base.map(([name, rarity], index) => ({
-          name: `${item.ip.split(" ")[0]} ${name}`,
-          rarity,
-          color: index === 5 ? "#191c1d" : item.color,
-        }));
+        return item.characters;
       }
 
       function renderSeriesDetail(item) {

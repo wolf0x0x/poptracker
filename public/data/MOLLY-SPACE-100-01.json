@@ -169,8 +169,55 @@
     "SoldComps-compatible API",
     "demo fallback"
   ],
-  "story": null,
-  "characters": null,
+  "story": {
+    "year": "2026",
+    "tagline": "MOLLY 的 MEGA Space Molly 100% 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
+    "intro": "MEGA Space Molly 100% 以 MOLLY 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
+    "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
+    "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+  },
+  "characters": [
+    {
+      "name": "MOLLY 主角款",
+      "rarity": "常规款",
+      "color": "#ffc857"
+    },
+    {
+      "name": "MOLLY 夜色款",
+      "rarity": "常规款",
+      "color": "#ffc857"
+    },
+    {
+      "name": "MOLLY 甜梦款",
+      "rarity": "常规款",
+      "color": "#ffc857"
+    },
+    {
+      "name": "MOLLY 巡游款",
+      "rarity": "常规款",
+      "color": "#ffc857"
+    },
+    {
+      "name": "MOLLY 独白款",
+      "rarity": "常规款",
+      "color": "#ffc857"
+    },
+    {
+      "name": "MOLLY 隐藏款",
+      "rarity": "概率稀缺",
+      "color": "#191c1d"
+    },
+    {
+      "name": "MOLLY 节日款",
+      "rarity": "主题款",
+      "color": "#ffc857"
+    },
+    {
+      "name": "MOLLY 收藏款",
+      "rarity": "高热度",
+      "color": "#ffc857"
+    }
+  ],
   "notes_zh": "价格为样例或 API 聚合结果，不构成投资建议。请以真实成交、品相、隐藏款概率和平台手续费综合判断。",
   "notes_en": "Prices are sample or API-aggregated metrics, not financial advice. Validate condition, rarity and fees before trading."
 }

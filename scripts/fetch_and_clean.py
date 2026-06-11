@@ -82,9 +82,18 @@ def normalize_listing(item):
     }
 
 
+DEFAULT_RATES = {
+    "USD": 1.0,
+    "GBP": float(os.getenv("RATE_GBP", 1.27)),
+    "EUR": float(os.getenv("RATE_EUR", 1.08)),
+    "CNY": float(os.getenv("RATE_CNY", 0.138)),
+    "HKD": float(os.getenv("RATE_HKD", 0.128)),
+    "JPY": float(os.getenv("RATE_JPY", 0.0064)),
+}
+
+
 def usd_price(listing):
-    rates = {"USD": 1.0, "GBP": 1.27, "EUR": 1.08, "CNY": 0.138, "HKD": 0.128, "JPY": 0.0064}
-    return listing["price"] * rates.get(listing["currency"], 1.0)
+    return listing["price"] * DEFAULT_RATES.get(listing["currency"], 1.0)
 
 
 def is_noise_listing(listing, negative_keywords):
@@ -261,6 +270,30 @@ def merge_price_history(file_path, avg_price):
     return history[-90:]
 
 
+def generate_default_story(item, today):
+    ip = item.get("ip", "Pop Mart")
+    series = item.get("series", item.get("name_en", ""))
+    name = item.get("name_zh") or item.get("name_en", "")
+    return {
+        "year": today[:4],
+        "tagline": f"{ip} 的 {series} 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
+        "intro": f"{name} 以 {ip} 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
+        "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
+        "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。",
+    }
+
+
+def generate_default_characters(item):
+    base_names = ["主角款", "夜色款", "甜梦款", "巡游款", "独白款", "隐藏款", "节日款", "收藏款"]
+    base_rarities = ["常规款", "常规款", "常规款", "常规款", "常规款", "概率稀缺", "主题款", "高热度"]
+    ip_prefix = item.get("ip", "").split(" ")[0]
+    chars = []
+    for i in range(8):
+        color = "#191c1d" if i == 5 else item.get("color", "#6b38d4")
+        chars.append({"name": f"{ip_prefix} {base_names[i]}", "rarity": base_rarities[i], "color": color})
+    return chars
+
+
 def investment_signal(metrics):
     roi = metrics["roi"]
     risk = metrics["riskScore"]
@@ -322,8 +355,8 @@ def main():
             },
             "priceHistory": history,
             "sources": ["eBay completed sales", "SoldComps-compatible API", "demo fallback"],
-            "story": item.get("story"),
-            "characters": item.get("characters"),
+            "story": item.get("story") or generate_default_story(item, today),
+            "characters": item.get("characters") or generate_default_characters(item),
             "notes_zh": "价格为样例或 API 聚合结果，不构成投资建议。请以真实成交、品相、隐藏款概率和平台手续费综合判断。",
             "notes_en": "Prices are sample or API-aggregated metrics, not financial advice. Validate condition, rarity and fees before trading.",
         }
@@ -356,8 +389,8 @@ def main():
                 "totalSold": metrics["totalSold"],
                 "signal_zh": signal_zh,
                 "signal_en": signal_en,
-                "story": item.get("story"),
-                "characters": item.get("characters"),
+                "story": item.get("story") or generate_default_story(item, today),
+                "characters": item.get("characters") or generate_default_characters(item),
                 "lastUpdated": today,
             }
         )

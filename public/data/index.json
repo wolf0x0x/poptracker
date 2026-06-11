@@ -72,8 +72,55 @@
     "totalSold": 42,
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
-    "story": null,
-    "characters": null,
+    "story": {
+      "year": "2026",
+      "tagline": "THE MONSTERS 的 Have a Seat 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
+      "intro": "Labubu Have a Seat 以 THE MONSTERS 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
+      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
+      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+    },
+    "characters": [
+      {
+        "name": "THE 主角款",
+        "rarity": "常规款",
+        "color": "#6bd6ff"
+      },
+      {
+        "name": "THE 夜色款",
+        "rarity": "常规款",
+        "color": "#6bd6ff"
+      },
+      {
+        "name": "THE 甜梦款",
+        "rarity": "常规款",
+        "color": "#6bd6ff"
+      },
+      {
+        "name": "THE 巡游款",
+        "rarity": "常规款",
+        "color": "#6bd6ff"
+      },
+      {
+        "name": "THE 独白款",
+        "rarity": "常规款",
+        "color": "#6bd6ff"
+      },
+      {
+        "name": "THE 隐藏款",
+        "rarity": "概率稀缺",
+        "color": "#191c1d"
+      },
+      {
+        "name": "THE 节日款",
+        "rarity": "主题款",
+        "color": "#6bd6ff"
+      },
+      {
+        "name": "THE 收藏款",
+        "rarity": "高热度",
+        "color": "#6bd6ff"
+      }
+    ],
     "lastUpdated": "2026-06-11"
   },
   {
@@ -100,8 +147,55 @@
     "totalSold": 40,
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
-    "story": null,
-    "characters": null,
+    "story": {
+      "year": "2026",
+      "tagline": "SKULLPANDA 的 Ink Plum Blossom 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
+      "intro": "Skullpanda 墨梅系列 以 SKULLPANDA 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
+      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
+      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+    },
+    "characters": [
+      {
+        "name": "SKULLPANDA 主角款",
+        "rarity": "常规款",
+        "color": "#9f8cff"
+      },
+      {
+        "name": "SKULLPANDA 夜色款",
+        "rarity": "常规款",
+        "color": "#9f8cff"
+      },
+      {
+        "name": "SKULLPANDA 甜梦款",
+        "rarity": "常规款",
+        "color": "#9f8cff"
+      },
+      {
+        "name": "SKULLPANDA 巡游款",
+        "rarity": "常规款",
+        "color": "#9f8cff"
+      },
+      {
+        "name": "SKULLPANDA 独白款",
+        "rarity": "常规款",
+        "color": "#9f8cff"
+      },
+      {
+        "name": "SKULLPANDA 隐藏款",
+        "rarity": "概率稀缺",
+        "color": "#191c1d"
+      },
+      {
+        "name": "SKULLPANDA 节日款",
+        "rarity": "主题款",
+        "color": "#9f8cff"
+      },
+      {
+        "name": "SKULLPANDA 收藏款",
+        "rarity": "高热度",
+        "color": "#9f8cff"
+      }
+    ],
     "lastUpdated": "2026-06-11"
   },
   {
@@ -128,8 +222,55 @@
     "totalSold": 41,
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
-    "story": null,
-    "characters": null,
+    "story": {
+      "year": "2026",
+      "tagline": "MOLLY 的 MEGA Space Molly 100% 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
+      "intro": "MEGA Space Molly 100% 以 MOLLY 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
+      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
+      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+    },
+    "characters": [
+      {
+        "name": "MOLLY 主角款",
+        "rarity": "常规款",
+        "color": "#ffc857"
+      },
+      {
+        "name": "MOLLY 夜色款",
+        "rarity": "常规款",
+        "color": "#ffc857"
+      },
+      {
+        "name": "MOLLY 甜梦款",
+        "rarity": "常规款",
+        "color": "#ffc857"
+      },
+      {
+        "name": "MOLLY 巡游款",
+        "rarity": "常规款",
+        "color": "#ffc857"
+      },
+      {
+        "name": "MOLLY 独白款",
+        "rarity": "常规款",
+        "color": "#ffc857"
+      },
+      {
+        "name": "MOLLY 隐藏款",
+        "rarity": "概率稀缺",
+        "color": "#191c1d"
+      },
+      {
+        "name": "MOLLY 节日款",
+        "rarity": "主题款",
+        "color": "#ffc857"
+      },
+      {
+        "name": "MOLLY 收藏款",
+        "rarity": "高热度",
+        "color": "#ffc857"
+      }
+    ],
     "lastUpdated": "2026-06-11"
   },
   {
@@ -156,8 +297,55 @@
     "totalSold": 39,
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
-    "story": null,
-    "characters": null,
+    "story": {
+      "year": "2026",
+      "tagline": "DIMOO 的 World x Animal 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
+      "intro": "Dimoo World x Animal 以 DIMOO 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
+      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
+      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+    },
+    "characters": [
+      {
+        "name": "DIMOO 主角款",
+        "rarity": "常规款",
+        "color": "#65d39b"
+      },
+      {
+        "name": "DIMOO 夜色款",
+        "rarity": "常规款",
+        "color": "#65d39b"
+      },
+      {
+        "name": "DIMOO 甜梦款",
+        "rarity": "常规款",
+        "color": "#65d39b"
+      },
+      {
+        "name": "DIMOO 巡游款",
+        "rarity": "常规款",
+        "color": "#65d39b"
+      },
+      {
+        "name": "DIMOO 独白款",
+        "rarity": "常规款",
+        "color": "#65d39b"
+      },
+      {
+        "name": "DIMOO 隐藏款",
+        "rarity": "概率稀缺",
+        "color": "#191c1d"
+      },
+      {
+        "name": "DIMOO 节日款",
+        "rarity": "主题款",
+        "color": "#65d39b"
+      },
+      {
+        "name": "DIMOO 收藏款",
+        "rarity": "高热度",
+        "color": "#65d39b"
+      }
+    ],
     "lastUpdated": "2026-06-11"
   },
   {
@@ -184,8 +372,110 @@
     "totalSold": 42,
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
-    "story": null,
-    "characters": null,
+    "story": {
+      "year": "2026",
+      "tagline": "HIRONO 的 Little Mischief 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
+      "intro": "Hirono 小野 Little Mischief 以 HIRONO 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
+      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
+      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+    },
+    "characters": [
+      {
+        "name": "HIRONO 主角款",
+        "rarity": "常规款",
+        "color": "#ff8a5b"
+      },
+      {
+        "name": "HIRONO 夜色款",
+        "rarity": "常规款",
+        "color": "#ff8a5b"
+      },
+      {
+        "name": "HIRONO 甜梦款",
+        "rarity": "常规款",
+        "color": "#ff8a5b"
+      },
+      {
+        "name": "HIRONO 巡游款",
+        "rarity": "常规款",
+        "color": "#ff8a5b"
+      },
+      {
+        "name": "HIRONO 独白款",
+        "rarity": "常规款",
+        "color": "#ff8a5b"
+      },
+      {
+        "name": "HIRONO 隐藏款",
+        "rarity": "概率稀缺",
+        "color": "#191c1d"
+      },
+      {
+        "name": "HIRONO 节日款",
+        "rarity": "主题款",
+        "color": "#ff8a5b"
+      },
+      {
+        "name": "HIRONO 收藏款",
+        "rarity": "高热度",
+        "color": "#ff8a5b"
+      }
+    ],
+    "lastUpdated": "2026-06-11"
+  },
+  {
+    "sku": "CRYBABY-SADCLUB-01",
+    "ip": "CRYBABY",
+    "series": "Sad Club",
+    "name_zh": "Crybaby 悲伤俱乐部",
+    "name_en": "CRYBABY Sad Club Series",
+    "rarity_zh": "热门常规",
+    "rarity_en": "Hot regular",
+    "color": "#8f6745",
+    "image": "",
+    "searchString": "\"Crybaby\" AND \"Sad Club\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
+    "refreshTier": "hot",
+    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Crybaby%22+AND+%22Sad+Club%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
+    "retailPrice": 16.99,
+    "avgSoldPrice": 48.64,
+    "medianSoldPrice": 48.64,
+    "fairMarketValue": 48.64,
+    "valuationMethod": "IQR + 10% trimmed median",
+    "priceChange7d": "+1.0%",
+    "roi": 189.3,
+    "riskScore": 59,
+    "totalSold": 42,
+    "signal_zh": "持有跟踪",
+    "signal_en": "Track / hold",
+    "story": {
+      "year": "2024",
+      "tagline": "眼泪也是一种力量，Sad Club 治愈系盲盒。",
+      "intro": "CRYBABY 以其标志性的泪眼设计打破了潮玩必须'快乐'的刻板印象。Sad Club 系列将生活中的小确丧具象化，让成年人也能找到情绪的宣泄口。",
+      "philosophy": "采用复古质感的配色，结合针织、毛绒等材质元素的视觉化处理，使每只娃都像是一个陪伴者。",
+      "detail": "该系列在二级市场流动性极强，FMV 取样自过去30天内的高频换手记录。"
+    },
+    "characters": [
+      {
+        "name": "Crying over spilled milk",
+        "rarity": "常规款",
+        "color": "#e0d6c8"
+      },
+      {
+        "name": "Broken Heart",
+        "rarity": "常规款",
+        "color": "#d95c50"
+      },
+      {
+        "name": "Rainy Day",
+        "rarity": "常规款",
+        "color": "#6389a8"
+      },
+      {
+        "name": "Secret - The Last Tear",
+        "rarity": "隐藏款 (1:144)",
+        "color": "#191c1d"
+      }
+    ],
     "lastUpdated": "2026-06-11"
   }
 ]
