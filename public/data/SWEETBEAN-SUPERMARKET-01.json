@@ -7,7 +7,7 @@
   "rarity_zh": "稳定流通",
   "rarity_en": "Liquid regular",
   "color": "#ff7eb6",
-  "image": null,
+  "image": "/assets/sku/SWEETBEAN-SUPERMARKET-01.png",
   "searchString": "\"Sweet Bean\" AND \"Supermarket\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
   "negativeKeywords": [
     "box only",

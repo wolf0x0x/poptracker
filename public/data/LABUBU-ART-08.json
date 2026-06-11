@@ -7,7 +7,7 @@
   "rarity_zh": "稳定流通",
   "rarity_en": "Liquid regular",
   "color": "#9f8cff",
-  "image": null,
+  "image": "/assets/sku/LABUBU-ART-08.png",
   "searchString": "\"Labubu\" AND \"Monsters Art\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
   "negativeKeywords": [
     "box only",

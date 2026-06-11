@@ -7,7 +7,7 @@
   "rarity_zh": "稳定流通",
   "rarity_en": "Liquid regular",
   "color": "#8f6745",
-  "image": null,
+  "image": "/assets/sku/SKULLPANDA-MAREOFANIMALS-04.png",
   "searchString": "\"Skullpanda\" AND \"Mare of Animals\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
   "negativeKeywords": [
     "box only",

@@ -7,7 +7,7 @@
   "rarity_zh": "稳定流通",
   "rarity_en": "Liquid regular",
   "color": "#ff8a5b",
-  "image": null,
+  "image": "/assets/sku/MOLLY-DAYDREAM-06.png",
   "searchString": "\"Molly\" AND \"Daydream\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
   "negativeKeywords": [
     "box only",

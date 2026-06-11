@@ -7,7 +7,7 @@
   "rarity_zh": "稳定流通",
   "rarity_en": "Liquid regular",
   "color": "#ff7eb6",
-  "image": null,
+  "image": "/assets/sku/SKULLPANDA-HYPEPANDA-05.png",
   "searchString": "\"Skullpanda\" AND \"Hypepanda\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
   "negativeKeywords": [
     "box only",

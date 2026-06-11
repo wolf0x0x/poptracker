@@ -7,7 +7,7 @@
   "rarity_zh": "热门常规",
   "rarity_en": "Hot regular",
   "color": "#6bd6ff",
-  "image": null,
+  "image": "/assets/sku/LABUBU-HAVEASEAT-02.png",
   "searchString": "\"Labubu\" AND (\"Have a Seat\" OR \"Sitting\") AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
   "negativeKeywords": [
     "box only",

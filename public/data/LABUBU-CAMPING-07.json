@@ -7,7 +7,7 @@
   "rarity_zh": "稳定流通",
   "rarity_en": "Liquid regular",
   "color": "#6389a8",
-  "image": null,
+  "image": "/assets/sku/LABUBU-CAMPING-07.png",
   "searchString": "\"Labubu\" AND \"Camping\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
   "negativeKeywords": [
     "box only",

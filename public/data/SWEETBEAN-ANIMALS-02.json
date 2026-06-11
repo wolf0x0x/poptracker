@@ -7,7 +7,7 @@
   "rarity_zh": "稳定流通",
   "rarity_en": "Liquid regular",
   "color": "#b8e986",
-  "image": null,
+  "image": "/assets/sku/SWEETBEAN-ANIMALS-02.png",
   "searchString": "\"Sweet Bean\" AND \"Animals\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
   "negativeKeywords": [
     "box only",

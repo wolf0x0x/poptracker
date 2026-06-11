@@ -7,7 +7,7 @@
   "rarity_zh": "稳定流通",
   "rarity_en": "Liquid regular",
   "color": "#ffc857",
-  "image": null,
+  "image": "/assets/sku/DIMOO-ZODIAC-08.png",
   "searchString": "\"Dimoo\" AND \"Zodiac\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
   "negativeKeywords": [
     "box only",

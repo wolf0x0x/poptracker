@@ -7,7 +7,7 @@
   "rarity_zh": "稳定流通",
   "rarity_en": "Liquid regular",
   "color": "#191c1d",
-  "image": null,
+  "image": "/assets/sku/LABUBU-ZODIAC-09.png",
   "searchString": "\"Labubu\" AND \"Zodiac\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
   "negativeKeywords": [
     "box only",

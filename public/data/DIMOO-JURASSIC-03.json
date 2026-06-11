@@ -7,7 +7,7 @@
   "rarity_zh": "稳定流通",
   "rarity_en": "Liquid regular",
   "color": "#8f6745",
-  "image": null,
+  "image": "/assets/sku/DIMOO-JURASSIC-03.avif",
   "searchString": "\"Dimoo\" AND \"Jurassic\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
   "negativeKeywords": [
     "box only",

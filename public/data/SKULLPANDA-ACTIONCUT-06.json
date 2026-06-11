@@ -7,7 +7,7 @@
   "rarity_zh": "稳定流通",
   "rarity_en": "Liquid regular",
   "color": "#6bd6ff",
-  "image": null,
+  "image": "/assets/sku/SKULLPANDA-ACTIONCUT-06.png",
   "searchString": "\"Skullpanda\" AND \"Action Cut\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
   "negativeKeywords": [
     "box only",
