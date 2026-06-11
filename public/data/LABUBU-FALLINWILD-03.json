@@ -1,14 +1,14 @@
 {
-  "sku": "CRYBABY-SADCLUB-01",
-  "ip": "CRYBABY",
-  "series": "Sad Club",
-  "name_zh": "Crybaby 悲伤俱乐部",
-  "name_en": "CRYBABY Sad Club Series",
-  "rarity_zh": "热门常规",
-  "rarity_en": "Hot regular",
+  "sku": "LABUBU-FALLINWILD-03",
+  "ip": "THE MONSTERS",
+  "series": "Fall in Wild",
+  "name_zh": "Labubu 森林派对",
+  "name_en": "Labubu Fall in Wild",
+  "rarity_zh": "稀缺热点",
+  "rarity_en": "High Demand",
   "color": "#8f6745",
-  "image": "https://cdn.popmart.com/sku-images/crybaby-sadclub-01.jpg",
-  "searchString": "\"Crybaby\" AND \"Sad Club\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
+  "image": "https://cdn.popmart.com/sku-images/labubu-fallinwild-03.jpg",
+  "searchString": "\"Labubu\" AND \"Fall in Wild\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
   "negativeKeywords": [
     "box only",
     "card only",
@@ -19,25 +19,25 @@
   ],
   "refreshTier": "hot",
   "refreshIntervalHours": 24,
-  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Crybaby%22+AND+%22Sad+Club%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
-  "retailPrice": 16.99,
+  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Labubu%22+AND+%22Fall+in+Wild%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
+  "retailPrice": 25.99,
   "lastUpdated": "2026-06-11",
   "marketData": {
-    "avgSoldPrice": 38.93,
-    "medianSoldPrice": 38.73,
-    "fairMarketValue": 38.73,
-    "lowSoldPrice": 27.25,
-    "highSoldPrice": 56.58,
-    "totalSold": 41,
+    "avgSoldPrice": 65.2,
+    "medianSoldPrice": 65.84,
+    "fairMarketValue": 65.84,
+    "lowSoldPrice": 49.84,
+    "highSoldPrice": 80.12,
+    "totalSold": 42,
     "volatility": "Low",
-    "volatilityValue": 0.151,
-    "roi": 129.1,
+    "volatilityValue": 0.129,
+    "roi": 150.9,
     "riskScore": 54,
-    "cleanedSampleSize": 41,
+    "cleanedSampleSize": 42,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-19.5%",
-    "trend": "cooldown",
-    "trend_zh": "热度回落",
+    "priceChange7d": "+6.2%",
+    "trend": "range",
+    "trend_zh": "区间震荡",
     "signal": "hold",
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold"
@@ -45,123 +45,123 @@
   "priceHistory": [
     {
       "date": "2026-05-13",
-      "avg": 51.04
+      "avg": 63.69
     },
     {
       "date": "2026-05-14",
-      "avg": 49.13
+      "avg": 63.73
     },
     {
       "date": "2026-05-15",
-      "avg": 47.89
+      "avg": 68.45
     },
     {
       "date": "2026-05-16",
-      "avg": 47.9
+      "avg": 63.96
     },
     {
       "date": "2026-05-17",
-      "avg": 48.77
+      "avg": 70.31
     },
     {
       "date": "2026-05-18",
-      "avg": 47.45
+      "avg": 67.8
     },
     {
       "date": "2026-05-19",
-      "avg": 52.51
+      "avg": 67.2
     },
     {
       "date": "2026-05-20",
-      "avg": 49.43
+      "avg": 68.8
     },
     {
       "date": "2026-05-21",
-      "avg": 51.83
+      "avg": 69.87
     },
     {
       "date": "2026-05-22",
-      "avg": 49.53
+      "avg": 70.84
     },
     {
       "date": "2026-05-23",
-      "avg": 52.23
+      "avg": 70.83
     },
     {
       "date": "2026-05-24",
-      "avg": 48.91
+      "avg": 69.72
     },
     {
       "date": "2026-05-25",
-      "avg": 50.75
+      "avg": 66.15
     },
     {
       "date": "2026-05-26",
-      "avg": 49.08
+      "avg": 66.27
     },
     {
       "date": "2026-05-27",
-      "avg": 48.6
+      "avg": 64.93
     },
     {
       "date": "2026-05-28",
-      "avg": 48.8
+      "avg": 64.96
     },
     {
       "date": "2026-05-29",
-      "avg": 46.98
+      "avg": 63.66
     },
     {
       "date": "2026-05-30",
-      "avg": 48.65
+      "avg": 65.34
     },
     {
       "date": "2026-05-31",
-      "avg": 44.87
+      "avg": 66.12
     },
     {
       "date": "2026-06-01",
-      "avg": 46.69
+      "avg": 64.26
     },
     {
       "date": "2026-06-02",
-      "avg": 44.85
+      "avg": 62.88
     },
     {
       "date": "2026-06-03",
-      "avg": 47.33
+      "avg": 63.02
     },
     {
       "date": "2026-06-04",
-      "avg": 48.14
+      "avg": 62.0
     },
     {
       "date": "2026-06-05",
-      "avg": 47.33
+      "avg": 63.72
     },
     {
       "date": "2026-06-06",
-      "avg": 46.19
+      "avg": 60.68
     },
     {
       "date": "2026-06-07",
-      "avg": 44.77
+      "avg": 59.57
     },
     {
       "date": "2026-06-08",
-      "avg": 44.8
+      "avg": 62.02
     },
     {
       "date": "2026-06-09",
-      "avg": 45.77
+      "avg": 63.39
     },
     {
       "date": "2026-06-10",
-      "avg": 49.58
+      "avg": 65.66
     },
     {
       "date": "2026-06-11",
-      "avg": 38.73
+      "avg": 65.84
     }
   ],
   "sources": [
@@ -171,55 +171,45 @@
   ],
   "story": {
     "year": "2024",
-    "tagline": "眼泪也是一种力量，Sad Club 治愈系盲盒。",
-    "intro": "CRYBABY 以其标志性的泪眼设计打破了潮玩必须'快乐'的刻板印象。Sad Club 系列将生活中的小确丧具象化，让成年人也能找到情绪的宣泄口。",
-    "philosophy": "采用复古质感的配色，结合针织、毛绒等材质元素的视觉化处理，使每只娃都像是一个陪伴者。"
+    "tagline": "森林派对主题，Labubu 最出圈的户外系列之一。",
+    "intro": "Fall in Wild 以户外露营与森林探险为灵感，Labubu 化身自然精灵，搭配毛绒材质与大地色系，营造出治愈系的野外氛围。",
+    "philosophy": "每只娃都带有独特的户外装备细节，从帐篷到篝火，传递'逃离城市、回归自然'的生活态度。"
   },
   "characters": [
     {
-      "name": "Crying over spilled milk",
-      "rarity": "常规款",
-      "color": "#e0d6c8"
-    },
-    {
-      "name": "Broken Heart",
-      "rarity": "常规款",
-      "color": "#d95c50"
-    },
-    {
-      "name": "Rainy Day",
-      "rarity": "常规款",
-      "color": "#6389a8"
-    },
-    {
-      "name": "Left Behind",
+      "name": "露营者",
       "rarity": "常规款",
       "color": "#8f6745"
     },
     {
-      "name": "Sleepless",
+      "name": "篝火夜",
       "rarity": "常规款",
-      "color": "#191c1d"
+      "color": "#d95c50"
     },
     {
-      "name": "Withering Flower",
+      "name": "森林精灵",
       "rarity": "常规款",
-      "color": "#ff7eb6"
+      "color": "#65d39b"
     },
     {
-      "name": "Teardrop Bowl",
+      "name": "徒步者",
+      "rarity": "常规款",
+      "color": "#6389a8"
+    },
+    {
+      "name": "溪流",
       "rarity": "常规款",
       "color": "#6bd6ff"
     },
     {
-      "name": "Devastated",
+      "name": "山巅",
       "rarity": "常规款",
-      "color": "#9f8cff"
+      "color": "#50e3c2"
     },
     {
-      "name": "隐藏款-The Last Tear",
+      "name": "隐藏款-极光",
       "rarity": "概率稀缺",
-      "color": "#50e3c2"
+      "color": "#191c1d"
     }
   ],
   "notes_zh": "价格为样例或 API 聚合结果，不构成投资建议。请以真实成交、品相、隐藏款概率和平台手续费综合判断。",

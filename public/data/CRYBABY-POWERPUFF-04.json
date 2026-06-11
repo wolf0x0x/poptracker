@@ -1,0 +1,247 @@
+{
+  "sku": "CRYBABY-POWERPUFF-04",
+  "ip": "CRYBABY",
+  "series": "Powerpuff Girls",
+  "name_zh": "Crybaby 飞天小女警",
+  "name_en": "CRYBABY Powerpuff Girls",
+  "rarity_zh": "热门常规",
+  "rarity_en": "Hot regular",
+  "color": "#ff7eb6",
+  "image": "https://cdn.popmart.com/sku-images/crybaby-powerpuff-04.jpg",
+  "searchString": "\"Crybaby\" AND \"Powerpuff Girls\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
+  "negativeKeywords": [
+    "box only",
+    "card only",
+    "preorder",
+    "custom",
+    "fake",
+    "replica"
+  ],
+  "refreshTier": "hot",
+  "refreshIntervalHours": 24,
+  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Crybaby%22+AND+%22Powerpuff+Girls%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
+  "retailPrice": 17.99,
+  "lastUpdated": "2026-06-11",
+  "marketData": {
+    "avgSoldPrice": 34.22,
+    "medianSoldPrice": 34.4,
+    "fairMarketValue": 34.4,
+    "lowSoldPrice": 23.22,
+    "highSoldPrice": 47.64,
+    "totalSold": 41,
+    "volatility": "Low",
+    "volatilityValue": 0.153,
+    "roi": 90.2,
+    "riskScore": 49,
+    "cleanedSampleSize": 41,
+    "valuationMethod": "IQR + 10% trimmed median",
+    "priceChange7d": "+7.7%",
+    "trend": "range",
+    "trend_zh": "区间震荡",
+    "signal": "hold",
+    "signal_zh": "持有跟踪",
+    "signal_en": "Track / hold"
+  },
+  "priceHistory": [
+    {
+      "date": "2026-05-13",
+      "avg": 33.7
+    },
+    {
+      "date": "2026-05-14",
+      "avg": 36.03
+    },
+    {
+      "date": "2026-05-15",
+      "avg": 35.58
+    },
+    {
+      "date": "2026-05-16",
+      "avg": 34.47
+    },
+    {
+      "date": "2026-05-17",
+      "avg": 35.62
+    },
+    {
+      "date": "2026-05-18",
+      "avg": 35.37
+    },
+    {
+      "date": "2026-05-19",
+      "avg": 36.33
+    },
+    {
+      "date": "2026-05-20",
+      "avg": 35.34
+    },
+    {
+      "date": "2026-05-21",
+      "avg": 34.75
+    },
+    {
+      "date": "2026-05-22",
+      "avg": 34.83
+    },
+    {
+      "date": "2026-05-23",
+      "avg": 35.03
+    },
+    {
+      "date": "2026-05-24",
+      "avg": 34.29
+    },
+    {
+      "date": "2026-05-25",
+      "avg": 35.84
+    },
+    {
+      "date": "2026-05-26",
+      "avg": 35.25
+    },
+    {
+      "date": "2026-05-27",
+      "avg": 34.68
+    },
+    {
+      "date": "2026-05-28",
+      "avg": 33.79
+    },
+    {
+      "date": "2026-05-29",
+      "avg": 33.28
+    },
+    {
+      "date": "2026-05-30",
+      "avg": 34.57
+    },
+    {
+      "date": "2026-05-31",
+      "avg": 34.12
+    },
+    {
+      "date": "2026-06-01",
+      "avg": 31.66
+    },
+    {
+      "date": "2026-06-02",
+      "avg": 32.95
+    },
+    {
+      "date": "2026-06-03",
+      "avg": 33.63
+    },
+    {
+      "date": "2026-06-04",
+      "avg": 31.95
+    },
+    {
+      "date": "2026-06-05",
+      "avg": 32.3
+    },
+    {
+      "date": "2026-06-06",
+      "avg": 33.07
+    },
+    {
+      "date": "2026-06-07",
+      "avg": 30.45
+    },
+    {
+      "date": "2026-06-08",
+      "avg": 33.92
+    },
+    {
+      "date": "2026-06-09",
+      "avg": 34.14
+    },
+    {
+      "date": "2026-06-10",
+      "avg": 31.8
+    },
+    {
+      "date": "2026-06-11",
+      "avg": 34.4
+    }
+  ],
+  "sources": [
+    "eBay completed sales",
+    "SoldComps-compatible API",
+    "demo fallback"
+  ],
+  "story": {
+    "year": "2024",
+    "tagline": "飞天小女警联名，童年回忆与潮流艺术的碰撞。",
+    "intro": "CRYBABY × Powerpuff Girls 联名系列将 Cartoon Network 经典IP与 Crybaby 标志性的泪眼设计融合，花花、泡泡、毛毛化身治愈系潮玩。",
+    "philosophy": "联名款采用复古美式动画配色，结合 Crybaby 独特的材质做旧工艺，既致敬经典又具备当代艺术收藏价值。"
+  },
+  "characters": [
+    {
+      "name": "Blossom (花花)",
+      "rarity": "常规款",
+      "color": "#ff7eb6"
+    },
+    {
+      "name": "Bubbles (泡泡)",
+      "rarity": "常规款",
+      "color": "#6bd6ff"
+    },
+    {
+      "name": "Buttercup (毛毛)",
+      "rarity": "常规款",
+      "color": "#65d39b"
+    },
+    {
+      "name": "Mojo Jojo (魔人啾啾)",
+      "rarity": "常规款",
+      "color": "#8f6745"
+    },
+    {
+      "name": "The Professor (教授)",
+      "rarity": "常规款",
+      "color": "#e0d6c8"
+    },
+    {
+      "name": "The Mayor (市长)",
+      "rarity": "常规款",
+      "color": "#ffc857"
+    },
+    {
+      "name": "Bunny Bubbles (兔装泡泡)",
+      "rarity": "常规款",
+      "color": "#ff8a5b"
+    },
+    {
+      "name": "Bunny Blossom (兔装花花)",
+      "rarity": "常规款",
+      "color": "#9f8cff"
+    },
+    {
+      "name": "Fuzzy Lumpkins (毛茸怪)",
+      "rarity": "常规款",
+      "color": "#b8e986"
+    },
+    {
+      "name": "HIM (恶魔)",
+      "rarity": "常规款",
+      "color": "#d95c50"
+    },
+    {
+      "name": "Ace (王牌)",
+      "rarity": "常规款",
+      "color": "#6389a8"
+    },
+    {
+      "name": "Ms. Keane (基恩老师)",
+      "rarity": "常规款",
+      "color": "#50e3c2"
+    },
+    {
+      "name": "隐藏款-Princess Morbucks",
+      "rarity": "概率稀缺 (1:144)",
+      "color": "#191c1d"
+    }
+  ],
+  "notes_zh": "价格为样例或 API 聚合结果，不构成投资建议。请以真实成交、品相、隐藏款概率和平台手续费综合判断。",
+  "notes_en": "Prices are sample or API-aggregated metrics, not financial advice. Validate condition, rarity and fees before trading."
+}

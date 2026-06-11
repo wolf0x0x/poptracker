@@ -7,7 +7,7 @@
   "rarity_zh": "成长 IP",
   "rarity_en": "Emerging IP",
   "color": "#ff8a5b",
-  "image": "",
+  "image": "https://cdn.popmart.com/sku-images/hirono-little-mischief-01.jpg",
   "searchString": "\"Hirono\" AND \"Little Mischief\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
   "negativeKeywords": [
     "box only",
@@ -23,19 +23,19 @@
   "retailPrice": 15.0,
   "lastUpdated": "2026-06-11",
   "marketData": {
-    "avgSoldPrice": 30.5,
-    "medianSoldPrice": 30.53,
-    "fairMarketValue": 30.53,
+    "avgSoldPrice": 30.82,
+    "medianSoldPrice": 30.64,
+    "fairMarketValue": 30.64,
     "lowSoldPrice": 22.09,
     "highSoldPrice": 43.29,
     "totalSold": 42,
-    "volatility": "Medium",
-    "volatilityValue": 0.161,
-    "roi": 103.4,
+    "volatility": "Low",
+    "volatilityValue": 0.158,
+    "roi": 105.5,
     "riskScore": 51,
     "cleanedSampleSize": 42,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+1.8%",
+    "priceChange7d": "+2.1%",
     "trend": "range",
     "trend_zh": "区间震荡",
     "signal": "hold",
@@ -161,7 +161,7 @@
     },
     {
       "date": "2026-06-11",
-      "avg": 30.53
+      "avg": 30.64
     }
   ],
   "sources": [

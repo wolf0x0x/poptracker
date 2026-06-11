@@ -1,14 +1,14 @@
 {
-  "sku": "SKULLPANDA-INKPLUM-01",
-  "ip": "SKULLPANDA",
-  "series": "Ink Plum Blossom",
-  "name_zh": "Skullpanda 墨梅系列",
-  "name_en": "SKULLPANDA Ink Plum Blossom",
-  "rarity_zh": "艺术 IP",
-  "rarity_en": "Art IP",
-  "color": "#9f8cff",
-  "image": "https://cdn.popmart.com/sku-images/skullpanda-inkplum-01.jpg",
-  "searchString": "\"Skullpanda\" AND (\"Ink Plum\" OR \"Plum Blossom\") AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
+  "sku": "HIRONO-SHELTER-05",
+  "ip": "HIRONO",
+  "series": "Shelter",
+  "name_zh": "Hirono 庇护所",
+  "name_en": "HIRONO Shelter",
+  "rarity_zh": "成长 IP",
+  "rarity_en": "Emerging IP",
+  "color": "#50e3c2",
+  "image": "https://cdn.popmart.com/sku-images/hirono-shelter-05.jpg",
+  "searchString": "\"Hirono\" AND \"Shelter\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
   "negativeKeywords": [
     "box only",
     "card only",
@@ -19,25 +19,25 @@
   ],
   "refreshTier": "hot",
   "refreshIntervalHours": 24,
-  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Skullpanda%22+AND+(%22Ink+Plum%22+OR+%22Plum+Blossom%22)+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
-  "retailPrice": 16.0,
+  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Hirono%22+AND+%22Shelter%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
+  "retailPrice": 16.99,
   "lastUpdated": "2026-06-11",
   "marketData": {
-    "avgSoldPrice": 36.25,
-    "medianSoldPrice": 35.72,
-    "fairMarketValue": 35.72,
-    "lowSoldPrice": 27.46,
-    "highSoldPrice": 51.75,
+    "avgSoldPrice": 58.94,
+    "medianSoldPrice": 58.13,
+    "fairMarketValue": 58.13,
+    "lowSoldPrice": 43.58,
+    "highSoldPrice": 82.13,
     "totalSold": 42,
     "volatility": "Medium",
-    "volatilityValue": 0.166,
-    "roi": 126.5,
-    "riskScore": 55,
+    "volatilityValue": 0.16,
+    "roi": 246.9,
+    "riskScore": 68,
     "cleanedSampleSize": 42,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+12.2%",
-    "trend": "breakout",
-    "trend_zh": "突破上涨",
+    "priceChange7d": "+4.2%",
+    "trend": "range",
+    "trend_zh": "区间震荡",
     "signal": "hold",
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold"
@@ -45,123 +45,123 @@
   "priceHistory": [
     {
       "date": "2026-05-13",
-      "avg": 36.9
+      "avg": 55.71
     },
     {
       "date": "2026-05-14",
-      "avg": 34.13
+      "avg": 57.11
     },
     {
       "date": "2026-05-15",
-      "avg": 35.29
+      "avg": 59.55
     },
     {
       "date": "2026-05-16",
-      "avg": 38.34
+      "avg": 57.48
     },
     {
       "date": "2026-05-17",
-      "avg": 34.53
+      "avg": 60.95
     },
     {
       "date": "2026-05-18",
-      "avg": 36.33
+      "avg": 59.37
     },
     {
       "date": "2026-05-19",
-      "avg": 37.35
+      "avg": 61.38
     },
     {
       "date": "2026-05-20",
-      "avg": 37.13
+      "avg": 61.61
     },
     {
       "date": "2026-05-21",
-      "avg": 37.34
+      "avg": 61.92
     },
     {
       "date": "2026-05-22",
-      "avg": 38.95
+      "avg": 58.9
     },
     {
       "date": "2026-05-23",
-      "avg": 36.98
+      "avg": 61.61
     },
     {
       "date": "2026-05-24",
-      "avg": 37.87
+      "avg": 59.78
     },
     {
       "date": "2026-05-25",
-      "avg": 36.21
+      "avg": 59.7
     },
     {
       "date": "2026-05-26",
-      "avg": 35.28
+      "avg": 57.8
     },
     {
       "date": "2026-05-27",
-      "avg": 35.35
+      "avg": 58.58
     },
     {
       "date": "2026-05-28",
-      "avg": 35.84
+      "avg": 58.05
     },
     {
       "date": "2026-05-29",
-      "avg": 35.13
+      "avg": 58.12
     },
     {
       "date": "2026-05-30",
-      "avg": 33.81
+      "avg": 54.29
     },
     {
       "date": "2026-05-31",
-      "avg": 32.92
+      "avg": 55.75
     },
     {
       "date": "2026-06-01",
-      "avg": 33.82
+      "avg": 57.51
     },
     {
       "date": "2026-06-02",
-      "avg": 33.06
+      "avg": 52.46
     },
     {
       "date": "2026-06-03",
-      "avg": 33.25
+      "avg": 55.16
     },
     {
       "date": "2026-06-04",
-      "avg": 31.84
+      "avg": 55.77
     },
     {
       "date": "2026-06-05",
-      "avg": 33.36
+      "avg": 53.1
     },
     {
       "date": "2026-06-06",
-      "avg": 31.32
+      "avg": 55.7
     },
     {
       "date": "2026-06-07",
-      "avg": 33.83
+      "avg": 57.6
     },
     {
       "date": "2026-06-08",
-      "avg": 33.85
+      "avg": 53.55
     },
     {
       "date": "2026-06-09",
-      "avg": 34.71
+      "avg": 61.41
     },
     {
       "date": "2026-06-10",
-      "avg": 33.6
+      "avg": 54.96
     },
     {
       "date": "2026-06-11",
-      "avg": 35.72
+      "avg": 58.13
     }
   ],
   "sources": [
@@ -171,75 +171,75 @@
   ],
   "story": {
     "year": "2023",
-    "tagline": "东方水墨美学与潮流艺术的巅峰融合。",
-    "intro": "Ink Plum Blossom 是 SKULLPANDA 最具东方美学代表性的系列，以水墨梅花为视觉核心，将传统国画的留白与晕染技法融入潮玩设计。",
-    "philosophy": "系列采用哑光黑与朱砂红的经典配色，部分款式加入夜光效果，在暗处呈现梅花轮廓，兼具艺术性与神秘感。"
+    "tagline": "庇护所，Hirono 关于安全感的温柔表达。",
+    "intro": "Shelter 系列延续 Hirono 一贯的治愈风格，以'家'与'庇护'为情感锚点，设计出怀抱、蜷缩、依靠等充满安全感的姿态。",
+    "philosophy": "材质上采用哑光肤感漆与软胶结合，触感温润，配色以大地色与莫兰迪灰为主，传递平静与安宁的情绪价值。"
   },
   "characters": [
     {
-      "name": "庭",
-      "rarity": "常规款",
-      "color": "#e0d6c8"
-    },
-    {
-      "name": "林",
-      "rarity": "常规款",
-      "color": "#65d39b"
-    },
-    {
-      "name": "苔",
-      "rarity": "常规款",
-      "color": "#8f6745"
-    },
-    {
-      "name": "竹",
-      "rarity": "常规款",
-      "color": "#50e3c2"
-    },
-    {
-      "name": "风",
-      "rarity": "常规款",
-      "color": "#6bd6ff"
-    },
-    {
-      "name": "桥",
-      "rarity": "常规款",
-      "color": "#9f8cff"
-    },
-    {
-      "name": "月",
+      "name": "烛台",
       "rarity": "常规款",
       "color": "#ffc857"
     },
     {
-      "name": "根",
-      "rarity": "常规款",
-      "color": "#8c8c8c"
-    },
-    {
-      "name": "谷",
+      "name": "勇士",
       "rarity": "常规款",
       "color": "#d95c50"
     },
     {
-      "name": "春",
+      "name": "马戏团",
       "rarity": "常规款",
       "color": "#ff7eb6"
     },
     {
-      "name": "景",
+      "name": "诗人",
       "rarity": "常规款",
-      "color": "#ff8a5b"
+      "color": "#9f8cff"
     },
     {
-      "name": "雪",
+      "name": "鸟笼",
+      "rarity": "常规款",
+      "color": "#e0d6c8"
+    },
+    {
+      "name": "堡垒",
+      "rarity": "常规款",
+      "color": "#8f6745"
+    },
+    {
+      "name": "木屋",
+      "rarity": "常规款",
+      "color": "#b8e986"
+    },
+    {
+      "name": "晴天娃娃",
+      "rarity": "常规款",
+      "color": "#ffc857"
+    },
+    {
+      "name": "外星人",
+      "rarity": "常规款",
+      "color": "#50e3c2"
+    },
+    {
+      "name": "座钟",
       "rarity": "常规款",
       "color": "#191c1d"
     },
     {
-      "name": "隐藏款-墨梅",
+      "name": "路障",
+      "rarity": "常规款",
+      "color": "#ff8a5b"
+    },
+    {
+      "name": "鸟人",
+      "rarity": "常规款",
+      "color": "#65d39b"
+    },
+    {
+      "name": "隐藏款-熊偶",
       "rarity": "概率稀缺 (1:144)",
-      "color": "#50e3c2"
+      "color": "#8f6745"
     }
   ],
   "notes_zh": "价格为样例或 API 聚合结果，不构成投资建议。请以真实成交、品相、隐藏款概率和平台手续费综合判断。",

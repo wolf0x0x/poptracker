@@ -1,0 +1,232 @@
+{
+  "sku": "MOLLY-SPACE-100-S1-01",
+  "ip": "MOLLY",
+  "series": "MEGA Space Molly 100% Series 1",
+  "name_zh": "MEGA Space Molly 100% 第一弹",
+  "name_en": "MEGA Space Molly 100% Series 1",
+  "rarity_zh": "MEGA",
+  "rarity_en": "MEGA",
+  "color": "#ffc857",
+  "image": "https://cdn.popmart.com/sku-images/molly-space-100-s1-01.jpg",
+  "searchString": "\"Molly\" AND \"MEGA Space Molly 100%\" AND \"Series 1\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
+  "negativeKeywords": [
+    "box only",
+    "card only",
+    "preorder",
+    "custom",
+    "fake",
+    "replica"
+  ],
+  "refreshTier": "weekly",
+  "refreshIntervalHours": 168,
+  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Molly%22+AND+%22MEGA+Space+Molly+100%%22+AND+%22Series+1%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
+  "retailPrice": 19.0,
+  "lastUpdated": "2026-06-11",
+  "marketData": {
+    "avgSoldPrice": 47.07,
+    "medianSoldPrice": 46.49,
+    "fairMarketValue": 46.49,
+    "lowSoldPrice": 34.41,
+    "highSoldPrice": 60.62,
+    "totalSold": 40,
+    "volatility": "Low",
+    "volatilityValue": 0.12,
+    "roi": 147.7,
+    "riskScore": 52,
+    "cleanedSampleSize": 40,
+    "valuationMethod": "IQR + 10% trimmed median",
+    "priceChange7d": "+2.6%",
+    "trend": "range",
+    "trend_zh": "区间震荡",
+    "signal": "hold",
+    "signal_zh": "持有跟踪",
+    "signal_en": "Track / hold"
+  },
+  "priceHistory": [
+    {
+      "date": "2026-05-13",
+      "avg": 44.58
+    },
+    {
+      "date": "2026-05-14",
+      "avg": 47.77
+    },
+    {
+      "date": "2026-05-15",
+      "avg": 46.66
+    },
+    {
+      "date": "2026-05-16",
+      "avg": 49.3
+    },
+    {
+      "date": "2026-05-17",
+      "avg": 48.26
+    },
+    {
+      "date": "2026-05-18",
+      "avg": 45.2
+    },
+    {
+      "date": "2026-05-19",
+      "avg": 47.51
+    },
+    {
+      "date": "2026-05-20",
+      "avg": 48.98
+    },
+    {
+      "date": "2026-05-21",
+      "avg": 45.83
+    },
+    {
+      "date": "2026-05-22",
+      "avg": 49.56
+    },
+    {
+      "date": "2026-05-23",
+      "avg": 49.08
+    },
+    {
+      "date": "2026-05-24",
+      "avg": 48.38
+    },
+    {
+      "date": "2026-05-25",
+      "avg": 46.98
+    },
+    {
+      "date": "2026-05-26",
+      "avg": 48.42
+    },
+    {
+      "date": "2026-05-27",
+      "avg": 46.78
+    },
+    {
+      "date": "2026-05-28",
+      "avg": 47.36
+    },
+    {
+      "date": "2026-05-29",
+      "avg": 46.22
+    },
+    {
+      "date": "2026-05-30",
+      "avg": 44.18
+    },
+    {
+      "date": "2026-05-31",
+      "avg": 45.94
+    },
+    {
+      "date": "2026-06-01",
+      "avg": 44.42
+    },
+    {
+      "date": "2026-06-02",
+      "avg": 44.73
+    },
+    {
+      "date": "2026-06-03",
+      "avg": 47.3
+    },
+    {
+      "date": "2026-06-04",
+      "avg": 45.3
+    },
+    {
+      "date": "2026-06-05",
+      "avg": 46.14
+    },
+    {
+      "date": "2026-06-06",
+      "avg": 42.87
+    },
+    {
+      "date": "2026-06-07",
+      "avg": 46.29
+    },
+    {
+      "date": "2026-06-08",
+      "avg": 45.01
+    },
+    {
+      "date": "2026-06-09",
+      "avg": 46.82
+    },
+    {
+      "date": "2026-06-10",
+      "avg": 49.89
+    },
+    {
+      "date": "2026-06-11",
+      "avg": 46.49
+    }
+  ],
+  "sources": [
+    "eBay completed sales",
+    "SoldComps-compatible API",
+    "demo fallback"
+  ],
+  "story": {
+    "year": "2021",
+    "tagline": "MEGA Space Molly 100% 第一弹，开启大娃收藏新纪元。",
+    "intro": "MEGA Space Molly 100% 将经典宇航员造型微缩至100%尺寸，保留了大娃的精致涂装与细节刻画，让收藏门槛大幅降低。",
+    "philosophy": "系列与多位国际艺术家联名，每款都带有独特的面罩设计与配色方案，是MOLLY从盲盒向艺术品转型的重要里程碑。"
+  },
+  "characters": [
+    {
+      "name": "圣诞",
+      "rarity": "常规款",
+      "color": "#d95c50"
+    },
+    {
+      "name": "糖果",
+      "rarity": "常规款",
+      "color": "#ff7eb6"
+    },
+    {
+      "name": "小画家",
+      "rarity": "常规款",
+      "color": "#9f8cff"
+    },
+    {
+      "name": "太妃糖",
+      "rarity": "常规款",
+      "color": "#8f6745"
+    },
+    {
+      "name": "Keith Haring",
+      "rarity": "常规款",
+      "color": "#191c1d"
+    },
+    {
+      "name": "海绵宝宝",
+      "rarity": "常规款",
+      "color": "#ffc857"
+    },
+    {
+      "name": "果冻",
+      "rarity": "常规款",
+      "color": "#50e3c2"
+    },
+    {
+      "name": "西瓜",
+      "rarity": "常规款",
+      "color": "#65d39b"
+    },
+    {
+      "name": "Instinctoy",
+      "rarity": "常规款",
+      "color": "#6bd6ff"
+    },
+    {
+      "name": "隐藏款-地球女儿",
+      "rarity": "概率稀缺 (1:108)",
+      "color": "#6bd6ff"
+    }
+  ],
+  "notes_zh": "价格为样例或 API 聚合结果，不构成投资建议。请以真实成交、品相、隐藏款概率和平台手续费综合判断。",
+  "notes_en": "Prices are sample or API-aggregated metrics, not financial advice. Validate condition, rarity and fees before trading."
+}

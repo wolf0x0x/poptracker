@@ -1,14 +1,14 @@
 {
-  "sku": "DIMOO-WORLD-01",
-  "ip": "DIMOO",
-  "series": "World x Animal",
-  "name_zh": "Dimoo 动物王国",
-  "name_en": "DIMOO World x Animal",
-  "rarity_zh": "稳定流通",
-  "rarity_en": "Liquid regular",
-  "color": "#65d39b",
-  "image": "https://cdn.popmart.com/sku-images/dimoo-world-01.jpg",
-  "searchString": "\"Dimoo\" AND (\"World\" OR \"Animal\") AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
+  "sku": "HIRONO-RESHAPE-04",
+  "ip": "HIRONO",
+  "series": "Reshape",
+  "name_zh": "Hirono 重塑",
+  "name_en": "HIRONO Reshape",
+  "rarity_zh": "成长 IP",
+  "rarity_en": "Emerging IP",
+  "color": "#8f6745",
+  "image": "https://cdn.popmart.com/sku-images/hirono-reshape-04.jpg",
+  "searchString": "\"Hirono\" AND \"Reshape\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
   "negativeKeywords": [
     "box only",
     "card only",
@@ -19,23 +19,23 @@
   ],
   "refreshTier": "weekly",
   "refreshIntervalHours": 168,
-  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Dimoo%22+AND+(%22World%22+OR+%22Animal%22)+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
-  "retailPrice": 15.0,
+  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Hirono%22+AND+%22Reshape%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
+  "retailPrice": 16.0,
   "lastUpdated": "2026-06-11",
   "marketData": {
-    "avgSoldPrice": 26.63,
-    "medianSoldPrice": 26.86,
-    "fairMarketValue": 26.86,
-    "lowSoldPrice": 19.23,
-    "highSoldPrice": 35.28,
-    "totalSold": 39,
+    "avgSoldPrice": 40.28,
+    "medianSoldPrice": 40.12,
+    "fairMarketValue": 40.12,
+    "lowSoldPrice": 28.17,
+    "highSoldPrice": 52.55,
+    "totalSold": 41,
     "volatility": "Low",
-    "volatilityValue": 0.129,
-    "roi": 77.6,
-    "riskScore": 44,
-    "cleanedSampleSize": 39,
+    "volatilityValue": 0.151,
+    "roi": 151.7,
+    "riskScore": 56,
+    "cleanedSampleSize": 41,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+6.1%",
+    "priceChange7d": "+3.8%",
     "trend": "range",
     "trend_zh": "区间震荡",
     "signal": "hold",
@@ -45,123 +45,123 @@
   "priceHistory": [
     {
       "date": "2026-05-13",
-      "avg": 25.89
+      "avg": 37.79
     },
     {
       "date": "2026-05-14",
-      "avg": 24.15
+      "avg": 42.5
     },
     {
       "date": "2026-05-15",
-      "avg": 25.54
+      "avg": 39.43
     },
     {
       "date": "2026-05-16",
-      "avg": 26.79
+      "avg": 40.57
     },
     {
       "date": "2026-05-17",
-      "avg": 26.19
+      "avg": 43.65
     },
     {
       "date": "2026-05-18",
-      "avg": 27.58
+      "avg": 43.04
     },
     {
       "date": "2026-05-19",
-      "avg": 29.01
+      "avg": 41.2
     },
     {
       "date": "2026-05-20",
-      "avg": 26.04
+      "avg": 41.72
     },
     {
       "date": "2026-05-21",
-      "avg": 28.19
+      "avg": 41.0
     },
     {
       "date": "2026-05-22",
-      "avg": 27.25
+      "avg": 41.79
     },
     {
       "date": "2026-05-23",
-      "avg": 25.92
+      "avg": 41.54
     },
     {
       "date": "2026-05-24",
-      "avg": 26.54
+      "avg": 40.84
     },
     {
       "date": "2026-05-25",
-      "avg": 27.21
+      "avg": 42.04
     },
     {
       "date": "2026-05-26",
-      "avg": 25.73
+      "avg": 41.15
     },
     {
       "date": "2026-05-27",
-      "avg": 26.35
+      "avg": 40.17
     },
     {
       "date": "2026-05-28",
-      "avg": 26.34
+      "avg": 39.22
     },
     {
       "date": "2026-05-29",
-      "avg": 26.27
+      "avg": 39.31
     },
     {
       "date": "2026-05-30",
-      "avg": 25.24
+      "avg": 39.64
     },
     {
       "date": "2026-05-31",
-      "avg": 25.16
+      "avg": 38.59
     },
     {
       "date": "2026-06-01",
-      "avg": 23.91
+      "avg": 39.45
     },
     {
       "date": "2026-06-02",
-      "avg": 25.35
+      "avg": 39.08
     },
     {
       "date": "2026-06-03",
-      "avg": 25.51
+      "avg": 36.7
     },
     {
       "date": "2026-06-04",
-      "avg": 25.32
+      "avg": 38.66
     },
     {
       "date": "2026-06-05",
-      "avg": 23.18
+      "avg": 36.49
     },
     {
       "date": "2026-06-06",
-      "avg": 26.68
+      "avg": 38.9
     },
     {
       "date": "2026-06-07",
-      "avg": 23.73
+      "avg": 39.99
     },
     {
       "date": "2026-06-08",
-      "avg": 26.27
+      "avg": 38.23
     },
     {
       "date": "2026-06-09",
-      "avg": 24.87
+      "avg": 40.19
     },
     {
       "date": "2026-06-10",
-      "avg": 26.92
+      "avg": 39.35
     },
     {
       "date": "2026-06-11",
-      "avg": 26.86
+      "avg": 40.12
     }
   ],
   "sources": [
@@ -171,51 +171,51 @@
   ],
   "story": {
     "year": "2026",
-    "tagline": "DIMOO 的 World x Animal 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-    "intro": "Dimoo 动物王国 以 DIMOO 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
+    "tagline": "HIRONO 的 Reshape 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
+    "intro": "Hirono 重塑 以 HIRONO 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
     "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
     "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
   },
   "characters": [
     {
-      "name": "DIMOO 主角款",
+      "name": "HIRONO 主角款",
       "rarity": "常规款",
-      "color": "#65d39b"
+      "color": "#8f6745"
     },
     {
-      "name": "DIMOO 夜色款",
+      "name": "HIRONO 夜色款",
       "rarity": "常规款",
-      "color": "#65d39b"
+      "color": "#8f6745"
     },
     {
-      "name": "DIMOO 甜梦款",
+      "name": "HIRONO 甜梦款",
       "rarity": "常规款",
-      "color": "#65d39b"
+      "color": "#8f6745"
     },
     {
-      "name": "DIMOO 巡游款",
+      "name": "HIRONO 巡游款",
       "rarity": "常规款",
-      "color": "#65d39b"
+      "color": "#8f6745"
     },
     {
-      "name": "DIMOO 独白款",
+      "name": "HIRONO 独白款",
       "rarity": "常规款",
-      "color": "#65d39b"
+      "color": "#8f6745"
     },
     {
-      "name": "DIMOO 隐藏款",
+      "name": "HIRONO 隐藏款",
       "rarity": "概率稀缺",
       "color": "#191c1d"
     },
     {
-      "name": "DIMOO 节日款",
+      "name": "HIRONO 节日款",
       "rarity": "主题款",
-      "color": "#65d39b"
+      "color": "#8f6745"
     },
     {
-      "name": "DIMOO 收藏款",
+      "name": "HIRONO 收藏款",
       "rarity": "高热度",
-      "color": "#65d39b"
+      "color": "#8f6745"
     }
   ],
   "notes_zh": "价格为样例或 API 聚合结果，不构成投资建议。请以真实成交、品相、隐藏款概率和平台手续费综合判断。",

@@ -33,18 +33,34 @@ def load_dotenv(path=PROJECT_ROOT / ".env"):
 
 load_dotenv()
 
-DICT_PATH = PROJECT_ROOT / "sku_dictionary.json"
+# 默认内置兜底追踪字典
+TRACKING_ITEMS = [
+    {
+        "sku": "LABUBU-MACARON-01",
+        "ip": "THE MONSTERS",
+        "series": "Tasty Macarons",
+        "keywords": "Labubu Macaron Vinyl Face",
+        "search_string": '"Labubu" AND ("Macaron" OR "Tasty Macarons") AND ("vinyl face" OR "Pop Mart") -box -card -preorder -custom -fake -replica',
+        "negative_keywords": ["box only", "card only", "preorder", "custom", "fake", "replica"],
+        "refresh_tier": "hot",
+        "retail_price_usd": 17.0,
+        "name_zh": "Labubu 马卡龙搪胶脸",
+        "name_en": "Labubu The Monsters Tasty Macarons",
+        "rarity": "热门常规",
+        "rarity_en": "Hot regular",
+        "color": "#ff7eb6",
+        "image": "",
+    }
+]
 
-
-def load_dictionary():
-    if not DICT_PATH.exists():
-        print(f"Warning: Dictionary file not found at {DICT_PATH}")
-        return []
-    with DICT_PATH.open("r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-TRACKING_ITEMS = load_dictionary()
+DEMO_MULTIPLIERS = {
+    "LABUBU-MACARON-01": 4.35,
+    "LABUBU-HAVEASEAT-01": 3.2,
+    "SKULLPANDA-INKPLUM-01": 1.85,
+    "MOLLY-SPACE-100-01": 2.15,
+    "DIMOO-WORLD-01": 1.45,
+    "HIRONO-LITTLE-MISCHIEF-01": 1.72,
+}
 
 
 def percentile(values, ratio):
@@ -208,9 +224,10 @@ def fetch_live_listings(item):
 
 def demo_listings(item):
     today = datetime.now(timezone.utc).date()
-    multiplier = item.get("demo_multiplier", 2.0)
-    base = item["retail_price_usd"] * multiplier
     random.seed(item["sku"])
+    # 核心安全机制：若新增外部 SKU 未在 DEMO_MULTIPLIERS 中定义，自动生成合理的随机多倍体，防止 KeyError 崩溃
+    multiplier = DEMO_MULTIPLIERS.get(item["sku"], random.uniform(1.4, 3.6))
+    base = item["retail_price_usd"] * multiplier
     listings = []
     for idx in range(42):
         age = random.randint(0, 28)
@@ -312,7 +329,54 @@ def main():
     today = datetime.now(timezone.utc).date().isoformat()
     index = []
 
-    for item in TRACKING_ITEMS:
+    # === 新增功能：从项目根目录动态加载外部 50 款数据字典组件 ===
+    dict_path = PROJECT_ROOT / "sku_dictionary.json"
+    global TRACKING_ITEMS
+    if dict_path.exists():
+        try:
+            with dict_path.open("r", encoding="utf-8") as handle:
+                ext_data = json.load(handle)
+                if isinstance(ext_data, list):
+                    TRACKING_ITEMS = ext_data
+                elif isinstance(ext_data, dict) and "items" in ext_data:
+                    TRACKING_ITEMS = ext_data["items"]
+                print(f"[SUCCESS] Loaded {len(TRACKING_ITEMS)} tracking SKU assets from {dict_path}")
+        except Exception as e:
+            print(f"[WARNING] Failed to load external dictionary: {e}. Fallback to internal items.")
+
+    for raw_item in TRACKING_ITEMS:
+        if not isinstance(raw_item, dict):
+            continue
+            
+        # 字段兼容性处理：完美映射外部 JSON 驼峰格式(camelCase)和蛇形格式(snake_case)
+        item = {}
+        item["sku"] = raw_item.get("sku", raw_item.get("SKU"))
+        if not item["sku"]:
+            continue
+            
+        item["ip"] = raw_item.get("ip", raw_item.get("IP", "POP MART"))
+        item["series"] = raw_item.get("series", raw_item.get("Series", "Unknown Series"))
+        item["keywords"] = raw_item.get("keywords", raw_item.get("Keywords", ""))
+        item["search_string"] = raw_item.get("search_string", raw_item.get("searchString", ""))
+        if not item["search_string"]:
+            item["search_string"] = f'"{item["ip"]}" AND "{item["series"]}" -box -card -preorder'
+            
+        item["negative_keywords"] = raw_item.get("negative_keywords", raw_item.get("negativeKeywords", ["box only", "card only"]))
+        item["refresh_tier"] = raw_item.get("refresh_tier", raw_item.get("refreshTier", "weekly"))
+        
+        retail_val = raw_item.get("retail_price_usd", raw_item.get("retailPrice", raw_item.get("retail_price", 15.0)))
+        item["retail_price_usd"] = float(retail_val)
+        
+        item["name_zh"] = raw_item.get("name_zh", raw_item.get("nameZh", raw_item.get("name_cn", item["series"])))
+        item["name_en"] = raw_item.get("name_en", raw_item.get("nameEn", item["series"]))
+        item["rarity"] = raw_item.get("rarity", raw_item.get("rarity_zh", raw_item.get("rarityZh", "常规款")))
+        item["rarity_en"] = raw_item.get("rarity_en", raw_item.get("rarityEn", "Regular"))
+        item["color"] = raw_item.get("color", "#6b38d4")
+        item["image"] = raw_item.get("image", "")
+        # 支持透传自定义角色子图鉴数据
+        if "characters" in raw_item:
+            item["characters"] = raw_item["characters"]
+
         raw = fetch_live_listings(item) or demo_listings(item)
         metrics = aggregate(raw, item["retail_price_usd"], item.get("negative_keywords", []))
         if not metrics:
@@ -337,10 +401,10 @@ def main():
             "rarity_en": item["rarity_en"],
             "color": item["color"],
             "image": item.get("image", ""),
-            "searchString": item.get("search_string", item["keywords"]),
-            "negativeKeywords": item.get("negative_keywords", []),
-            "refreshTier": item.get("refresh_tier", "weekly"),
-            "refreshIntervalHours": 24 if item.get("refresh_tier") == "hot" else 168,
+            "searchString": item["search_string"],
+            "negativeKeywords": item["negative_keywords"],
+            "refreshTier": item["refresh_tier"],
+            "refreshIntervalHours": 24 if item["refresh_tier"] == "hot" else 168,
             "affiliateUrl": affiliate_url,
             "retailPrice": item["retail_price_usd"],
             "lastUpdated": today,
@@ -355,8 +419,8 @@ def main():
             },
             "priceHistory": history,
             "sources": ["eBay completed sales", "SoldComps-compatible API", "demo fallback"],
-            "story": item.get("story") or generate_default_story(item, today),
-            "characters": item.get("characters") or generate_default_characters(item),
+            "story": raw_item.get("story") or generate_default_story(item, today),
+            "characters": raw_item.get("characters") or generate_default_characters(item),
             "notes_zh": "价格为样例或 API 聚合结果，不构成投资建议。请以真实成交、品相、隐藏款概率和平台手续费综合判断。",
             "notes_en": "Prices are sample or API-aggregated metrics, not financial advice. Validate condition, rarity and fees before trading.",
         }
@@ -375,8 +439,8 @@ def main():
                 "rarity_en": item["rarity_en"],
                 "color": item["color"],
                 "image": item.get("image", ""),
-                "searchString": item.get("search_string", item["keywords"]),
-                "refreshTier": item.get("refresh_tier", "weekly"),
+                "searchString": item["search_string"],
+                "refreshTier": item["refresh_tier"],
                 "affiliateUrl": affiliate_url,
                 "retailPrice": item["retail_price_usd"],
                 "avgSoldPrice": metrics["fairMarketValue"],
@@ -389,8 +453,8 @@ def main():
                 "totalSold": metrics["totalSold"],
                 "signal_zh": signal_zh,
                 "signal_en": signal_en,
-                "story": item.get("story") or generate_default_story(item, today),
-                "characters": item.get("characters") or generate_default_characters(item),
+                "story": raw_item.get("story") or generate_default_story(item, today),
+                "characters": raw_item.get("characters") or generate_default_characters(item),
                 "lastUpdated": today,
             }
         )

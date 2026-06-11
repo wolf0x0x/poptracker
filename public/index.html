@@ -1441,7 +1441,24 @@
       }
 
       function seriesCharacters(item) {
-        return item.characters;
+        if (item.characters && Array.isArray(item.characters)) {
+          return item.characters;
+        }
+        const base = [
+          ["主角款", "常规款"],
+          ["夜色款", "常规款"],
+          ["甜梦款", "常规款"],
+          ["巡游款", "常规款"],
+          ["独白款", "常规款"],
+          ["隐藏款", "概率稀缺"],
+          ["节日款", "主题款"],
+          ["收藏款", "高热度"],
+        ];
+        return base.map(([name, rarity], index) => ({
+          name: `${item.ip.split(" ")[0]} ${name}`,
+          rarity,
+          color: index === 5 ? "#191c1d" : item.color,
+        }));
       }
 
       function renderSeriesDetail(item) {

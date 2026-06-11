@@ -1,0 +1,247 @@
+{
+  "sku": "SKULLPANDA-CITYOFNIGHT-02",
+  "ip": "SKULLPANDA",
+  "series": "City of Night",
+  "name_zh": "Skullpanda 夜之城",
+  "name_en": "SKULLPANDA City of Night",
+  "rarity_zh": "稳定流通",
+  "rarity_en": "Liquid regular",
+  "color": "#191c1d",
+  "image": "https://cdn.popmart.com/sku-images/skullpanda-cityofnight-02.jpg",
+  "searchString": "\"Skullpanda\" AND \"City of Night\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
+  "negativeKeywords": [
+    "box only",
+    "card only",
+    "preorder",
+    "custom",
+    "fake",
+    "replica"
+  ],
+  "refreshTier": "weekly",
+  "refreshIntervalHours": 168,
+  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Skullpanda%22+AND+%22City+of+Night%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
+  "retailPrice": 15.0,
+  "lastUpdated": "2026-06-11",
+  "marketData": {
+    "avgSoldPrice": 40.53,
+    "medianSoldPrice": 40.27,
+    "fairMarketValue": 40.27,
+    "lowSoldPrice": 30.07,
+    "highSoldPrice": 52.08,
+    "totalSold": 42,
+    "volatility": "Low",
+    "volatilityValue": 0.143,
+    "roi": 170.2,
+    "riskScore": 58,
+    "cleanedSampleSize": 42,
+    "valuationMethod": "IQR + 10% trimmed median",
+    "priceChange7d": "+9.1%",
+    "trend": "breakout",
+    "trend_zh": "突破上涨",
+    "signal": "hold",
+    "signal_zh": "持有跟踪",
+    "signal_en": "Track / hold"
+  },
+  "priceHistory": [
+    {
+      "date": "2026-05-13",
+      "avg": 38.59
+    },
+    {
+      "date": "2026-05-14",
+      "avg": 42.0
+    },
+    {
+      "date": "2026-05-15",
+      "avg": 39.39
+    },
+    {
+      "date": "2026-05-16",
+      "avg": 38.63
+    },
+    {
+      "date": "2026-05-17",
+      "avg": 40.62
+    },
+    {
+      "date": "2026-05-18",
+      "avg": 43.21
+    },
+    {
+      "date": "2026-05-19",
+      "avg": 42.84
+    },
+    {
+      "date": "2026-05-20",
+      "avg": 42.89
+    },
+    {
+      "date": "2026-05-21",
+      "avg": 42.66
+    },
+    {
+      "date": "2026-05-22",
+      "avg": 42.87
+    },
+    {
+      "date": "2026-05-23",
+      "avg": 42.15
+    },
+    {
+      "date": "2026-05-24",
+      "avg": 40.9
+    },
+    {
+      "date": "2026-05-25",
+      "avg": 42.21
+    },
+    {
+      "date": "2026-05-26",
+      "avg": 41.59
+    },
+    {
+      "date": "2026-05-27",
+      "avg": 40.6
+    },
+    {
+      "date": "2026-05-28",
+      "avg": 40.95
+    },
+    {
+      "date": "2026-05-29",
+      "avg": 41.01
+    },
+    {
+      "date": "2026-05-30",
+      "avg": 38.36
+    },
+    {
+      "date": "2026-05-31",
+      "avg": 38.43
+    },
+    {
+      "date": "2026-06-01",
+      "avg": 40.18
+    },
+    {
+      "date": "2026-06-02",
+      "avg": 39.26
+    },
+    {
+      "date": "2026-06-03",
+      "avg": 38.65
+    },
+    {
+      "date": "2026-06-04",
+      "avg": 36.9
+    },
+    {
+      "date": "2026-06-05",
+      "avg": 36.78
+    },
+    {
+      "date": "2026-06-06",
+      "avg": 38.44
+    },
+    {
+      "date": "2026-06-07",
+      "avg": 37.69
+    },
+    {
+      "date": "2026-06-08",
+      "avg": 40.82
+    },
+    {
+      "date": "2026-06-09",
+      "avg": 36.61
+    },
+    {
+      "date": "2026-06-10",
+      "avg": 41.06
+    },
+    {
+      "date": "2026-06-11",
+      "avg": 40.27
+    }
+  ],
+  "sources": [
+    "eBay completed sales",
+    "SoldComps-compatible API",
+    "demo fallback"
+  ],
+  "story": {
+    "year": "2022",
+    "tagline": "赛博朋克夜之城，SKULLPANDA 的未来主义代表作。",
+    "intro": "City of Night 以霓虹闪烁的未来都市为舞台，SKULLPANDA 化身夜行者，搭配透明材质、荧光漆与金属配件，构建出强烈的赛博朋克视觉语言。",
+    "philosophy": "系列大量运用透明件与渐变喷涂工艺，模拟霓虹灯光的折射效果，是SKULLPANDA工艺复杂度最高的系列之一。"
+  },
+  "characters": [
+    {
+      "name": "法律执行者",
+      "rarity": "常规款",
+      "color": "#191c1d"
+    },
+    {
+      "name": "公主",
+      "rarity": "常规款",
+      "color": "#ff7eb6"
+    },
+    {
+      "name": "舞者",
+      "rarity": "常规款",
+      "color": "#9f8cff"
+    },
+    {
+      "name": "DJ播放器",
+      "rarity": "常规款",
+      "color": "#6bd6ff"
+    },
+    {
+      "name": "歌手",
+      "rarity": "常规款",
+      "color": "#d95c50"
+    },
+    {
+      "name": "热血青年",
+      "rarity": "常规款",
+      "color": "#ff8a5b"
+    },
+    {
+      "name": "卷轴传送",
+      "rarity": "常规款",
+      "color": "#50e3c2"
+    },
+    {
+      "name": "宠物猫",
+      "rarity": "常规款",
+      "color": "#ffc857"
+    },
+    {
+      "name": "旅行者",
+      "rarity": "常规款",
+      "color": "#8f6745"
+    },
+    {
+      "name": "寻心者",
+      "rarity": "常规款",
+      "color": "#e0d6c8"
+    },
+    {
+      "name": "顽皮保镖",
+      "rarity": "常规款",
+      "color": "#65d39b"
+    },
+    {
+      "name": "黑夜守护者",
+      "rarity": "常规款",
+      "color": "#6389a8"
+    },
+    {
+      "name": "隐藏款-午夜",
+      "rarity": "概率稀缺",
+      "color": "#191c1d"
+    }
+  ],
+  "notes_zh": "价格为样例或 API 聚合结果，不构成投资建议。请以真实成交、品相、隐藏款概率和平台手续费综合判断。",
+  "notes_en": "Prices are sample or API-aggregated metrics, not financial advice. Validate condition, rarity and fees before trading."
+}

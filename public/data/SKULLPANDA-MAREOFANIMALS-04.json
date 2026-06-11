@@ -1,14 +1,14 @@
 {
-  "sku": "DIMOO-WORLD-01",
-  "ip": "DIMOO",
-  "series": "World x Animal",
-  "name_zh": "Dimoo 动物王国",
-  "name_en": "DIMOO World x Animal",
+  "sku": "SKULLPANDA-MAREOFANIMALS-04",
+  "ip": "SKULLPANDA",
+  "series": "The Mare of Animals",
+  "name_zh": "Skullpanda 密林古堡",
+  "name_en": "SKULLPANDA The Mare of Animals",
   "rarity_zh": "稳定流通",
   "rarity_en": "Liquid regular",
-  "color": "#65d39b",
-  "image": "https://cdn.popmart.com/sku-images/dimoo-world-01.jpg",
-  "searchString": "\"Dimoo\" AND (\"World\" OR \"Animal\") AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
+  "color": "#8f6745",
+  "image": "https://cdn.popmart.com/sku-images/skullpanda-mareofanimals-04.jpg",
+  "searchString": "\"Skullpanda\" AND \"Mare of Animals\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
   "negativeKeywords": [
     "box only",
     "card only",
@@ -19,23 +19,23 @@
   ],
   "refreshTier": "weekly",
   "refreshIntervalHours": 168,
-  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Dimoo%22+AND+(%22World%22+OR+%22Animal%22)+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
+  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Skullpanda%22+AND+%22Mare+of+Animals%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
   "retailPrice": 15.0,
   "lastUpdated": "2026-06-11",
   "marketData": {
-    "avgSoldPrice": 26.63,
-    "medianSoldPrice": 26.86,
-    "fairMarketValue": 26.86,
-    "lowSoldPrice": 19.23,
-    "highSoldPrice": 35.28,
-    "totalSold": 39,
+    "avgSoldPrice": 29.5,
+    "medianSoldPrice": 29.78,
+    "fairMarketValue": 29.78,
+    "lowSoldPrice": 18.96,
+    "highSoldPrice": 38.45,
+    "totalSold": 41,
     "volatility": "Low",
-    "volatilityValue": 0.129,
-    "roi": 77.6,
-    "riskScore": 44,
-    "cleanedSampleSize": 39,
+    "volatilityValue": 0.135,
+    "roi": 96.6,
+    "riskScore": 48,
+    "cleanedSampleSize": 41,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+6.1%",
+    "priceChange7d": "+3.9%",
     "trend": "range",
     "trend_zh": "区间震荡",
     "signal": "hold",
@@ -45,123 +45,123 @@
   "priceHistory": [
     {
       "date": "2026-05-13",
-      "avg": 25.89
+      "avg": 28.25
     },
     {
       "date": "2026-05-14",
-      "avg": 24.15
+      "avg": 30.53
     },
     {
       "date": "2026-05-15",
-      "avg": 25.54
+      "avg": 31.14
     },
     {
       "date": "2026-05-16",
-      "avg": 26.79
+      "avg": 31.77
     },
     {
       "date": "2026-05-17",
-      "avg": 26.19
+      "avg": 30.88
     },
     {
       "date": "2026-05-18",
-      "avg": 27.58
+      "avg": 31.82
     },
     {
       "date": "2026-05-19",
-      "avg": 29.01
+      "avg": 32.69
     },
     {
       "date": "2026-05-20",
-      "avg": 26.04
+      "avg": 31.18
     },
     {
       "date": "2026-05-21",
-      "avg": 28.19
+      "avg": 31.25
     },
     {
       "date": "2026-05-22",
-      "avg": 27.25
+      "avg": 30.99
     },
     {
       "date": "2026-05-23",
-      "avg": 25.92
+      "avg": 30.54
     },
     {
       "date": "2026-05-24",
-      "avg": 26.54
+      "avg": 30.03
     },
     {
       "date": "2026-05-25",
-      "avg": 27.21
+      "avg": 31.41
     },
     {
       "date": "2026-05-26",
-      "avg": 25.73
+      "avg": 30.35
     },
     {
       "date": "2026-05-27",
-      "avg": 26.35
+      "avg": 29.92
     },
     {
       "date": "2026-05-28",
-      "avg": 26.34
+      "avg": 30.08
     },
     {
       "date": "2026-05-29",
-      "avg": 26.27
+      "avg": 29.93
     },
     {
       "date": "2026-05-30",
-      "avg": 25.24
+      "avg": 29.33
     },
     {
       "date": "2026-05-31",
-      "avg": 25.16
+      "avg": 29.2
     },
     {
       "date": "2026-06-01",
-      "avg": 23.91
+      "avg": 27.82
     },
     {
       "date": "2026-06-02",
-      "avg": 25.35
+      "avg": 27.27
     },
     {
       "date": "2026-06-03",
-      "avg": 25.51
+      "avg": 28.35
     },
     {
       "date": "2026-06-04",
-      "avg": 25.32
+      "avg": 28.66
     },
     {
       "date": "2026-06-05",
-      "avg": 23.18
+      "avg": 28.27
     },
     {
       "date": "2026-06-06",
-      "avg": 26.68
+      "avg": 28.5
     },
     {
       "date": "2026-06-07",
-      "avg": 23.73
+      "avg": 30.08
     },
     {
       "date": "2026-06-08",
-      "avg": 26.27
+      "avg": 28.78
     },
     {
       "date": "2026-06-09",
-      "avg": 24.87
+      "avg": 28.23
     },
     {
       "date": "2026-06-10",
-      "avg": 26.92
+      "avg": 28.48
     },
     {
       "date": "2026-06-11",
-      "avg": 26.86
+      "avg": 29.78
     }
   ],
   "sources": [
@@ -171,51 +171,51 @@
   ],
   "story": {
     "year": "2026",
-    "tagline": "DIMOO 的 World x Animal 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-    "intro": "Dimoo 动物王国 以 DIMOO 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
+    "tagline": "SKULLPANDA 的 The Mare of Animals 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
+    "intro": "Skullpanda 密林古堡 以 SKULLPANDA 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
     "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
     "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
   },
   "characters": [
     {
-      "name": "DIMOO 主角款",
+      "name": "SKULLPANDA 主角款",
       "rarity": "常规款",
-      "color": "#65d39b"
+      "color": "#8f6745"
     },
     {
-      "name": "DIMOO 夜色款",
+      "name": "SKULLPANDA 夜色款",
       "rarity": "常规款",
-      "color": "#65d39b"
+      "color": "#8f6745"
     },
     {
-      "name": "DIMOO 甜梦款",
+      "name": "SKULLPANDA 甜梦款",
       "rarity": "常规款",
-      "color": "#65d39b"
+      "color": "#8f6745"
     },
     {
-      "name": "DIMOO 巡游款",
+      "name": "SKULLPANDA 巡游款",
       "rarity": "常规款",
-      "color": "#65d39b"
+      "color": "#8f6745"
     },
     {
-      "name": "DIMOO 独白款",
+      "name": "SKULLPANDA 独白款",
       "rarity": "常规款",
-      "color": "#65d39b"
+      "color": "#8f6745"
     },
     {
-      "name": "DIMOO 隐藏款",
+      "name": "SKULLPANDA 隐藏款",
       "rarity": "概率稀缺",
       "color": "#191c1d"
     },
     {
-      "name": "DIMOO 节日款",
+      "name": "SKULLPANDA 节日款",
       "rarity": "主题款",
-      "color": "#65d39b"
+      "color": "#8f6745"
     },
     {
-      "name": "DIMOO 收藏款",
+      "name": "SKULLPANDA 收藏款",
       "rarity": "高热度",
-      "color": "#65d39b"
+      "color": "#8f6745"
     }
   ],
   "notes_zh": "价格为样例或 API 聚合结果，不构成投资建议。请以真实成交、品相、隐藏款概率和平台手续费综合判断。",
