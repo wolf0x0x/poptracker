@@ -112,12 +112,22 @@ def percentile(values, ratio):
 
 
 def normalize_listing(item):
-    price = item.get("soldPrice", item.get("price", item.get("value", 0)))
-    shipping = item.get("shippingPrice", item.get("shipping", 0))
+    price = item.get(
+        "soldPrice",
+        item.get("computedPrice", item.get("priceWithShipping", item.get("price", item.get("value", 0)))),
+    )
+    shipping = 0 if item.get("priceWithShipping") else item.get("shippingPrice", item.get("shipping", 0))
     currency = item.get("currency", "USD")
     sold_at = item.get("soldAt") or item.get("date")
+
+    def numeric(value):
+        if isinstance(value, (int, float)):
+            return float(value)
+        cleaned = "".join(char for char in str(value or "0") if char.isdigit() or char in ".-")
+        return float(cleaned or 0)
+
     return {
-        "price": float(price or 0) + float(shipping or 0),
+        "price": numeric(price) + numeric(shipping),
         "currency": currency,
         "soldAt": sold_at,
         "source": item.get("source", "demo"),
@@ -196,13 +206,22 @@ def fetch_live_listings(item):
     if not api_key or requests is None:
         return []
 
-    url = os.getenv("SOLDCOMPS_ENDPOINT", "https://api.sold-comps.com/v1/search")
-    params = {"keyword": item["keywords"], "apiKey": api_key}
+    url = os.getenv(
+        "SOLDCOMPS_ENDPOINT",
+        f"https://api.apify.com/v2/acts/caffein.dev~ebay-sold-listings/run-sync-get-dataset-items?token={api_key}",
+    )
+    keyword = f"Pop Mart {item['ip']} {item['series']} {item['keywords']} blind box loose"
+    payload = {"keyword": keyword, "count": 20, "daysToScrape": 30}
     try:
-        response = requests.get(url, params=params, timeout=20)
+        if os.getenv("SOLDCOMPS_ENDPOINT"):
+            response = requests.post(url, json={**payload, "apiKey": api_key}, timeout=30)
+        else:
+            response = requests.post(url, json=payload, timeout=30)
         response.raise_for_status()
-        payload = response.json()
-        return payload.get("results", payload if isinstance(payload, list) else [])
+        response_payload = response.json()
+        if isinstance(response_payload, list):
+            return response_payload
+        return response_payload.get("results", response_payload.get("items", []))
     except Exception as exc:
         print(f"Live fetch failed for {item['sku']}: {exc}")
         return []

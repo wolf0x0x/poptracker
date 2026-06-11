@@ -2,27 +2,27 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>poptracker | 泡泡玛特潮玩收藏投资与二级市场价格追踪</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>poptracker PRO | 泡泡玛特潮玩动态市值雷达</title>
     <meta
       name="description"
-      content="poptracker tracks Pop Mart collectible market premiums, ROI, volatility, liquidity and secondary market price history."
+      content="poptracker PRO tracks Pop Mart collectible holdings, sold-comps market prices, ROI, inventory and secondary market history."
     />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
     <style>
       :root {
         color-scheme: light;
-        --bg: #f7f4ef;
+        --bg: #f5f2ec;
         --ink: #171717;
-        --muted: #66615b;
-        --line: #ded8cf;
+        --muted: #6d675f;
+        --line: #ded7cd;
         --surface: #fffdf8;
-        --surface-2: #efe8df;
+        --surface-2: #eee7dd;
         --rose: #e94f86;
-        --blue: #3076b8;
+        --blue: #2d72b8;
         --green: #228b65;
-        --yellow: #b07910;
-        --violet: #6f55d8;
+        --amber: #b17612;
+        --violet: #7159cf;
         --shadow: 0 18px 50px rgba(62, 50, 35, 0.12);
       }
 
@@ -34,14 +34,15 @@
         margin: 0;
         min-height: 100vh;
         background:
-          linear-gradient(135deg, rgba(255, 255, 255, 0.84), rgba(247, 244, 239, 0.92)),
-          radial-gradient(circle at 16% 8%, rgba(233, 79, 134, 0.18), transparent 28%),
-          radial-gradient(circle at 83% 14%, rgba(48, 118, 184, 0.15), transparent 28%),
+          linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(245, 242, 236, 0.94)),
+          radial-gradient(circle at 16% 8%, rgba(233, 79, 134, 0.14), transparent 27%),
+          radial-gradient(circle at 84% 12%, rgba(45, 114, 184, 0.14), transparent 28%),
           var(--bg);
         color: var(--ink);
         font-family:
           Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
           "PingFang SC", "Microsoft YaHei", sans-serif;
+        -webkit-tap-highlight-color: transparent;
       }
 
       button,
@@ -62,42 +63,42 @@
       .topbar {
         position: sticky;
         top: 0;
-        z-index: 20;
-        border-bottom: 1px solid rgba(222, 216, 207, 0.82);
-        background: rgba(247, 244, 239, 0.82);
+        z-index: 30;
+        border-bottom: 1px solid rgba(222, 215, 205, 0.86);
+        background: rgba(245, 242, 236, 0.86);
         backdrop-filter: blur(18px);
       }
 
       .topbar-inner {
-        display: flex;
-        min-height: 68px;
+        display: grid;
+        grid-template-columns: minmax(260px, 1fr) auto;
+        gap: 16px;
+        min-height: 74px;
         align-items: center;
-        justify-content: space-between;
-        gap: 18px;
       }
 
       .brand {
         display: flex;
+        min-width: 0;
         align-items: center;
         gap: 12px;
-        min-width: 0;
       }
 
       .logo {
         display: grid;
-        width: 42px;
-        height: 42px;
+        width: 44px;
+        height: 44px;
         place-items: center;
         border: 1px solid rgba(23, 23, 23, 0.12);
         border-radius: 8px;
-        background: linear-gradient(145deg, #171717, #433d36);
+        background: linear-gradient(145deg, #171717, #443e36);
         box-shadow: 0 10px 28px rgba(23, 23, 23, 0.16);
       }
 
       .logo-mark {
         position: relative;
-        width: 24px;
-        height: 24px;
+        width: 25px;
+        height: 25px;
       }
 
       .logo-mark::before,
@@ -124,12 +125,12 @@
       .brand-title {
         margin: 0;
         font-size: 20px;
-        font-weight: 850;
+        font-weight: 880;
         letter-spacing: 0;
       }
 
       .brand-subtitle {
-        margin: 0;
+        margin: 1px 0 0;
         color: var(--muted);
         font-size: 12px;
       }
@@ -137,47 +138,66 @@
       .nav-actions {
         display: flex;
         align-items: center;
-        gap: 10px;
+        justify-content: flex-end;
+        gap: 9px;
       }
 
       .icon-button,
-      .text-button {
+      .text-button,
+      .primary-button {
         display: inline-flex;
-        height: 40px;
+        min-height: 40px;
         align-items: center;
         justify-content: center;
         gap: 8px;
         border: 1px solid var(--line);
         border-radius: 8px;
-        background: rgba(255, 253, 248, 0.82);
+        background: rgba(255, 253, 248, 0.88);
         color: var(--ink);
+        padding: 0 13px;
       }
 
       .icon-button {
         width: 42px;
+        padding: 0;
       }
 
-      .text-button {
-        padding: 0 14px;
+      .primary-button {
+        border-color: #171717;
+        background: #171717;
+        color: #fffdf8;
+        font-weight: 820;
+      }
+
+      .api-ready {
+        border-color: rgba(34, 139, 101, 0.32);
+        background: rgba(34, 139, 101, 0.11);
+        color: var(--green);
+      }
+
+      .api-missing {
+        border-color: rgba(233, 79, 134, 0.32);
+        background: rgba(233, 79, 134, 0.1);
+        color: #c63d72;
       }
 
       .hero {
         display: grid;
-        grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
-        gap: 28px;
-        padding: 34px 0 22px;
+        grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+        gap: 22px;
+        padding: 32px 0 18px;
       }
 
       .hero-copy h2 {
-        max-width: 790px;
+        max-width: 780px;
         margin: 0;
-        font-size: clamp(34px, 5vw, 72px);
+        font-size: clamp(34px, 5vw, 70px);
         line-height: 0.98;
         letter-spacing: 0;
       }
 
       .hero-copy p {
-        max-width: 720px;
+        max-width: 740px;
         margin: 18px 0 0;
         color: var(--muted);
         font-size: 17px;
@@ -188,13 +208,13 @@
         display: grid;
         grid-template-columns: repeat(4, minmax(120px, 1fr));
         gap: 12px;
-        margin-top: 28px;
+        margin-top: 26px;
       }
 
       .metric {
-        border: 1px solid rgba(222, 216, 207, 0.86);
+        border: 1px solid rgba(222, 215, 205, 0.9);
         border-radius: 8px;
-        background: rgba(255, 253, 248, 0.68);
+        background: rgba(255, 253, 248, 0.72);
         padding: 14px;
       }
 
@@ -209,57 +229,77 @@
         font-size: 22px;
       }
 
-      .hero-visual {
-        min-height: 360px;
-        border: 1px solid rgba(222, 216, 207, 0.96);
+      .radar {
+        border: 1px solid rgba(222, 215, 205, 0.96);
         border-radius: 8px;
         background:
-          linear-gradient(160deg, rgba(255, 253, 248, 0.76), rgba(239, 232, 223, 0.74)),
+          linear-gradient(160deg, rgba(255, 253, 248, 0.84), rgba(238, 231, 221, 0.76)),
           repeating-linear-gradient(90deg, rgba(23, 23, 23, 0.04) 0 1px, transparent 1px 52px);
         box-shadow: var(--shadow);
-        overflow: hidden;
-        position: relative;
+        padding: 16px;
       }
 
-      .toy-stage {
-        position: absolute;
-        inset: 20px;
+      .portfolio-value {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 14px;
+        align-items: end;
+        border: 1px solid rgba(23, 23, 23, 0.09);
+        border-radius: 8px;
+        background: rgba(255, 253, 248, 0.72);
+        padding: 15px;
+      }
+
+      .portfolio-value span {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .portfolio-value strong {
+        display: block;
+        margin-top: 5px;
+        color: var(--amber);
+        font-size: 34px;
+        letter-spacing: 0;
+      }
+
+      .mini-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr 0.86fr;
-        gap: 12px;
+        gap: 10px;
+        margin-top: 12px;
       }
 
-      .toy {
+      .mini-toy {
         position: relative;
-        min-height: 130px;
-        border: 1px solid rgba(23, 23, 23, 0.11);
+        min-height: 112px;
+        border: 1px solid rgba(23, 23, 23, 0.1);
         border-radius: 8px;
         background: rgba(255, 253, 248, 0.78);
         overflow: hidden;
       }
 
-      .toy::before {
+      .mini-toy::before {
         position: absolute;
+        top: 20px;
         left: 50%;
-        top: 24px;
-        width: 64px;
-        height: 72px;
+        width: 58px;
+        height: 66px;
         border-radius: 42% 42% 48% 48%;
-        background: var(--toy-color, #ff7eb6);
+        background: var(--toy-color);
         box-shadow:
-          -24px -8px 0 -12px color-mix(in srgb, var(--toy-color, #ff7eb6), #fff 30%),
-          24px -8px 0 -12px color-mix(in srgb, var(--toy-color, #ff7eb6), #111 10%);
+          -22px -7px 0 -11px color-mix(in srgb, var(--toy-color), #fff 30%),
+          22px -7px 0 -11px color-mix(in srgb, var(--toy-color), #111 10%);
         content: "";
         transform: translateX(-50%);
       }
 
-      .toy::after {
+      .mini-toy::after {
         position: absolute;
+        top: 55px;
         left: 50%;
-        top: 62px;
-        width: 42px;
-        height: 22px;
+        width: 38px;
+        height: 20px;
         border-radius: 999px;
         background:
           radial-gradient(circle at 32% 45%, #171717 0 2px, transparent 3px),
@@ -269,30 +309,69 @@
         transform: translateX(-50%);
       }
 
-      .toy-label {
+      .mini-label {
         position: absolute;
-        right: 10px;
-        bottom: 10px;
-        left: 10px;
+        right: 9px;
+        bottom: 8px;
+        left: 9px;
         display: flex;
         justify-content: space-between;
         gap: 8px;
         color: var(--muted);
-        font-size: 11px;
+        font-size: 10px;
+        font-weight: 720;
+      }
+
+      .tabs {
+        position: sticky;
+        top: 74px;
+        z-index: 20;
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        border: 1px solid rgba(222, 215, 205, 0.88);
+        border-radius: 8px;
+        background: rgba(255, 253, 248, 0.9);
+        padding: 8px;
+        box-shadow: 0 12px 30px rgba(62, 50, 35, 0.08);
+        backdrop-filter: blur(16px);
+        scrollbar-width: none;
+      }
+
+      .tabs::-webkit-scrollbar {
+        display: none;
+      }
+
+      .tab-button {
+        flex: 0 0 auto;
+        min-height: 38px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #fffdf8;
+        color: var(--muted);
+        padding: 0 14px;
+        font-size: 13px;
+        font-weight: 760;
+      }
+
+      .tab-button.active {
+        border-color: #171717;
+        background: #171717;
+        color: #fffdf8;
       }
 
       .layout {
         display: grid;
-        grid-template-columns: 300px minmax(0, 1fr) 390px;
+        grid-template-columns: 292px minmax(0, 1fr) 380px;
         gap: 18px;
         align-items: start;
-        padding: 14px 0 46px;
+        padding: 18px 0 46px;
       }
 
       .panel {
-        border: 1px solid rgba(222, 216, 207, 0.9);
+        border: 1px solid rgba(222, 215, 205, 0.9);
         border-radius: 8px;
-        background: rgba(255, 253, 248, 0.86);
+        background: rgba(255, 253, 248, 0.9);
         box-shadow: 0 14px 38px rgba(62, 50, 35, 0.08);
       }
 
@@ -308,16 +387,17 @@
       .panel-title {
         margin: 0;
         font-size: 15px;
-        font-weight: 820;
+        font-weight: 840;
       }
 
       .panel-body {
         padding: 14px;
       }
 
-      .filters {
+      .filters,
+      .detail {
         position: sticky;
-        top: 86px;
+        top: 138px;
       }
 
       .field {
@@ -341,7 +421,7 @@
         background: #fffdf8;
         color: var(--ink);
         padding: 0 11px;
-        outline-color: rgba(48, 118, 184, 0.4);
+        outline-color: rgba(45, 114, 184, 0.4);
       }
 
       .segmented {
@@ -364,17 +444,6 @@
         color: #fffdf8;
       }
 
-      .table-panel {
-        overflow: hidden;
-      }
-
-      .toolbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-      }
-
       .status {
         color: var(--muted);
         font-size: 12px;
@@ -392,7 +461,7 @@
         width: 100%;
         border: 1px solid var(--line);
         border-radius: 8px;
-        background: rgba(255, 253, 248, 0.92);
+        background: rgba(255, 253, 248, 0.96);
         padding: 14px;
         text-align: left;
         transition:
@@ -410,14 +479,13 @@
 
       .asset-main {
         display: flex;
-        gap: 12px;
         min-width: 0;
+        gap: 12px;
       }
 
-      .swatch {
+      .swatch,
+      .detail-art {
         flex: 0 0 auto;
-        width: 44px;
-        height: 44px;
         border: 1px solid rgba(23, 23, 23, 0.12);
         border-radius: 8px;
         background:
@@ -425,10 +493,15 @@
           var(--asset-color, #ff7eb6);
       }
 
+      .swatch {
+        width: 44px;
+        height: 44px;
+      }
+
       .asset-name {
         margin: 0;
         font-size: 16px;
-        font-weight: 820;
+        font-weight: 840;
       }
 
       .asset-meta {
@@ -480,9 +553,52 @@
         color: #c44049;
       }
 
-      .detail {
-        position: sticky;
-        top: 86px;
+      .card-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 6px;
+      }
+
+      .tiny-button {
+        min-height: 30px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fffdf8;
+        color: var(--muted);
+        padding: 0 9px;
+        font-size: 12px;
+        font-weight: 760;
+      }
+
+      .tiny-button:disabled {
+        cursor: progress;
+        opacity: 0.56;
+      }
+
+      .stock-stepper {
+        display: inline-grid;
+        grid-template-columns: 28px 34px 28px;
+        min-height: 30px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fffdf8;
+      }
+
+      .stock-stepper button {
+        border: 0;
+        background: transparent;
+        color: var(--muted);
+        font-weight: 900;
+      }
+
+      .stock-stepper span {
+        display: grid;
+        place-items: center;
+        color: var(--ink);
+        font-size: 12px;
+        font-weight: 860;
       }
 
       .detail-empty {
@@ -503,14 +619,8 @@
       }
 
       .detail-art {
-        flex: 0 0 auto;
         width: 72px;
         height: 72px;
-        border: 1px solid rgba(23, 23, 23, 0.12);
-        border-radius: 8px;
-        background:
-          radial-gradient(circle at 50% 38%, #fff6e8 0 20%, transparent 21%),
-          var(--asset-color, #ff7eb6);
       }
 
       .detail h3 {
@@ -535,7 +645,7 @@
       .kpi {
         border: 1px solid var(--line);
         border-radius: 8px;
-        background: rgba(247, 244, 239, 0.62);
+        background: rgba(245, 242, 236, 0.66);
         padding: 12px;
       }
 
@@ -555,18 +665,84 @@
         margin: 0 14px 14px;
         border: 1px solid var(--line);
         border-radius: 8px;
-        background: rgba(255, 253, 248, 0.8);
+        background: rgba(255, 253, 248, 0.84);
         padding: 10px;
       }
 
       .note {
         margin: 0 14px 14px;
-        border-left: 3px solid var(--yellow);
+        border-left: 3px solid var(--amber);
         background: rgba(255, 200, 87, 0.12);
         color: #68521c;
         font-size: 12px;
         line-height: 1.55;
         padding: 10px 12px;
+      }
+
+      .modal-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 60;
+        display: grid;
+        place-items: end center;
+        background: rgba(23, 23, 23, 0.58);
+        padding: 18px;
+      }
+
+      .modal {
+        width: min(560px, 100%);
+        border-radius: 8px;
+        background: #fffdf8;
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.26);
+      }
+
+      .modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        border-bottom: 1px solid var(--line);
+        padding: 16px;
+      }
+
+      .modal-header h3 {
+        margin: 0;
+        font-size: 17px;
+      }
+
+      .modal-body {
+        padding: 16px;
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .checkbox-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 42px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 720;
+      }
+
+      .toast {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 80;
+        max-width: min(420px, calc(100vw - 36px));
+        border: 1px solid rgba(23, 23, 23, 0.1);
+        border-radius: 8px;
+        background: #171717;
+        color: #fffdf8;
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+        padding: 12px 14px;
+        font-size: 13px;
       }
 
       .hidden {
@@ -591,30 +767,40 @@
         }
 
         .topbar-inner {
-          align-items: flex-start;
-          flex-direction: column;
-          padding: 12px 0;
+          grid-template-columns: 1fr;
+          padding: 10px 0;
         }
 
         .nav-actions {
+          display: grid;
+          grid-template-columns: 42px 1fr 1fr 1fr;
           width: 100%;
         }
 
-        .text-button {
-          flex: 1;
+        .hero {
+          padding-top: 24px;
+        }
+
+        .hero-copy h2 {
+          font-size: 36px;
+        }
+
+        .hero-copy p {
+          font-size: 15px;
         }
 
         .metrics-row,
-        .kpi-grid {
+        .kpi-grid,
+        .form-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .mini-grid {
           grid-template-columns: repeat(2, 1fr);
         }
 
-        .hero-visual {
-          min-height: 300px;
-        }
-
-        .toy-stage {
-          grid-template-columns: repeat(2, 1fr);
+        .tabs {
+          top: 126px;
         }
 
         .asset-card {
@@ -629,6 +815,10 @@
         .change {
           justify-self: start;
         }
+
+        .card-actions {
+          justify-content: flex-start;
+        }
       }
     </style>
   </head>
@@ -638,15 +828,17 @@
         <div class="brand">
           <div class="logo" aria-hidden="true"><div class="logo-mark"></div></div>
           <div>
-            <h1 class="brand-title">poptracker</h1>
-            <p class="brand-subtitle" data-i18n="brandSubtitle">泡泡玛特潮玩收藏投资与二级市场价格追踪</p>
+            <h1 class="brand-title">poptracker PRO</h1>
+            <p class="brand-subtitle" data-i18n="brandSubtitle">泡泡玛特潮玩动态市值雷达</p>
           </div>
         </div>
         <div class="nav-actions">
           <button class="icon-button" id="refreshButton" title="Refresh data" aria-label="Refresh data">
             ↻
           </button>
+          <button class="text-button api-missing" id="apiButton" data-i18n="apiMissing">缺 API</button>
           <button class="text-button" id="langButton">English</button>
+          <button class="primary-button" id="addButton" data-i18n="addItem">录入</button>
         </div>
       </div>
     </header>
@@ -654,9 +846,9 @@
     <main class="shell">
       <section class="hero" aria-labelledby="heroTitle">
         <div class="hero-copy">
-          <h2 id="heroTitle" data-i18n="heroTitle">用真实成交价追踪潮玩资产温度</h2>
+          <h2 id="heroTitle" data-i18n="heroTitle">从静态账本升级为动态市值雷达</h2>
           <p data-i18n="heroText">
-            poptracker 将热门泡泡玛特 IP 的官方价、二级市场均价、七日涨跌、流动性、波动风险和收藏溢价合并到一个看板，适合做持仓记录、补货观察和价格复盘。
+            poptracker PRO 将 sold-comps.com / Apify 已售成交价、泡泡玛特资产矩阵和本地持仓管理整合到一个 H5 看板。API Token 仅保存在本地浏览器，适合手机端快速盘点、补货观察和二级市场复盘。
           </p>
           <div class="metrics-row">
             <div class="metric">
@@ -677,10 +869,22 @@
             </div>
           </div>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="toy-stage" id="toyStage"></div>
+        <div class="radar">
+          <div class="portfolio-value">
+            <div>
+              <span data-i18n="portfolioValue">持仓潮玩资产总估值</span>
+              <strong id="portfolioValue">$--</strong>
+            </div>
+            <div class="status">
+              <span data-i18n="stockCount">总收纳</span>
+              <strong id="portfolioStock">--</strong>
+            </div>
+          </div>
+          <div class="mini-grid" id="toyStage" aria-hidden="true"></div>
         </div>
       </section>
+
+      <nav class="tabs" id="tabs" aria-label="Asset tabs"></nav>
 
       <section class="layout">
         <aside class="panel filters" aria-label="Filters">
@@ -703,6 +907,7 @@
                 <option value="change" data-i18n="sortChange">七日涨幅最高</option>
                 <option value="liquidity" data-i18n="sortLiquidity">成交流动性最高</option>
                 <option value="risk" data-i18n="sortRisk">风险最低</option>
+                <option value="stock" data-i18n="sortStock">持仓最多</option>
               </select>
             </div>
             <div class="field">
@@ -715,8 +920,8 @@
           </div>
         </aside>
 
-        <section class="panel table-panel">
-          <div class="panel-header toolbar">
+        <section class="panel">
+          <div class="panel-header">
             <div>
               <h2 class="panel-title" data-i18n="assetMatrix">资产矩阵</h2>
               <div class="status" id="resultStatus">Loading market data...</div>
@@ -729,7 +934,7 @@
 
         <aside class="panel detail" aria-live="polite">
           <div id="detailEmpty" class="detail-empty" data-i18n="detailEmpty">
-            选择一个潮玩资产，查看 ROI、风险分数和 30 日成交均价走势。
+            选择一个潮玩资产，查看 ROI、库存、市值和 30 日成交均价走势。
           </div>
           <div id="detailContent" class="hidden">
             <div class="detail-hero">
@@ -753,8 +958,8 @@
                 <strong id="detailRoi">--</strong>
               </div>
               <div class="kpi">
-                <span data-i18n="riskScore">风险分</span>
-                <strong id="detailRisk">--</strong>
+                <span data-i18n="holdingValue">持仓市值</span>
+                <strong id="detailHolding">--</strong>
               </div>
             </div>
             <div class="chart-wrap">
@@ -766,25 +971,104 @@
       </section>
     </main>
 
+    <div class="modal-backdrop hidden" id="apiModal">
+      <div class="modal">
+        <div class="modal-header">
+          <h3 data-i18n="apiTitle">配置 sold-comps.com 凭据</h3>
+          <button class="icon-button" data-close-modal="apiModal" aria-label="Close">×</button>
+        </div>
+        <div class="modal-body">
+          <p class="status" data-i18n="apiHelp">
+            API Token 仅写入当前浏览器 localStorage，用于从 Apify sold listings 接口刷新单款成交价。
+          </p>
+          <div class="field">
+            <label for="apiInput">SOLD_COMPS_API_KEY</label>
+            <input id="apiInput" type="password" autocomplete="off" placeholder="apify_api_..." />
+          </div>
+          <button class="primary-button" id="saveApiButton" data-i18n="saveApi">保存 API Key</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-backdrop hidden" id="itemModal">
+      <div class="modal">
+        <div class="modal-header">
+          <h3 data-i18n="itemTitle">动态追加潮玩资产</h3>
+          <button class="icon-button" data-close-modal="itemModal" aria-label="Close">×</button>
+        </div>
+        <div class="modal-body">
+          <form id="itemForm">
+            <div class="field">
+              <label for="formName" data-i18n="formName">款式名称</label>
+              <input id="formName" required placeholder="隐藏小丑 / Have a Seat Sisi" />
+            </div>
+            <div class="form-grid">
+              <div class="field">
+                <label for="formIp">IP</label>
+                <select id="formIp">
+                  <option value="MOLLY">MOLLY</option>
+                  <option value="THE MONSTERS">Labubu / THE MONSTERS</option>
+                  <option value="SKULLPANDA">SKULLPANDA</option>
+                  <option value="DIMOO">DIMOO</option>
+                  <option value="HIRONO">HIRONO</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="formSeries" data-i18n="formSeries">系列</label>
+                <input id="formSeries" required placeholder="蒸汽朋克系列" />
+              </div>
+            </div>
+            <div class="form-grid">
+              <div class="field">
+                <label for="formPrice" data-i18n="formPrice">初始二手价 USD</label>
+                <input id="formPrice" type="number" min="0" step="0.01" value="15" />
+              </div>
+              <div class="field">
+                <label for="formStock" data-i18n="formStock">库存</label>
+                <input id="formStock" type="number" min="0" step="1" value="1" />
+              </div>
+            </div>
+            <label class="checkbox-row">
+              <input id="formChaser" type="checkbox" />
+              <span data-i18n="formChaser">标记为隐藏款</span>
+            </label>
+            <button class="primary-button" type="submit" data-i18n="saveItem">保存到本地持仓</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast hidden" id="toast"></div>
+
     <script>
+      const storageKeys = {
+        api: "SOLD_COMPS_API_KEY",
+        holdings: "poptracker_user_products",
+      };
+
       const state = {
         lang: navigator.language && navigator.language.startsWith("en") ? "en" : "zh",
         items: [],
         selectedSku: "",
         chart: null,
         mode: "collector",
+        currentTab: "all",
+        apiKey: localStorage.getItem(storageKeys.api) || "",
+        refreshing: new Set(),
       };
 
       const copy = {
         zh: {
-          brandSubtitle: "泡泡玛特潮玩收藏投资与二级市场价格追踪",
-          heroTitle: "用真实成交价追踪潮玩资产温度",
+          brandSubtitle: "泡泡玛特潮玩动态市值雷达",
+          heroTitle: "从静态账本升级为动态市值雷达",
           heroText:
-            "poptracker 将热门泡泡玛特 IP 的官方价、二级市场均价、七日涨跌、流动性、波动风险和收藏溢价合并到一个看板，适合做持仓记录、补货观察和价格复盘。",
+            "poptracker PRO 将 sold-comps.com / Apify 已售成交价、泡泡玛特资产矩阵和本地持仓管理整合到一个 H5 看板。API Token 仅保存在本地浏览器，适合手机端快速盘点、补货观察和二级市场复盘。",
           metricAssets: "追踪资产",
           metricAvgRoi: "平均溢价",
           metricHot: "强势标的",
           metricUpdated: "更新时间",
+          portfolioValue: "持仓潮玩资产总估值",
+          stockCount: "总收纳",
           filters: "筛选器",
           search: "搜索 SKU / IP / 系列",
           sort: "排序",
@@ -792,33 +1076,64 @@
           sortChange: "七日涨幅最高",
           sortLiquidity: "成交流动性最高",
           sortRisk: "风险最低",
+          sortStock: "持仓最多",
           viewMode: "视角",
           collector: "收藏",
           investor: "投资",
           assetMatrix: "资产矩阵",
-          detailEmpty: "选择一个潮玩资产，查看 ROI、风险分数和 30 日成交均价走势。",
+          detailEmpty: "选择一个潮玩资产，查看 ROI、库存、市值和 30 日成交均价走势。",
           msrp: "官方价",
           marketAvg: "二级均价",
           roi: "溢价率",
-          riskScore: "风险分",
+          holdingValue: "持仓市值",
           allIp: "全部 IP",
           results: "个结果",
           sold: "成交",
           median: "中位数",
           signal: "信号",
-          updated: "更新",
           noResults: "没有匹配结果，试试放宽筛选条件。",
           loadError: "数据文件未生成，请先运行 scripts/fetch_and_clean.py。",
+          addItem: "录入",
+          apiReady: "API 已就绪",
+          apiMissing: "缺 API",
+          refreshMarket: "刷新市值",
+          refreshing: "刷新中",
+          apiTitle: "配置 sold-comps.com 凭据",
+          apiHelp: "API Token 仅写入当前浏览器 localStorage，用于从 Apify sold listings 接口刷新单款成交价。",
+          saveApi: "保存 API Key",
+          itemTitle: "动态追加潮玩资产",
+          formName: "款式名称",
+          formSeries: "系列",
+          formPrice: "初始二手价 USD",
+          formStock: "库存",
+          formChaser: "标记为隐藏款",
+          saveItem: "保存到本地持仓",
+          tabAll: "全仓盘点",
+          tabHot: "行情雷达",
+          tabMine: "已入柜",
+          tabChaser: "隐藏款",
+          tabMolly: "MOLLY",
+          tabLabubu: "Labubu",
+          apiNeeded: "请先配置 API Token。",
+          apiSaved: "API Key 已保存到本地浏览器。",
+          noSoldComps: "外部市场未检索到近期匹配成交，已保持原价。",
+          refreshOk: "已同步最新成交中位价。",
+          refreshFail: "刷新失败，请检查 API Token 或网络。",
+          itemSaved: "资产已保存到本地持仓。",
+          stock: "库存",
+          chaser: "隐藏款",
         },
         en: {
-          brandSubtitle: "Pop Mart collectible investing and secondary market price tracking",
-          heroTitle: "Track collectible heat through completed sale prices",
+          brandSubtitle: "Pop Mart dynamic market radar",
+          heroTitle: "From static ledger to live market radar",
           heroText:
-            "poptracker combines MSRP, secondary-market average, seven-day change, liquidity, volatility, risk score and premium metrics for popular Pop Mart IPs in one practical dashboard.",
+            "poptracker PRO combines sold-comps.com / Apify completed sales, Pop Mart market data and local holding management in one mobile-ready H5 dashboard. API tokens stay in your browser localStorage.",
           metricAssets: "Tracked assets",
           metricAvgRoi: "Average premium",
           metricHot: "Strong watches",
           metricUpdated: "Updated",
+          portfolioValue: "Portfolio market value",
+          stockCount: "Total stock",
           filters: "Filters",
           search: "Search SKU / IP / series",
           sort: "Sort",
@@ -826,23 +1141,52 @@
           sortChange: "Highest 7D change",
           sortLiquidity: "Most liquid",
           sortRisk: "Lowest risk",
+          sortStock: "Most owned",
           viewMode: "Lens",
           collector: "Collector",
           investor: "Investor",
           assetMatrix: "Asset Matrix",
-          detailEmpty: "Pick an asset to inspect ROI, risk score and 30-day average sold prices.",
+          detailEmpty: "Pick an asset to inspect ROI, stock, market value and 30-day sold prices.",
           msrp: "MSRP",
           marketAvg: "Market avg",
           roi: "Premium",
-          riskScore: "Risk",
+          holdingValue: "Holding value",
           allIp: "All IP",
           results: "results",
           sold: "sold",
           median: "median",
           signal: "signal",
-          updated: "updated",
           noResults: "No matching assets. Try broader filters.",
           loadError: "Data files are missing. Run scripts/fetch_and_clean.py first.",
+          addItem: "Add",
+          apiReady: "API ready",
+          apiMissing: "No API",
+          refreshMarket: "Refresh market",
+          refreshing: "Refreshing",
+          apiTitle: "Configure sold-comps.com token",
+          apiHelp: "The API token is saved only to this browser localStorage and used for Apify sold listings refreshes.",
+          saveApi: "Save API Key",
+          itemTitle: "Add collectible asset",
+          formName: "Item name",
+          formSeries: "Series",
+          formPrice: "Initial market price USD",
+          formStock: "Stock",
+          formChaser: "Mark as chaser",
+          saveItem: "Save to local holdings",
+          tabAll: "All",
+          tabHot: "Radar",
+          tabMine: "Owned",
+          tabChaser: "Chasers",
+          tabMolly: "MOLLY",
+          tabLabubu: "Labubu",
+          apiNeeded: "Configure an API token first.",
+          apiSaved: "API Key saved to this browser.",
+          noSoldComps: "No recent matching completed sales found. Price unchanged.",
+          refreshOk: "Updated from latest median sold price.",
+          refreshFail: "Refresh failed. Check your API token or network.",
+          itemSaved: "Asset saved to local holdings.",
+          stock: "Stock",
+          chaser: "Chaser",
         },
       };
 
@@ -861,7 +1205,88 @@
       }
 
       function parseChange(value) {
-        return Number(String(value).replace("%", ""));
+        return Number(String(value || "0").replace("%", ""));
+      }
+
+      function storageHoldings() {
+        try {
+          return JSON.parse(localStorage.getItem(storageKeys.holdings) || "{}");
+        } catch {
+          return {};
+        }
+      }
+
+      function saveHoldings(map) {
+        localStorage.setItem(storageKeys.holdings, JSON.stringify(map));
+      }
+
+      function normalizePrice(value) {
+        if (typeof value === "number") return value;
+        return Number(String(value || "0").replace(/[^0-9.-]/g, "")) || 0;
+      }
+
+      function normalizeItem(raw) {
+        return {
+          ...raw,
+          stock_count: Number(raw.stock_count || 0),
+          is_chaser: Boolean(raw.is_chaser),
+          userItem: Boolean(raw.userItem),
+          avgSoldPrice: Number(raw.avgSoldPrice || raw.price || 0),
+          medianSoldPrice: Number(raw.medianSoldPrice || raw.price || raw.avgSoldPrice || 0),
+          retailPrice: Number(raw.retailPrice || raw.price || 0),
+          roi: Number(raw.roi || 0),
+          riskScore: Number(raw.riskScore || 50),
+          totalSold: Number(raw.totalSold || 0),
+          priceChange7d: raw.priceChange7d || "+0.0%",
+          color: raw.color || "#e94f86",
+          lastUpdated: raw.lastUpdated || raw.updated_at || new Date().toISOString().slice(0, 10),
+        };
+      }
+
+      function applyHoldings(items) {
+        const holdings = storageHoldings();
+        const merged = items.map((item) => {
+          const holding = holdings[item.sku] || {};
+          return normalizeItem({
+            ...item,
+            stock_count: holding.stock_count ?? 0,
+            is_chaser: holding.is_chaser ?? item.is_chaser ?? false,
+            avgSoldPrice: holding.avgSoldPrice ?? item.avgSoldPrice,
+            medianSoldPrice: holding.medianSoldPrice ?? item.medianSoldPrice,
+            lastUpdated: holding.lastUpdated ?? item.lastUpdated,
+          });
+        });
+
+        Object.values(holdings)
+          .filter((item) => item.userItem)
+          .forEach((item) => merged.unshift(normalizeItem(item)));
+        return merged;
+      }
+
+      function persistItem(item) {
+        const holdings = storageHoldings();
+        holdings[item.sku] = {
+          sku: item.sku,
+          ip: item.ip,
+          series: item.series,
+          name_zh: item.name_zh,
+          name_en: item.name_en,
+          rarity_zh: item.rarity_zh,
+          rarity_en: item.rarity_en,
+          color: item.color,
+          retailPrice: item.retailPrice,
+          avgSoldPrice: item.avgSoldPrice,
+          medianSoldPrice: item.medianSoldPrice,
+          priceChange7d: item.priceChange7d,
+          roi: item.roi,
+          riskScore: item.riskScore,
+          totalSold: item.totalSold,
+          stock_count: item.stock_count,
+          is_chaser: item.is_chaser,
+          userItem: item.userItem,
+          lastUpdated: item.lastUpdated,
+        };
+        saveHoldings(holdings);
       }
 
       function applyI18n() {
@@ -873,10 +1298,45 @@
         document.getElementById("searchInput").placeholder =
           state.lang === "zh" ? "Labubu、Molly、Skullpanda..." : "Labubu, Molly, Skullpanda...";
         buildIpOptions();
+        updateApiButton();
+        renderTabs();
         render();
-        if (state.selectedSku) {
-          loadDetail(state.selectedSku);
-        }
+        if (state.selectedSku) loadDetail(state.selectedSku);
+      }
+
+      function updateApiButton() {
+        const button = document.getElementById("apiButton");
+        button.textContent = state.apiKey ? t("apiReady") : t("apiMissing");
+        button.classList.toggle("api-ready", Boolean(state.apiKey));
+        button.classList.toggle("api-missing", !state.apiKey);
+      }
+
+      function tabDefinitions() {
+        return [
+          { id: "all", label: t("tabAll"), test: () => true },
+          { id: "hot", label: t("tabHot"), test: (item) => item.roi >= 100 || parseChange(item.priceChange7d) >= 5 },
+          { id: "mine", label: t("tabMine"), test: (item) => item.stock_count > 0 },
+          { id: "chaser", label: t("tabChaser"), test: (item) => item.is_chaser },
+          { id: "MOLLY", label: t("tabMolly"), test: (item) => item.ip === "MOLLY" },
+          { id: "THE MONSTERS", label: t("tabLabubu"), test: (item) => item.ip === "THE MONSTERS" },
+        ];
+      }
+
+      function renderTabs() {
+        const tabs = document.getElementById("tabs");
+        tabs.innerHTML = tabDefinitions()
+          .map((tab) => {
+            const count = state.items.filter(tab.test).length;
+            return `<button class="tab-button ${state.currentTab === tab.id ? "active" : ""}" data-tab="${tab.id}">${tab.label} (${count})</button>`;
+          })
+          .join("");
+        tabs.querySelectorAll("[data-tab]").forEach((button) => {
+          button.addEventListener("click", () => {
+            state.currentTab = button.dataset.tab;
+            renderTabs();
+            render();
+          });
+        });
       }
 
       function buildIpOptions() {
@@ -890,38 +1350,44 @@
       }
 
       function updateHeroArt() {
-        const stage = document.getElementById("toyStage");
-        stage.innerHTML = state.items
+        document.getElementById("toyStage").innerHTML = state.items
           .slice(0, 6)
           .map(
             (item) => `
-              <div class="toy" style="--toy-color: ${item.color}">
-                <div class="toy-label"><span>${item.ip}</span><strong>${item.priceChange7d}</strong></div>
+              <div class="mini-toy" style="--toy-color: ${item.color}">
+                <div class="mini-label"><span>${item.ip}</span><strong>${item.priceChange7d}</strong></div>
               </div>
             `,
           )
           .join("");
       }
 
-      function updateMetrics(items) {
+      function updateMetrics() {
         const avgRoi =
-          items.length === 0 ? 0 : items.reduce((sum, item) => sum + Number(item.roi), 0) / items.length;
-        const hot = items.filter((item) => item.signal_en === "Strong watch" || item.signal_zh === "重点观察").length;
-        const updated = items[0] ? items[0].lastUpdated.slice(5) : "--";
-        document.getElementById("metricAssets").textContent = String(items.length);
+          state.items.length === 0
+            ? 0
+            : state.items.reduce((sum, item) => sum + Number(item.roi || 0), 0) / state.items.length;
+        const hot = state.items.filter((item) => item.roi >= 100 || parseChange(item.priceChange7d) >= 5).length;
+        const updated = state.items[0] ? state.items[0].lastUpdated.slice(5) : "--";
+        const portfolio = state.items.reduce((sum, item) => sum + item.avgSoldPrice * item.stock_count, 0);
+        const stock = state.items.reduce((sum, item) => sum + item.stock_count, 0);
+        document.getElementById("metricAssets").textContent = String(state.items.length);
         document.getElementById("metricAvgRoi").textContent = `${avgRoi.toFixed(0)}%`;
         document.getElementById("metricHot").textContent = String(hot);
         document.getElementById("metricUpdated").textContent = updated;
+        document.getElementById("portfolioValue").textContent = fmt.format(portfolio);
+        document.getElementById("portfolioStock").textContent = `${stock}`;
       }
 
       function filteredItems() {
         const query = document.getElementById("searchInput").value.trim().toLowerCase();
         const ip = document.getElementById("ipSelect").value;
         const sort = document.getElementById("sortSelect").value;
+        const currentTab = tabDefinitions().find((tab) => tab.id === state.currentTab) || tabDefinitions()[0];
 
         const items = state.items.filter((item) => {
           const haystack = `${item.sku} ${item.ip} ${item.series} ${item.name_zh} ${item.name_en}`.toLowerCase();
-          return (ip === "all" || item.ip === ip) && (!query || haystack.includes(query));
+          return currentTab.test(item) && (ip === "all" || item.ip === ip) && (!query || haystack.includes(query));
         });
 
         const sorters = {
@@ -929,6 +1395,7 @@
           change: (a, b) => parseChange(b.priceChange7d) - parseChange(a.priceChange7d),
           liquidity: (a, b) => b.totalSold - a.totalSold,
           risk: (a, b) => a.riskScore - b.riskScore,
+          stock: (a, b) => b.stock_count - a.stock_count,
         };
         return items.sort(sorters[sort] || sorters.roi);
       }
@@ -937,7 +1404,7 @@
         const items = filteredItems();
         const list = document.getElementById("assetList");
         document.getElementById("resultStatus").textContent = `${items.length} ${t("results")}`;
-        updateMetrics(state.items);
+        updateMetrics();
         updateHeroArt();
 
         if (!items.length) {
@@ -948,29 +1415,43 @@
         list.innerHTML = items
           .map((item) => {
             const change = parseChange(item.priceChange7d);
-            const signal = state.lang === "zh" ? item.signal_zh : item.signal_en;
+            const signal = state.lang === "zh" ? item.signal_zh || "" : item.signal_en || "";
             const modeLine =
               state.mode === "collector"
-                ? `${item.ip} · ${item.series} · ${localRarity(item)}`
+                ? `${item.ip} · ${item.series} · ${localRarity(item) || ""}`
                 : `${t("median")}: ${fmt.format(item.medianSoldPrice)} · ${t("sold")}: ${item.totalSold}`;
+            const refreshing = state.refreshing.has(item.sku);
             return `
-              <button class="asset-card ${state.selectedSku === item.sku ? "selected" : ""}" data-sku="${item.sku}">
-                <div class="asset-main">
+              <article class="asset-card ${state.selectedSku === item.sku ? "selected" : ""}" data-card="${item.sku}">
+                <button class="asset-main" data-sku="${item.sku}">
                   <div class="swatch" style="--asset-color: ${item.color}"></div>
                   <div>
                     <h3 class="asset-name">${localName(item)}</h3>
                     <div class="asset-meta">
                       <span class="tag">${item.sku}</span>
                       <span class="tag">${modeLine}</span>
-                      <span class="tag">${t("signal")}: ${signal}</span>
+                      ${signal ? `<span class="tag">${t("signal")}: ${signal}</span>` : ""}
+                      ${item.is_chaser ? `<span class="tag">${t("chaser")}</span>` : ""}
+                    </div>
+                  </div>
+                </button>
+                <div class="asset-numbers">
+                  <div>
+                    <div class="price">${fmt.format(item.avgSoldPrice)}</div>
+                    <span class="change ${change >= 0 ? "positive" : "negative"}">${item.priceChange7d}</span>
+                  </div>
+                  <div class="card-actions">
+                    <button class="tiny-button" data-refresh="${item.sku}" ${refreshing ? "disabled" : ""}>
+                      ${refreshing ? t("refreshing") : t("refreshMarket")}
+                    </button>
+                    <div class="stock-stepper" aria-label="${t("stock")}">
+                      <button data-stock="${item.sku}" data-delta="-1">-</button>
+                      <span>${item.stock_count}</span>
+                      <button data-stock="${item.sku}" data-delta="1">+</button>
                     </div>
                   </div>
                 </div>
-                <div class="asset-numbers">
-                  <div class="price">${fmt.format(item.avgSoldPrice)}</div>
-                  <span class="change ${change >= 0 ? "positive" : "negative"}">${item.priceChange7d}</span>
-                </div>
-              </button>
+              </article>
             `;
           })
           .join("");
@@ -978,33 +1459,117 @@
         list.querySelectorAll("[data-sku]").forEach((button) => {
           button.addEventListener("click", () => loadDetail(button.dataset.sku));
         });
+        list.querySelectorAll("[data-stock]").forEach((button) => {
+          button.addEventListener("click", () => changeStock(button.dataset.stock, Number(button.dataset.delta)));
+        });
+        list.querySelectorAll("[data-refresh]").forEach((button) => {
+          button.addEventListener("click", () => refreshMarketPrice(button.dataset.refresh));
+        });
+      }
+
+      function changeStock(sku, delta) {
+        const item = state.items.find((asset) => asset.sku === sku);
+        if (!item) return;
+        item.stock_count = Math.max(0, item.stock_count + delta);
+        persistItem(item);
+        renderTabs();
+        render();
+        if (state.selectedSku === sku) loadDetail(sku);
+      }
+
+      async function refreshMarketPrice(sku) {
+        const item = state.items.find((asset) => asset.sku === sku);
+        if (!item) return;
+        if (!state.apiKey) {
+          showToast(t("apiNeeded"));
+          openModal("apiModal");
+          return;
+        }
+        state.refreshing.add(sku);
+        render();
+        const endpoint = `https://api.apify.com/v2/acts/caffein.dev~ebay-sold-listings/run-sync-get-dataset-items?token=${encodeURIComponent(state.apiKey)}`;
+        const keyword = `Pop Mart ${item.ip} ${item.series} ${localName(item)} blind box loose`;
+
+        try {
+          const response = await fetch(endpoint, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ keyword, count: 10, daysToScrape: 30 }),
+          });
+          if (!response.ok) throw new Error("bad response");
+          const rows = await response.json();
+          const prices = (Array.isArray(rows) ? rows : [])
+            .map((row) => normalizePrice(row.priceWithShipping || row.computedPrice || row.price || row.soldPrice))
+            .filter((price) => price > 1)
+            .sort((a, b) => a - b);
+          if (!prices.length) {
+            showToast(t("noSoldComps"));
+            return;
+          }
+          const median = prices[Math.floor(prices.length / 2)];
+          item.avgSoldPrice = Number(median.toFixed(2));
+          item.medianSoldPrice = Number(median.toFixed(2));
+          item.totalSold = prices.length;
+          item.roi = item.retailPrice ? Number((((median - item.retailPrice) / item.retailPrice) * 100).toFixed(1)) : 0;
+          item.lastUpdated = new Date().toISOString().slice(0, 10);
+          item.priceChange7d = "+0.0%";
+          persistItem(item);
+          showToast(t("refreshOk"));
+        } catch (error) {
+          showToast(t("refreshFail"));
+        } finally {
+          state.refreshing.delete(sku);
+          renderTabs();
+          render();
+          if (state.selectedSku === sku) loadDetail(sku);
+        }
       }
 
       async function loadDetail(sku) {
         state.selectedSku = sku;
+        const item = state.items.find((asset) => asset.sku === sku);
+        if (!item) return;
         render();
-        const response = await fetch(`./data/${sku}.json?ts=${Date.now()}`);
-        const detail = await response.json();
         document.getElementById("detailEmpty").classList.add("hidden");
         document.getElementById("detailContent").classList.remove("hidden");
-        document.getElementById("detailArt").style.setProperty("--asset-color", detail.color);
-        document.getElementById("detailName").textContent =
-          state.lang === "zh" ? detail.name_zh : detail.name_en;
+        document.getElementById("detailArt").style.setProperty("--asset-color", item.color);
+        document.getElementById("detailName").textContent = localName(item);
         document.getElementById("detailMeta").textContent =
-          `${detail.ip} · ${detail.series} · SKU ${detail.sku}`;
-        document.getElementById("detailRetail").textContent = fmt.format(detail.retailPrice);
-        document.getElementById("detailMarket").textContent = fmt.format(detail.marketData.avgSoldPrice);
-        document.getElementById("detailRoi").textContent = `${detail.marketData.roi >= 0 ? "+" : ""}${detail.marketData.roi}%`;
-        document.getElementById("detailRisk").textContent = `${detail.marketData.riskScore}/100`;
+          `${item.ip} · ${item.series} · SKU ${item.sku} · ${t("stock")} ${item.stock_count}`;
+        document.getElementById("detailRetail").textContent = fmt.format(item.retailPrice);
+        document.getElementById("detailMarket").textContent = fmt.format(item.avgSoldPrice);
+        document.getElementById("detailRoi").textContent = `${item.roi >= 0 ? "+" : ""}${item.roi}%`;
+        document.getElementById("detailHolding").textContent = fmt.format(item.avgSoldPrice * item.stock_count);
+
+        let detail = null;
+        if (!item.userItem) {
+          try {
+            const response = await fetch(`./data/${sku}.json?ts=${Date.now()}`);
+            detail = await response.json();
+          } catch {
+            detail = null;
+          }
+        }
         document.getElementById("detailNote").textContent =
-          state.lang === "zh" ? detail.notes_zh : detail.notes_en;
-        renderChart(detail);
+          detail && state.lang === "zh"
+            ? detail.notes_zh
+            : detail && state.lang === "en"
+              ? detail.notes_en
+              : "User-added holding. Refresh market price with your sold-comps API token.";
+        renderChart(item, detail);
       }
 
-      function renderChart(detail) {
+      function renderChart(item, detail) {
         const ctx = document.getElementById("historyChart");
-        const labels = detail.priceHistory.map((point) => point.date.slice(5));
-        const prices = detail.priceHistory.map((point) => point.avg);
+        const history =
+          detail && detail.priceHistory
+            ? detail.priceHistory
+            : Array.from({ length: 12 }, (_, index) => ({
+                date: `T-${11 - index}`,
+                avg: Number((item.avgSoldPrice * (0.96 + index * 0.006)).toFixed(2)),
+              }));
+        const labels = history.map((point) => point.date.slice(-5));
+        const prices = history.map((point) => point.avg);
         if (state.chart) state.chart.destroy();
         state.chart = new Chart(ctx, {
           type: "line",
@@ -1014,8 +1579,8 @@
               {
                 label: state.lang === "zh" ? "成交均价" : "Average sold",
                 data: prices,
-                borderColor: detail.color,
-                backgroundColor: `${detail.color}24`,
+                borderColor: item.color,
+                backgroundColor: `${item.color}24`,
                 borderWidth: 2,
                 pointRadius: 2,
                 tension: 0.28,
@@ -1041,13 +1606,72 @@
         });
       }
 
+      function openModal(id) {
+        document.getElementById(id).classList.remove("hidden");
+        if (id === "apiModal") document.getElementById("apiInput").value = state.apiKey;
+      }
+
+      function closeModal(id) {
+        document.getElementById(id).classList.add("hidden");
+      }
+
+      function showToast(message) {
+        const toast = document.getElementById("toast");
+        toast.textContent = message;
+        toast.classList.remove("hidden");
+        clearTimeout(showToast.timer);
+        showToast.timer = setTimeout(() => toast.classList.add("hidden"), 2600);
+      }
+
+      function addUserItem(event) {
+        event.preventDefault();
+        const name = document.getElementById("formName").value.trim();
+        const ip = document.getElementById("formIp").value;
+        const series = document.getElementById("formSeries").value.trim();
+        const price = Number(document.getElementById("formPrice").value || 0);
+        const stock = Number(document.getElementById("formStock").value || 0);
+        const chaser = document.getElementById("formChaser").checked;
+        const sku = `USER-${Date.now()}`;
+        const item = normalizeItem({
+          sku,
+          ip,
+          series,
+          name_zh: name,
+          name_en: name,
+          rarity_zh: chaser ? "隐藏款" : "本地录入",
+          rarity_en: chaser ? "Chaser" : "Local item",
+          color: chaser ? "#7159cf" : "#e94f86",
+          retailPrice: price,
+          avgSoldPrice: price,
+          medianSoldPrice: price,
+          priceChange7d: "+0.0%",
+          roi: 0,
+          riskScore: 50,
+          totalSold: 0,
+          stock_count: stock,
+          is_chaser: chaser,
+          userItem: true,
+          lastUpdated: new Date().toISOString().slice(0, 10),
+        });
+        state.items.unshift(item);
+        persistItem(item);
+        document.getElementById("itemForm").reset();
+        closeModal("itemModal");
+        renderTabs();
+        buildIpOptions();
+        render();
+        loadDetail(sku);
+        showToast(t("itemSaved"));
+      }
+
       async function init() {
         applyI18n();
         try {
           const response = await fetch(`./data/index.json?ts=${Date.now()}`);
           if (!response.ok) throw new Error("missing data");
-          state.items = await response.json();
+          state.items = applyHoldings(await response.json());
           buildIpOptions();
+          renderTabs();
           render();
           if (state.items[0]) loadDetail(state.items[0].sku);
         } catch (error) {
@@ -1061,6 +1685,19 @@
         applyI18n();
       });
       document.getElementById("refreshButton").addEventListener("click", init);
+      document.getElementById("apiButton").addEventListener("click", () => openModal("apiModal"));
+      document.getElementById("addButton").addEventListener("click", () => openModal("itemModal"));
+      document.getElementById("saveApiButton").addEventListener("click", () => {
+        state.apiKey = document.getElementById("apiInput").value.trim();
+        localStorage.setItem(storageKeys.api, state.apiKey);
+        updateApiButton();
+        closeModal("apiModal");
+        showToast(t("apiSaved"));
+      });
+      document.querySelectorAll("[data-close-modal]").forEach((button) => {
+        button.addEventListener("click", () => closeModal(button.dataset.closeModal));
+      });
+      document.getElementById("itemForm").addEventListener("submit", addUserItem);
       document.getElementById("searchInput").addEventListener("input", render);
       document.getElementById("ipSelect").addEventListener("change", render);
       document.getElementById("sortSelect").addEventListener("change", render);

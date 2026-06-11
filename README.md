@@ -1,6 +1,6 @@
 # poptracker
 
-泡泡玛特潮玩收藏投资与二级市场价格追踪产品。当前版本是一个零构建静态 MVP，适合直接部署到 GitHub Pages、Cloudflare Pages、Vercel Static Output 或任何静态托管服务。
+泡泡玛特潮玩收藏投资与二级市场价格追踪产品。当前版本是一个零构建静态 H5 产品，适合直接部署到 GitHub Pages、Cloudflare Pages、Vercel Static Output 或任何静态托管服务。
 
 ## 功能
 
@@ -8,9 +8,14 @@
 - 二级市场指标：均价、中位数、七日涨跌、成交量、ROI、波动率、风险分。
 - 投资与收藏双视角：收藏视角突出 IP、系列、稀缺属性；投资视角突出成交、风险和溢价。
 - 中英文双语界面。
+- H5 多 Tab：全仓盘点、行情雷达、已入柜、隐藏款、MOLLY、Labubu。
+- 本地持仓管理：录入资产、调整库存、估算持仓总市值、隐藏款标记。
+- API Key 本地配置：`SOLD_COMPS_API_KEY` 仅保存在浏览器 `localStorage`。
+- 单款一键刷新：通过 sold-comps.com / Apify completed sales 接口刷新最新成交中位价。
 - 搜索、IP 筛选、排序、详情面板、30 日价格走势图。
-- Python 数据生成脚本：多币种折算、IQR 异常值清洗、指标聚合、样例数据兜底。
+- Python 数据生成脚本：多币种折算、IQR 异常值清洗、指标聚合、Apify POST 接口兼容、样例数据兜底。
 - GitHub Actions 每日自动更新 `public/data/*.json`。
+- TypeScript 业务层：`src/PopmartManager.ts` 提供资产保存、库存调整、API Key 配置和实时估值刷新能力。
 
 ## 本地运行
 
@@ -39,12 +44,18 @@ http://localhost:8080
 - `Settings -> Secrets and variables -> Actions -> Secrets`
 - 新建 `SOLDCOMPS_API_KEY`
 
-如果你的 SoldComps 兼容 API 地址不是默认值，可以在：
+如果你的 sold-comps / Apify 兼容 API 地址不是默认值，可以在：
 
 - `Settings -> Secrets and variables -> Actions -> Variables`
 - 新建 `SOLDCOMPS_ENDPOINT`
 
-脚本预期接口返回 JSON 数组，或返回带 `results` 字段的对象。每条记录可以包含：
+脚本默认调用 Apify 同步接口：
+
+```text
+https://api.apify.com/v2/acts/caffein.dev~ebay-sold-listings/run-sync-get-dataset-items
+```
+
+脚本预期接口返回 JSON 数组，或返回带 `results` / `items` 字段的对象。每条记录可以包含：
 
 ```json
 {
@@ -55,6 +66,8 @@ http://localhost:8080
   "source": "eBay completed sales"
 }
 ```
+
+前端页面也支持在浏览器里直接配置 API Token，然后对单款资产点击“刷新市值”。这适合个人 H5 盘点场景，但生产级多人协作建议改成后端代理，避免在共享设备或录屏环境中暴露 Token。
 
 ## GitHub Pages 部署
 
