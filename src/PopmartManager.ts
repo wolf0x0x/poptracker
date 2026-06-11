@@ -37,6 +37,20 @@ export class PopmartManager {
     return [...this.items];
   }
 
+  public loadPersistedItems(): PopItem[] {
+    const primary = this.storage.getItem("poptracker_user_products");
+    const legacy = this.storage.getItem("poptracker_h5_products");
+    const raw = primary || legacy;
+    if (!raw) return this.getAllItems();
+    try {
+      const parsed = JSON.parse(raw);
+      this.items = Array.isArray(parsed) ? parsed : Object.values(parsed);
+      return this.getAllItems();
+    } catch {
+      return this.getAllItems();
+    }
+  }
+
   public saveItem(item: PopItem): void {
     const index = this.items.findIndex((candidate) => candidate.id === item.id);
     if (index >= 0) {

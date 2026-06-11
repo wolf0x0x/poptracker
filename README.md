@@ -2,6 +2,8 @@
 
 泡泡玛特潮玩收藏投资与二级市场价格追踪产品。当前版本是一个零构建静态 H5 产品，适合直接部署到 GitHub Pages、Cloudflare Pages、Vercel Static Output 或任何静态托管服务。
 
+GitHub 仓库地址：<https://github.com/wolf0x0x/poptracker>
+
 ## 功能
 
 - 泡泡玛特热门 IP 资产矩阵：Labubu、SKULLPANDA、MOLLY、DIMOO、HIRONO。
@@ -10,6 +12,9 @@
 - 中英文双语界面。
 - H5 多 Tab：全仓盘点、行情雷达、已入柜、隐藏款、MOLLY、Labubu。
 - 本地持仓管理：录入资产、调整库存、估算持仓总市值、隐藏款标记。
+- 移动端 Stepper：用独立 `+` / `-` 大触控区替代桌面右键/左键式交互，适配微信 WebView 和手机浏览器。
+- 响应式资产网格：移动端两列瀑布式卡片，桌面端保留筛选器、资产矩阵和详情面板。
+- 隐藏款视觉增强：隐藏款卡片带动态流动徽章和高亮边框。
 - API Key 本地配置：`SOLD_COMPS_API_KEY` 仅保存在浏览器 `localStorage`。
 - 单款一键刷新：通过 sold-comps.com / Apify completed sales 接口刷新最新成交中位价。
 - 搜索、IP 筛选、排序、详情面板、30 日价格走势图。
@@ -67,11 +72,18 @@ https://api.apify.com/v2/acts/caffein.dev~ebay-sold-listings/run-sync-get-datase
 }
 ```
 
-前端页面也支持在浏览器里直接配置 API Token，然后对单款资产点击“刷新市值”。这适合个人 H5 盘点场景，但生产级多人协作建议改成后端代理，避免在共享设备或录屏环境中暴露 Token。
+前端页面也支持在浏览器里直接配置 API Token，然后对单款资产点击“刷新市值”。请求流向为：
+
+```text
+H5 客户端 -> 本地组装 Pop Mart + IP + 系列 + 款式关键词 -> sold-comps / Apify 网关
+          <- 返回近 30 天成交列表，本地过滤并计算中位数 <-
+```
+
+这适合个人 H5 盘点场景，但生产级多人协作建议改成后端代理，避免在共享设备或录屏环境中暴露 Token。
 
 ## GitHub Pages 部署
 
-1. 推送本仓库到 GitHub。
+1. 推送本仓库到 GitHub：`wolf0x0x/poptracker`。
 2. 进入 `Settings -> Pages`。
 3. 选择 `Deploy from a branch`。
 4. 分支选择 `main`，目录选择 `/public`。

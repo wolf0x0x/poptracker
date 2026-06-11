@@ -43,6 +43,8 @@
           Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
           "PingFang SC", "Microsoft YaHei", sans-serif;
         -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+        user-select: none;
       }
 
       button,
@@ -53,6 +55,24 @@
 
       button {
         cursor: pointer;
+        touch-action: manipulation;
+      }
+
+      input,
+      select {
+        user-select: text;
+      }
+
+      @keyframes chaserFlow {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
       }
 
       .shell {
@@ -477,6 +497,20 @@
         transform: translateY(-1px);
       }
 
+      .asset-card.chaser-card {
+        border-color: rgba(113, 89, 207, 0.38);
+        background:
+          linear-gradient(#fffdf8, #fffdf8) padding-box,
+          linear-gradient(120deg, rgba(113, 89, 207, 0.7), rgba(233, 79, 134, 0.62), rgba(255, 200, 87, 0.56)) border-box;
+        box-shadow: 0 14px 38px rgba(113, 89, 207, 0.14);
+      }
+
+      .asset-card.chaser-card.selected {
+        box-shadow:
+          0 16px 42px rgba(113, 89, 207, 0.2),
+          0 0 0 3px rgba(113, 89, 207, 0.08);
+      }
+
       .asset-main {
         display: flex;
         min-width: 0;
@@ -521,6 +555,14 @@
         color: var(--muted);
         font-size: 11px;
         padding: 0 8px;
+      }
+
+      .chaser-badge {
+        border: 0;
+        background: linear-gradient(110deg, #6f55d8, #e94f86, #ffc857, #6f55d8);
+        background-size: 220% 220%;
+        color: #fff;
+        animation: chaserFlow 3s ease infinite;
       }
 
       .asset-numbers {
@@ -578,8 +620,8 @@
 
       .stock-stepper {
         display: inline-grid;
-        grid-template-columns: 28px 34px 28px;
-        min-height: 30px;
+        grid-template-columns: 34px 38px 34px;
+        min-height: 34px;
         overflow: hidden;
         border: 1px solid var(--line);
         border-radius: 8px;
@@ -590,6 +632,7 @@
         border: 0;
         background: transparent;
         color: var(--muted);
+        font-size: 16px;
         font-weight: 900;
       }
 
@@ -599,6 +642,13 @@
         color: var(--ink);
         font-size: 12px;
         font-weight: 860;
+      }
+
+      .mobile-hint {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.45;
       }
 
       .detail-empty {
@@ -819,6 +869,48 @@
         .card-actions {
           justify-content: flex-start;
         }
+
+        .asset-list {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 10px;
+        }
+
+        .asset-card {
+          align-content: space-between;
+          min-height: 238px;
+          padding: 12px;
+        }
+
+        .asset-main {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .swatch {
+          width: 100%;
+          height: auto;
+          aspect-ratio: 1;
+        }
+
+        .asset-name {
+          font-size: 13px;
+        }
+
+        .asset-meta .tag:nth-child(n + 3) {
+          display: none;
+        }
+
+        .tiny-button {
+          flex: 1 1 100%;
+          min-height: 36px;
+        }
+
+        .stock-stepper {
+          grid-template-columns: 42px 1fr 42px;
+          width: 100%;
+          min-height: 38px;
+        }
       }
     </style>
   </head>
@@ -981,6 +1073,9 @@
           <p class="status" data-i18n="apiHelp">
             API Token 仅写入当前浏览器 localStorage，用于从 Apify sold listings 接口刷新单款成交价。
           </p>
+          <p class="mobile-hint" data-i18n="apiFlow">
+            请求流向：H5 本地组装 Pop Mart + IP + 系列 + 款式关键词，直连 sold-comps / Apify 网关，返回近 30 天成交列表后在本机计算中位数。
+          </p>
           <div class="field">
             <label for="apiInput">SOLD_COMPS_API_KEY</label>
             <input id="apiInput" type="password" autocomplete="off" placeholder="apify_api_..." />
@@ -1044,6 +1139,7 @@
       const storageKeys = {
         api: "SOLD_COMPS_API_KEY",
         holdings: "poptracker_user_products",
+        legacyH5: "poptracker_h5_products",
       };
 
       const state = {
@@ -1100,6 +1196,8 @@
           refreshing: "刷新中",
           apiTitle: "配置 sold-comps.com 凭据",
           apiHelp: "API Token 仅写入当前浏览器 localStorage，用于从 Apify sold listings 接口刷新单款成交价。",
+          apiFlow:
+            "请求流向：H5 本地组装 Pop Mart + IP + 系列 + 款式关键词，直连 sold-comps / Apify 网关，返回近 30 天成交列表后在本机计算中位数。",
           saveApi: "保存 API Key",
           itemTitle: "动态追加潮玩资产",
           formName: "款式名称",
@@ -1165,6 +1263,8 @@
           refreshing: "Refreshing",
           apiTitle: "Configure sold-comps.com token",
           apiHelp: "The API token is saved only to this browser localStorage and used for Apify sold listings refreshes.",
+          apiFlow:
+            "Flow: the H5 app builds a Pop Mart + IP + series + item keyword locally, calls the sold-comps / Apify gateway, then computes the 30-day median on-device.",
           saveApi: "Save API Key",
           itemTitle: "Add collectible asset",
           formName: "Item name",
@@ -1210,7 +1310,31 @@
 
       function storageHoldings() {
         try {
-          return JSON.parse(localStorage.getItem(storageKeys.holdings) || "{}");
+          const primary = localStorage.getItem(storageKeys.holdings);
+          if (primary) return JSON.parse(primary);
+          const legacy = localStorage.getItem(storageKeys.legacyH5);
+          if (!legacy) return {};
+          const legacyRows = JSON.parse(legacy);
+          return Object.fromEntries(
+            legacyRows.map((item) => [
+              item.id || item.sku,
+              {
+                sku: item.id || item.sku,
+                ip: item.ip === "Labubu" ? "THE MONSTERS" : String(item.ip || "MOLLY").toUpperCase(),
+                series: item.series || "",
+                name_zh: item.name || item.name_zh,
+                name_en: item.name || item.name_en,
+                retailPrice: Number(item.price || 0),
+                avgSoldPrice: Number(item.price || 0),
+                medianSoldPrice: Number(item.price || 0),
+                stock_count: Number(item.stock_count || 0),
+                is_chaser: Boolean(item.is_chaser),
+                userItem: true,
+                color: item.is_chaser ? "#7159cf" : "#e94f86",
+                lastUpdated: new Date().toISOString().slice(0, 10),
+              },
+            ]),
+          );
         } catch {
           return {};
         }
@@ -1422,7 +1546,7 @@
                 : `${t("median")}: ${fmt.format(item.medianSoldPrice)} · ${t("sold")}: ${item.totalSold}`;
             const refreshing = state.refreshing.has(item.sku);
             return `
-              <article class="asset-card ${state.selectedSku === item.sku ? "selected" : ""}" data-card="${item.sku}">
+              <article class="asset-card ${state.selectedSku === item.sku ? "selected" : ""} ${item.is_chaser ? "chaser-card" : ""}" data-card="${item.sku}">
                 <button class="asset-main" data-sku="${item.sku}">
                   <div class="swatch" style="--asset-color: ${item.color}"></div>
                   <div>
@@ -1431,7 +1555,7 @@
                       <span class="tag">${item.sku}</span>
                       <span class="tag">${modeLine}</span>
                       ${signal ? `<span class="tag">${t("signal")}: ${signal}</span>` : ""}
-                      ${item.is_chaser ? `<span class="tag">${t("chaser")}</span>` : ""}
+                      ${item.is_chaser ? `<span class="tag chaser-badge">CHASER · ${t("chaser")}</span>` : ""}
                     </div>
                   </div>
                 </button>
