@@ -477,6 +477,12 @@
         object-fit: cover;
       }
 
+      .toy-art img:not([data-loaded="true"]),
+      .detail-art img:not([data-loaded="true"]),
+      .series-hero img:not([data-loaded="true"]) {
+        opacity: 0;
+      }
+
       .badge {
         display: inline-flex;
         min-height: 24px;
@@ -1204,6 +1210,11 @@
         return item.name_zh || item.name_en || item.series || item.sku;
       }
 
+      function imageMarkup(item, extraClass = "") {
+        if (!item.image) return "";
+        return `<img src="${item.image}" alt="${localName(item)}" class="${extraClass}" loading="lazy" decoding="async" onload="this.dataset.loaded='true'" onerror="this.remove()">`;
+      }
+
       function normalizeItem(raw) {
         const fmv = Number(raw.fairMarketValue || raw.medianSoldPrice || raw.avgSoldPrice || 0);
         const retail = Number(raw.retailPrice || 0);
@@ -1361,13 +1372,14 @@
         }
         const top = items[0];
         const insight = marketStats();
-        const cards = items.slice(0, 8).map((item, index) => {
+
+        const cards = items.map((item, index) => {
           const change = parseChange(item.priceChange7d);
           const badge = item.refreshTier === "hot" ? "24h refresh" : "7d refresh";
           return `
             <button class="item-card ${index === 0 ? "featured" : ""}" type="button" data-sku="${item.sku}" style="--asset-color:${item.color}">
               <div class="toy-art">
-                ${item.image ? `<img src="${item.image}" alt="${localName(item)}">` : ""}
+                ${imageMarkup(item)}
                 <span class="badge">${badge}</span>
               </div>
               <div class="card-body">
@@ -1384,6 +1396,7 @@
             </button>
           `;
         });
+
         cards.splice(
           Math.min(3, cards.length),
           0,
@@ -1470,7 +1483,7 @@
         page.style.setProperty("--asset-color", item.color);
         content.innerHTML = `
           <section class="series-hero">
-            ${item.image ? `<img src="${item.image}" alt="${localName(item)}">` : ""}
+            ${imageMarkup(item)}
             <div class="series-hero-content">
               <div>
                 <span class="badge">${story.year} 系列</span>
@@ -1622,7 +1635,7 @@
         document.getElementById("detailDrawer").classList.add("open");
         const art = document.getElementById("detailArt");
         art.style.setProperty("--asset-color", item.color);
-        art.innerHTML = item.image ? `<img src="${item.image}" alt="${localName(item)}">` : "";
+        art.innerHTML = imageMarkup(item);
         document.getElementById("detailIp").textContent = item.ip;
         document.getElementById("detailName").textContent = localName(item);
         document.getElementById("detailMeta").textContent = `${item.series} · ${item.rarity_zh || item.rarity_en || "Pop Mart"} · SKU ${item.sku}`;
