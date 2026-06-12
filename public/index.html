@@ -543,9 +543,13 @@
         return currentLang === "zh" ? "演示数据" : "Demo data";
       }
 
-      function imageMarkup(item, extraClass = "") {
+      function imageMarkup(item, extraClass = "", options = {}) {
         if (!item.image) return "";
-        return `<img src="${item.image}" alt="${localName(item)}" class="${extraClass}" loading="lazy" decoding="async" onload="this.dataset.loaded='true'" onerror="this.remove()">`;
+        const thumb = item.sku ? `/assets/sku/thumbs/${item.sku}.webp` : item.image;
+        const src = options.full ? item.image : thumb;
+        const loading = options.eager ? "eager" : "lazy";
+        const priority = options.eager ? "high" : "auto";
+        return `<img src="${src}" data-full="${item.image}" alt="${localName(item)}" class="${extraClass}" width="720" height="720" loading="${loading}" fetchpriority="${priority}" decoding="async" onload="this.dataset.loaded='true'" onerror="if(!this.dataset.fallback&&this.dataset.full){this.dataset.fallback='1';this.src=this.dataset.full}else{this.remove()}">`;
       }
 
       function normalizeItem(raw) {
@@ -703,7 +707,7 @@
           return `
             <button class="item-card ${index === 0 ? "featured" : ""}" type="button" data-sku="${item.sku}" style="--asset-color:${item.color}">
               <div class="toy-art">
-                ${imageMarkup(item)}
+                ${imageMarkup(item, "", { eager: index < 6 })}
                 <span class="badge">${badge}</span>
               </div>
               <div class="card-body">
@@ -796,7 +800,7 @@
 
         content.innerHTML = `
           <section class="series-hero">
-            ${imageMarkup(item)}
+            ${imageMarkup(item, "", { eager: true })}
             <div class="series-hero-content">
               <div>
                 <span class="badge">${dict.storyEra.replace("{year}", story.year)}</span>
@@ -894,7 +898,7 @@
 
         const art = document.getElementById("detailArt");
         art.style.setProperty("--asset-color", item.color);
-        art.innerHTML = imageMarkup(item);
+        art.innerHTML = imageMarkup(item, "", { eager: true });
 
         document.getElementById("detailIp").textContent = item.ip;
         document.getElementById("detailName").textContent = localName(item);
