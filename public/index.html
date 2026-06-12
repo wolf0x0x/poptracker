@@ -9,6 +9,35 @@
       id="pageDesc"
       content="Track real-time secondary market values, FMV trends, investment ROI, and collector price data for Pop Mart art toys powered by global auction completed sales."
     />
+
+    <link rel="alternate" hreflang="x-default" href="https://poptracker.pages.dev/" />
+    <link rel="alternate" hreflang="en" href="https://poptracker.pages.dev/#en" />
+    <link rel="alternate" hreflang="zh-CN" href="https://poptracker.pages.dev/#zh" />
+    <meta name="geo.region" content="SG" />
+    <meta name="geo.placename" content="Singapore" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "PopMart Designer Toys Secondary Market Value Index Guide",
+      "description": "Comprehensive statistical price guide for Pop Mart blind boxes including Labubu, Molly, Dimoo, Skullpanda. Powered by automated transaction normalization.",
+      "url": "https://poptracker.pages.dev/",
+      "about": [
+        {"@type": "Thing", "name": "Pop Mart"},
+        {"@type": "Thing", "name": "Blind Box"},
+        {"@type": "Thing", "name": "Labubu"},
+        {"@type": "Thing", "name": "Molly"}
+      ],
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "15.00",
+        "highPrice": "150.00",
+        "offerCount": "50"
+      }
+    }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
     <style>
       :root {
@@ -119,6 +148,7 @@
       .card-body { display: flex; flex: 1; flex-direction: column; gap: 12px; padding: 15px; }
       .card-title { margin-bottom: 3px; font-size: 18px; line-height: 1.22; }
       .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line); }
+      .card-grid span { display: flex; flex-direction: column; }
       .card-value { display: block; overflow: hidden; font-weight: 850; text-overflow: ellipsis; white-space: nowrap; }
 
       .insight-card { display: flex; min-height: 260px; flex-direction: column; justify-content: space-between; padding: 18px; background: #191c1d; color: #fff; }
@@ -126,7 +156,7 @@
       .side-stack { display: grid; align-content: start; gap: 14px; }
       .mini-panel { border: 1px solid var(--line); border-radius: 8px; background: var(--surface); padding: 16px; }
       .rank-list { display: grid; gap: 11px; }
-      .rank-row { display: grid; grid-template-columns: 24px minmax(0, 1fr) auto; gap: 10px; align-items: center; }
+      .rank-row { display: grid; grid-template-columns: 24px minmax(0, 1fr) auto; gap: 10px; align-items: center; background: none; border: none; padding: 0; text-align: left; }
       .rank-row strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
       .hidden-page { display: none; }
@@ -173,7 +203,6 @@
       .toast { position: fixed; left: 50%; bottom: 20px; z-index: 100; transform: translateX(-50%); border-radius: 8px; background: #191c1d; color: #fff; padding: 11px 14px; }
       .hidden { display: none !important; }
 
-      /* 多语言切换按钮样式 */
       .lang-switch { border: 1px solid var(--line) !important; font-weight: bold !important; color: var(--primary) !important; background: var(--surface) !important; }
 
       @media (max-width: 980px) {
@@ -210,8 +239,6 @@
         <nav class="nav" aria-label="Main Navigation">
           <a class="nav-link active" href="#home" data-t="navHome">Market Index</a>
           <a class="nav-link" href="#discover" data-t="navDiscover">Trending Grid</a>
-          <button class="ghost-button" id="refreshButton" type="button" data-t="btnSync">Fetch Market Trends</button>
-          <button class="ghost-button api-missing" id="apiButton" type="button" data-t="btnConnect">Global API Stream</button>
           <button class="ghost-button lang-switch" id="langSwitchBtn" type="button">ZH / EN</button>
         </nav>
       </div>
@@ -225,7 +252,7 @@
               <p class="eyebrow" data-t="dashboardEyebrow">Market Analytics Dashboard</p>
               <h1 data-t="mainTitle">Art Toy Secondary Market Financial Indicator</h1>
               <p class="lead" data-t="mainDesc">
-                PopTracker meticulously captures static completed transactions across global secondary marketplaces. Cleaned using local IQR outlier-cleansing and tail-trimming models, it aggregates fair value signals for trending Pop Mart designer items without exposing private ecosystem credentials.
+                PopTracker turns verified completed-sales data into a clean Pop Mart market index, using outlier filtering and trimmed-median valuation to help collectors read fair value, liquidity, and trend risk at a glance.
               </p>
             </div>
             <div class="market-index">
@@ -365,24 +392,9 @@
         <p class="muted" id="detailNote" style="margin: 8px 0 0"></p>
         <div class="detail-actions">
           <a class="primary-button" id="dealButton" href="#" target="_blank" rel="noopener" data-t="btnFindDeals">Find Marketplace Deals on eBay</a>
-          <button class="ghost-button" id="refreshOneButton" type="button" data-t="btnForceRefresh">Force Live Valuation Update</button>
         </div>
       </div>
     </section>
-
-    <div class="modal hidden" id="apiModal" role="dialog" aria-modal="true" aria-label="Ecosystem Link Credentials">
-      <div class="modal-card">
-        <h2 data-t="modalTitle">Link Global Transaction Stream Server (SoldComps)</h2>
-        <p class="muted" data-t="modalDesc">
-          Production actions securely deploy via GitHub Repository Action Secrets. For local sandbox runtime execution, inputs temporarily lock into localized secure storage grids.
-        </p>
-        <input id="apiInput" type="password" placeholder="Provide valid SOLDCOMPS_API_KEY..." />
-        <div class="detail-actions">
-          <button class="primary-button" id="saveApiButton" type="button" data-t="btnSaveApi">Bind Connection Channel</button>
-          <button class="ghost-button" data-close-modal="apiModal" type="button" data-t="btnCancelApi">Stay Offline</button>
-        </div>
-      </div>
-    </div>
 
     <div class="toast hidden" id="toast"></div>
 
@@ -392,7 +404,7 @@
           PopTracker · Secure Collector Pipeline · Algorithmic Risk Shielding Engine: IQR Extreme Outlier Filtering + 10% Trimmed Median Computation Framework.
         </div>
         <div style="font-size: 11px; color: var(--muted); line-height: 1.5; border-top: 1px solid var(--line); padding-top: 10px;">
-          <strong>Compliance Disclosure:</strong> This static analytical guide utilizes local storage blocks to preserve user-provided key tokens. Market values identify live/demo source status and do not constitute financial advice. We employ contextual cookie markers via Google AdSense programmatic partners and maintain external outbound affiliate query routes to retail venues including eBay via global developer partner programs. <a href="./privacy.html">Privacy Policy</a> · <a href="./disclaimer.html">Disclaimer</a>
+          <strong>Compliance Disclosure:</strong> PopTracker presents cached market analytics generated by a scheduled SoldComps data pipeline. Market values identify live/demo source status and do not constitute financial advice. We employ contextual cookie markers via Google AdSense programmatic partners and maintain external outbound affiliate query routes to retail venues including eBay via global developer partner programs. <a href="./privacy.html">Privacy Policy</a> · <a href="./disclaimer.html">Disclaimer</a>
         </div>
       </div>
     </footer>
@@ -415,13 +427,12 @@
         document.head.appendChild(script);
       })();
 
-      // 多语言地道本地化词汇映射矩阵系统（默认英文，面向欧美与东南亚）
+      // 多语言地道本地化词汇映射矩阵系统（中文版已全面对齐补全）
       const i18n = {
         en: {
-          navHome: "Market Index", navDiscover: "Trending Grid", btnSync: "Fetch Market Trends", btnConnect: "Global API Stream",
-          connected: "Live Connected", offline: "Offline Demo",
+          navHome: "Market Index", navDiscover: "Trending Grid",
           dashboardEyebrow: "Market Analytics Dashboard", mainTitle: "Art Toy Secondary Market Financial Indicator",
-          mainDesc: "PopTracker meticulously captures static completed transactions across global secondary marketplaces. Cleaned using local IQR outlier-cleansing and tail-trimming models, it aggregates fair value signals for trending Pop Mart designer items without exposing private ecosystem credentials.",
+          mainDesc: "PopTracker turns verified completed-sales data into a clean Pop Mart market index, using outlier filtering and trimmed-median valuation to help collectors read fair value, liquidity, and trend risk at a glance.",
           idxLabel: "Pop Price Index Value", metricCollected: "Tracked SKU Assets", metricSamples: "Verified Sale Records",
           metricRoi: "Average Secondary ROI", metricHotIp: "Dominant Trending IP", feedTitle: "Live Marketplace Ticker",
           feedDesc: "Granular stream of completed secondary trading data points", gridTitle: "Daily Hot Search Blind Box Wall",
@@ -430,20 +441,13 @@
           guideTitle: "Collector Strategy Guide", guideDesc: "Identify trending chase collectibles and avoid secondary inflated listings",
           btnBack: "← Return to Blind Box Grid", btnCloseDrawer: "Dismiss", lblRetail: "Retail Release Price",
           lblFmv: "Fair Market Value (FMV)", lblRoi: "Calculated ROI", lblRisk: "Volatility Risk Rating",
-          btnFindDeals: "Find Marketplace Deals on eBay", btnForceRefresh: "Force Live Valuation Update",
-          modalTitle: "Link Global Transaction Stream Server (SoldComps)",
-          modalDesc: "Production actions securely deploy via GitHub Repository Action Secrets. For local sandbox runtime execution, inputs temporarily lock into localized secure storage grids.",
-          btnSaveApi: "Bind Connection Channel", btnCancelApi: "Stay Offline",
+          btnFindDeals: "Find Marketplace Deals on eBay",
           statusLoading: "Synchronizing asset catalogue mapping...",
           statusLoaded: "Secondary data channels locked on {count} active asset SKUs",
           rankHeader: "Top Premium Item #{index}", minutesAgo: " mins ago via Auction · ",
           hotBadge: "🔥 24h Hot Alert", deepBadge: "⏳ 7d Valuation",
           chaserRarity: "Secret Chase Figure", regularRarity: "Standard Regular Figure",
           methodologyInfo: "Risk Strategy: {method} · Extracted from {sold} independent collector matchings · Synced at {date}",
-          toastMissingKey: "Please attach your token key within the 'Global API Stream' module first.",
-          toastSyncing: "Traversing cross-border clearing venues for authentic historical sales...",
-          toastSuccess: "Ecosystem tracking verified! Fair Market Valuation compiled.",
-          toastFailed: "Gateway exception. Verify token quota limits or credential status.",
           errNoData: "Data pipeline detached.", errNoDataSub: "Execute localized scripts 'python3 scripts/fetch_and_clean.py' to pipe local repository outputs.",
           storyEra: "✨ {year} Design Era", insTitle: "Global Frontiers", insDesc: "Secondary focus capital is presently consolidating into {hotIp}. The most prominent yield collectible is {name}, tracking at an aggregate benchmark of {price}.",
           specIp: "Primary IP Domain", specSeries: "Exclusive Series Title", specRetail: "MSRP Standard Price", specFreq: "Radar Tracking Cycle", specMethod: "Shield Valuation Engine",
@@ -451,10 +455,9 @@
           designTitle: "Blind Box Inspiration & Toy Soul", releaseTitle: "Official Release & Collectible Specs", guideTitleSide: "Secondary Avoid Inflated Guide"
         },
         zh: {
-          navHome: "潮玩大盘", navDiscover: "神款蹦迪墙", btnSync: "同步一手行情", btnConnect: "连线全球流",
-          connected: "全球连线中", offline: "离线演示版",
+          navHome: "潮玩大盘", navDiscover: "神款蹦迪墙",
           dashboardEyebrow: "Market Dashboard", mainTitle: "潮玩圈二级行情风向标",
-          mainDesc: "PopTracker 绝密追踪全球静态成交大数据，经智能去噪降噪模型精密清洗，一秒还原真实的泡泡玛特热门 IP 公允交易身价。无敏感 Token 注入公开网页，带娃友全方位避坑，掌握高阶潮玩理财流向！",
+          mainDesc: "PopTracker 将公开成交记录清洗为清晰的潮玩市场指数，用异常值过滤和修剪中位数模型呈现公允价、流动性与趋势风险，帮助收藏者更冷静地判断泡泡玛特二级行情。",
           idxLabel: "潮玩大盘欧气指数", metricCollected: "已收录潮玩款", metricSamples: "娃友交易标本",
           metricRoi: "平均溢价回报率", metricHotIp: "烫手顶流 IP", feedTitle: "圈内抢手成交动态",
           feedDesc: "动态反映全球二级市场最新成交流", gridTitle: "每日热搜盲盒墙",
@@ -463,20 +466,13 @@
           guideTitle: "淘娃指南", guideDesc: "按主线 IP、全网成交热度和破发/溢价风控精准筛娃",
           btnBack: "← 返回盲盒主墙", btnCloseDrawer: "收起", lblRetail: "官方发售价",
           lblFmv: "公允市价 (FMV)", lblRoi: "溢价回报率", lblRisk: "破发退热风险",
-          btnFindDeals: "去 eBay 全球集市捡漏", btnForceRefresh: "强制刷新此款身价",
-          modalTitle: "接入全球成交数据网 (SoldComps)",
-          modalDesc: "线上生产环境推荐通过 GitHub Secrets 自动化流安全注入。本地演示可直接手动临时写入浏览器。",
-          btnSaveApi: "保存连接", btnCancelApi: "暂不连线",
+          btnFindDeals: "去 eBay 全球集市捡漏",
           statusLoading: "正在连接盲盒墙生态...",
           statusLoaded: "雷达已成功锁定 {count} 个行情标的",
           rankHeader: "顶流物语 #{index}", minutesAgo: " 分钟前爆单 · ",
           hotBadge: "🔥 24h烫手极速情报", deepBadge: "⏳ 7天深度行情",
           chaserRarity: "欧气大爆发隐藏款", regularRarity: "常规常驻普通款",
           methodologyInfo: "风控策略：{method} · 本轮剔除噪声后共采纳 {sold} 笔娃友真成交 · 更新于 {date}",
-          toastMissingKey: "请先在右上角『连线全球流』中配置密钥凭证",
-          toastSyncing: "正在越洋捕捉最新的成交样本流...",
-          toastSuccess: "恭喜娃友，该款盲盒最新的真实身价已全网核算完毕！",
-          toastFailed: "捕获超时，请检查连线 Token 的额度及有效性",
           errNoData: "情报连接暂时中断", errNoDataSub: "请先通过后台运行 python3 scripts/fetch_and_clean.py 吐出静态盲盒仓储。",
           storyEra: "✨ {year} 荣耀纪元", insTitle: "圈内最前线", insDesc: "当前收藏热度正疯狂集聚在 {hotIp}。全网最傲视群雄的潮玩为 {name}，目前圈内参考基准价稳坐 {price}。",
           specIp: "主线所属 IP", specSeries: "限定系列名", specRetail: "官方参考抽盒价", specFreq: "行情追踪雷达频率", specMethod: "防斩杀估值风控",
@@ -485,20 +481,17 @@
         }
       };
 
-      // 建立多语言全局运行时状态，检测浏览器系统设置，默认设定为英文
       let currentLang = localStorage.getItem("POP_LANG") || "en";
 
       function applyLanguage() {
         document.documentElement.lang = currentLang;
         const dict = i18n[currentLang];
 
-        // 渲染文本节点
         document.querySelectorAll("[data-t]").forEach(el => {
           const key = el.dataset.t;
           if (dict[key]) el.textContent = dict[key];
         });
 
-        // 渲染属性节点值
         document.querySelectorAll("[data-t-ph]").forEach(el => {
           const key = el.dataset.tPh;
           if (dict[key]) el.placeholder = dict[key];
@@ -511,20 +504,12 @@
         if (state.items.length > 0) render();
       }
 
-      const storageKeys = { api: "SOLDCOMPS_API_KEY", legacyApi: "SOLD_COMPS_API_KEY" };
-      const savedApiKey = localStorage.getItem(storageKeys.api) || localStorage.getItem(storageKeys.legacyApi) || "";
-      if (savedApiKey && !localStorage.getItem(storageKeys.api)) {
-        localStorage.setItem(storageKeys.api, savedApiKey);
-        localStorage.removeItem(storageKeys.legacyApi);
-      }
       const state = {
-        apiKey: savedApiKey,
         chart: null,
         detailChart: null,
         currentIp: "all",
         items: [],
         selectedSku: "",
-        refreshing: new Set(),
       };
 
       const fmt = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
@@ -534,11 +519,6 @@
       function normalizePrice(value) {
         if (typeof value === "number") return value;
         return Number(String(value || "").replace(/[^0-9.]/g, "")) || 0;
-      }
-
-      function listingPrice(row) {
-        return normalizePrice(row.priceWithShipping || row.soldPrice || row.computedPrice || row.price || row.value)
-          + normalizePrice(row.priceWithShipping ? 0 : (row.shippingPrice || row.shipping || 0));
       }
 
       function normalizeHistory(history) {
@@ -552,15 +532,6 @@
       function lastHistoryValue(item) {
         const history = normalizeHistory(item.priceHistory);
         return history.length ? history[history.length - 1].avg : item.fairMarketValue;
-      }
-
-      function trimmedMedian(values, trimRatio = 0.1) {
-        const prices = values.filter((p) => p > 1).sort((a, b) => a - b);
-        if (!prices.length) return 0;
-        const trimCount = Math.floor(prices.length * trimRatio);
-        const trimmed = prices.slice(trimCount, prices.length - trimCount || prices.length);
-        const target = trimmed.length ? trimmed : prices;
-        return target.length % 2 ? target[Math.floor(target.length / 2)] : (target[Math.floor(target.length / 2) - 1] + target[Math.floor(target.length / 2)]) / 2;
       }
 
       function localName(item) {
@@ -611,14 +582,6 @@
           risk: (a, b) => a.riskScore - b.riskScore,
         };
         return items.sort(sorters[sort] || sorters.roi);
-      }
-
-      function updateApiButton() {
-        const button = document.getElementById("apiButton");
-        const dict = i18n[currentLang];
-        button.textContent = state.apiKey ? dict.connected : dict.offline;
-        button.classList.toggle("api-ready", Boolean(state.apiKey));
-        button.classList.toggle("api-missing", !state.apiKey);
       }
 
       function marketStats() {
@@ -758,7 +721,6 @@
           `;
         });
 
-        // 嵌入深度原生商业洞察卡片
         const insightText = dict.insDesc.replace("{hotIp}", insight.hotIp).replace("{name}", localName(top)).replace("{price}", fmt.format(top.fairMarketValue));
         cardsHtmlArray.splice(Math.min(2, cardsHtmlArray.length), 0, `
           <article class="insight-card">
@@ -773,10 +735,10 @@
           </article>
         `);
 
-        // 插入 AdSense 流内（In-Feed）广告广告，每 5 款潮玩动态流入一单元
+        // 在信息流（In-Feed）中自动流入无缝融合原生广告单元
         if (cardsHtmlArray.length >= 5 && CONFIG.slotInFeed) {
           const nativeAdCode = `
-            <div class="item-card adsense-native-card" style="padding:15px; background:var(--surface-low); min-height:340px; display:flex; flex-direction:column; justify-content:center;">
+            <div class="item-card adsense-native-card" style="padding:15px; background:var(--surface-low); min-height:340px; display:flex; flex-direction:column; justify-content:center; border: 1px dashed var(--line);">
               <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="${CONFIG.adsenseId}" data-ad-slot="${CONFIG.slotInFeed}"></ins>
             </div>
           `;
@@ -804,7 +766,10 @@
         document.querySelectorAll("#rankList [data-sku]").forEach((b) => b.addEventListener("click", () => navigateToSeries(b.dataset.sku)));
       }
 
-      function navigateToSeries(sku) { window.location.hash = `series/${encodeURIComponent(sku)}`; }
+      function navigateToSeries(sku) {
+        window.location.hash = `series/${encodeURIComponent(sku)}`;
+      }
+
       function showAppPage() {
         document.getElementById("appMain").classList.remove("hidden-page");
         document.getElementById("seriesDetailPage").classList.add("hidden-page");
@@ -820,7 +785,6 @@
 
         page.style.setProperty("--asset-color", item.color);
 
-        // 动态注入角色名本土化映射机制
         const mockCharacters = (item.characters || []).map((c, i) => ({
           name: currentLang === 'zh' ? (c.name_zh || c.name || `款式 ${i+1}`) : (c.name_en || c.name || `Variant ${i+1}`),
           rarity: i === 5 ? dict.chaserRarity : dict.regularRarity,
@@ -850,7 +814,7 @@
           </section>
 
           <div class="ad-banner">
-            <ins class="adsbygoogle" style="display:block" data-ad-client="${CONFIG.adsenseId}" data-ad-format="auto" full-width-responsive="true"></ins>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="${CONFIG.adsenseId}" data-ad-slot="${CONFIG.slotLeaderboard}" data-ad-format="auto" full-width-responsive="true"></ins>
           </div>
 
           <div class="series-content-grid">
@@ -865,7 +829,7 @@
               </section>
 
               <section class="series-section">
-                <h2>${dict.gridTitle.replace('每日热搜','')}</h2>
+                <h2>${dict.gridTitle.replace('每日热搜','').replace('Daily Hot Search ','')}</h2>
                 <div class="character-grid">
                   ${mockCharacters.map(c => `
                     <article class="character-card">
@@ -971,58 +935,13 @@
         });
       }
 
-      async function refreshMarketPrice(sku) {
-        const item = state.items.find((a) => a.sku === sku);
-        if (!item) return;
-        const dict = i18n[currentLang];
-        if (!state.apiKey) { showToast(dict.toastMissingKey); openModal("apiModal"); return; }
-
-        showToast(dict.toastSyncing);
-        const keyword = item.searchString || `Pop Mart ${item.ip} ${item.series}`;
-        const endpoint = new URL(CONFIG.soldCompsEndpoint);
-        endpoint.searchParams.set("keyword", keyword);
-        endpoint.searchParams.set("count", "40");
-        endpoint.searchParams.set("page", "1");
-        endpoint.searchParams.set("ebaySite", "ebay.com");
-
-        try {
-          const response = await fetch(endpoint.toString(), { headers: { "Authorization": `Bearer ${state.apiKey}`, "Accept": "application/json" } });
-          if (!response.ok) throw new Error();
-          const rows = await response.json();
-          const prices = (Array.isArray(rows) ? rows : rows.results || rows.items || []).map(listingPrice).filter(p => p > 1);
-          const median = trimmedMedian(prices);
-          if (!median) throw new Error();
-
-          item.fairMarketValue = Number(median.toFixed(2));
-          item.totalSold = prices.length;
-          item.roi = item.retailPrice ? Number((((item.fairMarketValue - item.retailPrice) / item.retailPrice) * 100).toFixed(1)) : item.roi;
-          item.lastUpdated = new Date().toISOString().slice(0, 10);
-          item.dataSource = "live";
-          item.priceHistory = normalizeHistory(item.priceHistory).filter((point) => point.date !== item.lastUpdated);
-          item.priceHistory.push({ date: item.lastUpdated, avg: item.fairMarketValue });
-          showToast(dict.toastSuccess);
-        } catch {
-          showToast(dict.toastFailed);
-        } finally {
-          render();
-          loadDetail(sku);
-        }
-      }
-
       function render() {
         renderMarket();
         renderFeed();
         renderChips();
         renderCards();
         renderRank();
-        updateApiButton();
       }
-
-      function openModal(id) {
-        document.getElementById(id).classList.remove("hidden");
-        if (id === "apiModal") document.getElementById("apiInput").value = state.apiKey;
-      }
-      function closeModal(id) { document.getElementById(id).classList.add("hidden"); }
       function showToast(msg) {
         const t = document.getElementById("toast"); t.textContent = msg; t.classList.remove("hidden");
         clearTimeout(showToast.timer); showToast.timer = setTimeout(() => t.classList.add("hidden"), 2600);
@@ -1042,28 +961,16 @@
         }
       }
 
-      // 绑定多语言切换器触发按钮
       document.getElementById("langSwitchBtn").addEventListener("click", () => {
         currentLang = currentLang === "en" ? "zh" : "en";
         localStorage.setItem("POP_LANG", currentLang);
         applyLanguage();
       });
 
-      document.getElementById("refreshButton").addEventListener("click", init);
-      document.getElementById("apiButton").addEventListener("click", () => openModal("apiModal"));
-      document.getElementById("saveApiButton").addEventListener("click", () => {
-        state.apiKey = document.getElementById("apiInput").value.trim();
-        localStorage.setItem(storageKeys.api, state.apiKey);
-        localStorage.removeItem(storageKeys.legacyApi);
-        updateApiButton();
-        closeModal("apiModal");
-      });
-      document.querySelectorAll("[data-close-modal]").forEach((b) => b.addEventListener("click", () => closeModal(b.dataset.closeModal)));
       document.getElementById("searchInput").addEventListener("input", render);
       document.getElementById("sortSelect").addEventListener("change", render);
       document.getElementById("closeDetailButton").addEventListener("click", closeDrawer);
       document.getElementById("drawerOverlay").addEventListener("click", closeDrawer);
-      document.getElementById("refreshOneButton").addEventListener("click", () => { if (state.selectedSku) refreshMarketPrice(state.selectedSku); });
       document.getElementById("backToHomeButton").addEventListener("click", () => { window.location.hash = "home"; });
       window.addEventListener("hashchange", route);
 

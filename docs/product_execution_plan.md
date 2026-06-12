@@ -30,7 +30,7 @@
 
 5. H5 操作体验
 
-- 保留移动端资产网格、隐藏款动效、API 本地配置和行情刷新。
+- 保留移动端资产网格、隐藏款动效、系列详情页和静态行情浏览。
 - 详情页显示估值方法说明。
 
 ## 需要人工完成
@@ -38,8 +38,8 @@
 1. API 与密钥
 
 - 在 GitHub Actions Secret 中配置 `SOLDCOMPS_API_KEY`。
-- 如接口不是默认 Apify actor，配置 `SOLDCOMPS_ENDPOINT`。
-- 在 H5 演示设备上，可通过右上角 API 设置面板手动写入 Token。
+- 如接口不是默认 SoldComps `/v1/scrape`，配置 `SOLDCOMPS_ENDPOINT`。
+- 本地调试仅使用 `.env` 保存密钥，前端正式版不提供公开网页密钥输入入口。
 
 2. 商品数据库扩充
 

@@ -14,10 +14,8 @@ GitHub 仓库地址：<https://github.com/wolf0x0x/poptracker>
 - 二级市场指标：均价、中位数、七日涨跌、成交量、ROI、风险分。
 - 动态 SEO：详情页自动注入 `Product Schema`，用于搜索引擎理解成交价区间。
 - AdSense：已接入发布者 `ca-pub-8695398658548679`，广告位 slot 需在 AdSense 后台创建后补入。
-- API Key 本地配置：`SOLDCOMPS_API_KEY` 仅保存在浏览器 `localStorage`。
-- 单款一键刷新：通过 sold-comps.com / Apify completed sales 接口刷新最新成交中位价。
 - 伪纯前端架构：GitHub Actions 每日拉取 SoldComps，前端读取同域 `public/data/*.json`。
-- Python 数据生成脚本：多币种折算、IQR 异常值清洗、指标聚合、Apify POST 接口兼容、live/demo 数据源标记。
+- Python 数据生成脚本：多币种折算、IQR 异常值清洗、指标聚合、SoldComps GET 接口兼容、live/demo 数据源标记。
 
 ## 产品执行步骤
 
@@ -144,10 +142,6 @@ ALLOW_DEMO_DATA=false
 
 当 sold-comps 兼容接口失败时，脚本会优先保留已有 JSON 数据；如果没有旧数据可保留，则工作流失败，避免把 demo 数据伪装成真实行情。
 
-### H5 离线 / 演示模式
-
-前端页面右上角点击 `缺 API` / `API ready` 打开设置面板，填入 `SOLDCOMPS_API_KEY`。该值只写入当前浏览器 `localStorage`，用于当前设备上的单款“刷新市值”。旧版 `SOLD_COMPS_API_KEY` 本地键会自动迁移到统一命名。
-
 脚本默认调用 SoldComps 同步接口：
 
 ```text
@@ -166,14 +160,14 @@ https://api.sold-comps.com/v1/scrape
 }
 ```
 
-前端单款刷新请求流向为：
+生产数据刷新流向为：
 
 ```text
-H5 客户端 -> 本地组装 Pop Mart + IP + 系列 + 款式关键词 -> SoldComps /v1/scrape
-          <- 返回近 30 天成交列表，本地过滤并计算中位数 <-
+GitHub Actions / 本地脚本 -> 组装 Pop Mart + IP + 系列 + 款式关键词 -> SoldComps /v1/scrape
+                         <- 返回成交列表，脚本过滤并计算中位数，写入 public/data/*.json <-
 ```
 
-这适合个人 H5 盘点场景，但生产级多人协作建议改成后端代理，避免在共享设备或录屏环境中暴露 Token。
+正式版前端不暴露手动输入密钥入口，只读取已经生成的静态 JSON。真实密钥仅应放在 GitHub Actions Secret 或本机 `.env`。
 
 ## GitHub Pages 部署
 
