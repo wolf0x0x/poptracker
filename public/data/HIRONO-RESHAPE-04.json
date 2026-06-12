@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Hirono%22+AND+%22Reshape%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
   "retailPrice": 16.0,
-  "lastUpdated": "2026-06-11",
+  "lastUpdated": "2026-06-12",
   "marketData": {
     "avgSoldPrice": 40.28,
     "medianSoldPrice": 40.12,
@@ -35,9 +35,9 @@
     "riskScore": 56,
     "cleanedSampleSize": 41,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+3.8%",
-    "trend": "range",
-    "trend_zh": "区间震荡",
+    "priceChange7d": "+9.9%",
+    "trend": "breakout",
+    "trend_zh": "突破上涨",
     "signal": "hold",
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold"
@@ -161,6 +161,10 @@
     },
     {
       "date": "2026-06-11",
+      "avg": 40.12
+    },
+    {
+      "date": "2026-06-12",
       "avg": 40.12
     }
   ],

@@ -21,7 +21,7 @@
   "refreshIntervalHours": 24,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Crybaby%22+AND+%22Sad+Club%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
   "retailPrice": 16.99,
-  "lastUpdated": "2026-06-11",
+  "lastUpdated": "2026-06-12",
   "marketData": {
     "avgSoldPrice": 38.93,
     "medianSoldPrice": 38.73,
@@ -35,7 +35,7 @@
     "riskScore": 54,
     "cleanedSampleSize": 41,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-19.5%",
+    "priceChange7d": "-18.2%",
     "trend": "cooldown",
     "trend_zh": "热度回落",
     "signal": "hold",
@@ -161,6 +161,10 @@
     },
     {
       "date": "2026-06-11",
+      "avg": 38.73
+    },
+    {
+      "date": "2026-06-12",
       "avg": 38.73
     }
   ],

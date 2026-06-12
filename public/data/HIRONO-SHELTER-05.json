@@ -21,7 +21,7 @@
   "refreshIntervalHours": 24,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Hirono%22+AND+%22Shelter%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
   "retailPrice": 16.99,
-  "lastUpdated": "2026-06-11",
+  "lastUpdated": "2026-06-12",
   "marketData": {
     "avgSoldPrice": 58.94,
     "medianSoldPrice": 58.13,
@@ -35,9 +35,9 @@
     "riskScore": 68,
     "cleanedSampleSize": 42,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+4.2%",
-    "trend": "range",
-    "trend_zh": "区间震荡",
+    "priceChange7d": "+9.5%",
+    "trend": "breakout",
+    "trend_zh": "突破上涨",
     "signal": "hold",
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold"
@@ -161,6 +161,10 @@
     },
     {
       "date": "2026-06-11",
+      "avg": 58.13
+    },
+    {
+      "date": "2026-06-12",
       "avg": 58.13
     }
   ],

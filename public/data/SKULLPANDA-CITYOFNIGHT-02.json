@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Skullpanda%22+AND+%22City+of+Night%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-11",
+  "lastUpdated": "2026-06-12",
   "marketData": {
     "avgSoldPrice": 40.53,
     "medianSoldPrice": 40.27,
@@ -35,7 +35,7 @@
     "riskScore": 58,
     "cleanedSampleSize": 42,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+9.1%",
+    "priceChange7d": "+9.5%",
     "trend": "breakout",
     "trend_zh": "突破上涨",
     "signal": "hold",
@@ -161,6 +161,10 @@
     },
     {
       "date": "2026-06-11",
+      "avg": 40.27
+    },
+    {
+      "date": "2026-06-12",
       "avg": 40.27
     }
   ],

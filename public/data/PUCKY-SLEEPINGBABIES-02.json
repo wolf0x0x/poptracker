@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Pucky%22+AND+%22Sleeping+Babies%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-11",
+  "lastUpdated": "2026-06-12",
   "marketData": {
     "avgSoldPrice": 43.28,
     "medianSoldPrice": 43.36,
@@ -35,9 +35,9 @@
     "riskScore": 54,
     "cleanedSampleSize": 38,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+7.2%",
-    "trend": "range",
-    "trend_zh": "区间震荡",
+    "priceChange7d": "+13.1%",
+    "trend": "breakout",
+    "trend_zh": "突破上涨",
     "signal": "watch",
     "signal_zh": "重点观察",
     "signal_en": "Strong watch"
@@ -161,6 +161,10 @@
     },
     {
       "date": "2026-06-11",
+      "avg": 43.36
+    },
+    {
+      "date": "2026-06-12",
       "avg": 43.36
     }
   ],

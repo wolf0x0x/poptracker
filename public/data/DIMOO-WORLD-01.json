@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Dimoo%22+AND+(%22World%22+OR+%22Animal%22)+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-11",
+  "lastUpdated": "2026-06-12",
   "marketData": {
     "avgSoldPrice": 26.63,
     "medianSoldPrice": 26.86,
@@ -35,9 +35,9 @@
     "riskScore": 44,
     "cleanedSampleSize": 39,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+6.1%",
-    "trend": "range",
-    "trend_zh": "区间震荡",
+    "priceChange7d": "+15.9%",
+    "trend": "breakout",
+    "trend_zh": "突破上涨",
     "signal": "hold",
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold"
@@ -161,6 +161,10 @@
     },
     {
       "date": "2026-06-11",
+      "avg": 26.86
+    },
+    {
+      "date": "2026-06-12",
       "avg": 26.86
     }
   ],

@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Hirono%22+AND+%22Little+Mischief%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-11",
+  "lastUpdated": "2026-06-12",
   "marketData": {
     "avgSoldPrice": 30.82,
     "medianSoldPrice": 30.64,
@@ -35,7 +35,7 @@
     "riskScore": 51,
     "cleanedSampleSize": 42,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+2.1%",
+    "priceChange7d": "-2.1%",
     "trend": "range",
     "trend_zh": "区间震荡",
     "signal": "hold",
@@ -161,6 +161,10 @@
     },
     {
       "date": "2026-06-11",
+      "avg": 30.64
+    },
+    {
+      "date": "2026-06-12",
       "avg": 30.64
     }
   ],

@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Skullpanda%22+AND+%22Action+Cut%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-11",
+  "lastUpdated": "2026-06-12",
   "marketData": {
     "avgSoldPrice": 56.34,
     "medianSoldPrice": 53.9,
@@ -35,7 +35,7 @@
     "riskScore": 69,
     "cleanedSampleSize": 42,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+6.0%",
+    "priceChange7d": "+7.4%",
     "trend": "range",
     "trend_zh": "区间震荡",
     "signal": "hold",
@@ -161,6 +161,10 @@
     },
     {
       "date": "2026-06-11",
+      "avg": 53.9
+    },
+    {
+      "date": "2026-06-12",
       "avg": 53.9
     }
   ],

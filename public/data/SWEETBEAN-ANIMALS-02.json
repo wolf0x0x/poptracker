@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Sweet+Bean%22+AND+%22Animals%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-11",
+  "lastUpdated": "2026-06-12",
   "marketData": {
     "avgSoldPrice": 62.21,
     "medianSoldPrice": 63.27,
@@ -35,9 +35,9 @@
     "riskScore": 69,
     "cleanedSampleSize": 42,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+1.5%",
-    "trend": "range",
-    "trend_zh": "区间震荡",
+    "priceChange7d": "+10.3%",
+    "trend": "breakout",
+    "trend_zh": "突破上涨",
     "signal": "hold",
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold"
@@ -161,6 +161,10 @@
     },
     {
       "date": "2026-06-11",
+      "avg": 63.27
+    },
+    {
+      "date": "2026-06-12",
       "avg": 63.27
     }
   ],
