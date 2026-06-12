@@ -174,52 +174,26 @@
     "demo fallback"
   ],
   "story": {
-    "year": "2026",
-    "tagline": "THE MONSTERS 的 Catch Me If You Can 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-    "intro": "Labubu 捉迷藏 以 THE MONSTERS 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-    "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-    "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+    "year": "2024",
+    "tagline": "神秘捉迷藏，捕捉潮流多变的情绪。",
+    "intro": "Catch Me If You Can 系列通过生动有趣的躲藏姿态展现 The Monsters 家族的调皮天性。",
+    "philosophy": "结合了空间场景感，为每一款盲盒赋予了立体互动叙事。"
   },
   "characters": [
     {
-      "name": "THE 主角款",
+      "name": "小木屋躲避者",
       "rarity": "常规款",
       "color": "#b8e986"
     },
     {
-      "name": "THE 夜色款",
+      "name": "面具精灵",
       "rarity": "常规款",
       "color": "#b8e986"
     },
     {
-      "name": "THE 甜梦款",
-      "rarity": "常规款",
-      "color": "#b8e986"
-    },
-    {
-      "name": "THE 巡游款",
-      "rarity": "常规款",
-      "color": "#b8e986"
-    },
-    {
-      "name": "THE 独白款",
-      "rarity": "常规款",
-      "color": "#b8e986"
-    },
-    {
-      "name": "THE 隐藏款",
+      "name": "隐藏款-悄悄窥视",
       "rarity": "概率稀缺",
       "color": "#191c1d"
-    },
-    {
-      "name": "THE 节日款",
-      "rarity": "主题款",
-      "color": "#b8e986"
-    },
-    {
-      "name": "THE 收藏款",
-      "rarity": "高热度",
-      "color": "#b8e986"
     }
   ],
   "notes_zh": "价格为样例或 API 聚合结果，不构成投资建议。请以真实成交、品相、隐藏款概率和平台手续费综合判断。",

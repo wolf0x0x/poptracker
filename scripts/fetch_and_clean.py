@@ -293,21 +293,22 @@ def generate_default_story(item, today):
     name = item.get("name_zh") or item.get("name_en", "")
     return {
         "year": today[:4],
-        "tagline": f"{ip} 的 {series} 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-        "intro": f"{name} 以 {ip} 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-        "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-        "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。",
+        "tagline": f"{ip} {series} 极具升值潜力的二级市场标的。",
+        "intro": f"作为 {ip} 矩阵的重要成员，{name} (系列: {series}) 在二级交易市场表现出极高的换手率与价格稳定性。",
+        "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+        "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。",
     }
 
 
 def generate_default_characters(item):
-    base_names = ["主角款", "夜色款", "甜梦款", "巡游款", "独白款", "隐藏款", "节日款", "收藏款"]
+    base_styles = ["经典核心款", "幻影午夜款", "流光原色款", "复古复刻款", "马戏巡游款", "异色隐藏款", "假日限定款", "典藏尊享款"]
     base_rarities = ["常规款", "常规款", "常规款", "常规款", "常规款", "概率稀缺", "主题款", "高热度"]
     ip_prefix = item.get("ip", "").split(" ")[0]
+    series_prefix = item.get("series", "").split(" ")[0]
     chars = []
     for i in range(8):
         color = "#191c1d" if i == 5 else item.get("color", "#6b38d4")
-        chars.append({"name": f"{ip_prefix} {base_names[i]}", "rarity": base_rarities[i], "color": color})
+        chars.append({"name": f"{ip_prefix} {series_prefix}·{base_styles[i]}", "rarity": base_rarities[i], "color": color})
     return chars
 
 

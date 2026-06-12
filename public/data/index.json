@@ -300,52 +300,26 @@
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
     "story": {
-      "year": "2026",
-      "tagline": "THE MONSTERS 的 Catch Me If You Can 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Labubu 捉迷藏 以 THE MONSTERS 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "year": "2024",
+      "tagline": "神秘捉迷藏，捕捉潮流多变的情绪。",
+      "intro": "Catch Me If You Can 系列通过生动有趣的躲藏姿态展现 The Monsters 家族的调皮天性。",
+      "philosophy": "结合了空间场景感，为每一款盲盒赋予了立体互动叙事。"
     },
     "characters": [
       {
-        "name": "THE 主角款",
+        "name": "小木屋躲避者",
         "rarity": "常规款",
         "color": "#b8e986"
       },
       {
-        "name": "THE 夜色款",
+        "name": "面具精灵",
         "rarity": "常规款",
         "color": "#b8e986"
       },
       {
-        "name": "THE 甜梦款",
-        "rarity": "常规款",
-        "color": "#b8e986"
-      },
-      {
-        "name": "THE 巡游款",
-        "rarity": "常规款",
-        "color": "#b8e986"
-      },
-      {
-        "name": "THE 独白款",
-        "rarity": "常规款",
-        "color": "#b8e986"
-      },
-      {
-        "name": "THE 隐藏款",
+        "name": "隐藏款-悄悄窥视",
         "rarity": "概率稀缺",
         "color": "#191c1d"
-      },
-      {
-        "name": "THE 节日款",
-        "rarity": "主题款",
-        "color": "#b8e986"
-      },
-      {
-        "name": "THE 收藏款",
-        "rarity": "高热度",
-        "color": "#b8e986"
       }
     ],
     "lastUpdated": "2026-06-12"
@@ -376,49 +350,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "THE MONSTERS 的 Fruits 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Labubu 水果系列 以 THE MONSTERS 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "THE MONSTERS Fruits 极具升值潜力的二级市场标的。",
+      "intro": "作为 THE MONSTERS 矩阵的重要成员，Labubu 水果系列 (系列: Fruits) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "THE 主角款",
+        "name": "THE Fruits·经典核心款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "THE 夜色款",
+        "name": "THE Fruits·幻影午夜款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "THE 甜梦款",
+        "name": "THE Fruits·流光原色款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "THE 巡游款",
+        "name": "THE Fruits·复古复刻款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "THE 独白款",
+        "name": "THE Fruits·马戏巡游款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "THE 隐藏款",
+        "name": "THE Fruits·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "THE 节日款",
+        "name": "THE Fruits·假日限定款",
         "rarity": "主题款",
         "color": "#ffc857"
       },
       {
-        "name": "THE 收藏款",
+        "name": "THE Fruits·典藏尊享款",
         "rarity": "高热度",
         "color": "#ffc857"
       }
@@ -451,49 +425,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "THE MONSTERS 的 Camping 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Labubu 露营系列 以 THE MONSTERS 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "THE MONSTERS Camping 极具升值潜力的二级市场标的。",
+      "intro": "作为 THE MONSTERS 矩阵的重要成员，Labubu 露营系列 (系列: Camping) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "THE 主角款",
+        "name": "THE Camping·经典核心款",
         "rarity": "常规款",
         "color": "#6389a8"
       },
       {
-        "name": "THE 夜色款",
+        "name": "THE Camping·幻影午夜款",
         "rarity": "常规款",
         "color": "#6389a8"
       },
       {
-        "name": "THE 甜梦款",
+        "name": "THE Camping·流光原色款",
         "rarity": "常规款",
         "color": "#6389a8"
       },
       {
-        "name": "THE 巡游款",
+        "name": "THE Camping·复古复刻款",
         "rarity": "常规款",
         "color": "#6389a8"
       },
       {
-        "name": "THE 独白款",
+        "name": "THE Camping·马戏巡游款",
         "rarity": "常规款",
         "color": "#6389a8"
       },
       {
-        "name": "THE 隐藏款",
+        "name": "THE Camping·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "THE 节日款",
+        "name": "THE Camping·假日限定款",
         "rarity": "主题款",
         "color": "#6389a8"
       },
       {
-        "name": "THE 收藏款",
+        "name": "THE Camping·典藏尊享款",
         "rarity": "高热度",
         "color": "#6389a8"
       }
@@ -526,49 +500,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "THE MONSTERS 的 Monsters Art 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Labubu 艺术大亨 以 THE MONSTERS 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "THE MONSTERS Monsters Art 极具升值潜力的二级市场标的。",
+      "intro": "作为 THE MONSTERS 矩阵的重要成员，Labubu 艺术大亨 (系列: Monsters Art) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "THE 主角款",
+        "name": "THE Monsters·经典核心款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "THE 夜色款",
+        "name": "THE Monsters·幻影午夜款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "THE 甜梦款",
+        "name": "THE Monsters·流光原色款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "THE 巡游款",
+        "name": "THE Monsters·复古复刻款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "THE 独白款",
+        "name": "THE Monsters·马戏巡游款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "THE 隐藏款",
+        "name": "THE Monsters·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "THE 节日款",
+        "name": "THE Monsters·假日限定款",
         "rarity": "主题款",
         "color": "#9f8cff"
       },
       {
-        "name": "THE 收藏款",
+        "name": "THE Monsters·典藏尊享款",
         "rarity": "高热度",
         "color": "#9f8cff"
       }
@@ -601,49 +575,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "THE MONSTERS 的 Zodiac 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Labubu 星座系列 以 THE MONSTERS 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "THE MONSTERS Zodiac 极具升值潜力的二级市场标的。",
+      "intro": "作为 THE MONSTERS 矩阵的重要成员，Labubu 星座系列 (系列: Zodiac) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "THE 主角款",
+        "name": "THE Zodiac·经典核心款",
         "rarity": "常规款",
         "color": "#191c1d"
       },
       {
-        "name": "THE 夜色款",
+        "name": "THE Zodiac·幻影午夜款",
         "rarity": "常规款",
         "color": "#191c1d"
       },
       {
-        "name": "THE 甜梦款",
+        "name": "THE Zodiac·流光原色款",
         "rarity": "常规款",
         "color": "#191c1d"
       },
       {
-        "name": "THE 巡游款",
+        "name": "THE Zodiac·复古复刻款",
         "rarity": "常规款",
         "color": "#191c1d"
       },
       {
-        "name": "THE 独白款",
+        "name": "THE Zodiac·马戏巡游款",
         "rarity": "常规款",
         "color": "#191c1d"
       },
       {
-        "name": "THE 隐藏款",
+        "name": "THE Zodiac·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "THE 节日款",
+        "name": "THE Zodiac·假日限定款",
         "rarity": "主题款",
         "color": "#191c1d"
       },
       {
-        "name": "THE 收藏款",
+        "name": "THE Zodiac·典藏尊享款",
         "rarity": "高热度",
         "color": "#191c1d"
       }
@@ -676,49 +650,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "THE MONSTERS 的 Space 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Labubu 太空系列 以 THE MONSTERS 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "THE MONSTERS Space 极具升值潜力的二级市场标的。",
+      "intro": "作为 THE MONSTERS 矩阵的重要成员，Labubu 太空系列 (系列: Space) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "THE 主角款",
+        "name": "THE Space·经典核心款",
         "rarity": "常规款",
         "color": "#50e3c2"
       },
       {
-        "name": "THE 夜色款",
+        "name": "THE Space·幻影午夜款",
         "rarity": "常规款",
         "color": "#50e3c2"
       },
       {
-        "name": "THE 甜梦款",
+        "name": "THE Space·流光原色款",
         "rarity": "常规款",
         "color": "#50e3c2"
       },
       {
-        "name": "THE 巡游款",
+        "name": "THE Space·复古复刻款",
         "rarity": "常规款",
         "color": "#50e3c2"
       },
       {
-        "name": "THE 独白款",
+        "name": "THE Space·马戏巡游款",
         "rarity": "常规款",
         "color": "#50e3c2"
       },
       {
-        "name": "THE 隐藏款",
+        "name": "THE Space·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "THE 节日款",
+        "name": "THE Space·假日限定款",
         "rarity": "主题款",
         "color": "#50e3c2"
       },
       {
-        "name": "THE 收藏款",
+        "name": "THE Space·典藏尊享款",
         "rarity": "高热度",
         "color": "#50e3c2"
       }
@@ -949,49 +923,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "SKULLPANDA 的 Everyday Wonderland 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Skullpanda 漫游仙境 以 SKULLPANDA 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "SKULLPANDA Everyday Wonderland 极具升值潜力的二级市场标的。",
+      "intro": "作为 SKULLPANDA 矩阵的重要成员，Skullpanda 漫游仙境 (系列: Everyday Wonderland) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "SKULLPANDA 主角款",
+        "name": "SKULLPANDA Everyday·经典核心款",
         "rarity": "常规款",
         "color": "#e0d6c8"
       },
       {
-        "name": "SKULLPANDA 夜色款",
+        "name": "SKULLPANDA Everyday·幻影午夜款",
         "rarity": "常规款",
         "color": "#e0d6c8"
       },
       {
-        "name": "SKULLPANDA 甜梦款",
+        "name": "SKULLPANDA Everyday·流光原色款",
         "rarity": "常规款",
         "color": "#e0d6c8"
       },
       {
-        "name": "SKULLPANDA 巡游款",
+        "name": "SKULLPANDA Everyday·复古复刻款",
         "rarity": "常规款",
         "color": "#e0d6c8"
       },
       {
-        "name": "SKULLPANDA 独白款",
+        "name": "SKULLPANDA Everyday·马戏巡游款",
         "rarity": "常规款",
         "color": "#e0d6c8"
       },
       {
-        "name": "SKULLPANDA 隐藏款",
+        "name": "SKULLPANDA Everyday·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "SKULLPANDA 节日款",
+        "name": "SKULLPANDA Everyday·假日限定款",
         "rarity": "主题款",
         "color": "#e0d6c8"
       },
       {
-        "name": "SKULLPANDA 收藏款",
+        "name": "SKULLPANDA Everyday·典藏尊享款",
         "rarity": "高热度",
         "color": "#e0d6c8"
       }
@@ -1024,49 +998,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "SKULLPANDA 的 The Mare of Animals 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Skullpanda 密林古堡 以 SKULLPANDA 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "SKULLPANDA The Mare of Animals 极具升值潜力的二级市场标的。",
+      "intro": "作为 SKULLPANDA 矩阵的重要成员，Skullpanda 密林古堡 (系列: The Mare of Animals) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "SKULLPANDA 主角款",
+        "name": "SKULLPANDA The·经典核心款",
         "rarity": "常规款",
         "color": "#8f6745"
       },
       {
-        "name": "SKULLPANDA 夜色款",
+        "name": "SKULLPANDA The·幻影午夜款",
         "rarity": "常规款",
         "color": "#8f6745"
       },
       {
-        "name": "SKULLPANDA 甜梦款",
+        "name": "SKULLPANDA The·流光原色款",
         "rarity": "常规款",
         "color": "#8f6745"
       },
       {
-        "name": "SKULLPANDA 巡游款",
+        "name": "SKULLPANDA The·复古复刻款",
         "rarity": "常规款",
         "color": "#8f6745"
       },
       {
-        "name": "SKULLPANDA 独白款",
+        "name": "SKULLPANDA The·马戏巡游款",
         "rarity": "常规款",
         "color": "#8f6745"
       },
       {
-        "name": "SKULLPANDA 隐藏款",
+        "name": "SKULLPANDA The·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "SKULLPANDA 节日款",
+        "name": "SKULLPANDA The·假日限定款",
         "rarity": "主题款",
         "color": "#8f6745"
       },
       {
-        "name": "SKULLPANDA 收藏款",
+        "name": "SKULLPANDA The·典藏尊享款",
         "rarity": "高热度",
         "color": "#8f6745"
       }
@@ -1099,49 +1073,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "SKULLPANDA 的 Hypepanda 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Skullpanda 熊喵热潮 以 SKULLPANDA 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "SKULLPANDA Hypepanda 极具升值潜力的二级市场标的。",
+      "intro": "作为 SKULLPANDA 矩阵的重要成员，Skullpanda 熊喵热潮 (系列: Hypepanda) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "SKULLPANDA 主角款",
+        "name": "SKULLPANDA Hypepanda·经典核心款",
         "rarity": "常规款",
         "color": "#ff7eb6"
       },
       {
-        "name": "SKULLPANDA 夜色款",
+        "name": "SKULLPANDA Hypepanda·幻影午夜款",
         "rarity": "常规款",
         "color": "#ff7eb6"
       },
       {
-        "name": "SKULLPANDA 甜梦款",
+        "name": "SKULLPANDA Hypepanda·流光原色款",
         "rarity": "常规款",
         "color": "#ff7eb6"
       },
       {
-        "name": "SKULLPANDA 巡游款",
+        "name": "SKULLPANDA Hypepanda·复古复刻款",
         "rarity": "常规款",
         "color": "#ff7eb6"
       },
       {
-        "name": "SKULLPANDA 独白款",
+        "name": "SKULLPANDA Hypepanda·马戏巡游款",
         "rarity": "常规款",
         "color": "#ff7eb6"
       },
       {
-        "name": "SKULLPANDA 隐藏款",
+        "name": "SKULLPANDA Hypepanda·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "SKULLPANDA 节日款",
+        "name": "SKULLPANDA Hypepanda·假日限定款",
         "rarity": "主题款",
         "color": "#ff7eb6"
       },
       {
-        "name": "SKULLPANDA 收藏款",
+        "name": "SKULLPANDA Hypepanda·典藏尊享款",
         "rarity": "高热度",
         "color": "#ff7eb6"
       }
@@ -1174,49 +1148,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "SKULLPANDA 的 Action Cut 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Skullpanda 动作特辑 以 SKULLPANDA 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "SKULLPANDA Action Cut 极具升值潜力的二级市场标的。",
+      "intro": "作为 SKULLPANDA 矩阵的重要成员，Skullpanda 动作特辑 (系列: Action Cut) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "SKULLPANDA 主角款",
+        "name": "SKULLPANDA Action·经典核心款",
         "rarity": "常规款",
         "color": "#6bd6ff"
       },
       {
-        "name": "SKULLPANDA 夜色款",
+        "name": "SKULLPANDA Action·幻影午夜款",
         "rarity": "常规款",
         "color": "#6bd6ff"
       },
       {
-        "name": "SKULLPANDA 甜梦款",
+        "name": "SKULLPANDA Action·流光原色款",
         "rarity": "常规款",
         "color": "#6bd6ff"
       },
       {
-        "name": "SKULLPANDA 巡游款",
+        "name": "SKULLPANDA Action·复古复刻款",
         "rarity": "常规款",
         "color": "#6bd6ff"
       },
       {
-        "name": "SKULLPANDA 独白款",
+        "name": "SKULLPANDA Action·马戏巡游款",
         "rarity": "常规款",
         "color": "#6bd6ff"
       },
       {
-        "name": "SKULLPANDA 隐藏款",
+        "name": "SKULLPANDA Action·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "SKULLPANDA 节日款",
+        "name": "SKULLPANDA Action·假日限定款",
         "rarity": "主题款",
         "color": "#6bd6ff"
       },
       {
-        "name": "SKULLPANDA 收藏款",
+        "name": "SKULLPANDA Action·典藏尊享款",
         "rarity": "高热度",
         "color": "#6bd6ff"
       }
@@ -1249,49 +1223,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "SKULLPANDA 的 Candy Monster 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Skullpanda 糖果怪物 以 SKULLPANDA 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "SKULLPANDA Candy Monster 极具升值潜力的二级市场标的。",
+      "intro": "作为 SKULLPANDA 矩阵的重要成员，Skullpanda 糖果怪物 (系列: Candy Monster) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "SKULLPANDA 主角款",
+        "name": "SKULLPANDA Candy·经典核心款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "SKULLPANDA 夜色款",
+        "name": "SKULLPANDA Candy·幻影午夜款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "SKULLPANDA 甜梦款",
+        "name": "SKULLPANDA Candy·流光原色款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "SKULLPANDA 巡游款",
+        "name": "SKULLPANDA Candy·复古复刻款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "SKULLPANDA 独白款",
+        "name": "SKULLPANDA Candy·马戏巡游款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "SKULLPANDA 隐藏款",
+        "name": "SKULLPANDA Candy·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "SKULLPANDA 节日款",
+        "name": "SKULLPANDA Candy·假日限定款",
         "rarity": "主题款",
         "color": "#ffc857"
       },
       {
-        "name": "SKULLPANDA 收藏款",
+        "name": "SKULLPANDA Candy·典藏尊享款",
         "rarity": "高热度",
         "color": "#ffc857"
       }
@@ -1324,49 +1298,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "SKULLPANDA 的 Laid Back Tomorrow 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Skullpanda 慵懒明天 以 SKULLPANDA 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "SKULLPANDA Laid Back Tomorrow 极具升值潜力的二级市场标的。",
+      "intro": "作为 SKULLPANDA 矩阵的重要成员，Skullpanda 慵懒明天 (系列: Laid Back Tomorrow) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "SKULLPANDA 主角款",
+        "name": "SKULLPANDA Laid·经典核心款",
         "rarity": "常规款",
         "color": "#b8e986"
       },
       {
-        "name": "SKULLPANDA 夜色款",
+        "name": "SKULLPANDA Laid·幻影午夜款",
         "rarity": "常规款",
         "color": "#b8e986"
       },
       {
-        "name": "SKULLPANDA 甜梦款",
+        "name": "SKULLPANDA Laid·流光原色款",
         "rarity": "常规款",
         "color": "#b8e986"
       },
       {
-        "name": "SKULLPANDA 巡游款",
+        "name": "SKULLPANDA Laid·复古复刻款",
         "rarity": "常规款",
         "color": "#b8e986"
       },
       {
-        "name": "SKULLPANDA 独白款",
+        "name": "SKULLPANDA Laid·马戏巡游款",
         "rarity": "常规款",
         "color": "#b8e986"
       },
       {
-        "name": "SKULLPANDA 隐藏款",
+        "name": "SKULLPANDA Laid·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "SKULLPANDA 节日款",
+        "name": "SKULLPANDA Laid·假日限定款",
         "rarity": "主题款",
         "color": "#b8e986"
       },
       {
-        "name": "SKULLPANDA 收藏款",
+        "name": "SKULLPANDA Laid·典藏尊享款",
         "rarity": "高热度",
         "color": "#b8e986"
       }
@@ -1483,49 +1457,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "MOLLY 的 MEGA Space Molly 100% Series 2 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "MEGA Space Molly 100% 第二弹 以 MOLLY 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "MOLLY MEGA Space Molly 100% Series 2 极具升值潜力的二级市场标的。",
+      "intro": "作为 MOLLY 矩阵的重要成员，MEGA Space Molly 100% 第二弹 (系列: MEGA Space Molly 100% Series 2) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "MOLLY 主角款",
+        "name": "MOLLY MEGA·经典核心款",
         "rarity": "常规款",
         "color": "#6bd6ff"
       },
       {
-        "name": "MOLLY 夜色款",
+        "name": "MOLLY MEGA·幻影午夜款",
         "rarity": "常规款",
         "color": "#6bd6ff"
       },
       {
-        "name": "MOLLY 甜梦款",
+        "name": "MOLLY MEGA·流光原色款",
         "rarity": "常规款",
         "color": "#6bd6ff"
       },
       {
-        "name": "MOLLY 巡游款",
+        "name": "MOLLY MEGA·复古复刻款",
         "rarity": "常规款",
         "color": "#6bd6ff"
       },
       {
-        "name": "MOLLY 独白款",
+        "name": "MOLLY MEGA·马戏巡游款",
         "rarity": "常规款",
         "color": "#6bd6ff"
       },
       {
-        "name": "MOLLY 隐藏款",
+        "name": "MOLLY MEGA·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "MOLLY 节日款",
+        "name": "MOLLY MEGA·假日限定款",
         "rarity": "主题款",
         "color": "#6bd6ff"
       },
       {
-        "name": "MOLLY 收藏款",
+        "name": "MOLLY MEGA·典藏尊享款",
         "rarity": "高热度",
         "color": "#6bd6ff"
       }
@@ -1558,49 +1532,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "MOLLY 的 MEGA Space Molly 100% Series 3 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "MEGA Space Molly 100% 第三弹 以 MOLLY 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "MOLLY MEGA Space Molly 100% Series 3 极具升值潜力的二级市场标的。",
+      "intro": "作为 MOLLY 矩阵的重要成员，MEGA Space Molly 100% 第三弹 (系列: MEGA Space Molly 100% Series 3) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "MOLLY 主角款",
+        "name": "MOLLY MEGA·经典核心款",
         "rarity": "常规款",
         "color": "#ff7eb6"
       },
       {
-        "name": "MOLLY 夜色款",
+        "name": "MOLLY MEGA·幻影午夜款",
         "rarity": "常规款",
         "color": "#ff7eb6"
       },
       {
-        "name": "MOLLY 甜梦款",
+        "name": "MOLLY MEGA·流光原色款",
         "rarity": "常规款",
         "color": "#ff7eb6"
       },
       {
-        "name": "MOLLY 巡游款",
+        "name": "MOLLY MEGA·复古复刻款",
         "rarity": "常规款",
         "color": "#ff7eb6"
       },
       {
-        "name": "MOLLY 独白款",
+        "name": "MOLLY MEGA·马戏巡游款",
         "rarity": "常规款",
         "color": "#ff7eb6"
       },
       {
-        "name": "MOLLY 隐藏款",
+        "name": "MOLLY MEGA·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "MOLLY 节日款",
+        "name": "MOLLY MEGA·假日限定款",
         "rarity": "主题款",
         "color": "#ff7eb6"
       },
       {
-        "name": "MOLLY 收藏款",
+        "name": "MOLLY MEGA·典藏尊享款",
         "rarity": "高热度",
         "color": "#ff7eb6"
       }
@@ -1633,49 +1607,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "MOLLY 的 My Childhood 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Molly 我的童年 以 MOLLY 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "MOLLY My Childhood 极具升值潜力的二级市场标的。",
+      "intro": "作为 MOLLY 矩阵的重要成员，Molly 我的童年 (系列: My Childhood) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "MOLLY 主角款",
+        "name": "MOLLY My·经典核心款",
         "rarity": "常规款",
         "color": "#b8e986"
       },
       {
-        "name": "MOLLY 夜色款",
+        "name": "MOLLY My·幻影午夜款",
         "rarity": "常规款",
         "color": "#b8e986"
       },
       {
-        "name": "MOLLY 甜梦款",
+        "name": "MOLLY My·流光原色款",
         "rarity": "常规款",
         "color": "#b8e986"
       },
       {
-        "name": "MOLLY 巡游款",
+        "name": "MOLLY My·复古复刻款",
         "rarity": "常规款",
         "color": "#b8e986"
       },
       {
-        "name": "MOLLY 独白款",
+        "name": "MOLLY My·马戏巡游款",
         "rarity": "常规款",
         "color": "#b8e986"
       },
       {
-        "name": "MOLLY 隐藏款",
+        "name": "MOLLY My·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "MOLLY 节日款",
+        "name": "MOLLY My·假日限定款",
         "rarity": "主题款",
         "color": "#b8e986"
       },
       {
-        "name": "MOLLY 收藏款",
+        "name": "MOLLY My·典藏尊享款",
         "rarity": "高热度",
         "color": "#b8e986"
       }
@@ -1708,49 +1682,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "MOLLY 的 Imaginary Wandering 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Molly 幻想流浪 以 MOLLY 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "MOLLY Imaginary Wandering 极具升值潜力的二级市场标的。",
+      "intro": "作为 MOLLY 矩阵的重要成员，Molly 幻想流浪 (系列: Imaginary Wandering) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "MOLLY 主角款",
+        "name": "MOLLY Imaginary·经典核心款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "MOLLY 夜色款",
+        "name": "MOLLY Imaginary·幻影午夜款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "MOLLY 甜梦款",
+        "name": "MOLLY Imaginary·流光原色款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "MOLLY 巡游款",
+        "name": "MOLLY Imaginary·复古复刻款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "MOLLY 独白款",
+        "name": "MOLLY Imaginary·马戏巡游款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "MOLLY 隐藏款",
+        "name": "MOLLY Imaginary·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "MOLLY 节日款",
+        "name": "MOLLY Imaginary·假日限定款",
         "rarity": "主题款",
         "color": "#9f8cff"
       },
       {
-        "name": "MOLLY 收藏款",
+        "name": "MOLLY Imaginary·典藏尊享款",
         "rarity": "高热度",
         "color": "#9f8cff"
       }
@@ -1783,49 +1757,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "MOLLY 的 Daydream 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Molly 白日梦 以 MOLLY 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "MOLLY Daydream 极具升值潜力的二级市场标的。",
+      "intro": "作为 MOLLY 矩阵的重要成员，Molly 白日梦 (系列: Daydream) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "MOLLY 主角款",
+        "name": "MOLLY Daydream·经典核心款",
         "rarity": "常规款",
         "color": "#ff8a5b"
       },
       {
-        "name": "MOLLY 夜色款",
+        "name": "MOLLY Daydream·幻影午夜款",
         "rarity": "常规款",
         "color": "#ff8a5b"
       },
       {
-        "name": "MOLLY 甜梦款",
+        "name": "MOLLY Daydream·流光原色款",
         "rarity": "常规款",
         "color": "#ff8a5b"
       },
       {
-        "name": "MOLLY 巡游款",
+        "name": "MOLLY Daydream·复古复刻款",
         "rarity": "常规款",
         "color": "#ff8a5b"
       },
       {
-        "name": "MOLLY 独白款",
+        "name": "MOLLY Daydream·马戏巡游款",
         "rarity": "常规款",
         "color": "#ff8a5b"
       },
       {
-        "name": "MOLLY 隐藏款",
+        "name": "MOLLY Daydream·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "MOLLY 节日款",
+        "name": "MOLLY Daydream·假日限定款",
         "rarity": "主题款",
         "color": "#ff8a5b"
       },
       {
-        "name": "MOLLY 收藏款",
+        "name": "MOLLY Daydream·典藏尊享款",
         "rarity": "高热度",
         "color": "#ff8a5b"
       }
@@ -1858,49 +1832,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "MOLLY 的 School Life 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Molly 校园生活 以 MOLLY 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "MOLLY School Life 极具升值潜力的二级市场标的。",
+      "intro": "作为 MOLLY 矩阵的重要成员，Molly 校园生活 (系列: School Life) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "MOLLY 主角款",
+        "name": "MOLLY School·经典核心款",
         "rarity": "常规款",
         "color": "#e0d6c8"
       },
       {
-        "name": "MOLLY 夜色款",
+        "name": "MOLLY School·幻影午夜款",
         "rarity": "常规款",
         "color": "#e0d6c8"
       },
       {
-        "name": "MOLLY 甜梦款",
+        "name": "MOLLY School·流光原色款",
         "rarity": "常规款",
         "color": "#e0d6c8"
       },
       {
-        "name": "MOLLY 巡游款",
+        "name": "MOLLY School·复古复刻款",
         "rarity": "常规款",
         "color": "#e0d6c8"
       },
       {
-        "name": "MOLLY 独白款",
+        "name": "MOLLY School·马戏巡游款",
         "rarity": "常规款",
         "color": "#e0d6c8"
       },
       {
-        "name": "MOLLY 隐藏款",
+        "name": "MOLLY School·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "MOLLY 节日款",
+        "name": "MOLLY School·假日限定款",
         "rarity": "主题款",
         "color": "#e0d6c8"
       },
       {
-        "name": "MOLLY 收藏款",
+        "name": "MOLLY School·典藏尊享款",
         "rarity": "高热度",
         "color": "#e0d6c8"
       }
@@ -1933,49 +1907,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "MOLLY 的 Steampunk 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Molly 蒸汽朋克 以 MOLLY 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "MOLLY Steampunk 极具升值潜力的二级市场标的。",
+      "intro": "作为 MOLLY 矩阵的重要成员，Molly 蒸汽朋克 (系列: Steampunk) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "MOLLY 主角款",
+        "name": "MOLLY Steampunk·经典核心款",
         "rarity": "常规款",
         "color": "#8f6745"
       },
       {
-        "name": "MOLLY 夜色款",
+        "name": "MOLLY Steampunk·幻影午夜款",
         "rarity": "常规款",
         "color": "#8f6745"
       },
       {
-        "name": "MOLLY 甜梦款",
+        "name": "MOLLY Steampunk·流光原色款",
         "rarity": "常规款",
         "color": "#8f6745"
       },
       {
-        "name": "MOLLY 巡游款",
+        "name": "MOLLY Steampunk·复古复刻款",
         "rarity": "常规款",
         "color": "#8f6745"
       },
       {
-        "name": "MOLLY 独白款",
+        "name": "MOLLY Steampunk·马戏巡游款",
         "rarity": "常规款",
         "color": "#8f6745"
       },
       {
-        "name": "MOLLY 隐藏款",
+        "name": "MOLLY Steampunk·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "MOLLY 节日款",
+        "name": "MOLLY Steampunk·假日限定款",
         "rarity": "主题款",
         "color": "#8f6745"
       },
       {
-        "name": "MOLLY 收藏款",
+        "name": "MOLLY Steampunk·典藏尊享款",
         "rarity": "高热度",
         "color": "#8f6745"
       }
@@ -2008,49 +1982,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "DIMOO 的 World x Animal 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Dimoo 动物王国 以 DIMOO 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "DIMOO World x Animal 极具升值潜力的二级市场标的。",
+      "intro": "作为 DIMOO 矩阵的重要成员，Dimoo 动物王国 (系列: World x Animal) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "DIMOO 主角款",
+        "name": "DIMOO World·经典核心款",
         "rarity": "常规款",
         "color": "#65d39b"
       },
       {
-        "name": "DIMOO 夜色款",
+        "name": "DIMOO World·幻影午夜款",
         "rarity": "常规款",
         "color": "#65d39b"
       },
       {
-        "name": "DIMOO 甜梦款",
+        "name": "DIMOO World·流光原色款",
         "rarity": "常规款",
         "color": "#65d39b"
       },
       {
-        "name": "DIMOO 巡游款",
+        "name": "DIMOO World·复古复刻款",
         "rarity": "常规款",
         "color": "#65d39b"
       },
       {
-        "name": "DIMOO 独白款",
+        "name": "DIMOO World·马戏巡游款",
         "rarity": "常规款",
         "color": "#65d39b"
       },
       {
-        "name": "DIMOO 隐藏款",
+        "name": "DIMOO World·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "DIMOO 节日款",
+        "name": "DIMOO World·假日限定款",
         "rarity": "主题款",
         "color": "#65d39b"
       },
       {
-        "name": "DIMOO 收藏款",
+        "name": "DIMOO World·典藏尊享款",
         "rarity": "高热度",
         "color": "#65d39b"
       }
@@ -2083,49 +2057,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "DIMOO 的 Dating 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Dimoo 约会日 以 DIMOO 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "DIMOO Dating 极具升值潜力的二级市场标的。",
+      "intro": "作为 DIMOO 矩阵的重要成员，Dimoo 约会日 (系列: Dating) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "DIMOO 主角款",
+        "name": "DIMOO Dating·经典核心款",
         "rarity": "常规款",
         "color": "#ff7eb6"
       },
       {
-        "name": "DIMOO 夜色款",
+        "name": "DIMOO Dating·幻影午夜款",
         "rarity": "常规款",
         "color": "#ff7eb6"
       },
       {
-        "name": "DIMOO 甜梦款",
+        "name": "DIMOO Dating·流光原色款",
         "rarity": "常规款",
         "color": "#ff7eb6"
       },
       {
-        "name": "DIMOO 巡游款",
+        "name": "DIMOO Dating·复古复刻款",
         "rarity": "常规款",
         "color": "#ff7eb6"
       },
       {
-        "name": "DIMOO 独白款",
+        "name": "DIMOO Dating·马戏巡游款",
         "rarity": "常规款",
         "color": "#ff7eb6"
       },
       {
-        "name": "DIMOO 隐藏款",
+        "name": "DIMOO Dating·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "DIMOO 节日款",
+        "name": "DIMOO Dating·假日限定款",
         "rarity": "主题款",
         "color": "#ff7eb6"
       },
       {
-        "name": "DIMOO 收藏款",
+        "name": "DIMOO Dating·典藏尊享款",
         "rarity": "高热度",
         "color": "#ff7eb6"
       }
@@ -2158,49 +2132,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "DIMOO 的 Jurassic 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Dimoo 侏罗纪 以 DIMOO 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "DIMOO Jurassic 极具升值潜力的二级市场标的。",
+      "intro": "作为 DIMOO 矩阵的重要成员，Dimoo 侏罗纪 (系列: Jurassic) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "DIMOO 主角款",
+        "name": "DIMOO Jurassic·经典核心款",
         "rarity": "常规款",
         "color": "#8f6745"
       },
       {
-        "name": "DIMOO 夜色款",
+        "name": "DIMOO Jurassic·幻影午夜款",
         "rarity": "常规款",
         "color": "#8f6745"
       },
       {
-        "name": "DIMOO 甜梦款",
+        "name": "DIMOO Jurassic·流光原色款",
         "rarity": "常规款",
         "color": "#8f6745"
       },
       {
-        "name": "DIMOO 巡游款",
+        "name": "DIMOO Jurassic·复古复刻款",
         "rarity": "常规款",
         "color": "#8f6745"
       },
       {
-        "name": "DIMOO 独白款",
+        "name": "DIMOO Jurassic·马戏巡游款",
         "rarity": "常规款",
         "color": "#8f6745"
       },
       {
-        "name": "DIMOO 隐藏款",
+        "name": "DIMOO Jurassic·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "DIMOO 节日款",
+        "name": "DIMOO Jurassic·假日限定款",
         "rarity": "主题款",
         "color": "#8f6745"
       },
       {
-        "name": "DIMOO 收藏款",
+        "name": "DIMOO Jurassic·典藏尊享款",
         "rarity": "高热度",
         "color": "#8f6745"
       }
@@ -2233,49 +2207,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "DIMOO 的 Space Travel 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Dimoo 太空旅行 以 DIMOO 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "DIMOO Space Travel 极具升值潜力的二级市场标的。",
+      "intro": "作为 DIMOO 矩阵的重要成员，Dimoo 太空旅行 (系列: Space Travel) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "DIMOO 主角款",
+        "name": "DIMOO Space·经典核心款",
         "rarity": "常规款",
         "color": "#191c1d"
       },
       {
-        "name": "DIMOO 夜色款",
+        "name": "DIMOO Space·幻影午夜款",
         "rarity": "常规款",
         "color": "#191c1d"
       },
       {
-        "name": "DIMOO 甜梦款",
+        "name": "DIMOO Space·流光原色款",
         "rarity": "常规款",
         "color": "#191c1d"
       },
       {
-        "name": "DIMOO 巡游款",
+        "name": "DIMOO Space·复古复刻款",
         "rarity": "常规款",
         "color": "#191c1d"
       },
       {
-        "name": "DIMOO 独白款",
+        "name": "DIMOO Space·马戏巡游款",
         "rarity": "常规款",
         "color": "#191c1d"
       },
       {
-        "name": "DIMOO 隐藏款",
+        "name": "DIMOO Space·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "DIMOO 节日款",
+        "name": "DIMOO Space·假日限定款",
         "rarity": "主题款",
         "color": "#191c1d"
       },
       {
-        "name": "DIMOO 收藏款",
+        "name": "DIMOO Space·典藏尊享款",
         "rarity": "高热度",
         "color": "#191c1d"
       }
@@ -2308,49 +2282,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "DIMOO 的 Aquarium 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Dimoo 水族馆 以 DIMOO 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "DIMOO Aquarium 极具升值潜力的二级市场标的。",
+      "intro": "作为 DIMOO 矩阵的重要成员，Dimoo 水族馆 (系列: Aquarium) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "DIMOO 主角款",
+        "name": "DIMOO Aquarium·经典核心款",
         "rarity": "常规款",
         "color": "#6bd6ff"
       },
       {
-        "name": "DIMOO 夜色款",
+        "name": "DIMOO Aquarium·幻影午夜款",
         "rarity": "常规款",
         "color": "#6bd6ff"
       },
       {
-        "name": "DIMOO 甜梦款",
+        "name": "DIMOO Aquarium·流光原色款",
         "rarity": "常规款",
         "color": "#6bd6ff"
       },
       {
-        "name": "DIMOO 巡游款",
+        "name": "DIMOO Aquarium·复古复刻款",
         "rarity": "常规款",
         "color": "#6bd6ff"
       },
       {
-        "name": "DIMOO 独白款",
+        "name": "DIMOO Aquarium·马戏巡游款",
         "rarity": "常规款",
         "color": "#6bd6ff"
       },
       {
-        "name": "DIMOO 隐藏款",
+        "name": "DIMOO Aquarium·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "DIMOO 节日款",
+        "name": "DIMOO Aquarium·假日限定款",
         "rarity": "主题款",
         "color": "#6bd6ff"
       },
       {
-        "name": "DIMOO 收藏款",
+        "name": "DIMOO Aquarium·典藏尊享款",
         "rarity": "高热度",
         "color": "#6bd6ff"
       }
@@ -2383,49 +2357,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "DIMOO 的 No One's Gonna Sleep 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Dimoo 今晚不睡觉 以 DIMOO 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "DIMOO No One's Gonna Sleep 极具升值潜力的二级市场标的。",
+      "intro": "作为 DIMOO 矩阵的重要成员，Dimoo 今晚不睡觉 (系列: No One's Gonna Sleep) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "DIMOO 主角款",
+        "name": "DIMOO No·经典核心款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "DIMOO 夜色款",
+        "name": "DIMOO No·幻影午夜款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "DIMOO 甜梦款",
+        "name": "DIMOO No·流光原色款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "DIMOO 巡游款",
+        "name": "DIMOO No·复古复刻款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "DIMOO 独白款",
+        "name": "DIMOO No·马戏巡游款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "DIMOO 隐藏款",
+        "name": "DIMOO No·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "DIMOO 节日款",
+        "name": "DIMOO No·假日限定款",
         "rarity": "主题款",
         "color": "#9f8cff"
       },
       {
-        "name": "DIMOO 收藏款",
+        "name": "DIMOO No·典藏尊享款",
         "rarity": "高热度",
         "color": "#9f8cff"
       }
@@ -2458,49 +2432,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "DIMOO 的 Midnight Circus 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Dimoo 午夜马戏团 以 DIMOO 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "DIMOO Midnight Circus 极具升值潜力的二级市场标的。",
+      "intro": "作为 DIMOO 矩阵的重要成员，Dimoo 午夜马戏团 (系列: Midnight Circus) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "DIMOO 主角款",
+        "name": "DIMOO Midnight·经典核心款",
         "rarity": "常规款",
         "color": "#d95c50"
       },
       {
-        "name": "DIMOO 夜色款",
+        "name": "DIMOO Midnight·幻影午夜款",
         "rarity": "常规款",
         "color": "#d95c50"
       },
       {
-        "name": "DIMOO 甜梦款",
+        "name": "DIMOO Midnight·流光原色款",
         "rarity": "常规款",
         "color": "#d95c50"
       },
       {
-        "name": "DIMOO 巡游款",
+        "name": "DIMOO Midnight·复古复刻款",
         "rarity": "常规款",
         "color": "#d95c50"
       },
       {
-        "name": "DIMOO 独白款",
+        "name": "DIMOO Midnight·马戏巡游款",
         "rarity": "常规款",
         "color": "#d95c50"
       },
       {
-        "name": "DIMOO 隐藏款",
+        "name": "DIMOO Midnight·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "DIMOO 节日款",
+        "name": "DIMOO Midnight·假日限定款",
         "rarity": "主题款",
         "color": "#d95c50"
       },
       {
-        "name": "DIMOO 收藏款",
+        "name": "DIMOO Midnight·典藏尊享款",
         "rarity": "高热度",
         "color": "#d95c50"
       }
@@ -2533,49 +2507,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "DIMOO 的 Zodiac 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Dimoo 星座系列 以 DIMOO 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "DIMOO Zodiac 极具升值潜力的二级市场标的。",
+      "intro": "作为 DIMOO 矩阵的重要成员，Dimoo 星座系列 (系列: Zodiac) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "DIMOO 主角款",
+        "name": "DIMOO Zodiac·经典核心款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "DIMOO 夜色款",
+        "name": "DIMOO Zodiac·幻影午夜款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "DIMOO 甜梦款",
+        "name": "DIMOO Zodiac·流光原色款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "DIMOO 巡游款",
+        "name": "DIMOO Zodiac·复古复刻款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "DIMOO 独白款",
+        "name": "DIMOO Zodiac·马戏巡游款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "DIMOO 隐藏款",
+        "name": "DIMOO Zodiac·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "DIMOO 节日款",
+        "name": "DIMOO Zodiac·假日限定款",
         "rarity": "主题款",
         "color": "#ffc857"
       },
       {
-        "name": "DIMOO 收藏款",
+        "name": "DIMOO Zodiac·典藏尊享款",
         "rarity": "高热度",
         "color": "#ffc857"
       }
@@ -2608,49 +2582,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "HIRONO 的 Little Mischief 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Hirono 小野 Little Mischief 以 HIRONO 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "HIRONO Little Mischief 极具升值潜力的二级市场标的。",
+      "intro": "作为 HIRONO 矩阵的重要成员，Hirono 小野 Little Mischief (系列: Little Mischief) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "HIRONO 主角款",
+        "name": "HIRONO Little·经典核心款",
         "rarity": "常规款",
         "color": "#ff8a5b"
       },
       {
-        "name": "HIRONO 夜色款",
+        "name": "HIRONO Little·幻影午夜款",
         "rarity": "常规款",
         "color": "#ff8a5b"
       },
       {
-        "name": "HIRONO 甜梦款",
+        "name": "HIRONO Little·流光原色款",
         "rarity": "常规款",
         "color": "#ff8a5b"
       },
       {
-        "name": "HIRONO 巡游款",
+        "name": "HIRONO Little·复古复刻款",
         "rarity": "常规款",
         "color": "#ff8a5b"
       },
       {
-        "name": "HIRONO 独白款",
+        "name": "HIRONO Little·马戏巡游款",
         "rarity": "常规款",
         "color": "#ff8a5b"
       },
       {
-        "name": "HIRONO 隐藏款",
+        "name": "HIRONO Little·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "HIRONO 节日款",
+        "name": "HIRONO Little·假日限定款",
         "rarity": "主题款",
         "color": "#ff8a5b"
       },
       {
-        "name": "HIRONO 收藏款",
+        "name": "HIRONO Little·典藏尊享款",
         "rarity": "高热度",
         "color": "#ff8a5b"
       }
@@ -2683,49 +2657,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "HIRONO 的 City of Mercy 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Hirono 宽恕之城 以 HIRONO 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "HIRONO City of Mercy 极具升值潜力的二级市场标的。",
+      "intro": "作为 HIRONO 矩阵的重要成员，Hirono 宽恕之城 (系列: City of Mercy) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "HIRONO 主角款",
+        "name": "HIRONO City·经典核心款",
         "rarity": "常规款",
         "color": "#6389a8"
       },
       {
-        "name": "HIRONO 夜色款",
+        "name": "HIRONO City·幻影午夜款",
         "rarity": "常规款",
         "color": "#6389a8"
       },
       {
-        "name": "HIRONO 甜梦款",
+        "name": "HIRONO City·流光原色款",
         "rarity": "常规款",
         "color": "#6389a8"
       },
       {
-        "name": "HIRONO 巡游款",
+        "name": "HIRONO City·复古复刻款",
         "rarity": "常规款",
         "color": "#6389a8"
       },
       {
-        "name": "HIRONO 独白款",
+        "name": "HIRONO City·马戏巡游款",
         "rarity": "常规款",
         "color": "#6389a8"
       },
       {
-        "name": "HIRONO 隐藏款",
+        "name": "HIRONO City·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "HIRONO 节日款",
+        "name": "HIRONO City·假日限定款",
         "rarity": "主题款",
         "color": "#6389a8"
       },
       {
-        "name": "HIRONO 收藏款",
+        "name": "HIRONO City·典藏尊享款",
         "rarity": "高热度",
         "color": "#6389a8"
       }
@@ -2758,49 +2732,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "HIRONO 的 Other One 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Hirono 另一个我 以 HIRONO 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "HIRONO Other One 极具升值潜力的二级市场标的。",
+      "intro": "作为 HIRONO 矩阵的重要成员，Hirono 另一个我 (系列: Other One) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "HIRONO 主角款",
+        "name": "HIRONO Other·经典核心款",
         "rarity": "常规款",
         "color": "#e0d6c8"
       },
       {
-        "name": "HIRONO 夜色款",
+        "name": "HIRONO Other·幻影午夜款",
         "rarity": "常规款",
         "color": "#e0d6c8"
       },
       {
-        "name": "HIRONO 甜梦款",
+        "name": "HIRONO Other·流光原色款",
         "rarity": "常规款",
         "color": "#e0d6c8"
       },
       {
-        "name": "HIRONO 巡游款",
+        "name": "HIRONO Other·复古复刻款",
         "rarity": "常规款",
         "color": "#e0d6c8"
       },
       {
-        "name": "HIRONO 独白款",
+        "name": "HIRONO Other·马戏巡游款",
         "rarity": "常规款",
         "color": "#e0d6c8"
       },
       {
-        "name": "HIRONO 隐藏款",
+        "name": "HIRONO Other·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "HIRONO 节日款",
+        "name": "HIRONO Other·假日限定款",
         "rarity": "主题款",
         "color": "#e0d6c8"
       },
       {
-        "name": "HIRONO 收藏款",
+        "name": "HIRONO Other·典藏尊享款",
         "rarity": "高热度",
         "color": "#e0d6c8"
       }
@@ -2833,49 +2807,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "HIRONO 的 Reshape 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Hirono 重塑 以 HIRONO 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "HIRONO Reshape 极具升值潜力的二级市场标的。",
+      "intro": "作为 HIRONO 矩阵的重要成员，Hirono 重塑 (系列: Reshape) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "HIRONO 主角款",
+        "name": "HIRONO Reshape·经典核心款",
         "rarity": "常规款",
         "color": "#8f6745"
       },
       {
-        "name": "HIRONO 夜色款",
+        "name": "HIRONO Reshape·幻影午夜款",
         "rarity": "常规款",
         "color": "#8f6745"
       },
       {
-        "name": "HIRONO 甜梦款",
+        "name": "HIRONO Reshape·流光原色款",
         "rarity": "常规款",
         "color": "#8f6745"
       },
       {
-        "name": "HIRONO 巡游款",
+        "name": "HIRONO Reshape·复古复刻款",
         "rarity": "常规款",
         "color": "#8f6745"
       },
       {
-        "name": "HIRONO 独白款",
+        "name": "HIRONO Reshape·马戏巡游款",
         "rarity": "常规款",
         "color": "#8f6745"
       },
       {
-        "name": "HIRONO 隐藏款",
+        "name": "HIRONO Reshape·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "HIRONO 节日款",
+        "name": "HIRONO Reshape·假日限定款",
         "rarity": "主题款",
         "color": "#8f6745"
       },
       {
-        "name": "HIRONO 收藏款",
+        "name": "HIRONO Reshape·典藏尊享款",
         "rarity": "高热度",
         "color": "#8f6745"
       }
@@ -3007,49 +2981,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "HIRONO 的 Mime 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Hirono 默剧 以 HIRONO 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "HIRONO Mime 极具升值潜力的二级市场标的。",
+      "intro": "作为 HIRONO 矩阵的重要成员，Hirono 默剧 (系列: Mime) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "HIRONO 主角款",
+        "name": "HIRONO Mime·经典核心款",
         "rarity": "常规款",
         "color": "#191c1d"
       },
       {
-        "name": "HIRONO 夜色款",
+        "name": "HIRONO Mime·幻影午夜款",
         "rarity": "常规款",
         "color": "#191c1d"
       },
       {
-        "name": "HIRONO 甜梦款",
+        "name": "HIRONO Mime·流光原色款",
         "rarity": "常规款",
         "color": "#191c1d"
       },
       {
-        "name": "HIRONO 巡游款",
+        "name": "HIRONO Mime·复古复刻款",
         "rarity": "常规款",
         "color": "#191c1d"
       },
       {
-        "name": "HIRONO 独白款",
+        "name": "HIRONO Mime·马戏巡游款",
         "rarity": "常规款",
         "color": "#191c1d"
       },
       {
-        "name": "HIRONO 隐藏款",
+        "name": "HIRONO Mime·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "HIRONO 节日款",
+        "name": "HIRONO Mime·假日限定款",
         "rarity": "主题款",
         "color": "#191c1d"
       },
       {
-        "name": "HIRONO 收藏款",
+        "name": "HIRONO Mime·典藏尊享款",
         "rarity": "高热度",
         "color": "#191c1d"
       }
@@ -3161,49 +3135,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "CRYBABY 的 Lonely Christmas 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Crybaby 孤单圣诞 以 CRYBABY 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "CRYBABY Lonely Christmas 极具升值潜力的二级市场标的。",
+      "intro": "作为 CRYBABY 矩阵的重要成员，Crybaby 孤单圣诞 (系列: Lonely Christmas) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "CRYBABY 主角款",
+        "name": "CRYBABY Lonely·经典核心款",
         "rarity": "常规款",
         "color": "#d95c50"
       },
       {
-        "name": "CRYBABY 夜色款",
+        "name": "CRYBABY Lonely·幻影午夜款",
         "rarity": "常规款",
         "color": "#d95c50"
       },
       {
-        "name": "CRYBABY 甜梦款",
+        "name": "CRYBABY Lonely·流光原色款",
         "rarity": "常规款",
         "color": "#d95c50"
       },
       {
-        "name": "CRYBABY 巡游款",
+        "name": "CRYBABY Lonely·复古复刻款",
         "rarity": "常规款",
         "color": "#d95c50"
       },
       {
-        "name": "CRYBABY 独白款",
+        "name": "CRYBABY Lonely·马戏巡游款",
         "rarity": "常规款",
         "color": "#d95c50"
       },
       {
-        "name": "CRYBABY 隐藏款",
+        "name": "CRYBABY Lonely·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "CRYBABY 节日款",
+        "name": "CRYBABY Lonely·假日限定款",
         "rarity": "主题款",
         "color": "#d95c50"
       },
       {
-        "name": "CRYBABY 收藏款",
+        "name": "CRYBABY Lonely·典藏尊享款",
         "rarity": "高热度",
         "color": "#d95c50"
       }
@@ -3236,49 +3210,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "CRYBABY 的 Monster Tears 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Crybaby 怪物眼泪 以 CRYBABY 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "CRYBABY Monster Tears 极具升值潜力的二级市场标的。",
+      "intro": "作为 CRYBABY 矩阵的重要成员，Crybaby 怪物眼泪 (系列: Monster Tears) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "CRYBABY 主角款",
+        "name": "CRYBABY Monster·经典核心款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "CRYBABY 夜色款",
+        "name": "CRYBABY Monster·幻影午夜款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "CRYBABY 甜梦款",
+        "name": "CRYBABY Monster·流光原色款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "CRYBABY 巡游款",
+        "name": "CRYBABY Monster·复古复刻款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "CRYBABY 独白款",
+        "name": "CRYBABY Monster·马戏巡游款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "CRYBABY 隐藏款",
+        "name": "CRYBABY Monster·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "CRYBABY 节日款",
+        "name": "CRYBABY Monster·假日限定款",
         "rarity": "主题款",
         "color": "#9f8cff"
       },
       {
-        "name": "CRYBABY 收藏款",
+        "name": "CRYBABY Monster·典藏尊享款",
         "rarity": "高热度",
         "color": "#9f8cff"
       }
@@ -3410,49 +3384,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "CRYBABY 的 Cheer Up 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Crybaby 抱抱飞跃 以 CRYBABY 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "CRYBABY Cheer Up 极具升值潜力的二级市场标的。",
+      "intro": "作为 CRYBABY 矩阵的重要成员，Crybaby 抱抱飞跃 (系列: Cheer Up) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "CRYBABY 主角款",
+        "name": "CRYBABY Cheer·经典核心款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "CRYBABY 夜色款",
+        "name": "CRYBABY Cheer·幻影午夜款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "CRYBABY 甜梦款",
+        "name": "CRYBABY Cheer·流光原色款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "CRYBABY 巡游款",
+        "name": "CRYBABY Cheer·复古复刻款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "CRYBABY 独白款",
+        "name": "CRYBABY Cheer·马戏巡游款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "CRYBABY 隐藏款",
+        "name": "CRYBABY Cheer·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "CRYBABY 节日款",
+        "name": "CRYBABY Cheer·假日限定款",
         "rarity": "主题款",
         "color": "#ffc857"
       },
       {
-        "name": "CRYBABY 收藏款",
+        "name": "CRYBABY Cheer·典藏尊享款",
         "rarity": "高热度",
         "color": "#ffc857"
       }
@@ -3485,49 +3459,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "SWEET BEAN 的 Supermarket 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Sweet Bean 超市系列 以 SWEET BEAN 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "SWEET BEAN Supermarket 极具升值潜力的二级市场标的。",
+      "intro": "作为 SWEET BEAN 矩阵的重要成员，Sweet Bean 超市系列 (系列: Supermarket) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "SWEET 主角款",
+        "name": "SWEET Supermarket·经典核心款",
         "rarity": "常规款",
         "color": "#ff7eb6"
       },
       {
-        "name": "SWEET 夜色款",
+        "name": "SWEET Supermarket·幻影午夜款",
         "rarity": "常规款",
         "color": "#ff7eb6"
       },
       {
-        "name": "SWEET 甜梦款",
+        "name": "SWEET Supermarket·流光原色款",
         "rarity": "常规款",
         "color": "#ff7eb6"
       },
       {
-        "name": "SWEET 巡游款",
+        "name": "SWEET Supermarket·复古复刻款",
         "rarity": "常规款",
         "color": "#ff7eb6"
       },
       {
-        "name": "SWEET 独白款",
+        "name": "SWEET Supermarket·马戏巡游款",
         "rarity": "常规款",
         "color": "#ff7eb6"
       },
       {
-        "name": "SWEET 隐藏款",
+        "name": "SWEET Supermarket·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "SWEET 节日款",
+        "name": "SWEET Supermarket·假日限定款",
         "rarity": "主题款",
         "color": "#ff7eb6"
       },
       {
-        "name": "SWEET 收藏款",
+        "name": "SWEET Supermarket·典藏尊享款",
         "rarity": "高热度",
         "color": "#ff7eb6"
       }
@@ -3560,49 +3534,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "SWEET BEAN 的 Animals 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Sweet Bean 动物世界 以 SWEET BEAN 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "SWEET BEAN Animals 极具升值潜力的二级市场标的。",
+      "intro": "作为 SWEET BEAN 矩阵的重要成员，Sweet Bean 动物世界 (系列: Animals) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "SWEET 主角款",
+        "name": "SWEET Animals·经典核心款",
         "rarity": "常规款",
         "color": "#b8e986"
       },
       {
-        "name": "SWEET 夜色款",
+        "name": "SWEET Animals·幻影午夜款",
         "rarity": "常规款",
         "color": "#b8e986"
       },
       {
-        "name": "SWEET 甜梦款",
+        "name": "SWEET Animals·流光原色款",
         "rarity": "常规款",
         "color": "#b8e986"
       },
       {
-        "name": "SWEET 巡游款",
+        "name": "SWEET Animals·复古复刻款",
         "rarity": "常规款",
         "color": "#b8e986"
       },
       {
-        "name": "SWEET 独白款",
+        "name": "SWEET Animals·马戏巡游款",
         "rarity": "常规款",
         "color": "#b8e986"
       },
       {
-        "name": "SWEET 隐藏款",
+        "name": "SWEET Animals·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "SWEET 节日款",
+        "name": "SWEET Animals·假日限定款",
         "rarity": "主题款",
         "color": "#b8e986"
       },
       {
-        "name": "SWEET 收藏款",
+        "name": "SWEET Animals·典藏尊享款",
         "rarity": "高热度",
         "color": "#b8e986"
       }
@@ -3635,49 +3609,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "SWEET BEAN 的 Akihabara 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Sweet Bean 秋叶原 以 SWEET BEAN 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "SWEET BEAN Akihabara 极具升值潜力的二级市场标的。",
+      "intro": "作为 SWEET BEAN 矩阵的重要成员，Sweet Bean 秋叶原 (系列: Akihabara) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "SWEET 主角款",
+        "name": "SWEET Akihabara·经典核心款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "SWEET 夜色款",
+        "name": "SWEET Akihabara·幻影午夜款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "SWEET 甜梦款",
+        "name": "SWEET Akihabara·流光原色款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "SWEET 巡游款",
+        "name": "SWEET Akihabara·复古复刻款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "SWEET 独白款",
+        "name": "SWEET Akihabara·马戏巡游款",
         "rarity": "常规款",
         "color": "#9f8cff"
       },
       {
-        "name": "SWEET 隐藏款",
+        "name": "SWEET Akihabara·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "SWEET 节日款",
+        "name": "SWEET Akihabara·假日限定款",
         "rarity": "主题款",
         "color": "#9f8cff"
       },
       {
-        "name": "SWEET 收藏款",
+        "name": "SWEET Akihabara·典藏尊享款",
         "rarity": "高热度",
         "color": "#9f8cff"
       }
@@ -3710,49 +3684,49 @@
     "signal_en": "Track / hold",
     "story": {
       "year": "2026",
-      "tagline": "PUCKY 的 Forest 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Pucky 森林系列 以 PUCKY 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "PUCKY Forest 极具升值潜力的二级市场标的。",
+      "intro": "作为 PUCKY 矩阵的重要成员，Pucky 森林系列 (系列: Forest) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "PUCKY 主角款",
+        "name": "PUCKY Forest·经典核心款",
         "rarity": "常规款",
         "color": "#65d39b"
       },
       {
-        "name": "PUCKY 夜色款",
+        "name": "PUCKY Forest·幻影午夜款",
         "rarity": "常规款",
         "color": "#65d39b"
       },
       {
-        "name": "PUCKY 甜梦款",
+        "name": "PUCKY Forest·流光原色款",
         "rarity": "常规款",
         "color": "#65d39b"
       },
       {
-        "name": "PUCKY 巡游款",
+        "name": "PUCKY Forest·复古复刻款",
         "rarity": "常规款",
         "color": "#65d39b"
       },
       {
-        "name": "PUCKY 独白款",
+        "name": "PUCKY Forest·马戏巡游款",
         "rarity": "常规款",
         "color": "#65d39b"
       },
       {
-        "name": "PUCKY 隐藏款",
+        "name": "PUCKY Forest·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "PUCKY 节日款",
+        "name": "PUCKY Forest·假日限定款",
         "rarity": "主题款",
         "color": "#65d39b"
       },
       {
-        "name": "PUCKY 收藏款",
+        "name": "PUCKY Forest·典藏尊享款",
         "rarity": "高热度",
         "color": "#65d39b"
       }
@@ -3785,49 +3759,49 @@
     "signal_en": "Strong watch",
     "story": {
       "year": "2026",
-      "tagline": "PUCKY 的 Sleeping Babies 系列在收藏玩家与二级市场之间形成了清晰的价格信号。",
-      "intro": "Pucky 睡眠宝宝 以 PUCKY 的角色语言为核心，将盲盒的惊喜感、角色辨识度和流通价格结合在一起。PopTracker 将这一系列拆成设计叙事、角色图鉴、发售信息与成交估值，让玩家在欣赏内容的同时理解市场热度。",
-      "philosophy": "这个系列的看点不只在单只潮玩的造型，也在于整组角色之间的情绪层次、色彩节奏和隐藏款稀缺性。",
-      "detail": "当前 FMV 使用 SoldComps 成交样本清洗后计算，默认采用 IQR 异常值过滤与 10% trimmed median，避免仅空盒、预售、卡片或极端成交价干扰估值。"
+      "tagline": "PUCKY Sleeping Babies 极具升值潜力的二级市场标的。",
+      "intro": "作为 PUCKY 矩阵的重要成员，Pucky 睡眠宝宝 (系列: Sleeping Babies) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "PUCKY 主角款",
+        "name": "PUCKY Sleeping·经典核心款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "PUCKY 夜色款",
+        "name": "PUCKY Sleeping·幻影午夜款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "PUCKY 甜梦款",
+        "name": "PUCKY Sleeping·流光原色款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "PUCKY 巡游款",
+        "name": "PUCKY Sleeping·复古复刻款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "PUCKY 独白款",
+        "name": "PUCKY Sleeping·马戏巡游款",
         "rarity": "常规款",
         "color": "#ffc857"
       },
       {
-        "name": "PUCKY 隐藏款",
+        "name": "PUCKY Sleeping·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "PUCKY 节日款",
+        "name": "PUCKY Sleeping·假日限定款",
         "rarity": "主题款",
         "color": "#ffc857"
       },
       {
-        "name": "PUCKY 收藏款",
+        "name": "PUCKY Sleeping·典藏尊享款",
         "rarity": "高热度",
         "color": "#ffc857"
       }

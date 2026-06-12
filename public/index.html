@@ -9,11 +9,6 @@
       content="PopTracker 通过 SoldComps 预生成成交数据追踪泡泡玛特潮玩 FMV、市值趋势、成交热度与二级市场走势。"
     />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-      crossorigin="anonymous"
-    ></script>
     <style>
       :root {
         color-scheme: light;
@@ -753,23 +748,59 @@
         align-content: start;
       }
 
+      /* 遮罩层样式 */
+      .drawer-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(25, 28, 29, 0.4);
+        backdrop-filter: blur(4px);
+        z-index: 55;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .drawer-overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
       .detail-drawer {
         position: fixed;
-        right: 18px;
-        bottom: 18px;
+        right: 0;
+        bottom: 0;
         z-index: 60;
         display: none;
-        width: min(520px, calc(100vw - 36px));
-        max-height: calc(100vh - 92px);
+        width: min(520px, 100vw);
+        height: 100vh;
+        max-height: 100vh;
         overflow: auto;
         border: 1px solid var(--line);
-        border-radius: 8px;
+        border-right: none;
+        border-radius: 12px 0 0 12px;
         background: var(--surface);
-        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+        box-shadow: -8px 0 32px rgba(0, 0, 0, 0.15);
+        transform: translateX(100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
       .detail-drawer.open {
         display: block;
+        transform: translateX(0);
+      }
+
+      @media (max-width: 720px) {
+        .detail-drawer {
+          right: 0;
+          bottom: 0;
+          width: 100vw;
+          height: 85vh;
+          max-height: 85vh;
+          border-radius: 16px 16px 0 0;
+          transform: translateY(100%);
+        }
+        .detail-drawer.open {
+          transform: translateY(0);
+        }
       }
 
       .detail-hero {
@@ -1097,6 +1128,8 @@
       <div id="seriesDetailContent"></div>
     </section>
 
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
     <section class="detail-drawer" id="detailDrawer" aria-label="单品详情">
       <div class="detail-hero">
         <div class="detail-art" id="detailArt"></div>
@@ -1167,7 +1200,19 @@
     <script>
       const CONFIG = {
         adsenseId: "ca-pub-XXXXXXXXXXXXXXXX",
+        slotLeaderboard: "YYYYYYYYYY",
+        slotSidebar: "ZZZZZZZZZZ",
+        slotInFeed: "WWWWWWWWWW",
       };
+
+      // 动态载入 Google AdSense 核心库，彻底解耦硬编码
+      (function () {
+        const script = document.createElement("script");
+        script.async = true;
+        script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${CONFIG.adsenseId}`;
+        script.crossOrigin = "anonymous";
+        document.head.appendChild(script);
+      })();
 
       const storageKeys = {
         api: "SOLD_COMPS_API_KEY",
@@ -1373,7 +1418,8 @@
         const top = items[0];
         const insight = marketStats();
 
-        const cards = items.map((item, index) => {
+        // 1. 先构建纯粹的商品 HTML 数组
+        let cardsHtmlArray = items.map((item, index) => {
           const change = parseChange(item.priceChange7d);
           const badge = item.refreshTier === "hot" ? "24h refresh" : "7d refresh";
           return `
@@ -1397,8 +1443,9 @@
           `;
         });
 
-        cards.splice(
-          Math.min(3, cards.length),
+        // 2. 在固定索引位置强行注入“大盘宏观洞察卡片”
+        cardsHtmlArray.splice(
+          Math.min(2, cardsHtmlArray.length),
           0,
           `
           <article class="insight-card">
@@ -1412,12 +1459,41 @@
               <span><span class="card-label">平均 ROI</span><strong>${insight.avgRoi.toFixed(0)}%</strong></span>
             </div>
           </article>
-        `,
+          `
         );
-        document.getElementById("bentoGrid").innerHTML = cards.join("");
+
+        // 3. 原生变现利器：在商品列表中间无缝编织插入真实的 AdSense 响应式卡片
+        if (cardsHtmlArray.length >= 5) {
+          const nativeAdCode = `
+            <div class="item-card adsense-native-card" style="padding:15px; background:var(--surface-low); min-height:340px; display:flex; flex-direction:column; justify-content:center;">
+              <ins class="adsbygoogle"
+                   style="display:block; text-align:center;"
+                   data-ad-layout="in-article"
+                   data-ad-format="fluid"
+                   data-ad-client="${CONFIG.adsenseId}"
+                   data-ad-slot="${CONFIG.slotInFeed}"></ins>
+            </div>
+          `;
+          cardsHtmlArray.splice(4, 0, nativeAdCode);
+          if (cardsHtmlArray.length >= 10) {
+            cardsHtmlArray.splice(9, 0, nativeAdCode);
+          }
+        }
+
+        // 4. 将最终组合流全量输出渲染
+        document.getElementById("bentoGrid").innerHTML = cardsHtmlArray.join("");
+
+        // 5. 绑定点击事件，跳过广告卡片
         document.querySelectorAll("#bentoGrid [data-sku]").forEach((button) => {
           button.addEventListener("click", () => navigateToSeries(button.dataset.sku));
         });
+
+        // 6. 异步唤醒并触发刚才注入的各级 Google 广告实例加载
+        try {
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        } catch (e) {
+          console.log("AdSense fluid push bypassed.");
+        }
       }
 
       function renderRank() {
@@ -1628,11 +1704,17 @@
         node.textContent = JSON.stringify(productSchema(item));
       }
 
+      function closeDrawer() {
+        document.getElementById("detailDrawer").classList.remove("open");
+        document.getElementById("drawerOverlay").classList.remove("active");
+      }
+
       async function loadDetail(sku) {
         const item = state.items.find((asset) => asset.sku === sku);
         if (!item) return;
         state.selectedSku = sku;
         document.getElementById("detailDrawer").classList.add("open");
+        document.getElementById("drawerOverlay").classList.add("active");
         const art = document.getElementById("detailArt");
         art.style.setProperty("--asset-color", item.color);
         art.innerHTML = imageMarkup(item);
@@ -1800,9 +1882,8 @@
       });
       document.getElementById("searchInput").addEventListener("input", render);
       document.getElementById("sortSelect").addEventListener("change", render);
-      document.getElementById("closeDetailButton").addEventListener("click", () => {
-        document.getElementById("detailDrawer").classList.remove("open");
-      });
+      document.getElementById("closeDetailButton").addEventListener("click", closeDrawer);
+      document.getElementById("drawerOverlay").addEventListener("click", closeDrawer);
       document.getElementById("refreshOneButton").addEventListener("click", () => {
         if (state.selectedSku) refreshMarketPrice(state.selectedSku);
       });
