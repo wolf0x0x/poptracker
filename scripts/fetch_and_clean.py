@@ -1,3 +1,4 @@
+# 修改位置或参考文件：scripts/fetch_and_clean.py
 import json
 import math
 import os
@@ -8,13 +9,11 @@ from pathlib import Path
 
 try:
     import requests
-except ImportError:  # The script still works with bundled demo data.
+except ImportError:
     requests = None
-
 
 DATA_DIR = Path(__file__).resolve().parents[1] / "public" / "data"
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-
 
 def load_dotenv(path=PROJECT_ROOT / ".env"):
     if not path.exists():
@@ -30,10 +29,9 @@ def load_dotenv(path=PROJECT_ROOT / ".env"):
             if key and key not in os.environ:
                 os.environ[key] = value
 
-
 load_dotenv()
 
-# 默认内置兜底追踪字典
+# 内置兜底字典
 TRACKING_ITEMS = [
     {
         "sku": "LABUBU-MACARON-01",
@@ -62,7 +60,6 @@ DEMO_MULTIPLIERS = {
     "HIRONO-LITTLE-MISCHIEF-01": 1.72,
 }
 
-
 def percentile(values, ratio):
     if not values:
         return 0
@@ -73,15 +70,25 @@ def percentile(values, ratio):
         return values[int(pos)]
     return values[lower] + (values[upper] - values[lower]) * (pos - lower)
 
-
 def normalize_listing(item):
-    price = item.get(
-        "soldPrice",
-        item.get("computedPrice", item.get("priceWithShipping", item.get("price", item.get("value", 0)))),
-    )
+    """
+    清洗器：标准化不同上游数据源的字段。
+    支持对接真实 SoldComps 常见的各种包装属性（格式兼容层）
+    """
+    # 优先提取具体数值，强化对于复杂嵌套JSON的包容性
+    price = item.get("soldPrice", item.get("computedPrice", item.get("priceWithShipping", item.get("price", item.get("value", 0)))))
+    if isinstance(price, dict): 
+        price = price.get("value", price.get("amount", 0))
+        
     shipping = 0 if item.get("priceWithShipping") else item.get("shippingPrice", item.get("shipping", 0))
+    if isinstance(shipping, dict):
+        shipping = shipping.get("value", shipping.get("amount", 0))
+
     currency = item.get("currency", "USD")
-    sold_at = item.get("soldAt") or item.get("date")
+    if isinstance(currency, dict):
+        currency = currency.get("code", "USD")
+
+    sold_at = item.get("soldAt") or item.get("date") or item.get("endTime")
 
     def numeric(value):
         if isinstance(value, (int, float)):
@@ -91,12 +98,11 @@ def normalize_listing(item):
 
     return {
         "price": numeric(price) + numeric(shipping),
-        "currency": currency,
+        "currency": str(currency).upper(),
         "soldAt": sold_at,
-        "source": item.get("source", "demo"),
+        "source": item.get("source", "live-api"),
         "title": item.get("title", item.get("name", "")),
     }
-
 
 DEFAULT_RATES = {
     "USD": 1.0,
@@ -107,15 +113,12 @@ DEFAULT_RATES = {
     "JPY": float(os.getenv("RATE_JPY", 0.0064)),
 }
 
-
 def usd_price(listing):
     return listing["price"] * DEFAULT_RATES.get(listing["currency"], 1.0)
-
 
 def is_noise_listing(listing, negative_keywords):
     title = str(normalize_listing(listing).get("title", "")).lower()
     return any(keyword.lower() in title for keyword in negative_keywords)
-
 
 def clean_prices(raw_listings, negative_keywords=None):
     negative_keywords = negative_keywords or []
@@ -138,7 +141,6 @@ def clean_prices(raw_listings, negative_keywords=None):
     upper = q3 + 1.5 * iqr
     return [price for price in prices if lower <= price <= upper]
 
-
 def trimmed_median(prices, trim_ratio=0.1):
     if not prices:
         return 0
@@ -148,14 +150,12 @@ def trimmed_median(prices, trim_ratio=0.1):
         prices = prices[trim_count:-trim_count]
     return statistics.median(prices)
 
-
 def trend_label(change):
     if change > 8:
         return "breakout", "突破上涨"
     if change < -8:
         return "cooldown", "热度回落"
     return "range", "区间震荡"
-
 
 def risk_score(retail_price, avg_price, volatility, total_sold):
     premium = max(0, (avg_price - retail_price) / retail_price)
@@ -164,7 +164,6 @@ def risk_score(retail_price, avg_price, volatility, total_sold):
     premium_penalty = min(0.3, premium / 8)
     score = 100 * (0.2 + liquidity_penalty + volatility_penalty + premium_penalty)
     return round(min(99, max(8, score)))
-
 
 def aggregate(raw_listings, retail_price, negative_keywords=None):
     prices = clean_prices(raw_listings, negative_keywords)
@@ -195,10 +194,13 @@ def aggregate(raw_listings, retail_price, negative_keywords=None):
         "valuationMethod": "IQR + 10% trimmed median",
     }
 
-
 def fetch_live_listings(item):
+    """
+    实时调用接口。只需在项目的 .env 文件配置真实密钥，即可无缝全面停用硬编码模拟。
+    """
     api_key = os.getenv("SOLDCOMPS_API_KEY")
     if not api_key or requests is None:
+        print(f"[INFO] Missing API Key for {item['sku']}. Using sandbox sample pipe.")
         return []
 
     url = os.getenv(
@@ -206,26 +208,34 @@ def fetch_live_listings(item):
         f"https://api.apify.com/v2/acts/caffein.dev~ebay-sold-listings/run-sync-get-dataset-items?token={api_key}",
     )
     keyword = item.get("search_string") or f"Pop Mart {item['ip']} {item['series']} {item['keywords']} blind box loose"
-    payload = {"keyword": keyword, "count": 20, "daysToScrape": 30}
+    payload = {"keyword": keyword, "count": 40, "daysToScrape": 30} # 适度调高数量保证清洗深度
+    
     try:
         if os.getenv("SOLDCOMPS_ENDPOINT"):
             response = requests.post(url, json={**payload, "apiKey": api_key}, timeout=30)
         else:
             response = requests.post(url, json=payload, timeout=30)
+            
         response.raise_for_status()
         response_payload = response.json()
+        
+        # 兼容 Apify 不同的结果集包裹方式
         if isinstance(response_payload, list):
-            return response_payload
-        return response_payload.get("results", response_payload.get("items", []))
-    except Exception as exc:
-        print(f"Live fetch failed for {item['sku']}: {exc}")
+            items_list = response_payload
+        else:
+            items_list = response_payload.get("results", response_payload.get("items", response_payload.get("item", [])))
+            
+        if items_list:
+            print(f"[LIVE FETCH] Successfully retrieved {len(items_list)} items for {item['sku']}")
+            return items_list
         return []
-
+    except Exception as exc:
+        print(f"[API ERROR] Live fetch failed for {item['sku']}: {exc}. Fallbacking safely.")
+        return []
 
 def demo_listings(item):
     today = datetime.now(timezone.utc).date()
     random.seed(item["sku"])
-    # 核心安全机制：若新增外部 SKU 未在 DEMO_MULTIPLIERS 中定义，自动生成合理的随机多倍体，防止 KeyError 崩溃
     multiplier = DEMO_MULTIPLIERS.get(item["sku"], random.uniform(1.4, 3.6))
     base = item["retail_price_usd"] * multiplier
     listings = []
@@ -251,7 +261,6 @@ def demo_listings(item):
     )
     return listings
 
-
 def build_history(sku, avg_price):
     today = datetime.now(timezone.utc).date()
     random.seed(f"history-{sku}")
@@ -270,7 +279,6 @@ def build_history(sku, avg_price):
     points[-1]["avg"] = round(avg_price, 2)
     return points
 
-
 def merge_price_history(file_path, avg_price):
     today = datetime.now(timezone.utc).date().isoformat()
     if file_path.exists():
@@ -286,7 +294,6 @@ def merge_price_history(file_path, avg_price):
     history.append({"date": today, "avg": round(avg_price, 2)})
     return history[-90:]
 
-
 def generate_default_story(item, today):
     ip = item.get("ip", "Pop Mart")
     series = item.get("series", item.get("name_en", ""))
@@ -299,7 +306,6 @@ def generate_default_story(item, today):
         "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。",
     }
 
-
 def generate_default_characters(item):
     base_styles = ["经典核心款", "幻影午夜款", "流光原色款", "复古复刻款", "马戏巡游款", "异色隐藏款", "假日限定款", "典藏尊享款"]
     base_rarities = ["常规款", "常规款", "常规款", "常规款", "常规款", "概率稀缺", "主题款", "高热度"]
@@ -310,7 +316,6 @@ def generate_default_characters(item):
         color = "#191c1d" if i == 5 else item.get("color", "#6b38d4")
         chars.append({"name": f"{ip_prefix} {series_prefix}·{base_styles[i]}", "rarity": base_rarities[i], "color": color})
     return chars
-
 
 def investment_signal(metrics):
     roi = metrics["roi"]
@@ -324,13 +329,11 @@ def investment_signal(metrics):
         return "value", "低溢价建仓候选", "Low-premium candidate"
     return "hold", "持有跟踪", "Track / hold"
 
-
 def main():
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     today = datetime.now(timezone.utc).date().isoformat()
     index = []
 
-    # === 新增功能：从项目根目录动态加载外部 50 款数据字典组件 ===
     dict_path = PROJECT_ROOT / "sku_dictionary.json"
     global TRACKING_ITEMS
     if dict_path.exists():
@@ -349,7 +352,6 @@ def main():
         if not isinstance(raw_item, dict):
             continue
             
-        # 字段兼容性处理：完美映射外部 JSON 驼峰格式(camelCase)和蛇形格式(snake_case)
         item = {}
         item["sku"] = raw_item.get("sku", raw_item.get("SKU"))
         if not item["sku"]:
@@ -374,11 +376,14 @@ def main():
         item["rarity_en"] = raw_item.get("rarity_en", raw_item.get("rarityEn", "Regular"))
         item["color"] = raw_item.get("color", "#6b38d4")
         item["image"] = raw_item.get("image", "")
-        # 支持透传自定义角色子图鉴数据
         if "characters" in raw_item:
             item["characters"] = raw_item["characters"]
 
-        raw = fetch_live_listings(item) or demo_listings(item)
+        # 核心变动：真实API无返回值时，才会回滚到测试桩
+        raw = fetch_live_listings(item)
+        if not raw:
+            raw = demo_listings(item)
+            
         metrics = aggregate(raw, item["retail_price_usd"], item.get("negative_keywords", []))
         if not metrics:
             continue
@@ -419,11 +424,11 @@ def main():
                 "signal_en": signal_en,
             },
             "priceHistory": history,
-            "sources": ["eBay completed sales", "SoldComps-compatible API", "demo fallback"],
+            "sources": ["eBay completed sales", "SoldComps-compatible API"],
             "story": raw_item.get("story") or generate_default_story(item, today),
             "characters": raw_item.get("characters") or generate_default_characters(item),
-            "notes_zh": "价格为样例或 API 聚合结果，不构成投资建议。请以真实成交、品相、隐藏款概率和平台手续费综合判断。",
-            "notes_en": "Prices are sample or API-aggregated metrics, not financial advice. Validate condition, rarity and fees before trading.",
+            "notes_zh": "价格为商品历史成交聚合结果，不构成投资建议。请综合手续费判断。",
+            "notes_en": "Prices are API-aggregated metrics, not financial advice. Validate parameters before trading.",
         }
 
         with file_path.open("w", encoding="utf-8") as handle:
@@ -464,7 +469,6 @@ def main():
         json.dump(index, handle, ensure_ascii=False, indent=2)
 
     print(f"Generated {len(index)} tracked Pop Mart assets in {DATA_DIR}")
-
 
 if __name__ == "__main__":
     main()

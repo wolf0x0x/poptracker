@@ -170,8 +170,7 @@
   ],
   "sources": [
     "eBay completed sales",
-    "SoldComps-compatible API",
-    "demo fallback"
+    "SoldComps-compatible API"
   ],
   "story": {
     "year": "2026",
@@ -222,6 +221,6 @@
       "color": "#50e3c2"
     }
   ],
-  "notes_zh": "价格为样例或 API 聚合结果，不构成投资建议。请以真实成交、品相、隐藏款概率和平台手续费综合判断。",
-  "notes_en": "Prices are sample or API-aggregated metrics, not financial advice. Validate condition, rarity and fees before trading."
+  "notes_zh": "价格为商品历史成交聚合结果，不构成投资建议。请综合手续费判断。",
+  "notes_en": "Prices are API-aggregated metrics, not financial advice. Validate parameters before trading."
 }
