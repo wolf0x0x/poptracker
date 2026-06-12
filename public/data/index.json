@@ -176,6 +176,208 @@
     "lastUpdated": "2026-06-12"
   },
   {
+    "sku": "MOLLY-DAYDREAM-06",
+    "ip": "MOLLY",
+    "series": "Daydream",
+    "name_zh": "Molly 白日梦",
+    "name_en": "MOLLY Daydream",
+    "rarity_zh": "稳定流通",
+    "rarity_en": "Liquid regular",
+    "color": "#ff8a5b",
+    "image": "/assets/sku/MOLLY-DAYDREAM-06.png",
+    "searchString": "\"Molly\" AND \"Daydream\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
+    "refreshTier": "weekly",
+    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+MOLLY+Daydream",
+    "retailPrice": 15.0,
+    "avgSoldPrice": 87.15,
+    "medianSoldPrice": 87.15,
+    "fairMarketValue": 87.15,
+    "valuationMethod": "IQR + 10% trimmed median",
+    "priceChange7d": "+61.6%",
+    "roi": 793.2,
+    "riskScore": 92,
+    "totalSold": 40,
+    "signal_zh": "谨慎追高",
+    "signal_en": "Caution",
+    "dataSource": "live",
+    "priceHistory": [
+      {
+        "date": "2026-05-13",
+        "avg": 53.19
+      },
+      {
+        "date": "2026-05-14",
+        "avg": 57.4
+      },
+      {
+        "date": "2026-05-15",
+        "avg": 55.26
+      },
+      {
+        "date": "2026-05-16",
+        "avg": 56.25
+      },
+      {
+        "date": "2026-05-17",
+        "avg": 58.47
+      },
+      {
+        "date": "2026-05-18",
+        "avg": 56.8
+      },
+      {
+        "date": "2026-05-19",
+        "avg": 59.57
+      },
+      {
+        "date": "2026-05-20",
+        "avg": 56.92
+      },
+      {
+        "date": "2026-05-21",
+        "avg": 57.69
+      },
+      {
+        "date": "2026-05-22",
+        "avg": 59.72
+      },
+      {
+        "date": "2026-05-23",
+        "avg": 59.63
+      },
+      {
+        "date": "2026-05-24",
+        "avg": 59.13
+      },
+      {
+        "date": "2026-05-25",
+        "avg": 59.95
+      },
+      {
+        "date": "2026-05-26",
+        "avg": 57.45
+      },
+      {
+        "date": "2026-05-27",
+        "avg": 57.35
+      },
+      {
+        "date": "2026-05-28",
+        "avg": 56.55
+      },
+      {
+        "date": "2026-05-29",
+        "avg": 56.74
+      },
+      {
+        "date": "2026-05-30",
+        "avg": 55.77
+      },
+      {
+        "date": "2026-05-31",
+        "avg": 54.5
+      },
+      {
+        "date": "2026-06-01",
+        "avg": 54.39
+      },
+      {
+        "date": "2026-06-02",
+        "avg": 55.7
+      },
+      {
+        "date": "2026-06-03",
+        "avg": 55.78
+      },
+      {
+        "date": "2026-06-04",
+        "avg": 52.49
+      },
+      {
+        "date": "2026-06-05",
+        "avg": 53.92
+      },
+      {
+        "date": "2026-06-06",
+        "avg": 50.89
+      },
+      {
+        "date": "2026-06-07",
+        "avg": 55.05
+      },
+      {
+        "date": "2026-06-08",
+        "avg": 51.22
+      },
+      {
+        "date": "2026-06-09",
+        "avg": 57.07
+      },
+      {
+        "date": "2026-06-10",
+        "avg": 52.05
+      },
+      {
+        "date": "2026-06-11",
+        "avg": 56.58
+      },
+      {
+        "date": "2026-06-12",
+        "avg": 87.15
+      }
+    ],
+    "story": {
+      "year": "2026",
+      "tagline": "MOLLY Daydream 极具升值潜力的二级市场标的。",
+      "intro": "作为 MOLLY 矩阵的重要成员，Molly 白日梦 (系列: Daydream) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
+    },
+    "characters": [
+      {
+        "name": "MOLLY Daydream·经典核心款",
+        "rarity": "常规款",
+        "color": "#ff8a5b"
+      },
+      {
+        "name": "MOLLY Daydream·幻影午夜款",
+        "rarity": "常规款",
+        "color": "#ff8a5b"
+      },
+      {
+        "name": "MOLLY Daydream·流光原色款",
+        "rarity": "常规款",
+        "color": "#ff8a5b"
+      },
+      {
+        "name": "MOLLY Daydream·复古复刻款",
+        "rarity": "常规款",
+        "color": "#ff8a5b"
+      },
+      {
+        "name": "MOLLY Daydream·马戏巡游款",
+        "rarity": "常规款",
+        "color": "#ff8a5b"
+      },
+      {
+        "name": "MOLLY Daydream·异色隐藏款",
+        "rarity": "概率稀缺",
+        "color": "#191c1d"
+      },
+      {
+        "name": "MOLLY Daydream·假日限定款",
+        "rarity": "主题款",
+        "color": "#ff8a5b"
+      },
+      {
+        "name": "MOLLY Daydream·典藏尊享款",
+        "rarity": "高热度",
+        "color": "#ff8a5b"
+      }
+    ],
+    "lastUpdated": "2026-06-12"
+  },
+  {
     "sku": "MOLLY-SCHOOLLIFE-07",
     "ip": "MOLLY",
     "series": "School Life",
@@ -189,12 +391,12 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+MOLLY+School+Life",
     "retailPrice": 15.0,
-    "avgSoldPrice": 93.39,
-    "medianSoldPrice": 93.39,
-    "fairMarketValue": 93.39,
+    "avgSoldPrice": 85.44,
+    "medianSoldPrice": 85.44,
+    "fairMarketValue": 85.44,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+151.3%",
-    "roi": 869.1,
+    "priceChange7d": "+129.9%",
+    "roi": 779.5,
     "riskScore": 92,
     "totalSold": 40,
     "signal_zh": "谨慎追高",
@@ -323,7 +525,7 @@
       },
       {
         "date": "2026-06-12",
-        "avg": 93.39
+        "avg": 85.44
       }
     ],
     "story": {
@@ -378,208 +580,6 @@
     "lastUpdated": "2026-06-12"
   },
   {
-    "sku": "MOLLY-DAYDREAM-06",
-    "ip": "MOLLY",
-    "series": "Daydream",
-    "name_zh": "Molly 白日梦",
-    "name_en": "MOLLY Daydream",
-    "rarity_zh": "稳定流通",
-    "rarity_en": "Liquid regular",
-    "color": "#ff8a5b",
-    "image": "/assets/sku/MOLLY-DAYDREAM-06.png",
-    "searchString": "\"Molly\" AND \"Daydream\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
-    "refreshTier": "weekly",
-    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+MOLLY+Daydream",
-    "retailPrice": 15.0,
-    "avgSoldPrice": 90.62,
-    "medianSoldPrice": 90.62,
-    "fairMarketValue": 90.62,
-    "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+68.1%",
-    "roi": 862.9,
-    "riskScore": 92,
-    "totalSold": 39,
-    "signal_zh": "谨慎追高",
-    "signal_en": "Caution",
-    "dataSource": "live",
-    "priceHistory": [
-      {
-        "date": "2026-05-13",
-        "avg": 53.19
-      },
-      {
-        "date": "2026-05-14",
-        "avg": 57.4
-      },
-      {
-        "date": "2026-05-15",
-        "avg": 55.26
-      },
-      {
-        "date": "2026-05-16",
-        "avg": 56.25
-      },
-      {
-        "date": "2026-05-17",
-        "avg": 58.47
-      },
-      {
-        "date": "2026-05-18",
-        "avg": 56.8
-      },
-      {
-        "date": "2026-05-19",
-        "avg": 59.57
-      },
-      {
-        "date": "2026-05-20",
-        "avg": 56.92
-      },
-      {
-        "date": "2026-05-21",
-        "avg": 57.69
-      },
-      {
-        "date": "2026-05-22",
-        "avg": 59.72
-      },
-      {
-        "date": "2026-05-23",
-        "avg": 59.63
-      },
-      {
-        "date": "2026-05-24",
-        "avg": 59.13
-      },
-      {
-        "date": "2026-05-25",
-        "avg": 59.95
-      },
-      {
-        "date": "2026-05-26",
-        "avg": 57.45
-      },
-      {
-        "date": "2026-05-27",
-        "avg": 57.35
-      },
-      {
-        "date": "2026-05-28",
-        "avg": 56.55
-      },
-      {
-        "date": "2026-05-29",
-        "avg": 56.74
-      },
-      {
-        "date": "2026-05-30",
-        "avg": 55.77
-      },
-      {
-        "date": "2026-05-31",
-        "avg": 54.5
-      },
-      {
-        "date": "2026-06-01",
-        "avg": 54.39
-      },
-      {
-        "date": "2026-06-02",
-        "avg": 55.7
-      },
-      {
-        "date": "2026-06-03",
-        "avg": 55.78
-      },
-      {
-        "date": "2026-06-04",
-        "avg": 52.49
-      },
-      {
-        "date": "2026-06-05",
-        "avg": 53.92
-      },
-      {
-        "date": "2026-06-06",
-        "avg": 50.89
-      },
-      {
-        "date": "2026-06-07",
-        "avg": 55.05
-      },
-      {
-        "date": "2026-06-08",
-        "avg": 51.22
-      },
-      {
-        "date": "2026-06-09",
-        "avg": 57.07
-      },
-      {
-        "date": "2026-06-10",
-        "avg": 52.05
-      },
-      {
-        "date": "2026-06-11",
-        "avg": 56.58
-      },
-      {
-        "date": "2026-06-12",
-        "avg": 90.62
-      }
-    ],
-    "story": {
-      "year": "2026",
-      "tagline": "MOLLY Daydream 极具升值潜力的二级市场标的。",
-      "intro": "作为 MOLLY 矩阵的重要成员，Molly 白日梦 (系列: Daydream) 在二级交易市场表现出极高的换手率与价格稳定性。",
-      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
-      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
-    },
-    "characters": [
-      {
-        "name": "MOLLY Daydream·经典核心款",
-        "rarity": "常规款",
-        "color": "#ff8a5b"
-      },
-      {
-        "name": "MOLLY Daydream·幻影午夜款",
-        "rarity": "常规款",
-        "color": "#ff8a5b"
-      },
-      {
-        "name": "MOLLY Daydream·流光原色款",
-        "rarity": "常规款",
-        "color": "#ff8a5b"
-      },
-      {
-        "name": "MOLLY Daydream·复古复刻款",
-        "rarity": "常规款",
-        "color": "#ff8a5b"
-      },
-      {
-        "name": "MOLLY Daydream·马戏巡游款",
-        "rarity": "常规款",
-        "color": "#ff8a5b"
-      },
-      {
-        "name": "MOLLY Daydream·异色隐藏款",
-        "rarity": "概率稀缺",
-        "color": "#191c1d"
-      },
-      {
-        "name": "MOLLY Daydream·假日限定款",
-        "rarity": "主题款",
-        "color": "#ff8a5b"
-      },
-      {
-        "name": "MOLLY Daydream·典藏尊享款",
-        "rarity": "高热度",
-        "color": "#ff8a5b"
-      }
-    ],
-    "lastUpdated": "2026-06-12"
-  },
-  {
     "sku": "MOLLY-IMAGINARY-05",
     "ip": "MOLLY",
     "series": "Imaginary Wandering",
@@ -598,7 +598,7 @@
     "fairMarketValue": 65.32,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "+105.7%",
-    "roi": 672.1,
+    "roi": 618.4,
     "riskScore": 92,
     "totalSold": 39,
     "signal_zh": "谨慎追高",
@@ -795,12 +795,12 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+Candy+Monster",
     "retailPrice": 15.0,
-    "avgSoldPrice": 39.91,
-    "medianSoldPrice": 39.91,
-    "fairMarketValue": 39.91,
+    "avgSoldPrice": 37.89,
+    "medianSoldPrice": 37.89,
+    "fairMarketValue": 37.89,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-4.7%",
-    "roi": 565.7,
+    "priceChange7d": "-9.5%",
+    "roi": 493.4,
     "riskScore": 92,
     "totalSold": 40,
     "signal_zh": "谨慎追高",
@@ -929,7 +929,7 @@
       },
       {
         "date": "2026-06-12",
-        "avg": 39.91
+        "avg": 37.89
       }
     ],
     "story": {
@@ -984,208 +984,6 @@
     "lastUpdated": "2026-06-12"
   },
   {
-    "sku": "SKULLPANDA-ACTIONCUT-06",
-    "ip": "SKULLPANDA",
-    "series": "Action Cut",
-    "name_zh": "Skullpanda 动作特辑",
-    "name_en": "SKULLPANDA Action Cut",
-    "rarity_zh": "稳定流通",
-    "rarity_en": "Liquid regular",
-    "color": "#6bd6ff",
-    "image": "/assets/sku/SKULLPANDA-ACTIONCUT-06.png",
-    "searchString": "\"Skullpanda\" AND \"Action Cut\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
-    "refreshTier": "weekly",
-    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+Action+Cut",
-    "retailPrice": 15.0,
-    "avgSoldPrice": 26.86,
-    "medianSoldPrice": 26.86,
-    "fairMarketValue": 26.86,
-    "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-46.5%",
-    "roi": 460.3,
-    "riskScore": 92,
-    "totalSold": 40,
-    "signal_zh": "谨慎追高",
-    "signal_en": "Caution",
-    "dataSource": "live",
-    "priceHistory": [
-      {
-        "date": "2026-05-13",
-        "avg": 52.15
-      },
-      {
-        "date": "2026-05-14",
-        "avg": 50.54
-      },
-      {
-        "date": "2026-05-15",
-        "avg": 52.97
-      },
-      {
-        "date": "2026-05-16",
-        "avg": 54.12
-      },
-      {
-        "date": "2026-05-17",
-        "avg": 55.9
-      },
-      {
-        "date": "2026-05-18",
-        "avg": 57.28
-      },
-      {
-        "date": "2026-05-19",
-        "avg": 55.49
-      },
-      {
-        "date": "2026-05-20",
-        "avg": 54.66
-      },
-      {
-        "date": "2026-05-21",
-        "avg": 57.58
-      },
-      {
-        "date": "2026-05-22",
-        "avg": 56.45
-      },
-      {
-        "date": "2026-05-23",
-        "avg": 55.67
-      },
-      {
-        "date": "2026-05-24",
-        "avg": 55.67
-      },
-      {
-        "date": "2026-05-25",
-        "avg": 54.49
-      },
-      {
-        "date": "2026-05-26",
-        "avg": 54.88
-      },
-      {
-        "date": "2026-05-27",
-        "avg": 54.36
-      },
-      {
-        "date": "2026-05-28",
-        "avg": 54.87
-      },
-      {
-        "date": "2026-05-29",
-        "avg": 52.25
-      },
-      {
-        "date": "2026-05-30",
-        "avg": 50.47
-      },
-      {
-        "date": "2026-05-31",
-        "avg": 52.19
-      },
-      {
-        "date": "2026-06-01",
-        "avg": 53.25
-      },
-      {
-        "date": "2026-06-02",
-        "avg": 52.36
-      },
-      {
-        "date": "2026-06-03",
-        "avg": 49.27
-      },
-      {
-        "date": "2026-06-04",
-        "avg": 50.86
-      },
-      {
-        "date": "2026-06-05",
-        "avg": 50.18
-      },
-      {
-        "date": "2026-06-06",
-        "avg": 52.16
-      },
-      {
-        "date": "2026-06-07",
-        "avg": 50.82
-      },
-      {
-        "date": "2026-06-08",
-        "avg": 52.2
-      },
-      {
-        "date": "2026-06-09",
-        "avg": 55.31
-      },
-      {
-        "date": "2026-06-10",
-        "avg": 53.73
-      },
-      {
-        "date": "2026-06-11",
-        "avg": 53.9
-      },
-      {
-        "date": "2026-06-12",
-        "avg": 26.86
-      }
-    ],
-    "story": {
-      "year": "2026",
-      "tagline": "SKULLPANDA Action Cut 极具升值潜力的二级市场标的。",
-      "intro": "作为 SKULLPANDA 矩阵的重要成员，Skullpanda 动作特辑 (系列: Action Cut) 在二级交易市场表现出极高的换手率与价格稳定性。",
-      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
-      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
-    },
-    "characters": [
-      {
-        "name": "SKULLPANDA Action·经典核心款",
-        "rarity": "常规款",
-        "color": "#6bd6ff"
-      },
-      {
-        "name": "SKULLPANDA Action·幻影午夜款",
-        "rarity": "常规款",
-        "color": "#6bd6ff"
-      },
-      {
-        "name": "SKULLPANDA Action·流光原色款",
-        "rarity": "常规款",
-        "color": "#6bd6ff"
-      },
-      {
-        "name": "SKULLPANDA Action·复古复刻款",
-        "rarity": "常规款",
-        "color": "#6bd6ff"
-      },
-      {
-        "name": "SKULLPANDA Action·马戏巡游款",
-        "rarity": "常规款",
-        "color": "#6bd6ff"
-      },
-      {
-        "name": "SKULLPANDA Action·异色隐藏款",
-        "rarity": "概率稀缺",
-        "color": "#191c1d"
-      },
-      {
-        "name": "SKULLPANDA Action·假日限定款",
-        "rarity": "主题款",
-        "color": "#6bd6ff"
-      },
-      {
-        "name": "SKULLPANDA Action·典藏尊享款",
-        "rarity": "高热度",
-        "color": "#6bd6ff"
-      }
-    ],
-    "lastUpdated": "2026-06-12"
-  },
-  {
     "sku": "SKULLPANDA-LAIDBACK-08",
     "ip": "SKULLPANDA",
     "series": "Laid Back Tomorrow",
@@ -1199,12 +997,12 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+Laid+Back+Tomorrow",
     "retailPrice": 16.0,
-    "avgSoldPrice": 37.84,
-    "medianSoldPrice": 37.84,
-    "fairMarketValue": 37.84,
+    "avgSoldPrice": 38.91,
+    "medianSoldPrice": 38.91,
+    "fairMarketValue": 38.91,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+8.6%",
-    "roi": 433.9,
+    "priceChange7d": "+11.7%",
+    "roi": 465.3,
     "riskScore": 92,
     "totalSold": 40,
     "signal_zh": "谨慎追高",
@@ -1333,7 +1131,7 @@
       },
       {
         "date": "2026-06-12",
-        "avg": 37.84
+        "avg": 38.91
       }
     ],
     "story": {
@@ -1388,6 +1186,208 @@
     "lastUpdated": "2026-06-12"
   },
   {
+    "sku": "SKULLPANDA-ACTIONCUT-06",
+    "ip": "SKULLPANDA",
+    "series": "Action Cut",
+    "name_zh": "Skullpanda 动作特辑",
+    "name_en": "SKULLPANDA Action Cut",
+    "rarity_zh": "稳定流通",
+    "rarity_en": "Liquid regular",
+    "color": "#6bd6ff",
+    "image": "/assets/sku/SKULLPANDA-ACTIONCUT-06.png",
+    "searchString": "\"Skullpanda\" AND \"Action Cut\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
+    "refreshTier": "weekly",
+    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+Action+Cut",
+    "retailPrice": 15.0,
+    "avgSoldPrice": 27.98,
+    "medianSoldPrice": 27.98,
+    "fairMarketValue": 27.98,
+    "valuationMethod": "IQR + 10% trimmed median",
+    "priceChange7d": "-44.2%",
+    "roi": 465.0,
+    "riskScore": 92,
+    "totalSold": 40,
+    "signal_zh": "谨慎追高",
+    "signal_en": "Caution",
+    "dataSource": "live",
+    "priceHistory": [
+      {
+        "date": "2026-05-13",
+        "avg": 52.15
+      },
+      {
+        "date": "2026-05-14",
+        "avg": 50.54
+      },
+      {
+        "date": "2026-05-15",
+        "avg": 52.97
+      },
+      {
+        "date": "2026-05-16",
+        "avg": 54.12
+      },
+      {
+        "date": "2026-05-17",
+        "avg": 55.9
+      },
+      {
+        "date": "2026-05-18",
+        "avg": 57.28
+      },
+      {
+        "date": "2026-05-19",
+        "avg": 55.49
+      },
+      {
+        "date": "2026-05-20",
+        "avg": 54.66
+      },
+      {
+        "date": "2026-05-21",
+        "avg": 57.58
+      },
+      {
+        "date": "2026-05-22",
+        "avg": 56.45
+      },
+      {
+        "date": "2026-05-23",
+        "avg": 55.67
+      },
+      {
+        "date": "2026-05-24",
+        "avg": 55.67
+      },
+      {
+        "date": "2026-05-25",
+        "avg": 54.49
+      },
+      {
+        "date": "2026-05-26",
+        "avg": 54.88
+      },
+      {
+        "date": "2026-05-27",
+        "avg": 54.36
+      },
+      {
+        "date": "2026-05-28",
+        "avg": 54.87
+      },
+      {
+        "date": "2026-05-29",
+        "avg": 52.25
+      },
+      {
+        "date": "2026-05-30",
+        "avg": 50.47
+      },
+      {
+        "date": "2026-05-31",
+        "avg": 52.19
+      },
+      {
+        "date": "2026-06-01",
+        "avg": 53.25
+      },
+      {
+        "date": "2026-06-02",
+        "avg": 52.36
+      },
+      {
+        "date": "2026-06-03",
+        "avg": 49.27
+      },
+      {
+        "date": "2026-06-04",
+        "avg": 50.86
+      },
+      {
+        "date": "2026-06-05",
+        "avg": 50.18
+      },
+      {
+        "date": "2026-06-06",
+        "avg": 52.16
+      },
+      {
+        "date": "2026-06-07",
+        "avg": 50.82
+      },
+      {
+        "date": "2026-06-08",
+        "avg": 52.2
+      },
+      {
+        "date": "2026-06-09",
+        "avg": 55.31
+      },
+      {
+        "date": "2026-06-10",
+        "avg": 53.73
+      },
+      {
+        "date": "2026-06-11",
+        "avg": 53.9
+      },
+      {
+        "date": "2026-06-12",
+        "avg": 27.98
+      }
+    ],
+    "story": {
+      "year": "2026",
+      "tagline": "SKULLPANDA Action Cut 极具升值潜力的二级市场标的。",
+      "intro": "作为 SKULLPANDA 矩阵的重要成员，Skullpanda 动作特辑 (系列: Action Cut) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
+    },
+    "characters": [
+      {
+        "name": "SKULLPANDA Action·经典核心款",
+        "rarity": "常规款",
+        "color": "#6bd6ff"
+      },
+      {
+        "name": "SKULLPANDA Action·幻影午夜款",
+        "rarity": "常规款",
+        "color": "#6bd6ff"
+      },
+      {
+        "name": "SKULLPANDA Action·流光原色款",
+        "rarity": "常规款",
+        "color": "#6bd6ff"
+      },
+      {
+        "name": "SKULLPANDA Action·复古复刻款",
+        "rarity": "常规款",
+        "color": "#6bd6ff"
+      },
+      {
+        "name": "SKULLPANDA Action·马戏巡游款",
+        "rarity": "常规款",
+        "color": "#6bd6ff"
+      },
+      {
+        "name": "SKULLPANDA Action·异色隐藏款",
+        "rarity": "概率稀缺",
+        "color": "#191c1d"
+      },
+      {
+        "name": "SKULLPANDA Action·假日限定款",
+        "rarity": "主题款",
+        "color": "#6bd6ff"
+      },
+      {
+        "name": "SKULLPANDA Action·典藏尊享款",
+        "rarity": "高热度",
+        "color": "#6bd6ff"
+      }
+    ],
+    "lastUpdated": "2026-06-12"
+  },
+  {
     "sku": "LABUBU-CAMPING-07",
     "ip": "THE MONSTERS",
     "series": "Camping",
@@ -1401,12 +1401,12 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Camping+Labubu",
     "retailPrice": 15.0,
-    "avgSoldPrice": 38.5,
-    "medianSoldPrice": 38.5,
-    "fairMarketValue": 38.5,
+    "avgSoldPrice": 41.02,
+    "medianSoldPrice": 41.02,
+    "fairMarketValue": 41.02,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-34.6%",
-    "roi": 397.3,
+    "priceChange7d": "-30.3%",
+    "roi": 436.0,
     "riskScore": 92,
     "totalSold": 40,
     "signal_zh": "谨慎追高",
@@ -1535,7 +1535,7 @@
       },
       {
         "date": "2026-06-12",
-        "avg": 38.5
+        "avg": 41.02
       }
     ],
     "story": {
@@ -1590,208 +1590,6 @@
     "lastUpdated": "2026-06-12"
   },
   {
-    "sku": "SKULLPANDA-HYPEPANDA-05",
-    "ip": "SKULLPANDA",
-    "series": "Hypepanda",
-    "name_zh": "Skullpanda 熊喵热潮",
-    "name_en": "SKULLPANDA Hypepanda",
-    "rarity_zh": "稳定流通",
-    "rarity_en": "Liquid regular",
-    "color": "#ff7eb6",
-    "image": "/assets/sku/SKULLPANDA-HYPEPANDA-05.png",
-    "searchString": "\"Skullpanda\" AND \"Hypepanda\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
-    "refreshTier": "weekly",
-    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+Hypepanda",
-    "retailPrice": 15.0,
-    "avgSoldPrice": 33.46,
-    "medianSoldPrice": 33.46,
-    "fairMarketValue": 33.46,
-    "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+1.5%",
-    "roi": 397.1,
-    "riskScore": 92,
-    "totalSold": 39,
-    "signal_zh": "谨慎追高",
-    "signal_en": "Caution",
-    "dataSource": "live",
-    "priceHistory": [
-      {
-        "date": "2026-05-13",
-        "avg": 34.58
-      },
-      {
-        "date": "2026-05-14",
-        "avg": 34.01
-      },
-      {
-        "date": "2026-05-15",
-        "avg": 34.6
-      },
-      {
-        "date": "2026-05-16",
-        "avg": 35.74
-      },
-      {
-        "date": "2026-05-17",
-        "avg": 37.02
-      },
-      {
-        "date": "2026-05-18",
-        "avg": 37.47
-      },
-      {
-        "date": "2026-05-19",
-        "avg": 34.01
-      },
-      {
-        "date": "2026-05-20",
-        "avg": 37.43
-      },
-      {
-        "date": "2026-05-21",
-        "avg": 35.05
-      },
-      {
-        "date": "2026-05-22",
-        "avg": 37.42
-      },
-      {
-        "date": "2026-05-23",
-        "avg": 37.81
-      },
-      {
-        "date": "2026-05-24",
-        "avg": 36.59
-      },
-      {
-        "date": "2026-05-25",
-        "avg": 36.17
-      },
-      {
-        "date": "2026-05-26",
-        "avg": 35.3
-      },
-      {
-        "date": "2026-05-27",
-        "avg": 34.36
-      },
-      {
-        "date": "2026-05-28",
-        "avg": 34.5
-      },
-      {
-        "date": "2026-05-29",
-        "avg": 33.97
-      },
-      {
-        "date": "2026-05-30",
-        "avg": 34.95
-      },
-      {
-        "date": "2026-05-31",
-        "avg": 33.74
-      },
-      {
-        "date": "2026-06-01",
-        "avg": 33.76
-      },
-      {
-        "date": "2026-06-02",
-        "avg": 33.61
-      },
-      {
-        "date": "2026-06-03",
-        "avg": 34.05
-      },
-      {
-        "date": "2026-06-04",
-        "avg": 35.2
-      },
-      {
-        "date": "2026-06-05",
-        "avg": 32.95
-      },
-      {
-        "date": "2026-06-06",
-        "avg": 35.12
-      },
-      {
-        "date": "2026-06-07",
-        "avg": 36.01
-      },
-      {
-        "date": "2026-06-08",
-        "avg": 34.54
-      },
-      {
-        "date": "2026-06-09",
-        "avg": 33.71
-      },
-      {
-        "date": "2026-06-10",
-        "avg": 33.04
-      },
-      {
-        "date": "2026-06-11",
-        "avg": 34.94
-      },
-      {
-        "date": "2026-06-12",
-        "avg": 33.46
-      }
-    ],
-    "story": {
-      "year": "2026",
-      "tagline": "SKULLPANDA Hypepanda 极具升值潜力的二级市场标的。",
-      "intro": "作为 SKULLPANDA 矩阵的重要成员，Skullpanda 熊喵热潮 (系列: Hypepanda) 在二级交易市场表现出极高的换手率与价格稳定性。",
-      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
-      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
-    },
-    "characters": [
-      {
-        "name": "SKULLPANDA Hypepanda·经典核心款",
-        "rarity": "常规款",
-        "color": "#ff7eb6"
-      },
-      {
-        "name": "SKULLPANDA Hypepanda·幻影午夜款",
-        "rarity": "常规款",
-        "color": "#ff7eb6"
-      },
-      {
-        "name": "SKULLPANDA Hypepanda·流光原色款",
-        "rarity": "常规款",
-        "color": "#ff7eb6"
-      },
-      {
-        "name": "SKULLPANDA Hypepanda·复古复刻款",
-        "rarity": "常规款",
-        "color": "#ff7eb6"
-      },
-      {
-        "name": "SKULLPANDA Hypepanda·马戏巡游款",
-        "rarity": "常规款",
-        "color": "#ff7eb6"
-      },
-      {
-        "name": "SKULLPANDA Hypepanda·异色隐藏款",
-        "rarity": "概率稀缺",
-        "color": "#191c1d"
-      },
-      {
-        "name": "SKULLPANDA Hypepanda·假日限定款",
-        "rarity": "主题款",
-        "color": "#ff7eb6"
-      },
-      {
-        "name": "SKULLPANDA Hypepanda·典藏尊享款",
-        "rarity": "高热度",
-        "color": "#ff7eb6"
-      }
-    ],
-    "lastUpdated": "2026-06-12"
-  },
-  {
     "sku": "LABUBU-MACARON-01",
     "ip": "THE MONSTERS",
     "series": "Tasty Macarons",
@@ -1805,12 +1603,12 @@
     "refreshTier": "hot",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Tasty+Macarons+Labubu+Macaron+Vinyl+Face",
     "retailPrice": 17.0,
-    "avgSoldPrice": 67.2,
-    "medianSoldPrice": 67.2,
-    "fairMarketValue": 67.2,
+    "avgSoldPrice": 70.31,
+    "medianSoldPrice": 70.31,
+    "fairMarketValue": 70.31,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-15.0%",
-    "roi": 383.5,
+    "priceChange7d": "-11.0%",
+    "roi": 391.9,
     "riskScore": 92,
     "totalSold": 38,
     "signal_zh": "谨慎追高",
@@ -1939,7 +1737,7 @@
       },
       {
         "date": "2026-06-12",
-        "avg": 67.2
+        "avg": 70.31
       }
     ],
     "story": {
@@ -1988,6 +1786,410 @@
     "lastUpdated": "2026-06-12"
   },
   {
+    "sku": "DIMOO-WORLD-01",
+    "ip": "DIMOO",
+    "series": "World x Animal",
+    "name_zh": "Dimoo 动物王国",
+    "name_en": "DIMOO World x Animal",
+    "rarity_zh": "稳定流通",
+    "rarity_en": "Liquid regular",
+    "color": "#65d39b",
+    "image": "/assets/sku/DIMOO-WORLD-01.png",
+    "searchString": "\"Dimoo\" AND (\"World\" OR \"Animal\") AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
+    "refreshTier": "weekly",
+    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+World+Animal",
+    "retailPrice": 15.0,
+    "avgSoldPrice": 32.98,
+    "medianSoldPrice": 32.98,
+    "fairMarketValue": 32.98,
+    "valuationMethod": "IQR + 10% trimmed median",
+    "priceChange7d": "+42.3%",
+    "roi": 390.9,
+    "riskScore": 92,
+    "totalSold": 39,
+    "signal_zh": "谨慎追高",
+    "signal_en": "Caution",
+    "dataSource": "live",
+    "priceHistory": [
+      {
+        "date": "2026-05-13",
+        "avg": 25.89
+      },
+      {
+        "date": "2026-05-14",
+        "avg": 24.15
+      },
+      {
+        "date": "2026-05-15",
+        "avg": 25.54
+      },
+      {
+        "date": "2026-05-16",
+        "avg": 26.79
+      },
+      {
+        "date": "2026-05-17",
+        "avg": 26.19
+      },
+      {
+        "date": "2026-05-18",
+        "avg": 27.58
+      },
+      {
+        "date": "2026-05-19",
+        "avg": 29.01
+      },
+      {
+        "date": "2026-05-20",
+        "avg": 26.04
+      },
+      {
+        "date": "2026-05-21",
+        "avg": 28.19
+      },
+      {
+        "date": "2026-05-22",
+        "avg": 27.25
+      },
+      {
+        "date": "2026-05-23",
+        "avg": 25.92
+      },
+      {
+        "date": "2026-05-24",
+        "avg": 26.54
+      },
+      {
+        "date": "2026-05-25",
+        "avg": 27.21
+      },
+      {
+        "date": "2026-05-26",
+        "avg": 25.73
+      },
+      {
+        "date": "2026-05-27",
+        "avg": 26.35
+      },
+      {
+        "date": "2026-05-28",
+        "avg": 26.34
+      },
+      {
+        "date": "2026-05-29",
+        "avg": 26.27
+      },
+      {
+        "date": "2026-05-30",
+        "avg": 25.24
+      },
+      {
+        "date": "2026-05-31",
+        "avg": 25.16
+      },
+      {
+        "date": "2026-06-01",
+        "avg": 23.91
+      },
+      {
+        "date": "2026-06-02",
+        "avg": 25.35
+      },
+      {
+        "date": "2026-06-03",
+        "avg": 25.51
+      },
+      {
+        "date": "2026-06-04",
+        "avg": 25.32
+      },
+      {
+        "date": "2026-06-05",
+        "avg": 23.18
+      },
+      {
+        "date": "2026-06-06",
+        "avg": 26.68
+      },
+      {
+        "date": "2026-06-07",
+        "avg": 23.73
+      },
+      {
+        "date": "2026-06-08",
+        "avg": 26.27
+      },
+      {
+        "date": "2026-06-09",
+        "avg": 24.87
+      },
+      {
+        "date": "2026-06-10",
+        "avg": 26.92
+      },
+      {
+        "date": "2026-06-11",
+        "avg": 26.86
+      },
+      {
+        "date": "2026-06-12",
+        "avg": 32.98
+      }
+    ],
+    "story": {
+      "year": "2026",
+      "tagline": "DIMOO World x Animal 极具升值潜力的二级市场标的。",
+      "intro": "作为 DIMOO 矩阵的重要成员，Dimoo 动物王国 (系列: World x Animal) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
+    },
+    "characters": [
+      {
+        "name": "DIMOO World·经典核心款",
+        "rarity": "常规款",
+        "color": "#65d39b"
+      },
+      {
+        "name": "DIMOO World·幻影午夜款",
+        "rarity": "常规款",
+        "color": "#65d39b"
+      },
+      {
+        "name": "DIMOO World·流光原色款",
+        "rarity": "常规款",
+        "color": "#65d39b"
+      },
+      {
+        "name": "DIMOO World·复古复刻款",
+        "rarity": "常规款",
+        "color": "#65d39b"
+      },
+      {
+        "name": "DIMOO World·马戏巡游款",
+        "rarity": "常规款",
+        "color": "#65d39b"
+      },
+      {
+        "name": "DIMOO World·异色隐藏款",
+        "rarity": "概率稀缺",
+        "color": "#191c1d"
+      },
+      {
+        "name": "DIMOO World·假日限定款",
+        "rarity": "主题款",
+        "color": "#65d39b"
+      },
+      {
+        "name": "DIMOO World·典藏尊享款",
+        "rarity": "高热度",
+        "color": "#65d39b"
+      }
+    ],
+    "lastUpdated": "2026-06-12"
+  },
+  {
+    "sku": "SKULLPANDA-HYPEPANDA-05",
+    "ip": "SKULLPANDA",
+    "series": "Hypepanda",
+    "name_zh": "Skullpanda 熊喵热潮",
+    "name_en": "SKULLPANDA Hypepanda",
+    "rarity_zh": "稳定流通",
+    "rarity_en": "Liquid regular",
+    "color": "#ff7eb6",
+    "image": "/assets/sku/SKULLPANDA-HYPEPANDA-05.png",
+    "searchString": "\"Skullpanda\" AND \"Hypepanda\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
+    "refreshTier": "weekly",
+    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+Hypepanda",
+    "retailPrice": 15.0,
+    "avgSoldPrice": 34.34,
+    "medianSoldPrice": 34.34,
+    "fairMarketValue": 34.34,
+    "valuationMethod": "IQR + 10% trimmed median",
+    "priceChange7d": "+4.2%",
+    "roi": 368.7,
+    "riskScore": 92,
+    "totalSold": 38,
+    "signal_zh": "谨慎追高",
+    "signal_en": "Caution",
+    "dataSource": "live",
+    "priceHistory": [
+      {
+        "date": "2026-05-13",
+        "avg": 34.58
+      },
+      {
+        "date": "2026-05-14",
+        "avg": 34.01
+      },
+      {
+        "date": "2026-05-15",
+        "avg": 34.6
+      },
+      {
+        "date": "2026-05-16",
+        "avg": 35.74
+      },
+      {
+        "date": "2026-05-17",
+        "avg": 37.02
+      },
+      {
+        "date": "2026-05-18",
+        "avg": 37.47
+      },
+      {
+        "date": "2026-05-19",
+        "avg": 34.01
+      },
+      {
+        "date": "2026-05-20",
+        "avg": 37.43
+      },
+      {
+        "date": "2026-05-21",
+        "avg": 35.05
+      },
+      {
+        "date": "2026-05-22",
+        "avg": 37.42
+      },
+      {
+        "date": "2026-05-23",
+        "avg": 37.81
+      },
+      {
+        "date": "2026-05-24",
+        "avg": 36.59
+      },
+      {
+        "date": "2026-05-25",
+        "avg": 36.17
+      },
+      {
+        "date": "2026-05-26",
+        "avg": 35.3
+      },
+      {
+        "date": "2026-05-27",
+        "avg": 34.36
+      },
+      {
+        "date": "2026-05-28",
+        "avg": 34.5
+      },
+      {
+        "date": "2026-05-29",
+        "avg": 33.97
+      },
+      {
+        "date": "2026-05-30",
+        "avg": 34.95
+      },
+      {
+        "date": "2026-05-31",
+        "avg": 33.74
+      },
+      {
+        "date": "2026-06-01",
+        "avg": 33.76
+      },
+      {
+        "date": "2026-06-02",
+        "avg": 33.61
+      },
+      {
+        "date": "2026-06-03",
+        "avg": 34.05
+      },
+      {
+        "date": "2026-06-04",
+        "avg": 35.2
+      },
+      {
+        "date": "2026-06-05",
+        "avg": 32.95
+      },
+      {
+        "date": "2026-06-06",
+        "avg": 35.12
+      },
+      {
+        "date": "2026-06-07",
+        "avg": 36.01
+      },
+      {
+        "date": "2026-06-08",
+        "avg": 34.54
+      },
+      {
+        "date": "2026-06-09",
+        "avg": 33.71
+      },
+      {
+        "date": "2026-06-10",
+        "avg": 33.04
+      },
+      {
+        "date": "2026-06-11",
+        "avg": 34.94
+      },
+      {
+        "date": "2026-06-12",
+        "avg": 34.34
+      }
+    ],
+    "story": {
+      "year": "2026",
+      "tagline": "SKULLPANDA Hypepanda 极具升值潜力的二级市场标的。",
+      "intro": "作为 SKULLPANDA 矩阵的重要成员，Skullpanda 熊喵热潮 (系列: Hypepanda) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
+    },
+    "characters": [
+      {
+        "name": "SKULLPANDA Hypepanda·经典核心款",
+        "rarity": "常规款",
+        "color": "#ff7eb6"
+      },
+      {
+        "name": "SKULLPANDA Hypepanda·幻影午夜款",
+        "rarity": "常规款",
+        "color": "#ff7eb6"
+      },
+      {
+        "name": "SKULLPANDA Hypepanda·流光原色款",
+        "rarity": "常规款",
+        "color": "#ff7eb6"
+      },
+      {
+        "name": "SKULLPANDA Hypepanda·复古复刻款",
+        "rarity": "常规款",
+        "color": "#ff7eb6"
+      },
+      {
+        "name": "SKULLPANDA Hypepanda·马戏巡游款",
+        "rarity": "常规款",
+        "color": "#ff7eb6"
+      },
+      {
+        "name": "SKULLPANDA Hypepanda·异色隐藏款",
+        "rarity": "概率稀缺",
+        "color": "#191c1d"
+      },
+      {
+        "name": "SKULLPANDA Hypepanda·假日限定款",
+        "rarity": "主题款",
+        "color": "#ff7eb6"
+      },
+      {
+        "name": "SKULLPANDA Hypepanda·典藏尊享款",
+        "rarity": "高热度",
+        "color": "#ff7eb6"
+      }
+    ],
+    "lastUpdated": "2026-06-12"
+  },
+  {
     "sku": "LABUBU-ZODIAC-09",
     "ip": "THE MONSTERS",
     "series": "Zodiac",
@@ -2001,14 +2203,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Zodiac+Labubu",
     "retailPrice": 15.0,
-    "avgSoldPrice": 47.53,
-    "medianSoldPrice": 47.53,
-    "fairMarketValue": 47.53,
+    "avgSoldPrice": 46.52,
+    "medianSoldPrice": 46.52,
+    "fairMarketValue": 46.52,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-3.2%",
-    "roi": 377.0,
+    "priceChange7d": "-5.3%",
+    "roi": 363.0,
     "riskScore": 92,
-    "totalSold": 37,
+    "totalSold": 38,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
     "dataSource": "live",
@@ -2135,7 +2337,7 @@
       },
       {
         "date": "2026-06-12",
-        "avg": 47.53
+        "avg": 46.52
       }
     ],
     "story": {
@@ -2208,7 +2410,7 @@
     "fairMarketValue": 34.77,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "-18.0%",
-    "roi": 315.2,
+    "roi": 316.8,
     "riskScore": 92,
     "totalSold": 35,
     "signal_zh": "谨慎追高",
@@ -2392,434 +2594,6 @@
     "lastUpdated": "2026-06-12"
   },
   {
-    "sku": "HIRONO-CITYOFMERCY-02",
-    "ip": "HIRONO",
-    "series": "City of Mercy",
-    "name_zh": "Hirono 宽恕之城",
-    "name_en": "HIRONO City of Mercy",
-    "rarity_zh": "成长 IP",
-    "rarity_en": "Emerging IP",
-    "color": "#6389a8",
-    "image": "/assets/sku/HIRONO-CITYOFMERCY-02.png",
-    "searchString": "\"Hirono\" AND \"City of Mercy\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
-    "refreshTier": "weekly",
-    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+HIRONO+City+of+Mercy",
-    "retailPrice": 15.0,
-    "avgSoldPrice": 47.0,
-    "medianSoldPrice": 47.0,
-    "fairMarketValue": 47.0,
-    "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-7.4%",
-    "roi": 304.0,
-    "riskScore": 92,
-    "totalSold": 33,
-    "signal_zh": "谨慎追高",
-    "signal_en": "Caution",
-    "dataSource": "live",
-    "priceHistory": [
-      {
-        "date": "2026-05-13",
-        "avg": 54.44
-      },
-      {
-        "date": "2026-05-14",
-        "avg": 56.0
-      },
-      {
-        "date": "2026-05-15",
-        "avg": 60.18
-      },
-      {
-        "date": "2026-05-16",
-        "avg": 55.17
-      },
-      {
-        "date": "2026-05-17",
-        "avg": 57.33
-      },
-      {
-        "date": "2026-05-18",
-        "avg": 57.64
-      },
-      {
-        "date": "2026-05-19",
-        "avg": 60.82
-      },
-      {
-        "date": "2026-05-20",
-        "avg": 59.2
-      },
-      {
-        "date": "2026-05-21",
-        "avg": 60.23
-      },
-      {
-        "date": "2026-05-22",
-        "avg": 56.84
-      },
-      {
-        "date": "2026-05-23",
-        "avg": 56.93
-      },
-      {
-        "date": "2026-05-24",
-        "avg": 58.42
-      },
-      {
-        "date": "2026-05-25",
-        "avg": 59.02
-      },
-      {
-        "date": "2026-05-26",
-        "avg": 56.48
-      },
-      {
-        "date": "2026-05-27",
-        "avg": 55.86
-      },
-      {
-        "date": "2026-05-28",
-        "avg": 55.48
-      },
-      {
-        "date": "2026-05-29",
-        "avg": 54.59
-      },
-      {
-        "date": "2026-05-30",
-        "avg": 56.27
-      },
-      {
-        "date": "2026-05-31",
-        "avg": 55.49
-      },
-      {
-        "date": "2026-06-01",
-        "avg": 53.65
-      },
-      {
-        "date": "2026-06-02",
-        "avg": 51.26
-      },
-      {
-        "date": "2026-06-03",
-        "avg": 53.0
-      },
-      {
-        "date": "2026-06-04",
-        "avg": 53.31
-      },
-      {
-        "date": "2026-06-05",
-        "avg": 50.77
-      },
-      {
-        "date": "2026-06-06",
-        "avg": 53.78
-      },
-      {
-        "date": "2026-06-07",
-        "avg": 52.72
-      },
-      {
-        "date": "2026-06-08",
-        "avg": 58.47
-      },
-      {
-        "date": "2026-06-09",
-        "avg": 55.89
-      },
-      {
-        "date": "2026-06-10",
-        "avg": 54.6
-      },
-      {
-        "date": "2026-06-11",
-        "avg": 56.43
-      },
-      {
-        "date": "2026-06-12",
-        "avg": 47.0
-      }
-    ],
-    "story": {
-      "year": "2026",
-      "tagline": "HIRONO City of Mercy 极具升值潜力的二级市场标的。",
-      "intro": "作为 HIRONO 矩阵的重要成员，Hirono 宽恕之城 (系列: City of Mercy) 在二级交易市场表现出极高的换手率与价格稳定性。",
-      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
-      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
-    },
-    "characters": [
-      {
-        "name": "HIRONO City·经典核心款",
-        "rarity": "常规款",
-        "color": "#6389a8"
-      },
-      {
-        "name": "HIRONO City·幻影午夜款",
-        "rarity": "常规款",
-        "color": "#6389a8"
-      },
-      {
-        "name": "HIRONO City·流光原色款",
-        "rarity": "常规款",
-        "color": "#6389a8"
-      },
-      {
-        "name": "HIRONO City·复古复刻款",
-        "rarity": "常规款",
-        "color": "#6389a8"
-      },
-      {
-        "name": "HIRONO City·马戏巡游款",
-        "rarity": "常规款",
-        "color": "#6389a8"
-      },
-      {
-        "name": "HIRONO City·异色隐藏款",
-        "rarity": "概率稀缺",
-        "color": "#191c1d"
-      },
-      {
-        "name": "HIRONO City·假日限定款",
-        "rarity": "主题款",
-        "color": "#6389a8"
-      },
-      {
-        "name": "HIRONO City·典藏尊享款",
-        "rarity": "高热度",
-        "color": "#6389a8"
-      }
-    ],
-    "lastUpdated": "2026-06-12"
-  },
-  {
-    "sku": "SKULLPANDA-CITYOFNIGHT-02",
-    "ip": "SKULLPANDA",
-    "series": "City of Night",
-    "name_zh": "Skullpanda 夜之城",
-    "name_en": "SKULLPANDA City of Night",
-    "rarity_zh": "稳定流通",
-    "rarity_en": "Liquid regular",
-    "color": "#191c1d",
-    "image": "/assets/sku/SKULLPANDA-CITYOFNIGHT-02.png",
-    "searchString": "\"Skullpanda\" AND \"City of Night\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
-    "refreshTier": "weekly",
-    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+City+of+Night",
-    "retailPrice": 15.0,
-    "avgSoldPrice": 29.98,
-    "medianSoldPrice": 29.98,
-    "fairMarketValue": 29.98,
-    "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-18.5%",
-    "roi": 286.7,
-    "riskScore": 92,
-    "totalSold": 37,
-    "signal_zh": "谨慎追高",
-    "signal_en": "Caution",
-    "dataSource": "live",
-    "priceHistory": [
-      {
-        "date": "2026-05-13",
-        "avg": 38.59
-      },
-      {
-        "date": "2026-05-14",
-        "avg": 42.0
-      },
-      {
-        "date": "2026-05-15",
-        "avg": 39.39
-      },
-      {
-        "date": "2026-05-16",
-        "avg": 38.63
-      },
-      {
-        "date": "2026-05-17",
-        "avg": 40.62
-      },
-      {
-        "date": "2026-05-18",
-        "avg": 43.21
-      },
-      {
-        "date": "2026-05-19",
-        "avg": 42.84
-      },
-      {
-        "date": "2026-05-20",
-        "avg": 42.89
-      },
-      {
-        "date": "2026-05-21",
-        "avg": 42.66
-      },
-      {
-        "date": "2026-05-22",
-        "avg": 42.87
-      },
-      {
-        "date": "2026-05-23",
-        "avg": 42.15
-      },
-      {
-        "date": "2026-05-24",
-        "avg": 40.9
-      },
-      {
-        "date": "2026-05-25",
-        "avg": 42.21
-      },
-      {
-        "date": "2026-05-26",
-        "avg": 41.59
-      },
-      {
-        "date": "2026-05-27",
-        "avg": 40.6
-      },
-      {
-        "date": "2026-05-28",
-        "avg": 40.95
-      },
-      {
-        "date": "2026-05-29",
-        "avg": 41.01
-      },
-      {
-        "date": "2026-05-30",
-        "avg": 38.36
-      },
-      {
-        "date": "2026-05-31",
-        "avg": 38.43
-      },
-      {
-        "date": "2026-06-01",
-        "avg": 40.18
-      },
-      {
-        "date": "2026-06-02",
-        "avg": 39.26
-      },
-      {
-        "date": "2026-06-03",
-        "avg": 38.65
-      },
-      {
-        "date": "2026-06-04",
-        "avg": 36.9
-      },
-      {
-        "date": "2026-06-05",
-        "avg": 36.78
-      },
-      {
-        "date": "2026-06-06",
-        "avg": 38.44
-      },
-      {
-        "date": "2026-06-07",
-        "avg": 37.69
-      },
-      {
-        "date": "2026-06-08",
-        "avg": 40.82
-      },
-      {
-        "date": "2026-06-09",
-        "avg": 36.61
-      },
-      {
-        "date": "2026-06-10",
-        "avg": 41.06
-      },
-      {
-        "date": "2026-06-11",
-        "avg": 40.27
-      },
-      {
-        "date": "2026-06-12",
-        "avg": 29.98
-      }
-    ],
-    "story": {
-      "year": "2022",
-      "tagline": "赛博朋克夜之城，SKULLPANDA 的未来主义代表作。",
-      "intro": "City of Night 以霓虹闪烁的未来都市为舞台，SKULLPANDA 化身夜行者，搭配透明材质、荧光漆与金属配件，构建出强烈的赛博朋克视觉语言。",
-      "philosophy": "系列大量运用透明件与渐变喷涂工艺，模拟霓虹灯光的折射效果，是SKULLPANDA工艺复杂度最高的系列之一。"
-    },
-    "characters": [
-      {
-        "name": "法律执行者",
-        "rarity": "常规款",
-        "color": "#191c1d"
-      },
-      {
-        "name": "公主",
-        "rarity": "常规款",
-        "color": "#ff7eb6"
-      },
-      {
-        "name": "舞者",
-        "rarity": "常规款",
-        "color": "#9f8cff"
-      },
-      {
-        "name": "DJ播放器",
-        "rarity": "常规款",
-        "color": "#6bd6ff"
-      },
-      {
-        "name": "歌手",
-        "rarity": "常规款",
-        "color": "#d95c50"
-      },
-      {
-        "name": "热血青年",
-        "rarity": "常规款",
-        "color": "#ff8a5b"
-      },
-      {
-        "name": "卷轴传送",
-        "rarity": "常规款",
-        "color": "#50e3c2"
-      },
-      {
-        "name": "宠物猫",
-        "rarity": "常规款",
-        "color": "#ffc857"
-      },
-      {
-        "name": "旅行者",
-        "rarity": "常规款",
-        "color": "#8f6745"
-      },
-      {
-        "name": "寻心者",
-        "rarity": "常规款",
-        "color": "#e0d6c8"
-      },
-      {
-        "name": "顽皮保镖",
-        "rarity": "常规款",
-        "color": "#65d39b"
-      },
-      {
-        "name": "黑夜守护者",
-        "rarity": "常规款",
-        "color": "#6389a8"
-      },
-      {
-        "name": "隐藏款-午夜",
-        "rarity": "概率稀缺",
-        "color": "#191c1d"
-      }
-    ],
-    "lastUpdated": "2026-06-12"
-  },
-  {
     "sku": "DIMOO-MIDNIGHT-07",
     "ip": "DIMOO",
     "series": "Midnight Circus",
@@ -2833,12 +2607,12 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+Midnight+Circus",
     "retailPrice": 15.0,
-    "avgSoldPrice": 33.09,
-    "medianSoldPrice": 33.09,
-    "fairMarketValue": 33.09,
+    "avgSoldPrice": 35.98,
+    "medianSoldPrice": 35.98,
+    "fairMarketValue": 35.98,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+5.2%",
-    "roi": 281.5,
+    "priceChange7d": "+14.4%",
+    "roi": 265.8,
     "riskScore": 92,
     "totalSold": 35,
     "signal_zh": "谨慎追高",
@@ -2967,7 +2741,7 @@
       },
       {
         "date": "2026-06-12",
-        "avg": 33.09
+        "avg": 35.98
       }
     ],
     "story": {
@@ -3022,208 +2796,6 @@
     "lastUpdated": "2026-06-12"
   },
   {
-    "sku": "DIMOO-WORLD-01",
-    "ip": "DIMOO",
-    "series": "World x Animal",
-    "name_zh": "Dimoo 动物王国",
-    "name_en": "DIMOO World x Animal",
-    "rarity_zh": "稳定流通",
-    "rarity_en": "Liquid regular",
-    "color": "#65d39b",
-    "image": "/assets/sku/DIMOO-WORLD-01.png",
-    "searchString": "\"Dimoo\" AND (\"World\" OR \"Animal\") AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
-    "refreshTier": "weekly",
-    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+World+Animal",
-    "retailPrice": 15.0,
-    "avgSoldPrice": 26.57,
-    "medianSoldPrice": 26.57,
-    "fairMarketValue": 26.57,
-    "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+14.6%",
-    "roi": 216.3,
-    "riskScore": 89,
-    "totalSold": 34,
-    "signal_zh": "谨慎追高",
-    "signal_en": "Caution",
-    "dataSource": "live",
-    "priceHistory": [
-      {
-        "date": "2026-05-13",
-        "avg": 25.89
-      },
-      {
-        "date": "2026-05-14",
-        "avg": 24.15
-      },
-      {
-        "date": "2026-05-15",
-        "avg": 25.54
-      },
-      {
-        "date": "2026-05-16",
-        "avg": 26.79
-      },
-      {
-        "date": "2026-05-17",
-        "avg": 26.19
-      },
-      {
-        "date": "2026-05-18",
-        "avg": 27.58
-      },
-      {
-        "date": "2026-05-19",
-        "avg": 29.01
-      },
-      {
-        "date": "2026-05-20",
-        "avg": 26.04
-      },
-      {
-        "date": "2026-05-21",
-        "avg": 28.19
-      },
-      {
-        "date": "2026-05-22",
-        "avg": 27.25
-      },
-      {
-        "date": "2026-05-23",
-        "avg": 25.92
-      },
-      {
-        "date": "2026-05-24",
-        "avg": 26.54
-      },
-      {
-        "date": "2026-05-25",
-        "avg": 27.21
-      },
-      {
-        "date": "2026-05-26",
-        "avg": 25.73
-      },
-      {
-        "date": "2026-05-27",
-        "avg": 26.35
-      },
-      {
-        "date": "2026-05-28",
-        "avg": 26.34
-      },
-      {
-        "date": "2026-05-29",
-        "avg": 26.27
-      },
-      {
-        "date": "2026-05-30",
-        "avg": 25.24
-      },
-      {
-        "date": "2026-05-31",
-        "avg": 25.16
-      },
-      {
-        "date": "2026-06-01",
-        "avg": 23.91
-      },
-      {
-        "date": "2026-06-02",
-        "avg": 25.35
-      },
-      {
-        "date": "2026-06-03",
-        "avg": 25.51
-      },
-      {
-        "date": "2026-06-04",
-        "avg": 25.32
-      },
-      {
-        "date": "2026-06-05",
-        "avg": 23.18
-      },
-      {
-        "date": "2026-06-06",
-        "avg": 26.68
-      },
-      {
-        "date": "2026-06-07",
-        "avg": 23.73
-      },
-      {
-        "date": "2026-06-08",
-        "avg": 26.27
-      },
-      {
-        "date": "2026-06-09",
-        "avg": 24.87
-      },
-      {
-        "date": "2026-06-10",
-        "avg": 26.92
-      },
-      {
-        "date": "2026-06-11",
-        "avg": 26.86
-      },
-      {
-        "date": "2026-06-12",
-        "avg": 26.57
-      }
-    ],
-    "story": {
-      "year": "2026",
-      "tagline": "DIMOO World x Animal 极具升值潜力的二级市场标的。",
-      "intro": "作为 DIMOO 矩阵的重要成员，Dimoo 动物王国 (系列: World x Animal) 在二级交易市场表现出极高的换手率与价格稳定性。",
-      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
-      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
-    },
-    "characters": [
-      {
-        "name": "DIMOO World·经典核心款",
-        "rarity": "常规款",
-        "color": "#65d39b"
-      },
-      {
-        "name": "DIMOO World·幻影午夜款",
-        "rarity": "常规款",
-        "color": "#65d39b"
-      },
-      {
-        "name": "DIMOO World·流光原色款",
-        "rarity": "常规款",
-        "color": "#65d39b"
-      },
-      {
-        "name": "DIMOO World·复古复刻款",
-        "rarity": "常规款",
-        "color": "#65d39b"
-      },
-      {
-        "name": "DIMOO World·马戏巡游款",
-        "rarity": "常规款",
-        "color": "#65d39b"
-      },
-      {
-        "name": "DIMOO World·异色隐藏款",
-        "rarity": "概率稀缺",
-        "color": "#191c1d"
-      },
-      {
-        "name": "DIMOO World·假日限定款",
-        "rarity": "主题款",
-        "color": "#65d39b"
-      },
-      {
-        "name": "DIMOO World·典藏尊享款",
-        "rarity": "高热度",
-        "color": "#65d39b"
-      }
-    ],
-    "lastUpdated": "2026-06-12"
-  },
-  {
     "sku": "MOLLY-STEAMPUNK-08",
     "ip": "MOLLY",
     "series": "Steampunk",
@@ -3237,14 +2809,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+MOLLY+Steampunk",
     "retailPrice": 16.0,
-    "avgSoldPrice": 27.83,
-    "medianSoldPrice": 27.83,
-    "fairMarketValue": 27.83,
+    "avgSoldPrice": 29.89,
+    "medianSoldPrice": 29.89,
+    "fairMarketValue": 29.89,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-24.2%",
-    "roi": 162.6,
-    "riskScore": 82,
-    "totalSold": 35,
+    "priceChange7d": "-18.6%",
+    "roi": 207.6,
+    "riskScore": 88,
+    "totalSold": 36,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
     "dataSource": "live",
@@ -3371,7 +2943,7 @@
       },
       {
         "date": "2026-06-12",
-        "avg": 27.83
+        "avg": 29.89
       }
     ],
     "story": {
@@ -3426,6 +2998,434 @@
     "lastUpdated": "2026-06-12"
   },
   {
+    "sku": "HIRONO-CITYOFMERCY-02",
+    "ip": "HIRONO",
+    "series": "City of Mercy",
+    "name_zh": "Hirono 宽恕之城",
+    "name_en": "HIRONO City of Mercy",
+    "rarity_zh": "成长 IP",
+    "rarity_en": "Emerging IP",
+    "color": "#6389a8",
+    "image": "/assets/sku/HIRONO-CITYOFMERCY-02.png",
+    "searchString": "\"Hirono\" AND \"City of Mercy\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
+    "refreshTier": "weekly",
+    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+HIRONO+City+of+Mercy",
+    "retailPrice": 15.0,
+    "avgSoldPrice": 46.0,
+    "medianSoldPrice": 46.0,
+    "fairMarketValue": 46.0,
+    "valuationMethod": "IQR + 10% trimmed median",
+    "priceChange7d": "-9.4%",
+    "roi": 200.6,
+    "riskScore": 83,
+    "totalSold": 31,
+    "signal_zh": "谨慎追高",
+    "signal_en": "Caution",
+    "dataSource": "live",
+    "priceHistory": [
+      {
+        "date": "2026-05-13",
+        "avg": 54.44
+      },
+      {
+        "date": "2026-05-14",
+        "avg": 56.0
+      },
+      {
+        "date": "2026-05-15",
+        "avg": 60.18
+      },
+      {
+        "date": "2026-05-16",
+        "avg": 55.17
+      },
+      {
+        "date": "2026-05-17",
+        "avg": 57.33
+      },
+      {
+        "date": "2026-05-18",
+        "avg": 57.64
+      },
+      {
+        "date": "2026-05-19",
+        "avg": 60.82
+      },
+      {
+        "date": "2026-05-20",
+        "avg": 59.2
+      },
+      {
+        "date": "2026-05-21",
+        "avg": 60.23
+      },
+      {
+        "date": "2026-05-22",
+        "avg": 56.84
+      },
+      {
+        "date": "2026-05-23",
+        "avg": 56.93
+      },
+      {
+        "date": "2026-05-24",
+        "avg": 58.42
+      },
+      {
+        "date": "2026-05-25",
+        "avg": 59.02
+      },
+      {
+        "date": "2026-05-26",
+        "avg": 56.48
+      },
+      {
+        "date": "2026-05-27",
+        "avg": 55.86
+      },
+      {
+        "date": "2026-05-28",
+        "avg": 55.48
+      },
+      {
+        "date": "2026-05-29",
+        "avg": 54.59
+      },
+      {
+        "date": "2026-05-30",
+        "avg": 56.27
+      },
+      {
+        "date": "2026-05-31",
+        "avg": 55.49
+      },
+      {
+        "date": "2026-06-01",
+        "avg": 53.65
+      },
+      {
+        "date": "2026-06-02",
+        "avg": 51.26
+      },
+      {
+        "date": "2026-06-03",
+        "avg": 53.0
+      },
+      {
+        "date": "2026-06-04",
+        "avg": 53.31
+      },
+      {
+        "date": "2026-06-05",
+        "avg": 50.77
+      },
+      {
+        "date": "2026-06-06",
+        "avg": 53.78
+      },
+      {
+        "date": "2026-06-07",
+        "avg": 52.72
+      },
+      {
+        "date": "2026-06-08",
+        "avg": 58.47
+      },
+      {
+        "date": "2026-06-09",
+        "avg": 55.89
+      },
+      {
+        "date": "2026-06-10",
+        "avg": 54.6
+      },
+      {
+        "date": "2026-06-11",
+        "avg": 56.43
+      },
+      {
+        "date": "2026-06-12",
+        "avg": 46.0
+      }
+    ],
+    "story": {
+      "year": "2026",
+      "tagline": "HIRONO City of Mercy 极具升值潜力的二级市场标的。",
+      "intro": "作为 HIRONO 矩阵的重要成员，Hirono 宽恕之城 (系列: City of Mercy) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
+    },
+    "characters": [
+      {
+        "name": "HIRONO City·经典核心款",
+        "rarity": "常规款",
+        "color": "#6389a8"
+      },
+      {
+        "name": "HIRONO City·幻影午夜款",
+        "rarity": "常规款",
+        "color": "#6389a8"
+      },
+      {
+        "name": "HIRONO City·流光原色款",
+        "rarity": "常规款",
+        "color": "#6389a8"
+      },
+      {
+        "name": "HIRONO City·复古复刻款",
+        "rarity": "常规款",
+        "color": "#6389a8"
+      },
+      {
+        "name": "HIRONO City·马戏巡游款",
+        "rarity": "常规款",
+        "color": "#6389a8"
+      },
+      {
+        "name": "HIRONO City·异色隐藏款",
+        "rarity": "概率稀缺",
+        "color": "#191c1d"
+      },
+      {
+        "name": "HIRONO City·假日限定款",
+        "rarity": "主题款",
+        "color": "#6389a8"
+      },
+      {
+        "name": "HIRONO City·典藏尊享款",
+        "rarity": "高热度",
+        "color": "#6389a8"
+      }
+    ],
+    "lastUpdated": "2026-06-12"
+  },
+  {
+    "sku": "SKULLPANDA-CITYOFNIGHT-02",
+    "ip": "SKULLPANDA",
+    "series": "City of Night",
+    "name_zh": "Skullpanda 夜之城",
+    "name_en": "SKULLPANDA City of Night",
+    "rarity_zh": "稳定流通",
+    "rarity_en": "Liquid regular",
+    "color": "#191c1d",
+    "image": "/assets/sku/SKULLPANDA-CITYOFNIGHT-02.png",
+    "searchString": "\"Skullpanda\" AND \"City of Night\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
+    "refreshTier": "weekly",
+    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+City+of+Night",
+    "retailPrice": 15.0,
+    "avgSoldPrice": 24.89,
+    "medianSoldPrice": 24.89,
+    "fairMarketValue": 24.89,
+    "valuationMethod": "IQR + 10% trimmed median",
+    "priceChange7d": "-32.3%",
+    "roi": 170.9,
+    "riskScore": 83,
+    "totalSold": 33,
+    "signal_zh": "谨慎追高",
+    "signal_en": "Caution",
+    "dataSource": "live",
+    "priceHistory": [
+      {
+        "date": "2026-05-13",
+        "avg": 38.59
+      },
+      {
+        "date": "2026-05-14",
+        "avg": 42.0
+      },
+      {
+        "date": "2026-05-15",
+        "avg": 39.39
+      },
+      {
+        "date": "2026-05-16",
+        "avg": 38.63
+      },
+      {
+        "date": "2026-05-17",
+        "avg": 40.62
+      },
+      {
+        "date": "2026-05-18",
+        "avg": 43.21
+      },
+      {
+        "date": "2026-05-19",
+        "avg": 42.84
+      },
+      {
+        "date": "2026-05-20",
+        "avg": 42.89
+      },
+      {
+        "date": "2026-05-21",
+        "avg": 42.66
+      },
+      {
+        "date": "2026-05-22",
+        "avg": 42.87
+      },
+      {
+        "date": "2026-05-23",
+        "avg": 42.15
+      },
+      {
+        "date": "2026-05-24",
+        "avg": 40.9
+      },
+      {
+        "date": "2026-05-25",
+        "avg": 42.21
+      },
+      {
+        "date": "2026-05-26",
+        "avg": 41.59
+      },
+      {
+        "date": "2026-05-27",
+        "avg": 40.6
+      },
+      {
+        "date": "2026-05-28",
+        "avg": 40.95
+      },
+      {
+        "date": "2026-05-29",
+        "avg": 41.01
+      },
+      {
+        "date": "2026-05-30",
+        "avg": 38.36
+      },
+      {
+        "date": "2026-05-31",
+        "avg": 38.43
+      },
+      {
+        "date": "2026-06-01",
+        "avg": 40.18
+      },
+      {
+        "date": "2026-06-02",
+        "avg": 39.26
+      },
+      {
+        "date": "2026-06-03",
+        "avg": 38.65
+      },
+      {
+        "date": "2026-06-04",
+        "avg": 36.9
+      },
+      {
+        "date": "2026-06-05",
+        "avg": 36.78
+      },
+      {
+        "date": "2026-06-06",
+        "avg": 38.44
+      },
+      {
+        "date": "2026-06-07",
+        "avg": 37.69
+      },
+      {
+        "date": "2026-06-08",
+        "avg": 40.82
+      },
+      {
+        "date": "2026-06-09",
+        "avg": 36.61
+      },
+      {
+        "date": "2026-06-10",
+        "avg": 41.06
+      },
+      {
+        "date": "2026-06-11",
+        "avg": 40.27
+      },
+      {
+        "date": "2026-06-12",
+        "avg": 24.89
+      }
+    ],
+    "story": {
+      "year": "2022",
+      "tagline": "赛博朋克夜之城，SKULLPANDA 的未来主义代表作。",
+      "intro": "City of Night 以霓虹闪烁的未来都市为舞台，SKULLPANDA 化身夜行者，搭配透明材质、荧光漆与金属配件，构建出强烈的赛博朋克视觉语言。",
+      "philosophy": "系列大量运用透明件与渐变喷涂工艺，模拟霓虹灯光的折射效果，是SKULLPANDA工艺复杂度最高的系列之一。"
+    },
+    "characters": [
+      {
+        "name": "法律执行者",
+        "rarity": "常规款",
+        "color": "#191c1d"
+      },
+      {
+        "name": "公主",
+        "rarity": "常规款",
+        "color": "#ff7eb6"
+      },
+      {
+        "name": "舞者",
+        "rarity": "常规款",
+        "color": "#9f8cff"
+      },
+      {
+        "name": "DJ播放器",
+        "rarity": "常规款",
+        "color": "#6bd6ff"
+      },
+      {
+        "name": "歌手",
+        "rarity": "常规款",
+        "color": "#d95c50"
+      },
+      {
+        "name": "热血青年",
+        "rarity": "常规款",
+        "color": "#ff8a5b"
+      },
+      {
+        "name": "卷轴传送",
+        "rarity": "常规款",
+        "color": "#50e3c2"
+      },
+      {
+        "name": "宠物猫",
+        "rarity": "常规款",
+        "color": "#ffc857"
+      },
+      {
+        "name": "旅行者",
+        "rarity": "常规款",
+        "color": "#8f6745"
+      },
+      {
+        "name": "寻心者",
+        "rarity": "常规款",
+        "color": "#e0d6c8"
+      },
+      {
+        "name": "顽皮保镖",
+        "rarity": "常规款",
+        "color": "#65d39b"
+      },
+      {
+        "name": "黑夜守护者",
+        "rarity": "常规款",
+        "color": "#6389a8"
+      },
+      {
+        "name": "隐藏款-午夜",
+        "rarity": "概率稀缺",
+        "color": "#191c1d"
+      }
+    ],
+    "lastUpdated": "2026-06-12"
+  },
+  {
     "sku": "DIMOO-DATING-02",
     "ip": "DIMOO",
     "series": "Dating",
@@ -3444,8 +3444,8 @@
     "fairMarketValue": 32.6,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "-16.2%",
-    "roi": 158.6,
-    "riskScore": 82,
+    "roi": 155.4,
+    "riskScore": 81,
     "totalSold": 35,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
@@ -3830,208 +3830,6 @@
     "lastUpdated": "2026-06-12"
   },
   {
-    "sku": "PUCKY-SLEEPINGBABIES-02",
-    "ip": "PUCKY",
-    "series": "Sleeping Babies",
-    "name_zh": "Pucky 睡眠宝宝",
-    "name_en": "PUCKY Sleeping Babies",
-    "rarity_zh": "稳定流通",
-    "rarity_en": "Liquid regular",
-    "color": "#ffc857",
-    "image": "/assets/sku/PUCKY-SLEEPINGBABIES-02.png",
-    "searchString": "\"Pucky\" AND \"Sleeping Babies\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
-    "refreshTier": "weekly",
-    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+PUCKY+Sleeping+Babies",
-    "retailPrice": 15.0,
-    "avgSoldPrice": 30.22,
-    "medianSoldPrice": 30.22,
-    "fairMarketValue": 30.22,
-    "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-21.2%",
-    "roi": 141.1,
-    "riskScore": 80,
-    "totalSold": 34,
-    "signal_zh": "谨慎追高",
-    "signal_en": "Caution",
-    "dataSource": "live",
-    "priceHistory": [
-      {
-        "date": "2026-05-13",
-        "avg": 44.55
-      },
-      {
-        "date": "2026-05-14",
-        "avg": 45.98
-      },
-      {
-        "date": "2026-05-15",
-        "avg": 42.59
-      },
-      {
-        "date": "2026-05-16",
-        "avg": 46.76
-      },
-      {
-        "date": "2026-05-17",
-        "avg": 44.21
-      },
-      {
-        "date": "2026-05-18",
-        "avg": 45.42
-      },
-      {
-        "date": "2026-05-19",
-        "avg": 46.69
-      },
-      {
-        "date": "2026-05-20",
-        "avg": 44.06
-      },
-      {
-        "date": "2026-05-21",
-        "avg": 44.68
-      },
-      {
-        "date": "2026-05-22",
-        "avg": 43.6
-      },
-      {
-        "date": "2026-05-23",
-        "avg": 45.06
-      },
-      {
-        "date": "2026-05-24",
-        "avg": 44.3
-      },
-      {
-        "date": "2026-05-25",
-        "avg": 42.92
-      },
-      {
-        "date": "2026-05-26",
-        "avg": 43.3
-      },
-      {
-        "date": "2026-05-27",
-        "avg": 44.52
-      },
-      {
-        "date": "2026-05-28",
-        "avg": 43.19
-      },
-      {
-        "date": "2026-05-29",
-        "avg": 43.15
-      },
-      {
-        "date": "2026-05-30",
-        "avg": 43.05
-      },
-      {
-        "date": "2026-05-31",
-        "avg": 40.94
-      },
-      {
-        "date": "2026-06-01",
-        "avg": 42.59
-      },
-      {
-        "date": "2026-06-02",
-        "avg": 42.33
-      },
-      {
-        "date": "2026-06-03",
-        "avg": 42.09
-      },
-      {
-        "date": "2026-06-04",
-        "avg": 40.45
-      },
-      {
-        "date": "2026-06-05",
-        "avg": 38.34
-      },
-      {
-        "date": "2026-06-06",
-        "avg": 41.75
-      },
-      {
-        "date": "2026-06-07",
-        "avg": 43.4
-      },
-      {
-        "date": "2026-06-08",
-        "avg": 40.2
-      },
-      {
-        "date": "2026-06-09",
-        "avg": 42.59
-      },
-      {
-        "date": "2026-06-10",
-        "avg": 43.31
-      },
-      {
-        "date": "2026-06-11",
-        "avg": 43.36
-      },
-      {
-        "date": "2026-06-12",
-        "avg": 30.22
-      }
-    ],
-    "story": {
-      "year": "2026",
-      "tagline": "PUCKY Sleeping Babies 极具升值潜力的二级市场标的。",
-      "intro": "作为 PUCKY 矩阵的重要成员，Pucky 睡眠宝宝 (系列: Sleeping Babies) 在二级交易市场表现出极高的换手率与价格稳定性。",
-      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
-      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
-    },
-    "characters": [
-      {
-        "name": "PUCKY Sleeping·经典核心款",
-        "rarity": "常规款",
-        "color": "#ffc857"
-      },
-      {
-        "name": "PUCKY Sleeping·幻影午夜款",
-        "rarity": "常规款",
-        "color": "#ffc857"
-      },
-      {
-        "name": "PUCKY Sleeping·流光原色款",
-        "rarity": "常规款",
-        "color": "#ffc857"
-      },
-      {
-        "name": "PUCKY Sleeping·复古复刻款",
-        "rarity": "常规款",
-        "color": "#ffc857"
-      },
-      {
-        "name": "PUCKY Sleeping·马戏巡游款",
-        "rarity": "常规款",
-        "color": "#ffc857"
-      },
-      {
-        "name": "PUCKY Sleeping·异色隐藏款",
-        "rarity": "概率稀缺",
-        "color": "#191c1d"
-      },
-      {
-        "name": "PUCKY Sleeping·假日限定款",
-        "rarity": "主题款",
-        "color": "#ffc857"
-      },
-      {
-        "name": "PUCKY Sleeping·典藏尊享款",
-        "rarity": "高热度",
-        "color": "#ffc857"
-      }
-    ],
-    "lastUpdated": "2026-06-12"
-  },
-  {
     "sku": "SKULLPANDA-MAREOFANIMALS-04",
     "ip": "SKULLPANDA",
     "series": "The Mare of Animals",
@@ -4045,13 +3843,13 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+The+Mare+of+Animals",
     "retailPrice": 15.0,
-    "avgSoldPrice": 32.46,
-    "medianSoldPrice": 32.46,
-    "fairMarketValue": 32.46,
+    "avgSoldPrice": 33.98,
+    "medianSoldPrice": 33.98,
+    "fairMarketValue": 33.98,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+14.8%",
-    "roi": 138.6,
-    "riskScore": 79,
+    "priceChange7d": "+20.2%",
+    "roi": 140.8,
+    "riskScore": 80,
     "totalSold": 35,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
@@ -4179,7 +3977,7 @@
       },
       {
         "date": "2026-06-12",
-        "avg": 32.46
+        "avg": 33.98
       }
     ],
     "story": {
@@ -4234,203 +4032,203 @@
     "lastUpdated": "2026-06-12"
   },
   {
-    "sku": "CRYBABY-CHEERUP-05",
-    "ip": "CRYBABY",
-    "series": "Cheer Up",
-    "name_zh": "Crybaby 抱抱飞跃",
-    "name_en": "CRYBABY Cheer Up",
+    "sku": "DIMOO-AQUARIUM-05",
+    "ip": "DIMOO",
+    "series": "Aquarium",
+    "name_zh": "Dimoo 水族馆",
+    "name_en": "DIMOO Aquarium",
     "rarity_zh": "稳定流通",
     "rarity_en": "Liquid regular",
-    "color": "#ffc857",
-    "image": "/assets/sku/CRYBABY-CHEERUP-05.webp",
-    "searchString": "\"Crybaby\" AND \"Cheer Up\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
+    "color": "#6bd6ff",
+    "image": "/assets/sku/DIMOO-AQUARIUM-05.png",
+    "searchString": "\"Dimoo\" AND \"Aquarium\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
     "refreshTier": "weekly",
-    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+CRYBABY+Cheer+Up",
+    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+Aquarium",
     "retailPrice": 15.0,
-    "avgSoldPrice": 26.99,
-    "medianSoldPrice": 26.99,
-    "fairMarketValue": 26.99,
+    "avgSoldPrice": 28.24,
+    "medianSoldPrice": 28.24,
+    "fairMarketValue": 28.24,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-51.2%",
-    "roi": 135.2,
+    "priceChange7d": "-19.5%",
+    "roi": 134.7,
     "riskScore": 79,
-    "totalSold": 35,
+    "totalSold": 33,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
       {
         "date": "2026-05-13",
-        "avg": 54.74
+        "avg": 35.64
       },
       {
         "date": "2026-05-14",
-        "avg": 55.22
+        "avg": 36.75
       },
       {
         "date": "2026-05-15",
-        "avg": 60.45
+        "avg": 37.47
       },
       {
         "date": "2026-05-16",
-        "avg": 59.03
+        "avg": 37.16
       },
       {
         "date": "2026-05-17",
-        "avg": 60.41
+        "avg": 34.31
       },
       {
         "date": "2026-05-18",
-        "avg": 56.52
+        "avg": 37.8
       },
       {
         "date": "2026-05-19",
-        "avg": 61.4
+        "avg": 36.18
       },
       {
         "date": "2026-05-20",
-        "avg": 58.44
+        "avg": 36.24
       },
       {
         "date": "2026-05-21",
-        "avg": 55.86
+        "avg": 37.53
       },
       {
         "date": "2026-05-22",
-        "avg": 59.42
+        "avg": 37.36
       },
       {
         "date": "2026-05-23",
-        "avg": 59.18
+        "avg": 36.15
       },
       {
         "date": "2026-05-24",
-        "avg": 59.18
+        "avg": 36.83
       },
       {
         "date": "2026-05-25",
-        "avg": 57.12
+        "avg": 35.78
       },
       {
         "date": "2026-05-26",
-        "avg": 56.99
+        "avg": 35.99
       },
       {
         "date": "2026-05-27",
-        "avg": 57.8
+        "avg": 35.58
       },
       {
         "date": "2026-05-28",
-        "avg": 55.35
+        "avg": 35.51
       },
       {
         "date": "2026-05-29",
-        "avg": 56.36
+        "avg": 34.24
       },
       {
         "date": "2026-05-30",
-        "avg": 54.76
+        "avg": 34.55
       },
       {
         "date": "2026-05-31",
-        "avg": 52.23
+        "avg": 32.98
       },
       {
         "date": "2026-06-01",
-        "avg": 53.91
+        "avg": 33.77
       },
       {
         "date": "2026-06-02",
-        "avg": 51.81
+        "avg": 33.79
       },
       {
         "date": "2026-06-03",
-        "avg": 53.66
+        "avg": 33.26
       },
       {
         "date": "2026-06-04",
-        "avg": 55.57
+        "avg": 33.45
       },
       {
         "date": "2026-06-05",
-        "avg": 55.29
+        "avg": 35.08
       },
       {
         "date": "2026-06-06",
-        "avg": 54.55
+        "avg": 33.95
       },
       {
         "date": "2026-06-07",
-        "avg": 53.66
+        "avg": 33.06
       },
       {
         "date": "2026-06-08",
-        "avg": 56.7
+        "avg": 34.64
       },
       {
         "date": "2026-06-09",
-        "avg": 54.67
+        "avg": 34.48
       },
       {
         "date": "2026-06-10",
-        "avg": 52.89
+        "avg": 37.44
       },
       {
         "date": "2026-06-11",
-        "avg": 56.12
+        "avg": 35.12
       },
       {
         "date": "2026-06-12",
-        "avg": 26.99
+        "avg": 28.24
       }
     ],
     "story": {
       "year": "2026",
-      "tagline": "CRYBABY Cheer Up 极具升值潜力的二级市场标的。",
-      "intro": "作为 CRYBABY 矩阵的重要成员，Crybaby 抱抱飞跃 (系列: Cheer Up) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "tagline": "DIMOO Aquarium 极具升值潜力的二级市场标的。",
+      "intro": "作为 DIMOO 矩阵的重要成员，Dimoo 水族馆 (系列: Aquarium) 在二级交易市场表现出极高的换手率与价格稳定性。",
       "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
       "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
     },
     "characters": [
       {
-        "name": "CRYBABY Cheer·经典核心款",
+        "name": "DIMOO Aquarium·经典核心款",
         "rarity": "常规款",
-        "color": "#ffc857"
+        "color": "#6bd6ff"
       },
       {
-        "name": "CRYBABY Cheer·幻影午夜款",
+        "name": "DIMOO Aquarium·幻影午夜款",
         "rarity": "常规款",
-        "color": "#ffc857"
+        "color": "#6bd6ff"
       },
       {
-        "name": "CRYBABY Cheer·流光原色款",
+        "name": "DIMOO Aquarium·流光原色款",
         "rarity": "常规款",
-        "color": "#ffc857"
+        "color": "#6bd6ff"
       },
       {
-        "name": "CRYBABY Cheer·复古复刻款",
+        "name": "DIMOO Aquarium·复古复刻款",
         "rarity": "常规款",
-        "color": "#ffc857"
+        "color": "#6bd6ff"
       },
       {
-        "name": "CRYBABY Cheer·马戏巡游款",
+        "name": "DIMOO Aquarium·马戏巡游款",
         "rarity": "常规款",
-        "color": "#ffc857"
+        "color": "#6bd6ff"
       },
       {
-        "name": "CRYBABY Cheer·异色隐藏款",
+        "name": "DIMOO Aquarium·异色隐藏款",
         "rarity": "概率稀缺",
         "color": "#191c1d"
       },
       {
-        "name": "CRYBABY Cheer·假日限定款",
+        "name": "DIMOO Aquarium·假日限定款",
         "rarity": "主题款",
-        "color": "#ffc857"
+        "color": "#6bd6ff"
       },
       {
-        "name": "CRYBABY Cheer·典藏尊享款",
+        "name": "DIMOO Aquarium·典藏尊享款",
         "rarity": "高热度",
-        "color": "#ffc857"
+        "color": "#6bd6ff"
       }
     ],
     "lastUpdated": "2026-06-12"
@@ -4454,8 +4252,8 @@
     "fairMarketValue": 28.27,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "-40.7%",
-    "roi": 133.5,
-    "riskScore": 79,
+    "roi": 131.7,
+    "riskScore": 78,
     "totalSold": 32,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
@@ -4638,208 +4436,6 @@
     "lastUpdated": "2026-06-12"
   },
   {
-    "sku": "DIMOO-AQUARIUM-05",
-    "ip": "DIMOO",
-    "series": "Aquarium",
-    "name_zh": "Dimoo 水族馆",
-    "name_en": "DIMOO Aquarium",
-    "rarity_zh": "稳定流通",
-    "rarity_en": "Liquid regular",
-    "color": "#6bd6ff",
-    "image": "/assets/sku/DIMOO-AQUARIUM-05.png",
-    "searchString": "\"Dimoo\" AND \"Aquarium\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
-    "refreshTier": "weekly",
-    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+Aquarium",
-    "retailPrice": 15.0,
-    "avgSoldPrice": 28.24,
-    "medianSoldPrice": 28.24,
-    "fairMarketValue": 28.24,
-    "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-19.5%",
-    "roi": 132.6,
-    "riskScore": 79,
-    "totalSold": 35,
-    "signal_zh": "谨慎追高",
-    "signal_en": "Caution",
-    "dataSource": "live",
-    "priceHistory": [
-      {
-        "date": "2026-05-13",
-        "avg": 35.64
-      },
-      {
-        "date": "2026-05-14",
-        "avg": 36.75
-      },
-      {
-        "date": "2026-05-15",
-        "avg": 37.47
-      },
-      {
-        "date": "2026-05-16",
-        "avg": 37.16
-      },
-      {
-        "date": "2026-05-17",
-        "avg": 34.31
-      },
-      {
-        "date": "2026-05-18",
-        "avg": 37.8
-      },
-      {
-        "date": "2026-05-19",
-        "avg": 36.18
-      },
-      {
-        "date": "2026-05-20",
-        "avg": 36.24
-      },
-      {
-        "date": "2026-05-21",
-        "avg": 37.53
-      },
-      {
-        "date": "2026-05-22",
-        "avg": 37.36
-      },
-      {
-        "date": "2026-05-23",
-        "avg": 36.15
-      },
-      {
-        "date": "2026-05-24",
-        "avg": 36.83
-      },
-      {
-        "date": "2026-05-25",
-        "avg": 35.78
-      },
-      {
-        "date": "2026-05-26",
-        "avg": 35.99
-      },
-      {
-        "date": "2026-05-27",
-        "avg": 35.58
-      },
-      {
-        "date": "2026-05-28",
-        "avg": 35.51
-      },
-      {
-        "date": "2026-05-29",
-        "avg": 34.24
-      },
-      {
-        "date": "2026-05-30",
-        "avg": 34.55
-      },
-      {
-        "date": "2026-05-31",
-        "avg": 32.98
-      },
-      {
-        "date": "2026-06-01",
-        "avg": 33.77
-      },
-      {
-        "date": "2026-06-02",
-        "avg": 33.79
-      },
-      {
-        "date": "2026-06-03",
-        "avg": 33.26
-      },
-      {
-        "date": "2026-06-04",
-        "avg": 33.45
-      },
-      {
-        "date": "2026-06-05",
-        "avg": 35.08
-      },
-      {
-        "date": "2026-06-06",
-        "avg": 33.95
-      },
-      {
-        "date": "2026-06-07",
-        "avg": 33.06
-      },
-      {
-        "date": "2026-06-08",
-        "avg": 34.64
-      },
-      {
-        "date": "2026-06-09",
-        "avg": 34.48
-      },
-      {
-        "date": "2026-06-10",
-        "avg": 37.44
-      },
-      {
-        "date": "2026-06-11",
-        "avg": 35.12
-      },
-      {
-        "date": "2026-06-12",
-        "avg": 28.24
-      }
-    ],
-    "story": {
-      "year": "2026",
-      "tagline": "DIMOO Aquarium 极具升值潜力的二级市场标的。",
-      "intro": "作为 DIMOO 矩阵的重要成员，Dimoo 水族馆 (系列: Aquarium) 在二级交易市场表现出极高的换手率与价格稳定性。",
-      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
-      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
-    },
-    "characters": [
-      {
-        "name": "DIMOO Aquarium·经典核心款",
-        "rarity": "常规款",
-        "color": "#6bd6ff"
-      },
-      {
-        "name": "DIMOO Aquarium·幻影午夜款",
-        "rarity": "常规款",
-        "color": "#6bd6ff"
-      },
-      {
-        "name": "DIMOO Aquarium·流光原色款",
-        "rarity": "常规款",
-        "color": "#6bd6ff"
-      },
-      {
-        "name": "DIMOO Aquarium·复古复刻款",
-        "rarity": "常规款",
-        "color": "#6bd6ff"
-      },
-      {
-        "name": "DIMOO Aquarium·马戏巡游款",
-        "rarity": "常规款",
-        "color": "#6bd6ff"
-      },
-      {
-        "name": "DIMOO Aquarium·异色隐藏款",
-        "rarity": "概率稀缺",
-        "color": "#191c1d"
-      },
-      {
-        "name": "DIMOO Aquarium·假日限定款",
-        "rarity": "主题款",
-        "color": "#6bd6ff"
-      },
-      {
-        "name": "DIMOO Aquarium·典藏尊享款",
-        "rarity": "高热度",
-        "color": "#6bd6ff"
-      }
-    ],
-    "lastUpdated": "2026-06-12"
-  },
-  {
     "sku": "CRYBABY-LONELYCHRISTMAS-02",
     "ip": "CRYBABY",
     "series": "Lonely Christmas",
@@ -4853,14 +4449,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+CRYBABY+Lonely+Christmas",
     "retailPrice": 16.0,
-    "avgSoldPrice": 32.0,
-    "medianSoldPrice": 32.0,
-    "fairMarketValue": 32.0,
+    "avgSoldPrice": 29.78,
+    "medianSoldPrice": 29.78,
+    "fairMarketValue": 29.78,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-29.2%",
-    "roi": 131.3,
+    "priceChange7d": "-34.1%",
+    "roi": 126.0,
     "riskScore": 78,
-    "totalSold": 35,
+    "totalSold": 33,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
     "dataSource": "live",
@@ -4987,7 +4583,7 @@
       },
       {
         "date": "2026-06-12",
-        "avg": 32.0
+        "avg": 29.78
       }
     ],
     "story": {
@@ -5055,14 +4651,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+Space+Travel",
     "retailPrice": 15.0,
-    "avgSoldPrice": 34.0,
-    "medianSoldPrice": 34.0,
-    "fairMarketValue": 34.0,
+    "avgSoldPrice": 33.49,
+    "medianSoldPrice": 33.49,
+    "fairMarketValue": 33.49,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+21.7%",
-    "roi": 128.0,
-    "riskScore": 78,
-    "totalSold": 35,
+    "priceChange7d": "+19.9%",
+    "roi": 123.9,
+    "riskScore": 77,
+    "totalSold": 34,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
     "dataSource": "live",
@@ -5189,7 +4785,7 @@
       },
       {
         "date": "2026-06-12",
-        "avg": 34.0
+        "avg": 33.49
       }
     ],
     "story": {
@@ -5244,6 +4840,410 @@
     "lastUpdated": "2026-06-12"
   },
   {
+    "sku": "CRYBABY-CHEERUP-05",
+    "ip": "CRYBABY",
+    "series": "Cheer Up",
+    "name_zh": "Crybaby 抱抱飞跃",
+    "name_en": "CRYBABY Cheer Up",
+    "rarity_zh": "稳定流通",
+    "rarity_en": "Liquid regular",
+    "color": "#ffc857",
+    "image": "/assets/sku/CRYBABY-CHEERUP-05.webp",
+    "searchString": "\"Crybaby\" AND \"Cheer Up\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
+    "refreshTier": "weekly",
+    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+CRYBABY+Cheer+Up",
+    "retailPrice": 15.0,
+    "avgSoldPrice": 26.99,
+    "medianSoldPrice": 26.99,
+    "fairMarketValue": 26.99,
+    "valuationMethod": "IQR + 10% trimmed median",
+    "priceChange7d": "-51.2%",
+    "roi": 119.6,
+    "riskScore": 77,
+    "totalSold": 35,
+    "signal_zh": "谨慎追高",
+    "signal_en": "Caution",
+    "dataSource": "live",
+    "priceHistory": [
+      {
+        "date": "2026-05-13",
+        "avg": 54.74
+      },
+      {
+        "date": "2026-05-14",
+        "avg": 55.22
+      },
+      {
+        "date": "2026-05-15",
+        "avg": 60.45
+      },
+      {
+        "date": "2026-05-16",
+        "avg": 59.03
+      },
+      {
+        "date": "2026-05-17",
+        "avg": 60.41
+      },
+      {
+        "date": "2026-05-18",
+        "avg": 56.52
+      },
+      {
+        "date": "2026-05-19",
+        "avg": 61.4
+      },
+      {
+        "date": "2026-05-20",
+        "avg": 58.44
+      },
+      {
+        "date": "2026-05-21",
+        "avg": 55.86
+      },
+      {
+        "date": "2026-05-22",
+        "avg": 59.42
+      },
+      {
+        "date": "2026-05-23",
+        "avg": 59.18
+      },
+      {
+        "date": "2026-05-24",
+        "avg": 59.18
+      },
+      {
+        "date": "2026-05-25",
+        "avg": 57.12
+      },
+      {
+        "date": "2026-05-26",
+        "avg": 56.99
+      },
+      {
+        "date": "2026-05-27",
+        "avg": 57.8
+      },
+      {
+        "date": "2026-05-28",
+        "avg": 55.35
+      },
+      {
+        "date": "2026-05-29",
+        "avg": 56.36
+      },
+      {
+        "date": "2026-05-30",
+        "avg": 54.76
+      },
+      {
+        "date": "2026-05-31",
+        "avg": 52.23
+      },
+      {
+        "date": "2026-06-01",
+        "avg": 53.91
+      },
+      {
+        "date": "2026-06-02",
+        "avg": 51.81
+      },
+      {
+        "date": "2026-06-03",
+        "avg": 53.66
+      },
+      {
+        "date": "2026-06-04",
+        "avg": 55.57
+      },
+      {
+        "date": "2026-06-05",
+        "avg": 55.29
+      },
+      {
+        "date": "2026-06-06",
+        "avg": 54.55
+      },
+      {
+        "date": "2026-06-07",
+        "avg": 53.66
+      },
+      {
+        "date": "2026-06-08",
+        "avg": 56.7
+      },
+      {
+        "date": "2026-06-09",
+        "avg": 54.67
+      },
+      {
+        "date": "2026-06-10",
+        "avg": 52.89
+      },
+      {
+        "date": "2026-06-11",
+        "avg": 56.12
+      },
+      {
+        "date": "2026-06-12",
+        "avg": 26.99
+      }
+    ],
+    "story": {
+      "year": "2026",
+      "tagline": "CRYBABY Cheer Up 极具升值潜力的二级市场标的。",
+      "intro": "作为 CRYBABY 矩阵的重要成员，Crybaby 抱抱飞跃 (系列: Cheer Up) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
+    },
+    "characters": [
+      {
+        "name": "CRYBABY Cheer·经典核心款",
+        "rarity": "常规款",
+        "color": "#ffc857"
+      },
+      {
+        "name": "CRYBABY Cheer·幻影午夜款",
+        "rarity": "常规款",
+        "color": "#ffc857"
+      },
+      {
+        "name": "CRYBABY Cheer·流光原色款",
+        "rarity": "常规款",
+        "color": "#ffc857"
+      },
+      {
+        "name": "CRYBABY Cheer·复古复刻款",
+        "rarity": "常规款",
+        "color": "#ffc857"
+      },
+      {
+        "name": "CRYBABY Cheer·马戏巡游款",
+        "rarity": "常规款",
+        "color": "#ffc857"
+      },
+      {
+        "name": "CRYBABY Cheer·异色隐藏款",
+        "rarity": "概率稀缺",
+        "color": "#191c1d"
+      },
+      {
+        "name": "CRYBABY Cheer·假日限定款",
+        "rarity": "主题款",
+        "color": "#ffc857"
+      },
+      {
+        "name": "CRYBABY Cheer·典藏尊享款",
+        "rarity": "高热度",
+        "color": "#ffc857"
+      }
+    ],
+    "lastUpdated": "2026-06-12"
+  },
+  {
+    "sku": "PUCKY-SLEEPINGBABIES-02",
+    "ip": "PUCKY",
+    "series": "Sleeping Babies",
+    "name_zh": "Pucky 睡眠宝宝",
+    "name_en": "PUCKY Sleeping Babies",
+    "rarity_zh": "稳定流通",
+    "rarity_en": "Liquid regular",
+    "color": "#ffc857",
+    "image": "/assets/sku/PUCKY-SLEEPINGBABIES-02.png",
+    "searchString": "\"Pucky\" AND \"Sleeping Babies\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
+    "refreshTier": "weekly",
+    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+PUCKY+Sleeping+Babies",
+    "retailPrice": 15.0,
+    "avgSoldPrice": 28.7,
+    "medianSoldPrice": 28.7,
+    "fairMarketValue": 28.7,
+    "valuationMethod": "IQR + 10% trimmed median",
+    "priceChange7d": "-25.1%",
+    "roi": 115.1,
+    "riskScore": 76,
+    "totalSold": 33,
+    "signal_zh": "谨慎追高",
+    "signal_en": "Caution",
+    "dataSource": "live",
+    "priceHistory": [
+      {
+        "date": "2026-05-13",
+        "avg": 44.55
+      },
+      {
+        "date": "2026-05-14",
+        "avg": 45.98
+      },
+      {
+        "date": "2026-05-15",
+        "avg": 42.59
+      },
+      {
+        "date": "2026-05-16",
+        "avg": 46.76
+      },
+      {
+        "date": "2026-05-17",
+        "avg": 44.21
+      },
+      {
+        "date": "2026-05-18",
+        "avg": 45.42
+      },
+      {
+        "date": "2026-05-19",
+        "avg": 46.69
+      },
+      {
+        "date": "2026-05-20",
+        "avg": 44.06
+      },
+      {
+        "date": "2026-05-21",
+        "avg": 44.68
+      },
+      {
+        "date": "2026-05-22",
+        "avg": 43.6
+      },
+      {
+        "date": "2026-05-23",
+        "avg": 45.06
+      },
+      {
+        "date": "2026-05-24",
+        "avg": 44.3
+      },
+      {
+        "date": "2026-05-25",
+        "avg": 42.92
+      },
+      {
+        "date": "2026-05-26",
+        "avg": 43.3
+      },
+      {
+        "date": "2026-05-27",
+        "avg": 44.52
+      },
+      {
+        "date": "2026-05-28",
+        "avg": 43.19
+      },
+      {
+        "date": "2026-05-29",
+        "avg": 43.15
+      },
+      {
+        "date": "2026-05-30",
+        "avg": 43.05
+      },
+      {
+        "date": "2026-05-31",
+        "avg": 40.94
+      },
+      {
+        "date": "2026-06-01",
+        "avg": 42.59
+      },
+      {
+        "date": "2026-06-02",
+        "avg": 42.33
+      },
+      {
+        "date": "2026-06-03",
+        "avg": 42.09
+      },
+      {
+        "date": "2026-06-04",
+        "avg": 40.45
+      },
+      {
+        "date": "2026-06-05",
+        "avg": 38.34
+      },
+      {
+        "date": "2026-06-06",
+        "avg": 41.75
+      },
+      {
+        "date": "2026-06-07",
+        "avg": 43.4
+      },
+      {
+        "date": "2026-06-08",
+        "avg": 40.2
+      },
+      {
+        "date": "2026-06-09",
+        "avg": 42.59
+      },
+      {
+        "date": "2026-06-10",
+        "avg": 43.31
+      },
+      {
+        "date": "2026-06-11",
+        "avg": 43.36
+      },
+      {
+        "date": "2026-06-12",
+        "avg": 28.7
+      }
+    ],
+    "story": {
+      "year": "2026",
+      "tagline": "PUCKY Sleeping Babies 极具升值潜力的二级市场标的。",
+      "intro": "作为 PUCKY 矩阵的重要成员，Pucky 睡眠宝宝 (系列: Sleeping Babies) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
+    },
+    "characters": [
+      {
+        "name": "PUCKY Sleeping·经典核心款",
+        "rarity": "常规款",
+        "color": "#ffc857"
+      },
+      {
+        "name": "PUCKY Sleeping·幻影午夜款",
+        "rarity": "常规款",
+        "color": "#ffc857"
+      },
+      {
+        "name": "PUCKY Sleeping·流光原色款",
+        "rarity": "常规款",
+        "color": "#ffc857"
+      },
+      {
+        "name": "PUCKY Sleeping·复古复刻款",
+        "rarity": "常规款",
+        "color": "#ffc857"
+      },
+      {
+        "name": "PUCKY Sleeping·马戏巡游款",
+        "rarity": "常规款",
+        "color": "#ffc857"
+      },
+      {
+        "name": "PUCKY Sleeping·异色隐藏款",
+        "rarity": "概率稀缺",
+        "color": "#191c1d"
+      },
+      {
+        "name": "PUCKY Sleeping·假日限定款",
+        "rarity": "主题款",
+        "color": "#ffc857"
+      },
+      {
+        "name": "PUCKY Sleeping·典藏尊享款",
+        "rarity": "高热度",
+        "color": "#ffc857"
+      }
+    ],
+    "lastUpdated": "2026-06-12"
+  },
+  {
     "sku": "DIMOO-ZODIAC-08",
     "ip": "DIMOO",
     "series": "Zodiac",
@@ -5257,14 +5257,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+Zodiac",
     "retailPrice": 15.0,
-    "avgSoldPrice": 21.04,
-    "medianSoldPrice": 21.04,
-    "fairMarketValue": 21.04,
+    "avgSoldPrice": 20.96,
+    "medianSoldPrice": 20.96,
+    "fairMarketValue": 20.96,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-37.3%",
-    "roi": 108.0,
+    "priceChange7d": "-37.5%",
+    "roi": 108.7,
     "riskScore": 76,
-    "totalSold": 35,
+    "totalSold": 34,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
     "dataSource": "live",
@@ -5391,7 +5391,7 @@
       },
       {
         "date": "2026-06-12",
-        "avg": 21.04
+        "avg": 20.96
       }
     ],
     "story": {
@@ -5648,6 +5648,208 @@
     "lastUpdated": "2026-06-12"
   },
   {
+    "sku": "SWEETBEAN-ANIMALS-02",
+    "ip": "SWEET BEAN",
+    "series": "Animals",
+    "name_zh": "Sweet Bean 动物世界",
+    "name_en": "SWEET BEAN Animals",
+    "rarity_zh": "稳定流通",
+    "rarity_en": "Liquid regular",
+    "color": "#b8e986",
+    "image": "/assets/sku/SWEETBEAN-ANIMALS-02.png",
+    "searchString": "\"Sweet Bean\" AND \"Animals\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
+    "refreshTier": "weekly",
+    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SWEET+BEAN+Animals",
+    "retailPrice": 15.0,
+    "avgSoldPrice": 25.09,
+    "medianSoldPrice": 25.09,
+    "fairMarketValue": 25.09,
+    "valuationMethod": "IQR + 10% trimmed median",
+    "priceChange7d": "-56.3%",
+    "roi": 99.4,
+    "riskScore": 74,
+    "totalSold": 34,
+    "signal_zh": "谨慎追高",
+    "signal_en": "Caution",
+    "dataSource": "live",
+    "priceHistory": [
+      {
+        "date": "2026-05-13",
+        "avg": 67.04
+      },
+      {
+        "date": "2026-05-14",
+        "avg": 63.0
+      },
+      {
+        "date": "2026-05-15",
+        "avg": 62.36
+      },
+      {
+        "date": "2026-05-16",
+        "avg": 65.86
+      },
+      {
+        "date": "2026-05-17",
+        "avg": 67.18
+      },
+      {
+        "date": "2026-05-18",
+        "avg": 67.32
+      },
+      {
+        "date": "2026-05-19",
+        "avg": 66.9
+      },
+      {
+        "date": "2026-05-20",
+        "avg": 66.87
+      },
+      {
+        "date": "2026-05-21",
+        "avg": 67.73
+      },
+      {
+        "date": "2026-05-22",
+        "avg": 65.29
+      },
+      {
+        "date": "2026-05-23",
+        "avg": 64.48
+      },
+      {
+        "date": "2026-05-24",
+        "avg": 64.31
+      },
+      {
+        "date": "2026-05-25",
+        "avg": 64.76
+      },
+      {
+        "date": "2026-05-26",
+        "avg": 64.48
+      },
+      {
+        "date": "2026-05-27",
+        "avg": 62.94
+      },
+      {
+        "date": "2026-05-28",
+        "avg": 61.76
+      },
+      {
+        "date": "2026-05-29",
+        "avg": 62.67
+      },
+      {
+        "date": "2026-05-30",
+        "avg": 60.7
+      },
+      {
+        "date": "2026-05-31",
+        "avg": 60.4
+      },
+      {
+        "date": "2026-06-01",
+        "avg": 60.9
+      },
+      {
+        "date": "2026-06-02",
+        "avg": 59.11
+      },
+      {
+        "date": "2026-06-03",
+        "avg": 60.28
+      },
+      {
+        "date": "2026-06-04",
+        "avg": 62.35
+      },
+      {
+        "date": "2026-06-05",
+        "avg": 57.38
+      },
+      {
+        "date": "2026-06-06",
+        "avg": 61.39
+      },
+      {
+        "date": "2026-06-07",
+        "avg": 59.43
+      },
+      {
+        "date": "2026-06-08",
+        "avg": 66.04
+      },
+      {
+        "date": "2026-06-09",
+        "avg": 65.62
+      },
+      {
+        "date": "2026-06-10",
+        "avg": 66.57
+      },
+      {
+        "date": "2026-06-11",
+        "avg": 63.27
+      },
+      {
+        "date": "2026-06-12",
+        "avg": 25.09
+      }
+    ],
+    "story": {
+      "year": "2026",
+      "tagline": "SWEET BEAN Animals 极具升值潜力的二级市场标的。",
+      "intro": "作为 SWEET BEAN 矩阵的重要成员，Sweet Bean 动物世界 (系列: Animals) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
+    },
+    "characters": [
+      {
+        "name": "SWEET Animals·经典核心款",
+        "rarity": "常规款",
+        "color": "#b8e986"
+      },
+      {
+        "name": "SWEET Animals·幻影午夜款",
+        "rarity": "常规款",
+        "color": "#b8e986"
+      },
+      {
+        "name": "SWEET Animals·流光原色款",
+        "rarity": "常规款",
+        "color": "#b8e986"
+      },
+      {
+        "name": "SWEET Animals·复古复刻款",
+        "rarity": "常规款",
+        "color": "#b8e986"
+      },
+      {
+        "name": "SWEET Animals·马戏巡游款",
+        "rarity": "常规款",
+        "color": "#b8e986"
+      },
+      {
+        "name": "SWEET Animals·异色隐藏款",
+        "rarity": "概率稀缺",
+        "color": "#191c1d"
+      },
+      {
+        "name": "SWEET Animals·假日限定款",
+        "rarity": "主题款",
+        "color": "#b8e986"
+      },
+      {
+        "name": "SWEET Animals·典藏尊享款",
+        "rarity": "高热度",
+        "color": "#b8e986"
+      }
+    ],
+    "lastUpdated": "2026-06-12"
+  },
+  {
     "sku": "LABUBU-FRUITS-06",
     "ip": "THE MONSTERS",
     "series": "Fruits",
@@ -5661,14 +5863,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Fruits+Labubu",
     "retailPrice": 15.0,
-    "avgSoldPrice": 31.8,
-    "medianSoldPrice": 31.8,
-    "fairMarketValue": 31.8,
+    "avgSoldPrice": 29.99,
+    "medianSoldPrice": 29.99,
+    "fairMarketValue": 29.99,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-29.8%",
-    "roi": 102.3,
-    "riskScore": 70,
-    "totalSold": 32,
+    "priceChange7d": "-33.8%",
+    "roi": 97.4,
+    "riskScore": 71,
+    "totalSold": 33,
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
     "dataSource": "live",
@@ -5795,7 +5997,7 @@
       },
       {
         "date": "2026-06-12",
-        "avg": 31.8
+        "avg": 29.99
       }
     ],
     "story": {
@@ -5868,8 +6070,8 @@
     "fairMarketValue": 27.57,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "-36.5%",
-    "roi": 101.7,
-    "riskScore": 75,
+    "roi": 90.6,
+    "riskScore": 73,
     "totalSold": 31,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
@@ -6052,208 +6254,6 @@
     "lastUpdated": "2026-06-12"
   },
   {
-    "sku": "SWEETBEAN-ANIMALS-02",
-    "ip": "SWEET BEAN",
-    "series": "Animals",
-    "name_zh": "Sweet Bean 动物世界",
-    "name_en": "SWEET BEAN Animals",
-    "rarity_zh": "稳定流通",
-    "rarity_en": "Liquid regular",
-    "color": "#b8e986",
-    "image": "/assets/sku/SWEETBEAN-ANIMALS-02.png",
-    "searchString": "\"Sweet Bean\" AND \"Animals\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
-    "refreshTier": "weekly",
-    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SWEET+BEAN+Animals",
-    "retailPrice": 15.0,
-    "avgSoldPrice": 24.98,
-    "medianSoldPrice": 24.98,
-    "fairMarketValue": 24.98,
-    "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-56.5%",
-    "roi": 98.2,
-    "riskScore": 74,
-    "totalSold": 34,
-    "signal_zh": "谨慎追高",
-    "signal_en": "Caution",
-    "dataSource": "live",
-    "priceHistory": [
-      {
-        "date": "2026-05-13",
-        "avg": 67.04
-      },
-      {
-        "date": "2026-05-14",
-        "avg": 63.0
-      },
-      {
-        "date": "2026-05-15",
-        "avg": 62.36
-      },
-      {
-        "date": "2026-05-16",
-        "avg": 65.86
-      },
-      {
-        "date": "2026-05-17",
-        "avg": 67.18
-      },
-      {
-        "date": "2026-05-18",
-        "avg": 67.32
-      },
-      {
-        "date": "2026-05-19",
-        "avg": 66.9
-      },
-      {
-        "date": "2026-05-20",
-        "avg": 66.87
-      },
-      {
-        "date": "2026-05-21",
-        "avg": 67.73
-      },
-      {
-        "date": "2026-05-22",
-        "avg": 65.29
-      },
-      {
-        "date": "2026-05-23",
-        "avg": 64.48
-      },
-      {
-        "date": "2026-05-24",
-        "avg": 64.31
-      },
-      {
-        "date": "2026-05-25",
-        "avg": 64.76
-      },
-      {
-        "date": "2026-05-26",
-        "avg": 64.48
-      },
-      {
-        "date": "2026-05-27",
-        "avg": 62.94
-      },
-      {
-        "date": "2026-05-28",
-        "avg": 61.76
-      },
-      {
-        "date": "2026-05-29",
-        "avg": 62.67
-      },
-      {
-        "date": "2026-05-30",
-        "avg": 60.7
-      },
-      {
-        "date": "2026-05-31",
-        "avg": 60.4
-      },
-      {
-        "date": "2026-06-01",
-        "avg": 60.9
-      },
-      {
-        "date": "2026-06-02",
-        "avg": 59.11
-      },
-      {
-        "date": "2026-06-03",
-        "avg": 60.28
-      },
-      {
-        "date": "2026-06-04",
-        "avg": 62.35
-      },
-      {
-        "date": "2026-06-05",
-        "avg": 57.38
-      },
-      {
-        "date": "2026-06-06",
-        "avg": 61.39
-      },
-      {
-        "date": "2026-06-07",
-        "avg": 59.43
-      },
-      {
-        "date": "2026-06-08",
-        "avg": 66.04
-      },
-      {
-        "date": "2026-06-09",
-        "avg": 65.62
-      },
-      {
-        "date": "2026-06-10",
-        "avg": 66.57
-      },
-      {
-        "date": "2026-06-11",
-        "avg": 63.27
-      },
-      {
-        "date": "2026-06-12",
-        "avg": 24.98
-      }
-    ],
-    "story": {
-      "year": "2026",
-      "tagline": "SWEET BEAN Animals 极具升值潜力的二级市场标的。",
-      "intro": "作为 SWEET BEAN 矩阵的重要成员，Sweet Bean 动物世界 (系列: Animals) 在二级交易市场表现出极高的换手率与价格稳定性。",
-      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
-      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
-    },
-    "characters": [
-      {
-        "name": "SWEET Animals·经典核心款",
-        "rarity": "常规款",
-        "color": "#b8e986"
-      },
-      {
-        "name": "SWEET Animals·幻影午夜款",
-        "rarity": "常规款",
-        "color": "#b8e986"
-      },
-      {
-        "name": "SWEET Animals·流光原色款",
-        "rarity": "常规款",
-        "color": "#b8e986"
-      },
-      {
-        "name": "SWEET Animals·复古复刻款",
-        "rarity": "常规款",
-        "color": "#b8e986"
-      },
-      {
-        "name": "SWEET Animals·马戏巡游款",
-        "rarity": "常规款",
-        "color": "#b8e986"
-      },
-      {
-        "name": "SWEET Animals·异色隐藏款",
-        "rarity": "概率稀缺",
-        "color": "#191c1d"
-      },
-      {
-        "name": "SWEET Animals·假日限定款",
-        "rarity": "主题款",
-        "color": "#b8e986"
-      },
-      {
-        "name": "SWEET Animals·典藏尊享款",
-        "rarity": "高热度",
-        "color": "#b8e986"
-      }
-    ],
-    "lastUpdated": "2026-06-12"
-  },
-  {
     "sku": "LABUBU-SPACE-10",
     "ip": "THE MONSTERS",
     "series": "Space",
@@ -6267,16 +6267,16 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Space+Labubu",
     "retailPrice": 15.0,
-    "avgSoldPrice": 23.14,
-    "medianSoldPrice": 23.14,
-    "fairMarketValue": 23.14,
+    "avgSoldPrice": 24.29,
+    "medianSoldPrice": 24.29,
+    "fairMarketValue": 24.29,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-52.0%",
-    "roi": 82.6,
-    "riskScore": 72,
-    "totalSold": 36,
-    "signal_zh": "持有跟踪",
-    "signal_en": "Track / hold",
+    "priceChange7d": "-49.7%",
+    "roi": 85.5,
+    "riskScore": 73,
+    "totalSold": 35,
+    "signal_zh": "谨慎追高",
+    "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
       {
@@ -6401,7 +6401,7 @@
       },
       {
         "date": "2026-06-12",
-        "avg": 23.14
+        "avg": 24.29
       }
     ],
     "story": {
@@ -6700,8 +6700,8 @@
     "fairMarketValue": 26.0,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "-45.1%",
-    "roi": 77.8,
-    "riskScore": 72,
+    "roi": 71.9,
+    "riskScore": 71,
     "totalSold": 33,
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
@@ -6883,208 +6883,6 @@
         "name": "隐藏款-The Last Tear",
         "rarity": "概率稀缺",
         "color": "#50e3c2"
-      }
-    ],
-    "lastUpdated": "2026-06-12"
-  },
-  {
-    "sku": "PUCKY-FOREST-01",
-    "ip": "PUCKY",
-    "series": "Forest",
-    "name_zh": "Pucky 森林系列",
-    "name_en": "PUCKY Forest",
-    "rarity_zh": "稳定流通",
-    "rarity_en": "Liquid regular",
-    "color": "#65d39b",
-    "image": "/assets/sku/PUCKY-FOREST-01.png",
-    "searchString": "\"Pucky\" AND \"Forest\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
-    "refreshTier": "weekly",
-    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+PUCKY+Forest",
-    "retailPrice": 15.0,
-    "avgSoldPrice": 23.41,
-    "medianSoldPrice": 23.41,
-    "fairMarketValue": 23.41,
-    "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-41.6%",
-    "roi": 75.3,
-    "riskScore": 71,
-    "totalSold": 36,
-    "signal_zh": "持有跟踪",
-    "signal_en": "Track / hold",
-    "dataSource": "live",
-    "priceHistory": [
-      {
-        "date": "2026-05-13",
-        "avg": 39.63
-      },
-      {
-        "date": "2026-05-14",
-        "avg": 42.01
-      },
-      {
-        "date": "2026-05-15",
-        "avg": 41.38
-      },
-      {
-        "date": "2026-05-16",
-        "avg": 43.27
-      },
-      {
-        "date": "2026-05-17",
-        "avg": 44.95
-      },
-      {
-        "date": "2026-05-18",
-        "avg": 46.96
-      },
-      {
-        "date": "2026-05-19",
-        "avg": 46.43
-      },
-      {
-        "date": "2026-05-20",
-        "avg": 45.23
-      },
-      {
-        "date": "2026-05-21",
-        "avg": 44.58
-      },
-      {
-        "date": "2026-05-22",
-        "avg": 44.56
-      },
-      {
-        "date": "2026-05-23",
-        "avg": 44.65
-      },
-      {
-        "date": "2026-05-24",
-        "avg": 44.32
-      },
-      {
-        "date": "2026-05-25",
-        "avg": 45.24
-      },
-      {
-        "date": "2026-05-26",
-        "avg": 43.83
-      },
-      {
-        "date": "2026-05-27",
-        "avg": 42.74
-      },
-      {
-        "date": "2026-05-28",
-        "avg": 43.37
-      },
-      {
-        "date": "2026-05-29",
-        "avg": 41.98
-      },
-      {
-        "date": "2026-05-30",
-        "avg": 41.7
-      },
-      {
-        "date": "2026-05-31",
-        "avg": 41.33
-      },
-      {
-        "date": "2026-06-01",
-        "avg": 39.75
-      },
-      {
-        "date": "2026-06-02",
-        "avg": 41.14
-      },
-      {
-        "date": "2026-06-03",
-        "avg": 42.41
-      },
-      {
-        "date": "2026-06-04",
-        "avg": 42.14
-      },
-      {
-        "date": "2026-06-05",
-        "avg": 40.08
-      },
-      {
-        "date": "2026-06-06",
-        "avg": 41.66
-      },
-      {
-        "date": "2026-06-07",
-        "avg": 43.84
-      },
-      {
-        "date": "2026-06-08",
-        "avg": 43.07
-      },
-      {
-        "date": "2026-06-09",
-        "avg": 42.84
-      },
-      {
-        "date": "2026-06-10",
-        "avg": 45.11
-      },
-      {
-        "date": "2026-06-11",
-        "avg": 43.41
-      },
-      {
-        "date": "2026-06-12",
-        "avg": 23.41
-      }
-    ],
-    "story": {
-      "year": "2026",
-      "tagline": "PUCKY Forest 极具升值潜力的二级市场标的。",
-      "intro": "作为 PUCKY 矩阵的重要成员，Pucky 森林系列 (系列: Forest) 在二级交易市场表现出极高的换手率与价格稳定性。",
-      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
-      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
-    },
-    "characters": [
-      {
-        "name": "PUCKY Forest·经典核心款",
-        "rarity": "常规款",
-        "color": "#65d39b"
-      },
-      {
-        "name": "PUCKY Forest·幻影午夜款",
-        "rarity": "常规款",
-        "color": "#65d39b"
-      },
-      {
-        "name": "PUCKY Forest·流光原色款",
-        "rarity": "常规款",
-        "color": "#65d39b"
-      },
-      {
-        "name": "PUCKY Forest·复古复刻款",
-        "rarity": "常规款",
-        "color": "#65d39b"
-      },
-      {
-        "name": "PUCKY Forest·马戏巡游款",
-        "rarity": "常规款",
-        "color": "#65d39b"
-      },
-      {
-        "name": "PUCKY Forest·异色隐藏款",
-        "rarity": "概率稀缺",
-        "color": "#191c1d"
-      },
-      {
-        "name": "PUCKY Forest·假日限定款",
-        "rarity": "主题款",
-        "color": "#65d39b"
-      },
-      {
-        "name": "PUCKY Forest·典藏尊享款",
-        "rarity": "高热度",
-        "color": "#65d39b"
       }
     ],
     "lastUpdated": "2026-06-12"
@@ -7286,6 +7084,208 @@
     "lastUpdated": "2026-06-12"
   },
   {
+    "sku": "PUCKY-FOREST-01",
+    "ip": "PUCKY",
+    "series": "Forest",
+    "name_zh": "Pucky 森林系列",
+    "name_en": "PUCKY Forest",
+    "rarity_zh": "稳定流通",
+    "rarity_en": "Liquid regular",
+    "color": "#65d39b",
+    "image": "/assets/sku/PUCKY-FOREST-01.png",
+    "searchString": "\"Pucky\" AND \"Forest\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
+    "refreshTier": "weekly",
+    "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+PUCKY+Forest",
+    "retailPrice": 15.0,
+    "avgSoldPrice": 22.46,
+    "medianSoldPrice": 22.46,
+    "fairMarketValue": 22.46,
+    "valuationMethod": "IQR + 10% trimmed median",
+    "priceChange7d": "-44.0%",
+    "roi": 62.4,
+    "riskScore": 70,
+    "totalSold": 35,
+    "signal_zh": "持有跟踪",
+    "signal_en": "Track / hold",
+    "dataSource": "live",
+    "priceHistory": [
+      {
+        "date": "2026-05-13",
+        "avg": 39.63
+      },
+      {
+        "date": "2026-05-14",
+        "avg": 42.01
+      },
+      {
+        "date": "2026-05-15",
+        "avg": 41.38
+      },
+      {
+        "date": "2026-05-16",
+        "avg": 43.27
+      },
+      {
+        "date": "2026-05-17",
+        "avg": 44.95
+      },
+      {
+        "date": "2026-05-18",
+        "avg": 46.96
+      },
+      {
+        "date": "2026-05-19",
+        "avg": 46.43
+      },
+      {
+        "date": "2026-05-20",
+        "avg": 45.23
+      },
+      {
+        "date": "2026-05-21",
+        "avg": 44.58
+      },
+      {
+        "date": "2026-05-22",
+        "avg": 44.56
+      },
+      {
+        "date": "2026-05-23",
+        "avg": 44.65
+      },
+      {
+        "date": "2026-05-24",
+        "avg": 44.32
+      },
+      {
+        "date": "2026-05-25",
+        "avg": 45.24
+      },
+      {
+        "date": "2026-05-26",
+        "avg": 43.83
+      },
+      {
+        "date": "2026-05-27",
+        "avg": 42.74
+      },
+      {
+        "date": "2026-05-28",
+        "avg": 43.37
+      },
+      {
+        "date": "2026-05-29",
+        "avg": 41.98
+      },
+      {
+        "date": "2026-05-30",
+        "avg": 41.7
+      },
+      {
+        "date": "2026-05-31",
+        "avg": 41.33
+      },
+      {
+        "date": "2026-06-01",
+        "avg": 39.75
+      },
+      {
+        "date": "2026-06-02",
+        "avg": 41.14
+      },
+      {
+        "date": "2026-06-03",
+        "avg": 42.41
+      },
+      {
+        "date": "2026-06-04",
+        "avg": 42.14
+      },
+      {
+        "date": "2026-06-05",
+        "avg": 40.08
+      },
+      {
+        "date": "2026-06-06",
+        "avg": 41.66
+      },
+      {
+        "date": "2026-06-07",
+        "avg": 43.84
+      },
+      {
+        "date": "2026-06-08",
+        "avg": 43.07
+      },
+      {
+        "date": "2026-06-09",
+        "avg": 42.84
+      },
+      {
+        "date": "2026-06-10",
+        "avg": 45.11
+      },
+      {
+        "date": "2026-06-11",
+        "avg": 43.41
+      },
+      {
+        "date": "2026-06-12",
+        "avg": 22.46
+      }
+    ],
+    "story": {
+      "year": "2026",
+      "tagline": "PUCKY Forest 极具升值潜力的二级市场标的。",
+      "intro": "作为 PUCKY 矩阵的重要成员，Pucky 森林系列 (系列: Forest) 在二级交易市场表现出极高的换手率与价格稳定性。",
+      "philosophy": "该系列完美融合了当代街头艺术与盲盒收藏的独特性，色彩配置更具空间张力。",
+      "detail": "当前 FMV（公允价值）由预清洗管线自动生成，使用三倍标准差和 IQR 算法剥离空卡/预售噪声，还原真实的潮玩资产价值。"
+    },
+    "characters": [
+      {
+        "name": "PUCKY Forest·经典核心款",
+        "rarity": "常规款",
+        "color": "#65d39b"
+      },
+      {
+        "name": "PUCKY Forest·幻影午夜款",
+        "rarity": "常规款",
+        "color": "#65d39b"
+      },
+      {
+        "name": "PUCKY Forest·流光原色款",
+        "rarity": "常规款",
+        "color": "#65d39b"
+      },
+      {
+        "name": "PUCKY Forest·复古复刻款",
+        "rarity": "常规款",
+        "color": "#65d39b"
+      },
+      {
+        "name": "PUCKY Forest·马戏巡游款",
+        "rarity": "常规款",
+        "color": "#65d39b"
+      },
+      {
+        "name": "PUCKY Forest·异色隐藏款",
+        "rarity": "概率稀缺",
+        "color": "#191c1d"
+      },
+      {
+        "name": "PUCKY Forest·假日限定款",
+        "rarity": "主题款",
+        "color": "#65d39b"
+      },
+      {
+        "name": "PUCKY Forest·典藏尊享款",
+        "rarity": "高热度",
+        "color": "#65d39b"
+      }
+    ],
+    "lastUpdated": "2026-06-12"
+  },
+  {
     "sku": "SWEETBEAN-AKIHABARA-03",
     "ip": "SWEET BEAN",
     "series": "Akihabara",
@@ -7304,9 +7304,9 @@
     "fairMarketValue": 24.98,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "-18.9%",
-    "roi": 64.0,
-    "riskScore": 65,
-    "totalSold": 32,
+    "roi": 61.4,
+    "riskScore": 66,
+    "totalSold": 33,
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
     "dataSource": "live",
@@ -8318,14 +8318,14 @@
     "refreshTier": "hot",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Exciting+Macarons+Labubu",
     "retailPrice": 17.0,
-    "avgSoldPrice": 21.99,
-    "medianSoldPrice": 21.99,
-    "fairMarketValue": 21.99,
+    "avgSoldPrice": 21.77,
+    "medianSoldPrice": 21.77,
+    "fairMarketValue": 21.77,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-27.8%",
-    "roi": 46.9,
-    "riskScore": 67,
-    "totalSold": 35,
+    "priceChange7d": "-28.5%",
+    "roi": 49.3,
+    "riskScore": 68,
+    "totalSold": 34,
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
     "dataSource": "live",
@@ -8452,7 +8452,7 @@
       },
       {
         "date": "2026-06-12",
-        "avg": 21.99
+        "avg": 21.77
       }
     ],
     "story": {
@@ -8519,9 +8519,9 @@
     "fairMarketValue": 19.99,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "-27.6%",
-    "roi": 38.3,
+    "roi": 41.2,
     "riskScore": 67,
-    "totalSold": 34,
+    "totalSold": 35,
     "signal_zh": "低溢价建仓候选",
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
@@ -9491,13 +9491,13 @@
     "refreshTier": "hot",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+Ink+Plum+Blossom",
     "retailPrice": 16.0,
-    "avgSoldPrice": 15.5,
-    "medianSoldPrice": 15.5,
-    "fairMarketValue": 15.5,
+    "avgSoldPrice": 15.0,
+    "medianSoldPrice": 15.0,
+    "fairMarketValue": 15.0,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-53.5%",
-    "roi": 8.9,
-    "riskScore": 56,
+    "priceChange7d": "-55.0%",
+    "roi": 6.9,
+    "riskScore": 59,
     "totalSold": 34,
     "signal_zh": "低溢价建仓候选",
     "signal_en": "Low-premium candidate",
@@ -9625,7 +9625,7 @@
       },
       {
         "date": "2026-06-12",
-        "avg": 15.5
+        "avg": 15.0
       }
     ],
     "story": {
@@ -9722,9 +9722,9 @@
     "fairMarketValue": 19.99,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "-62.1%",
-    "roi": 0.7,
+    "roi": -1.5,
     "riskScore": 62,
-    "totalSold": 37,
+    "totalSold": 36,
     "signal_zh": "低溢价建仓候选",
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
