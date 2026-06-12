@@ -40,7 +40,8 @@
     "trend_zh": "突破上涨",
     "signal": "watch",
     "signal_zh": "重点观察",
-    "signal_en": "Strong watch"
+    "signal_en": "Strong watch",
+    "dataSource": "demo"
   },
   "priceHistory": [
     {
@@ -168,9 +169,9 @@
       "avg": 43.36
     }
   ],
+  "dataSource": "demo",
   "sources": [
-    "eBay completed sales",
-    "SoldComps-compatible API"
+    "demo-secondary-market"
   ],
   "story": {
     "year": "2026",

@@ -31,6 +31,8 @@ jobs:
         env:
           SOLDCOMPS_API_KEY: ${{ secrets.SOLDCOMPS_API_KEY }}
           SOLDCOMPS_ENDPOINT: ${{ vars.SOLDCOMPS_ENDPOINT }}
+          LIVE_DATA_REQUIRED: "true"
+          ALLOW_DEMO_DATA: "false"
         run: python scripts/fetch_and_clean.py
 
       - name: Commit updated data

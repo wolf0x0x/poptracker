@@ -40,7 +40,8 @@
     "trend_zh": "突破上涨",
     "signal": "hold",
     "signal_zh": "持有跟踪",
-    "signal_en": "Track / hold"
+    "signal_en": "Track / hold",
+    "dataSource": "demo"
   },
   "priceHistory": [
     {
@@ -168,9 +169,9 @@
       "avg": 58.13
     }
   ],
+  "dataSource": "demo",
   "sources": [
-    "eBay completed sales",
-    "SoldComps-compatible API"
+    "demo-secondary-market"
   ],
   "story": {
     "year": "2023",

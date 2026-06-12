@@ -57,11 +57,8 @@
 3. Affiliate 商业化
 
 - 将 `affiliateUrl` 替换为真实 eBay Partner Network 链接。
-- 替换页面里的 AdSense 占位 ID：
-  - `ca-pub-XXXXXXXXXXXXXXXX`
-  - `YYYYYYYYYY`
-  - `ZZZZZZZZZZ`
-  - `WWWWWWWWWW`
+- AdSense 发布者 ID 已接入：`ca-pub-8695398658548679`。
+- 在 AdSense 后台创建 Leaderboard / Sidebar / In-feed 广告单元后，将真实 slot ID 补入 `CONFIG.slotLeaderboard`、`CONFIG.slotSidebar`、`CONFIG.slotInFeed`。
 
 4. SEO 与上线
 

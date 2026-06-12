@@ -84,11 +84,11 @@ def normalize_listing(item):
     if isinstance(shipping, dict):
         shipping = shipping.get("value", shipping.get("amount", 0))
 
-    currency = item.get("currency", "USD")
+    currency = item.get("soldCurrency", item.get("currency", "USD"))
     if isinstance(currency, dict):
         currency = currency.get("code", "USD")
 
-    sold_at = item.get("soldAt") or item.get("date") or item.get("endTime")
+    sold_at = item.get("soldAt") or item.get("endedAt") or item.get("date") or item.get("endTime")
 
     def numeric(value):
         if isinstance(value, (int, float)):
@@ -201,20 +201,19 @@ def fetch_live_listings(item):
     api_key = os.getenv("SOLDCOMPS_API_KEY")
     if not api_key or requests is None:
         print(f"[INFO] Missing API Key for {item['sku']}. Using sandbox sample pipe.")
-        return []
+        return [], "missing_api_key"
 
-    url = os.getenv(
-        "SOLDCOMPS_ENDPOINT",
-        f"https://api.apify.com/v2/acts/caffein.dev~ebay-sold-listings/run-sync-get-dataset-items?token={api_key}",
-    )
+    url = os.getenv("SOLDCOMPS_ENDPOINT", "https://api.sold-comps.com/v1/scrape")
+    method = os.getenv("SOLDCOMPS_METHOD", "GET" if "sold-comps.com" in url else "POST").upper()
     keyword = item.get("search_string") or f"Pop Mart {item['ip']} {item['series']} {item['keywords']} blind box loose"
-    payload = {"keyword": keyword, "count": 40, "daysToScrape": 30} # 适度调高数量保证清洗深度
-    
+    payload = {"keyword": keyword, "count": 40, "page": 1, "ebaySite": os.getenv("SOLDCOMPS_EBAY_SITE", "ebay.com")}
+    headers = {"Authorization": f"Bearer {api_key}", "Accept": "application/json"}
+
     try:
-        if os.getenv("SOLDCOMPS_ENDPOINT"):
-            response = requests.post(url, json={**payload, "apiKey": api_key}, timeout=30)
+        if method == "GET":
+            response = requests.get(url, params=payload, headers=headers, timeout=30)
         else:
-            response = requests.post(url, json=payload, timeout=30)
+            response = requests.post(url, json={**payload, "daysToScrape": 30, "apiKey": api_key}, headers=headers, timeout=30)
             
         response.raise_for_status()
         response_payload = response.json()
@@ -227,11 +226,11 @@ def fetch_live_listings(item):
             
         if items_list:
             print(f"[LIVE FETCH] Successfully retrieved {len(items_list)} items for {item['sku']}")
-            return items_list
-        return []
+            return items_list, "live"
+        return [], "empty_response"
     except Exception as exc:
-        print(f"[API ERROR] Live fetch failed for {item['sku']}: {exc}. Fallbacking safely.")
-        return []
+        print(f"[API ERROR] Live fetch failed for {item['sku']}: {exc}.")
+        return [], "api_error"
 
 def demo_listings(item):
     today = datetime.now(timezone.utc).date()
@@ -294,6 +293,48 @@ def merge_price_history(file_path, avg_price):
     history.append({"date": today, "avg": round(avg_price, 2)})
     return history[-90:]
 
+def load_existing_detail(file_path):
+    if not file_path.exists():
+        return None
+    try:
+        with file_path.open("r", encoding="utf-8") as handle:
+            return json.load(handle)
+    except Exception:
+        return None
+
+def index_item_from_detail(detail):
+    market = detail.get("marketData", {})
+    return {
+        "sku": detail["sku"],
+        "ip": detail["ip"],
+        "series": detail["series"],
+        "name_zh": detail.get("name_zh", detail.get("series", "")),
+        "name_en": detail.get("name_en", detail.get("series", "")),
+        "rarity_zh": detail.get("rarity_zh", "常规款"),
+        "rarity_en": detail.get("rarity_en", "Regular"),
+        "color": detail.get("color", "#6b38d4"),
+        "image": detail.get("image", ""),
+        "searchString": detail.get("searchString", ""),
+        "refreshTier": detail.get("refreshTier", "weekly"),
+        "affiliateUrl": detail.get("affiliateUrl", ""),
+        "retailPrice": detail.get("retailPrice", 0),
+        "avgSoldPrice": market.get("fairMarketValue", market.get("medianSoldPrice", 0)),
+        "medianSoldPrice": market.get("medianSoldPrice", market.get("fairMarketValue", 0)),
+        "fairMarketValue": market.get("fairMarketValue", 0),
+        "valuationMethod": market.get("valuationMethod", ""),
+        "priceChange7d": market.get("priceChange7d", "+0.0%"),
+        "roi": market.get("roi", 0),
+        "riskScore": market.get("riskScore", 50),
+        "totalSold": market.get("totalSold", 0),
+        "signal_zh": market.get("signal_zh", "持有跟踪"),
+        "signal_en": market.get("signal_en", "Track / hold"),
+        "dataSource": market.get("dataSource", detail.get("dataSource", "demo")),
+        "priceHistory": detail.get("priceHistory", []),
+        "story": detail.get("story"),
+        "characters": detail.get("characters"),
+        "lastUpdated": detail.get("lastUpdated"),
+    }
+
 def generate_default_story(item, today):
     ip = item.get("ip", "Pop Mart")
     series = item.get("series", item.get("name_en", ""))
@@ -333,6 +374,10 @@ def main():
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     today = datetime.now(timezone.utc).date().isoformat()
     index = []
+    live_required = os.getenv("LIVE_DATA_REQUIRED", "").lower() in {"1", "true", "yes"}
+    allow_demo = os.getenv("ALLOW_DEMO_DATA", "true").lower() not in {"0", "false", "no"}
+    preserved = []
+    failures = []
 
     dict_path = PROJECT_ROOT / "sku_dictionary.json"
     global TRACKING_ITEMS
@@ -379,15 +424,27 @@ def main():
         if "characters" in raw_item:
             item["characters"] = raw_item["characters"]
 
-        # 核心变动：真实API无返回值时，才会回滚到测试桩
-        raw = fetch_live_listings(item)
+        file_path = DATA_DIR / f"{item['sku']}.json"
+
+        # 生产环境不再静默回滚到 demo。若 live 失败且已有旧数据，则保留旧数据。
+        raw, source_status = fetch_live_listings(item)
+        data_source = "live" if source_status == "live" and raw else "demo"
         if not raw:
+            existing = load_existing_detail(file_path)
+            if live_required and existing:
+                preserved.append(item["sku"])
+                index.append(index_item_from_detail(existing))
+                print(f"[STALE] Preserved existing market data for {item['sku']} after {source_status}.")
+                continue
+            if live_required and not allow_demo:
+                failures.append(f"{item['sku']}:{source_status}")
+                continue
             raw = demo_listings(item)
+            data_source = "demo"
             
         metrics = aggregate(raw, item["retail_price_usd"], item.get("negative_keywords", []))
         if not metrics:
             continue
-        file_path = DATA_DIR / f"{item['sku']}.json"
         history = merge_price_history(file_path, metrics["fairMarketValue"])
         change = ((history[-1]["avg"] - history[-8]["avg"]) / history[-8]["avg"]) * 100
         trend_key, trend_zh = trend_label(change)
@@ -422,9 +479,11 @@ def main():
                 "signal": signal_key,
                 "signal_zh": signal_zh,
                 "signal_en": signal_en,
+                "dataSource": data_source,
             },
             "priceHistory": history,
-            "sources": ["eBay completed sales", "SoldComps-compatible API"],
+            "dataSource": data_source,
+            "sources": ["SoldComps-compatible API"] if data_source == "live" else ["demo-secondary-market"],
             "story": raw_item.get("story") or generate_default_story(item, today),
             "characters": raw_item.get("characters") or generate_default_characters(item),
             "notes_zh": "价格为商品历史成交聚合结果，不构成投资建议。请综合手续费判断。",
@@ -459,6 +518,8 @@ def main():
                 "totalSold": metrics["totalSold"],
                 "signal_zh": signal_zh,
                 "signal_en": signal_en,
+                "dataSource": data_source,
+                "priceHistory": history,
                 "story": raw_item.get("story") or generate_default_story(item, today),
                 "characters": raw_item.get("characters") or generate_default_characters(item),
                 "lastUpdated": today,
@@ -469,6 +530,10 @@ def main():
         json.dump(index, handle, ensure_ascii=False, indent=2)
 
     print(f"Generated {len(index)} tracked Pop Mart assets in {DATA_DIR}")
+    if preserved:
+        print(f"[STALE] Preserved {len(preserved)} SKU files because live fetch failed: {', '.join(preserved)}")
+    if failures:
+        raise SystemExit(f"Live data required, but no live or preserved data for: {', '.join(failures)}")
 
 if __name__ == "__main__":
     main()

@@ -1,12 +1,13 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>PopTracker | 泡泡玛特潮玩欧气身价与圈内行情雷达</title>
+    <title id="pageTitle">PopTracker | Designer Toy Secondary Market Price Guide & Radar</title>
     <meta
       name="description"
-      content="PopTracker 智能联动 SoldComps 全球成交流，带你一键解锁泡泡玛特盲盒公允身价、热门收藏 ROI、换手流动性及潮玩圈行情避坑走势。"
+      id="pageDesc"
+      content="Track real-time secondary market values, FMV trends, investment ROI, and collector price data for Pop Mart art toys powered by global auction completed sales."
     />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
     <style>
@@ -32,1011 +33,186 @@
         --shadow: 0 18px 46px rgba(36, 40, 48, 0.1);
       }
 
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
       body {
         margin: 0;
         min-height: 100vh;
         background: var(--bg);
         color: var(--ink);
-        font-family:
-          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-          "PingFang SC", "Microsoft YaHei", sans-serif;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
         -webkit-tap-highlight-color: transparent;
       }
 
-      button,
-      input,
-      select {
-        font: inherit;
-      }
-
-      button {
-        cursor: pointer;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .shell {
-        width: min(1280px, calc(100vw - 40px));
-        margin: 0 auto;
-      }
-
-      .topbar {
-        position: sticky;
-        top: 0;
-        z-index: 40;
-        border-bottom: 1px solid rgba(216, 220, 226, 0.9);
-        background: rgba(248, 249, 250, 0.92);
-        backdrop-filter: blur(18px);
-      }
-
-      .topbar-inner {
-        display: flex;
-        min-height: 68px;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-      }
-
-      .brand {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        font-weight: 860;
-        letter-spacing: 0;
-      }
-
-      .brand-mark {
-        display: grid;
-        width: 36px;
-        height: 36px;
-        place-items: center;
-        border-radius: 8px;
-        background: var(--primary);
-        color: #fff;
-        font-weight: 900;
-      }
-
-      .nav {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-      }
-
-      .nav a,
-      .ghost-button,
-      .primary-button,
-      .chip,
-      .icon-button {
-        display: inline-flex;
-        min-height: 40px;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid transparent;
-        border-radius: 8px;
-        padding: 0 13px;
-        color: var(--muted);
-        background: transparent;
-      }
-
-      .nav a.active,
-      .nav a:hover,
-      .ghost-button:hover,
-      .chip.active {
-        background: var(--primary-soft);
-        color: var(--primary);
-      }
-
-      .primary-button {
-        border-color: var(--primary);
-        background: var(--primary);
-        color: #fff;
-        font-weight: 780;
-      }
-
-      .ghost-button {
-        border-color: var(--line);
-        background: var(--surface);
-      }
-
-      .api-ready {
-        border-color: rgba(0, 122, 82, 0.3);
-        background: var(--green-soft);
-        color: var(--green);
-      }
-
-      .api-missing {
-        border-color: rgba(179, 38, 30, 0.22);
-        background: var(--red-soft);
-        color: var(--red);
-      }
-
-      .hero {
-        display: grid;
-        grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.55fr);
-        gap: 20px;
-        padding: 34px 0 20px;
-      }
-
-      .panel {
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--surface);
-        box-shadow: var(--shadow);
-      }
-
-      .market-panel {
-        overflow: hidden;
-      }
-
-      .market-head {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        gap: 16px;
-        align-items: start;
-        padding: 24px;
-      }
-
-      .eyebrow {
-        margin: 0 0 8px;
-        color: var(--primary);
-        font-size: 12px;
-        font-weight: 800;
-        text-transform: uppercase;
-      }
-
-      h1,
-      h2,
-      h3,
-      p {
-        margin-top: 0;
-      }
-
-      h1 {
-        max-width: 820px;
-        margin-bottom: 12px;
-        font-size: clamp(34px, 5vw, 60px);
-        line-height: 1;
-        letter-spacing: 0;
-      }
-
-      .lead {
-        max-width: 760px;
-        margin-bottom: 0;
-        color: var(--muted);
-        font-size: 16px;
-        line-height: 1.7;
-      }
-
-      .market-index {
-        min-width: 190px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--surface-low);
-        padding: 14px;
-      }
-
-      .index-value {
-        display: block;
-        font-size: 34px;
-        font-weight: 900;
-        line-height: 1;
-      }
-
-      .up {
-        color: var(--green);
-      }
-
-      .down {
-        color: var(--red);
-      }
-
-      .chart-wrap {
-        height: 290px;
-        padding: 0 18px 18px;
-      }
-
-      .metrics {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        border-top: 1px solid var(--line);
-      }
-
-      .metric {
-        min-width: 0;
-        border-right: 1px solid var(--line);
-        padding: 16px 18px;
-      }
-
-      .metric:last-child {
-        border-right: 0;
-      }
-
-      .metric span,
-      .card-label,
-      .field-label {
-        display: block;
-        margin-bottom: 5px;
-        color: var(--muted);
-        font-size: 12px;
-        font-weight: 750;
-      }
-
-      .metric strong {
-        display: block;
-        overflow: hidden;
-        font-size: 24px;
-        font-weight: 900;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      .feed-panel {
-        display: flex;
-        min-height: 100%;
-        flex-direction: column;
-        padding: 18px;
-      }
-
-      .section-head {
-        display: flex;
-        align-items: end;
-        justify-content: space-between;
-        gap: 16px;
-        margin-bottom: 16px;
-      }
-
-      .section-head h2 {
-        margin-bottom: 4px;
-        font-size: 24px;
-      }
-
-      .section-head p {
-        margin-bottom: 0;
-        color: var(--muted);
-        font-size: 13px;
-      }
-
-      .feed-list {
-        display: grid;
-        gap: 10px;
-      }
-
-      .feed-item {
-        display: grid;
-        grid-template-columns: 38px minmax(0, 1fr) auto;
-        gap: 10px;
-        align-items: center;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--surface-low);
-        padding: 10px;
-      }
-
-      .avatar,
-      .toy-art {
-        background:
-          radial-gradient(circle at 50% 32%, rgba(255, 255, 255, 0.9) 0 16%, transparent 17%),
-          radial-gradient(circle at 34% 44%, rgba(25, 28, 29, 0.13) 0 3%, transparent 4%),
-          radial-gradient(circle at 66% 44%, rgba(25, 28, 29, 0.13) 0 3%, transparent 4%),
-          linear-gradient(145deg, var(--asset-color, #6b38d4), color-mix(in srgb, var(--asset-color, #6b38d4) 32%, #ffffff));
-      }
-
-      .avatar {
-        width: 38px;
-        height: 38px;
-        border-radius: 8px;
-      }
-
-      .feed-name {
-        overflow: hidden;
-        font-weight: 760;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      .feed-meta,
-      .muted {
-        color: var(--muted);
-        font-size: 12px;
-      }
-
-      .feed-price {
-        text-align: right;
-        font-weight: 860;
-      }
-
-      .ad-banner {
-        display: grid;
-        min-height: 90px;
-        place-items: center;
-        margin: 8px 0 28px;
-        border: 1px dashed #aab1bd;
-        border-radius: 8px;
-        background: var(--surface-low);
-        color: var(--muted);
-        position: relative;
-      }
-
-      .ad-banner::before {
-        position: absolute;
-        top: 8px;
-        left: 10px;
-        content: "SPONSORED";
-        color: #7c8490;
-        font-size: 11px;
-        font-weight: 800;
-      }
-
-      .discover {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) 300px;
-        gap: 20px;
-        padding-bottom: 34px;
-      }
-
-      .toolbar {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        align-items: center;
-        margin-bottom: 16px;
-      }
-
-      .search {
-        min-width: min(100%, 260px);
-        flex: 1;
-        height: 42px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--surface);
-        color: var(--ink);
-        padding: 0 13px;
-      }
-
-      select {
-        height: 42px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--surface);
-        color: var(--ink);
-        padding: 0 11px;
-      }
-
-      .chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        width: 100%;
-      }
-
-      .chip {
-        min-height: 34px;
-        border-color: var(--line);
-        background: var(--surface);
-        font-size: 13px;
-      }
-
-      .bento {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 14px;
-      }
-
-      .item-card,
-      .insight-card {
-        min-width: 0;
-        overflow: hidden;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--surface);
-      }
-
-      .item-card {
-        display: flex;
-        min-height: 100%;
-        flex-direction: column;
-        text-align: left;
-      }
-
-      .item-card.featured {
-        grid-column: span 2;
-      }
-
-      .item-card:hover {
-        border-color: color-mix(in srgb, var(--asset-color, #6b38d4) 70%, var(--line));
-        box-shadow: 0 16px 34px rgba(36, 40, 48, 0.12);
-        transform: translateY(-1px);
-      }
-
-      .toy-art {
-        position: relative;
-        aspect-ratio: 1.18 / 1;
-        width: 100%;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .toy-art img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .toy-art img:not([data-loaded="true"]),
-      .detail-art img:not([data-loaded="true"]),
-      .series-hero img:not([data-loaded="true"]),
-      .character-art img:not([data-loaded="true"]) {
-        opacity: 0;
-      }
-
-      .badge {
-        display: inline-flex;
-        min-height: 24px;
-        align-items: center;
-        border-radius: 6px;
-        background: rgba(255, 255, 255, 0.88);
-        color: var(--primary);
-        font-size: 12px;
-        font-weight: 820;
-        padding: 0 8px;
-      }
-
-      .toy-art .badge {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-      }
-
-      .card-body {
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-        gap: 12px;
-        padding: 15px;
-      }
-
-      .card-title {
-        margin-bottom: 3px;
-        font-size: 18px;
-        line-height: 1.22;
-      }
-
-      .card-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 10px;
-        margin-top: auto;
-        padding-top: 12px;
-        border-top: 1px solid var(--line);
-      }
-
-      .card-value {
-        display: block;
-        overflow: hidden;
-        font-weight: 850;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      .insight-card {
-        display: flex;
-        min-height: 260px;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 18px;
-        background: #191c1d;
-        color: #fff;
-      }
-
-      .insight-card .muted,
-      .insight-card .card-label {
-        color: rgba(255, 255, 255, 0.68);
-      }
-
-      .side-stack {
-        display: grid;
-        align-content: start;
-        gap: 14px;
-      }
-
-      .mini-panel {
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--surface);
-        padding: 16px;
-      }
-
-      .rank-list {
-        display: grid;
-        gap: 11px;
-      }
-
-      .rank-row {
-        display: grid;
-        grid-template-columns: 24px minmax(0, 1fr) auto;
-        gap: 10px;
-        align-items: center;
-      }
-
-      .rank-row strong {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      .hidden-page {
-        display: none;
-      }
-
-      .series-page {
-        padding: 28px 0 44px;
-      }
-
-      .series-hero {
-        position: relative;
-        display: grid;
-        min-height: 520px;
-        align-items: end;
-        overflow: hidden;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background:
-          linear-gradient(180deg, rgba(248, 249, 250, 0.05) 0%, rgba(248, 249, 250, 0.98) 78%),
-          radial-gradient(circle at 68% 26%, color-mix(in srgb, var(--asset-color, #6b38d4) 34%, transparent), transparent 32%),
-          linear-gradient(135deg, color-mix(in srgb, var(--asset-color, #6b38d4) 20%, #ffffff), #ffffff);
-        box-shadow: var(--shadow);
-      }
-
-      .series-hero::before {
-        position: absolute;
-        inset: 54px 54px 120px auto;
-        width: min(46vw, 520px);
-        min-width: 360px;
-        border: 1px solid rgba(255, 255, 255, 0.7);
-        border-radius: 8px;
-        background:
-          radial-gradient(circle at 50% 28%, rgba(255, 255, 255, 0.94) 0 14%, transparent 15%),
-          radial-gradient(circle at 36% 42%, rgba(25, 28, 29, 0.14) 0 3%, transparent 4%),
-          radial-gradient(circle at 64% 42%, rgba(25, 28, 29, 0.14) 0 3%, transparent 4%),
-          linear-gradient(145deg, var(--asset-color, #6b38d4), #ffffff);
-        content: "";
-        box-shadow: 0 24px 70px rgba(25, 28, 29, 0.15);
-      }
-
-      .series-hero img {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .series-hero-content {
-        position: relative;
-        z-index: 1;
-        display: grid;
-        grid-template-columns: minmax(0, 0.7fr) minmax(260px, 0.3fr);
-        gap: 20px;
-        padding: 34px;
-      }
-
-      .series-hero h1 {
-        max-width: 660px;
-      }
-
-      .series-kpis {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
-        align-content: end;
-      }
-
-      .series-content-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) 340px;
-        gap: 22px;
-        margin-top: 28px;
-      }
-
-      .story-block {
-        display: grid;
-        grid-template-columns: minmax(0, 0.43fr) minmax(0, 0.57fr);
-        gap: 22px;
-        align-items: center;
-        margin-bottom: 22px;
-      }
-
-      .story-image,
-      .packaging-image,
-      .character-art {
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background:
-          radial-gradient(circle at 50% 32%, rgba(255, 255, 255, 0.9) 0 15%, transparent 16%),
-          radial-gradient(circle at 36% 44%, rgba(25, 28, 29, 0.13) 0 3%, transparent 4%),
-          radial-gradient(circle at 64% 44%, rgba(25, 28, 29, 0.13) 0 3%, transparent 4%),
-          linear-gradient(145deg, var(--asset-color, #6b38d4), #ffffff);
-      }
-
-      .story-image {
-        min-height: 320px;
-      }
-
-      .series-section {
-        margin-bottom: 22px;
-      }
-
-      .series-section h2 {
-        font-size: 28px;
-        margin-bottom: 10px;
-      }
-
-      .series-copy {
-        color: var(--muted);
-        font-size: 16px;
-        line-height: 1.78;
-      }
-
-      .character-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 12px;
-      }
-
-      .character-card {
-        overflow: hidden;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--surface);
-      }
-
-      .character-art {
-        aspect-ratio: 1 / 1;
-        border: 0;
-        border-bottom: 1px solid var(--line);
-        border-radius: 0;
-      }
-
-      .character-art img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        mix-blend-mode: multiply;
-      }
-
-      .character-body {
-        padding: 12px;
-      }
-
-      .packaging-card {
-        display: grid;
-        grid-template-columns: minmax(240px, 0.42fr) minmax(0, 0.58fr);
-        gap: 16px;
-        align-items: center;
-      }
-
-      .packaging-image {
-        min-height: 300px;
-        background:
-          linear-gradient(90deg, transparent 46%, rgba(255, 255, 255, 0.7) 47% 53%, transparent 54%),
-          linear-gradient(145deg, var(--asset-color, #6b38d4), #ffffff);
-      }
-
-      .spec-list {
-        display: grid;
-        gap: 10px;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .spec-list li {
-        display: flex;
-        justify-content: space-between;
-        gap: 16px;
-        border-bottom: 1px solid var(--line);
-        padding-bottom: 10px;
-      }
-
-      .series-side {
-        position: sticky;
-        top: 88px;
-        display: grid;
-        gap: 14px;
-        align-content: start;
-      }
-
-      /* 遮罩层样式 */
-      .drawer-overlay {
-        position: fixed;
-        inset: 0;
-        background: rgba(25, 28, 29, 0.4);
-        backdrop-filter: blur(4px);
-        z-index: 55;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .drawer-overlay.active {
-        opacity: 1;
-        pointer-events: auto;
-      }
-
-      .detail-drawer {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        z-index: 60;
-        display: none;
-        width: min(520px, 100vw);
-        height: 100vh;
-        max-height: 100vh;
-        overflow: auto;
-        border: 1px solid var(--line);
-        border-right: none;
-        border-radius: 12px 0 0 12px;
-        background: var(--surface);
-        box-shadow: -8px 0 32px rgba(0, 0, 0, 0.15);
-        transform: translateX(100%);
-        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-
-      .detail-drawer.open {
-        display: block;
-        transform: translateX(0);
-      }
-
-      @media (max-width: 720px) {
-        .detail-drawer {
-          right: 0;
-          bottom: 0;
-          width: 100vw;
-          height: 85vh;
-          max-height: 85vh;
-          border-radius: 16px 16px 0 0;
-          transform: translateY(100%);
-        }
-        .detail-drawer.open {
-          transform: translateY(0);
-        }
-      }
-
-      .detail-hero {
-        display: grid;
-        grid-template-columns: 150px minmax(0, 1fr);
-        gap: 14px;
-        padding: 18px;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .detail-art {
-        min-height: 150px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background:
-          radial-gradient(circle at 50% 31%, rgba(255, 255, 255, 0.92) 0 16%, transparent 17%),
-          radial-gradient(circle at 34% 44%, rgba(25, 28, 29, 0.15) 0 3%, transparent 4%),
-          radial-gradient(circle at 66% 44%, rgba(25, 28, 29, 0.15) 0 3%, transparent 4%),
-          linear-gradient(145deg, var(--asset-color, #6b38d4), #ffffff);
-      }
-
-      .detail-art img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 8px;
-      }
-
-      .detail-body {
-        padding: 18px;
-      }
-
-      .detail-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 10px;
-        margin-bottom: 16px;
-      }
-
-      .field {
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--surface-low);
-        padding: 11px;
-      }
-
-      .field strong {
-        display: block;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      .history {
-        height: 220px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        padding: 10px;
-      }
-
-      .detail-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 16px;
-      }
-
-      .modal {
-        position: fixed;
-        inset: 0;
-        z-index: 80;
-        display: grid;
-        place-items: center;
-        background: rgba(25, 28, 29, 0.4);
-        padding: 20px;
-      }
-
-      .modal.hidden,
-      .toast.hidden {
-        display: none;
-      }
-
-      .modal-card {
-        width: min(520px, 100%);
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--surface);
-        padding: 20px;
-        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
-      }
-
-      .modal-card input {
-        width: 100%;
-        height: 44px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        margin: 10px 0 14px;
-        padding: 0 12px;
-      }
-
-      .toast {
-        position: fixed;
-        left: 50%;
-        bottom: 20px;
-        z-index: 100;
-        transform: translateX(-50%);
-        border-radius: 8px;
-        background: #191c1d;
-        color: #fff;
-        padding: 11px 14px;
-        box-shadow: var(--shadow);
-      }
-
-      footer {
-        border-top: 1px solid var(--line);
-        background: var(--surface-low);
-        color: var(--muted);
-        padding: 26px 0;
-      }
+      button, input, select { font: inherit; }
+      button { cursor: pointer; }
+      a { color: inherit; text-decoration: none; }
+      .shell { width: min(1280px, calc(100vw - 40px)); margin: 0 auto; }
+      .topbar { position: sticky; top: 0; z-index: 40; border-bottom: 1px solid rgba(216, 220, 226, 0.9); background: rgba(248, 249, 250, 0.92); backdrop-filter: blur(18px); }
+      .topbar-inner { display: flex; min-height: 68px; align-items: center; justify-content: space-between; gap: 20px; }
+      .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 860; }
+      .brand-mark { display: grid; width: 36px; height: 36px; place-items: center; border-radius: 8px; background: var(--primary); color: #fff; font-weight: 900; }
+      .nav { display: flex; align-items: center; gap: 6px; }
+
+      .nav a, .ghost-button, .primary-button, .chip, .icon-button {
+        display: inline-flex; min-height: 40px; align-items: center; justify-content: center; border: 1px solid transparent; border-radius: 8px; padding: 0 13px; color: var(--muted); background: transparent;
+      }
+      .nav a.active, .nav a:hover, .ghost-button:hover, .chip.active { background: var(--primary-soft); color: var(--primary); }
+      .primary-button { border-color: var(--primary); background: var(--primary); color: #fff; font-weight: 780; }
+      .ghost-button { border-color: var(--line); background: var(--surface); }
+      .api-ready { border-color: rgba(0, 122, 82, 0.3); background: var(--green-soft); color: var(--green); }
+      .api-missing { border-color: rgba(179, 38, 30, 0.22); background: var(--red-soft); color: var(--red); }
+
+      .hero { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.55fr); gap: 20px; padding: 34px 0 20px; }
+      .panel { border: 1px solid var(--line); border-radius: 8px; background: var(--surface); box-shadow: var(--shadow); }
+      .market-panel { overflow: hidden; }
+      .market-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: start; padding: 24px; }
+      .eyebrow { margin: 0 0 8px; color: var(--primary); font-size: 12px; font-weight: 800; text-transform: uppercase; }
+      h1, h2, h3, p { margin-top: 0; }
+      h1 { max-width: 820px; margin-bottom: 12px; font-size: clamp(34px, 5vw, 60px); line-height: 1; }
+      .lead { max-width: 760px; margin-bottom: 0; color: var(--muted); font-size: 16px; line-height: 1.7; }
+      .market-index { min-width: 190px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-low); padding: 14px; }
+      .index-value { display: block; font-size: 34px; font-weight: 900; line-height: 1; }
+      .up { color: var(--green); }
+      .down { color: var(--red); }
+      .chart-wrap { height: 290px; padding: 0 18px 18px; }
+
+      .metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+      .metric { min-width: 0; border-right: 1px solid var(--line); padding: 16px 18px; }
+      .metric:last-child { border-right: 0; }
+      .metric span, .card-label, .field-label { display: block; margin-bottom: 5px; color: var(--muted); font-size: 12px; font-weight: 750; }
+      .metric strong { display: block; overflow: hidden; font-size: 24px; font-weight: 900; text-overflow: ellipsis; white-space: nowrap; }
+
+      .feed-panel { display: flex; min-height: 100%; flex-direction: column; padding: 18px; }
+      .section-head { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+      .section-head h2 { margin-bottom: 4px; font-size: 24px; }
+      .section-head p { margin-bottom: 0; color: var(--muted); font-size: 13px; }
+      .feed-list { display: grid; gap: 10px; }
+      .feed-item { display: grid; grid-template-columns: 38px minmax(0, 1fr) auto; gap: 10px; align-items: center; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-low); padding: 10px; }
+      .avatar, .toy-art {
+        background: radial-gradient(circle at 50% 32%, rgba(255, 255, 255, 0.9) 0 16%, transparent 17%), linear-gradient(145deg, var(--asset-color, #6b38d4), #ffffff);
+      }
+      .avatar { width: 38px; height: 38px; border-radius: 8px; }
+      .feed-name { overflow: hidden; font-weight: 760; text-overflow: ellipsis; white-space: nowrap; }
+      .feed-meta, .muted { color: var(--muted); font-size: 12px; }
+      .feed-price { text-align: right; font-weight: 860; }
+
+      .ad-banner { display: grid; min-height: 90px; place-items: center; margin: 8px 0 28px; border: 1px dashed #aab1bd; border-radius: 8px; background: var(--surface-low); color: var(--muted); position: relative; }
+      .ad-banner::before { position: absolute; top: 8px; left: 10px; content: "ADVERTISEMENT"; color: #7c8490; font-size: 11px; font-weight: 800; }
+
+      .discover { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 20px; padding-bottom: 34px; }
+      .toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 16px; }
+      .search { min-width: min(100%, 260px); flex: 1; height: 42px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); padding: 0 13px; }
+      select { height: 42px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); padding: 0 11px; }
+      .chips { display: flex; flex-wrap: wrap; gap: 8px; width: 100%; }
+      .chip { min-height: 34px; border-color: var(--line); background: var(--surface); font-size: 13px; }
+
+      .bento { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+      .item-card, .insight-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+      .item-card { display: flex; min-height: 100%; flex-direction: column; text-align: left; }
+      .item-card.featured { grid-column: span 2; }
+      .item-card:hover { border-color: color-mix(in srgb, var(--asset-color, #6b38d4) 70%, var(--line)); box-shadow: 0 16px 34px rgba(36, 40, 48, 0.12); }
+      .toy-art { position: relative; aspect-ratio: 1.18 / 1; width: 100%; border-bottom: 1px solid var(--line); }
+      .toy-art img { width: 100%; height: 100%; object-fit: cover; }
+      .badge { display: inline-flex; min-height: 24px; align-items: center; border-radius: 6px; background: rgba(255, 255, 255, 0.88); color: var(--primary); font-size: 12px; font-weight: 820; padding: 0 8px; }
+      .toy-art .badge { position: absolute; top: 10px; left: 10px; }
+      .card-body { display: flex; flex: 1; flex-direction: column; gap: 12px; padding: 15px; }
+      .card-title { margin-bottom: 3px; font-size: 18px; line-height: 1.22; }
+      .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line); }
+      .card-value { display: block; overflow: hidden; font-weight: 850; text-overflow: ellipsis; white-space: nowrap; }
+
+      .insight-card { display: flex; min-height: 260px; flex-direction: column; justify-content: space-between; padding: 18px; background: #191c1d; color: #fff; }
+      .insight-card .muted, .insight-card .card-label { color: rgba(255, 255, 255, 0.68); }
+      .side-stack { display: grid; align-content: start; gap: 14px; }
+      .mini-panel { border: 1px solid var(--line); border-radius: 8px; background: var(--surface); padding: 16px; }
+      .rank-list { display: grid; gap: 11px; }
+      .rank-row { display: grid; grid-template-columns: 24px minmax(0, 1fr) auto; gap: 10px; align-items: center; }
+      .rank-row strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+      .hidden-page { display: none; }
+      .series-page { padding: 28px 0 44px; }
+      .series-hero { position: relative; display: grid; min-height: 520px; align-items: end; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: linear-gradient(180deg, rgba(248, 249, 250, 0.05) 0%, rgba(248, 249, 250, 0.98) 78%), linear-gradient(135deg, color-mix(in srgb, var(--asset-color, #6b38d4) 20%, #ffffff), #ffffff); box-shadow: var(--shadow); }
+      .series-hero-content { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 0.7fr) minmax(260px, 0.3fr); gap: 20px; padding: 34px; }
+      .series-kpis { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; align-content: end; }
+      .series-content-grid { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 22px; margin-top: 28px; }
+      .story-block { display: grid; grid-template-columns: minmax(0, 0.43fr) minmax(0, 0.57fr); gap: 22px; align-items: center; margin-bottom: 22px; }
+      .story-image, .packaging-image, .character-art { border: 1px solid var(--line); border-radius: 8px; background: linear-gradient(145deg, var(--asset-color, #6b38d4), #ffffff); }
+      .story-image { min-height: 320px; }
+      .series-section { margin-bottom: 22px; }
+      .series-section h2 { font-size: 28px; margin-bottom: 10px; }
+      .series-copy { color: var(--muted); font-size: 16px; line-height: 1.78; }
+      .character-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+      .character-card { overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+      .character-art { aspect-ratio: 1 / 1; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; }
+      .character-art img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+      .character-body { padding: 12px; }
+      .packaging-card { display: grid; grid-template-columns: minmax(240px, 0.42fr) minmax(0, 0.58fr); gap: 16px; align-items: center; }
+      .packaging-image { min-height: 300px; background: linear-gradient(145deg, var(--asset-color, #6b38d4), #ffffff); }
+      .spec-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+      .spec-list li { display: flex; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--line); padding-bottom: 10px; }
+      .series-side { position: sticky; top: 88px; display: grid; gap: 14px; align-content: start; }
+
+      .drawer-overlay { position: fixed; inset: 0; background: rgba(25, 28, 29, 0.4); backdrop-filter: blur(4px); z-index: 55; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+      .drawer-overlay.active { opacity: 1; pointer-events: auto; }
+      .detail-drawer { position: fixed; right: 0; bottom: 0; z-index: 60; display: none; width: min(520px, 100vw); height: 100vh; max-height: 100vh; overflow: auto; border: 1px solid var(--line); border-radius: 12px 0 0 12px; background: var(--surface); box-shadow: -8px 0 32px rgba(0, 0, 0, 0.15); transform: translateX(100%); transition: transform 0.3s; }
+      .detail-drawer.open { display: block; transform: translateX(0); }
+
+      .detail-hero { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 14px; padding: 18px; border-bottom: 1px solid var(--line); }
+      .detail-art { min-height: 150px; border: 1px solid var(--line); border-radius: 8px; background: linear-gradient(145deg, var(--asset-color, #6b38d4), #ffffff); }
+      .detail-art img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; }
+      .detail-body { padding: 18px; }
+      .detail-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-bottom: 16px; }
+      .field { border: 1px solid var(--line); border-radius: 8px; background: var(--surface-low); padding: 11px; }
+      .field strong { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      .history { height: 220px; border: 1px solid var(--line); border-radius: 8px; padding: 10px; }
+      .detail-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+
+      .modal { position: fixed; inset: 0; z-index: 80; display: grid; place-items: center; background: rgba(25, 28, 29, 0.4); padding: 20px; }
+      .modal-card { width: min(520px, 100%); border: 1px solid var(--line); border-radius: 8px; background: var(--surface); padding: 20px; box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22); }
+      .modal-card input { width: 100%; height: 44px; border: 1px solid var(--line); border-radius: 8px; margin: 10px 0 14px; padding: 0 12px; }
+      .toast { position: fixed; left: 50%; bottom: 20px; z-index: 100; transform: translateX(-50%); border-radius: 8px; background: #191c1d; color: #fff; padding: 11px 14px; }
+      .hidden { display: none !important; }
+
+      /* 多语言切换按钮样式 */
+      .lang-switch { border: 1px solid var(--line) !important; font-weight: bold !important; color: var(--primary) !important; background: var(--surface) !important; }
 
       @media (max-width: 980px) {
-        .hero,
-        .discover,
-        .series-hero-content,
-        .series-content-grid,
-        .story-block,
-        .packaging-card {
-          grid-template-columns: 1fr;
-        }
-
-        .bento {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .item-card.featured {
-          grid-column: span 2;
-        }
-
-        .side-stack {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .series-side {
-          position: static;
-        }
-
-        .character-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
+        .hero, .discover, .series-hero-content, .series-content-grid, .story-block, .packaging-card { grid-template-columns: 1fr; }
+        .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .item-card.featured { grid-column: span 2; }
+        .side-stack { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .series-side { position: static; }
+        .character-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       }
-
       @media (max-width: 720px) {
-        .shell {
-          width: min(100% - 24px, 1280px);
-        }
-
-        .topbar-inner {
-          align-items: flex-start;
-          flex-direction: column;
-          gap: 10px;
-          padding: 12px 0;
-        }
-
-        .nav {
-          width: 100%;
-          overflow-x: auto;
-          padding-bottom: 2px;
-        }
-
-        .market-head,
-        .detail-hero {
-          grid-template-columns: 1fr;
-        }
-
-        .metrics,
-        .detail-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .metric:nth-child(2) {
-          border-right: 0;
-        }
-
-        .metric:nth-child(1),
-        .metric:nth-child(2) {
-          border-bottom: 1px solid var(--line);
-        }
-
-        .bento,
-        .side-stack,
-        .character-grid,
-        .series-kpis {
-          grid-template-columns: 1fr;
-        }
-
-        .item-card.featured {
-          grid-column: span 1;
-        }
-
-        .series-hero {
-          min-height: 560px;
-        }
-
-        .series-hero::before {
-          inset: 38px 18px auto 18px;
-          width: auto;
-          min-width: 0;
-          height: 250px;
-        }
-
-        .series-hero-content {
-          padding: 24px 18px;
-        }
+        .shell { width: min(100% - 24px, 1280px); }
+        .topbar-inner { align-items: flex-start; flex-direction: column; gap: 10px; padding: 12px 0; }
+        .nav { width: 100%; overflow-x: auto; padding-bottom: 2px; }
+        .market-head, .detail-hero { grid-template-columns: 1fr; }
+        .metrics, .detail-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .bento, .side-stack, .character-grid, .series-kpis { grid-template-columns: 1fr; }
+        .item-card.featured { grid-column: span 1; }
       }
     </style>
   </head>
   <body>
+    <div style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;">
+      <h2>PopTracker Art Toys Price Guide</h2>
+      <p>A comprehensive public tracker and secondary market analytics radar for collectors of designer toy figures and blind box editions. Powered by automated transaction normalization and statistical outlier filtering models.</p>
+    </div>
+
     <header class="topbar">
       <div class="shell topbar-inner">
         <a class="brand" href="#home" aria-label="PopTracker Home">
           <span class="brand-mark">P</span>
           <span>PopTracker</span>
         </a>
-        <nav class="nav" aria-label="主导航">
-          <a class="active" href="#home">潮玩大盘</a>
-          <a href="#discover">神款蹦迪墙</a>
-          <button class="ghost-button" id="refreshButton" type="button">同步一手行情</button>
-          <button class="ghost-button api-missing" id="apiButton" type="button">连线全球流</button>
+        <nav class="nav" aria-label="Main Navigation">
+          <a class="nav-link active" href="#home" data-t="navHome">Market Index</a>
+          <a class="nav-link" href="#discover" data-t="navDiscover">Trending Grid</a>
+          <button class="ghost-button" id="refreshButton" type="button" data-t="btnSync">Fetch Market Trends</button>
+          <button class="ghost-button api-missing" id="apiButton" type="button" data-t="btnConnect">Global API Stream</button>
+          <button class="ghost-button lang-switch" id="langSwitchBtn" type="button">ZH / EN</button>
         </nav>
       </div>
     </header>
@@ -1046,15 +222,14 @@
         <div class="panel market-panel">
           <div class="market-head">
             <div>
-              <p class="eyebrow">Market Dashboard</p>
-              <h1>潮玩圈二级行情风向标</h1>
-              <p class="lead">
-                PopTracker 绝密追踪全球静态成交大数据，经智能去噪降噪模型精密清洗，一秒还原真实的泡泡玛特热门 IP 公允交易身价。
-                无敏感 Token 注入公开网页，带娃友全方位避坑，掌握高阶潮玩理财流向！
+              <p class="eyebrow" data-t="dashboardEyebrow">Market Analytics Dashboard</p>
+              <h1 data-t="mainTitle">Art Toy Secondary Market Financial Indicator</h1>
+              <p class="lead" data-t="mainDesc">
+                PopTracker meticulously captures static completed transactions across global secondary marketplaces. Cleaned using local IQR outlier-cleansing and tail-trimming models, it aggregates fair value signals for trending Pop Mart designer items without exposing private ecosystem credentials.
               </p>
             </div>
             <div class="market-index">
-              <span class="muted">潮玩大盘欧气指数</span>
+              <span class="muted" data-t="idxLabel">Pop Price Index Value</span>
               <strong class="index-value" id="marketIndex">--</strong>
               <span id="marketChange" class="up">--</span>
             </div>
@@ -1062,56 +237,62 @@
           <div class="chart-wrap">
             <canvas id="marketChart"></canvas>
           </div>
-          <div class="metrics" aria-label="大盘指标">
+          <div class="metrics" aria-label="Market Performance Metrics">
             <div class="metric">
-              <span>已收录潮玩款</span>
+              <span data-t="metricCollected">Tracked SKU Assets</span>
               <strong id="metricAssets">--</strong>
             </div>
             <div class="metric">
-              <span>娃友交易标本</span>
+              <span data-t="metricSamples">Verified Sale Records</span>
               <strong id="metricSold">--</strong>
             </div>
             <div class="metric">
-              <span>平均溢价回报率</span>
+              <span data-t="metricRoi">Average Secondary ROI</span>
               <strong id="metricRoi">--</strong>
             </div>
             <div class="metric">
-              <span>烫手顶流 IP</span>
+              <span data-t="metricHotIp">Dominant Trending IP</span>
               <strong id="metricHotIp">--</strong>
             </div>
           </div>
         </div>
 
-        <aside class="panel feed-panel" aria-label="圈内抢手成交动态">
+        <aside class="panel feed-panel" aria-label="Real-time Secondary Transactions">
           <div class="section-head">
             <div>
-              <h2>圈内抢手成交动态</h2>
-              <p>动态反映全球二级市场最新成交流</p>
+              <h2 data-t="feedTitle">Live Marketplace Ticker</h2>
+              <p data-t="feedDesc">Granular stream of completed secondary trading data points</p>
             </div>
           </div>
           <div class="feed-list" id="feedList"></div>
         </aside>
       </section>
 
-      <div class="ad-banner">728 x 90 AdSense Leaderboard</div>
+      <div class="ad-banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8695398658548679"
+             data-ad-format="auto"
+             full-width-responsive="true"></ins>
+      </div>
 
       <section class="discover" id="discover">
         <div>
           <div class="section-head">
             <div>
-              <h2>每日热搜盲盒墙</h2>
-              <p id="resultStatus">正在连接盲盒墙生态...</p>
+              <h2 data-t="gridTitle">Daily Hot Search Blind Box Wall</h2>
+              <p id="resultStatus">Synchronizing asset catalogue mapping...</p>
             </div>
           </div>
           <div class="toolbar">
-            <input class="search" id="searchInput" type="search" placeholder="输入 IP、系列名称或标准款编号搜娃" />
-            <select id="sortSelect" aria-label="排序">
-              <option value="roi">溢价神款优先</option>
-              <option value="change">身价飙升优先</option>
-              <option value="liquidity">疯抢换手优先</option>
-              <option value="risk">平稳避坑优先</option>
+            <input class="search" id="searchInput" type="search" placeholder="Search by IP, Series Name, or standard SKU..." data-t-ph="searchPlaceholder" />
+            <select id="sortSelect" aria-label="Sort Order">
+              <option value="roi" data-t="optRoi">Premium Return (ROI) Tier</option>
+              <option value="change" data-t="optChange">7D Value Surge Priority</option>
+              <option value="liquidity" data-t="optLiquidity">High Volatility Turnovers</option>
+              <option value="risk" data-t="optRisk">Risk Avoidance Stability</option>
             </select>
-            <div class="chips" id="chips" aria-label="IP 筛选"></div>
+            <div class="chips" id="chips" aria-label="IP Filter Chips"></div>
           </div>
           <div class="bento" id="bentoGrid"></div>
         </div>
@@ -1120,25 +301,31 @@
           <div class="mini-panel">
             <div class="section-head">
               <div>
-                <h2>淘娃指南</h2>
-                <p>按主线 IP、全网成交热度和破发/溢价风控精准筛娃</p>
+                <h2 data-t="guideTitle">Collector Strategy Guide</h2>
+                <p data-t="guideDesc">Identify trending chase collectibles and avoid secondary inflated listings</p>
               </div>
             </div>
             <div class="rank-list" id="rankList"></div>
           </div>
-          <div class="ad-banner" style="min-height: 250px; margin: 0">300 x 250 AdSense</div>
+          <div class="ad-banner" style="min-height: 250px; margin: 0">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-8695398658548679"
+                 data-ad-format="auto"
+                 full-width-responsive="true"></ins>
+          </div>
         </aside>
       </section>
     </main>
 
-    <section class="shell series-page hidden-page" id="seriesDetailPage" aria-label="系列详情页">
-      <button class="ghost-button" id="backToHomeButton" type="button" style="margin-bottom: 14px">← 返回盲盒主墙</button>
+    <section class="shell series-page hidden-page" id="seriesDetailPage" aria-label="Series Deep Dive Profile">
+      <button class="ghost-button" id="backToHomeButton" type="button" data-t="btnBack">← Return to Blind Box Grid</button>
       <div id="seriesDetailContent"></div>
     </section>
 
     <div class="drawer-overlay" id="drawerOverlay"></div>
 
-    <section class="detail-drawer" id="detailDrawer" aria-label="单品详情">
+    <section class="detail-drawer" id="detailDrawer" aria-label="Asset Single Variant Profile">
       <div class="detail-hero">
         <div class="detail-art" id="detailArt"></div>
         <div>
@@ -1147,7 +334,7 @@
               <p class="eyebrow" id="detailIp">--</p>
               <h2 id="detailName">--</h2>
             </div>
-            <button class="ghost-button" id="closeDetailButton" type="button">收起</button>
+            <button class="ghost-button" id="closeDetailButton" type="button" data-t="btnCloseDrawer">Dismiss</button>
           </div>
           <p class="lead" id="detailMeta" style="font-size: 14px"></p>
         </div>
@@ -1155,19 +342,19 @@
       <div class="detail-body">
         <div class="detail-grid">
           <div class="field">
-            <span class="field-label">官方发售价</span>
+            <span class="field-label" data-t="lblRetail">Retail Release Price</span>
             <strong id="detailRetail">--</strong>
           </div>
           <div class="field">
-            <span class="field-label">公允市价 (FMV)</span>
+            <span class="field-label" data-t="lblFmv">Fair Market Value (FMV)</span>
             <strong id="detailFmv">--</strong>
           </div>
           <div class="field">
-            <span class="field-label">溢价回报率</span>
+            <span class="field-label" data-t="lblRoi">Calculated ROI</span>
             <strong id="detailRoi">--</strong>
           </div>
           <div class="field">
-            <span class="field-label">破发退热风险</span>
+            <span class="field-label" data-t="lblRisk">Volatility Risk Rating</span>
             <strong id="detailRisk">--</strong>
           </div>
         </div>
@@ -1177,22 +364,22 @@
         <p class="muted" id="detailMethod" style="margin: 12px 0 0"></p>
         <p class="muted" id="detailNote" style="margin: 8px 0 0"></p>
         <div class="detail-actions">
-          <a class="primary-button" id="dealButton" href="#" target="_blank" rel="noopener">全网比价淘娃</a>
-          <button class="ghost-button" id="refreshOneButton" type="button">强制刷新此款身价</button>
+          <a class="primary-button" id="dealButton" href="#" target="_blank" rel="noopener" data-t="btnFindDeals">Find Marketplace Deals on eBay</a>
+          <button class="ghost-button" id="refreshOneButton" type="button" data-t="btnForceRefresh">Force Live Valuation Update</button>
         </div>
       </div>
     </section>
 
-    <div class="modal hidden" id="apiModal" role="dialog" aria-modal="true" aria-label="API 设置">
+    <div class="modal hidden" id="apiModal" role="dialog" aria-modal="true" aria-label="Ecosystem Link Credentials">
       <div class="modal-card">
-        <h2>接入全球成交数据网 (SoldComps)</h2>
-        <p class="muted">
-          线上生产环境推荐通过 GitHub Secrets 自动化流安全注入。本地演示可直接手动临时写入浏览器。
+        <h2 data-t="modalTitle">Link Global Transaction Stream Server (SoldComps)</h2>
+        <p class="muted" data-t="modalDesc">
+          Production actions securely deploy via GitHub Repository Action Secrets. For local sandbox runtime execution, inputs temporarily lock into localized secure storage grids.
         </p>
-        <input id="apiInput" type="password" placeholder="请输入你的 SOLD_COMPS_API_KEY" autocomplete="off" />
+        <input id="apiInput" type="password" placeholder="Provide valid SOLDCOMPS_API_KEY..." />
         <div class="detail-actions">
-          <button class="primary-button" id="saveApiButton" type="button">保存连接</button>
-          <button class="ghost-button" data-close-modal="apiModal" type="button">暂不连线</button>
+          <button class="primary-button" id="saveApiButton" type="button" data-t="btnSaveApi">Bind Connection Channel</button>
+          <button class="ghost-button" data-close-modal="apiModal" type="button" data-t="btnCancelApi">Stay Offline</button>
         </div>
       </div>
     </div>
@@ -1200,20 +387,26 @@
     <div class="toast hidden" id="toast"></div>
 
     <footer>
-      <div class="shell">
-        PopTracker · 潮玩玩家静态多源数据管线 · 圈内身价算法模型：IQR 极端去噪 + 10% 双尾修剪中位数。
+      <div class="shell" style="display: flex; flex-direction: column; gap: 10px;">
+        <div>
+          PopTracker · Secure Collector Pipeline · Algorithmic Risk Shielding Engine: IQR Extreme Outlier Filtering + 10% Trimmed Median Computation Framework.
+        </div>
+        <div style="font-size: 11px; color: var(--muted); line-height: 1.5; border-top: 1px solid var(--line); padding-top: 10px;">
+          <strong>Compliance Disclosure:</strong> This static analytical guide utilizes local storage blocks to preserve user-provided key tokens. Market values identify live/demo source status and do not constitute financial advice. We employ contextual cookie markers via Google AdSense programmatic partners and maintain external outbound affiliate query routes to retail venues including eBay via global developer partner programs. <a href="./privacy.html">Privacy Policy</a> · <a href="./disclaimer.html">Disclaimer</a>
+        </div>
       </div>
     </footer>
 
     <script>
       const CONFIG = {
-        adsenseId: "ca-pub-XXXXXXXXXXXXXXXX",
-        slotLeaderboard: "YYYYYYYYYY",
-        slotSidebar: "ZZZZZZZZZZ",
-        slotInFeed: "WWWWWWWWWW",
+        adsenseId: "ca-pub-8695398658548679",
+        slotLeaderboard: "",
+        slotSidebar: "",
+        slotInFeed: "",
+        soldCompsEndpoint: "https://api.sold-comps.com/v1/scrape",
       };
 
-      // 动态载入 Google AdSense 核心库，彻底解耦硬编码
+      // 异步加载 AdSense 引擎
       (function () {
         const script = document.createElement("script");
         script.async = true;
@@ -1222,12 +415,110 @@
         document.head.appendChild(script);
       })();
 
-      const storageKeys = {
-        api: "SOLD_COMPS_API_KEY",
+      // 多语言地道本地化词汇映射矩阵系统（默认英文，面向欧美与东南亚）
+      const i18n = {
+        en: {
+          navHome: "Market Index", navDiscover: "Trending Grid", btnSync: "Fetch Market Trends", btnConnect: "Global API Stream",
+          connected: "Live Connected", offline: "Offline Demo",
+          dashboardEyebrow: "Market Analytics Dashboard", mainTitle: "Art Toy Secondary Market Financial Indicator",
+          mainDesc: "PopTracker meticulously captures static completed transactions across global secondary marketplaces. Cleaned using local IQR outlier-cleansing and tail-trimming models, it aggregates fair value signals for trending Pop Mart designer items without exposing private ecosystem credentials.",
+          idxLabel: "Pop Price Index Value", metricCollected: "Tracked SKU Assets", metricSamples: "Verified Sale Records",
+          metricRoi: "Average Secondary ROI", metricHotIp: "Dominant Trending IP", feedTitle: "Live Marketplace Ticker",
+          feedDesc: "Granular stream of completed secondary trading data points", gridTitle: "Daily Hot Search Blind Box Wall",
+          searchPlaceholder: "Search by IP, Series Name, or standard SKU...", optRoi: "Premium Return (ROI) Tier",
+          optChange: "7D Value Surge Priority", optLiquidity: "High Volatility Turnovers", optRisk: "Risk Avoidance Stability",
+          guideTitle: "Collector Strategy Guide", guideDesc: "Identify trending chase collectibles and avoid secondary inflated listings",
+          btnBack: "← Return to Blind Box Grid", btnCloseDrawer: "Dismiss", lblRetail: "Retail Release Price",
+          lblFmv: "Fair Market Value (FMV)", lblRoi: "Calculated ROI", lblRisk: "Volatility Risk Rating",
+          btnFindDeals: "Find Marketplace Deals on eBay", btnForceRefresh: "Force Live Valuation Update",
+          modalTitle: "Link Global Transaction Stream Server (SoldComps)",
+          modalDesc: "Production actions securely deploy via GitHub Repository Action Secrets. For local sandbox runtime execution, inputs temporarily lock into localized secure storage grids.",
+          btnSaveApi: "Bind Connection Channel", btnCancelApi: "Stay Offline",
+          statusLoading: "Synchronizing asset catalogue mapping...",
+          statusLoaded: "Secondary data channels locked on {count} active asset SKUs",
+          rankHeader: "Top Premium Item #{index}", minutesAgo: " mins ago via Auction · ",
+          hotBadge: "🔥 24h Hot Alert", deepBadge: "⏳ 7d Valuation",
+          chaserRarity: "Secret Chase Figure", regularRarity: "Standard Regular Figure",
+          methodologyInfo: "Risk Strategy: {method} · Extracted from {sold} independent collector matchings · Synced at {date}",
+          toastMissingKey: "Please attach your token key within the 'Global API Stream' module first.",
+          toastSyncing: "Traversing cross-border clearing venues for authentic historical sales...",
+          toastSuccess: "Ecosystem tracking verified! Fair Market Valuation compiled.",
+          toastFailed: "Gateway exception. Verify token quota limits or credential status.",
+          errNoData: "Data pipeline detached.", errNoDataSub: "Execute localized scripts 'python3 scripts/fetch_and_clean.py' to pipe local repository outputs.",
+          storyEra: "✨ {year} Design Era", insTitle: "Global Frontiers", insDesc: "Secondary focus capital is presently consolidating into {hotIp}. The most prominent yield collectible is {name}, tracking at an aggregate benchmark of {price}.",
+          specIp: "Primary IP Domain", specSeries: "Exclusive Series Title", specRetail: "MSRP Standard Price", specFreq: "Radar Tracking Cycle", specMethod: "Shield Valuation Engine",
+          methodFast: "24-Hour Velocity Monitor", methodSlow: "7-Day Consolidated Deep Dive", methodBase: "IQR Outlier Cleansing Model",
+          designTitle: "Blind Box Inspiration & Toy Soul", releaseTitle: "Official Release & Collectible Specs", guideTitleSide: "Secondary Avoid Inflated Guide"
+        },
+        zh: {
+          navHome: "潮玩大盘", navDiscover: "神款蹦迪墙", btnSync: "同步一手行情", btnConnect: "连线全球流",
+          connected: "全球连线中", offline: "离线演示版",
+          dashboardEyebrow: "Market Dashboard", mainTitle: "潮玩圈二级行情风向标",
+          mainDesc: "PopTracker 绝密追踪全球静态成交大数据，经智能去噪降噪模型精密清洗，一秒还原真实的泡泡玛特热门 IP 公允交易身价。无敏感 Token 注入公开网页，带娃友全方位避坑，掌握高阶潮玩理财流向！",
+          idxLabel: "潮玩大盘欧气指数", metricCollected: "已收录潮玩款", metricSamples: "娃友交易标本",
+          metricRoi: "平均溢价回报率", metricHotIp: "烫手顶流 IP", feedTitle: "圈内抢手成交动态",
+          feedDesc: "动态反映全球二级市场最新成交流", gridTitle: "每日热搜盲盒墙",
+          searchPlaceholder: "输入 IP、系列名称或标准款编号搜娃...", optRoi: "溢价神款优先",
+          optChange: "身价飙升优先", optLiquidity: "疯抢换手优先", optRisk: "平稳避坑优先",
+          guideTitle: "淘娃指南", guideDesc: "按主线 IP、全网成交热度和破发/溢价风控精准筛娃",
+          btnBack: "← 返回盲盒主墙", btnCloseDrawer: "收起", lblRetail: "官方发售价",
+          lblFmv: "公允市价 (FMV)", lblRoi: "溢价回报率", lblRisk: "破发退热风险",
+          btnFindDeals: "去 eBay 全球集市捡漏", btnForceRefresh: "强制刷新此款身价",
+          modalTitle: "接入全球成交数据网 (SoldComps)",
+          modalDesc: "线上生产环境推荐通过 GitHub Secrets 自动化流安全注入。本地演示可直接手动临时写入浏览器。",
+          btnSaveApi: "保存连接", btnCancelApi: "暂不连线",
+          statusLoading: "正在连接盲盒墙生态...",
+          statusLoaded: "雷达已成功锁定 {count} 个行情标的",
+          rankHeader: "顶流物语 #{index}", minutesAgo: " 分钟前爆单 · ",
+          hotBadge: "🔥 24h烫手极速情报", deepBadge: "⏳ 7天深度行情",
+          chaserRarity: "欧气大爆发隐藏款", regularRarity: "常规常驻普通款",
+          methodologyInfo: "风控策略：{method} · 本轮剔除噪声后共采纳 {sold} 笔娃友真成交 · 更新于 {date}",
+          toastMissingKey: "请先在右上角『连线全球流』中配置密钥凭证",
+          toastSyncing: "正在越洋捕捉最新的成交样本流...",
+          toastSuccess: "恭喜娃友，该款盲盒最新的真实身价已全网核算完毕！",
+          toastFailed: "捕获超时，请检查连线 Token 的额度及有效性",
+          errNoData: "情报连接暂时中断", errNoDataSub: "请先通过后台运行 python3 scripts/fetch_and_clean.py 吐出静态盲盒仓储。",
+          storyEra: "✨ {year} 荣耀纪元", insTitle: "圈内最前线", insDesc: "当前收藏热度正疯狂集聚在 {hotIp}。全网最傲视群雄的潮玩为 {name}，目前圈内参考基准价稳坐 {price}。",
+          specIp: "主线所属 IP", specSeries: "限定系列名", specRetail: "官方参考抽盒价", specFreq: "行情追踪雷达频率", specMethod: "防斩杀估值风控",
+          methodFast: "24小时极速透视", methodSlow: "7天深度沉淀", methodBase: "双尾修剪中位数模型",
+          designTitle: "盲盒灵感与潮玩灵魂", releaseTitle: "官方发售与收藏规格", guideTitleSide: "娃友行情避坑指南"
+        }
       };
 
+      // 建立多语言全局运行时状态，检测浏览器系统设置，默认设定为英文
+      let currentLang = localStorage.getItem("POP_LANG") || "en";
+
+      function applyLanguage() {
+        document.documentElement.lang = currentLang;
+        const dict = i18n[currentLang];
+
+        // 渲染文本节点
+        document.querySelectorAll("[data-t]").forEach(el => {
+          const key = el.dataset.t;
+          if (dict[key]) el.textContent = dict[key];
+        });
+
+        // 渲染属性节点值
+        document.querySelectorAll("[data-t-ph]").forEach(el => {
+          const key = el.dataset.tPh;
+          if (dict[key]) el.placeholder = dict[key];
+        });
+
+        document.getElementById("pageTitle").textContent = currentLang === "zh"
+          ? "PopTracker | 泡泡玛特潮玩欧气身价与圈内行情雷达"
+          : "PopTracker | Designer Toy Secondary Market Price Guide & Radar";
+
+        if (state.items.length > 0) render();
+      }
+
+      const storageKeys = { api: "SOLDCOMPS_API_KEY", legacyApi: "SOLD_COMPS_API_KEY" };
+      const savedApiKey = localStorage.getItem(storageKeys.api) || localStorage.getItem(storageKeys.legacyApi) || "";
+      if (savedApiKey && !localStorage.getItem(storageKeys.api)) {
+        localStorage.setItem(storageKeys.api, savedApiKey);
+        localStorage.removeItem(storageKeys.legacyApi);
+      }
       const state = {
-        apiKey: localStorage.getItem(storageKeys.api) || "",
+        apiKey: savedApiKey,
         chart: null,
         detailChart: null,
         currentIp: "all",
@@ -1239,38 +530,51 @@
       const fmt = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
       const intFmt = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
 
-      function parseChange(value) {
-        return Number(String(value || "0").replace("%", "")) || 0;
-      }
-
+      function parseChange(value) { return Number(String(value || "0").replace("%", "")) || 0; }
       function normalizePrice(value) {
         if (typeof value === "number") return value;
-        const cleaned = String(value || "").replace(/[^0-9.]/g, "");
-        return Number(cleaned) || 0;
+        return Number(String(value || "").replace(/[^0-9.]/g, "")) || 0;
+      }
+
+      function listingPrice(row) {
+        return normalizePrice(row.priceWithShipping || row.soldPrice || row.computedPrice || row.price || row.value)
+          + normalizePrice(row.priceWithShipping ? 0 : (row.shippingPrice || row.shipping || 0));
+      }
+
+      function normalizeHistory(history) {
+        if (!Array.isArray(history)) return [];
+        return history
+          .map((point) => ({ date: String(point.date || ""), avg: Number(point.avg || point.price || point.value || 0) }))
+          .filter((point) => point.date && point.avg > 0)
+          .sort((a, b) => a.date.localeCompare(b.date));
+      }
+
+      function lastHistoryValue(item) {
+        const history = normalizeHistory(item.priceHistory);
+        return history.length ? history[history.length - 1].avg : item.fairMarketValue;
       }
 
       function trimmedMedian(values, trimRatio = 0.1) {
-        const prices = values.filter((price) => price > 1).sort((a, b) => a - b);
+        const prices = values.filter((p) => p > 1).sort((a, b) => a - b);
         if (!prices.length) return 0;
         const trimCount = Math.floor(prices.length * trimRatio);
         const trimmed = prices.slice(trimCount, prices.length - trimCount || prices.length);
         const target = trimmed.length ? trimmed : prices;
-        const middle = Math.floor(target.length / 2);
-        return target.length % 2 ? target[middle] : (target[middle - 1] + target[middle]) / 2;
+        return target.length % 2 ? target[Math.floor(target.length / 2)] : (target[Math.floor(target.length / 2) - 1] + target[Math.floor(target.length / 2)]) / 2;
       }
 
       function localName(item) {
-        return item.name_zh || item.name_en || item.series || item.sku;
+        return currentLang === "zh" ? (item.name_zh || item.name_en) : (item.name_en || item.name_zh);
+      }
+
+      function dataSourceLabel(item) {
+        if (item.dataSource === "live") return currentLang === "zh" ? "真实接口" : "Live API";
+        return currentLang === "zh" ? "演示数据" : "Demo data";
       }
 
       function imageMarkup(item, extraClass = "") {
         if (!item.image) return "";
         return `<img src="${item.image}" alt="${localName(item)}" class="${extraClass}" loading="lazy" decoding="async" onload="this.dataset.loaded='true'" onerror="this.remove()">`;
-      }
-
-      function characterImageMarkup(character) {
-        if (!character.image) return "";
-        return `<img src="${character.image}" alt="${character.name}" loading="lazy" decoding="async" onload="this.dataset.loaded='true'" onerror="this.remove()">`;
       }
 
       function normalizeItem(raw) {
@@ -1280,18 +584,15 @@
           ...raw,
           color: raw.color || "#6b38d4",
           retailPrice: retail,
-          avgSoldPrice: Number(raw.avgSoldPrice || fmv || 0),
-          medianSoldPrice: Number(raw.medianSoldPrice || fmv || 0),
+          avgSoldPrice: fmv,
+          medianSoldPrice: fmv,
           fairMarketValue: fmv,
-          roi:
-            raw.roi !== undefined
-              ? Number(raw.roi)
-              : retail
-                ? Number((((fmv - retail) / retail) * 100).toFixed(1))
-                : 0,
+          roi: raw.roi !== undefined ? Number(raw.roi) : (retail ? Number((((fmv - retail) / retail) * 100).toFixed(1)) : 0),
           riskScore: Number(raw.riskScore || 50),
           totalSold: Number(raw.totalSold || 0),
           priceChange7d: raw.priceChange7d || "+0.0%",
+          dataSource: raw.dataSource || raw.marketData?.dataSource || "demo",
+          priceHistory: normalizeHistory(raw.priceHistory),
           lastUpdated: raw.lastUpdated || new Date().toISOString().slice(0, 10),
         };
       }
@@ -1314,7 +615,8 @@
 
       function updateApiButton() {
         const button = document.getElementById("apiButton");
-        button.textContent = state.apiKey ? "全球连线中" : "离线演示版";
+        const dict = i18n[currentLang];
+        button.textContent = state.apiKey ? dict.connected : dict.offline;
         button.classList.toggle("api-ready", Boolean(state.apiKey));
         button.classList.toggle("api-missing", !state.apiKey);
       }
@@ -1322,118 +624,118 @@
       function marketStats() {
         const totalFmv = state.items.reduce((sum, item) => sum + item.fairMarketValue, 0);
         const totalSold = state.items.reduce((sum, item) => sum + item.totalSold, 0);
-        const avgRoi = state.items.length
-          ? state.items.reduce((sum, item) => sum + item.roi, 0) / state.items.length
-          : 0;
-        const byIp = state.items.reduce((acc, item) => {
-          acc[item.ip] = (acc[item.ip] || 0) + item.totalSold;
-          return acc;
-        }, {});
+        const avgRoi = state.items.length ? state.items.reduce((sum, item) => sum + item.roi, 0) / state.items.length : 0;
+        const byIp = state.items.reduce((acc, item) => { acc[item.ip] = (acc[item.ip] || 0) + item.totalSold; return acc; }, {});
         const hotIp = Object.entries(byIp).sort((a, b) => b[1] - a[1])[0]?.[0] || "--";
-        const avgChange = state.items.length
-          ? state.items.reduce((sum, item) => sum + parseChange(item.priceChange7d), 0) / state.items.length
-          : 0;
+        const avgChange = state.items.length ? state.items.reduce((sum, item) => sum + parseChange(item.priceChange7d), 0) / state.items.length : 0;
         return { totalFmv, totalSold, avgRoi, hotIp, avgChange };
+      }
+
+      function valueOnOrBefore(history, date) {
+        let value = 0;
+        for (const point of history) {
+          if (point.date <= date) value = point.avg;
+          else break;
+        }
+        return value;
+      }
+
+      function marketIndexSeries() {
+        const histories = state.items.map((item) => normalizeHistory(item.priceHistory));
+        const dates = Array.from(new Set(histories.flatMap((history) => history.map((point) => point.date)))).sort().slice(-30);
+        if (!dates.length) {
+          return { labels: ["Now"], data: [0] };
+        }
+        const totals = dates.map((date) => histories.reduce((sum, history, index) => {
+          return sum + (valueOnOrBefore(history, date) || state.items[index].fairMarketValue || 0);
+        }, 0));
+        const base = totals.find((value) => value > 0) || 1;
+        return {
+          labels: dates.map((date) => date.slice(5)),
+          data: totals.map((value) => Math.round((value / base) * 10000)),
+        };
       }
 
       function renderMarket() {
         const stats = marketStats();
         const index = Math.round(stats.totalFmv * 38 + stats.totalSold * 7 + Math.max(stats.avgRoi, 0) * 12);
         document.getElementById("marketIndex").textContent = intFmt.format(index || 0);
-        document.getElementById("marketChange").textContent = `${stats.avgChange >= 0 ? "涨" : "跌"}${stats.avgChange.toFixed(1)}%`;
+
+        const dict = i18n[currentLang];
+        const changeLabel = currentLang === "zh" ? `${stats.avgChange >= 0 ? "涨" : "跌"}${Math.abs(stats.avgChange).toFixed(1)}%` : `${stats.avgChange >= 0 ? "▲" : "▼"} ${Math.abs(stats.avgChange).toFixed(1)}%`;
+        document.getElementById("marketChange").textContent = changeLabel;
         document.getElementById("marketChange").className = stats.avgChange >= 0 ? "up" : "down";
+
         document.getElementById("metricAssets").textContent = state.items.length;
         document.getElementById("metricSold").textContent = intFmt.format(stats.totalSold);
         document.getElementById("metricRoi").textContent = `${stats.avgRoi.toFixed(0)}%`;
         document.getElementById("metricHotIp").textContent = stats.hotIp;
 
-        const labels = Array.from({ length: 30 }, (_, index) => `D-${29 - index}`);
-        const base = index || 1000;
-        const data = labels.map((_, index) =>
-          Math.round(base * (0.88 + index * 0.004 + Math.sin(index / 3) * 0.018 + stats.avgChange / 800)),
-        );
+        const { labels, data } = marketIndexSeries();
+
         if (state.chart) state.chart.destroy();
         state.chart = new Chart(document.getElementById("marketChart"), {
           type: "line",
           data: {
             labels,
-            datasets: [
-              {
-                data,
-                borderColor: "#6b38d4",
-                backgroundColor: "rgba(107, 56, 212, 0.12)",
-                borderWidth: 2,
-                pointRadius: 0,
-                tension: 0.32,
-                fill: true,
-              },
-            ],
+            datasets: [{ data, borderColor: "#6b38d4", backgroundColor: "rgba(107, 56, 212, 0.06)", borderWidth: 2, pointRadius: 0, tension: 0.32, fill: true }],
           },
           options: {
             responsive: true,
             maintainAspectRatio: false,
             plugins: { legend: { display: false } },
-            scales: {
-              x: { grid: { display: false }, ticks: { color: "#747b86", maxTicksLimit: 6 } },
-              y: { grid: { color: "rgba(25, 28, 29, 0.08)" }, ticks: { color: "#747b86" } },
-            },
+            scales: { x: { grid: { display: false }, ticks: { color: "#747b86", maxTicksLimit: 6 } }, y: { grid: { color: "rgba(25, 28, 29, 0.04)" }, ticks: { color: "#747b86" } } },
           },
         });
       }
 
       function renderFeed() {
-        const feed = [...state.items]
-          .sort((a, b) => b.totalSold + parseChange(b.priceChange7d) - (a.totalSold + parseChange(a.priceChange7d)))
-          .slice(0, 7);
+        const feed = [...state.items].sort((a, b) => b.totalSold - a.totalSold).slice(0, 7);
+        const dict = i18n[currentLang];
         document.getElementById("feedList").innerHTML = feed
           .map((item, index) => {
-            const price = item.fairMarketValue * (0.97 + (index % 4) * 0.015);
+            const price = lastHistoryValue(item);
             return `
               <button class="feed-item" type="button" data-sku="${item.sku}">
                 <span class="avatar" style="--asset-color:${item.color}"></span>
                 <span>
                   <span class="feed-name">${localName(item)}</span>
-                  <span class="feed-meta">${index + 3} 分钟前爆单 · ${item.ip}</span>
+                  <span class="feed-meta">${index + 2}${dict.minutesAgo}${item.ip}</span>
                 </span>
                 <span class="feed-price">${fmt.format(price)}</span>
               </button>
             `;
           })
           .join("");
-        document.querySelectorAll("#feedList [data-sku]").forEach((button) => {
-          button.addEventListener("click", () => navigateToSeries(button.dataset.sku));
-        });
+        document.querySelectorAll("#feedList [data-sku]").forEach((b) => b.addEventListener("click", () => navigateToSeries(b.dataset.sku)));
       }
 
       function renderChips() {
         const ips = ["all"].concat(Array.from(new Set(state.items.map((item) => item.ip))).sort());
         document.getElementById("chips").innerHTML = ips
           .map((ip) => {
-            const label = ip === "all" ? "全部顶流 IP" : ip;
+            const label = ip === "all" ? (currentLang === "zh" ? "全部顶流 IP" : "All Master IPs") : ip;
             return `<button class="chip ${state.currentIp === ip ? "active" : ""}" type="button" data-ip="${ip}">${label}</button>`;
           })
           .join("");
-        document.querySelectorAll("[data-ip]").forEach((button) => {
-          button.addEventListener("click", () => {
-            state.currentIp = button.dataset.ip;
-            render();
-          });
-        });
+        document.querySelectorAll("[data-ip]").forEach((b) => b.addEventListener("click", () => { state.currentIp = b.dataset.ip; render(); }));
       }
 
       function renderCards() {
         const items = filteredItems();
-        document.getElementById("resultStatus").textContent = `雷达已成功锁定 ${items.length} 个行情标的`;
+        const dict = i18n[currentLang];
+        document.getElementById("resultStatus").textContent = dict.statusLoaded.replace("{count}", items.length);
+
         if (!items.length) {
-          document.getElementById("bentoGrid").innerHTML = `<div class="mini-panel">呜呜，没有匹配到这款盲盒</div>`;
+          document.getElementById("bentoGrid").innerHTML = `<div class="mini-panel">${currentLang === 'zh' ? '暂无资产数据' : 'No assets found.'}</div>`;
           return;
         }
+
         const top = items[0];
         const insight = marketStats();
-
         let cardsHtmlArray = items.map((item, index) => {
           const change = parseChange(item.priceChange7d);
-          const badge = item.refreshTier === "hot" ? "🔥 24h烫手极速情报" : "⏳ 7天深度行情";
+          const badge = item.refreshTier === "hot" ? dict.hotBadge : dict.deepBadge;
           return `
             <button class="item-card ${index === 0 ? "featured" : ""}" type="button" data-sku="${item.sku}" style="--asset-color:${item.color}">
               <div class="toy-art">
@@ -1446,269 +748,167 @@
                   <p class="muted">${item.ip} · ${item.series}</p>
                 </div>
                 <div class="card-grid">
-                  <span><span class="card-label">公允身价</span><strong class="card-value">${fmt.format(item.fairMarketValue)}</strong></span>
-                  <span><span class="card-label">溢价回报</span><strong class="card-value">${item.roi >= 0 ? "+" : ""}${item.roi.toFixed(0)}%</strong></span>
-                  <span><span class="card-label">7D浮动</span><strong class="card-value ${change >= 0 ? "up" : "down"}">${item.priceChange7d}</strong></span>
+                  <span><span class="card-label">${dict.lblFmv}</span><strong class="card-value">${fmt.format(item.fairMarketValue)}</strong></span>
+                  <span><span class="card-label">${dict.lblRoi}</span><strong class="card-value">${item.roi >= 0 ? "+" : ""}${item.roi.toFixed(0)}%</strong></span>
+                  <span><span class="card-label">7D</span><strong class="card-value ${change >= 0 ? "up" : "down"}">${item.priceChange7d}</strong></span>
+                  <span><span class="card-label">Source</span><strong class="card-value">${dataSourceLabel(item)}</strong></span>
                 </div>
               </div>
             </button>
           `;
         });
 
-        cardsHtmlArray.splice(
-          Math.min(2, cardsHtmlArray.length),
-          0,
-          `
+        // 嵌入深度原生商业洞察卡片
+        const insightText = dict.insDesc.replace("{hotIp}", insight.hotIp).replace("{name}", localName(top)).replace("{price}", fmt.format(top.fairMarketValue));
+        cardsHtmlArray.splice(Math.min(2, cardsHtmlArray.length), 0, `
           <article class="insight-card">
             <div>
-              <span class="card-label">圈内最前线</span>
-              <h3>当前收藏热度正疯狂集聚在 ${insight.hotIp}</h3>
-              <p class="muted">全网最傲视群雄的潮玩为 ${localName(top)}，目前圈内参考基准价稳坐 ${fmt.format(top.fairMarketValue)}。</p>
+              <span class="card-label">${dict.insTitle}</span>
+              <h3>${insightText}</h3>
             </div>
-            <div class="card-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); border-color: rgba(255,255,255,.2)">
-              <span><span class="card-label">去噪有效样本</span><strong>${intFmt.format(insight.totalSold)} 笔</strong></span>
-              <span><span class="card-label">平均大盘 ROI</span><strong>${insight.avgRoi.toFixed(0)}%</strong></span>
+            <div class="card-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); border-color: rgba(255,255,255,.15)">
+              <span><span class="card-label">${dict.metricSamples}</span><strong>${intFmt.format(insight.totalSold)}</strong></span>
+              <span><span class="card-label">${dict.metricRoi}</span><strong>${insight.avgRoi.toFixed(0)}%</strong></span>
             </div>
           </article>
-          `
-        );
+        `);
 
-        if (cardsHtmlArray.length >= 5) {
+        // 插入 AdSense 流内（In-Feed）广告广告，每 5 款潮玩动态流入一单元
+        if (cardsHtmlArray.length >= 5 && CONFIG.slotInFeed) {
           const nativeAdCode = `
             <div class="item-card adsense-native-card" style="padding:15px; background:var(--surface-low); min-height:340px; display:flex; flex-direction:column; justify-content:center;">
-              <ins class="adsbygoogle"
-                   style="display:block; text-align:center;"
-                   data-ad-layout="in-article"
-                   data-ad-format="fluid"
-                   data-ad-client="${CONFIG.adsenseId}"
-                   data-ad-slot="${CONFIG.slotInFeed}"></ins>
+              <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="${CONFIG.adsenseId}" data-ad-slot="${CONFIG.slotInFeed}"></ins>
             </div>
           `;
           cardsHtmlArray.splice(4, 0, nativeAdCode);
-          if (cardsHtmlArray.length >= 10) {
-            cardsHtmlArray.splice(9, 0, nativeAdCode);
-          }
         }
 
         document.getElementById("bentoGrid").innerHTML = cardsHtmlArray.join("");
+        document.querySelectorAll("#bentoGrid [data-sku]").forEach((b) => b.addEventListener("click", () => navigateToSeries(b.dataset.sku)));
 
-        document.querySelectorAll("#bentoGrid [data-sku]").forEach((button) => {
-          button.addEventListener("click", () => navigateToSeries(button.dataset.sku));
-        });
-
-        try {
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        } catch (e) {
-          console.log("AdSense fluid push bypassed.");
-        }
+        try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {}
       }
 
       function renderRank() {
+        const dict = i18n[currentLang];
         document.getElementById("rankList").innerHTML = [...state.items]
           .sort((a, b) => b.roi - a.roi)
           .slice(0, 5)
-          .map(
-            (item, index) => `
+          .map((item, index) => `
               <button class="rank-row" type="button" data-sku="${item.sku}">
-                <span class="badge">顶流物语 #${index + 1}</span>
+                <span class="badge" style="font-size:10px;">${dict.rankHeader.replace("{index}", index + 1)}</span>
                 <strong>${localName(item)}</strong>
                 <span class="${item.roi >= 0 ? "up" : "down"}">${item.roi.toFixed(0)}%</span>
               </button>
-            `,
-          )
-          .join("");
-        document.querySelectorAll("#rankList [data-sku]").forEach((button) => {
-          button.addEventListener("click", () => navigateToSeries(button.dataset.sku));
-        });
+            `).join("");
+        document.querySelectorAll("#rankList [data-sku]").forEach((b) => b.addEventListener("click", () => navigateToSeries(b.dataset.sku)));
       }
 
-      function navigateToSeries(sku) {
-        window.location.hash = `series/${encodeURIComponent(sku)}`;
-      }
-
+      function navigateToSeries(sku) { window.location.hash = `series/${encodeURIComponent(sku)}`; }
       function showAppPage() {
         document.getElementById("appMain").classList.remove("hidden-page");
         document.getElementById("seriesDetailPage").classList.add("hidden-page");
         document.getElementById("detailDrawer").classList.remove("open");
       }
 
-      function seriesStory(item) {
-        return item.story;
-      }
-
-      function seriesCharacters(item) {
-        if (item.characters && Array.isArray(item.characters)) {
-          return item.characters;
-        }
-        const base = [
-          ["核心欧气款", "常规常驻"],
-          ["夜幕潮酷款", "常规常驻"],
-          ["甜梦多巴胺", "常规常驻"],
-          ["奇幻巡游款", "常规常驻"],
-          ["独白艺术款", "常规常驻"],
-          ["至尊大隐藏", "欧气大爆发"],
-          ["节日限定限定", "限定主题"],
-          ["高光馆藏级", "重磅绝版"]
-        ];
-        return base.map(([name, rarity], index) => ({
-          name: `${item.ip.split(" ")[0]} ${name}`,
-          rarity,
-          color: index === 5 ? "#191c1d" : item.color,
-        }));
-      }
-
       function renderSeriesDetail(item) {
-        const story = seriesStory(item);
-        const characters = seriesCharacters(item);
+        const dict = i18n[currentLang];
+        const story = item.story || { year: "2026", tagline: "Premium Collectible", intro: "No metadata loaded.", philosophy: "" };
         const change = parseChange(item.priceChange7d);
         const content = document.getElementById("seriesDetailContent");
         const page = document.getElementById("seriesDetailPage");
+
         page.style.setProperty("--asset-color", item.color);
+
+        // 动态注入角色名本土化映射机制
+        const mockCharacters = (item.characters || []).map((c, i) => ({
+          name: currentLang === 'zh' ? (c.name_zh || c.name || `款式 ${i+1}`) : (c.name_en || c.name || `Variant ${i+1}`),
+          rarity: i === 5 ? dict.chaserRarity : dict.regularRarity,
+          color: item.color
+        }));
+
         content.innerHTML = `
           <section class="series-hero">
             ${imageMarkup(item)}
             <div class="series-hero-content">
               <div>
-                <span class="badge">✨ ${story.year} 荣耀纪元</span>
+                <span class="badge">${dict.storyEra.replace("{year}", story.year)}</span>
                 <h1>${localName(item)}</h1>
-                <p class="lead">${story.tagline}</p>
+                <p class="lead">${currentLang === 'zh' ? (story.tagline_zh || story.tagline) : (story.tagline_en || story.tagline)}</p>
                 <div class="detail-actions">
-                  <a class="primary-button" href="${item.affiliateUrl || "#"}" target="_blank" rel="noopener">飞跃 eBay 全球集市淘娃 (~${fmt.format(item.fairMarketValue)})</a>
-                  <button class="ghost-button" type="button" data-open-quote="${item.sku}">身价快照</button>
+                  <a class="primary-button" href="${item.affiliateUrl || "#"}" target="_blank" rel="noopener">${dict.btnFindDeals} (~${fmt.format(item.fairMarketValue)})</a>
+                  <button class="ghost-button" type="button" data-open-quote="${item.sku}">${dict.lblFmv}</button>
                 </div>
               </div>
               <div class="series-kpis">
-                <div class="field"><span class="field-label">当前身价</span><strong>${fmt.format(item.fairMarketValue)}</strong></div>
-                <div class="field"><span class="field-label">近7日涨跌</span><strong class="${change >= 0 ? "up" : "down"}">${item.priceChange7d}</strong></div>
-                <div class="field"><span class="field-label">溢价空间</span><strong>${item.roi >= 0 ? "+" : ""}${item.roi.toFixed(0)}%</strong></div>
-                <div class="field"><span class="field-label">入库凭证</span><strong>${intFmt.format(item.totalSold)} 笔</strong></div>
+                <div class="field"><span class="field-label">${dict.lblFmv}</span><strong>${fmt.format(item.fairMarketValue)}</strong></div>
+                <div class="field"><span class="field-label">7D</span><strong class="${change >= 0 ? "up" : "down"}">${item.priceChange7d}</strong></div>
+                <div class="field"><span class="field-label">${dict.lblRoi}</span><strong>${item.roi >= 0 ? "+" : ""}${item.roi.toFixed(0)}%</strong></div>
+                <div class="field"><span class="field-label">${dict.metricSamples}</span><strong>${intFmt.format(item.totalSold)}</strong></div>
               </div>
             </div>
           </section>
 
-          <div class="ad-banner">728 x 90 AdSense Leaderboard</div>
+          <div class="ad-banner">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="${CONFIG.adsenseId}" data-ad-format="auto" full-width-responsive="true"></ins>
+          </div>
 
           <div class="series-content-grid">
             <div>
               <section class="panel story-block">
-                <div class="story-image" aria-label="系列主视觉"></div>
+                <div class="story-image"></div>
                 <div class="detail-body">
-                  <p class="eyebrow">Design Story</p>
-                  <h2>盲盒灵感与潮玩灵魂</h2>
-                  <p class="series-copy">${story.intro}</p>
-                  <p class="series-copy">${story.philosophy}</p>
+                  <p class="eyebrow">Design Narrative</p>
+                  <h2>${dict.designTitle}</h2>
+                  <p class="series-copy">${currentLang === 'zh' ? (story.intro_zh || story.intro) : (story.intro_en || story.intro)}</p>
                 </div>
               </section>
 
               <section class="series-section">
-                <div class="section-head">
-                  <div>
-                    <h2>全员角色档案图鉴</h2>
-                    <p>为你精细拆解欧气大隐藏、绝版主题限定及高光核心款</p>
-                  </div>
-                  <span class="muted">官方授权珍稀图鉴展示</span>
-                </div>
+                <h2>${dict.gridTitle.replace('每日热搜','')}</h2>
                 <div class="character-grid">
-                  ${characters
-                    .map(
-                      (character) => `
-                        <article class="character-card">
-                          <div class="character-art" style="--asset-color:${character.color}">${characterImageMarkup(character)}</div>
-                          <div class="character-body">
-                            <strong>${character.name}</strong>
-                            <p class="muted" style="margin: 6px 0 0">${character.rarity}</p>
-                          </div>
-                        </article>
-                      `,
-                    )
-                    .join("")}
-                </div>
-              </section>
-
-              <section class="panel detail-body series-section">
-                <div class="packaging-card">
-                  <div class="packaging-image" aria-label="包装设计"></div>
-                  <div>
-                    <p class="eyebrow">Packaging & Release</p>
-                    <h2>官方发售与收藏规格</h2>
-                    <ul class="spec-list">
-                      <li><span class="muted">主线所属 IP</span><strong>${item.ip}</strong></li>
-                      <li><span class="muted">限定系列名</span><strong>${item.series}</strong></li>
-                      <li><span class="muted">官方参考抽盒价</span><strong>${fmt.format(item.retailPrice)}</strong></li>
-                      <li><span class="muted">行情追踪雷达频率</span><strong>${item.refreshTier === "hot" ? "24小时极速透视" : "7天深度沉淀"}</strong></li>
-                      <li><span class="muted">防斩杀估值风控</span><strong>${item.valuationMethod || "极端去噪修剪中位数模型"}</strong></li>
-                    </ul>
-                  </div>
+                  ${mockCharacters.map(c => `
+                    <article class="character-card">
+                      <div class="character-art" style="--asset-color:${c.color}"></div>
+                      <div class="character-body">
+                        <strong>${c.name}</strong>
+                        <p class="muted" style="margin:6px 0 0">${c.rarity}</p>
+                      </div>
+                    </article>
+                  `).join("")}
                 </div>
               </section>
             </div>
 
             <aside class="series-side">
               <div class="mini-panel">
-                <p class="eyebrow">Market Methodology</p>
-                <h2>娃友行情避坑指南</h2>
-                <p class="series-copy">${story.detail || "本品估值采用全网防空卡、防预售、防假货噪声模型自动生成，真实还原潮玩资产的真实市价，绝无中间商注水。"}</p>
-                <div class="detail-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 0">
-                  <div class="field"><span class="field-label">溢价退热风险</span><strong>${item.riskScore}/100</strong></div>
-                  <div class="field"><span class="field-label">数字身份证</span><strong>${item.sku}</strong></div>
-                </div>
+                <h2>${dict.guideTitleSide}</h2>
+                <ul class="spec-list">
+                  <li><span class="muted">${dict.specIp}</span><strong>${item.ip}</strong></li>
+                  <li><span class="muted">${dict.specSeries}</span><strong>${item.series}</strong></li>
+                  <li><span class="muted">${dict.specRetail}</span><strong>${fmt.format(item.retailPrice)}</strong></li>
+                  <li><span class="muted">Data Source</span><strong>${dataSourceLabel(item)}</strong></li>
+                  <li><span class="muted">${dict.specFreq}</span><strong>${item.refreshTier === "hot" ? dict.methodFast : dict.methodSlow}</strong></li>
+                  <li><span class="muted">${dict.specMethod}</span><strong>${dict.methodBase}</strong></li>
+                </ul>
               </div>
-              <div class="ad-banner" style="min-height: 600px; margin: 0">300 x 600 AdSense</div>
             </aside>
           </div>
         `;
         content.querySelector("[data-open-quote]").addEventListener("click", () => loadDetail(item.sku));
-        updateProductSchema(item);
+        try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {}
       }
 
       function route() {
         if (!state.items.length) return;
         const match = window.location.hash.match(/^#series\/(.+)$/);
-        if (!match) {
-          showAppPage();
-          return;
-        }
+        if (!match) { showAppPage(); return; }
         const sku = decodeURIComponent(match[1]);
-        const item = state.items.find((asset) => asset.sku === sku);
-        if (!item) {
-          showAppPage();
-          showToast("报告娃友，情报库暂时找不到该系列");
-          return;
-        }
+        const item = state.items.find((a) => a.sku === sku);
+        if (!item) { showAppPage(); return; }
         document.getElementById("appMain").classList.add("hidden-page");
         document.getElementById("seriesDetailPage").classList.remove("hidden-page");
-        document.getElementById("detailDrawer").classList.remove("open");
         renderSeriesDetail(item);
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-
-      function productSchema(item) {
-        return {
-          "@context": "https://schema.org",
-          "@type": "Product",
-          name: localName(item),
-          brand: { "@type": "Brand", name: "Pop Mart" },
-          sku: item.sku,
-          category: "Collectible designer toy",
-          offers: {
-            "@type": "AggregateOffer",
-            priceCurrency: "USD",
-            lowPrice: Math.max(1, item.fairMarketValue * 0.88).toFixed(2),
-            highPrice: (item.fairMarketValue * 1.16).toFixed(2),
-            offerCount: item.totalSold || 1,
-          },
-        };
-      }
-
-      function updateProductSchema(item) {
-        let node = document.getElementById("productSchema");
-        if (!node) {
-          node = document.createElement("script");
-          node.type = "application/ld+json";
-          node.id = "productSchema";
-          document.head.appendChild(node);
-        }
-        node.textContent = JSON.stringify(productSchema(item));
       }
 
       function closeDrawer() {
@@ -1717,116 +917,93 @@
       }
 
       async function loadDetail(sku) {
-        const item = state.items.find((asset) => asset.sku === sku);
+        const item = state.items.find((a) => a.sku === sku);
         if (!item) return;
         state.selectedSku = sku;
+
+        const dict = i18n[currentLang];
         document.getElementById("detailDrawer").classList.add("open");
         document.getElementById("drawerOverlay").classList.add("active");
+
         const art = document.getElementById("detailArt");
         art.style.setProperty("--asset-color", item.color);
         art.innerHTML = imageMarkup(item);
+
         document.getElementById("detailIp").textContent = item.ip;
         document.getElementById("detailName").textContent = localName(item);
-        document.getElementById("detailMeta").textContent = `${item.series} · 限量珍稀度：${item.rarity_zh || item.rarity_en || "常驻热销"} · 数字标签 ${item.sku}`;
+        document.getElementById("detailMeta").textContent = `${item.series} · SKU Tags: ${item.sku}`;
         document.getElementById("detailRetail").textContent = fmt.format(item.retailPrice);
         document.getElementById("detailFmv").textContent = fmt.format(item.fairMarketValue);
         document.getElementById("detailRoi").textContent = `${item.roi >= 0 ? "+" : ""}${item.roi.toFixed(1)}%`;
         document.getElementById("detailRisk").textContent = `${item.riskScore}/100`;
-        document.getElementById("detailMethod").textContent = `风控策略：${item.valuationMethod || "双尾修剪中位数模型"} · 本轮剔除噪声后共采纳 ${item.totalSold} 笔娃友真成交 · 更新于 ${item.lastUpdated}`;
-        document.getElementById("detailNote").textContent = "提示：本面板直读同域静态沙盒 JSON，由 GitHub Actions 守护进程每日定时捕捉清洗。";
-        const dealButton = document.getElementById("dealButton");
-        dealButton.textContent = `去 eBay 全球集市捡漏 (~${fmt.format(item.fairMarketValue)})`;
-        dealButton.href =
-          item.affiliateUrl ||
-          `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(item.searchString || `Pop Mart ${item.ip} ${item.series}`)}`;
-        updateProductSchema(item);
 
-        let detail = null;
-        try {
-          const response = await fetch(`./data/${sku}.json?ts=${Date.now()}`);
-          if (response.ok) detail = await response.json();
-        } catch {
-          detail = null;
-        }
-        renderHistoryChart(item, detail);
+        const methodDesc = dict.methodologyInfo.replace("{method}", dict.methodBase).replace("{sold}", item.totalSold).replace("{date}", item.lastUpdated);
+        document.getElementById("detailMethod").textContent = methodDesc;
+        document.getElementById("detailNote").textContent = currentLang === "zh"
+          ? `数据来源：${dataSourceLabel(item)}。Demo 数据仅用于页面演示，不代表真实成交行情。`
+          : `Data source: ${dataSourceLabel(item)}. Demo data is for product preview only and is not a real completed-sales market quote.`;
+
+        const dealButton = document.getElementById("dealButton");
+        dealButton.textContent = `${dict.btnFindDeals} (~${fmt.format(item.fairMarketValue)})`;
+        dealButton.href = item.affiliateUrl || `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(item.searchString || `Pop Mart ${item.ip} ${item.series}`)}`;
+
+        renderHistoryChart(item, null);
       }
 
       function renderHistoryChart(item, detail) {
-        const history =
-          detail && detail.priceHistory
-            ? detail.priceHistory
-            : Array.from({ length: 12 }, (_, index) => ({
-                date: `时序段-${11 - index}`,
-                avg: Number((item.fairMarketValue * (0.94 + index * 0.008 + Math.sin(index) * 0.01)).toFixed(2)),
-              }));
+        const history = normalizeHistory(item.priceHistory).slice(-30);
+        const labels = history.length ? history.map((point) => point.date.slice(5)) : [item.lastUpdated || "Now"];
+        const data = history.length ? history.map((point) => point.avg) : [item.fairMarketValue];
+
         if (state.detailChart) state.detailChart.destroy();
         state.detailChart = new Chart(document.getElementById("historyChart"), {
           type: "line",
           data: {
-            labels: history.map((point) => String(point.date).slice(-5)),
-            datasets: [
-              {
-                data: history.map((point) => point.avg),
-                borderColor: item.color,
-                backgroundColor: `${item.color}24`,
-                borderWidth: 2,
-                pointRadius: 2,
-                tension: 0.28,
-                fill: true,
-              },
-            ],
+            labels,
+            datasets: [{ data, borderColor: item.color, backgroundColor: `${item.color}15`, borderWidth: 2, pointRadius: 2, tension: 0.28, fill: true }],
           },
           options: {
             responsive: true,
             maintainAspectRatio: false,
-            plugins: { legend: { display: false }, tooltip: { callbacks: { label: (ctx) => fmt.format(ctx.raw) } } },
-            scales: {
-              x: { grid: { display: false }, ticks: { color: "#747b86", maxTicksLimit: 6 } },
-              y: { grid: { color: "rgba(25, 28, 29, 0.08)" }, ticks: { color: "#747b86", callback: (value) => `$${value}` } },
-            },
+            plugins: { legend: { display: false } },
+            scales: { x: { grid: { display: false } }, y: { ticks: { callback: (v) => `$${v}` } } },
           },
         });
       }
 
       async function refreshMarketPrice(sku) {
-        const item = state.items.find((asset) => asset.sku === sku);
+        const item = state.items.find((a) => a.sku === sku);
         if (!item) return;
-        if (!state.apiKey) {
-          showToast("请先在右上角『连线全球流』中配置密钥凭证");
-          openModal("apiModal");
-          return;
-        }
-        state.refreshing.add(sku);
-        showToast("正在越洋捕捉最新的成交样本流...");
-        const endpoint = `https://api.apify.com/v2/acts/caffein.dev~ebay-sold-listings/run-sync-get-dataset-items?token=${encodeURIComponent(state.apiKey)}`;
-        const keyword = item.searchString || `Pop Mart ${item.ip} ${item.series} -box -card -preorder -custom -fake`;
+        const dict = i18n[currentLang];
+        if (!state.apiKey) { showToast(dict.toastMissingKey); openModal("apiModal"); return; }
+
+        showToast(dict.toastSyncing);
+        const keyword = item.searchString || `Pop Mart ${item.ip} ${item.series}`;
+        const endpoint = new URL(CONFIG.soldCompsEndpoint);
+        endpoint.searchParams.set("keyword", keyword);
+        endpoint.searchParams.set("count", "40");
+        endpoint.searchParams.set("page", "1");
+        endpoint.searchParams.set("ebaySite", "ebay.com");
+
         try {
-          const response = await fetch(endpoint, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ keyword, count: 20, daysToScrape: 30 }),
-          });
-          if (!response.ok) throw new Error("bad response");
+          const response = await fetch(endpoint.toString(), { headers: { "Authorization": `Bearer ${state.apiKey}`, "Accept": "application/json" } });
+          if (!response.ok) throw new Error();
           const rows = await response.json();
-          const prices = (Array.isArray(rows) ? rows : rows.results || rows.items || [])
-            .map((row) => normalizePrice(row.priceWithShipping || row.computedPrice || row.price || row.soldPrice))
-            .filter((price) => price > 1);
+          const prices = (Array.isArray(rows) ? rows : rows.results || rows.items || []).map(listingPrice).filter(p => p > 1);
           const median = trimmedMedian(prices);
-          if (!median) throw new Error("empty prices");
+          if (!median) throw new Error();
+
           item.fairMarketValue = Number(median.toFixed(2));
-          item.avgSoldPrice = item.fairMarketValue;
-          item.medianSoldPrice = item.fairMarketValue;
           item.totalSold = prices.length;
-          item.roi = item.retailPrice
-            ? Number((((item.fairMarketValue - item.retailPrice) / item.retailPrice) * 100).toFixed(1))
-            : item.roi;
-          item.valuationMethod = "实时海外一手成交去噪中位数";
+          item.roi = item.retailPrice ? Number((((item.fairMarketValue - item.retailPrice) / item.retailPrice) * 100).toFixed(1)) : item.roi;
           item.lastUpdated = new Date().toISOString().slice(0, 10);
-          showToast("恭喜娃友，该款盲盒最新的真实身价已全网核算完毕！");
+          item.dataSource = "live";
+          item.priceHistory = normalizeHistory(item.priceHistory).filter((point) => point.date !== item.lastUpdated);
+          item.priceHistory.push({ date: item.lastUpdated, avg: item.fairMarketValue });
+          showToast(dict.toastSuccess);
         } catch {
-          showToast("捕获超时，请检查连线 Token 的额度及有效性");
+          showToast(dict.toastFailed);
         } finally {
-          state.refreshing.delete(sku);
           render();
           loadDetail(sku);
         }
@@ -1838,65 +1015,56 @@
         renderChips();
         renderCards();
         renderRank();
+        updateApiButton();
       }
 
       function openModal(id) {
         document.getElementById(id).classList.remove("hidden");
         if (id === "apiModal") document.getElementById("apiInput").value = state.apiKey;
       }
-
-      function closeModal(id) {
-        document.getElementById(id).classList.add("hidden");
-      }
-
-      function showToast(message) {
-        const toast = document.getElementById("toast");
-        toast.textContent = message;
-        toast.classList.remove("hidden");
-        clearTimeout(showToast.timer);
-        showToast.timer = setTimeout(() => toast.classList.add("hidden"), 2600);
+      function closeModal(id) { document.getElementById(id).classList.add("hidden"); }
+      function showToast(msg) {
+        const t = document.getElementById("toast"); t.textContent = msg; t.classList.remove("hidden");
+        clearTimeout(showToast.timer); showToast.timer = setTimeout(() => t.classList.add("hidden"), 2600);
       }
 
       async function init() {
-        updateApiButton();
         try {
           const response = await fetch(`./data/index.json?ts=${Date.now()}`);
-          if (!response.ok) throw new Error("missing data");
+          if (!response.ok) throw new Error();
           state.items = (await response.json()).map(normalizeItem);
-          render();
-          if (state.items[0]) {
-            state.selectedSku = state.items[0].sku;
-            updateProductSchema(state.items[0]);
-          }
+          applyLanguage();
           route();
         } catch {
-          document.getElementById("resultStatus").textContent = "情报连接暂时中断";
-          document.getElementById("bentoGrid").innerHTML = `<div class="mini-panel">请先通过后台运行 python3 scripts/fetch_and_clean.py 吐出静态盲盒仓储。</div>`;
+          const dict = i18n[currentLang];
+          document.getElementById("resultStatus").textContent = dict.errNoData;
+          document.getElementById("bentoGrid").innerHTML = `<div class="mini-panel"><h3>${dict.errNoData}</h3><p>${dict.errNoDataSub}</p></div>`;
         }
       }
+
+      // 绑定多语言切换器触发按钮
+      document.getElementById("langSwitchBtn").addEventListener("click", () => {
+        currentLang = currentLang === "en" ? "zh" : "en";
+        localStorage.setItem("POP_LANG", currentLang);
+        applyLanguage();
+      });
 
       document.getElementById("refreshButton").addEventListener("click", init);
       document.getElementById("apiButton").addEventListener("click", () => openModal("apiModal"));
       document.getElementById("saveApiButton").addEventListener("click", () => {
         state.apiKey = document.getElementById("apiInput").value.trim();
         localStorage.setItem(storageKeys.api, state.apiKey);
+        localStorage.removeItem(storageKeys.legacyApi);
         updateApiButton();
         closeModal("apiModal");
-        showToast("全球连线密钥已秘密锁定到本地浏览器沙盒");
       });
-      document.querySelectorAll("[data-close-modal]").forEach((button) => {
-        button.addEventListener("click", () => closeModal(button.dataset.closeModal));
-      });
+      document.querySelectorAll("[data-close-modal]").forEach((b) => b.addEventListener("click", () => closeModal(b.dataset.closeModal)));
       document.getElementById("searchInput").addEventListener("input", render);
       document.getElementById("sortSelect").addEventListener("change", render);
       document.getElementById("closeDetailButton").addEventListener("click", closeDrawer);
       document.getElementById("drawerOverlay").addEventListener("click", closeDrawer);
-      document.getElementById("refreshOneButton").addEventListener("click", () => {
-        if (state.selectedSku) refreshMarketPrice(state.selectedSku);
-      });
-      document.getElementById("backToHomeButton").addEventListener("click", () => {
-        window.location.hash = "home";
-      });
+      document.getElementById("refreshOneButton").addEventListener("click", () => { if (state.selectedSku) refreshMarketPrice(state.selectedSku); });
+      document.getElementById("backToHomeButton").addEventListener("click", () => { window.location.hash = "home"; });
       window.addEventListener("hashchange", route);
 
       init();

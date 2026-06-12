@@ -13,11 +13,11 @@ GitHub 仓库地址：<https://github.com/wolf0x0x/poptracker>
 - 单品详情页：展示 FMV、官方价、ROI、风险分、成交走势图、估值方法和 eBay 动态 CTA。
 - 二级市场指标：均价、中位数、七日涨跌、成交量、ROI、风险分。
 - 动态 SEO：详情页自动注入 `Product Schema`，用于搜索引擎理解成交价区间。
-- AdSense 广告位：顶部 Leaderboard、侧栏 300x250、后续可替换真实广告单元。
-- API Key 本地配置：`SOLD_COMPS_API_KEY` 仅保存在浏览器 `localStorage`。
+- AdSense：已接入发布者 `ca-pub-8695398658548679`，广告位 slot 需在 AdSense 后台创建后补入。
+- API Key 本地配置：`SOLDCOMPS_API_KEY` 仅保存在浏览器 `localStorage`。
 - 单款一键刷新：通过 sold-comps.com / Apify completed sales 接口刷新最新成交中位价。
 - 伪纯前端架构：GitHub Actions 每日拉取 SoldComps，前端读取同域 `public/data/*.json`。
-- Python 数据生成脚本：多币种折算、IQR 异常值清洗、指标聚合、Apify POST 接口兼容、样例数据兜底。
+- Python 数据生成脚本：多币种折算、IQR 异常值清洗、指标聚合、Apify POST 接口兼容、live/demo 数据源标记。
 
 ## 产品执行步骤
 
@@ -108,10 +108,18 @@ python3 scripts/fetch_and_clean.py
 - `Settings -> Secrets and variables -> Actions -> Secrets`
 - 新建 `SOLDCOMPS_API_KEY`
 
-如果你的 sold-comps / Apify 兼容 API 地址不是默认值，可以在：
+默认生产接口为：
+
+```text
+GET https://api.sold-comps.com/v1/scrape
+Authorization: Bearer SOLDCOMPS_API_KEY
+```
+
+如果你的 sold-comps 兼容 API 地址不是默认值，可以在：
 
 - `Settings -> Secrets and variables -> Actions -> Variables`
 - 新建 `SOLDCOMPS_ENDPOINT`
+- 可选新建 `SOLDCOMPS_METHOD`，默认 SoldComps 为 `GET`
 
 ### 本地脚本 `.env`
 
@@ -127,14 +135,23 @@ SOLDCOMPS_API_KEY=your_real_token
 
 `.env` 已在 `.gitignore` 中排除，只用于本机运行 `python3 scripts/fetch_and_clean.py`。
 
-### H5 离线 / 演示模式
-
-前端页面右上角点击 `缺 API` / `API ready` 打开设置面板，填入 `SOLD_COMPS_API_KEY`。该值只写入当前浏览器 `localStorage`，用于当前设备上的单款“刷新市值”。
-
-脚本默认调用 Apify 同步接口：
+生产环境 GitHub Actions 已启用严格模式：
 
 ```text
-https://api.apify.com/v2/acts/caffein.dev~ebay-sold-listings/run-sync-get-dataset-items
+LIVE_DATA_REQUIRED=true
+ALLOW_DEMO_DATA=false
+```
+
+当 sold-comps 兼容接口失败时，脚本会优先保留已有 JSON 数据；如果没有旧数据可保留，则工作流失败，避免把 demo 数据伪装成真实行情。
+
+### H5 离线 / 演示模式
+
+前端页面右上角点击 `缺 API` / `API ready` 打开设置面板，填入 `SOLDCOMPS_API_KEY`。该值只写入当前浏览器 `localStorage`，用于当前设备上的单款“刷新市值”。旧版 `SOLD_COMPS_API_KEY` 本地键会自动迁移到统一命名。
+
+脚本默认调用 SoldComps 同步接口：
+
+```text
+https://api.sold-comps.com/v1/scrape
 ```
 
 脚本预期接口返回 JSON 数组，或返回带 `results` / `items` 字段的对象。每条记录可以包含：
@@ -142,9 +159,9 @@ https://api.apify.com/v2/acts/caffein.dev~ebay-sold-listings/run-sync-get-datase
 ```json
 {
   "soldPrice": 79.99,
+  "soldCurrency": "USD",
   "shippingPrice": 5.5,
-  "currency": "USD",
-  "soldAt": "2026-06-11",
+  "endedAt": "2026-06-11T18:42:00.000Z",
   "source": "eBay completed sales"
 }
 ```
@@ -152,7 +169,7 @@ https://api.apify.com/v2/acts/caffein.dev~ebay-sold-listings/run-sync-get-datase
 前端单款刷新请求流向为：
 
 ```text
-H5 客户端 -> 本地组装 Pop Mart + IP + 系列 + 款式关键词 -> sold-comps / Apify 网关
+H5 客户端 -> 本地组装 Pop Mart + IP + 系列 + 款式关键词 -> SoldComps /v1/scrape
           <- 返回近 30 天成交列表，本地过滤并计算中位数 <-
 ```
 
