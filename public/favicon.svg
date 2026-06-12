@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="PopTracker toy ghost face">
+  <defs>
+    <linearGradient id="face" x1="24" y1="16" x2="104" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7c4dff"/>
+      <stop offset="0.55" stop-color="#6b38d4"/>
+      <stop offset="1" stop-color="#191c1d"/>
+    </linearGradient>
+    <radialGradient id="shine" cx="42" cy="34" r="54" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="#f8f9fa"/>
+  <path d="M31 45 23 18l28 16a49 49 0 0 1 26 0l28-16-8 27c10 10 16 23 16 38 0 28-22 43-49 43S15 111 15 83c0-15 6-28 16-38Z" fill="url(#face)"/>
+  <path d="M31 45 23 18l28 16a49 49 0 0 1 26 0l28-16-8 27c10 10 16 23 16 38 0 28-22 43-49 43S15 111 15 83c0-15 6-28 16-38Z" fill="url(#shine)"/>
+  <path d="m33 35-2-8 8 5-3 7-3-4Zm62 0 2-8-8 5 3 7 3-4Z" fill="#ebe2ff" opacity="0.85"/>
+  <circle cx="45" cy="71" r="15" fill="#ffffff"/>
+  <circle cx="83" cy="71" r="15" fill="#ffffff"/>
+  <circle cx="49" cy="73" r="7" fill="#191c1d"/>
+  <circle cx="79" cy="69" r="7" fill="#191c1d"/>
+  <circle cx="52" cy="69" r="2.2" fill="#ffffff"/>
+  <circle cx="82" cy="65" r="2.2" fill="#ffffff"/>
+  <path d="M43 97c9 10 33 10 42-1" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
+  <path d="M51 98c4 3 22 3 27 0" fill="none" stroke="#191c1d" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+  <path d="M32 55c6-7 15-9 25-5M72 50c10-4 20-2 25 5" fill="none" stroke="#191c1d" stroke-width="5" stroke-linecap="round" opacity="0.42"/>
+</svg>
