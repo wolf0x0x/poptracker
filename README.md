@@ -120,6 +120,11 @@ Authorization: Bearer SOLDCOMPS_API_KEY
 - 可选新建 `SOLDCOMPS_METHOD`，默认 SoldComps 为 `GET`
 - 可选新建 `SOLDCOMPS_COUNT`，默认每个 SKU 拉取 10 条成交记录，降低 429 风险
 - 可选新建 `SOLDCOMPS_REQUEST_DELAY`，默认每个 SKU 请求后等待 1.5 秒
+- 可选新建 `SOLDCOMPS_MONTHLY_QUOTA`，默认每月最多 50 次请求
+- 可选新建 `SOLDCOMPS_DAILY_BUDGET`，默认每天最多 1 次请求
+- 可选新建 `SOLDCOMPS_RUN_BUDGET`，默认每次工作流最多 1 次请求
+
+`Daily Pop Mart Price Sync` 会每天定时运行，但默认只更新 1 个 SKU，并把剩余 SKU 继续使用已有缓存数据。脚本会把月度请求量、每日请求量和 SKU 最近同步状态写入 `public/data/sync_state.json`，用于在后续运行中轮询更新 SKU，避免 50 个 SKU 在同一天耗尽 SoldComps 额度。
 
 ### 本地脚本 `.env`
 
@@ -143,7 +148,7 @@ ALLOW_DEMO_DATA=false
 ```
 
 当 sold-comps 兼容接口失败时，脚本只会保留已有的 `live` JSON 数据；如果本地只有 `demo` 数据或没有旧数据，则工作流失败，避免把 demo 数据伪装成真实行情。
-如果接口返回 HTTP 429，脚本会立即停止剩余 SKU 请求，避免继续消耗 API 额度。
+如果月度或每日预算已经用完，脚本不会继续请求 SoldComps；如果接口返回 HTTP 429，脚本会立即停止剩余 SKU 请求，保留已有数据并记录同步状态，避免继续消耗 API 额度。
 
 脚本默认调用 SoldComps 同步接口：
 
@@ -178,7 +183,7 @@ GitHub Actions / 本地脚本 -> 组装简洁关键词（Pop Mart + IP + 系列 
 2. 进入 `Settings -> Pages`。
 3. 选择 `Deploy from a branch`。
 4. 分支选择 `main`，目录选择 `/public`。
-5. 手动运行一次 `Daily Pop Mart Price Sync` 工作流，生成最新 JSON。
+5. 等待 `Daily Pop Mart Price Sync` 每日自动轮询更新；若当天 SoldComps 额度已用完，不要手动触发该工作流。
 
 ## 免责声明
 

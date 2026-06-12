@@ -15,6 +15,7 @@ except ImportError:
 
 DATA_DIR = Path(__file__).resolve().parents[1] / "public" / "data"
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+SYNC_STATE_FILE = DATA_DIR / "sync_state.json"
 
 def load_dotenv(path=PROJECT_ROOT / ".env"):
     if not path.exists():
@@ -345,6 +346,102 @@ def load_existing_detail(file_path):
     except Exception:
         return None
 
+def load_sync_state(today):
+    month = today[:7]
+    default = {
+        "month": month,
+        "monthlyQuota": int(os.getenv("SOLDCOMPS_MONTHLY_QUOTA", "50")),
+        "requestsUsed": 0,
+        "dailyRequests": {},
+        "skuStatus": {},
+    }
+    if not SYNC_STATE_FILE.exists():
+        return default
+    try:
+        with SYNC_STATE_FILE.open("r", encoding="utf-8") as handle:
+            state = json.load(handle)
+    except Exception:
+        return default
+    if state.get("month") != month:
+        return default
+    state.setdefault("monthlyQuota", default["monthlyQuota"])
+    state.setdefault("requestsUsed", 0)
+    state.setdefault("dailyRequests", {})
+    state.setdefault("skuStatus", {})
+    return state
+
+def save_sync_state(state):
+    state["updatedAt"] = datetime.now(timezone.utc).isoformat()
+    with SYNC_STATE_FILE.open("w", encoding="utf-8") as handle:
+        json.dump(state, handle, ensure_ascii=False, indent=2)
+
+def daily_request_budget(state, today):
+    monthly_quota = int(os.getenv("SOLDCOMPS_MONTHLY_QUOTA", str(state.get("monthlyQuota", 50))))
+    daily_budget = int(os.getenv("SOLDCOMPS_DAILY_BUDGET", "1"))
+    run_budget = int(os.getenv("SOLDCOMPS_RUN_BUDGET", str(daily_budget)))
+    used_month = int(state.get("requestsUsed", 0))
+    used_today = int(state.get("dailyRequests", {}).get(today, 0))
+    remaining_month = max(0, monthly_quota - used_month)
+    remaining_today = max(0, daily_budget - used_today)
+    return max(0, min(run_budget, remaining_today, remaining_month)), monthly_quota, remaining_month
+
+def mark_api_request(state, sku, today, status):
+    if status not in {"live", "rate_limited", "empty_response", "api_error"}:
+        return
+    state["requestsUsed"] = int(state.get("requestsUsed", 0)) + 1
+    daily = state.setdefault("dailyRequests", {})
+    daily[today] = int(daily.get(today, 0)) + 1
+    sku_status = state.setdefault("skuStatus", {}).setdefault(sku, {})
+    sku_status["lastAttemptAt"] = today
+    sku_status["lastStatus"] = status
+    if status == "live":
+        sku_status["lastLiveAt"] = today
+
+def normalize_tracking_item(raw_item):
+    item = {}
+    item["sku"] = raw_item.get("sku", raw_item.get("SKU"))
+    if not item["sku"]:
+        return None
+
+    item["ip"] = raw_item.get("ip", raw_item.get("IP", "POP MART"))
+    item["series"] = raw_item.get("series", raw_item.get("Series", "Unknown Series"))
+    item["keywords"] = raw_item.get("keywords", raw_item.get("Keywords", ""))
+    item["search_string"] = raw_item.get("search_string", raw_item.get("searchString", ""))
+    if not item["search_string"]:
+        item["search_string"] = f'"{item["ip"]}" AND "{item["series"]}" -box -card -preorder'
+
+    item["negative_keywords"] = raw_item.get("negative_keywords", raw_item.get("negativeKeywords", ["box only", "card only"]))
+    item["refresh_tier"] = raw_item.get("refresh_tier", raw_item.get("refreshTier", "weekly"))
+
+    retail_val = raw_item.get("retail_price_usd", raw_item.get("retailPrice", raw_item.get("retail_price", 15.0)))
+    item["retail_price_usd"] = float(retail_val)
+
+    item["name_zh"] = raw_item.get("name_zh", raw_item.get("nameZh", raw_item.get("name_cn", item["series"])))
+    item["name_en"] = raw_item.get("name_en", raw_item.get("nameEn", item["series"]))
+    item["rarity"] = raw_item.get("rarity", raw_item.get("rarity_zh", raw_item.get("rarityZh", "常规款")))
+    item["rarity_en"] = raw_item.get("rarity_en", raw_item.get("rarityEn", "Regular"))
+    item["color"] = raw_item.get("color", "#6b38d4")
+    item["image"] = raw_item.get("image", "")
+    if "characters" in raw_item:
+        item["characters"] = raw_item["characters"]
+    return item
+
+def select_items_for_live(items, state, today, budget):
+    if budget <= 0:
+        return set()
+    sku_status = state.get("skuStatus", {})
+
+    def sort_key(item):
+        status = sku_status.get(item["sku"], {})
+        tier_rank = 0 if item.get("refresh_tier") == "hot" else 1
+        last_live = status.get("lastLiveAt") or status.get("lastAttemptAt") or "0000-00-00"
+        existing = load_existing_detail(DATA_DIR / f"{item['sku']}.json") or {}
+        data_source = existing.get("dataSource") or existing.get("marketData", {}).get("dataSource") or "demo"
+        source_rank = 0 if data_source != "live" else 1
+        return (source_rank, tier_rank, last_live, item["sku"])
+
+    return {item["sku"] for item in sorted(items, key=sort_key)[:budget]}
+
 def index_item_from_detail(detail):
     market = detail.get("marketData", {})
     return {
@@ -423,6 +520,8 @@ def main():
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     today = datetime.now(timezone.utc).date().isoformat()
     index = []
+    sync_state = load_sync_state(today)
+    request_budget, monthly_quota, remaining_month = daily_request_budget(sync_state, today)
     live_required = os.getenv("LIVE_DATA_REQUIRED", "").lower() in {"1", "true", "yes"}
     allow_demo = os.getenv("ALLOW_DEMO_DATA", "true").lower() not in {"0", "false", "no"}
     preserved = []
@@ -442,44 +541,46 @@ def main():
         except Exception as e:
             print(f"[WARNING] Failed to load external dictionary: {e}. Fallback to internal items.")
 
+    item_pairs = []
     for raw_item in TRACKING_ITEMS:
         if not isinstance(raw_item, dict):
             continue
-            
-        item = {}
-        item["sku"] = raw_item.get("sku", raw_item.get("SKU"))
-        if not item["sku"]:
-            continue
-            
-        item["ip"] = raw_item.get("ip", raw_item.get("IP", "POP MART"))
-        item["series"] = raw_item.get("series", raw_item.get("Series", "Unknown Series"))
-        item["keywords"] = raw_item.get("keywords", raw_item.get("Keywords", ""))
-        item["search_string"] = raw_item.get("search_string", raw_item.get("searchString", ""))
-        if not item["search_string"]:
-            item["search_string"] = f'"{item["ip"]}" AND "{item["series"]}" -box -card -preorder'
-            
-        item["negative_keywords"] = raw_item.get("negative_keywords", raw_item.get("negativeKeywords", ["box only", "card only"]))
-        item["refresh_tier"] = raw_item.get("refresh_tier", raw_item.get("refreshTier", "weekly"))
-        
-        retail_val = raw_item.get("retail_price_usd", raw_item.get("retailPrice", raw_item.get("retail_price", 15.0)))
-        item["retail_price_usd"] = float(retail_val)
-        
-        item["name_zh"] = raw_item.get("name_zh", raw_item.get("nameZh", raw_item.get("name_cn", item["series"])))
-        item["name_en"] = raw_item.get("name_en", raw_item.get("nameEn", item["series"]))
-        item["rarity"] = raw_item.get("rarity", raw_item.get("rarity_zh", raw_item.get("rarityZh", "常规款")))
-        item["rarity_en"] = raw_item.get("rarity_en", raw_item.get("rarityEn", "Regular"))
-        item["color"] = raw_item.get("color", "#6b38d4")
-        item["image"] = raw_item.get("image", "")
-        if "characters" in raw_item:
-            item["characters"] = raw_item["characters"]
+        item = normalize_tracking_item(raw_item)
+        if item:
+            item_pairs.append((item, raw_item))
+    normalized_items = [item for item, _ in item_pairs]
+    selected_skus = select_items_for_live(normalized_items, sync_state, today, request_budget)
+    sync_state["monthlyQuota"] = monthly_quota
+    print(
+        f"[QUOTA] month={sync_state['month']} used={sync_state.get('requestsUsed', 0)}/"
+        f"{monthly_quota} remaining={remaining_month} daily_budget={request_budget} selected={len(selected_skus)}"
+    )
 
+    quota_stopped = False
+    for item, raw_item in item_pairs:
         file_path = DATA_DIR / f"{item['sku']}.json"
+
+        if quota_stopped or item["sku"] not in selected_skus:
+            existing = load_existing_detail(file_path)
+            if existing:
+                index.append(index_item_from_detail(existing))
+                continue
+            if live_required and not allow_demo:
+                failures.append(f"{item['sku']}:not_selected_no_existing_data")
+                continue
 
         # 生产环境不再静默回滚到 demo。若 live 失败，只保留旧 live 数据。
         raw, source_status = fetch_live_listings(item)
+        mark_api_request(sync_state, item["sku"], today, source_status)
         data_source = "live" if source_status == "live" and raw else "demo"
         if not raw:
             existing = load_existing_detail(file_path)
+            if source_status == "rate_limited" and existing:
+                index.append(index_item_from_detail(existing))
+                print(f"[QUOTA] Preserved existing market data for {item['sku']} after SoldComps rate limit.")
+                print("[STOP] SoldComps rate limit reached. Stop remaining SKU requests to protect API quota.")
+                quota_stopped = True
+                continue
             if live_required and detail_is_live(existing):
                 preserved.append(item["sku"])
                 index.append(index_item_from_detail(existing))
@@ -580,6 +681,7 @@ def main():
 
     with (DATA_DIR / "index.json").open("w", encoding="utf-8") as handle:
         json.dump(index, handle, ensure_ascii=False, indent=2)
+    save_sync_state(sync_state)
 
     print(f"Generated {len(index)} tracked Pop Mart assets in {DATA_DIR}")
     if preserved:
