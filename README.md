@@ -118,6 +118,8 @@ Authorization: Bearer SOLDCOMPS_API_KEY
 - `Settings -> Secrets and variables -> Actions -> Variables`
 - 新建 `SOLDCOMPS_ENDPOINT`
 - 可选新建 `SOLDCOMPS_METHOD`，默认 SoldComps 为 `GET`
+- 可选新建 `SOLDCOMPS_COUNT`，默认每个 SKU 拉取 10 条成交记录，降低 429 风险
+- 可选新建 `SOLDCOMPS_REQUEST_DELAY`，默认每个 SKU 请求后等待 1.5 秒
 
 ### 本地脚本 `.env`
 
@@ -141,6 +143,7 @@ ALLOW_DEMO_DATA=false
 ```
 
 当 sold-comps 兼容接口失败时，脚本只会保留已有的 `live` JSON 数据；如果本地只有 `demo` 数据或没有旧数据，则工作流失败，避免把 demo 数据伪装成真实行情。
+如果接口返回 HTTP 429，脚本会立即停止剩余 SKU 请求，避免继续消耗 API 额度。
 
 脚本默认调用 SoldComps 同步接口：
 

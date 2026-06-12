@@ -4,6 +4,7 @@ import math
 import os
 import random
 import statistics
+import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -239,15 +240,27 @@ def fetch_live_listings(item):
     url = os.getenv("SOLDCOMPS_ENDPOINT") or "https://api.sold-comps.com/v1/scrape"
     method = (os.getenv("SOLDCOMPS_METHOD") or ("GET" if "sold-comps.com" in url else "POST")).upper()
     keyword = build_api_keyword(item)
-    payload = {"keyword": keyword, "count": 40, "page": 1, "ebaySite": os.getenv("SOLDCOMPS_EBAY_SITE", "ebay.com")}
+    payload = {
+        "keyword": keyword,
+        "count": int(os.getenv("SOLDCOMPS_COUNT", "10")),
+        "page": 1,
+        "ebaySite": os.getenv("SOLDCOMPS_EBAY_SITE", "ebay.com"),
+    }
     headers = {"Authorization": f"Bearer {api_key}", "Accept": "application/json"}
     timeout = float(os.getenv("SOLDCOMPS_TIMEOUT", "8"))
+    delay = float(os.getenv("SOLDCOMPS_REQUEST_DELAY", "1.5"))
 
     try:
         if method == "GET":
             response = requests.get(url, params=payload, headers=headers, timeout=timeout)
         else:
             response = requests.post(url, json={**payload, "daysToScrape": 30, "apiKey": api_key}, headers=headers, timeout=timeout)
+        if response.status_code == 429:
+            retry_after = response.headers.get("Retry-After")
+            print(f"[RATE LIMIT] SoldComps returned HTTP 429 for {item['sku']}. Retry-After={retry_after or 'not provided'}.")
+            return [], "rate_limited"
+        if delay > 0:
+            time.sleep(delay)
             
         response.raise_for_status()
         response_payload = response.json()
@@ -474,6 +487,9 @@ def main():
                 continue
             if live_required and not allow_demo:
                 failures.append(f"{item['sku']}:{source_status}")
+                if source_status == "rate_limited":
+                    print("[STOP] SoldComps rate limit reached. Stop remaining SKU requests to protect API quota.")
+                    break
                 continue
             raw = demo_listings(item)
             data_source = "demo"
