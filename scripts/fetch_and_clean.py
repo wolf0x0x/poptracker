@@ -241,12 +241,13 @@ def fetch_live_listings(item):
     keyword = build_api_keyword(item)
     payload = {"keyword": keyword, "count": 40, "page": 1, "ebaySite": os.getenv("SOLDCOMPS_EBAY_SITE", "ebay.com")}
     headers = {"Authorization": f"Bearer {api_key}", "Accept": "application/json"}
+    timeout = float(os.getenv("SOLDCOMPS_TIMEOUT", "8"))
 
     try:
         if method == "GET":
-            response = requests.get(url, params=payload, headers=headers, timeout=30)
+            response = requests.get(url, params=payload, headers=headers, timeout=timeout)
         else:
-            response = requests.post(url, json={**payload, "daysToScrape": 30, "apiKey": api_key}, headers=headers, timeout=30)
+            response = requests.post(url, json={**payload, "daysToScrape": 30, "apiKey": api_key}, headers=headers, timeout=timeout)
             
         response.raise_for_status()
         response_payload = response.json()
