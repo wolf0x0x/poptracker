@@ -19,29 +19,30 @@
   ],
   "refreshTier": "hot",
   "refreshIntervalHours": 24,
-  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Labubu%22+AND+%22Exciting+Macarons%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
+  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Exciting+Macarons+Labubu",
   "retailPrice": 17.0,
   "lastUpdated": "2026-06-12",
   "marketData": {
-    "avgSoldPrice": 32.39,
-    "medianSoldPrice": 32.01,
-    "fairMarketValue": 32.01,
-    "lowSoldPrice": 22.39,
-    "highSoldPrice": 44.77,
-    "totalSold": 42,
-    "volatility": "Medium",
-    "volatilityValue": 0.175,
-    "roi": 90.5,
-    "riskScore": 51,
-    "cleanedSampleSize": 42,
+    "avgSoldPrice": 24.98,
+    "medianSoldPrice": 21.99,
+    "fairMarketValue": 21.99,
+    "lowSoldPrice": 9.99,
+    "highSoldPrice": 48.0,
+    "totalSold": 35,
+    "volatility": "High",
+    "volatilityValue": 0.359,
+    "roi": 46.9,
+    "riskScore": 67,
+    "cleanedSampleSize": 35,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+5.1%",
-    "trend": "range",
-    "trend_zh": "区间震荡",
+    "priceChange7d": "-27.8%",
+    "trend": "cooldown",
+    "trend_zh": "热度回落",
     "signal": "hold",
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
-    "dataSource": "demo"
+    "dataSource": "live",
+    "provider": "ebay-local"
   },
   "priceHistory": [
     {
@@ -166,12 +167,13 @@
     },
     {
       "date": "2026-06-12",
-      "avg": 32.01
+      "avg": 21.99
     }
   ],
-  "dataSource": "demo",
+  "dataSource": "live",
+  "dataProvider": "ebay-local",
   "sources": [
-    "demo-secondary-market"
+    "eBay completed listings local scraper"
   ],
   "story": {
     "year": "2023",
@@ -216,6 +218,6 @@
       "color": "#191c1d"
     }
   ],
-  "notes_zh": "价格为商品历史成交聚合结果，不构成投资建议。请综合手续费判断。",
-  "notes_en": "Prices are API-aggregated metrics, not financial advice. Validate parameters before trading."
+  "notes_zh": "价格为 eBay 已完成成交页面本地采集结果，不构成投资建议。请综合品相、运费、税费和平台手续费判断。",
+  "notes_en": "Prices are locally collected from eBay completed listings, not financial advice. Validate condition, shipping, tax, and fees before trading."
 }

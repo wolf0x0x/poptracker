@@ -19,29 +19,30 @@
   ],
   "refreshTier": "hot",
   "refreshIntervalHours": 24,
-  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Crybaby%22+AND+%22Sad+Club%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
+  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+CRYBABY+Sad+Club",
   "retailPrice": 16.99,
   "lastUpdated": "2026-06-12",
   "marketData": {
-    "avgSoldPrice": 38.93,
-    "medianSoldPrice": 38.73,
-    "fairMarketValue": 38.73,
-    "lowSoldPrice": 27.25,
-    "highSoldPrice": 56.58,
-    "totalSold": 41,
-    "volatility": "Low",
-    "volatilityValue": 0.151,
-    "roi": 129.1,
-    "riskScore": 54,
-    "cleanedSampleSize": 41,
+    "avgSoldPrice": 30.2,
+    "medianSoldPrice": 26.0,
+    "fairMarketValue": 26.0,
+    "lowSoldPrice": 12.0,
+    "highSoldPrice": 67.0,
+    "totalSold": 33,
+    "volatility": "High",
+    "volatilityValue": 0.476,
+    "roi": 77.8,
+    "riskScore": 72,
+    "cleanedSampleSize": 33,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-18.2%",
+    "priceChange7d": "-45.1%",
     "trend": "cooldown",
     "trend_zh": "热度回落",
     "signal": "hold",
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
-    "dataSource": "demo"
+    "dataSource": "live",
+    "provider": "ebay-local"
   },
   "priceHistory": [
     {
@@ -166,12 +167,13 @@
     },
     {
       "date": "2026-06-12",
-      "avg": 38.73
+      "avg": 26.0
     }
   ],
-  "dataSource": "demo",
+  "dataSource": "live",
+  "dataProvider": "ebay-local",
   "sources": [
-    "demo-secondary-market"
+    "eBay completed listings local scraper"
   ],
   "story": {
     "year": "2024",
@@ -226,6 +228,6 @@
       "color": "#50e3c2"
     }
   ],
-  "notes_zh": "价格为商品历史成交聚合结果，不构成投资建议。请综合手续费判断。",
-  "notes_en": "Prices are API-aggregated metrics, not financial advice. Validate parameters before trading."
+  "notes_zh": "价格为 eBay 已完成成交页面本地采集结果，不构成投资建议。请综合品相、运费、税费和平台手续费判断。",
+  "notes_en": "Prices are locally collected from eBay completed listings, not financial advice. Validate condition, shipping, tax, and fees before trading."
 }

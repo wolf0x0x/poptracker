@@ -35,11 +35,11 @@
 
 ## 需要人工完成
 
-1. API 与密钥
+1. 数据采集与发布
 
-- 在 GitHub Actions Secret 中配置 `SOLDCOMPS_API_KEY`。
-- 如接口不是默认 SoldComps `/v1/scrape`，配置 `SOLDCOMPS_ENDPOINT`。
-- 本地调试仅使用 `.env` 保存密钥，前端正式版不提供公开网页密钥输入入口。
+- 生产行情改为本地私有 eBay completed-sales 采集流程。
+- 抓取脚本和浏览器快照只保存在本机 ignored 目录，不推送 GitHub。
+- GitHub 仓库只发布清洗后的 `public/data/*.json` 静态行情数据。
 
 2. 商品数据库扩充
 

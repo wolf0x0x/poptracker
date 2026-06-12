@@ -19,29 +19,30 @@
   ],
   "refreshTier": "weekly",
   "refreshIntervalHours": 168,
-  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Hirono%22+AND+%22Mime%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
+  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+HIRONO+Mime",
   "retailPrice": 15.0,
   "lastUpdated": "2026-06-12",
   "marketData": {
-    "avgSoldPrice": 49.77,
-    "medianSoldPrice": 50.17,
-    "fairMarketValue": 50.17,
-    "lowSoldPrice": 38.35,
-    "highSoldPrice": 63.5,
-    "totalSold": 40,
-    "volatility": "Low",
-    "volatilityValue": 0.106,
-    "roi": 231.8,
-    "riskScore": 61,
-    "cleanedSampleSize": 40,
+    "avgSoldPrice": 23.44,
+    "medianSoldPrice": 22.68,
+    "fairMarketValue": 22.68,
+    "lowSoldPrice": 5.0,
+    "highSoldPrice": 39.99,
+    "totalSold": 35,
+    "volatility": "High",
+    "volatilityValue": 0.335,
+    "roi": 56.2,
+    "riskScore": 66,
+    "cleanedSampleSize": 35,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+2.6%",
-    "trend": "range",
-    "trend_zh": "区间震荡",
+    "priceChange7d": "-53.6%",
+    "trend": "cooldown",
+    "trend_zh": "热度回落",
     "signal": "hold",
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
-    "dataSource": "demo"
+    "dataSource": "live",
+    "provider": "ebay-local"
   },
   "priceHistory": [
     {
@@ -166,12 +167,13 @@
     },
     {
       "date": "2026-06-12",
-      "avg": 50.17
+      "avg": 22.68
     }
   ],
-  "dataSource": "demo",
+  "dataSource": "live",
+  "dataProvider": "ebay-local",
   "sources": [
-    "demo-secondary-market"
+    "eBay completed listings local scraper"
   ],
   "story": {
     "year": "2026",
@@ -222,6 +224,6 @@
       "color": "#191c1d"
     }
   ],
-  "notes_zh": "价格为商品历史成交聚合结果，不构成投资建议。请综合手续费判断。",
-  "notes_en": "Prices are API-aggregated metrics, not financial advice. Validate parameters before trading."
+  "notes_zh": "价格为 eBay 已完成成交页面本地采集结果，不构成投资建议。请综合品相、运费、税费和平台手续费判断。",
+  "notes_en": "Prices are locally collected from eBay completed listings, not financial advice. Validate condition, shipping, tax, and fees before trading."
 }

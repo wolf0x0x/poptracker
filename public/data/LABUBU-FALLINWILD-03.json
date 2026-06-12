@@ -19,29 +19,30 @@
   ],
   "refreshTier": "hot",
   "refreshIntervalHours": 24,
-  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Labubu%22+AND+%22Fall+in+Wild%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
+  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Fall+in+Wild+Labubu",
   "retailPrice": 25.99,
   "lastUpdated": "2026-06-12",
   "marketData": {
-    "avgSoldPrice": 65.2,
-    "medianSoldPrice": 65.84,
-    "fairMarketValue": 65.84,
-    "lowSoldPrice": 49.84,
-    "highSoldPrice": 80.12,
-    "totalSold": 42,
-    "volatility": "Low",
-    "volatilityValue": 0.129,
-    "roi": 150.9,
-    "riskScore": 54,
-    "cleanedSampleSize": 42,
+    "avgSoldPrice": 43.19,
+    "medianSoldPrice": 49.22,
+    "fairMarketValue": 49.22,
+    "lowSoldPrice": 15.99,
+    "highSoldPrice": 78.0,
+    "totalSold": 39,
+    "volatility": "High",
+    "volatilityValue": 0.423,
+    "roi": 66.2,
+    "riskScore": 70,
+    "cleanedSampleSize": 39,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+3.3%",
-    "trend": "range",
-    "trend_zh": "区间震荡",
+    "priceChange7d": "-22.8%",
+    "trend": "cooldown",
+    "trend_zh": "热度回落",
     "signal": "hold",
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
-    "dataSource": "demo"
+    "dataSource": "live",
+    "provider": "ebay-local"
   },
   "priceHistory": [
     {
@@ -166,12 +167,13 @@
     },
     {
       "date": "2026-06-12",
-      "avg": 65.84
+      "avg": 49.22
     }
   ],
-  "dataSource": "demo",
+  "dataSource": "live",
+  "dataProvider": "ebay-local",
   "sources": [
-    "demo-secondary-market"
+    "eBay completed listings local scraper"
   ],
   "story": {
     "year": "2024",
@@ -216,6 +218,6 @@
       "color": "#191c1d"
     }
   ],
-  "notes_zh": "价格为商品历史成交聚合结果，不构成投资建议。请综合手续费判断。",
-  "notes_en": "Prices are API-aggregated metrics, not financial advice. Validate parameters before trading."
+  "notes_zh": "价格为 eBay 已完成成交页面本地采集结果，不构成投资建议。请综合品相、运费、税费和平台手续费判断。",
+  "notes_en": "Prices are locally collected from eBay completed listings, not financial advice. Validate condition, shipping, tax, and fees before trading."
 }

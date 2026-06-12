@@ -19,29 +19,30 @@
   ],
   "refreshTier": "weekly",
   "refreshIntervalHours": 168,
-  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Hirono%22+AND+%22Reshape%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
+  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+HIRONO+Reshape",
   "retailPrice": 16.0,
   "lastUpdated": "2026-06-12",
   "marketData": {
-    "avgSoldPrice": 40.28,
-    "medianSoldPrice": 40.12,
-    "fairMarketValue": 40.12,
-    "lowSoldPrice": 28.17,
-    "highSoldPrice": 52.55,
-    "totalSold": 41,
-    "volatility": "Low",
-    "volatilityValue": 0.151,
-    "roi": 151.7,
-    "riskScore": 56,
-    "cleanedSampleSize": 41,
+    "avgSoldPrice": 18.68,
+    "medianSoldPrice": 14.5,
+    "fairMarketValue": 14.5,
+    "lowSoldPrice": 4.99,
+    "highSoldPrice": 74.47,
+    "totalSold": 32,
+    "volatility": "High",
+    "volatilityValue": 0.775,
+    "roi": 16.7,
+    "riskScore": 64,
+    "cleanedSampleSize": 32,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+9.9%",
-    "trend": "breakout",
-    "trend_zh": "突破上涨",
-    "signal": "hold",
-    "signal_zh": "持有跟踪",
-    "signal_en": "Track / hold",
-    "dataSource": "demo"
+    "priceChange7d": "-60.3%",
+    "trend": "cooldown",
+    "trend_zh": "热度回落",
+    "signal": "value",
+    "signal_zh": "低溢价建仓候选",
+    "signal_en": "Low-premium candidate",
+    "dataSource": "live",
+    "provider": "ebay-local"
   },
   "priceHistory": [
     {
@@ -166,12 +167,13 @@
     },
     {
       "date": "2026-06-12",
-      "avg": 40.12
+      "avg": 14.5
     }
   ],
-  "dataSource": "demo",
+  "dataSource": "live",
+  "dataProvider": "ebay-local",
   "sources": [
-    "demo-secondary-market"
+    "eBay completed listings local scraper"
   ],
   "story": {
     "year": "2026",
@@ -189,6 +191,6 @@
       "source_url": "https://images.stockx.com/images/Pop-Mart-Hirono-Reshape-Figure.jpg"
     }
   ],
-  "notes_zh": "价格为商品历史成交聚合结果，不构成投资建议。请综合手续费判断。",
-  "notes_en": "Prices are API-aggregated metrics, not financial advice. Validate parameters before trading."
+  "notes_zh": "价格为 eBay 已完成成交页面本地采集结果，不构成投资建议。请综合品相、运费、税费和平台手续费判断。",
+  "notes_en": "Prices are locally collected from eBay completed listings, not financial advice. Validate condition, shipping, tax, and fees before trading."
 }

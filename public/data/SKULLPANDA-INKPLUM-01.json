@@ -19,29 +19,30 @@
   ],
   "refreshTier": "hot",
   "refreshIntervalHours": 24,
-  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Skullpanda%22+AND+(%22Ink+Plum%22+OR+%22Plum+Blossom%22)+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
+  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+Ink+Plum+Blossom",
   "retailPrice": 16.0,
   "lastUpdated": "2026-06-12",
   "marketData": {
-    "avgSoldPrice": 36.25,
-    "medianSoldPrice": 35.72,
-    "fairMarketValue": 35.72,
-    "lowSoldPrice": 27.46,
-    "highSoldPrice": 51.75,
-    "totalSold": 42,
-    "volatility": "Medium",
-    "volatilityValue": 0.166,
-    "roi": 126.5,
-    "riskScore": 55,
-    "cleanedSampleSize": 42,
+    "avgSoldPrice": 17.42,
+    "medianSoldPrice": 15.5,
+    "fairMarketValue": 15.5,
+    "lowSoldPrice": 8.99,
+    "highSoldPrice": 31.3,
+    "totalSold": 34,
+    "volatility": "High",
+    "volatilityValue": 0.301,
+    "roi": 8.9,
+    "riskScore": 56,
+    "cleanedSampleSize": 34,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+7.1%",
-    "trend": "range",
-    "trend_zh": "区间震荡",
-    "signal": "hold",
-    "signal_zh": "持有跟踪",
-    "signal_en": "Track / hold",
-    "dataSource": "demo"
+    "priceChange7d": "-53.5%",
+    "trend": "cooldown",
+    "trend_zh": "热度回落",
+    "signal": "value",
+    "signal_zh": "低溢价建仓候选",
+    "signal_en": "Low-premium candidate",
+    "dataSource": "live",
+    "provider": "ebay-local"
   },
   "priceHistory": [
     {
@@ -166,12 +167,13 @@
     },
     {
       "date": "2026-06-12",
-      "avg": 35.72
+      "avg": 15.5
     }
   ],
-  "dataSource": "demo",
+  "dataSource": "live",
+  "dataProvider": "ebay-local",
   "sources": [
-    "demo-secondary-market"
+    "eBay completed listings local scraper"
   ],
   "story": {
     "year": "2023",
@@ -246,6 +248,6 @@
       "color": "#50e3c2"
     }
   ],
-  "notes_zh": "价格为商品历史成交聚合结果，不构成投资建议。请综合手续费判断。",
-  "notes_en": "Prices are API-aggregated metrics, not financial advice. Validate parameters before trading."
+  "notes_zh": "价格为 eBay 已完成成交页面本地采集结果，不构成投资建议。请综合品相、运费、税费和平台手续费判断。",
+  "notes_en": "Prices are locally collected from eBay completed listings, not financial advice. Validate condition, shipping, tax, and fees before trading."
 }

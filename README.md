@@ -14,8 +14,8 @@ GitHub 仓库地址：<https://github.com/wolf0x0x/poptracker>
 - 二级市场指标：均价、中位数、七日涨跌、成交量、ROI、风险分。
 - 动态 SEO：详情页自动注入 `Product Schema`，用于搜索引擎理解成交价区间。
 - AdSense：已接入发布者 `ca-pub-8695398658548679`，广告位 slot 需在 AdSense 后台创建后补入。
-- 伪纯前端架构：GitHub Actions 每日拉取 SoldComps，前端读取同域 `public/data/*.json`。
-- Python 数据生成脚本：多币种折算、IQR 异常值清洗、指标聚合、SoldComps GET 接口兼容、live/demo 数据源标记。
+- 伪纯前端架构：前端读取同域 `public/data/*.json`，市场数据由本地私有 eBay completed-sales 采集流程生成后推送。
+- Python 数据生成脚本：多币种折算、IQR 异常值清洗、指标聚合、eBay completed-sales 缓存数据源标记。
 
 ## 产品执行步骤
 
@@ -97,85 +97,17 @@ python3 scripts/fetch_and_clean.py
 
 ## 真实数据接入
 
-生产环境推荐通过环境变量或 GitHub Secret 注入，不要把真实 Token 写入代码仓库。
-
-### GitHub Actions / GitHub Pages 数据生成
-
-在 GitHub 仓库中配置：
-
-- `Settings -> Secrets and variables -> Actions -> Secrets`
-- 新建 `SOLDCOMPS_API_KEY`
-
-默认生产接口为：
-
-```text
-GET https://api.sold-comps.com/v1/scrape
-Authorization: Bearer SOLDCOMPS_API_KEY
-```
-
-如果你的 sold-comps 兼容 API 地址不是默认值，可以在：
-
-- `Settings -> Secrets and variables -> Actions -> Variables`
-- 新建 `SOLDCOMPS_ENDPOINT`
-- 可选新建 `SOLDCOMPS_METHOD`，默认 SoldComps 为 `GET`
-- 可选新建 `SOLDCOMPS_COUNT`，默认每个 SKU 拉取 10 条成交记录，降低 429 风险
-- 可选新建 `SOLDCOMPS_REQUEST_DELAY`，默认每个 SKU 请求后等待 1.5 秒
-- 可选新建 `SOLDCOMPS_MONTHLY_QUOTA`，默认每月最多 50 次请求
-- 可选新建 `SOLDCOMPS_DAILY_BUDGET`，默认每天最多 1 次请求
-- 可选新建 `SOLDCOMPS_RUN_BUDGET`，默认每次工作流最多 1 次请求
-
-`Daily Pop Mart Price Sync` 会每天定时运行，但默认只更新 1 个 SKU，并把剩余 SKU 继续使用已有缓存数据。脚本会把月度请求量、每日请求量和 SKU 最近同步状态写入 `public/data/sync_state.json`，用于在后续运行中轮询更新 SKU，避免 50 个 SKU 在同一天耗尽 SoldComps 额度。
-
-### 本地脚本 `.env`
-
-复制 `.env.example` 为 `.env`，填入真实 Token：
-
-```bash
-cp .env.example .env
-```
-
-```text
-SOLDCOMPS_API_KEY=your_real_token
-```
-
-`.env` 已在 `.gitignore` 中排除，只用于本机运行 `python3 scripts/fetch_and_clean.py`。
-
-生产环境 GitHub Actions 已启用严格模式：
-
-```text
-LIVE_DATA_REQUIRED=true
-ALLOW_DEMO_DATA=false
-```
-
-当 sold-comps 兼容接口失败时，脚本只会保留已有的 `live` JSON 数据；如果本地只有 `demo` 数据或没有旧数据，则工作流失败，避免把 demo 数据伪装成真实行情。
-如果月度或每日预算已经用完，脚本不会继续请求 SoldComps；如果接口返回 HTTP 429，脚本会立即停止剩余 SKU 请求，保留已有数据并记录同步状态，避免继续消耗 API 额度。
-
-脚本默认调用 SoldComps 同步接口：
-
-```text
-https://api.sold-comps.com/v1/scrape
-```
-
-脚本预期接口返回 JSON 数组，或返回带 `results` / `items` 字段的对象。每条记录可以包含：
-
-```json
-{
-  "soldPrice": 79.99,
-  "soldCurrency": "USD",
-  "shippingPrice": 5.5,
-  "endedAt": "2026-06-11T18:42:00.000Z",
-  "source": "eBay completed sales"
-}
-```
+正式版数据源已切换为 eBay completed-sales 本地缓存流程。抓取程序和浏览器快照只保存在本机 ignored 目录 `outputs/local_ebay/`，不会推送到 GitHub；仓库只发布清洗后的 `public/data/*.json` 静态数据。
 
 生产数据刷新流向为：
 
 ```text
-GitHub Actions / 本地脚本 -> 组装简洁关键词（Pop Mart + IP + 系列 + 款式关键词）-> SoldComps /v1/scrape
-                         <- 返回成交列表，脚本过滤并计算中位数，写入 public/data/*.json <-
+本地浏览器自动打开 eBay 已售页面 -> 保存可见成交文本到 outputs/local_ebay/snapshots/
+                              -> 本地私有脚本清洗价格、计算 FMV/ROI/趋势
+                              -> 只提交 public/data/*.json 到 GitHub Pages
 ```
 
-正式版前端不暴露手动输入密钥入口，只读取已经生成的静态 JSON。真实密钥仅应放在 GitHub Actions Secret 或本机 `.env`。
+正式版前端不暴露任何 API 密钥入口，只读取已经生成的静态 JSON。
 
 ## GitHub Pages 部署
 
@@ -183,7 +115,7 @@ GitHub Actions / 本地脚本 -> 组装简洁关键词（Pop Mart + IP + 系列 
 2. 进入 `Settings -> Pages`。
 3. 选择 `Deploy from a branch`。
 4. 分支选择 `main`，目录选择 `/public`。
-5. 等待 `Daily Pop Mart Price Sync` 每日自动轮询更新；若当天 SoldComps 额度已用完，不要手动触发该工作流。
+5. 数据更新由本机私有自动化推送 `public/data/*.json` 后触发 Pages 部署。
 
 ## 免责声明
 

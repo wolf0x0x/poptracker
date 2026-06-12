@@ -19,29 +19,30 @@
   ],
   "refreshTier": "hot",
   "refreshIntervalHours": 24,
-  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Crybaby%22+AND+%22Powerpuff+Girls%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
+  "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+CRYBABY+Powerpuff+Girls",
   "retailPrice": 17.99,
   "lastUpdated": "2026-06-12",
   "marketData": {
-    "avgSoldPrice": 34.22,
-    "medianSoldPrice": 34.4,
-    "fairMarketValue": 34.4,
-    "lowSoldPrice": 23.22,
-    "highSoldPrice": 47.64,
-    "totalSold": 41,
-    "volatility": "Low",
-    "volatilityValue": 0.153,
-    "roi": 90.2,
-    "riskScore": 49,
-    "cleanedSampleSize": 41,
+    "avgSoldPrice": 32.53,
+    "medianSoldPrice": 25.0,
+    "fairMarketValue": 25.0,
+    "lowSoldPrice": 8.0,
+    "highSoldPrice": 81.0,
+    "totalSold": 35,
+    "volatility": "High",
+    "volatilityValue": 0.571,
+    "roi": 80.8,
+    "riskScore": 72,
+    "cleanedSampleSize": 35,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+6.5%",
-    "trend": "range",
-    "trend_zh": "区间震荡",
+    "priceChange7d": "-22.6%",
+    "trend": "cooldown",
+    "trend_zh": "热度回落",
     "signal": "hold",
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
-    "dataSource": "demo"
+    "dataSource": "live",
+    "provider": "ebay-local"
   },
   "priceHistory": [
     {
@@ -166,12 +167,13 @@
     },
     {
       "date": "2026-06-12",
-      "avg": 34.4
+      "avg": 25.0
     }
   ],
-  "dataSource": "demo",
+  "dataSource": "live",
+  "dataProvider": "ebay-local",
   "sources": [
-    "demo-secondary-market"
+    "eBay completed listings local scraper"
   ],
   "story": {
     "year": "2024",
@@ -246,6 +248,6 @@
       "color": "#191c1d"
     }
   ],
-  "notes_zh": "价格为商品历史成交聚合结果，不构成投资建议。请综合手续费判断。",
-  "notes_en": "Prices are API-aggregated metrics, not financial advice. Validate parameters before trading."
+  "notes_zh": "价格为 eBay 已完成成交页面本地采集结果，不构成投资建议。请综合品相、运费、税费和平台手续费判断。",
+  "notes_en": "Prices are locally collected from eBay completed listings, not financial advice. Validate condition, shipping, tax, and fees before trading."
 }
