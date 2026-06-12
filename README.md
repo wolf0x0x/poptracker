@@ -140,7 +140,7 @@ LIVE_DATA_REQUIRED=true
 ALLOW_DEMO_DATA=false
 ```
 
-当 sold-comps 兼容接口失败时，脚本会优先保留已有 JSON 数据；如果没有旧数据可保留，则工作流失败，避免把 demo 数据伪装成真实行情。
+当 sold-comps 兼容接口失败时，脚本只会保留已有的 `live` JSON 数据；如果本地只有 `demo` 数据或没有旧数据，则工作流失败，避免把 demo 数据伪装成真实行情。
 
 脚本默认调用 SoldComps 同步接口：
 
@@ -163,7 +163,7 @@ https://api.sold-comps.com/v1/scrape
 生产数据刷新流向为：
 
 ```text
-GitHub Actions / 本地脚本 -> 组装 Pop Mart + IP + 系列 + 款式关键词 -> SoldComps /v1/scrape
+GitHub Actions / 本地脚本 -> 组装简洁关键词（Pop Mart + IP + 系列 + 款式关键词）-> SoldComps /v1/scrape
                          <- 返回成交列表，脚本过滤并计算中位数，写入 public/data/*.json <-
 ```
 

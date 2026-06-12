@@ -194,6 +194,39 @@ def aggregate(raw_listings, retail_price, negative_keywords=None):
         "valuationMethod": "IQR + 10% trimmed median",
     }
 
+def build_api_keyword(item):
+    parts = ["Pop Mart", item.get("ip", ""), item.get("series", ""), item.get("keywords", "")]
+    seen = set()
+    words = []
+    for part in parts:
+        for token in str(part).replace("·", " ").split():
+            clean = token.strip('"()')
+            key = clean.lower()
+            if clean and key not in seen and clean.upper() not in {"AND", "OR"}:
+                seen.add(key)
+                words.append(clean)
+    return " ".join(words)
+
+def extract_listing_items(response_payload):
+    if isinstance(response_payload, list):
+        return response_payload
+    if not isinstance(response_payload, dict):
+        return []
+    for key in ("results", "items", "listings", "soldItems", "sold_items", "comps", "data"):
+        value = response_payload.get(key)
+        if isinstance(value, list):
+            return value
+        if isinstance(value, dict):
+            nested = extract_listing_items(value)
+            if nested:
+                return nested
+    item = response_payload.get("item")
+    if isinstance(item, list):
+        return item
+    if isinstance(item, dict):
+        return [item]
+    return []
+
 def fetch_live_listings(item):
     """
     实时调用接口。只需在项目的 .env 文件配置真实密钥，即可无缝全面停用硬编码模拟。
@@ -205,7 +238,7 @@ def fetch_live_listings(item):
 
     url = os.getenv("SOLDCOMPS_ENDPOINT", "https://api.sold-comps.com/v1/scrape")
     method = os.getenv("SOLDCOMPS_METHOD", "GET" if "sold-comps.com" in url else "POST").upper()
-    keyword = item.get("search_string") or f"Pop Mart {item['ip']} {item['series']} {item['keywords']} blind box loose"
+    keyword = build_api_keyword(item)
     payload = {"keyword": keyword, "count": 40, "page": 1, "ebaySite": os.getenv("SOLDCOMPS_EBAY_SITE", "ebay.com")}
     headers = {"Authorization": f"Bearer {api_key}", "Accept": "application/json"}
 
@@ -218,11 +251,7 @@ def fetch_live_listings(item):
         response.raise_for_status()
         response_payload = response.json()
         
-        # 兼容 Apify 不同的结果集包裹方式
-        if isinstance(response_payload, list):
-            items_list = response_payload
-        else:
-            items_list = response_payload.get("results", response_payload.get("items", response_payload.get("item", [])))
+        items_list = extract_listing_items(response_payload)
             
         if items_list:
             print(f"[LIVE FETCH] Successfully retrieved {len(items_list)} items for {item['sku']}")
@@ -335,6 +364,12 @@ def index_item_from_detail(detail):
         "lastUpdated": detail.get("lastUpdated"),
     }
 
+def detail_is_live(detail):
+    if not detail:
+        return False
+    market = detail.get("marketData", {})
+    return detail.get("dataSource") == "live" or market.get("dataSource") == "live"
+
 def generate_default_story(item, today):
     ip = item.get("ip", "Pop Mart")
     series = item.get("series", item.get("name_en", ""))
@@ -426,12 +461,12 @@ def main():
 
         file_path = DATA_DIR / f"{item['sku']}.json"
 
-        # 生产环境不再静默回滚到 demo。若 live 失败且已有旧数据，则保留旧数据。
+        # 生产环境不再静默回滚到 demo。若 live 失败，只保留旧 live 数据。
         raw, source_status = fetch_live_listings(item)
         data_source = "live" if source_status == "live" and raw else "demo"
         if not raw:
             existing = load_existing_detail(file_path)
-            if live_required and existing:
+            if live_required and detail_is_live(existing):
                 preserved.append(item["sku"])
                 index.append(index_item_from_detail(existing))
                 print(f"[STALE] Preserved existing market data for {item['sku']} after {source_status}.")
