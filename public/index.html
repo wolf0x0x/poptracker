@@ -637,6 +637,7 @@
         const { labels, data } = marketIndexSeries();
 
         if (state.chart) state.chart.destroy();
+        if (!window.Chart) return;
         state.chart = new Chart(document.getElementById("marketChart"), {
           type: "line",
           data: {
@@ -922,6 +923,7 @@
         const data = history.length ? history.map((point) => point.avg) : [item.fairMarketValue];
 
         if (state.detailChart) state.detailChart.destroy();
+        if (!window.Chart) return;
         state.detailChart = new Chart(document.getElementById("historyChart"), {
           type: "line",
           data: {
