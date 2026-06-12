@@ -670,7 +670,7 @@
             `;
           })
           .join("");
-        document.querySelectorAll("#feedList [data-sku]").forEach((b) => b.addEventListener("click", () => navigateToSeries(b.dataset.sku)));
+        document.querySelectorAll("#feedList [data-sku]").forEach((b) => b.addEventListener("click", () => loadDetail(b.dataset.sku)));
       }
 
       function renderChips() {
@@ -746,7 +746,7 @@
         }
 
         document.getElementById("bentoGrid").innerHTML = cardsHtmlArray.join("");
-        document.querySelectorAll("#bentoGrid [data-sku]").forEach((b) => b.addEventListener("click", () => navigateToSeries(b.dataset.sku)));
+        document.querySelectorAll("#bentoGrid [data-sku]").forEach((b) => b.addEventListener("click", () => loadDetail(b.dataset.sku)));
 
         try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {}
       }
@@ -763,11 +763,13 @@
                 <span class="${item.roi >= 0 ? "up" : "down"}">${item.roi.toFixed(0)}%</span>
               </button>
             `).join("");
-        document.querySelectorAll("#rankList [data-sku]").forEach((b) => b.addEventListener("click", () => navigateToSeries(b.dataset.sku)));
+        document.querySelectorAll("#rankList [data-sku]").forEach((b) => b.addEventListener("click", () => loadDetail(b.dataset.sku)));
       }
 
       function navigateToSeries(sku) {
-        window.location.hash = `series/${encodeURIComponent(sku)}`;
+        // Series detail page routing is temporarily disabled for the PC homepage.
+        // Homepage cards now open the price-trend drawer via loadDetail(sku).
+        loadDetail(sku);
       }
 
       function showAppPage() {
