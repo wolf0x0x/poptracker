@@ -415,6 +415,7 @@
         slotLeaderboard: "",
         slotSidebar: "",
         slotInFeed: "",
+        assetVersion: "20260612-thumb-v2",
         soldCompsEndpoint: "https://api.sold-comps.com/v1/scrape",
       };
 
@@ -543,13 +544,36 @@
         return currentLang === "zh" ? "演示数据" : "Demo data";
       }
 
+      function assetUrl(path) {
+        if (!path || /^https?:\/\//.test(path)) return path;
+        const separator = path.includes("?") ? "&" : "?";
+        return `${path}${separator}v=${CONFIG.assetVersion}`;
+      }
+
+      function thumbnailUrl(item) {
+        return item.sku ? assetUrl(`/assets/sku/thumbs/${item.sku}.webp`) : assetUrl(item.image);
+      }
+
       function imageMarkup(item, extraClass = "", options = {}) {
         if (!item.image) return "";
-        const thumb = item.sku ? `/assets/sku/thumbs/${item.sku}.webp` : item.image;
-        const src = options.full ? item.image : thumb;
+        const src = options.full ? assetUrl(item.image) : thumbnailUrl(item);
         const loading = options.eager ? "eager" : "lazy";
         const priority = options.eager ? "high" : "auto";
-        return `<img src="${src}" data-full="${item.image}" alt="${localName(item)}" class="${extraClass}" width="720" height="720" loading="${loading}" fetchpriority="${priority}" decoding="async" onload="this.dataset.loaded='true'" onerror="if(!this.dataset.fallback&&this.dataset.full){this.dataset.fallback='1';this.src=this.dataset.full}else{this.remove()}">`;
+        return `<img src="${src}" data-full="${assetUrl(item.image)}" alt="${localName(item)}" class="${extraClass}" width="720" height="720" loading="${loading}" fetchpriority="${priority}" decoding="async" onload="this.dataset.loaded='true'" onerror="if(!this.dataset.fallback&&this.dataset.full){this.dataset.fallback='1';this.src=this.dataset.full}else{this.remove()}">`;
+      }
+
+      function preloadThumbs(items) {
+        items.slice(0, 6).forEach((item) => {
+          const href = thumbnailUrl(item);
+          if (!href || document.querySelector(`link[rel="preload"][href="${href}"]`)) return;
+          const link = document.createElement("link");
+          link.rel = "preload";
+          link.as = "image";
+          link.href = href;
+          link.type = "image/webp";
+          link.fetchPriority = "high";
+          document.head.appendChild(link);
+        });
       }
 
       function normalizeItem(raw) {
@@ -960,6 +984,7 @@
           const response = await fetch(`./data/index.json?ts=${Date.now()}`);
           if (!response.ok) throw new Error();
           state.items = (await response.json()).map(normalizeItem);
+          preloadThumbs(state.items);
           applyLanguage();
           route();
         } catch {
