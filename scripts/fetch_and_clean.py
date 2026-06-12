@@ -236,8 +236,8 @@ def fetch_live_listings(item):
         print(f"[INFO] Missing API Key for {item['sku']}. Using sandbox sample pipe.")
         return [], "missing_api_key"
 
-    url = os.getenv("SOLDCOMPS_ENDPOINT", "https://api.sold-comps.com/v1/scrape")
-    method = os.getenv("SOLDCOMPS_METHOD", "GET" if "sold-comps.com" in url else "POST").upper()
+    url = os.getenv("SOLDCOMPS_ENDPOINT") or "https://api.sold-comps.com/v1/scrape"
+    method = (os.getenv("SOLDCOMPS_METHOD") or ("GET" if "sold-comps.com" in url else "POST")).upper()
     keyword = build_api_keyword(item)
     payload = {"keyword": keyword, "count": 40, "page": 1, "ebaySite": os.getenv("SOLDCOMPS_EBAY_SITE", "ebay.com")}
     headers = {"Authorization": f"Bearer {api_key}", "Accept": "application/json"}
