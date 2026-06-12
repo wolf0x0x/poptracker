@@ -297,9 +297,21 @@
       "philosophy": "结合了空间场景感，为每一款盲盒赋予了立体互动叙事。"
     },
     "characters": [
-      { "name": "小木屋躲避者", "rarity": "常规款", "color": "#b8e986" },
-      { "name": "面具精灵", "rarity": "常规款", "color": "#b8e986" },
-      { "name": "隐藏款-悄悄窥视", "rarity": "概率稀缺", "color": "#191c1d" }
+      {
+        "name": "小木屋躲避者",
+        "rarity": "常规款",
+        "color": "#b8e986"
+      },
+      {
+        "name": "面具精灵",
+        "rarity": "常规款",
+        "color": "#b8e986"
+      },
+      {
+        "name": "隐藏款-悄悄窥视",
+        "rarity": "概率稀缺",
+        "color": "#191c1d"
+      }
     ]
   },
   {
@@ -1353,10 +1365,18 @@
     "rarity": "成长 IP",
     "rarity_en": "Emerging IP",
     "color": "#8f6745",
-    "image": "/assets/sku/HIRONO-RESHAPE-04.webp",
+    "image": "/assets/stockx/HIRONO-RESHAPE-04/01-hirono-reshape.avif",
     "demo_multiplier": 1.8,
     "story": null,
-    "characters": null
+    "characters": [
+      {
+        "name": "Hirono Reshape",
+        "rarity": "隐藏/特别款",
+        "color": "#8f6745",
+        "image": "/assets/stockx/HIRONO-RESHAPE-04/01-hirono-reshape.avif",
+        "source_url": "https://images.stockx.com/images/Pop-Mart-Hirono-Reshape-Figure.jpg"
+      }
+    ]
   },
   {
     "sku": "HIRONO-SHELTER-05",

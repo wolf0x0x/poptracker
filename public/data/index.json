@@ -2790,7 +2790,7 @@
     "rarity_zh": "成长 IP",
     "rarity_en": "Emerging IP",
     "color": "#8f6745",
-    "image": "/assets/sku/HIRONO-RESHAPE-04.webp",
+    "image": "/assets/stockx/HIRONO-RESHAPE-04/01-hirono-reshape.avif",
     "searchString": "\"Hirono\" AND \"Reshape\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=%22Hirono%22+AND+%22Reshape%22+AND+%22Pop+Mart%22+-box+-card+-preorder+-custom+-fake+-replica",
@@ -2814,44 +2814,11 @@
     },
     "characters": [
       {
-        "name": "HIRONO Reshape·经典核心款",
-        "rarity": "常规款",
-        "color": "#8f6745"
-      },
-      {
-        "name": "HIRONO Reshape·幻影午夜款",
-        "rarity": "常规款",
-        "color": "#8f6745"
-      },
-      {
-        "name": "HIRONO Reshape·流光原色款",
-        "rarity": "常规款",
-        "color": "#8f6745"
-      },
-      {
-        "name": "HIRONO Reshape·复古复刻款",
-        "rarity": "常规款",
-        "color": "#8f6745"
-      },
-      {
-        "name": "HIRONO Reshape·马戏巡游款",
-        "rarity": "常规款",
-        "color": "#8f6745"
-      },
-      {
-        "name": "HIRONO Reshape·异色隐藏款",
-        "rarity": "概率稀缺",
-        "color": "#191c1d"
-      },
-      {
-        "name": "HIRONO Reshape·假日限定款",
-        "rarity": "主题款",
-        "color": "#8f6745"
-      },
-      {
-        "name": "HIRONO Reshape·典藏尊享款",
-        "rarity": "高热度",
-        "color": "#8f6745"
+        "name": "Hirono Reshape",
+        "rarity": "隐藏/特别款",
+        "color": "#8f6745",
+        "image": "/assets/stockx/HIRONO-RESHAPE-04/01-hirono-reshape.avif",
+        "source_url": "https://images.stockx.com/images/Pop-Mart-Hirono-Reshape-Figure.jpg"
       }
     ],
     "lastUpdated": "2026-06-12"

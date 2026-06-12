@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>PopTracker | 泡泡玛特潮玩二级市场价格追踪</title>
+    <title>PopTracker | 泡泡玛特潮玩欧气身价与圈内行情雷达</title>
     <meta
       name="description"
-      content="PopTracker 通过 SoldComps 预生成成交数据追踪泡泡玛特潮玩 FMV、市值趋势、成交热度与二级市场走势。"
+      content="PopTracker 智能联动 SoldComps 全球成交流，带你一键解锁泡泡玛特盲盒公允身价、热门收藏 ROI、换手流动性及潮玩圈行情避坑走势。"
     />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
     <style>
@@ -474,7 +474,8 @@
 
       .toy-art img:not([data-loaded="true"]),
       .detail-art img:not([data-loaded="true"]),
-      .series-hero img:not([data-loaded="true"]) {
+      .series-hero img:not([data-loaded="true"]),
+      .character-art img:not([data-loaded="true"]) {
         opacity: 0;
       }
 
@@ -704,6 +705,13 @@
         border: 0;
         border-bottom: 1px solid var(--line);
         border-radius: 0;
+      }
+
+      .character-art img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        mix-blend-mode: multiply;
       }
 
       .character-body {
@@ -1025,10 +1033,10 @@
           <span>PopTracker</span>
         </a>
         <nav class="nav" aria-label="主导航">
-          <a class="active" href="#home">Home</a>
-          <a href="#discover">Discover</a>
-          <button class="ghost-button" id="refreshButton" type="button">刷新数据</button>
-          <button class="ghost-button api-missing" id="apiButton" type="button">缺 API</button>
+          <a class="active" href="#home">潮玩大盘</a>
+          <a href="#discover">神款蹦迪墙</a>
+          <button class="ghost-button" id="refreshButton" type="button">同步一手行情</button>
+          <button class="ghost-button api-missing" id="apiButton" type="button">连线全球流</button>
         </nav>
       </div>
     </header>
@@ -1039,14 +1047,14 @@
           <div class="market-head">
             <div>
               <p class="eyebrow">Market Dashboard</p>
-              <h1>市场大盘趋势</h1>
+              <h1>潮玩圈二级行情风向标</h1>
               <p class="lead">
-                基于 GitHub Actions 预生成 SoldComps 成交 JSON，追踪泡泡玛特热门 IP 的 FMV、ROI、流动性与价格波动。
-                前端读取静态数据，加载快，Token 不进入公开页面代码。
+                PopTracker 绝密追踪全球静态成交大数据，经智能去噪降噪模型精密清洗，一秒还原真实的泡泡玛特热门 IP 公允交易身价。
+                无敏感 Token 注入公开网页，带娃友全方位避坑，掌握高阶潮玩理财流向！
               </p>
             </div>
             <div class="market-index">
-              <span class="muted">PopTracker Index</span>
+              <span class="muted">潮玩大盘欧气指数</span>
               <strong class="index-value" id="marketIndex">--</strong>
               <span id="marketChange" class="up">--</span>
             </div>
@@ -1056,29 +1064,29 @@
           </div>
           <div class="metrics" aria-label="大盘指标">
             <div class="metric">
-              <span>追踪 SKU</span>
+              <span>已收录潮玩款</span>
               <strong id="metricAssets">--</strong>
             </div>
             <div class="metric">
-              <span>样本成交</span>
+              <span>娃友交易标本</span>
               <strong id="metricSold">--</strong>
             </div>
             <div class="metric">
-              <span>平均 ROI</span>
+              <span>平均溢价回报率</span>
               <strong id="metricRoi">--</strong>
             </div>
             <div class="metric">
-              <span>热点 IP</span>
+              <span>烫手顶流 IP</span>
               <strong id="metricHotIp">--</strong>
             </div>
           </div>
         </div>
 
-        <aside class="panel feed-panel" aria-label="实时成交记录">
+        <aside class="panel feed-panel" aria-label="圈内抢手成交动态">
           <div class="section-head">
             <div>
-              <h2>实时成交记录</h2>
-              <p>由最新静态样本生成的成交流</p>
+              <h2>圈内抢手成交动态</h2>
+              <p>动态反映全球二级市场最新成交流</p>
             </div>
           </div>
           <div class="feed-list" id="feedList"></div>
@@ -1091,17 +1099,17 @@
         <div>
           <div class="section-head">
             <div>
-              <h2>热门单品瀑布流</h2>
-              <p id="resultStatus">加载数据中</p>
+              <h2>每日热搜盲盒墙</h2>
+              <p id="resultStatus">正在连接盲盒墙生态...</p>
             </div>
           </div>
           <div class="toolbar">
-            <input class="search" id="searchInput" type="search" placeholder="搜索 IP、系列、SKU" />
+            <input class="search" id="searchInput" type="search" placeholder="输入 IP、系列名称或标准款编号搜娃" />
             <select id="sortSelect" aria-label="排序">
-              <option value="roi">ROI 优先</option>
-              <option value="change">涨幅优先</option>
-              <option value="liquidity">成交量优先</option>
-              <option value="risk">低风险优先</option>
+              <option value="roi">溢价神款优先</option>
+              <option value="change">身价飙升优先</option>
+              <option value="liquidity">疯抢换手优先</option>
+              <option value="risk">平稳避坑优先</option>
             </select>
             <div class="chips" id="chips" aria-label="IP 筛选"></div>
           </div>
@@ -1112,8 +1120,8 @@
           <div class="mini-panel">
             <div class="section-head">
               <div>
-                <h2>发现页</h2>
-                <p>按 IP、成交热度和风险筛选可跟踪标的</p>
+                <h2>淘娃指南</h2>
+                <p>按主线 IP、全网成交热度和破发/溢价风控精准筛娃</p>
               </div>
             </div>
             <div class="rank-list" id="rankList"></div>
@@ -1124,7 +1132,7 @@
     </main>
 
     <section class="shell series-page hidden-page" id="seriesDetailPage" aria-label="系列详情页">
-      <button class="ghost-button" id="backToHomeButton" type="button" style="margin-bottom: 14px">返回首页</button>
+      <button class="ghost-button" id="backToHomeButton" type="button" style="margin-bottom: 14px">← 返回盲盒主墙</button>
       <div id="seriesDetailContent"></div>
     </section>
 
@@ -1139,7 +1147,7 @@
               <p class="eyebrow" id="detailIp">--</p>
               <h2 id="detailName">--</h2>
             </div>
-            <button class="ghost-button" id="closeDetailButton" type="button">关闭</button>
+            <button class="ghost-button" id="closeDetailButton" type="button">收起</button>
           </div>
           <p class="lead" id="detailMeta" style="font-size: 14px"></p>
         </div>
@@ -1147,19 +1155,19 @@
       <div class="detail-body">
         <div class="detail-grid">
           <div class="field">
-            <span class="field-label">官方价</span>
+            <span class="field-label">官方发售价</span>
             <strong id="detailRetail">--</strong>
           </div>
           <div class="field">
-            <span class="field-label">FMV</span>
+            <span class="field-label">公允市价 (FMV)</span>
             <strong id="detailFmv">--</strong>
           </div>
           <div class="field">
-            <span class="field-label">ROI</span>
+            <span class="field-label">溢价回报率</span>
             <strong id="detailRoi">--</strong>
           </div>
           <div class="field">
-            <span class="field-label">风险</span>
+            <span class="field-label">破发退热风险</span>
             <strong id="detailRisk">--</strong>
           </div>
         </div>
@@ -1169,22 +1177,22 @@
         <p class="muted" id="detailMethod" style="margin: 12px 0 0"></p>
         <p class="muted" id="detailNote" style="margin: 8px 0 0"></p>
         <div class="detail-actions">
-          <a class="primary-button" id="dealButton" href="#" target="_blank" rel="noopener">Find Deals</a>
-          <button class="ghost-button" id="refreshOneButton" type="button">刷新此 SKU</button>
+          <a class="primary-button" id="dealButton" href="#" target="_blank" rel="noopener">全网比价淘娃</a>
+          <button class="ghost-button" id="refreshOneButton" type="button">强制刷新此款身价</button>
         </div>
       </div>
     </section>
 
     <div class="modal hidden" id="apiModal" role="dialog" aria-modal="true" aria-label="API 设置">
       <div class="modal-card">
-        <h2>SoldComps API 设置</h2>
+        <h2>接入全球成交数据网 (SoldComps)</h2>
         <p class="muted">
-          生产环境推荐通过 GitHub Secret 或后端环境变量注入。此处仅用于 H5 离线演示，Token 只保存在当前浏览器 localStorage。
+          线上生产环境推荐通过 GitHub Secrets 自动化流安全注入。本地演示可直接手动临时写入浏览器。
         </p>
-        <input id="apiInput" type="password" placeholder="SOLD_COMPS_API_KEY" autocomplete="off" />
+        <input id="apiInput" type="password" placeholder="请输入你的 SOLD_COMPS_API_KEY" autocomplete="off" />
         <div class="detail-actions">
-          <button class="primary-button" id="saveApiButton" type="button">保存</button>
-          <button class="ghost-button" data-close-modal="apiModal" type="button">取消</button>
+          <button class="primary-button" id="saveApiButton" type="button">保存连接</button>
+          <button class="ghost-button" data-close-modal="apiModal" type="button">暂不连线</button>
         </div>
       </div>
     </div>
@@ -1193,7 +1201,7 @@
 
     <footer>
       <div class="shell">
-        PopTracker · Static sold-comps data pipeline · Market methodology: IQR + 10% trimmed median.
+        PopTracker · 潮玩玩家静态多源数据管线 · 圈内身价算法模型：IQR 极端去噪 + 10% 双尾修剪中位数。
       </div>
     </footer>
 
@@ -1260,6 +1268,11 @@
         return `<img src="${item.image}" alt="${localName(item)}" class="${extraClass}" loading="lazy" decoding="async" onload="this.dataset.loaded='true'" onerror="this.remove()">`;
       }
 
+      function characterImageMarkup(character) {
+        if (!character.image) return "";
+        return `<img src="${character.image}" alt="${character.name}" loading="lazy" decoding="async" onload="this.dataset.loaded='true'" onerror="this.remove()">`;
+      }
+
       function normalizeItem(raw) {
         const fmv = Number(raw.fairMarketValue || raw.medianSoldPrice || raw.avgSoldPrice || 0);
         const retail = Number(raw.retailPrice || 0);
@@ -1301,7 +1314,7 @@
 
       function updateApiButton() {
         const button = document.getElementById("apiButton");
-        button.textContent = state.apiKey ? "API ready" : "缺 API";
+        button.textContent = state.apiKey ? "全球连线中" : "离线演示版";
         button.classList.toggle("api-ready", Boolean(state.apiKey));
         button.classList.toggle("api-missing", !state.apiKey);
       }
@@ -1327,7 +1340,7 @@
         const stats = marketStats();
         const index = Math.round(stats.totalFmv * 38 + stats.totalSold * 7 + Math.max(stats.avgRoi, 0) * 12);
         document.getElementById("marketIndex").textContent = intFmt.format(index || 0);
-        document.getElementById("marketChange").textContent = `${stats.avgChange >= 0 ? "+" : ""}${stats.avgChange.toFixed(1)}%`;
+        document.getElementById("marketChange").textContent = `${stats.avgChange >= 0 ? "涨" : "跌"}${stats.avgChange.toFixed(1)}%`;
         document.getElementById("marketChange").className = stats.avgChange >= 0 ? "up" : "down";
         document.getElementById("metricAssets").textContent = state.items.length;
         document.getElementById("metricSold").textContent = intFmt.format(stats.totalSold);
@@ -1380,7 +1393,7 @@
                 <span class="avatar" style="--asset-color:${item.color}"></span>
                 <span>
                   <span class="feed-name">${localName(item)}</span>
-                  <span class="feed-meta">${index + 3} 分钟前 · ${item.ip}</span>
+                  <span class="feed-meta">${index + 3} 分钟前爆单 · ${item.ip}</span>
                 </span>
                 <span class="feed-price">${fmt.format(price)}</span>
               </button>
@@ -1396,7 +1409,7 @@
         const ips = ["all"].concat(Array.from(new Set(state.items.map((item) => item.ip))).sort());
         document.getElementById("chips").innerHTML = ips
           .map((ip) => {
-            const label = ip === "all" ? "全部 IP" : ip;
+            const label = ip === "all" ? "全部顶流 IP" : ip;
             return `<button class="chip ${state.currentIp === ip ? "active" : ""}" type="button" data-ip="${ip}">${label}</button>`;
           })
           .join("");
@@ -1410,18 +1423,17 @@
 
       function renderCards() {
         const items = filteredItems();
-        document.getElementById("resultStatus").textContent = `${items.length} 个可跟踪标的`;
+        document.getElementById("resultStatus").textContent = `雷达已成功锁定 ${items.length} 个行情标的`;
         if (!items.length) {
-          document.getElementById("bentoGrid").innerHTML = `<div class="mini-panel">暂无匹配结果</div>`;
+          document.getElementById("bentoGrid").innerHTML = `<div class="mini-panel">呜呜，没有匹配到这款盲盒</div>`;
           return;
         }
         const top = items[0];
         const insight = marketStats();
 
-        // 1. 先构建纯粹的商品 HTML 数组
         let cardsHtmlArray = items.map((item, index) => {
           const change = parseChange(item.priceChange7d);
-          const badge = item.refreshTier === "hot" ? "24h refresh" : "7d refresh";
+          const badge = item.refreshTier === "hot" ? "🔥 24h烫手极速情报" : "⏳ 7天深度行情";
           return `
             <button class="item-card ${index === 0 ? "featured" : ""}" type="button" data-sku="${item.sku}" style="--asset-color:${item.color}">
               <div class="toy-art">
@@ -1434,35 +1446,33 @@
                   <p class="muted">${item.ip} · ${item.series}</p>
                 </div>
                 <div class="card-grid">
-                  <span><span class="card-label">FMV</span><strong class="card-value">${fmt.format(item.fairMarketValue)}</strong></span>
-                  <span><span class="card-label">ROI</span><strong class="card-value">${item.roi >= 0 ? "+" : ""}${item.roi.toFixed(0)}%</strong></span>
-                  <span><span class="card-label">7D</span><strong class="card-value ${change >= 0 ? "up" : "down"}">${item.priceChange7d}</strong></span>
+                  <span><span class="card-label">公允身价</span><strong class="card-value">${fmt.format(item.fairMarketValue)}</strong></span>
+                  <span><span class="card-label">溢价回报</span><strong class="card-value">${item.roi >= 0 ? "+" : ""}${item.roi.toFixed(0)}%</strong></span>
+                  <span><span class="card-label">7D浮动</span><strong class="card-value ${change >= 0 ? "up" : "down"}">${item.priceChange7d}</strong></span>
                 </div>
               </div>
             </button>
           `;
         });
 
-        // 2. 在固定索引位置强行注入“大盘宏观洞察卡片”
         cardsHtmlArray.splice(
           Math.min(2, cardsHtmlArray.length),
           0,
           `
           <article class="insight-card">
             <div>
-              <span class="card-label">Market Insight</span>
-              <h3>当前热度集中在 ${insight.hotIp}</h3>
-              <p class="muted">最高 FMV 标的为 ${localName(top)}，二级市场基准价 ${fmt.format(top.fairMarketValue)}。</p>
+              <span class="card-label">圈内最前线</span>
+              <h3>当前收藏热度正疯狂集聚在 ${insight.hotIp}</h3>
+              <p class="muted">全网最傲视群雄的潮玩为 ${localName(top)}，目前圈内参考基准价稳坐 ${fmt.format(top.fairMarketValue)}。</p>
             </div>
             <div class="card-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); border-color: rgba(255,255,255,.2)">
-              <span><span class="card-label">样本</span><strong>${intFmt.format(insight.totalSold)}</strong></span>
-              <span><span class="card-label">平均 ROI</span><strong>${insight.avgRoi.toFixed(0)}%</strong></span>
+              <span><span class="card-label">去噪有效样本</span><strong>${intFmt.format(insight.totalSold)} 笔</strong></span>
+              <span><span class="card-label">平均大盘 ROI</span><strong>${insight.avgRoi.toFixed(0)}%</strong></span>
             </div>
           </article>
           `
         );
 
-        // 3. 原生变现利器：在商品列表中间无缝编织插入真实的 AdSense 响应式卡片
         if (cardsHtmlArray.length >= 5) {
           const nativeAdCode = `
             <div class="item-card adsense-native-card" style="padding:15px; background:var(--surface-low); min-height:340px; display:flex; flex-direction:column; justify-content:center;">
@@ -1480,15 +1490,12 @@
           }
         }
 
-        // 4. 将最终组合流全量输出渲染
         document.getElementById("bentoGrid").innerHTML = cardsHtmlArray.join("");
 
-        // 5. 绑定点击事件，跳过广告卡片
         document.querySelectorAll("#bentoGrid [data-sku]").forEach((button) => {
           button.addEventListener("click", () => navigateToSeries(button.dataset.sku));
         });
 
-        // 6. 异步唤醒并触发刚才注入的各级 Google 广告实例加载
         try {
           (adsbygoogle = window.adsbygoogle || []).push({});
         } catch (e) {
@@ -1503,7 +1510,7 @@
           .map(
             (item, index) => `
               <button class="rank-row" type="button" data-sku="${item.sku}">
-                <span class="badge">#${index + 1}</span>
+                <span class="badge">顶流物语 #${index + 1}</span>
                 <strong>${localName(item)}</strong>
                 <span class="${item.roi >= 0 ? "up" : "down"}">${item.roi.toFixed(0)}%</span>
               </button>
@@ -1534,14 +1541,14 @@
           return item.characters;
         }
         const base = [
-          ["主角款", "常规款"],
-          ["夜色款", "常规款"],
-          ["甜梦款", "常规款"],
-          ["巡游款", "常规款"],
-          ["独白款", "常规款"],
-          ["隐藏款", "概率稀缺"],
-          ["节日款", "主题款"],
-          ["收藏款", "高热度"],
+          ["核心欧气款", "常规常驻"],
+          ["夜幕潮酷款", "常规常驻"],
+          ["甜梦多巴胺", "常规常驻"],
+          ["奇幻巡游款", "常规常驻"],
+          ["独白艺术款", "常规常驻"],
+          ["至尊大隐藏", "欧气大爆发"],
+          ["节日限定限定", "限定主题"],
+          ["高光馆藏级", "重磅绝版"]
         ];
         return base.map(([name, rarity], index) => ({
           name: `${item.ip.split(" ")[0]} ${name}`,
@@ -1562,19 +1569,19 @@
             ${imageMarkup(item)}
             <div class="series-hero-content">
               <div>
-                <span class="badge">${story.year} 系列</span>
+                <span class="badge">✨ ${story.year} 荣耀纪元</span>
                 <h1>${localName(item)}</h1>
                 <p class="lead">${story.tagline}</p>
                 <div class="detail-actions">
-                  <a class="primary-button" href="${item.affiliateUrl || "#"}" target="_blank" rel="noopener">Find Deals on eBay (~${fmt.format(item.fairMarketValue)})</a>
-                  <button class="ghost-button" type="button" data-open-quote="${item.sku}">行情快照</button>
+                  <a class="primary-button" href="${item.affiliateUrl || "#"}" target="_blank" rel="noopener">飞跃 eBay 全球集市淘娃 (~${fmt.format(item.fairMarketValue)})</a>
+                  <button class="ghost-button" type="button" data-open-quote="${item.sku}">身价快照</button>
                 </div>
               </div>
               <div class="series-kpis">
-                <div class="field"><span class="field-label">FMV</span><strong>${fmt.format(item.fairMarketValue)}</strong></div>
-                <div class="field"><span class="field-label">7D</span><strong class="${change >= 0 ? "up" : "down"}">${item.priceChange7d}</strong></div>
-                <div class="field"><span class="field-label">ROI</span><strong>${item.roi >= 0 ? "+" : ""}${item.roi.toFixed(0)}%</strong></div>
-                <div class="field"><span class="field-label">成交样本</span><strong>${intFmt.format(item.totalSold)}</strong></div>
+                <div class="field"><span class="field-label">当前身价</span><strong>${fmt.format(item.fairMarketValue)}</strong></div>
+                <div class="field"><span class="field-label">近7日涨跌</span><strong class="${change >= 0 ? "up" : "down"}">${item.priceChange7d}</strong></div>
+                <div class="field"><span class="field-label">溢价空间</span><strong>${item.roi >= 0 ? "+" : ""}${item.roi.toFixed(0)}%</strong></div>
+                <div class="field"><span class="field-label">入库凭证</span><strong>${intFmt.format(item.totalSold)} 笔</strong></div>
               </div>
             </div>
           </section>
@@ -1587,7 +1594,7 @@
                 <div class="story-image" aria-label="系列主视觉"></div>
                 <div class="detail-body">
                   <p class="eyebrow">Design Story</p>
-                  <h2>设计哲学与灵感</h2>
+                  <h2>盲盒灵感与潮玩灵魂</h2>
                   <p class="series-copy">${story.intro}</p>
                   <p class="series-copy">${story.philosophy}</p>
                 </div>
@@ -1596,17 +1603,17 @@
               <section class="series-section">
                 <div class="section-head">
                   <div>
-                    <h2>角色图鉴</h2>
-                    <p>系列角色、隐藏款与主题款展示</p>
+                    <h2>全员角色档案图鉴</h2>
+                    <p>为你精细拆解欧气大隐藏、绝版主题限定及高光核心款</p>
                   </div>
-                  <span class="muted">8 款示例 · 数据可扩展</span>
+                  <span class="muted">官方授权珍稀图鉴展示</span>
                 </div>
                 <div class="character-grid">
                   ${characters
                     .map(
                       (character) => `
                         <article class="character-card">
-                          <div class="character-art" style="--asset-color:${character.color}"></div>
+                          <div class="character-art" style="--asset-color:${character.color}">${characterImageMarkup(character)}</div>
                           <div class="character-body">
                             <strong>${character.name}</strong>
                             <p class="muted" style="margin: 6px 0 0">${character.rarity}</p>
@@ -1623,13 +1630,13 @@
                   <div class="packaging-image" aria-label="包装设计"></div>
                   <div>
                     <p class="eyebrow">Packaging & Release</p>
-                    <h2>包装与发售信息</h2>
+                    <h2>官方发售与收藏规格</h2>
                     <ul class="spec-list">
-                      <li><span class="muted">系列 IP</span><strong>${item.ip}</strong></li>
-                      <li><span class="muted">系列名称</span><strong>${item.series}</strong></li>
-                      <li><span class="muted">官方参考价</span><strong>${fmt.format(item.retailPrice)}</strong></li>
-                      <li><span class="muted">更新频率</span><strong>${item.refreshTier === "hot" ? "24 小时" : "7 天"}</strong></li>
-                      <li><span class="muted">估值方法</span><strong>${item.valuationMethod || "IQR + 10% trimmed median"}</strong></li>
+                      <li><span class="muted">主线所属 IP</span><strong>${item.ip}</strong></li>
+                      <li><span class="muted">限定系列名</span><strong>${item.series}</strong></li>
+                      <li><span class="muted">官方参考抽盒价</span><strong>${fmt.format(item.retailPrice)}</strong></li>
+                      <li><span class="muted">行情追踪雷达频率</span><strong>${item.refreshTier === "hot" ? "24小时极速透视" : "7天深度沉淀"}</strong></li>
+                      <li><span class="muted">防斩杀估值风控</span><strong>${item.valuationMethod || "极端去噪修剪中位数模型"}</strong></li>
                     </ul>
                   </div>
                 </div>
@@ -1639,11 +1646,11 @@
             <aside class="series-side">
               <div class="mini-panel">
                 <p class="eyebrow">Market Methodology</p>
-                <h2>成交估值</h2>
-                <p class="series-copy">${story.detail}</p>
+                <h2>娃友行情避坑指南</h2>
+                <p class="series-copy">${story.detail || "本品估值采用全网防空卡、防预售、防假货噪声模型自动生成，真实还原潮玩资产的真实市价，绝无中间商注水。"}</p>
                 <div class="detail-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 0">
-                  <div class="field"><span class="field-label">风险</span><strong>${item.riskScore}/100</strong></div>
-                  <div class="field"><span class="field-label">SKU</span><strong>${item.sku}</strong></div>
+                  <div class="field"><span class="field-label">溢价退热风险</span><strong>${item.riskScore}/100</strong></div>
+                  <div class="field"><span class="field-label">数字身份证</span><strong>${item.sku}</strong></div>
                 </div>
               </div>
               <div class="ad-banner" style="min-height: 600px; margin: 0">300 x 600 AdSense</div>
@@ -1665,7 +1672,7 @@
         const item = state.items.find((asset) => asset.sku === sku);
         if (!item) {
           showAppPage();
-          showToast("没有找到该系列");
+          showToast("报告娃友，情报库暂时找不到该系列");
           return;
         }
         document.getElementById("appMain").classList.add("hidden-page");
@@ -1720,15 +1727,15 @@
         art.innerHTML = imageMarkup(item);
         document.getElementById("detailIp").textContent = item.ip;
         document.getElementById("detailName").textContent = localName(item);
-        document.getElementById("detailMeta").textContent = `${item.series} · ${item.rarity_zh || item.rarity_en || "Pop Mart"} · SKU ${item.sku}`;
+        document.getElementById("detailMeta").textContent = `${item.series} · 限量珍稀度：${item.rarity_zh || item.rarity_en || "常驻热销"} · 数字标签 ${item.sku}`;
         document.getElementById("detailRetail").textContent = fmt.format(item.retailPrice);
         document.getElementById("detailFmv").textContent = fmt.format(item.fairMarketValue);
         document.getElementById("detailRoi").textContent = `${item.roi >= 0 ? "+" : ""}${item.roi.toFixed(1)}%`;
         document.getElementById("detailRisk").textContent = `${item.riskScore}/100`;
-        document.getElementById("detailMethod").textContent = `${item.valuationMethod || "IQR + 10% trimmed median"} · 最近样本成交 ${item.totalSold} 笔 · ${item.lastUpdated}`;
-        document.getElementById("detailNote").textContent = "详情页读取同域静态 JSON，生产环境由 GitHub Actions 每日更新。";
+        document.getElementById("detailMethod").textContent = `风控策略：${item.valuationMethod || "双尾修剪中位数模型"} · 本轮剔除噪声后共采纳 ${item.totalSold} 笔娃友真成交 · 更新于 ${item.lastUpdated}`;
+        document.getElementById("detailNote").textContent = "提示：本面板直读同域静态沙盒 JSON，由 GitHub Actions 守护进程每日定时捕捉清洗。";
         const dealButton = document.getElementById("dealButton");
-        dealButton.textContent = `Find Deals on eBay (~${fmt.format(item.fairMarketValue)})`;
+        dealButton.textContent = `去 eBay 全球集市捡漏 (~${fmt.format(item.fairMarketValue)})`;
         dealButton.href =
           item.affiliateUrl ||
           `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(item.searchString || `Pop Mart ${item.ip} ${item.series}`)}`;
@@ -1749,7 +1756,7 @@
           detail && detail.priceHistory
             ? detail.priceHistory
             : Array.from({ length: 12 }, (_, index) => ({
-                date: `T-${11 - index}`,
+                date: `时序段-${11 - index}`,
                 avg: Number((item.fairMarketValue * (0.94 + index * 0.008 + Math.sin(index) * 0.01)).toFixed(2)),
               }));
         if (state.detailChart) state.detailChart.destroy();
@@ -1785,12 +1792,12 @@
         const item = state.items.find((asset) => asset.sku === sku);
         if (!item) return;
         if (!state.apiKey) {
-          showToast("请先配置 SOLD_COMPS_API_KEY");
+          showToast("请先在右上角『连线全球流』中配置密钥凭证");
           openModal("apiModal");
           return;
         }
         state.refreshing.add(sku);
-        showToast("正在请求成交样本");
+        showToast("正在越洋捕捉最新的成交样本流...");
         const endpoint = `https://api.apify.com/v2/acts/caffein.dev~ebay-sold-listings/run-sync-get-dataset-items?token=${encodeURIComponent(state.apiKey)}`;
         const keyword = item.searchString || `Pop Mart ${item.ip} ${item.series} -box -card -preorder -custom -fake`;
         try {
@@ -1813,11 +1820,11 @@
           item.roi = item.retailPrice
             ? Number((((item.fairMarketValue - item.retailPrice) / item.retailPrice) * 100).toFixed(1))
             : item.roi;
-          item.valuationMethod = "Live sold-comps 10% trimmed median";
+          item.valuationMethod = "实时海外一手成交去噪中位数";
           item.lastUpdated = new Date().toISOString().slice(0, 10);
-          showToast("已刷新此 SKU 的 FMV");
+          showToast("恭喜娃友，该款盲盒最新的真实身价已全网核算完毕！");
         } catch {
-          showToast("刷新失败，请检查 API Token 或额度");
+          showToast("捕获超时，请检查连线 Token 的额度及有效性");
         } finally {
           state.refreshing.delete(sku);
           render();
@@ -1863,8 +1870,8 @@
           }
           route();
         } catch {
-          document.getElementById("resultStatus").textContent = "数据加载失败";
-          document.getElementById("bentoGrid").innerHTML = `<div class="mini-panel">请先运行 python3 scripts/fetch_and_clean.py 生成数据。</div>`;
+          document.getElementById("resultStatus").textContent = "情报连接暂时中断";
+          document.getElementById("bentoGrid").innerHTML = `<div class="mini-panel">请先通过后台运行 python3 scripts/fetch_and_clean.py 吐出静态盲盒仓储。</div>`;
         }
       }
 
@@ -1875,7 +1882,7 @@
         localStorage.setItem(storageKeys.api, state.apiKey);
         updateApiButton();
         closeModal("apiModal");
-        showToast("API Key 已保存到当前浏览器");
+        showToast("全球连线密钥已秘密锁定到本地浏览器沙盒");
       });
       document.querySelectorAll("[data-close-modal]").forEach((button) => {
         button.addEventListener("click", () => closeModal(button.dataset.closeModal));

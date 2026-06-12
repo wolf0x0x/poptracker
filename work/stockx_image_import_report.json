@@ -1,0 +1,1288 @@
+{
+  "groups": 50,
+  "matched": [
+    {
+      "sku": "LABUBU-MACARON-01",
+      "series": "Tasty Macarons",
+      "expected": 7,
+      "urls": 7,
+      "downloaded": 0
+    },
+    {
+      "sku": "LABUBU-HAVEASEAT-02",
+      "series": "Have a Seat",
+      "expected": 7,
+      "urls": 7,
+      "downloaded": 0
+    },
+    {
+      "sku": "LABUBU-FALLINWILD-03",
+      "series": "Fall in Wild",
+      "expected": 7,
+      "urls": 7,
+      "downloaded": 0
+    },
+    {
+      "sku": "LABUBU-EXCITINGMACARON-04",
+      "series": "Exciting Macarons",
+      "expected": 7,
+      "urls": 7,
+      "downloaded": 0
+    },
+    {
+      "sku": "LABUBU-CATCHME-05",
+      "series": "Catch Me If You Can",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "LABUBU-FRUITS-06",
+      "series": "Fruits",
+      "expected": 13,
+      "urls": 13,
+      "downloaded": 0
+    },
+    {
+      "sku": "LABUBU-CAMPING-07",
+      "series": "Camping",
+      "expected": 13,
+      "urls": 13,
+      "downloaded": 0
+    },
+    {
+      "sku": "LABUBU-ART-08",
+      "series": "Monsters Art",
+      "expected": 13,
+      "urls": 13,
+      "downloaded": 0
+    },
+    {
+      "sku": "LABUBU-ZODIAC-09",
+      "series": "Zodiac",
+      "expected": 13,
+      "urls": 13,
+      "downloaded": 0
+    },
+    {
+      "sku": "LABUBU-SPACE-10",
+      "series": "Space",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "SKULLPANDA-INKPLUM-01",
+      "series": "Ink Plum Blossom",
+      "expected": 13,
+      "urls": 13,
+      "downloaded": 0
+    },
+    {
+      "sku": "SKULLPANDA-CITYOFNIGHT-02",
+      "series": "City of Night",
+      "expected": 13,
+      "urls": 13,
+      "downloaded": 0
+    },
+    {
+      "sku": "SKULLPANDA-EVERYDAYWONDERLAND-03",
+      "series": "Everyday Wonderland",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "SKULLPANDA-MAREOFANIMALS-04",
+      "series": "The Mare of Animals",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "SKULLPANDA-HYPEPANDA-05",
+      "series": "Hypepanda",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "SKULLPANDA-ACTIONCUT-06",
+      "series": "Action Cut",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "SKULLPANDA-CANDYMONSTER-07",
+      "series": "Candy Monster",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "SKULLPANDA-LAIDBACK-08",
+      "series": "Laid Back Tomorrow",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "MOLLY-SPACE-100-S1-01",
+      "series": "MEGA Space Molly 100% Series 1",
+      "expected": 10,
+      "urls": 10,
+      "downloaded": 0
+    },
+    {
+      "sku": "MOLLY-SPACE-100-S2-02",
+      "series": "MEGA Space Molly 100% Series 2",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "MOLLY-SPACE-100-S3-03",
+      "series": "MEGA Space Molly 100% Series 3",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "MOLLY-MYCHILDHOOD-04",
+      "series": "My Childhood",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "MOLLY-IMAGINARY-05",
+      "series": "Imaginary Wandering",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "MOLLY-DAYDREAM-06",
+      "series": "Daydream",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "MOLLY-SCHOOLLIFE-07",
+      "series": "School Life",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "MOLLY-STEAMPUNK-08",
+      "series": "Steampunk",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "DIMOO-WORLD-01",
+      "series": "World x Animal",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "DIMOO-DATING-02",
+      "series": "Dating",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "DIMOO-JURASSIC-03",
+      "series": "Jurassic",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "DIMOO-SPACETRAVEL-04",
+      "series": "Space Travel",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "DIMOO-AQUARIUM-05",
+      "series": "Aquarium",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "DIMOO-NOSLEEP-06",
+      "series": "No One's Gonna Sleep",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "DIMOO-MIDNIGHT-07",
+      "series": "Midnight Circus",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "DIMOO-ZODIAC-08",
+      "series": "Zodiac",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "HIRONO-LITTLE-MISCHIEF-01",
+      "series": "Little Mischief",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "HIRONO-CITYOFMERCY-02",
+      "series": "City of Mercy",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "HIRONO-OTHERONE-03",
+      "series": "Other One",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "HIRONO-RESHAPE-04",
+      "series": "Reshape",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 1
+    },
+    {
+      "sku": "HIRONO-SHELTER-05",
+      "series": "Shelter",
+      "expected": 13,
+      "urls": 13,
+      "downloaded": 0
+    },
+    {
+      "sku": "HIRONO-MIME-06",
+      "series": "Mime",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "CRYBABY-SADCLUB-01",
+      "series": "Sad Club",
+      "expected": 9,
+      "urls": 9,
+      "downloaded": 0
+    },
+    {
+      "sku": "CRYBABY-LONELYCHRISTMAS-02",
+      "series": "Lonely Christmas",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "CRYBABY-MONSTERTEARS-03",
+      "series": "Monster Tears",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "CRYBABY-POWERPUFF-04",
+      "series": "Powerpuff Girls",
+      "expected": 13,
+      "urls": 13,
+      "downloaded": 0
+    },
+    {
+      "sku": "CRYBABY-CHEERUP-05",
+      "series": "Cheer Up",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "SWEETBEAN-SUPERMARKET-01",
+      "series": "Supermarket",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "SWEETBEAN-ANIMALS-02",
+      "series": "Animals",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "SWEETBEAN-AKIHABARA-03",
+      "series": "Akihabara",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "PUCKY-FOREST-01",
+      "series": "Forest",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    },
+    {
+      "sku": "PUCKY-SLEEPINGBABIES-02",
+      "series": "Sleeping Babies",
+      "expected": 1,
+      "urls": 1,
+      "downloaded": 0
+    }
+  ],
+  "missing_groups": [],
+  "download_errors": [
+    {
+      "sku": "LABUBU-MACARON-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-The-Monsters-Tasty-Macarons-Soymilk-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-MACARON-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-The-Monsters-Tasty-Macarons-Lychee-Berry-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-MACARON-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-The-Monsters-Tasty-Macarons-Green-Grape-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-MACARON-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-The-Monsters-Tasty-Macarons-Sea-Salt-Coconut-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-MACARON-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-The-Monsters-Tasty-Macarons-Toffee-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-MACARON-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-The-Monsters-Tasty-Macarons-Sesame-Bean-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-MACARON-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-The-Monsters-Tasty-Macarons-Chestnut-Cocoa-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-HAVEASEAT-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Have-A-Seat-Sisi-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-HAVEASEAT-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Have-A-Seat-Dada-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-HAVEASEAT-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Have-A-Seat-Ququ-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-HAVEASEAT-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Have-A-Seat-Zizi-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-HAVEASEAT-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Have-A-Seat-Baba-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-HAVEASEAT-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Have-A-Seat-Hehe-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-HAVEASEAT-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Have-A-Seat-Duoduo-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-FALLINWILD-03",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Fall-In-Wild-Camper-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-FALLINWILD-03",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Fall-In-Wild-Bonfire-Night-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-FALLINWILD-03",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Fall-In-Wild-Forest-Spirit-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-FALLINWILD-03",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Fall-In-Wild-Hiker-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-FALLINWILD-03",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Fall-In-Wild-Stream-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-FALLINWILD-03",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Fall-In-Wild-Peak-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-FALLINWILD-03",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Fall-In-Wild-Aurora-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-EXCITINGMACARON-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Exciting-Macarons-Soymilk-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-EXCITINGMACARON-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Exciting-Macarons-Lychee-Berry-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-EXCITINGMACARON-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Exciting-Macarons-Green-Grape-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-EXCITINGMACARON-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Exciting-Macarons-Sea-Salt-Coconut-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-EXCITINGMACARON-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Exciting-Macarons-Toffee-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-EXCITINGMACARON-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Exciting-Macarons-Sesame-Bean-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-EXCITINGMACARON-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Exciting-Macarons-Chestnut-Cocoa-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-CATCHME-05",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Catch-Me-If-You-Can-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-FRUITS-06",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Fruits-Lemon-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-FRUITS-06",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Fruits-Banana-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-FRUITS-06",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Fruits-Pineapple-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-FRUITS-06",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Fruits-Orange-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-FRUITS-06",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Fruits-Coconut-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-FRUITS-06",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Fruits-Grape-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-FRUITS-06",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Fruits-Pear-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-FRUITS-06",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Fruits-Strawberry-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-FRUITS-06",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Fruits-Cherry-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-FRUITS-06",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Fruits-Kiwi-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-FRUITS-06",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Fruits-Watermelon-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-FRUITS-06",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Fruits-Peach-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-FRUITS-06",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Fruits-Apple-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-CAMPING-07",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Camping-Fire-Pit-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-CAMPING-07",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Camping-Chopping-Wood-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-CAMPING-07",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Camping-Sleeping-Bag-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-CAMPING-07",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Camping-Hiking-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-CAMPING-07",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Camping-Snow-Traveller-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-CAMPING-07",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Camping-Travelling-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-CAMPING-07",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Camping-Kayak-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-CAMPING-07",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Camping-Fishing-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-CAMPING-07",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Camping-Wooden-Raft-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-CAMPING-07",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Camping-Spooky-Sleeping-Bag-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-CAMPING-07",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Camping-Trekking-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-CAMPING-07",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Camping-Nature-Walk-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-CAMPING-07",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Camping-Skiing-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ART-08",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Monsters-Art-Mona-Lisa-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ART-08",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Monsters-Art-Girl-Pearl-Earring-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ART-08",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Monsters-Art-Van-Gogh-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ART-08",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Monsters-Art-The-Scream-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ART-08",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Monsters-Art-Son-of-Man-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ART-08",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Monsters-Art-The-Fifer-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ART-08",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Monsters-Art-Kuniyoshi-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ART-08",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Monsters-Art-Discobolus-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ART-08",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Monsters-Art-David-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ART-08",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Monsters-Art-The-Thinker-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ART-08",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Monsters-Art-Frida-Kahlo-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ART-08",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Monsters-Art-Las-Meninas-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ART-08",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Monsters-Art-Birth-of-Venus-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ZODIAC-09",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Zodiac-Aries-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ZODIAC-09",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Zodiac-Taurus-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ZODIAC-09",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Zodiac-Gemini-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ZODIAC-09",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Zodiac-Cancer-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ZODIAC-09",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Zodiac-Leo-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ZODIAC-09",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Zodiac-Virgo-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ZODIAC-09",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Zodiac-Libra-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ZODIAC-09",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Zodiac-Scorpio-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ZODIAC-09",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Zodiac-Sagittarius-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ZODIAC-09",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Zodiac-Capricorn-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ZODIAC-09",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Zodiac-Aquarius-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ZODIAC-09",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Zodiac-Pisces-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-ZODIAC-09",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Zodiac-Super-Nova-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "LABUBU-SPACE-10",
+      "url": "https://images.stockx.com/images/Pop-Mart-Labubu-Space-Adventures-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-INKPLUM-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-Ink-Plum-Blossom-The-Courtyard-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-INKPLUM-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-Ink-Plum-Blossom-The-Forest-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-INKPLUM-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-Ink-Plum-Blossom-The-Moss-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-INKPLUM-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-Ink-Plum-Blossom-The-Bamboo-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-INKPLUM-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-Ink-Plum-Blossom-The-Wind-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-INKPLUM-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-Ink-Plum-Blossom-The-Bridge-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-INKPLUM-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-Ink-Plum-Blossom-The-Moon-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-INKPLUM-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-Ink-Plum-Blossom-The-Root-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-INKPLUM-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-Ink-Plum-Blossom-The-Valley-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-INKPLUM-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-Ink-Plum-Blossom-The-Spring-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-INKPLUM-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-Ink-Plum-Blossom-The-Scene-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-INKPLUM-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-Ink-Plum-Blossom-The-Snow-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-INKPLUM-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-Ink-Plum-Blossom-The-Plum-Blossom-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-CITYOFNIGHT-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-City-of-Night-The-Enforcer-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-CITYOFNIGHT-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-City-of-Night-The-Princess-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-CITYOFNIGHT-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-City-of-Night-The-Dancer-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-CITYOFNIGHT-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-City-of-Night-The-DJ-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-CITYOFNIGHT-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-City-of-Night-The-Singer-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-CITYOFNIGHT-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-City-of-Night-The-Youth-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-CITYOFNIGHT-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-City-of-Night-The-Scroll-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-CITYOFNIGHT-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-City-of-Night-The-Pet-Cat-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-CITYOFNIGHT-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-City-of-Night-The-Traveller-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-CITYOFNIGHT-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-City-of-Night-The-Heart-Seeker-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-CITYOFNIGHT-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-City-of-Night-The-Guard-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-CITYOFNIGHT-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-City-of-Night-The-Night-Watcher-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-CITYOFNIGHT-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-City-of-Night-The-Midnight-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-EVERYDAYWONDERLAND-03",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-Everyday-Wonderland-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-MAREOFANIMALS-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-The-Mare-of-Animals-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-HYPEPANDA-05",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-Hypepanda-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-ACTIONCUT-06",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-Action-Cut-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-CANDYMONSTER-07",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-Candy-Monster-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SKULLPANDA-LAIDBACK-08",
+      "url": "https://images.stockx.com/images/Pop-Mart-Skullpanda-Laid-Back-Tomorrow-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "MOLLY-SPACE-100-S1-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-MEGA-Space-Molly-100-Christmas-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "MOLLY-SPACE-100-S1-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-MEGA-Space-Molly-100-Candy-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "MOLLY-SPACE-100-S1-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-MEGA-Space-Molly-100-Little-Painter-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "MOLLY-SPACE-100-S1-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-MEGA-Space-Molly-100-Toffee-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "MOLLY-SPACE-100-S1-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-MEGA-Space-Molly-100-Keith-Haring-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "MOLLY-SPACE-100-S1-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-MEGA-Space-Molly-100-SpongeBob-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "MOLLY-SPACE-100-S1-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-MEGA-Space-Molly-100-Jelly-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "MOLLY-SPACE-100-S1-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-MEGA-Space-Molly-100-Watermelon-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "MOLLY-SPACE-100-S1-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-MEGA-Space-Molly-100-Instinctoy-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "MOLLY-SPACE-100-S1-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-MEGA-Space-Molly-100-Earth-Daughter-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "MOLLY-SPACE-100-S2-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-MEGA-Space-Molly-100-Series-2-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "MOLLY-SPACE-100-S3-03",
+      "url": "https://images.stockx.com/images/Pop-Mart-MEGA-Space-Molly-100-Series-3-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "MOLLY-MYCHILDHOOD-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Molly-My-Childhood-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "MOLLY-IMAGINARY-05",
+      "url": "https://images.stockx.com/images/Pop-Mart-Molly-Imaginary-Wandering-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "MOLLY-DAYDREAM-06",
+      "url": "https://images.stockx.com/images/Pop-Mart-Molly-Daydream-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "MOLLY-SCHOOLLIFE-07",
+      "url": "https://images.stockx.com/images/Pop-Mart-Molly-School-Life-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "MOLLY-STEAMPUNK-08",
+      "url": "https://images.stockx.com/images/Pop-Mart-Molly-Steampunk-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "DIMOO-WORLD-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-DIMOO-World-Animal-Kingdom-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "DIMOO-DATING-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-DIMOO-Dating-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "DIMOO-JURASSIC-03",
+      "url": "https://images.stockx.com/images/Pop-Mart-DIMOO-Jurassic-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "DIMOO-SPACETRAVEL-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-DIMOO-Space-Travel-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "DIMOO-AQUARIUM-05",
+      "url": "https://images.stockx.com/images/Pop-Mart-DIMOO-Aquarium-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "DIMOO-NOSLEEP-06",
+      "url": "https://images.stockx.com/images/Pop-Mart-DIMOO-No-Sleep-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "DIMOO-MIDNIGHT-07",
+      "url": "https://images.stockx.com/images/Pop-Mart-DIMOO-Midnight-Circus-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "DIMOO-ZODIAC-08",
+      "url": "https://images.stockx.com/images/Pop-Mart-DIMOO-Zodiac-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "HIRONO-LITTLE-MISCHIEF-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Hirono-Little-Mischief-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "HIRONO-CITYOFMERCY-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Hirono-City-of-Mercy-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "HIRONO-OTHERONE-03",
+      "url": "https://images.stockx.com/images/Pop-Mart-Hirono-Other-One-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "HIRONO-SHELTER-05",
+      "url": "https://images.stockx.com/images/Pop-Mart-Hirono-Shelter-Candlestick-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "HIRONO-SHELTER-05",
+      "url": "https://images.stockx.com/images/Pop-Mart-Hirono-Shelter-Warrior-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "HIRONO-SHELTER-05",
+      "url": "https://images.stockx.com/images/Pop-Mart-Hirono-Shelter-Circus-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "HIRONO-SHELTER-05",
+      "url": "https://images.stockx.com/images/Pop-Mart-Hirono-Shelter-Poet-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "HIRONO-SHELTER-05",
+      "url": "https://images.stockx.com/images/Pop-Mart-Hirono-Shelter-Birdcage-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "HIRONO-SHELTER-05",
+      "url": "https://images.stockx.com/images/Pop-Mart-Hirono-Shelter-Fortress-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "HIRONO-SHELTER-05",
+      "url": "https://images.stockx.com/images/Pop-Mart-Hirono-Shelter-Cabin-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "HIRONO-SHELTER-05",
+      "url": "https://images.stockx.com/images/Pop-Mart-Hirono-Shelter-Teru-Teru-Bozu-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "HIRONO-SHELTER-05",
+      "url": "https://images.stockx.com/images/Pop-Mart-Hirono-Shelter-Alien-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "HIRONO-SHELTER-05",
+      "url": "https://images.stockx.com/images/Pop-Mart-Hirono-Shelter-Clock-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "HIRONO-SHELTER-05",
+      "url": "https://images.stockx.com/images/Pop-Mart-Hirono-Shelter-Barrier-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "HIRONO-SHELTER-05",
+      "url": "https://images.stockx.com/images/Pop-Mart-Hirono-Shelter-Birdman-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "HIRONO-SHELTER-05",
+      "url": "https://images.stockx.com/images/Pop-Mart-Hirono-Shelter-Stuffed-Bear-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "HIRONO-MIME-06",
+      "url": "https://images.stockx.com/images/Pop-Mart-Hirono-Mime-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-SADCLUB-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Sad-Club-Crying-Over-Spilled-Milk-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-SADCLUB-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Sad-Club-Broken-Heart-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-SADCLUB-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Sad-Club-Rainy-Day-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-SADCLUB-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Sad-Club-Left-Behind-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-SADCLUB-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Sad-Club-Sleepless-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-SADCLUB-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Sad-Club-Withering-Flower-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-SADCLUB-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Sad-Club-Teardrop-Bowl-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-SADCLUB-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Sad-Club-Devastated-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-SADCLUB-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Sad-Club-The-Last-Tear-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-LONELYCHRISTMAS-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Lonely-Christmas-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-MONSTERTEARS-03",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Monster-Tears-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-POWERPUFF-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Powerpuff-Girls-Blossom-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-POWERPUFF-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Powerpuff-Girls-Bubbles-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-POWERPUFF-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Powerpuff-Girls-Buttercup-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-POWERPUFF-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Powerpuff-Girls-Mojo-Jojo-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-POWERPUFF-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Powerpuff-Girls-The-Professor-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-POWERPUFF-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Powerpuff-Girls-The-Mayor-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-POWERPUFF-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Powerpuff-Girls-Bunny-Bubbles-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-POWERPUFF-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Powerpuff-Girls-Bunny-Blossom-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-POWERPUFF-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Powerpuff-Girls-Fuzzy-Lumpkins-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-POWERPUFF-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Powerpuff-Girls-HIM-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-POWERPUFF-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Powerpuff-Girls-Ace-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-POWERPUFF-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Powerpuff-Girls-Ms-Keane-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-POWERPUFF-04",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Powerpuff-Girls-Princess-Morbucks-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "CRYBABY-CHEERUP-05",
+      "url": "https://images.stockx.com/images/Pop-Mart-Crybaby-Cheer-Up-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SWEETBEAN-SUPERMARKET-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Sweet-Bean-Supermarket-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SWEETBEAN-ANIMALS-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Sweet-Bean-Animals-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "SWEETBEAN-AKIHABARA-03",
+      "url": "https://images.stockx.com/images/Pop-Mart-Sweet-Bean-Akihabara-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "PUCKY-FOREST-01",
+      "url": "https://images.stockx.com/images/Pop-Mart-Pucky-Forest-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "sku": "PUCKY-SLEEPINGBABIES-02",
+      "url": "https://images.stockx.com/images/Pop-Mart-Pucky-Sleeping-Babies-Figure.jpg",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ]
+}

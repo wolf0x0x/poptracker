@@ -67,6 +67,36 @@ python3 scripts/fetch_popmart_images.py --manual-json path/to/popmart-response.j
 python3 scripts/fetch_and_clean.py
 ```
 
+### StockX 角色图导入
+
+StockX 白底图适合做潮玩角色图库，但不要依赖手拼固定 URL；若 URL 已失效会直接返回 404。更稳定的自动化路径是用图片搜索 API 找到真实 `contentUrl` 后下载到本地，例如 Bing Image Search API：
+
+```bash
+export BING_IMAGE_SEARCH_KEY="your-key"
+python3 scripts/search_character_images_bing.py path/to/sku-or-stockx-list.txt
+python3 scripts/fetch_and_clean.py
+```
+
+脚本会按 `sku_dictionary.json` 中的系列与角色名生成搜索词，图片保存到 `public/assets/characters/`，并写入：
+
+```text
+work/bing_character_image_report.json
+```
+
+如果已经整理出可访问的 StockX 白底角色图 URL 清单，可运行：
+
+```bash
+python3 scripts/import_stockx_character_images.py path/to/stockx-url-list.txt
+python3 scripts/fetch_and_clean.py
+```
+
+如果在本机或海外服务器已批量下载到 `popmart_stockx_images/`，且文件名为 `SKU_Character.jpg` 这类格式，可复制该目录到项目根目录后运行：
+
+```bash
+python3 scripts/import_downloaded_character_images.py popmart_stockx_images
+python3 scripts/fetch_and_clean.py
+```
+
 ## 真实数据接入
 
 生产环境推荐通过环境变量或 GitHub Secret 注入，不要把真实 Token 写入代码仓库。
