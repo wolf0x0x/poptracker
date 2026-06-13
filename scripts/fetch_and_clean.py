@@ -7,6 +7,7 @@ import statistics
 import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 try:
     import requests
@@ -16,6 +17,15 @@ except ImportError:
 DATA_DIR = Path(__file__).resolve().parents[1] / "public" / "data"
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SYNC_STATE_FILE = DATA_DIR / "sync_state.json"
+CHINA_TZ = ZoneInfo("Asia/Shanghai")
+
+
+def china_today_date():
+    return datetime.now(CHINA_TZ).date()
+
+
+def china_today_iso():
+    return china_today_date().isoformat()
 
 def load_dotenv(path=PROJECT_ROOT / ".env"):
     if not path.exists():
@@ -238,7 +248,7 @@ def fetch_live_listings(item):
     return [], "api_disabled"
 
 def demo_listings(item):
-    today = datetime.now(timezone.utc).date()
+    today = china_today_date()
     random.seed(item["sku"])
     multiplier = DEMO_MULTIPLIERS.get(item["sku"], random.uniform(1.4, 3.6))
     base = item["retail_price_usd"] * multiplier
@@ -266,7 +276,7 @@ def demo_listings(item):
     return listings
 
 def build_history(sku, avg_price):
-    today = datetime.now(timezone.utc).date()
+    today = china_today_date()
     random.seed(f"history-{sku}")
     points = []
     for days_ago in range(29, -1, -1):
@@ -284,7 +294,7 @@ def build_history(sku, avg_price):
     return points
 
 def merge_price_history(file_path, avg_price):
-    today = datetime.now(timezone.utc).date().isoformat()
+    today = china_today_iso()
     if file_path.exists():
         try:
             with file_path.open("r", encoding="utf-8") as handle:
@@ -479,7 +489,7 @@ def investment_signal(metrics):
 
 def main():
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    today = datetime.now(timezone.utc).date().isoformat()
+    today = china_today_iso()
     index = []
     sync_state = load_sync_state(today)
     request_budget, monthly_quota, remaining_month = daily_request_budget(sync_state, today)

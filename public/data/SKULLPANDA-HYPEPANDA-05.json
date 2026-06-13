@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+Hypepanda",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-12",
+  "lastUpdated": "2026-06-13",
   "marketData": {
     "avgSoldPrice": 70.31,
     "medianSoldPrice": 34.34,
@@ -35,7 +35,7 @@
     "riskScore": 92,
     "cleanedSampleSize": 38,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+4.2%",
+    "priceChange7d": "-2.2%",
     "trend": "range",
     "trend_zh": "区间震荡",
     "signal": "caution",
@@ -167,6 +167,10 @@
     },
     {
       "date": "2026-06-12",
+      "avg": 34.34
+    },
+    {
+      "date": "2026-06-13",
       "avg": 34.34
     }
   ],

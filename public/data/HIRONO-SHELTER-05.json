@@ -21,7 +21,7 @@
   "refreshIntervalHours": 24,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+HIRONO+Shelter",
   "retailPrice": 16.99,
-  "lastUpdated": "2026-06-12",
+  "lastUpdated": "2026-06-13",
   "marketData": {
     "avgSoldPrice": 14.62,
     "medianSoldPrice": 13.99,
@@ -35,7 +35,7 @@
     "riskScore": 61,
     "cleanedSampleSize": 34,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-73.7%",
+    "priceChange7d": "-74.9%",
     "trend": "cooldown",
     "trend_zh": "热度回落",
     "signal": "value",
@@ -167,6 +167,10 @@
     },
     {
       "date": "2026-06-12",
+      "avg": 13.99
+    },
+    {
+      "date": "2026-06-13",
       "avg": 13.99
     }
   ],

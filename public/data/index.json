@@ -17,7 +17,7 @@
     "medianSoldPrice": 41.63,
     "fairMarketValue": 41.63,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-18.9%",
+    "priceChange7d": "-21.6%",
     "roi": 881.3,
     "riskScore": 92,
     "totalSold": 38,
@@ -148,6 +148,10 @@
       {
         "date": "2026-06-12",
         "avg": 41.63
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 41.63
       }
     ],
     "story": {
@@ -173,7 +177,7 @@
         "color": "#191c1d"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "MOLLY-DAYDREAM-06",
@@ -193,7 +197,7 @@
     "medianSoldPrice": 87.15,
     "fairMarketValue": 87.15,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+61.6%",
+    "priceChange7d": "+71.3%",
     "roi": 793.2,
     "riskScore": 92,
     "totalSold": 40,
@@ -324,6 +328,10 @@
       {
         "date": "2026-06-12",
         "avg": 87.15
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 87.15
       }
     ],
     "story": {
@@ -375,7 +383,7 @@
         "color": "#ff8a5b"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "MOLLY-SCHOOLLIFE-07",
@@ -395,7 +403,7 @@
     "medianSoldPrice": 85.44,
     "fairMarketValue": 85.44,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+129.9%",
+    "priceChange7d": "+129.8%",
     "roi": 779.5,
     "riskScore": 92,
     "totalSold": 40,
@@ -526,6 +534,10 @@
       {
         "date": "2026-06-12",
         "avg": 85.44
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 85.44
       }
     ],
     "story": {
@@ -577,7 +589,7 @@
         "color": "#e0d6c8"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "MOLLY-IMAGINARY-05",
@@ -597,7 +609,7 @@
     "medianSoldPrice": 65.32,
     "fairMarketValue": 65.32,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+105.7%",
+    "priceChange7d": "+105.8%",
     "roi": 618.4,
     "riskScore": 92,
     "totalSold": 39,
@@ -728,6 +740,10 @@
       {
         "date": "2026-06-12",
         "avg": 65.32
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 65.32
       }
     ],
     "story": {
@@ -779,7 +795,7 @@
         "color": "#9f8cff"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "SKULLPANDA-CANDYMONSTER-07",
@@ -799,7 +815,7 @@
     "medianSoldPrice": 37.89,
     "fairMarketValue": 37.89,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-9.5%",
+    "priceChange7d": "-13.2%",
     "roi": 493.4,
     "riskScore": 92,
     "totalSold": 40,
@@ -930,6 +946,10 @@
       {
         "date": "2026-06-12",
         "avg": 37.89
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 37.89
       }
     ],
     "story": {
@@ -981,7 +1001,7 @@
         "color": "#ffc857"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "SKULLPANDA-LAIDBACK-08",
@@ -1001,7 +1021,7 @@
     "medianSoldPrice": 38.91,
     "fairMarketValue": 38.91,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+11.7%",
+    "priceChange7d": "+8.5%",
     "roi": 465.3,
     "riskScore": 92,
     "totalSold": 40,
@@ -1132,6 +1152,10 @@
       {
         "date": "2026-06-12",
         "avg": 38.91
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 38.91
       }
     ],
     "story": {
@@ -1183,7 +1207,7 @@
         "color": "#b8e986"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "SKULLPANDA-ACTIONCUT-06",
@@ -1203,7 +1227,7 @@
     "medianSoldPrice": 27.98,
     "fairMarketValue": 27.98,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-44.2%",
+    "priceChange7d": "-46.4%",
     "roi": 465.0,
     "riskScore": 92,
     "totalSold": 40,
@@ -1334,6 +1358,10 @@
       {
         "date": "2026-06-12",
         "avg": 27.98
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 27.98
       }
     ],
     "story": {
@@ -1385,7 +1413,7 @@
         "color": "#6bd6ff"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "LABUBU-CAMPING-07",
@@ -1405,7 +1433,7 @@
     "medianSoldPrice": 41.02,
     "fairMarketValue": 41.02,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-30.3%",
+    "priceChange7d": "-27.4%",
     "roi": 436.0,
     "riskScore": 92,
     "totalSold": 40,
@@ -1536,6 +1564,10 @@
       {
         "date": "2026-06-12",
         "avg": 41.02
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 41.02
       }
     ],
     "story": {
@@ -1587,7 +1619,7 @@
         "color": "#6389a8"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "LABUBU-MACARON-01",
@@ -1607,7 +1639,7 @@
     "medianSoldPrice": 70.31,
     "fairMarketValue": 70.31,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-11.0%",
+    "priceChange7d": "-14.6%",
     "roi": 391.9,
     "riskScore": 92,
     "totalSold": 38,
@@ -1738,6 +1770,10 @@
       {
         "date": "2026-06-12",
         "avg": 70.31
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 70.31
       }
     ],
     "story": {
@@ -1783,7 +1819,7 @@
         "color": "#191c1d"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "DIMOO-WORLD-01",
@@ -1803,7 +1839,7 @@
     "medianSoldPrice": 32.98,
     "fairMarketValue": 32.98,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+42.3%",
+    "priceChange7d": "+23.6%",
     "roi": 390.9,
     "riskScore": 92,
     "totalSold": 39,
@@ -1934,6 +1970,10 @@
       {
         "date": "2026-06-12",
         "avg": 32.98
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 32.98
       }
     ],
     "story": {
@@ -1985,7 +2025,7 @@
         "color": "#65d39b"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "SKULLPANDA-HYPEPANDA-05",
@@ -2005,7 +2045,7 @@
     "medianSoldPrice": 34.34,
     "fairMarketValue": 34.34,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+4.2%",
+    "priceChange7d": "-2.2%",
     "roi": 368.7,
     "riskScore": 92,
     "totalSold": 38,
@@ -2136,6 +2176,10 @@
       {
         "date": "2026-06-12",
         "avg": 34.34
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 34.34
       }
     ],
     "story": {
@@ -2187,7 +2231,7 @@
         "color": "#ff7eb6"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "LABUBU-ZODIAC-09",
@@ -2207,7 +2251,7 @@
     "medianSoldPrice": 46.52,
     "fairMarketValue": 46.52,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-5.3%",
+    "priceChange7d": "-9.1%",
     "roi": 363.0,
     "riskScore": 92,
     "totalSold": 38,
@@ -2338,6 +2382,10 @@
       {
         "date": "2026-06-12",
         "avg": 46.52
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 46.52
       }
     ],
     "story": {
@@ -2389,7 +2437,7 @@
         "color": "#191c1d"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "MOLLY-MYCHILDHOOD-04",
@@ -2409,7 +2457,7 @@
     "medianSoldPrice": 34.77,
     "fairMarketValue": 34.77,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-18.0%",
+    "priceChange7d": "-21.7%",
     "roi": 316.8,
     "riskScore": 92,
     "totalSold": 35,
@@ -2540,6 +2588,10 @@
       {
         "date": "2026-06-12",
         "avg": 34.77
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 34.77
       }
     ],
     "story": {
@@ -2591,7 +2643,7 @@
         "color": "#b8e986"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "DIMOO-MIDNIGHT-07",
@@ -2611,7 +2663,7 @@
     "medianSoldPrice": 35.98,
     "fairMarketValue": 35.98,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+14.4%",
+    "priceChange7d": "+14.3%",
     "roi": 265.8,
     "riskScore": 92,
     "totalSold": 35,
@@ -2742,6 +2794,10 @@
       {
         "date": "2026-06-12",
         "avg": 35.98
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 35.98
       }
     ],
     "story": {
@@ -2793,7 +2849,7 @@
         "color": "#d95c50"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "MOLLY-STEAMPUNK-08",
@@ -2813,7 +2869,7 @@
     "medianSoldPrice": 29.89,
     "fairMarketValue": 29.89,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-18.6%",
+    "priceChange7d": "-23.3%",
     "roi": 207.6,
     "riskScore": 88,
     "totalSold": 36,
@@ -2944,6 +3000,10 @@
       {
         "date": "2026-06-12",
         "avg": 29.89
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 29.89
       }
     ],
     "story": {
@@ -2995,7 +3055,7 @@
         "color": "#8f6745"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "HIRONO-CITYOFMERCY-02",
@@ -3015,7 +3075,7 @@
     "medianSoldPrice": 46.0,
     "fairMarketValue": 46.0,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-9.4%",
+    "priceChange7d": "-14.5%",
     "roi": 200.6,
     "riskScore": 83,
     "totalSold": 31,
@@ -3146,6 +3206,10 @@
       {
         "date": "2026-06-12",
         "avg": 46.0
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 46.0
       }
     ],
     "story": {
@@ -3197,7 +3261,7 @@
         "color": "#6389a8"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "SKULLPANDA-CITYOFNIGHT-02",
@@ -3217,7 +3281,7 @@
     "medianSoldPrice": 24.89,
     "fairMarketValue": 24.89,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-32.3%",
+    "priceChange7d": "-35.2%",
     "roi": 170.9,
     "riskScore": 83,
     "totalSold": 33,
@@ -3348,6 +3412,10 @@
       {
         "date": "2026-06-12",
         "avg": 24.89
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 24.89
       }
     ],
     "story": {
@@ -3423,7 +3491,7 @@
         "color": "#191c1d"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "DIMOO-DATING-02",
@@ -3443,7 +3511,7 @@
     "medianSoldPrice": 32.6,
     "fairMarketValue": 32.6,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-16.2%",
+    "priceChange7d": "-8.9%",
     "roi": 155.4,
     "riskScore": 81,
     "totalSold": 35,
@@ -3574,6 +3642,10 @@
       {
         "date": "2026-06-12",
         "avg": 32.6
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 32.6
       }
     ],
     "story": {
@@ -3625,7 +3697,7 @@
         "color": "#ff7eb6"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "LABUBU-ART-08",
@@ -3645,7 +3717,7 @@
     "medianSoldPrice": 40.28,
     "fairMarketValue": 40.28,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+17.9%",
+    "priceChange7d": "+18.1%",
     "roi": 145.5,
     "riskScore": 79,
     "totalSold": 33,
@@ -3776,6 +3848,10 @@
       {
         "date": "2026-06-12",
         "avg": 40.28
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 40.28
       }
     ],
     "story": {
@@ -3827,7 +3903,7 @@
         "color": "#9f8cff"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "SKULLPANDA-MAREOFANIMALS-04",
@@ -3847,7 +3923,7 @@
     "medianSoldPrice": 33.98,
     "fairMarketValue": 33.98,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+20.2%",
+    "priceChange7d": "+19.2%",
     "roi": 140.8,
     "riskScore": 80,
     "totalSold": 35,
@@ -3978,6 +4054,10 @@
       {
         "date": "2026-06-12",
         "avg": 33.98
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 33.98
       }
     ],
     "story": {
@@ -4029,7 +4109,7 @@
         "color": "#8f6745"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "DIMOO-AQUARIUM-05",
@@ -4049,7 +4129,7 @@
     "medianSoldPrice": 28.24,
     "fairMarketValue": 28.24,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-19.5%",
+    "priceChange7d": "-16.8%",
     "roi": 134.7,
     "riskScore": 79,
     "totalSold": 33,
@@ -4180,6 +4260,10 @@
       {
         "date": "2026-06-12",
         "avg": 28.24
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 28.24
       }
     ],
     "story": {
@@ -4231,7 +4315,7 @@
         "color": "#6bd6ff"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "CRYBABY-MONSTERTEARS-03",
@@ -4251,7 +4335,7 @@
     "medianSoldPrice": 28.27,
     "fairMarketValue": 28.27,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-40.7%",
+    "priceChange7d": "-41.5%",
     "roi": 131.7,
     "riskScore": 78,
     "totalSold": 32,
@@ -4382,6 +4466,10 @@
       {
         "date": "2026-06-12",
         "avg": 28.27
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 28.27
       }
     ],
     "story": {
@@ -4433,7 +4521,7 @@
         "color": "#9f8cff"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "CRYBABY-LONELYCHRISTMAS-02",
@@ -4453,7 +4541,7 @@
     "medianSoldPrice": 29.78,
     "fairMarketValue": 29.78,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-34.1%",
+    "priceChange7d": "-39.2%",
     "roi": 126.0,
     "riskScore": 78,
     "totalSold": 33,
@@ -4584,6 +4672,10 @@
       {
         "date": "2026-06-12",
         "avg": 29.78
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 29.78
       }
     ],
     "story": {
@@ -4635,7 +4727,7 @@
         "color": "#d95c50"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "DIMOO-SPACETRAVEL-04",
@@ -4655,7 +4747,7 @@
     "medianSoldPrice": 33.49,
     "fairMarketValue": 33.49,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+19.9%",
+    "priceChange7d": "+19.6%",
     "roi": 123.9,
     "riskScore": 77,
     "totalSold": 34,
@@ -4786,6 +4878,10 @@
       {
         "date": "2026-06-12",
         "avg": 33.49
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 33.49
       }
     ],
     "story": {
@@ -4837,7 +4933,7 @@
         "color": "#191c1d"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "CRYBABY-CHEERUP-05",
@@ -4857,7 +4953,7 @@
     "medianSoldPrice": 26.99,
     "fairMarketValue": 26.99,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-51.2%",
+    "priceChange7d": "-50.5%",
     "roi": 119.6,
     "riskScore": 77,
     "totalSold": 35,
@@ -4988,6 +5084,10 @@
       {
         "date": "2026-06-12",
         "avg": 26.99
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 26.99
       }
     ],
     "story": {
@@ -5039,7 +5139,7 @@
         "color": "#ffc857"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "PUCKY-SLEEPINGBABIES-02",
@@ -5059,7 +5159,7 @@
     "medianSoldPrice": 28.7,
     "fairMarketValue": 28.7,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-25.1%",
+    "priceChange7d": "-31.3%",
     "roi": 115.1,
     "riskScore": 76,
     "totalSold": 33,
@@ -5190,6 +5290,10 @@
       {
         "date": "2026-06-12",
         "avg": 28.7
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 28.7
       }
     ],
     "story": {
@@ -5241,7 +5345,7 @@
         "color": "#ffc857"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "DIMOO-ZODIAC-08",
@@ -5261,7 +5365,7 @@
     "medianSoldPrice": 20.96,
     "fairMarketValue": 20.96,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-37.5%",
+    "priceChange7d": "-34.7%",
     "roi": 108.7,
     "riskScore": 76,
     "totalSold": 34,
@@ -5392,6 +5496,10 @@
       {
         "date": "2026-06-12",
         "avg": 20.96
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 20.96
       }
     ],
     "story": {
@@ -5443,7 +5551,7 @@
         "color": "#ffc857"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "SWEETBEAN-SUPERMARKET-01",
@@ -5463,7 +5571,7 @@
     "medianSoldPrice": 25.09,
     "fairMarketValue": 25.09,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-21.7%",
+    "priceChange7d": "-17.8%",
     "roi": 105.9,
     "riskScore": 75,
     "totalSold": 34,
@@ -5594,6 +5702,10 @@
       {
         "date": "2026-06-12",
         "avg": 25.09
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 25.09
       }
     ],
     "story": {
@@ -5645,7 +5757,7 @@
         "color": "#ff7eb6"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "SWEETBEAN-ANIMALS-02",
@@ -5665,7 +5777,7 @@
     "medianSoldPrice": 25.09,
     "fairMarketValue": 25.09,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-56.3%",
+    "priceChange7d": "-59.1%",
     "roi": 99.4,
     "riskScore": 74,
     "totalSold": 34,
@@ -5796,6 +5908,10 @@
       {
         "date": "2026-06-12",
         "avg": 25.09
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 25.09
       }
     ],
     "story": {
@@ -5847,7 +5963,7 @@
         "color": "#b8e986"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "LABUBU-FRUITS-06",
@@ -5867,7 +5983,7 @@
     "medianSoldPrice": 29.99,
     "fairMarketValue": 29.99,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-33.8%",
+    "priceChange7d": "-33.3%",
     "roi": 97.4,
     "riskScore": 71,
     "totalSold": 33,
@@ -5998,6 +6114,10 @@
       {
         "date": "2026-06-12",
         "avg": 29.99
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 29.99
       }
     ],
     "story": {
@@ -6049,7 +6169,7 @@
         "color": "#ffc857"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "DIMOO-NOSLEEP-06",
@@ -6069,7 +6189,7 @@
     "medianSoldPrice": 27.57,
     "fairMarketValue": 27.57,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-36.5%",
+    "priceChange7d": "-34.6%",
     "roi": 90.6,
     "riskScore": 73,
     "totalSold": 31,
@@ -6200,6 +6320,10 @@
       {
         "date": "2026-06-12",
         "avg": 27.57
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 27.57
       }
     ],
     "story": {
@@ -6251,7 +6375,7 @@
         "color": "#9f8cff"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "LABUBU-SPACE-10",
@@ -6271,7 +6395,7 @@
     "medianSoldPrice": 24.29,
     "fairMarketValue": 24.29,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-49.7%",
+    "priceChange7d": "-50.4%",
     "roi": 85.5,
     "riskScore": 73,
     "totalSold": 35,
@@ -6402,6 +6526,10 @@
       {
         "date": "2026-06-12",
         "avg": 24.29
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 24.29
       }
     ],
     "story": {
@@ -6453,7 +6581,7 @@
         "color": "#50e3c2"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "CRYBABY-POWERPUFF-04",
@@ -6473,7 +6601,7 @@
     "medianSoldPrice": 25.0,
     "fairMarketValue": 25.0,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-22.6%",
+    "priceChange7d": "-24.4%",
     "roi": 80.8,
     "riskScore": 72,
     "totalSold": 35,
@@ -6604,6 +6732,10 @@
       {
         "date": "2026-06-12",
         "avg": 25.0
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 25.0
       }
     ],
     "story": {
@@ -6679,7 +6811,7 @@
         "color": "#191c1d"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "CRYBABY-SADCLUB-01",
@@ -6699,7 +6831,7 @@
     "medianSoldPrice": 26.0,
     "fairMarketValue": 26.0,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-45.1%",
+    "priceChange7d": "-43.7%",
     "roi": 71.9,
     "riskScore": 71,
     "totalSold": 33,
@@ -6830,6 +6962,10 @@
       {
         "date": "2026-06-12",
         "avg": 26.0
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 26.0
       }
     ],
     "story": {
@@ -6885,7 +7021,7 @@
         "color": "#50e3c2"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "LABUBU-FALLINWILD-03",
@@ -6905,7 +7041,7 @@
     "medianSoldPrice": 49.22,
     "fairMarketValue": 49.22,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-22.8%",
+    "priceChange7d": "-18.9%",
     "roi": 66.2,
     "riskScore": 70,
     "totalSold": 39,
@@ -7036,6 +7172,10 @@
       {
         "date": "2026-06-12",
         "avg": 49.22
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 49.22
       }
     ],
     "story": {
@@ -7081,7 +7221,7 @@
         "color": "#191c1d"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "PUCKY-FOREST-01",
@@ -7101,7 +7241,7 @@
     "medianSoldPrice": 22.46,
     "fairMarketValue": 22.46,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-44.0%",
+    "priceChange7d": "-46.1%",
     "roi": 62.4,
     "riskScore": 70,
     "totalSold": 35,
@@ -7232,6 +7372,10 @@
       {
         "date": "2026-06-12",
         "avg": 22.46
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 22.46
       }
     ],
     "story": {
@@ -7283,7 +7427,7 @@
         "color": "#65d39b"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "SWEETBEAN-AKIHABARA-03",
@@ -7303,7 +7447,7 @@
     "medianSoldPrice": 24.98,
     "fairMarketValue": 24.98,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-18.9%",
+    "priceChange7d": "-13.7%",
     "roi": 61.4,
     "riskScore": 66,
     "totalSold": 33,
@@ -7434,6 +7578,10 @@
       {
         "date": "2026-06-12",
         "avg": 24.98
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 24.98
       }
     ],
     "story": {
@@ -7485,7 +7633,7 @@
         "color": "#9f8cff"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "HIRONO-MIME-06",
@@ -7505,7 +7653,7 @@
     "medianSoldPrice": 22.68,
     "fairMarketValue": 22.68,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-53.6%",
+    "priceChange7d": "-51.0%",
     "roi": 56.2,
     "riskScore": 66,
     "totalSold": 35,
@@ -7636,6 +7784,10 @@
       {
         "date": "2026-06-12",
         "avg": 22.68
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 22.68
       }
     ],
     "story": {
@@ -7687,7 +7839,7 @@
         "color": "#191c1d"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "MOLLY-SPACE-100-S1-01",
@@ -7707,7 +7859,7 @@
     "medianSoldPrice": 25.0,
     "fairMarketValue": 25.0,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-45.8%",
+    "priceChange7d": "-41.7%",
     "roi": 53.6,
     "riskScore": 69,
     "totalSold": 34,
@@ -7838,6 +7990,10 @@
       {
         "date": "2026-06-12",
         "avg": 25.0
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 25.0
       }
     ],
     "story": {
@@ -7898,7 +8054,7 @@
         "color": "#6bd6ff"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "MOLLY-SPACE-100-S2-02",
@@ -7918,7 +8074,7 @@
     "medianSoldPrice": 25.0,
     "fairMarketValue": 25.0,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-55.8%",
+    "priceChange7d": "-57.2%",
     "roi": 53.6,
     "riskScore": 69,
     "totalSold": 34,
@@ -8049,6 +8205,10 @@
       {
         "date": "2026-06-12",
         "avg": 25.0
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 25.0
       }
     ],
     "story": {
@@ -8100,7 +8260,7 @@
         "color": "#6bd6ff"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "MOLLY-SPACE-100-S3-03",
@@ -8120,7 +8280,7 @@
     "medianSoldPrice": 25.0,
     "fairMarketValue": 25.0,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-25.5%",
+    "priceChange7d": "-24.8%",
     "roi": 53.6,
     "riskScore": 69,
     "totalSold": 34,
@@ -8251,6 +8411,10 @@
       {
         "date": "2026-06-12",
         "avg": 25.0
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 25.0
       }
     ],
     "story": {
@@ -8302,7 +8466,7 @@
         "color": "#ff7eb6"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "LABUBU-EXCITINGMACARON-04",
@@ -8322,7 +8486,7 @@
     "medianSoldPrice": 21.77,
     "fairMarketValue": 21.77,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-28.5%",
+    "priceChange7d": "-29.5%",
     "roi": 49.3,
     "riskScore": 68,
     "totalSold": 34,
@@ -8453,6 +8617,10 @@
       {
         "date": "2026-06-12",
         "avg": 21.77
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 21.77
       }
     ],
     "story": {
@@ -8498,7 +8666,7 @@
         "color": "#191c1d"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "DIMOO-JURASSIC-03",
@@ -8518,7 +8686,7 @@
     "medianSoldPrice": 19.99,
     "fairMarketValue": 19.99,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-27.6%",
+    "priceChange7d": "-29.4%",
     "roi": 41.2,
     "riskScore": 67,
     "totalSold": 35,
@@ -8649,6 +8817,10 @@
       {
         "date": "2026-06-12",
         "avg": 19.99
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 19.99
       }
     ],
     "story": {
@@ -8700,7 +8872,7 @@
         "color": "#8f6745"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "SKULLPANDA-EVERYDAYWONDERLAND-03",
@@ -8720,7 +8892,7 @@
     "medianSoldPrice": 19.89,
     "fairMarketValue": 19.89,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-55.3%",
+    "priceChange7d": "-54.9%",
     "roi": 35.3,
     "riskScore": 66,
     "totalSold": 34,
@@ -8851,6 +9023,10 @@
       {
         "date": "2026-06-12",
         "avg": 19.89
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 19.89
       }
     ],
     "story": {
@@ -8902,7 +9078,7 @@
         "color": "#e0d6c8"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "HIRONO-LITTLE-MISCHIEF-01",
@@ -8922,7 +9098,7 @@
     "medianSoldPrice": 20.0,
     "fairMarketValue": 20.0,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-36.1%",
+    "priceChange7d": "-30.0%",
     "roi": 34.8,
     "riskScore": 64,
     "totalSold": 35,
@@ -9053,6 +9229,10 @@
       {
         "date": "2026-06-12",
         "avg": 20.0
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 20.0
       }
     ],
     "story": {
@@ -9104,7 +9284,7 @@
         "color": "#ff8a5b"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "HIRONO-OTHERONE-03",
@@ -9124,7 +9304,7 @@
     "medianSoldPrice": 19.19,
     "fairMarketValue": 19.19,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-46.3%",
+    "priceChange7d": "-46.2%",
     "roi": 28.6,
     "riskScore": 66,
     "totalSold": 36,
@@ -9255,6 +9435,10 @@
       {
         "date": "2026-06-12",
         "avg": 19.19
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 19.19
       }
     ],
     "story": {
@@ -9306,7 +9490,7 @@
         "color": "#e0d6c8"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "HIRONO-RESHAPE-04",
@@ -9326,7 +9510,7 @@
     "medianSoldPrice": 14.5,
     "fairMarketValue": 14.5,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-60.3%",
+    "priceChange7d": "-62.7%",
     "roi": 16.7,
     "riskScore": 64,
     "totalSold": 32,
@@ -9457,6 +9641,10 @@
       {
         "date": "2026-06-12",
         "avg": 14.5
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 14.5
       }
     ],
     "story": {
@@ -9475,7 +9663,7 @@
         "source_url": "https://images.stockx.com/images/Pop-Mart-Hirono-Reshape-Figure.jpg"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "SKULLPANDA-INKPLUM-01",
@@ -9495,7 +9683,7 @@
     "medianSoldPrice": 15.0,
     "fairMarketValue": 15.0,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-55.0%",
+    "priceChange7d": "-52.1%",
     "roi": 6.9,
     "riskScore": 59,
     "totalSold": 34,
@@ -9626,6 +9814,10 @@
       {
         "date": "2026-06-12",
         "avg": 15.0
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 15.0
       }
     ],
     "story": {
@@ -9701,7 +9893,7 @@
         "color": "#50e3c2"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "LABUBU-HAVEASEAT-02",
@@ -9721,7 +9913,7 @@
     "medianSoldPrice": 19.99,
     "fairMarketValue": 19.99,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-62.1%",
+    "priceChange7d": "-63.0%",
     "roi": -1.5,
     "riskScore": 62,
     "totalSold": 36,
@@ -9852,6 +10044,10 @@
       {
         "date": "2026-06-12",
         "avg": 19.99
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 19.99
       }
     ],
     "story": {
@@ -9897,7 +10093,7 @@
         "color": "#191c1d"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   },
   {
     "sku": "HIRONO-SHELTER-05",
@@ -9917,7 +10113,7 @@
     "medianSoldPrice": 13.99,
     "fairMarketValue": 13.99,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-73.7%",
+    "priceChange7d": "-74.9%",
     "roi": -14.0,
     "riskScore": 61,
     "totalSold": 34,
@@ -10048,6 +10244,10 @@
       {
         "date": "2026-06-12",
         "avg": 13.99
+      },
+      {
+        "date": "2026-06-13",
+        "avg": 13.99
       }
     ],
     "story": {
@@ -10123,6 +10323,6 @@
         "color": "#8f6745"
       }
     ],
-    "lastUpdated": "2026-06-12"
+    "lastUpdated": "2026-06-13"
   }
 ]

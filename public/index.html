@@ -568,6 +568,15 @@
           : `Data updated: ${latest || "not loaded"} · Source: cached eBay completed sales`;
       }
 
+      function chinaTodayString() {
+        return new Intl.DateTimeFormat("en-CA", {
+          timeZone: "Asia/Shanghai",
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+        }).format(new Date());
+      }
+
       function assetUrl(path) {
         if (!path || /^https?:\/\//.test(path)) return path;
         const separator = path.includes("?") ? "&" : "?";
@@ -616,7 +625,7 @@
           priceChange7d: raw.priceChange7d || "+0.0%",
           dataSource: raw.dataSource || raw.marketData?.dataSource || "demo",
           priceHistory: normalizeHistory(raw.priceHistory),
-          lastUpdated: raw.lastUpdated || new Date().toISOString().slice(0, 10),
+          lastUpdated: raw.lastUpdated || chinaTodayString(),
         };
       }
 
