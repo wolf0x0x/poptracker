@@ -21,21 +21,21 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+Dating",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-13",
+  "lastUpdated": "2026-06-14",
   "marketData": {
-    "avgSoldPrice": 38.31,
-    "medianSoldPrice": 32.6,
-    "fairMarketValue": 32.6,
-    "lowSoldPrice": 12.0,
+    "avgSoldPrice": 31.57,
+    "medianSoldPrice": 22.61,
+    "fairMarketValue": 22.61,
+    "lowSoldPrice": 10.56,
     "highSoldPrice": 100.0,
-    "totalSold": 35,
+    "totalSold": 34,
     "volatility": "High",
-    "volatilityValue": 0.621,
-    "roi": 155.4,
-    "riskScore": 81,
-    "cleanedSampleSize": 35,
+    "volatilityValue": 0.795,
+    "roi": 110.5,
+    "riskScore": 76,
+    "cleanedSampleSize": 34,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-14.1%",
+    "priceChange7d": "-41.9%",
     "trend": "cooldown",
     "trend_zh": "热度回落",
     "signal": "caution",
@@ -164,6 +164,10 @@
     {
       "date": "2026-06-13",
       "avg": 32.6
+    },
+    {
+      "date": "2026-06-14",
+      "avg": 22.61
     }
   ],
   "dataSource": "live",

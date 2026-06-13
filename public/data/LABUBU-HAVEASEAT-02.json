@@ -21,21 +21,21 @@
   "refreshIntervalHours": 24,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Have+Seat+Labubu",
   "retailPrice": 21.99,
-  "lastUpdated": "2026-06-13",
+  "lastUpdated": "2026-06-14",
   "marketData": {
-    "avgSoldPrice": 21.65,
+    "avgSoldPrice": 20.51,
     "medianSoldPrice": 19.99,
     "fairMarketValue": 19.99,
     "lowSoldPrice": 7.0,
-    "highSoldPrice": 46.0,
+    "highSoldPrice": 36.75,
     "totalSold": 36,
     "volatility": "High",
-    "volatilityValue": 0.397,
-    "roi": -1.5,
+    "volatilityValue": 0.369,
+    "roi": -6.7,
     "riskScore": 62,
     "cleanedSampleSize": 36,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-62.2%",
+    "priceChange7d": "-62.1%",
     "trend": "cooldown",
     "trend_zh": "热度回落",
     "signal": "value",
@@ -163,6 +163,10 @@
     },
     {
       "date": "2026-06-13",
+      "avg": 19.99
+    },
+    {
+      "date": "2026-06-14",
       "avg": 19.99
     }
   ],

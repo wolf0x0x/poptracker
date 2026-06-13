@@ -21,21 +21,21 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+HIRONO+Reshape",
   "retailPrice": 16.0,
-  "lastUpdated": "2026-06-13",
+  "lastUpdated": "2026-06-14",
   "marketData": {
-    "avgSoldPrice": 18.68,
-    "medianSoldPrice": 14.5,
-    "fairMarketValue": 14.5,
+    "avgSoldPrice": 20.28,
+    "medianSoldPrice": 15.0,
+    "fairMarketValue": 15.0,
     "lowSoldPrice": 4.99,
-    "highSoldPrice": 74.47,
+    "highSoldPrice": 109.85,
     "totalSold": 32,
     "volatility": "High",
-    "volatilityValue": 0.775,
-    "roi": 16.7,
-    "riskScore": 64,
+    "volatilityValue": 0.981,
+    "roi": 26.8,
+    "riskScore": 65,
     "cleanedSampleSize": 32,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-62.5%",
+    "priceChange7d": "-58.9%",
     "trend": "cooldown",
     "trend_zh": "热度回落",
     "signal": "value",
@@ -164,6 +164,10 @@
     {
       "date": "2026-06-13",
       "avg": 14.5
+    },
+    {
+      "date": "2026-06-14",
+      "avg": 15.0
     }
   ],
   "dataSource": "live",

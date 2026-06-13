@@ -21,21 +21,21 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+MOLLY+My+Childhood",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-13",
+  "lastUpdated": "2026-06-14",
   "marketData": {
-    "avgSoldPrice": 62.51,
-    "medianSoldPrice": 34.77,
-    "fairMarketValue": 34.77,
-    "lowSoldPrice": 19.89,
-    "highSoldPrice": 237.37,
-    "totalSold": 35,
+    "avgSoldPrice": 67.8,
+    "medianSoldPrice": 28.7,
+    "fairMarketValue": 28.7,
+    "lowSoldPrice": 10.24,
+    "highSoldPrice": 299.0,
+    "totalSold": 37,
     "volatility": "High",
-    "volatilityValue": 0.917,
-    "roi": 316.8,
+    "volatilityValue": 1.057,
+    "roi": 352.0,
     "riskScore": 92,
-    "cleanedSampleSize": 35,
+    "cleanedSampleSize": 37,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-20.6%",
+    "priceChange7d": "-32.3%",
     "trend": "cooldown",
     "trend_zh": "热度回落",
     "signal": "caution",
@@ -164,6 +164,10 @@
     {
       "date": "2026-06-13",
       "avg": 34.77
+    },
+    {
+      "date": "2026-06-14",
+      "avg": 28.7
     }
   ],
   "dataSource": "live",
