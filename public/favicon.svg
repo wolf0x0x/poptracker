@@ -1,26 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="PopTracker toy ghost face">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="PopTracker trend bubble with tracker radar">
   <defs>
-    <linearGradient id="face" x1="24" y1="16" x2="104" y2="112" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#7c4dff"/>
-      <stop offset="0.55" stop-color="#6b38d4"/>
-      <stop offset="1" stop-color="#191c1d"/>
+    <!-- 潮流霓虹渐变：粉紫到青绿 -->
+    <linearGradient id="popGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff2d95"/>
+      <stop offset="50%" stop-color="#8f38d4"/>
+      <stop offset="100%" stop-color="#00d4aa"/>
     </linearGradient>
-    <radialGradient id="shine" cx="42" cy="34" r="54" gradientUnits="userSpaceOnUse">
+    <!-- 高光 -->
+    <radialGradient id="bubbleShine" cx="40" cy="34" r="48">
       <stop stop-color="#ffffff" stop-opacity="0.55"/>
       <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
+    <!-- 内部数据屏发光 -->
+    <filter id="glow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
   </defs>
-  <rect width="128" height="128" rx="28" fill="#f8f9fa"/>
-  <path d="M31 45 23 18l28 16a49 49 0 0 1 26 0l28-16-8 27c10 10 16 23 16 38 0 28-22 43-49 43S15 111 15 83c0-15 6-28 16-38Z" fill="url(#face)"/>
-  <path d="M31 45 23 18l28 16a49 49 0 0 1 26 0l28-16-8 27c10 10 16 23 16 38 0 28-22 43-49 43S15 111 15 83c0-15 6-28 16-38Z" fill="url(#shine)"/>
-  <path d="m33 35-2-8 8 5-3 7-3-4Zm62 0 2-8-8 5 3 7 3-4Z" fill="#ebe2ff" opacity="0.85"/>
-  <circle cx="45" cy="71" r="15" fill="#ffffff"/>
-  <circle cx="83" cy="71" r="15" fill="#ffffff"/>
-  <circle cx="49" cy="73" r="7" fill="#191c1d"/>
-  <circle cx="79" cy="69" r="7" fill="#191c1d"/>
-  <circle cx="52" cy="69" r="2.2" fill="#ffffff"/>
-  <circle cx="82" cy="65" r="2.2" fill="#ffffff"/>
-  <path d="M43 97c9 10 33 10 42-1" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
-  <path d="M51 98c4 3 22 3 27 0" fill="none" stroke="#191c1d" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
-  <path d="M32 55c6-7 15-9 25-5M72 50c10-4 20-2 25 5" fill="none" stroke="#191c1d" stroke-width="5" stroke-linecap="round" opacity="0.42"/>
+
+  <!-- 外层潮流气泡（Pop） -->
+  <rect width="128" height="128" rx="32" fill="url(#popGradient)"/>
+  <rect width="128" height="128" rx="32" fill="url(#bubbleShine)"/>
+
+  <!-- 内层深色数据面板 -->
+  <rect x="18" y="18" width="92" height="92" rx="24" fill="#0d0d12"/>
+
+  <!-- 雷达网格 -->
+  <circle cx="64" cy="66" r="28" fill="none" stroke="rgba(0,212,170,0.22)" stroke-width="1.5"/>
+  <circle cx="64" cy="66" r="16" fill="none" stroke="rgba(0,212,170,0.22)" stroke-width="1.5"/>
+  <line x1="64" y1="38" x2="64" y2="94" stroke="rgba(0,212,170,0.22)" stroke-width="1.5"/>
+  <line x1="36" y1="66" x2="92" y2="66" stroke="rgba(0,212,170,0.22)" stroke-width="1.5"/>
+
+  <!-- 向上折线箭头（Tracker / 增长） -->
+  <polyline points="38,76 52,64 62,72 84,48" fill="none" stroke="#00ff9d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <polygon points="84,48 77,51 80,58" fill="#00ff9d"/>
+
+  <!-- 探测点 -->
+  <circle cx="84" cy="48" r="4.5" fill="#ffffff"/>
+
+  <!-- 底部气泡小尾巴 -->
+  <path d="M 28 108 L 36 96 L 44 108 Z" fill="url(#popGradient)"/>
 </svg>

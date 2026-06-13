@@ -7,7 +7,7 @@
   "rarity_zh": "稳定流通",
   "rarity_en": "Liquid regular",
   "color": "#65d39b",
-  "image": "/assets/sku/PUCKY-FOREST-01.png",
+  "image": "/assets/sku/PUCKY-FOREST-01.avif",
   "searchString": "\"Pucky\" AND \"Forest\" AND \"Pop Mart\" -box -card -preorder -custom -fake -replica",
   "negativeKeywords": [
     "box only",

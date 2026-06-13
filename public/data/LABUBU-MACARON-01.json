@@ -7,7 +7,7 @@
   "rarity_zh": "热门常规",
   "rarity_en": "Hot regular",
   "color": "#ff7eb6",
-  "image": "/assets/sku/LABUBU-MACARON-01.png",
+  "image": "/assets/sku/LABUBU-MACARON-01.webp",
   "searchString": "\"Labubu\" AND (\"Macaron\" OR \"Tasty Macarons\") AND (\"vinyl face\" OR \"Pop Mart\") -box -card -preorder -custom -fake -replica",
   "negativeKeywords": [
     "box only",

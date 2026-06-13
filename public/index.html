@@ -127,11 +127,13 @@
       .section-head h2 { margin-bottom: 4px; font-size: 24px; }
       .section-head p { margin-bottom: 0; color: var(--muted); font-size: 13px; }
       .feed-list { display: grid; gap: 10px; }
-      .feed-item { display: grid; grid-template-columns: 38px minmax(0, 1fr) auto; gap: 10px; align-items: center; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-low); padding: 10px; }
+      .feed-item { display: grid; grid-template-columns: 46px minmax(0, 1fr) auto; gap: 10px; align-items: center; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-low); padding: 10px; }
       .avatar, .toy-art {
         background: radial-gradient(circle at 50% 32%, rgba(255, 255, 255, 0.9) 0 16%, transparent 17%), linear-gradient(145deg, var(--asset-color, #6b38d4), #ffffff);
       }
       .avatar { width: 38px; height: 38px; border-radius: 8px; }
+      .feed-thumb { display: grid; width: 46px; height: 46px; place-items: center; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: linear-gradient(145deg, var(--asset-color, #6b38d4), #fff); }
+      .feed-thumb img { width: 100%; height: 100%; object-fit: cover; }
       .feed-name { overflow: hidden; font-weight: 760; text-overflow: ellipsis; white-space: nowrap; }
       .feed-meta, .muted { color: var(--muted); font-size: 12px; }
       .feed-price { text-align: right; font-weight: 860; }
@@ -726,7 +728,9 @@
             const price = lastHistoryValue(item);
             return `
               <button class="feed-item" type="button" data-sku="${item.sku}">
-                <span class="avatar" style="--asset-color:${item.color}"></span>
+                <span class="feed-thumb" style="--asset-color:${item.color}">
+                  ${imageMarkup(item, "", { full: true, eager: index < 3 }) || `<span class="avatar" style="--asset-color:${item.color}"></span>`}
+                </span>
                 <span>
                   <span class="feed-name">${localName(item)}</span>
                   <span class="feed-meta">${index + 2}${dict.minutesAgo}${item.ip}</span>
