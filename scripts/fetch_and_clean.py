@@ -72,6 +72,24 @@ DEMO_MULTIPLIERS = {
     "HIRONO-LITTLE-MISCHIEF-01": 1.72,
 }
 
+# 2026 最新泡泡玛特核心营销事件与 GEO 定向元数据
+EVENT_ENRICHMENT = {
+    "THE MONSTERS": {
+        "search_string": '"Labubu" AND ("Macaron" OR "FIFA World Cup" OR "World Cup 2026") AND "Pop Mart" -box -card -preorder -custom -fake -replica',
+        "geo_target_zh": "全球/新加坡/美国",
+        "geo_target_en": "Global/Singapore/US",
+        "hot_event_zh": "2026 FIFA 世界杯开幕式联名限定款 / THE MONSTERS x FIFA World Cup",
+        "hot_event_en": "2026 FIFA World Cup Opening Ceremony Limited Edition",
+    },
+    "CRYBABY": {
+        "search_string": '"Crybaby" AND ("Monster Tears" OR "Cry Me an Ocean" OR "Resorts World Sentosa" OR "Singapore") AND "Pop Mart"',
+        "geo_target_zh": "新加坡/圣淘沙名胜世界/东南亚",
+        "geo_target_en": "Singapore/Resorts World Sentosa/SEA",
+        "hot_event_zh": "2026 新加坡圣淘沙名胜世界水族馆 'Cry Me an Ocean' 特展限定关联",
+        "hot_event_en": "POP MART x STB x RWS: CRYBABY Cry Me an Ocean Activation 2026",
+    },
+}
+
 def percentile(values, ratio):
     if not values:
         return 0
@@ -395,7 +413,28 @@ def normalize_tracking_item(raw_item):
     item["image"] = raw_item.get("image", "")
     if "characters" in raw_item:
         item["characters"] = raw_item["characters"]
+    enrich_item_with_events(item)
     return item
+
+def enrich_item_with_events(item):
+    """
+    根据 IP 注入 2026 最新营销事件与 GEO 定向元数据。
+    仅当 SKU 字典未显式提供对应字段时自动补强。
+    """
+    ip = item.get("ip", "")
+    enrichment = EVENT_ENRICHMENT.get(ip)
+    if not enrichment:
+        return
+
+    # 若字典已提供 search_string，保留原值；否则注入事件版搜索串
+    if not item.get("search_string"):
+        item["search_string"] = enrichment["search_string"]
+
+    item.setdefault("geo_target_zh", enrichment["geo_target_zh"])
+    item.setdefault("geo_target_en", enrichment["geo_target_en"])
+    item.setdefault("hot_event_zh", enrichment["hot_event_zh"])
+    item.setdefault("hot_event_en", enrichment["hot_event_en"])
+
 
 def select_items_for_live(items, state, today, budget):
     if budget <= 0:
@@ -589,6 +628,10 @@ def main():
             "color": item["color"],
             "image": item.get("image", ""),
             "searchString": item["search_string"],
+            "geoTargetZh": item.get("geo_target_zh", ""),
+            "geoTargetEn": item.get("geo_target_en", ""),
+            "hotEventZh": item.get("hot_event_zh", ""),
+            "hotEventEn": item.get("hot_event_en", ""),
             "negativeKeywords": item["negative_keywords"],
             "refreshTier": item["refresh_tier"],
             "refreshIntervalHours": 24 if item["refresh_tier"] == "hot" else 168,
@@ -629,6 +672,10 @@ def main():
                 "color": item["color"],
                 "image": item.get("image", ""),
                 "searchString": item["search_string"],
+                "geoTargetZh": item.get("geo_target_zh", ""),
+                "geoTargetEn": item.get("geo_target_en", ""),
+                "hotEventZh": item.get("hot_event_zh", ""),
+                "hotEventEn": item.get("hot_event_en", ""),
                 "refreshTier": item["refresh_tier"],
                 "affiliateUrl": affiliate_url,
                 "retailPrice": item["retail_price_usd"],

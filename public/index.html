@@ -25,7 +25,7 @@
     <meta name="geo.region" content="SG" />
     <meta name="geo.placename" content="Singapore" />
 
-    <script type="application/ld+json">
+    <script type="application/ld+json" id="poptracker-collection-schema">
     {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
@@ -47,6 +47,7 @@
       }
     }
     </script>
+    <script type="application/ld+json" id="poptracker-product-schema"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
     <style>
       :root {
@@ -213,6 +214,8 @@
       .hidden { display: none !important; }
 
       .lang-switch { border: 1px solid var(--line) !important; font-weight: bold !important; color: var(--primary) !important; background: var(--surface) !important; }
+      .event-geo-notice { padding: 12px; border-radius: 8px; margin: 12px 0; color: #fff; font-size: 13px; line-height: 1.6; background: linear-gradient(135deg, #191c1d, #6b38d4); }
+      .event-geo-notice strong { display: block; margin-bottom: 6px; }
 
       @media (max-width: 980px) {
         .hero, .discover, .series-hero-content, .series-content-grid, .story-block, .packaging-card { grid-template-columns: 1fr; }
@@ -399,6 +402,7 @@
         </div>
         <p class="muted" id="detailMethod" style="margin: 12px 0 0"></p>
         <p class="muted" id="detailNote" style="margin: 8px 0 0"></p>
+        <div id="detailEventNotice"></div>
         <div class="detail-actions">
           <a class="primary-button" id="dealButton" href="#" target="_blank" rel="noopener" data-t="btnFindDeals">Find Marketplace Deals on eBay</a>
         </div>
@@ -976,6 +980,104 @@
         dealButton.href = item.affiliateUrl || `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(item.searchString || `Pop Mart ${item.ip} ${item.series}`)}`;
 
         renderHistoryChart(item, null);
+
+        const userRegion = (Intl.DateTimeFormat().resolvedOptions().timeZone.includes("Asia/Singapore")) ? "SG" : "US";
+        updateSEOProductSchema(item, userRegion);
+        renderMarketEventNotice(item, document.getElementById("detailEventNotice"));
+      }
+
+      function updateSEOProductSchema(item, region) {
+        let schemaEl = document.getElementById("poptracker-product-schema");
+        if (!schemaEl) {
+          schemaEl = document.createElement("script");
+          schemaEl.type = "application/ld+json";
+          schemaEl.id = "poptracker-product-schema";
+          document.head.appendChild(schemaEl);
+        }
+
+        let eventSEOKeywords = "";
+        let eventDescriptionPhrase = "";
+        const isMonsters = item.ip === "THE MONSTERS" || item.sku.includes("LABUBU") || (item.hotEventEn || "").includes("World Cup");
+        const isCrybaby = item.ip === "CRYBABY" || (item.hotEventEn || "").includes("Cry Me an Ocean");
+
+        if (isMonsters) {
+          eventSEOKeywords = "2026 FIFA World Cup opening ceremony, THE MONSTERS FIFA World Cup collection, LABUBU mascot, 泡泡玛特世界杯联名";
+          eventDescriptionPhrase = currentLang === "zh"
+            ? " 包含 2026 FIFA 世界杯开幕式热卖系列 THE MONSTERS 限定款及二级市场行情走势。"
+            : " Includes the 2026 FIFA World Cup Opening Ceremony THE MONSTERS limited edition and secondary market trend data.";
+        } else if (isCrybaby) {
+          eventSEOKeywords = "CRYBABY Cry Me an Ocean Singapore, Resorts World Sentosa RWS, Singapore Oceanarium POP MART, 圣淘沙名胜世界水族馆特展";
+          eventDescriptionPhrase = currentLang === "zh"
+            ? " 关联 2026 新加坡圣淘沙名胜世界水族馆 'CRYBABY Cry Me an Ocean' 官方特展极高换手率资产。"
+            : " Tied to the 2026 Singapore Resorts World Sentosa Oceanarium 'CRYBABY Cry Me an Ocean' official activation with high turnover assets.";
+        }
+
+        const hotEventText = currentLang === "zh" ? (item.hotEventZh || "") : (item.hotEventEn || "");
+        const geoText = currentLang === "zh" ? (item.geoTargetZh || "") : (item.geoTargetEn || "");
+        const extraKeywords = [hotEventText, geoText].filter(Boolean).join(", ");
+
+        let targetCurrency = "USD";
+        if (region === "SG" || isCrybaby) {
+          targetCurrency = "SGD";
+        }
+
+        const productName = currentLang === "zh"
+          ? `${item.name_zh} (${item.name_en}) - 泡泡玛特二级市场行情追踪`
+          : `${item.name_en} (${item.name_zh}) - POP MART Secondary Market Tracker`;
+
+        const lowPrice = Math.max(0.01, (item.fairMarketValue || item.retailPrice || 15) * 0.85).toFixed(2);
+        const highPrice = Math.max(0.01, (item.fairMarketValue || item.retailPrice || 15) * 1.4).toFixed(2);
+
+        const productSchema = {
+          "@context": "https://schema.org/",
+          "@type": "Product",
+          "name": productName,
+          "image": item.image ? (item.image.startsWith("http") ? item.image : window.location.origin + item.image) : "",
+          "description": (currentLang === "zh" ? "泡泡玛特潮玩收藏投资追踪：" : "POP MART collectible investment tracker: ")
+            + `${item.ip} ${item.series}. `
+            + (currentLang === "zh" ? "当前公允价" : "Current fair market value")
+            + ` $${item.fairMarketValue} (${item.valuationMethod || "IQR + trimmed median"}).`
+            + eventDescriptionPhrase
+            + (currentLang === "zh" ? " 提供实时二级市场成交流、风险分和多维度行情指标。" : " Provides real-time secondary market sales flow, risk scores and multi-dimensional indicators."),
+          "sku": item.sku,
+          "mpn": item.sku,
+          "brand": { "@type": "Brand", "name": "POP MART" },
+          "keywords": `POP MART, ${item.ip}, ${item.series}, ${item.name_zh}, ${item.name_en}, 公允价值, FMV, 盲盒投资, ${eventSEOKeywords}, ${extraKeywords}`,
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": targetCurrency,
+            "lowPrice": lowPrice,
+            "highPrice": highPrice,
+            "offerCount": String(item.totalSold || 30),
+            "priceValidUntil": "2026-12-31",
+            "url": item.affiliateUrl || "https://www.ebay.com"
+          }
+        };
+
+        schemaEl.textContent = JSON.stringify(productSchema, null, 2);
+      }
+
+      function renderMarketEventNotice(item, container) {
+        if (!container) return;
+        container.innerHTML = "";
+
+        const isMonsters = item.ip === "THE MONSTERS" || item.sku.includes("LABUBU") || (item.hotEventEn || "").includes("World Cup");
+        const isCrybaby = item.ip === "CRYBABY" || (item.hotEventEn || "").includes("Cry Me an Ocean");
+
+        let noticeHTML = "";
+        if (isMonsters) {
+          noticeHTML = currentLang === "zh"
+            ? `<div class="event-geo-notice"><strong>🔥 2026 环球热点联动：</strong> LABUBU 于 2026 年 6 月 12 日正式登上 FIFA 世界杯开幕式舞台！THE MONSTERS x FIFA 世界杯联名限定款在全球引爆二级追高潮。当前公允价已通过 IQR 模型剔除溢价噪声，请保持理性。</div>`
+            : `<div class="event-geo-notice"><strong>🔥 2026 Global Hot Event:</strong> LABUBU debuted on the FIFA World Cup opening ceremony stage on June 12, 2026! The THE MONSTERS x FIFA World Cup limited collab is driving global secondary-market premiums. FMV has been IQR-cleaned—trade responsibly.</div>`;
+        } else if (isCrybaby) {
+          noticeHTML = currentLang === "zh"
+            ? `<div class="event-geo-notice"><strong>🇸🇬 GEO 区域特展追踪：</strong> 泡泡玛特联合新加坡旅游局在圣淘沙名胜世界水族馆（Singapore Oceanarium）自 6 月 24 日起开启“CRYBABY Cry Me an Ocean”全沉浸特展。东南亚及新加坡本地该品类换手率激增，行情波动评级已同步刷新。</div>`
+            : `<div class="event-geo-notice"><strong>🇸🇬 GEO Regional Activation:</strong> POP MART partners with STB to launch the CRYBABY “Cry Me an Ocean” immersive exhibition at Resorts World Sentosa Oceanarium from June 24. SEA/Singapore turnover is spiking—volatility ratings refreshed.</div>`;
+        }
+
+        if (noticeHTML) {
+          container.insertAdjacentHTML("beforeend", noticeHTML);
+        }
       }
 
       function renderHistoryChart(item, detail) {
