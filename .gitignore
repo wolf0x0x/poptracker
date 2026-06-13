@@ -1,4 +1,5 @@
 outputs/
+public/data/sync_state.json
 .env
 .env.*
 !.env.example
