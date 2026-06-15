@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+The+Mare+of+Animals",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-14",
+  "lastUpdated": "2026-06-15",
   "marketData": {
     "avgSoldPrice": 37.46,
     "medianSoldPrice": 24.99,
@@ -35,7 +35,7 @@
     "riskScore": 81,
     "cleanedSampleSize": 37,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-11.6%",
+    "priceChange7d": "-12.3%",
     "trend": "cooldown",
     "trend_zh": "热度回落",
     "signal": "caution",
@@ -167,6 +167,10 @@
     },
     {
       "date": "2026-06-14",
+      "avg": 24.99
+    },
+    {
+      "date": "2026-06-15",
       "avg": 24.99
     }
   ],
