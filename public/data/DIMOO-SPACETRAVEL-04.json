@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+Space+Travel",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-15",
+  "lastUpdated": "2026-06-17",
   "marketData": {
     "avgSoldPrice": 24.81,
     "medianSoldPrice": 23.85,
@@ -35,7 +35,7 @@
     "riskScore": 70,
     "cleanedSampleSize": 35,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-14.8%",
+    "priceChange7d": "-14.3%",
     "trend": "cooldown",
     "trend_zh": "热度回落",
     "signal": "hold",
@@ -171,6 +171,10 @@
     },
     {
       "date": "2026-06-15",
+      "avg": 23.85
+    },
+    {
+      "date": "2026-06-17",
       "avg": 23.85
     }
   ],

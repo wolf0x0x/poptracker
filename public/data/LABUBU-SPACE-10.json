@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Space+Labubu",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-15",
+  "lastUpdated": "2026-06-17",
   "marketData": {
     "avgSoldPrice": 22.42,
     "medianSoldPrice": 19.98,
@@ -35,7 +35,7 @@
     "riskScore": 68,
     "cleanedSampleSize": 34,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-59.2%",
+    "priceChange7d": "-60.5%",
     "trend": "cooldown",
     "trend_zh": "热度回落",
     "signal": "hold",
@@ -171,6 +171,10 @@
     },
     {
       "date": "2026-06-15",
+      "avg": 19.98
+    },
+    {
+      "date": "2026-06-17",
       "avg": 19.98
     }
   ],
