@@ -13,12 +13,12 @@
     "refreshTier": "hot",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Tasty+Macarons+Labubu+Macaron+Vinyl+Face",
     "retailPrice": 17.0,
-    "avgSoldPrice": 60.0,
-    "medianSoldPrice": 60.0,
-    "fairMarketValue": 60.0,
+    "avgSoldPrice": 38.58,
+    "medianSoldPrice": 38.58,
+    "fairMarketValue": 38.58,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-25.1%",
-    "roi": 345.2,
+    "priceChange7d": "-51.8%",
+    "roi": 256.4,
     "riskScore": 92,
     "totalSold": 38,
     "signal_zh": "谨慎追高",
@@ -155,7 +155,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 60.0
+        "avg": 38.58
       }
     ],
     "story": {
@@ -222,7 +222,7 @@
     "fairMarketValue": 19.99,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "-61.4%",
-    "roi": -3.6,
+    "roi": -8.0,
     "riskScore": 62,
     "totalSold": 37,
     "signal_zh": "低溢价建仓候选",
@@ -421,12 +421,12 @@
     "refreshTier": "hot",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Fall+in+Wild+Labubu",
     "retailPrice": 25.99,
-    "avgSoldPrice": 33.0,
-    "medianSoldPrice": 33.0,
-    "fairMarketValue": 33.0,
+    "avgSoldPrice": 32.1,
+    "medianSoldPrice": 32.1,
+    "fairMarketValue": 32.1,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-44.6%",
-    "roi": 51.9,
+    "priceChange7d": "-46.1%",
+    "roi": 49.3,
     "riskScore": 68,
     "totalSold": 39,
     "signal_zh": "持有跟踪",
@@ -563,7 +563,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 33.0
+        "avg": 32.1
       }
     ],
     "story": {
@@ -625,14 +625,14 @@
     "refreshTier": "hot",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Exciting+Macarons+Labubu",
     "retailPrice": 17.0,
-    "avgSoldPrice": 21.99,
-    "medianSoldPrice": 21.99,
-    "fairMarketValue": 21.99,
+    "avgSoldPrice": 21.6,
+    "medianSoldPrice": 21.6,
+    "fairMarketValue": 21.6,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-33.2%",
-    "roi": 65.7,
-    "riskScore": 70,
-    "totalSold": 35,
+    "priceChange7d": "-34.3%",
+    "roi": 54.9,
+    "riskScore": 69,
+    "totalSold": 34,
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
     "dataSource": "live",
@@ -767,7 +767,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 21.99
+        "avg": 21.6
       }
     ],
     "story": {
@@ -834,7 +834,7 @@
     "fairMarketValue": 30.99,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "-42.9%",
-    "roi": 1126.5,
+    "roi": 1232.2,
     "riskScore": 92,
     "totalSold": 40,
     "signal_zh": "谨慎追高",
@@ -1013,14 +1013,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Fruits+Labubu",
     "retailPrice": 15.0,
-    "avgSoldPrice": 26.5,
-    "medianSoldPrice": 26.5,
-    "fairMarketValue": 26.5,
+    "avgSoldPrice": 29.0,
+    "medianSoldPrice": 29.0,
+    "fairMarketValue": 29.0,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-41.4%",
-    "roi": 227.9,
+    "priceChange7d": "-35.9%",
+    "roi": 220.1,
     "riskScore": 90,
-    "totalSold": 38,
+    "totalSold": 39,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
     "dataSource": "live",
@@ -1155,7 +1155,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 26.5
+        "avg": 29.0
       }
     ],
     "story": {
@@ -1223,14 +1223,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Camping+Labubu",
     "retailPrice": 15.0,
-    "avgSoldPrice": 26.0,
-    "medianSoldPrice": 26.0,
-    "fairMarketValue": 26.0,
+    "avgSoldPrice": 25.0,
+    "medianSoldPrice": 25.0,
+    "fairMarketValue": 25.0,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-55.2%",
-    "roi": 255.7,
-    "riskScore": 92,
-    "totalSold": 37,
+    "priceChange7d": "-56.9%",
+    "roi": 226.0,
+    "riskScore": 90,
+    "totalSold": 38,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
     "dataSource": "live",
@@ -1365,7 +1365,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 26.0
+        "avg": 25.0
       }
     ],
     "story": {
@@ -1438,7 +1438,7 @@
     "fairMarketValue": 28.5,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "-14.8%",
-    "roi": 117.7,
+    "roi": 118.3,
     "riskScore": 77,
     "totalSold": 34,
     "signal_zh": "谨慎追高",
@@ -1643,12 +1643,12 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Zodiac+Labubu",
     "retailPrice": 15.0,
-    "avgSoldPrice": 38.58,
-    "medianSoldPrice": 38.58,
-    "fairMarketValue": 38.58,
+    "avgSoldPrice": 36.59,
+    "medianSoldPrice": 36.59,
+    "fairMarketValue": 36.59,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-24.8%",
-    "roi": 342.0,
+    "priceChange7d": "-28.7%",
+    "roi": 288.2,
     "riskScore": 92,
     "totalSold": 38,
     "signal_zh": "谨慎追高",
@@ -1785,7 +1785,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 38.58
+        "avg": 36.59
       }
     ],
     "story": {
@@ -1858,7 +1858,7 @@
     "fairMarketValue": 19.98,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "-60.5%",
-    "roi": 49.5,
+    "roi": 47.7,
     "riskScore": 68,
     "totalSold": 34,
     "signal_zh": "持有跟踪",
@@ -2068,8 +2068,8 @@
     "fairMarketValue": 15.0,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "-56.2%",
-    "roi": 4.0,
-    "riskScore": 62,
+    "roi": 4.1,
+    "riskScore": 63,
     "totalSold": 35,
     "signal_zh": "低溢价建仓候选",
     "signal_en": "Low-premium candidate",
@@ -2297,14 +2297,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+City+of+Night",
     "retailPrice": 15.0,
-    "avgSoldPrice": 28.49,
-    "medianSoldPrice": 28.49,
-    "fairMarketValue": 28.49,
+    "avgSoldPrice": 24.99,
+    "medianSoldPrice": 24.99,
+    "fairMarketValue": 24.99,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-24.4%",
-    "roi": 263.6,
+    "priceChange7d": "-33.7%",
+    "roi": 238.3,
     "riskScore": 92,
-    "totalSold": 38,
+    "totalSold": 37,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
     "dataSource": "live",
@@ -2439,7 +2439,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 28.49
+        "avg": 24.99
       }
     ],
     "story": {
@@ -2536,7 +2536,7 @@
     "fairMarketValue": 14.99,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "-65.5%",
-    "roi": 22.0,
+    "roi": 21.8,
     "riskScore": 65,
     "totalSold": 33,
     "signal_zh": "低溢价建仓候选",
@@ -2741,13 +2741,13 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+The+Mare+of+Animals",
     "retailPrice": 15.0,
-    "avgSoldPrice": 24.42,
-    "medianSoldPrice": 24.42,
-    "fairMarketValue": 24.42,
+    "avgSoldPrice": 30.89,
+    "medianSoldPrice": 30.89,
+    "fairMarketValue": 30.89,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-18.8%",
-    "roi": 134.7,
-    "riskScore": 79,
+    "priceChange7d": "+2.7%",
+    "roi": 159.6,
+    "riskScore": 82,
     "totalSold": 36,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
@@ -2883,7 +2883,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 24.42
+        "avg": 30.89
       }
     ],
     "story": {
@@ -2951,12 +2951,12 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+Hypepanda",
     "retailPrice": 15.0,
-    "avgSoldPrice": 22.85,
-    "medianSoldPrice": 22.85,
-    "fairMarketValue": 22.85,
+    "avgSoldPrice": 35.5,
+    "medianSoldPrice": 35.5,
+    "fairMarketValue": 35.5,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-36.5%",
-    "roi": 380.6,
+    "priceChange7d": "-1.4%",
+    "roi": 458.1,
     "riskScore": 92,
     "totalSold": 40,
     "signal_zh": "谨慎追高",
@@ -3093,7 +3093,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 22.85
+        "avg": 35.5
       }
     ],
     "story": {
@@ -3161,14 +3161,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+Action+Cut",
     "retailPrice": 15.0,
-    "avgSoldPrice": 24.21,
-    "medianSoldPrice": 24.21,
-    "fairMarketValue": 24.21,
+    "avgSoldPrice": 21.99,
+    "medianSoldPrice": 21.99,
+    "fairMarketValue": 21.99,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-52.4%",
-    "roi": 393.6,
+    "priceChange7d": "-56.7%",
+    "roi": 267.0,
     "riskScore": 92,
-    "totalSold": 40,
+    "totalSold": 37,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
     "dataSource": "live",
@@ -3303,7 +3303,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 24.21
+        "avg": 21.99
       }
     ],
     "story": {
@@ -3371,14 +3371,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+Candy+Monster",
     "retailPrice": 15.0,
-    "avgSoldPrice": 35.41,
-    "medianSoldPrice": 35.41,
-    "fairMarketValue": 35.41,
+    "avgSoldPrice": 48.75,
+    "medianSoldPrice": 48.75,
+    "fairMarketValue": 48.75,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-15.1%",
-    "roi": 443.8,
+    "priceChange7d": "+16.8%",
+    "roi": 526.8,
     "riskScore": 92,
-    "totalSold": 40,
+    "totalSold": 39,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
     "dataSource": "live",
@@ -3513,7 +3513,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 35.41
+        "avg": 48.75
       }
     ],
     "story": {
@@ -3581,14 +3581,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+Laid+Back+Tomorrow",
     "retailPrice": 16.0,
-    "avgSoldPrice": 30.57,
-    "medianSoldPrice": 30.57,
-    "fairMarketValue": 30.57,
+    "avgSoldPrice": 32.85,
+    "medianSoldPrice": 32.85,
+    "fairMarketValue": 32.85,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-10.1%",
-    "roi": 315.3,
+    "priceChange7d": "-3.4%",
+    "roi": 377.1,
     "riskScore": 92,
-    "totalSold": 40,
+    "totalSold": 38,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
     "dataSource": "live",
@@ -3723,7 +3723,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 30.57
+        "avg": 32.85
       }
     ],
     "story": {
@@ -3791,13 +3791,13 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+MOLLY+MEGA+Space+100%25+Series",
     "retailPrice": 19.0,
-    "avgSoldPrice": 20.5,
-    "medianSoldPrice": 20.5,
-    "fairMarketValue": 20.5,
+    "avgSoldPrice": 18.99,
+    "medianSoldPrice": 18.99,
+    "fairMarketValue": 18.99,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-55.7%",
-    "roi": 23.8,
-    "riskScore": 65,
+    "priceChange7d": "-59.0%",
+    "roi": 9.4,
+    "riskScore": 63,
     "totalSold": 34,
     "signal_zh": "低溢价建仓候选",
     "signal_en": "Low-premium candidate",
@@ -3933,7 +3933,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 20.5
+        "avg": 18.99
       }
     ],
     "story": {
@@ -4010,14 +4010,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+MOLLY+MEGA+Space+100%25+Series",
     "retailPrice": 19.0,
-    "avgSoldPrice": 20.5,
-    "medianSoldPrice": 20.5,
-    "fairMarketValue": 20.5,
+    "avgSoldPrice": 19.0,
+    "medianSoldPrice": 19.0,
+    "fairMarketValue": 19.0,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-66.6%",
-    "roi": 23.8,
-    "riskScore": 65,
-    "totalSold": 34,
+    "priceChange7d": "-69.1%",
+    "roi": 6.7,
+    "riskScore": 63,
+    "totalSold": 33,
     "signal_zh": "低溢价建仓候选",
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
@@ -4152,7 +4152,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 20.5
+        "avg": 19.0
       }
     ],
     "story": {
@@ -4220,14 +4220,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+MOLLY+MEGA+Space+100%25+Series",
     "retailPrice": 19.0,
-    "avgSoldPrice": 20.5,
-    "medianSoldPrice": 20.5,
-    "fairMarketValue": 20.5,
+    "avgSoldPrice": 19.0,
+    "medianSoldPrice": 19.0,
+    "fairMarketValue": 19.0,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-36.0%",
-    "roi": 23.8,
-    "riskScore": 65,
-    "totalSold": 34,
+    "priceChange7d": "-40.7%",
+    "roi": 6.7,
+    "riskScore": 63,
+    "totalSold": 33,
     "signal_zh": "低溢价建仓候选",
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
@@ -4362,7 +4362,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 20.5
+        "avg": 19.0
       }
     ],
     "story": {
@@ -4430,14 +4430,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+MOLLY+My+Childhood",
     "retailPrice": 15.0,
-    "avgSoldPrice": 38.12,
-    "medianSoldPrice": 38.12,
-    "fairMarketValue": 38.12,
+    "avgSoldPrice": 24.99,
+    "medianSoldPrice": 24.99,
+    "fairMarketValue": 24.99,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-7.3%",
-    "roi": 318.3,
-    "riskScore": 92,
-    "totalSold": 36,
+    "priceChange7d": "-39.3%",
+    "roi": 212.9,
+    "riskScore": 89,
+    "totalSold": 34,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
     "dataSource": "live",
@@ -4572,7 +4572,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 38.12
+        "avg": 24.99
       }
     ],
     "story": {
@@ -4640,12 +4640,12 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+MOLLY+Imaginary+Wandering",
     "retailPrice": 15.0,
-    "avgSoldPrice": 54.59,
-    "medianSoldPrice": 54.59,
-    "fairMarketValue": 54.59,
+    "avgSoldPrice": 65.0,
+    "medianSoldPrice": 65.0,
+    "fairMarketValue": 65.0,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+58.8%",
-    "roi": 538.8,
+    "priceChange7d": "+89.1%",
+    "roi": 560.9,
     "riskScore": 92,
     "totalSold": 39,
     "signal_zh": "谨慎追高",
@@ -4782,7 +4782,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 54.59
+        "avg": 65.0
       }
     ],
     "story": {
@@ -4850,14 +4850,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+MOLLY+Daydream",
     "retailPrice": 15.0,
-    "avgSoldPrice": 100.0,
-    "medianSoldPrice": 100.0,
-    "fairMarketValue": 100.0,
+    "avgSoldPrice": 84.57,
+    "medianSoldPrice": 84.57,
+    "fairMarketValue": 84.57,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+81.7%",
-    "roi": 744.9,
+    "priceChange7d": "+53.6%",
+    "roi": 717.3,
     "riskScore": 92,
-    "totalSold": 39,
+    "totalSold": 38,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
     "dataSource": "live",
@@ -4992,7 +4992,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 100.0
+        "avg": 84.57
       }
     ],
     "story": {
@@ -5060,14 +5060,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+MOLLY+School+Life",
     "retailPrice": 15.0,
-    "avgSoldPrice": 88.7,
-    "medianSoldPrice": 88.7,
-    "fairMarketValue": 88.7,
+    "avgSoldPrice": 84.15,
+    "medianSoldPrice": 84.15,
+    "fairMarketValue": 84.15,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+162.8%",
-    "roi": 730.6,
+    "priceChange7d": "+149.3%",
+    "roi": 671.8,
     "riskScore": 92,
-    "totalSold": 40,
+    "totalSold": 39,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
     "dataSource": "live",
@@ -5202,7 +5202,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 88.7
+        "avg": 84.15
       }
     ],
     "story": {
@@ -5270,13 +5270,13 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+MOLLY+Steampunk",
     "retailPrice": 16.0,
-    "avgSoldPrice": 27.39,
-    "medianSoldPrice": 27.39,
-    "fairMarketValue": 27.39,
+    "avgSoldPrice": 23.99,
+    "medianSoldPrice": 23.99,
+    "fairMarketValue": 23.99,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-29.4%",
-    "roi": 155.4,
-    "riskScore": 81,
+    "priceChange7d": "-38.1%",
+    "roi": 134.4,
+    "riskScore": 79,
     "totalSold": 34,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
@@ -5412,7 +5412,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 27.39
+        "avg": 23.99
       }
     ],
     "story": {
@@ -5480,12 +5480,12 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+World+Animal",
     "retailPrice": 15.0,
-    "avgSoldPrice": 25.0,
-    "medianSoldPrice": 25.0,
-    "fairMarketValue": 25.0,
+    "avgSoldPrice": 25.92,
+    "medianSoldPrice": 25.92,
+    "fairMarketValue": 25.92,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+2.5%",
-    "roi": 313.5,
+    "priceChange7d": "+6.3%",
+    "roi": 319.4,
     "riskScore": 92,
     "totalSold": 39,
     "signal_zh": "谨慎追高",
@@ -5622,7 +5622,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 25.0
+        "avg": 25.92
       }
     ],
     "story": {
@@ -5690,13 +5690,13 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+Dating",
     "retailPrice": 15.0,
-    "avgSoldPrice": 21.55,
-    "medianSoldPrice": 21.55,
-    "fairMarketValue": 21.55,
+    "avgSoldPrice": 24.56,
+    "medianSoldPrice": 24.56,
+    "fairMarketValue": 24.56,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-40.7%",
-    "roi": 102.3,
-    "riskScore": 75,
+    "priceChange7d": "-32.4%",
+    "roi": 111.4,
+    "riskScore": 76,
     "totalSold": 34,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
@@ -5832,7 +5832,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 21.55
+        "avg": 24.56
       }
     ],
     "story": {
@@ -5900,14 +5900,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+Jurassic",
     "retailPrice": 15.0,
-    "avgSoldPrice": 14.59,
-    "medianSoldPrice": 14.59,
-    "fairMarketValue": 14.59,
+    "avgSoldPrice": 15.0,
+    "medianSoldPrice": 15.0,
+    "fairMarketValue": 15.0,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-49.3%",
-    "roi": 20.2,
+    "priceChange7d": "-47.9%",
+    "roi": 23.6,
     "riskScore": 65,
-    "totalSold": 34,
+    "totalSold": 35,
     "signal_zh": "低溢价建仓候选",
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
@@ -6042,7 +6042,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 14.59
+        "avg": 15.0
       }
     ],
     "story": {
@@ -6110,13 +6110,13 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+Space+Travel",
     "retailPrice": 15.0,
-    "avgSoldPrice": 23.85,
-    "medianSoldPrice": 23.85,
-    "fairMarketValue": 23.85,
+    "avgSoldPrice": 19.99,
+    "medianSoldPrice": 19.99,
+    "fairMarketValue": 19.99,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-14.3%",
-    "roi": 65.4,
-    "riskScore": 70,
+    "priceChange7d": "-28.1%",
+    "roi": 57.8,
+    "riskScore": 69,
     "totalSold": 35,
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
@@ -6252,7 +6252,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 23.85
+        "avg": 19.99
       }
     ],
     "story": {
@@ -6320,13 +6320,13 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+Aquarium",
     "retailPrice": 15.0,
-    "avgSoldPrice": 19.99,
-    "medianSoldPrice": 19.99,
-    "fairMarketValue": 19.99,
+    "avgSoldPrice": 16.86,
+    "medianSoldPrice": 16.86,
+    "fairMarketValue": 16.86,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-39.5%",
-    "roi": 69.4,
-    "riskScore": 71,
+    "priceChange7d": "-49.0%",
+    "roi": 51.9,
+    "riskScore": 68,
     "totalSold": 33,
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
@@ -6462,7 +6462,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 19.99
+        "avg": 16.86
       }
     ],
     "story": {
@@ -6530,14 +6530,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+No+One%27s+Gonna+Sleep",
     "retailPrice": 16.0,
-    "avgSoldPrice": 15.92,
-    "medianSoldPrice": 15.92,
-    "fairMarketValue": 15.92,
+    "avgSoldPrice": 14.79,
+    "medianSoldPrice": 14.79,
+    "fairMarketValue": 14.79,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-62.5%",
-    "roi": 28.5,
-    "riskScore": 66,
-    "totalSold": 31,
+    "priceChange7d": "-65.2%",
+    "roi": 22.9,
+    "riskScore": 65,
+    "totalSold": 32,
     "signal_zh": "低溢价建仓候选",
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
@@ -6672,7 +6672,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 15.92
+        "avg": 14.79
       }
     ],
     "story": {
@@ -6740,14 +6740,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+Midnight+Circus",
     "retailPrice": 15.0,
-    "avgSoldPrice": 24.74,
-    "medianSoldPrice": 24.74,
-    "fairMarketValue": 24.74,
+    "avgSoldPrice": 21.78,
+    "medianSoldPrice": 21.78,
+    "fairMarketValue": 21.78,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-26.4%",
-    "roi": 313.3,
-    "riskScore": 92,
-    "totalSold": 38,
+    "priceChange7d": "-35.2%",
+    "roi": 133.9,
+    "riskScore": 79,
+    "totalSold": 34,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
     "dataSource": "live",
@@ -6882,7 +6882,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 24.74
+        "avg": 21.78
       }
     ],
     "story": {
@@ -6955,9 +6955,9 @@
     "fairMarketValue": 15.0,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "-55.4%",
-    "roi": 37.3,
+    "roi": 36.2,
     "riskScore": 67,
-    "totalSold": 33,
+    "totalSold": 34,
     "signal_zh": "低溢价建仓候选",
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
@@ -7165,9 +7165,9 @@
     "fairMarketValue": 18.0,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "-38.7%",
-    "roi": 21.1,
+    "roi": 20.0,
     "riskScore": 60,
-    "totalSold": 35,
+    "totalSold": 34,
     "signal_zh": "低溢价建仓候选",
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
@@ -7370,14 +7370,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+HIRONO+City+of+Mercy",
     "retailPrice": 15.0,
-    "avgSoldPrice": 45.0,
-    "medianSoldPrice": 45.0,
-    "fairMarketValue": 45.0,
+    "avgSoldPrice": 43.67,
+    "medianSoldPrice": 43.67,
+    "fairMarketValue": 43.67,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-14.6%",
-    "roi": 417.9,
+    "priceChange7d": "-17.2%",
+    "roi": 287.0,
     "riskScore": 92,
-    "totalSold": 35,
+    "totalSold": 33,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
     "dataSource": "live",
@@ -7512,7 +7512,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 45.0
+        "avg": 43.67
       }
     ],
     "story": {
@@ -7585,8 +7585,8 @@
     "fairMarketValue": 18.99,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "-47.0%",
-    "roi": 28.1,
-    "riskScore": 66,
+    "roi": 27.2,
+    "riskScore": 65,
     "totalSold": 37,
     "signal_zh": "低溢价建仓候选",
     "signal_en": "Low-premium candidate",
@@ -7972,8 +7972,8 @@
     "fairMarketValue": 14.0,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "-75.7%",
-    "roi": -12.8,
-    "riskScore": 59,
+    "roi": -13.1,
+    "riskScore": 58,
     "totalSold": 34,
     "signal_zh": "低溢价建仓候选",
     "signal_en": "Low-premium candidate",
@@ -8206,7 +8206,7 @@
     "fairMarketValue": 20.99,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "-57.7%",
-    "roi": 49.8,
+    "roi": 50.3,
     "riskScore": 68,
     "totalSold": 37,
     "signal_zh": "持有跟踪",
@@ -8416,9 +8416,9 @@
     "fairMarketValue": 20.0,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "-43.9%",
-    "roi": 21.9,
-    "riskScore": 59,
-    "totalSold": 31,
+    "roi": 28.1,
+    "riskScore": 66,
+    "totalSold": 32,
     "signal_zh": "低溢价建仓候选",
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
@@ -8625,16 +8625,16 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+CRYBABY+Lonely+Christmas",
     "retailPrice": 16.0,
-    "avgSoldPrice": 17.24,
-    "medianSoldPrice": 17.24,
-    "fairMarketValue": 17.24,
+    "avgSoldPrice": 21.55,
+    "medianSoldPrice": 21.55,
+    "fairMarketValue": 21.55,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-62.9%",
-    "roi": 66.6,
-    "riskScore": 70,
-    "totalSold": 34,
-    "signal_zh": "持有跟踪",
-    "signal_en": "Track / hold",
+    "priceChange7d": "-53.6%",
+    "roi": 105.0,
+    "riskScore": 75,
+    "totalSold": 36,
+    "signal_zh": "谨慎追高",
+    "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
       {
@@ -8767,7 +8767,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 17.24
+        "avg": 21.55
       }
     ],
     "story": {
@@ -8835,14 +8835,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+CRYBABY+Monster+Tears",
     "retailPrice": 15.0,
-    "avgSoldPrice": 29.0,
-    "medianSoldPrice": 29.0,
-    "fairMarketValue": 29.0,
+    "avgSoldPrice": 29.88,
+    "medianSoldPrice": 29.88,
+    "fairMarketValue": 29.88,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-40.0%",
-    "roi": 398.3,
+    "priceChange7d": "-38.1%",
+    "roi": 474.3,
     "riskScore": 92,
-    "totalSold": 39,
+    "totalSold": 40,
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
     "dataSource": "live",
@@ -8977,7 +8977,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 29.0
+        "avg": 29.88
       }
     ],
     "story": {
@@ -9045,14 +9045,14 @@
     "refreshTier": "hot",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+CRYBABY+Powerpuff+Girls",
     "retailPrice": 17.99,
-    "avgSoldPrice": 21.99,
-    "medianSoldPrice": 21.99,
-    "fairMarketValue": 21.99,
+    "avgSoldPrice": 22.49,
+    "medianSoldPrice": 22.49,
+    "fairMarketValue": 22.49,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-27.8%",
-    "roi": 53.2,
-    "riskScore": 69,
-    "totalSold": 35,
+    "priceChange7d": "-26.1%",
+    "roi": 64.3,
+    "riskScore": 70,
+    "totalSold": 34,
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
     "dataSource": "live",
@@ -9187,7 +9187,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 21.99
+        "avg": 22.49
       }
     ],
     "story": {
@@ -9279,14 +9279,14 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+CRYBABY+Cheer+Up",
     "retailPrice": 15.0,
-    "avgSoldPrice": 19.49,
-    "medianSoldPrice": 19.49,
-    "fairMarketValue": 19.49,
+    "avgSoldPrice": 19.0,
+    "medianSoldPrice": 19.0,
+    "fairMarketValue": 19.0,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-63.7%",
-    "roi": 55.0,
+    "priceChange7d": "-64.6%",
+    "roi": 59.1,
     "riskScore": 69,
-    "totalSold": 34,
+    "totalSold": 35,
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
     "dataSource": "live",
@@ -9421,7 +9421,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 19.49
+        "avg": 19.0
       }
     ],
     "story": {
@@ -9489,13 +9489,13 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SWEET+BEAN+Supermarket",
     "retailPrice": 15.0,
-    "avgSoldPrice": 12.5,
-    "medianSoldPrice": 12.5,
-    "fairMarketValue": 12.5,
+    "avgSoldPrice": 11.46,
+    "medianSoldPrice": 11.46,
+    "fairMarketValue": 11.46,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-59.8%",
-    "roi": 14.2,
-    "riskScore": 64,
+    "priceChange7d": "-63.2%",
+    "roi": 4.3,
+    "riskScore": 63,
     "totalSold": 34,
     "signal_zh": "低溢价建仓候选",
     "signal_en": "Low-premium candidate",
@@ -9631,7 +9631,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 12.5
+        "avg": 11.46
       }
     ],
     "story": {
@@ -9704,7 +9704,7 @@
     "fairMarketValue": 10.92,
     "valuationMethod": "IQR + 10% trimmed median",
     "priceChange7d": "-81.6%",
-    "roi": -5.4,
+    "roi": 1.4,
     "riskScore": 62,
     "totalSold": 33,
     "signal_zh": "低溢价建仓候选",
@@ -9909,12 +9909,12 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SWEET+BEAN+Akihabara",
     "retailPrice": 16.0,
-    "avgSoldPrice": 12.0,
-    "medianSoldPrice": 12.0,
-    "fairMarketValue": 12.0,
+    "avgSoldPrice": 11.46,
+    "medianSoldPrice": 11.46,
+    "fairMarketValue": 11.46,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-61.1%",
-    "roi": -17.2,
+    "priceChange7d": "-62.8%",
+    "roi": -17.7,
     "riskScore": 62,
     "totalSold": 32,
     "signal_zh": "低溢价建仓候选",
@@ -10051,7 +10051,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 12.0
+        "avg": 11.46
       }
     ],
     "story": {
@@ -10119,12 +10119,12 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+PUCKY+Forest",
     "retailPrice": 15.0,
-    "avgSoldPrice": 21.49,
-    "medianSoldPrice": 21.49,
-    "fairMarketValue": 21.49,
+    "avgSoldPrice": 22.23,
+    "medianSoldPrice": 22.23,
+    "fairMarketValue": 22.23,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-51.0%",
-    "roi": 57.3,
+    "priceChange7d": "-49.3%",
+    "roi": 59.5,
     "riskScore": 69,
     "totalSold": 34,
     "signal_zh": "持有跟踪",
@@ -10261,7 +10261,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 21.49
+        "avg": 22.23
       }
     ],
     "story": {
@@ -10329,16 +10329,16 @@
     "refreshTier": "weekly",
     "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+PUCKY+Sleeping+Babies",
     "retailPrice": 15.0,
-    "avgSoldPrice": 21.59,
-    "medianSoldPrice": 21.59,
-    "fairMarketValue": 21.59,
+    "avgSoldPrice": 16.02,
+    "medianSoldPrice": 16.02,
+    "fairMarketValue": 16.02,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-50.3%",
-    "roi": 109.1,
-    "riskScore": 76,
-    "totalSold": 35,
-    "signal_zh": "谨慎追高",
-    "signal_en": "Caution",
+    "priceChange7d": "-63.1%",
+    "roi": 14.7,
+    "riskScore": 62,
+    "totalSold": 31,
+    "signal_zh": "低溢价建仓候选",
+    "signal_en": "Low-premium candidate",
     "dataSource": "live",
     "priceHistory": [
       {
@@ -10471,7 +10471,7 @@
       },
       {
         "date": "2026-06-17",
-        "avg": 21.59
+        "avg": 16.02
       }
     ],
     "story": {
