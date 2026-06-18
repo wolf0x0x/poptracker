@@ -21,7 +21,7 @@
   "refreshIntervalHours": 24,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+CRYBABY+Sad+Club",
   "retailPrice": 16.99,
-  "lastUpdated": "2026-06-17",
+  "lastUpdated": "2026-06-19",
   "marketData": {
     "avgSoldPrice": 21.77,
     "medianSoldPrice": 20.0,
@@ -175,6 +175,10 @@
     },
     {
       "date": "2026-06-17",
+      "avg": 20.0
+    },
+    {
+      "date": "2026-06-19",
       "avg": 20.0
     }
   ],

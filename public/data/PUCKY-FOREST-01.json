@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+PUCKY+Forest",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-17",
+  "lastUpdated": "2026-06-19",
   "marketData": {
     "avgSoldPrice": 23.92,
     "medianSoldPrice": 22.23,
@@ -35,7 +35,7 @@
     "riskScore": 69,
     "cleanedSampleSize": 34,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-49.3%",
+    "priceChange7d": "-48.4%",
     "trend": "cooldown",
     "trend_zh": "热度回落",
     "signal": "hold",
@@ -175,6 +175,10 @@
     },
     {
       "date": "2026-06-17",
+      "avg": 22.23
+    },
+    {
+      "date": "2026-06-19",
       "avg": 22.23
     }
   ],

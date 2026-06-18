@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+MOLLY+MEGA+Space+100%25+Series",
   "retailPrice": 19.0,
-  "lastUpdated": "2026-06-17",
+  "lastUpdated": "2026-06-19",
   "marketData": {
     "avgSoldPrice": 20.79,
     "medianSoldPrice": 18.99,
@@ -35,7 +35,7 @@
     "riskScore": 63,
     "cleanedSampleSize": 34,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-59.0%",
+    "priceChange7d": "-57.8%",
     "trend": "cooldown",
     "trend_zh": "热度回落",
     "signal": "value",
@@ -175,6 +175,10 @@
     },
     {
       "date": "2026-06-17",
+      "avg": 18.99
+    },
+    {
+      "date": "2026-06-19",
       "avg": 18.99
     }
   ],
