@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+Laid+Back+Tomorrow",
   "retailPrice": 16.0,
-  "lastUpdated": "2026-06-19",
+  "lastUpdated": "2026-06-21",
   "marketData": {
     "avgSoldPrice": 79.44,
     "medianSoldPrice": 35.0,
@@ -35,7 +35,7 @@
     "riskScore": 92,
     "cleanedSampleSize": 39,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+4.6%",
+    "priceChange7d": "+4.2%",
     "trend": "range",
     "trend_zh": "区间震荡",
     "signal": "caution",
@@ -179,6 +179,10 @@
     },
     {
       "date": "2026-06-19",
+      "avg": 35.0
+    },
+    {
+      "date": "2026-06-21",
       "avg": 35.0
     }
   ],
