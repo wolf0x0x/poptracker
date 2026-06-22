@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+HIRONO+City+of+Mercy",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-21",
+  "lastUpdated": "2026-06-23",
   "marketData": {
     "avgSoldPrice": 38.84,
     "medianSoldPrice": 39.0,
@@ -35,7 +35,7 @@
     "riskScore": 82,
     "cleanedSampleSize": 33,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-30.2%",
+    "priceChange7d": "-28.6%",
     "trend": "cooldown",
     "trend_zh": "热度回落",
     "signal": "caution",
@@ -183,6 +183,10 @@
     },
     {
       "date": "2026-06-21",
+      "avg": 39.0
+    },
+    {
+      "date": "2026-06-23",
       "avg": 39.0
     }
   ],

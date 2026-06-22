@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+HIRONO+Mime",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-21",
+  "lastUpdated": "2026-06-23",
   "marketData": {
     "avgSoldPrice": 18.74,
     "medianSoldPrice": 16.5,
@@ -35,7 +35,7 @@
     "riskScore": 64,
     "cleanedSampleSize": 36,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-68.5%",
+    "priceChange7d": "-69.0%",
     "trend": "cooldown",
     "trend_zh": "热度回落",
     "signal": "value",
@@ -183,6 +183,10 @@
     },
     {
       "date": "2026-06-21",
+      "avg": 16.5
+    },
+    {
+      "date": "2026-06-23",
       "avg": 16.5
     }
   ],
