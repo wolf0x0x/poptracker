@@ -23,19 +23,19 @@
   "retailPrice": 15.0,
   "lastUpdated": "2026-06-23",
   "marketData": {
-    "avgSoldPrice": 86.5,
-    "medianSoldPrice": 27.94,
-    "fairMarketValue": 27.94,
+    "avgSoldPrice": 72.61,
+    "medianSoldPrice": 21.49,
+    "fairMarketValue": 21.49,
     "lowSoldPrice": 6.99,
     "highSoldPrice": 269.99,
     "totalSold": 40,
     "volatility": "High",
-    "volatilityValue": 1.058,
-    "roi": 476.7,
+    "volatilityValue": 1.161,
+    "roi": 384.1,
     "riskScore": 92,
     "cleanedSampleSize": 40,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-48.0%",
+    "priceChange7d": "-60.0%",
     "trend": "cooldown",
     "trend_zh": "热度回落",
     "signal": "caution",
@@ -187,7 +187,7 @@
     },
     {
       "date": "2026-06-23",
-      "avg": 27.94
+      "avg": 21.49
     }
   ],
   "dataSource": "live",
