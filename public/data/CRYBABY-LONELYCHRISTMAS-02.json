@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+CRYBABY+Lonely+Christmas",
   "retailPrice": 16.0,
-  "lastUpdated": "2026-06-23",
+  "lastUpdated": "2026-06-25",
   "marketData": {
     "avgSoldPrice": 98.07,
     "medianSoldPrice": 46.0,
@@ -35,9 +35,9 @@
     "riskScore": 92,
     "cleanedSampleSize": 40,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+4.9%",
-    "trend": "range",
-    "trend_zh": "区间震荡",
+    "priceChange7d": "+54.5%",
+    "trend": "breakout",
+    "trend_zh": "突破上涨",
     "signal": "caution",
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
@@ -187,6 +187,10 @@
     },
     {
       "date": "2026-06-23",
+      "avg": 46.0
+    },
+    {
+      "date": "2026-06-25",
       "avg": 46.0
     }
   ],

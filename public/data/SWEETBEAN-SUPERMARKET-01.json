@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SWEET+BEAN+Supermarket",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-23",
+  "lastUpdated": "2026-06-25",
   "marketData": {
     "avgSoldPrice": 33.22,
     "medianSoldPrice": 18.49,
@@ -35,7 +35,7 @@
     "riskScore": 77,
     "cleanedSampleSize": 34,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-40.3%",
+    "priceChange7d": "-26.3%",
     "trend": "cooldown",
     "trend_zh": "热度回落",
     "signal": "caution",
@@ -187,6 +187,10 @@
     },
     {
       "date": "2026-06-23",
+      "avg": 18.49
+    },
+    {
+      "date": "2026-06-25",
       "avg": 18.49
     }
   ],

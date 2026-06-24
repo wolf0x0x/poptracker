@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+No+One%27s+Gonna+Sleep",
   "retailPrice": 16.0,
-  "lastUpdated": "2026-06-23",
+  "lastUpdated": "2026-06-25",
   "marketData": {
     "avgSoldPrice": 22.19,
     "medianSoldPrice": 19.0,
@@ -35,7 +35,7 @@
     "riskScore": 67,
     "cleanedSampleSize": 31,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-59.9%",
+    "priceChange7d": "-31.1%",
     "trend": "cooldown",
     "trend_zh": "热度回落",
     "signal": "value",
@@ -187,6 +187,10 @@
     },
     {
       "date": "2026-06-23",
+      "avg": 19.0
+    },
+    {
+      "date": "2026-06-25",
       "avg": 19.0
     }
   ],

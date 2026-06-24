@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+World+Animal",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-23",
+  "lastUpdated": "2026-06-25",
   "marketData": {
     "avgSoldPrice": 40.63,
     "medianSoldPrice": 26.47,
@@ -35,9 +35,9 @@
     "riskScore": 83,
     "cleanedSampleSize": 34,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-4.3%",
-    "trend": "range",
-    "trend_zh": "区间震荡",
+    "priceChange7d": "-19.7%",
+    "trend": "cooldown",
+    "trend_zh": "热度回落",
     "signal": "caution",
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
@@ -187,6 +187,10 @@
     },
     {
       "date": "2026-06-23",
+      "avg": 26.47
+    },
+    {
+      "date": "2026-06-25",
       "avg": 26.47
     }
   ],

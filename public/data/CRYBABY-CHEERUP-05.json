@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+CRYBABY+Cheer+Up",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-23",
+  "lastUpdated": "2026-06-25",
   "marketData": {
     "avgSoldPrice": 63.39,
     "medianSoldPrice": 26.99,
@@ -35,9 +35,9 @@
     "riskScore": 92,
     "cleanedSampleSize": 37,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-49.0%",
-    "trend": "cooldown",
-    "trend_zh": "热度回落",
+    "priceChange7d": "+0.0%",
+    "trend": "range",
+    "trend_zh": "区间震荡",
     "signal": "caution",
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
@@ -187,6 +187,10 @@
     },
     {
       "date": "2026-06-23",
+      "avg": 26.99
+    },
+    {
+      "date": "2026-06-25",
       "avg": 26.99
     }
   ],
