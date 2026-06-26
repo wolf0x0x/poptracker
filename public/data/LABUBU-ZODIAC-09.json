@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Zodiac+Labubu",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-25",
+  "lastUpdated": "2026-06-27",
   "marketData": {
     "avgSoldPrice": 73.78,
     "medianSoldPrice": 45.07,
@@ -35,9 +35,9 @@
     "riskScore": 92,
     "cleanedSampleSize": 37,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-3.1%",
-    "trend": "range",
-    "trend_zh": "区间震荡",
+    "priceChange7d": "+33.0%",
+    "trend": "breakout",
+    "trend_zh": "突破上涨",
     "signal": "caution",
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
@@ -191,6 +191,10 @@
     },
     {
       "date": "2026-06-25",
+      "avg": 45.07
+    },
+    {
+      "date": "2026-06-27",
       "avg": 45.07
     }
   ],

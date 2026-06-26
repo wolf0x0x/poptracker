@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+HIRONO+Other+One",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-25",
+  "lastUpdated": "2026-06-27",
   "marketData": {
     "avgSoldPrice": 19.26,
     "medianSoldPrice": 18.99,
@@ -35,7 +35,7 @@
     "riskScore": 65,
     "cleanedSampleSize": 34,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-1.0%",
+    "priceChange7d": "+0.0%",
     "trend": "range",
     "trend_zh": "区间震荡",
     "signal": "value",
@@ -191,6 +191,10 @@
     },
     {
       "date": "2026-06-25",
+      "avg": 18.99
+    },
+    {
+      "date": "2026-06-27",
       "avg": 18.99
     }
   ],
