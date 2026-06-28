@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+MOLLY+Steampunk",
   "retailPrice": 16.0,
-  "lastUpdated": "2026-06-27",
+  "lastUpdated": "2026-06-29",
   "marketData": {
     "avgSoldPrice": 162.74,
     "medianSoldPrice": 165.49,
@@ -35,7 +35,7 @@
     "riskScore": 92,
     "cleanedSampleSize": 40,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+565.2%",
+    "priceChange7d": "+504.2%",
     "trend": "breakout",
     "trend_zh": "突破上涨",
     "signal": "caution",
@@ -195,6 +195,10 @@
     },
     {
       "date": "2026-06-27",
+      "avg": 165.49
+    },
+    {
+      "date": "2026-06-29",
       "avg": 165.49
     }
   ],

@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+CRYBABY+Monster+Tears",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-27",
+  "lastUpdated": "2026-06-29",
   "marketData": {
     "avgSoldPrice": 112.84,
     "medianSoldPrice": 37.25,
@@ -195,6 +195,10 @@
     },
     {
       "date": "2026-06-27",
+      "avg": 37.25
+    },
+    {
+      "date": "2026-06-29",
       "avg": 37.25
     }
   ],
