@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+City+of+Night",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-29",
+  "lastUpdated": "2026-07-01",
   "marketData": {
     "avgSoldPrice": 74.18,
     "medianSoldPrice": 29.99,
@@ -35,9 +35,9 @@
     "riskScore": 92,
     "cleanedSampleSize": 40,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+5.3%",
-    "trend": "range",
-    "trend_zh": "区间震荡",
+    "priceChange7d": "+20.0%",
+    "trend": "breakout",
+    "trend_zh": "突破上涨",
     "signal": "caution",
     "signal_zh": "谨慎追高",
     "signal_en": "Caution",
@@ -199,6 +199,10 @@
     },
     {
       "date": "2026-06-29",
+      "avg": 29.99
+    },
+    {
+      "date": "2026-07-01",
       "avg": 29.99
     }
   ],

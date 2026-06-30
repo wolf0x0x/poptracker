@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Fruits+Labubu",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-06-29",
+  "lastUpdated": "2026-07-01",
   "marketData": {
     "avgSoldPrice": 27.35,
     "medianSoldPrice": 22.87,
@@ -35,7 +35,7 @@
     "riskScore": 72,
     "cleanedSampleSize": 34,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-13.7%",
+    "priceChange7d": "-21.1%",
     "trend": "cooldown",
     "trend_zh": "热度回落",
     "signal": "hold",
@@ -199,6 +199,10 @@
     },
     {
       "date": "2026-06-29",
+      "avg": 22.87
+    },
+    {
+      "date": "2026-07-01",
       "avg": 22.87
     }
   ],
