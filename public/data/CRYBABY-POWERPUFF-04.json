@@ -21,7 +21,7 @@
   "refreshIntervalHours": 24,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+CRYBABY+Powerpuff+Girls",
   "retailPrice": 17.99,
-  "lastUpdated": "2026-07-01",
+  "lastUpdated": "2026-07-03",
   "marketData": {
     "avgSoldPrice": 27.44,
     "medianSoldPrice": 18.56,
@@ -35,9 +35,9 @@
     "riskScore": 69,
     "cleanedSampleSize": 34,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-17.5%",
-    "trend": "cooldown",
-    "trend_zh": "热度回落",
+    "priceChange7d": "-7.0%",
+    "trend": "range",
+    "trend_zh": "区间震荡",
     "signal": "hold",
     "signal_zh": "持有跟踪",
     "signal_en": "Track / hold",
@@ -203,6 +203,10 @@
     },
     {
       "date": "2026-07-01",
+      "avg": 18.56
+    },
+    {
+      "date": "2026-07-03",
       "avg": 18.56
     }
   ],
