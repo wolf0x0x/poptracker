@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+Midnight+Circus",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-07-03",
+  "lastUpdated": "2026-07-05",
   "marketData": {
     "avgSoldPrice": 65.38,
     "medianSoldPrice": 35.16,
@@ -207,6 +207,10 @@
     },
     {
       "date": "2026-07-03",
+      "avg": 35.16
+    },
+    {
+      "date": "2026-07-05",
       "avg": 35.16
     }
   ],

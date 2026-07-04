@@ -21,7 +21,7 @@
   "refreshIntervalHours": 24,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Tasty+Macarons+Labubu+Macaron+Vinyl+Face",
   "retailPrice": 17.0,
-  "lastUpdated": "2026-07-03",
+  "lastUpdated": "2026-07-05",
   "marketData": {
     "avgSoldPrice": 61.01,
     "medianSoldPrice": 39.0,
@@ -207,6 +207,10 @@
     },
     {
       "date": "2026-07-03",
+      "avg": 39.0
+    },
+    {
+      "date": "2026-07-05",
       "avg": 39.0
     }
   ],

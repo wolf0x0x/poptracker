@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+MOLLY+Daydream",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-07-03",
+  "lastUpdated": "2026-07-05",
   "marketData": {
     "avgSoldPrice": 178.66,
     "medianSoldPrice": 185.0,
@@ -207,6 +207,10 @@
     },
     {
       "date": "2026-07-03",
+      "avg": 185.0
+    },
+    {
+      "date": "2026-07-05",
       "avg": 185.0
     }
   ],
