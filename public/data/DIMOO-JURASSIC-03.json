@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+Jurassic",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-07-05",
+  "lastUpdated": "2026-07-07",
   "marketData": {
     "avgSoldPrice": 20.93,
     "medianSoldPrice": 17.49,
@@ -35,7 +35,7 @@
     "riskScore": 67,
     "cleanedSampleSize": 34,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+6.1%",
+    "priceChange7d": "+0.0%",
     "trend": "range",
     "trend_zh": "区间震荡",
     "signal": "value",
@@ -211,6 +211,10 @@
     },
     {
       "date": "2026-07-05",
+      "avg": 17.49
+    },
+    {
+      "date": "2026-07-07",
       "avg": 17.49
     }
   ],

@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SWEET+BEAN+Akihabara",
   "retailPrice": 16.0,
-  "lastUpdated": "2026-07-05",
+  "lastUpdated": "2026-07-07",
   "marketData": {
     "avgSoldPrice": 26.83,
     "medianSoldPrice": 15.14,
@@ -35,7 +35,7 @@
     "riskScore": 70,
     "cleanedSampleSize": 34,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "+6.3%",
+    "priceChange7d": "+0.0%",
     "trend": "range",
     "trend_zh": "区间震荡",
     "signal": "hold",
@@ -211,6 +211,10 @@
     },
     {
       "date": "2026-07-05",
+      "avg": 15.14
+    },
+    {
+      "date": "2026-07-07",
       "avg": 15.14
     }
   ],

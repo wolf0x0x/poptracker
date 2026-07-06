@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Art+Labubu",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-07-05",
+  "lastUpdated": "2026-07-07",
   "marketData": {
     "avgSoldPrice": 31.36,
     "medianSoldPrice": 26.82,
@@ -35,7 +35,7 @@
     "riskScore": 76,
     "cleanedSampleSize": 34,
     "valuationMethod": "IQR + 10% trimmed median",
-    "priceChange7d": "-4.2%",
+    "priceChange7d": "+0.0%",
     "trend": "range",
     "trend_zh": "区间震荡",
     "signal": "caution",
@@ -211,6 +211,10 @@
     },
     {
       "date": "2026-07-05",
+      "avg": 26.82
+    },
+    {
+      "date": "2026-07-07",
       "avg": 26.82
     }
   ],
