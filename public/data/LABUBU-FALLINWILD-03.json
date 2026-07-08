@@ -21,7 +21,7 @@
   "refreshIntervalHours": 24,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Fall+in+Wild+Labubu",
   "retailPrice": 25.99,
-  "lastUpdated": "2026-07-07",
+  "lastUpdated": "2026-07-09",
   "marketData": {
     "avgSoldPrice": 40.21,
     "medianSoldPrice": 31.49,
@@ -215,6 +215,10 @@
     },
     {
       "date": "2026-07-07",
+      "avg": 31.49
+    },
+    {
+      "date": "2026-07-09",
       "avg": 31.49
     }
   ],
