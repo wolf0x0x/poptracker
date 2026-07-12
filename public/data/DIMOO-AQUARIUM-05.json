@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+Aquarium",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-07-11",
+  "lastUpdated": "2026-07-13",
   "marketData": {
     "avgSoldPrice": 53.23,
     "medianSoldPrice": 32.99,
@@ -223,6 +223,10 @@
     },
     {
       "date": "2026-07-11",
+      "avg": 32.99
+    },
+    {
+      "date": "2026-07-13",
       "avg": 32.99
     }
   ],
