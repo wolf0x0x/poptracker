@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Catch+Me+If+You+Can+Labubu",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-08-13",
+  "lastUpdated": "2026-08-15",
   "marketData": {
     "avgSoldPrice": 214.11,
     "medianSoldPrice": 159.5,
@@ -255,6 +255,10 @@
     },
     {
       "date": "2026-08-13",
+      "avg": 159.5
+    },
+    {
+      "date": "2026-08-15",
       "avg": 159.5
     }
   ],
