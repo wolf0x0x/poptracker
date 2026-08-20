@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Camping+Labubu",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-08-19",
+  "lastUpdated": "2026-08-21",
   "marketData": {
     "avgSoldPrice": 53.45,
     "medianSoldPrice": 26.99,
@@ -267,6 +267,10 @@
     },
     {
       "date": "2026-08-19",
+      "avg": 26.99
+    },
+    {
+      "date": "2026-08-21",
       "avg": 26.99
     }
   ],
