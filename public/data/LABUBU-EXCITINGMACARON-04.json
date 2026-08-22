@@ -21,7 +21,7 @@
   "refreshIntervalHours": 24,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+THE+MONSTERS+Exciting+Macarons+Labubu",
   "retailPrice": 17.0,
-  "lastUpdated": "2026-08-21",
+  "lastUpdated": "2026-08-23",
   "marketData": {
     "avgSoldPrice": 26.91,
     "medianSoldPrice": 20.5,
@@ -271,6 +271,10 @@
     },
     {
       "date": "2026-08-21",
+      "avg": 20.5
+    },
+    {
+      "date": "2026-08-23",
       "avg": 20.5
     }
   ],

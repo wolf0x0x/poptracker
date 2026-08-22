@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+Candy+Monster",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-08-21",
+  "lastUpdated": "2026-08-23",
   "marketData": {
     "avgSoldPrice": 78.91,
     "medianSoldPrice": 30.99,
@@ -271,6 +271,10 @@
     },
     {
       "date": "2026-08-21",
+      "avg": 30.99
+    },
+    {
+      "date": "2026-08-23",
       "avg": 30.99
     }
   ],

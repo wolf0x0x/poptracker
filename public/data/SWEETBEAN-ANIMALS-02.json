@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SWEET+BEAN+Animals",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-08-21",
+  "lastUpdated": "2026-08-23",
   "marketData": {
     "avgSoldPrice": 26.36,
     "medianSoldPrice": 15.14,
@@ -271,6 +271,10 @@
     },
     {
       "date": "2026-08-21",
+      "avg": 15.14
+    },
+    {
+      "date": "2026-08-23",
       "avg": 15.14
     }
   ],
