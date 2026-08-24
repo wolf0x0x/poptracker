@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+PUCKY+Sleeping+Babies",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-08-23",
+  "lastUpdated": "2026-08-25",
   "marketData": {
     "avgSoldPrice": 26.66,
     "medianSoldPrice": 23.96,
@@ -275,6 +275,10 @@
     },
     {
       "date": "2026-08-23",
+      "avg": 23.96
+    },
+    {
+      "date": "2026-08-25",
       "avg": 23.96
     }
   ],
