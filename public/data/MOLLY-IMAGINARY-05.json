@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+MOLLY+Imaginary+Wandering",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-08-25",
+  "lastUpdated": "2026-08-27",
   "marketData": {
     "avgSoldPrice": 144.84,
     "medianSoldPrice": 155.0,
@@ -279,6 +279,10 @@
     },
     {
       "date": "2026-08-25",
+      "avg": 155.0
+    },
+    {
+      "date": "2026-08-27",
       "avg": 155.0
     }
   ],
