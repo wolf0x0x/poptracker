@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+Hypepanda",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-08-27",
+  "lastUpdated": "2026-08-29",
   "marketData": {
     "avgSoldPrice": 95.08,
     "medianSoldPrice": 50.47,
@@ -283,6 +283,10 @@
     },
     {
       "date": "2026-08-27",
+      "avg": 50.47
+    },
+    {
+      "date": "2026-08-29",
       "avg": 50.47
     }
   ],

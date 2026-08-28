@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+Action+Cut",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-08-27",
+  "lastUpdated": "2026-08-29",
   "marketData": {
     "avgSoldPrice": 72.61,
     "medianSoldPrice": 21.49,
@@ -283,6 +283,10 @@
     },
     {
       "date": "2026-08-27",
+      "avg": 21.49
+    },
+    {
+      "date": "2026-08-29",
       "avg": 21.49
     }
   ],
