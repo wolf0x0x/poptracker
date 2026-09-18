@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+DIMOO+Zodiac",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-09-17",
+  "lastUpdated": "2026-09-19",
   "marketData": {
     "avgSoldPrice": 42.03,
     "medianSoldPrice": 28.0,
@@ -327,6 +327,10 @@
     },
     {
       "date": "2026-09-17",
+      "avg": 28.0
+    },
+    {
+      "date": "2026-09-19",
       "avg": 28.0
     }
   ],
