@@ -21,7 +21,7 @@
   "refreshIntervalHours": 24,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+Ink+Plum+Blossom",
   "retailPrice": 16.0,
-  "lastUpdated": "2026-10-13",
+  "lastUpdated": "2026-10-15",
   "marketData": {
     "avgSoldPrice": 15.54,
     "medianSoldPrice": 15.0,
@@ -379,6 +379,10 @@
     },
     {
       "date": "2026-10-13",
+      "avg": 15.0
+    },
+    {
+      "date": "2026-10-15",
       "avg": 15.0
     }
   ],
