@@ -26,10 +26,6 @@
     "dataSource": "live",
     "priceHistory": [
       {
-        "date": "2026-05-17",
-        "avg": 83.16
-      },
-      {
         "date": "2026-05-18",
         "avg": 80.85
       },
@@ -384,6 +380,10 @@
       {
         "date": "2026-10-29",
         "avg": 39.0
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 39.0
       }
     ],
     "story": {
@@ -429,7 +429,7 @@
         "color": "#191c1d"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "LABUBU-HAVEASEAT-02",
@@ -457,10 +457,6 @@
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 55.6
-      },
       {
         "date": "2026-05-18",
         "avg": 53.96
@@ -816,6 +812,10 @@
       {
         "date": "2026-10-29",
         "avg": 23.49
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 23.49
       }
     ],
     "story": {
@@ -861,7 +861,7 @@
         "color": "#191c1d"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "LABUBU-FALLINWILD-03",
@@ -889,10 +889,6 @@
     "signal_en": "Track / hold",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 68.45
-      },
       {
         "date": "2026-05-18",
         "avg": 63.96
@@ -1248,6 +1244,10 @@
       {
         "date": "2026-10-29",
         "avg": 31.49
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 31.49
       }
     ],
     "story": {
@@ -1293,7 +1293,7 @@
         "color": "#191c1d"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "LABUBU-EXCITINGMACARON-04",
@@ -1321,10 +1321,6 @@
     "signal_en": "Track / hold",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 30.31
-      },
       {
         "date": "2026-05-18",
         "avg": 33.12
@@ -1680,6 +1676,10 @@
       {
         "date": "2026-10-29",
         "avg": 20.5
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 20.5
       }
     ],
     "story": {
@@ -1725,7 +1725,7 @@
         "color": "#191c1d"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "LABUBU-CATCHME-05",
@@ -1753,10 +1753,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 54.9
-      },
       {
         "date": "2026-05-18",
         "avg": 57.21
@@ -2112,6 +2108,10 @@
       {
         "date": "2026-10-29",
         "avg": 159.5
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 159.5
       }
     ],
     "story": {
@@ -2137,7 +2137,7 @@
         "color": "#191c1d"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "LABUBU-FRUITS-06",
@@ -2165,10 +2165,6 @@
     "signal_en": "Track / hold",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 49.08
-      },
       {
         "date": "2026-05-18",
         "avg": 51.65
@@ -2524,6 +2520,10 @@
       {
         "date": "2026-10-29",
         "avg": 22.87
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 22.87
       }
     ],
     "story": {
@@ -2575,7 +2575,7 @@
         "color": "#ffc857"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "LABUBU-CAMPING-07",
@@ -2603,10 +2603,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 62.65
-      },
       {
         "date": "2026-05-18",
         "avg": 63.46
@@ -2962,6 +2958,10 @@
       {
         "date": "2026-10-29",
         "avg": 26.99
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 26.99
       }
     ],
     "story": {
@@ -3013,7 +3013,7 @@
         "color": "#6389a8"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "LABUBU-ART-08",
@@ -3041,10 +3041,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 38.17
-      },
       {
         "date": "2026-05-18",
         "avg": 37.81
@@ -3400,6 +3396,10 @@
       {
         "date": "2026-10-29",
         "avg": 26.82
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 26.82
       }
     ],
     "story": {
@@ -3451,7 +3451,7 @@
         "color": "#9f8cff"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "LABUBU-ZODIAC-09",
@@ -3479,10 +3479,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 48.79
-      },
       {
         "date": "2026-05-18",
         "avg": 55.0
@@ -3838,6 +3834,10 @@
       {
         "date": "2026-10-29",
         "avg": 45.07
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 45.07
       }
     ],
     "story": {
@@ -3889,7 +3889,7 @@
         "color": "#191c1d"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "LABUBU-SPACE-10",
@@ -3917,10 +3917,6 @@
     "signal_en": "Track / hold",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 51.9
-      },
       {
         "date": "2026-05-18",
         "avg": 51.43
@@ -4276,6 +4272,10 @@
       {
         "date": "2026-10-29",
         "avg": 20.26
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 20.26
       }
     ],
     "story": {
@@ -4327,7 +4327,7 @@
         "color": "#50e3c2"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "SKULLPANDA-INKPLUM-01",
@@ -4355,10 +4355,6 @@
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 35.74
-      },
       {
         "date": "2026-05-18",
         "avg": 38.82
@@ -4714,6 +4710,10 @@
       {
         "date": "2026-10-29",
         "avg": 15.0
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 15.0
       }
     ],
     "story": {
@@ -4789,7 +4789,7 @@
         "color": "#50e3c2"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "SKULLPANDA-CITYOFNIGHT-02",
@@ -4817,10 +4817,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 39.39
-      },
       {
         "date": "2026-05-18",
         "avg": 38.63
@@ -5176,6 +5172,10 @@
       {
         "date": "2026-10-29",
         "avg": 29.99
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 29.99
       }
     ],
     "story": {
@@ -5251,7 +5251,7 @@
         "color": "#191c1d"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "SKULLPANDA-EVERYDAYWONDERLAND-03",
@@ -5279,10 +5279,6 @@
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 46.16
-      },
       {
         "date": "2026-05-18",
         "avg": 48.15
@@ -5638,6 +5634,10 @@
       {
         "date": "2026-10-29",
         "avg": 14.0
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 14.0
       }
     ],
     "story": {
@@ -5689,7 +5689,7 @@
         "color": "#e0d6c8"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "SKULLPANDA-MAREOFANIMALS-04",
@@ -5717,10 +5717,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 31.14
-      },
       {
         "date": "2026-05-18",
         "avg": 31.77
@@ -6076,6 +6072,10 @@
       {
         "date": "2026-10-29",
         "avg": 22.34
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 22.34
       }
     ],
     "story": {
@@ -6127,7 +6127,7 @@
         "color": "#8f6745"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "SKULLPANDA-HYPEPANDA-05",
@@ -6155,10 +6155,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 34.6
-      },
       {
         "date": "2026-05-18",
         "avg": 35.74
@@ -6514,6 +6510,10 @@
       {
         "date": "2026-10-29",
         "avg": 50.47
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 50.47
       }
     ],
     "story": {
@@ -6565,7 +6565,7 @@
         "color": "#ff7eb6"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "SKULLPANDA-ACTIONCUT-06",
@@ -6593,10 +6593,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 52.97
-      },
       {
         "date": "2026-05-18",
         "avg": 54.12
@@ -6952,6 +6948,10 @@
       {
         "date": "2026-10-29",
         "avg": 21.49
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 21.49
       }
     ],
     "story": {
@@ -7003,7 +7003,7 @@
         "color": "#6bd6ff"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "SKULLPANDA-CANDYMONSTER-07",
@@ -7031,10 +7031,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 48.6
-      },
       {
         "date": "2026-05-18",
         "avg": 43.39
@@ -7390,6 +7386,10 @@
       {
         "date": "2026-10-29",
         "avg": 30.99
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 30.99
       }
     ],
     "story": {
@@ -7441,7 +7441,7 @@
         "color": "#ffc857"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "SKULLPANDA-LAIDBACK-08",
@@ -7469,10 +7469,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 35.4
-      },
       {
         "date": "2026-05-18",
         "avg": 38.48
@@ -7828,6 +7824,10 @@
       {
         "date": "2026-10-29",
         "avg": 31.95
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 31.95
       }
     ],
     "story": {
@@ -7879,7 +7879,7 @@
         "color": "#b8e986"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "MOLLY-SPACE-100-S1-01",
@@ -7907,10 +7907,6 @@
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 46.66
-      },
       {
         "date": "2026-05-18",
         "avg": 49.3
@@ -8266,6 +8262,10 @@
       {
         "date": "2026-10-29",
         "avg": 18.0
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 18.0
       }
     ],
     "story": {
@@ -8326,7 +8326,7 @@
         "color": "#6bd6ff"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "MOLLY-SPACE-100-S2-02",
@@ -8354,10 +8354,6 @@
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 62.28
-      },
       {
         "date": "2026-05-18",
         "avg": 61.47
@@ -8713,6 +8709,10 @@
       {
         "date": "2026-10-29",
         "avg": 18.0
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 18.0
       }
     ],
     "story": {
@@ -8764,7 +8764,7 @@
         "color": "#6bd6ff"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "MOLLY-SPACE-100-S3-03",
@@ -8792,10 +8792,6 @@
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 35.2
-      },
       {
         "date": "2026-05-18",
         "avg": 37.31
@@ -9151,6 +9147,10 @@
       {
         "date": "2026-10-29",
         "avg": 18.0
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 18.0
       }
     ],
     "story": {
@@ -9202,7 +9202,7 @@
         "color": "#ff7eb6"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "MOLLY-MYCHILDHOOD-04",
@@ -9230,10 +9230,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 44.9
-      },
       {
         "date": "2026-05-18",
         "avg": 43.54
@@ -9589,6 +9585,10 @@
       {
         "date": "2026-10-29",
         "avg": 160.0
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 160.0
       }
     ],
     "story": {
@@ -9640,7 +9640,7 @@
         "color": "#b8e986"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "MOLLY-IMAGINARY-05",
@@ -9668,10 +9668,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 36.22
-      },
       {
         "date": "2026-05-18",
         "avg": 35.47
@@ -10027,6 +10023,10 @@
       {
         "date": "2026-10-29",
         "avg": 155.0
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 155.0
       }
     ],
     "story": {
@@ -10078,7 +10078,7 @@
         "color": "#9f8cff"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "MOLLY-DAYDREAM-06",
@@ -10106,10 +10106,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 55.26
-      },
       {
         "date": "2026-05-18",
         "avg": 56.25
@@ -10465,6 +10461,10 @@
       {
         "date": "2026-10-29",
         "avg": 185.0
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 185.0
       }
     ],
     "story": {
@@ -10516,7 +10516,7 @@
         "color": "#ff8a5b"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "MOLLY-SCHOOLLIFE-07",
@@ -10544,10 +10544,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 38.25
-      },
       {
         "date": "2026-05-18",
         "avg": 38.68
@@ -10903,6 +10899,10 @@
       {
         "date": "2026-10-29",
         "avg": 185.0
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 185.0
       }
     ],
     "story": {
@@ -10954,7 +10954,7 @@
         "color": "#e0d6c8"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "MOLLY-STEAMPUNK-08",
@@ -10982,10 +10982,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 40.66
-      },
       {
         "date": "2026-05-18",
         "avg": 37.91
@@ -11341,6 +11337,10 @@
       {
         "date": "2026-10-29",
         "avg": 165.49
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 165.49
       }
     ],
     "story": {
@@ -11392,7 +11392,7 @@
         "color": "#8f6745"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "DIMOO-WORLD-01",
@@ -11420,10 +11420,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 26.25
-      },
       {
         "date": "2026-05-18",
         "avg": 27.53
@@ -11779,6 +11775,10 @@
       {
         "date": "2026-10-29",
         "avg": 26.47
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 26.47
       }
     ],
     "story": {
@@ -11830,7 +11830,7 @@
         "color": "#65d39b"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "DIMOO-DATING-02",
@@ -11858,10 +11858,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 41.64
-      },
       {
         "date": "2026-05-18",
         "avg": 38.16
@@ -12217,6 +12213,10 @@
       {
         "date": "2026-10-29",
         "avg": 24.99
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 24.99
       }
     ],
     "story": {
@@ -12268,7 +12268,7 @@
         "color": "#ff7eb6"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "DIMOO-JURASSIC-03",
@@ -12296,10 +12296,6 @@
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 29.67
-      },
       {
         "date": "2026-05-18",
         "avg": 29.97
@@ -12655,6 +12651,10 @@
       {
         "date": "2026-10-29",
         "avg": 17.49
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 17.49
       }
     ],
     "story": {
@@ -12706,7 +12706,7 @@
         "color": "#8f6745"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "DIMOO-SPACETRAVEL-04",
@@ -12734,10 +12734,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 31.04
-      },
       {
         "date": "2026-05-18",
         "avg": 29.3
@@ -13093,6 +13089,10 @@
       {
         "date": "2026-10-29",
         "avg": 29.49
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 29.49
       }
     ],
     "story": {
@@ -13144,7 +13144,7 @@
         "color": "#191c1d"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "DIMOO-AQUARIUM-05",
@@ -13172,10 +13172,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 37.47
-      },
       {
         "date": "2026-05-18",
         "avg": 37.16
@@ -13531,6 +13527,10 @@
       {
         "date": "2026-10-29",
         "avg": 32.99
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 32.99
       }
     ],
     "story": {
@@ -13582,7 +13582,7 @@
         "color": "#6bd6ff"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "DIMOO-NOSLEEP-06",
@@ -13610,10 +13610,6 @@
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 46.9
-      },
       {
         "date": "2026-05-18",
         "avg": 46.36
@@ -13969,6 +13965,10 @@
       {
         "date": "2026-10-29",
         "avg": 19.0
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 19.0
       }
     ],
     "story": {
@@ -14020,7 +14020,7 @@
         "color": "#9f8cff"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "DIMOO-MIDNIGHT-07",
@@ -14048,10 +14048,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 34.7
-      },
       {
         "date": "2026-05-18",
         "avg": 34.14
@@ -14407,6 +14403,10 @@
       {
         "date": "2026-10-29",
         "avg": 35.16
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 35.16
       }
     ],
     "story": {
@@ -14458,7 +14458,7 @@
         "color": "#d95c50"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "DIMOO-ZODIAC-08",
@@ -14486,10 +14486,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 36.18
-      },
       {
         "date": "2026-05-18",
         "avg": 37.54
@@ -14845,6 +14841,10 @@
       {
         "date": "2026-10-29",
         "avg": 28.0
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 28.0
       }
     ],
     "story": {
@@ -14896,7 +14896,7 @@
         "color": "#ffc857"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "HIRONO-LITTLE-MISCHIEF-01",
@@ -14924,10 +14924,6 @@
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 30.22
-      },
       {
         "date": "2026-05-18",
         "avg": 32.31
@@ -15283,6 +15279,10 @@
       {
         "date": "2026-10-29",
         "avg": 18.99
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 18.99
       }
     ],
     "story": {
@@ -15334,7 +15334,7 @@
         "color": "#ff8a5b"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "HIRONO-CITYOFMERCY-02",
@@ -15362,10 +15362,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 60.18
-      },
       {
         "date": "2026-05-18",
         "avg": 55.17
@@ -15721,6 +15717,10 @@
       {
         "date": "2026-10-29",
         "avg": 41.58
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 41.58
       }
     ],
     "story": {
@@ -15772,7 +15772,7 @@
         "color": "#6389a8"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "HIRONO-OTHERONE-03",
@@ -15800,10 +15800,6 @@
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 37.01
-      },
       {
         "date": "2026-05-18",
         "avg": 39.41
@@ -16159,6 +16155,10 @@
       {
         "date": "2026-10-29",
         "avg": 18.99
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 18.99
       }
     ],
     "story": {
@@ -16210,7 +16210,7 @@
         "color": "#e0d6c8"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "HIRONO-RESHAPE-04",
@@ -16238,10 +16238,6 @@
     "signal_en": "Track / hold",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 39.43
-      },
       {
         "date": "2026-05-18",
         "avg": 40.57
@@ -16597,6 +16593,10 @@
       {
         "date": "2026-10-29",
         "avg": 15.0
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 15.0
       }
     ],
     "story": {
@@ -16615,7 +16615,7 @@
         "source_url": "https://images.stockx.com/images/Pop-Mart-Hirono-Reshape-Figure.jpg"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "HIRONO-SHELTER-05",
@@ -16643,10 +16643,6 @@
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 59.55
-      },
       {
         "date": "2026-05-18",
         "avg": 57.48
@@ -17002,6 +16998,10 @@
       {
         "date": "2026-10-29",
         "avg": 15.0
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 15.0
       }
     ],
     "story": {
@@ -17077,7 +17077,7 @@
         "color": "#8f6745"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "HIRONO-MIME-06",
@@ -17105,10 +17105,6 @@
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 53.34
-      },
       {
         "date": "2026-05-18",
         "avg": 50.15
@@ -17464,6 +17460,10 @@
       {
         "date": "2026-10-29",
         "avg": 16.5
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 16.5
       }
     ],
     "story": {
@@ -17515,7 +17515,7 @@
         "color": "#191c1d"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "CRYBABY-SADCLUB-01",
@@ -17543,10 +17543,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 38.13
-      },
       {
         "date": "2026-05-18",
         "avg": 38.14
@@ -17902,6 +17898,10 @@
       {
         "date": "2026-10-29",
         "avg": 29.49
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 29.49
       }
     ],
     "story": {
@@ -17957,7 +17957,7 @@
         "color": "#50e3c2"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "CRYBABY-LONELYCHRISTMAS-02",
@@ -17985,10 +17985,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 51.51
-      },
       {
         "date": "2026-05-18",
         "avg": 47.92
@@ -18344,6 +18340,10 @@
       {
         "date": "2026-10-29",
         "avg": 46.0
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 46.0
       }
     ],
     "story": {
@@ -18395,7 +18395,7 @@
         "color": "#d95c50"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "CRYBABY-MONSTERTEARS-03",
@@ -18423,10 +18423,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 52.56
-      },
       {
         "date": "2026-05-18",
         "avg": 49.9
@@ -18782,6 +18778,10 @@
       {
         "date": "2026-10-29",
         "avg": 37.25
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 37.25
       }
     ],
     "story": {
@@ -18833,7 +18833,7 @@
         "color": "#9f8cff"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "CRYBABY-POWERPUFF-04",
@@ -18861,10 +18861,6 @@
     "signal_en": "Track / hold",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 35.58
-      },
       {
         "date": "2026-05-18",
         "avg": 34.47
@@ -19220,6 +19216,10 @@
       {
         "date": "2026-10-29",
         "avg": 18.56
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 18.56
       }
     ],
     "story": {
@@ -19295,7 +19295,7 @@
         "color": "#191c1d"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "CRYBABY-CHEERUP-05",
@@ -19323,10 +19323,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 60.45
-      },
       {
         "date": "2026-05-18",
         "avg": 59.03
@@ -19682,6 +19678,10 @@
       {
         "date": "2026-10-29",
         "avg": 26.99
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 26.99
       }
     ],
     "story": {
@@ -19733,7 +19733,7 @@
         "color": "#ffc857"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "SWEETBEAN-SUPERMARKET-01",
@@ -19761,10 +19761,6 @@
     "signal_en": "Caution",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 31.87
-      },
       {
         "date": "2026-05-18",
         "avg": 34.37
@@ -20120,6 +20116,10 @@
       {
         "date": "2026-10-29",
         "avg": 18.49
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 18.49
       }
     ],
     "story": {
@@ -20171,7 +20171,7 @@
         "color": "#ff7eb6"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "SWEETBEAN-ANIMALS-02",
@@ -20199,10 +20199,6 @@
     "signal_en": "Track / hold",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 62.36
-      },
       {
         "date": "2026-05-18",
         "avg": 65.86
@@ -20558,6 +20554,10 @@
       {
         "date": "2026-10-29",
         "avg": 15.14
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 15.14
       }
     ],
     "story": {
@@ -20609,7 +20609,7 @@
         "color": "#b8e986"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "SWEETBEAN-AKIHABARA-03",
@@ -20637,10 +20637,6 @@
     "signal_en": "Track / hold",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 32.1
-      },
       {
         "date": "2026-05-18",
         "avg": 32.32
@@ -20996,6 +20992,10 @@
       {
         "date": "2026-10-29",
         "avg": 15.14
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 15.14
       }
     ],
     "story": {
@@ -21047,7 +21047,7 @@
         "color": "#9f8cff"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "PUCKY-FOREST-01",
@@ -21075,10 +21075,6 @@
     "signal_en": "Low-premium candidate",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 41.38
-      },
       {
         "date": "2026-05-18",
         "avg": 43.27
@@ -21434,6 +21430,10 @@
       {
         "date": "2026-10-29",
         "avg": 20.24
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 20.24
       }
     ],
     "story": {
@@ -21485,7 +21485,7 @@
         "color": "#65d39b"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   },
   {
     "sku": "PUCKY-SLEEPINGBABIES-02",
@@ -21513,10 +21513,6 @@
     "signal_en": "Track / hold",
     "dataSource": "live",
     "priceHistory": [
-      {
-        "date": "2026-05-17",
-        "avg": 42.59
-      },
       {
         "date": "2026-05-18",
         "avg": 46.76
@@ -21872,6 +21868,10 @@
       {
         "date": "2026-10-29",
         "avg": 23.96
+      },
+      {
+        "date": "2026-10-31",
+        "avg": 23.96
       }
     ],
     "story": {
@@ -21923,6 +21923,6 @@
         "color": "#ffc857"
       }
     ],
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-10-31"
   }
 ]
