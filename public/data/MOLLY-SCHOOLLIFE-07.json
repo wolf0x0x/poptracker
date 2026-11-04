@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+MOLLY+School+Life",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-11-03",
+  "lastUpdated": "2026-11-05",
   "marketData": {
     "avgSoldPrice": 170.22,
     "medianSoldPrice": 185.0,
@@ -45,10 +45,6 @@
     "provider": "ebay-local"
   },
   "priceHistory": [
-    {
-      "date": "2026-05-20",
-      "avg": 39.43
-    },
     {
       "date": "2026-05-21",
       "avg": 40.05
@@ -403,6 +399,10 @@
     },
     {
       "date": "2026-11-03",
+      "avg": 185.0
+    },
+    {
+      "date": "2026-11-05",
       "avg": 185.0
     }
   ],
