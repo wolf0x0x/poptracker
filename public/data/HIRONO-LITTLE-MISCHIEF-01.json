@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+HIRONO+Little+Mischief",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-11-05",
+  "lastUpdated": "2026-11-07",
   "marketData": {
     "avgSoldPrice": 18.58,
     "medianSoldPrice": 18.99,
@@ -45,10 +45,6 @@
     "provider": "ebay-local"
   },
   "priceHistory": [
-    {
-      "date": "2026-05-21",
-      "avg": 32.44
-    },
     {
       "date": "2026-05-22",
       "avg": 33.31
@@ -403,6 +399,10 @@
     },
     {
       "date": "2026-11-05",
+      "avg": 18.99
+    },
+    {
+      "date": "2026-11-07",
       "avg": 18.99
     }
   ],
