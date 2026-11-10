@@ -21,7 +21,7 @@
   "refreshIntervalHours": 168,
   "affiliateUrl": "https://www.ebay.com/sch/i.html?_nkw=Pop+Mart+SKULLPANDA+Everyday+Wonderland",
   "retailPrice": 15.0,
-  "lastUpdated": "2026-11-09",
+  "lastUpdated": "2026-11-11",
   "marketData": {
     "avgSoldPrice": 18.82,
     "medianSoldPrice": 14.0,
@@ -45,10 +45,6 @@
     "provider": "ebay-local"
   },
   "priceHistory": [
-    {
-      "date": "2026-05-23",
-      "avg": 47.78
-    },
     {
       "date": "2026-05-24",
       "avg": 48.84
@@ -403,6 +399,10 @@
     },
     {
       "date": "2026-11-09",
+      "avg": 14.0
+    },
+    {
+      "date": "2026-11-11",
       "avg": 14.0
     }
   ],
